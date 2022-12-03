@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: docs
+  
+website:
+  title: "Robison"
+  navbar:
+    left:
+      - href: index.qmd
+        text: HOME
+      - Research.qmd
+      - Publications.qmd
+      - Teaching.qmd
+      - PolymorphicGames.qmd
+      - text: "BLOG"
+        file: ProfessorPolymorphic/index.qmd
+
+format:
+  html:
+    theme: spacelab
+    css: styles.css
+    toc: true
+
+editor: visual
+

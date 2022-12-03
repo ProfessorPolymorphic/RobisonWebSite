@@ -1,0 +1,387 @@
+[
+  {
+    "objectID": "Teaching.html",
+    "href": "Teaching.html",
+    "title": "TEACHING",
+    "section": "",
+    "text": "1 credit, Fall semester only\nThe companion laboratory to Biology 310. This is an open lab course in which students test genetic hypotheses using Drosophila melanogaster or game based simulations.\nCanvas Page\n\n\n\n3 credits, Spring semester, asynchronous online\nThis class will help students establish a foundational understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R programming language. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using R. The course is designed to be “discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.\nCanvas Page\nCourse WebPage"
+  },
+  {
+    "objectID": "Research.html",
+    "href": "Research.html",
+    "title": "RESEARCH",
+    "section": "",
+    "text": "My research group is an interdisicplinary blend of biologists, developers, modelers, programmers, and artists. I am always interested in recruiting new undergraduates, graduate students, and postdocs. Contact me via email if you are interested in learning more."
+  },
+  {
+    "objectID": "Research.html#evolutionary-video-games",
+    "href": "Research.html#evolutionary-video-games",
+    "title": "RESEARCH",
+    "section": "Evolutionary Video Games",
+    "text": "Evolutionary Video Games\n\n\n\nIn 2015, Terry Soule and I co-founded Polymorphic Games, an experimental game studio that makes evolution based video games. Our original concept was that a model of biological evolution would make a great game mechanic. We observed that traditional video games were usually scripted, featuring “waves” of enemies with defined and predictable characteristics. A player’s success in such games is based on learning the predictable, rote script necessary to advance to subsequent levels. By integrating principles of evolutionary biology, we suspected that video games could be made more compelling. For example, by replacing the traditional waves of enemies with generations of enemies we could introduce adaptation through natural selection. If you want to learn more about our approach, scroll down to the section on Video Games and STEM Education.\nSince 2015 we have commercially released two evolutionary video games on Steam, and developed many other interactive simulations and outreach exhibits.\n\nCommercial Releases\n\nDarwin’s Demons is an arcade style space shooter in which you battle a population of evolving aliens. The alien’s morphology, fire type, and behaviors are all encoded by a digital genome. The aliens that are best able to shoot or evade you reproduce to make the next generation.\n\nProject Hastur is an evolutionary tower defense game. Defend humanity against the ever changing threat of the alien Proteans. Project Hastur combines elements of 3D tower defense and real-time strategy with models of biological evolution to create a uniquely challenging experience."
+  },
+  {
+    "objectID": "Research.html#video-games-and-stem-education",
+    "href": "Research.html#video-games-and-stem-education",
+    "title": "RESEARCH",
+    "section": "Video Games and STEM Education",
+    "text": "Video Games and STEM Education\n\nAdding Evolution to Video Games\nThe best way to explain the concept is to frame our video games in the context of the “ingredients” of evolution:\n\nVariation\nInheritance\nSelection\nTime\n\nWhen these components are present, it leads to Adaptation.\n\nVariation\nThink about the enemies in the old school video games that I used to play in arcades. Space Invaders, Asteroids, Centipede, Tempest, etc. What kinds of variation can you descripbe in these enemies? In Space Invaders, you had three types of aliens in each wave, plus the occassional bonus flying saucer. In Centipede and Tempest, you actually had categorically different enemy types that varied in how they looked and in their capabilities.\n\nSpace InvadersCentipedeTempest\n\n\n Enemy variation in Space Invaders includes the shape of each alien type (four types), but also their position in the armada (each type has its own row) and their speed of movement (which is adjusted based on how many remain in each wave). For our purposes, we will ignore the flying saucer that occassionally passes across the top of the screen. The game increases in difficulty by having the movement speed of each wave increase. Ironically, the increased movement speed of the aliens within a wave as the population size was reduced was actually an unintended function of the increased frame rate achieved by having fewer aliens to draw on the screen.\n\n\nCentipede includes enemy types with very different behaviors and abilities. The segmented centipede can split into component parts. Fleas drop vertically, leave a trail of mushrooms, and take two hits to destroy. Spiders move in a diagonal zig zag pattern. Scorpions move horizontally across the screen and turn mushrooms poisonous. Each wave the game difficulty increases by changing the behavior and segment number of the centipede.\nhttps://www.retrogamedeconstructionzone.com/2020/08/the-characters-of-centipede.html\n\n\n\n\n\n\nThis variation is a big part of what makes video games exciting. The difficulty in video games is usually increased over time by introducing new variations of enemies, changing the enemies’ capabilities (like speed or fire rate) over time, or increasing the number of enemies. The problem (as we see it) is that these variations are introduced as part of a script that is programmed and balanced by the game developers.\n\n\nInheritance\n\n\nSelection\n\n\nTime\nWe reasoned that playing these types of games might have implications for STEM education. The success of the player is based on her comprehension and application of principles of evolutionary biology. The parallels to real world examples are numerous, and include the rapid evolution of antibiotic resistance in microbial pathogens, adaptation of crop pests to chemical and biological control measures, and behavioral adaptation to captivity in domesticated animals.\nAdding biological evolution to video games makes the games better for the game player and facilitates player comprehension of complex concepts that are hard to teach."
+  },
+  {
+    "objectID": "Research.html#get-involved",
+    "href": "Research.html#get-involved",
+    "title": "RESEARCH",
+    "section": "Get Involved",
+    "text": "Get Involved"
+  },
+  {
+    "objectID": "Research.html#behavioral-genomics-and-adaptation-to-captivity",
+    "href": "Research.html#behavioral-genomics-and-adaptation-to-captivity",
+    "title": "RESEARCH",
+    "section": "Behavioral Genomics and Adaptation to Captivity",
+    "text": "Behavioral Genomics and Adaptation to Captivity\n The process of adaptation to captivity can cause striking changes in a variety of behavioral phenotypes, including aggressive, feeding, and reproductive behaviors. However, some of the most profound and consistent evolutionary changes occur in behaviors related to fearfulness and anxiety, with domesticated animals often described as less fearful than their wild progenitor populations. The evolution of reduced fearfulness during captivity has been observed in a variety of vertebrate taxa, including mammals (Harri et al., 2003), birds (Jensen & Andersson, 2005), and fish (Johnsson & Abrahams, 1991; Robison & Rowland, 2005). Despite the prevalence of behavioral evolution during adaptation to captivity, we know surprisingly little about the underlying genetic changes that occur during domestication. What kinds of molecular variation (amino acid sequence, regulatory, or non coding RNA) are associated with variation in fear and anxiety related behaviors? What kinds of genes are typically changed in response to domestication selection? Are the apparently parallel changes in behavior across independent domestication events reflective of parallel molecular evolution, or does domestication result from myriad molecular routes to the same phenotypic endpoint? The answers to these questions are important in many contexts, including the study of the molecular mechanisms of behavioral evolution, the genetic basis of complex behaviors, and the effective conservation of captively reared species.\nWe use the zebrafish to study the genetic basis of fear related behaviors that commonly change during domestication in fish. The zebrafish is an excellent system for this purpose, combining a robust genomics toolset with superior experimental tractability. Our lab has documented variation among wild and laboratory derived strains consistent with the effects of domestication. The behavioral variation among wild and domesticated strains can be seen in the video on this page. This video shows two tanks of zebrafish randomly pulled from our zebrafish colony. One tank contains a highly domesticated (>30 generations) strain (Scientific Hatcheries), and the other tank contains a strain with a more recent history (~5 generations) of domestication (Nadia). We have quantified surface orientation (Robison and Rowland 2005, Benner et al 2010), observer orientation (Benner et al 2010), feeding latency (Oswald and Robison 2008), and open field behavior (Oswald and Robison in review) in these strains, and shown that they vary markedly in these anxiety related behaviors.\nWe use a variety of genomics approaches to understand the mechanisms that drive behavioral adaptation to captivity. We have compared the brain transcriptomes of wild and domesticated strains using both microarray platforms and Illumina and 454 based RNAseq. We have discovered many promising candidate genes that appear to differentiate behaviorally bold and behaviorally shy animals. We have also used RNAseq approaches to identify more than 20,000 SNPs that vary among our zebrafish strains. We are currently using these SNPs for quantitative trait locus (QTL) analyses.\nWe also combine these genomics approaches with quantitative genetics experiments. Mary Oswald, a recent Ph.D. graduate from our lab, has performed selection experiments on observer orientation. She has shown that these fear related behaviors have a significant genetic basis and are genetically correlated. Her selection experiment is now being continued by Matt Singer, who is a current Ph.D."
+  },
+  {
+    "objectID": "Research.html#quantitative-genetics",
+    "href": "Research.html#quantitative-genetics",
+    "title": "RESEARCH",
+    "section": "Quantitative Genetics",
+    "text": "Quantitative Genetics"
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#who-am-i",
+    "href": "BCB520/posts/post-with-code/index.html#who-am-i",
+    "title": "LECTURE 1 - INTRO",
+    "section": "WHO AM I?",
+    "text": "WHO AM I?\nBarrie Robison\nDepartment of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#who-are-you",
+    "href": "BCB520/posts/post-with-code/index.html#who-are-you",
+    "title": "LECTURE 1 - INTRO",
+    "section": "WHO ARE YOU?",
+    "text": "WHO ARE YOU?\nBriefly:\n\nYour name\nYour discipline\nYour degree progress\nYour technical proficiency with data visualization"
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#course-summary",
+    "href": "BCB520/posts/post-with-code/index.html#course-summary",
+    "title": "LECTURE 1 - INTRO",
+    "section": "COURSE SUMMARY",
+    "text": "COURSE SUMMARY\nStudents completing this course will be able to:\n\n\nDescribe and manipulate tabular, network, and spatial data; transform these data into a form suitable for visualization.\nMake effective data visualization design choices related to marks and channels, spatial arrangement, and components of color.\nDesign effective data visualizations for tabular, network, and spatial data with quantitative and categorical attributes.\nImplement their data visualization designs using existing tools in R (or other toolkits preferred by the student).\nExplain whether a visual encoding is perceptually appropriate for a specific combination of task and data.\nDemonstrate their skills with at least two novel visualizations suitable suitable for inclusion in an online Data Science Portfolio.\n\nThe course materials are located on Canvas and the course website."
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#visualization",
+    "href": "BCB520/posts/post-with-code/index.html#visualization",
+    "title": "LECTURE 1 - INTRO",
+    "section": "VISUALIZATION",
+    "text": "VISUALIZATION\nComputers provide visual representations of datasets designed to help people carry out tasks more effectively.\nTamara Munzner\nDepartment of Computer Science\nInfoVis Group\nUniversity of British Columbia"
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#the-human",
+    "href": "BCB520/posts/post-with-code/index.html#the-human",
+    "title": "LECTURE 1 - INTRO",
+    "section": "THE HUMAN",
+    "text": "THE HUMAN\nWhy have a human in the loop?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\nWe don’t need visualization when a trusted fully automatic solution exists.\nVisualization is suitable when there is a need to augment human capabilities rather than replace people with computational decision-making methods."
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#when-to-visualize",
+    "href": "BCB520/posts/post-with-code/index.html#when-to-visualize",
+    "title": "LECTURE 1 - INTRO",
+    "section": "WHEN TO VISUALIZE",
+    "text": "WHEN TO VISUALIZE\nVisualization is useful when:\n\n\nThe analysis problem is ill-specified and we don’t know exactly what questions to ask in advance.\nWe are interested in long-term use for end users (ex: exploratory analysis of scientific data).\nWe are presentating known results (ex: New York Times Upshot).\nWe need a stepping stone to assess requirements before developing models.\nDevelopers of an automatic solution want to refine & determine parameters.\nWe need to help end users of automatic solutions verify and build trust."
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#the-representation",
+    "href": "BCB520/posts/post-with-code/index.html#the-representation",
+    "title": "LECTURE 1 - INTRO",
+    "section": "THE REPRESENTATION",
+    "text": "THE REPRESENTATION\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#why-depend-on-vision",
+    "href": "BCB520/posts/post-with-code/index.html#why-depend-on-vision",
+    "title": "LECTURE 1 - INTRO",
+    "section": "WHY DEPEND ON VISION?",
+    "text": "WHY DEPEND ON VISION?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\nThe human visual system is a high-bandwidth channel to the brain.\nOverview is possible due to background processing, providing the subjective experience of seeing everything simultaneously.\nSignificant processing occurs in parallel and pre-attentively.\nWhat about sound? lower bandwidth and different semantics, overview not supported, subjective experience of sequential stream.\nWhat about touch/haptics? impoverished record/replay capacity, only very low-bandwidth communication thus far.\nWhat about taste, smell? no viable record/replay devices."
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#why-represent-all-the-data",
+    "href": "BCB520/posts/post-with-code/index.html#why-represent-all-the-data",
+    "title": "LECTURE 1 - INTRO",
+    "section": "WHY REPRESENT (ALL THE) DATA?",
+    "text": "WHY REPRESENT (ALL THE) DATA?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\nsummaries lose information\ndetails matter\nconfirm expected and find unexpected patterns\nassess validity of statistical model\nANSCOMBE’S QUARTET is a fun example that we shall use to illustrate these points!"
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#anscombes-quartet",
+    "href": "BCB520/posts/post-with-code/index.html#anscombes-quartet",
+    "title": "LECTURE 1 - INTRO",
+    "section": "ANSCOMBE’S QUARTET",
+    "text": "ANSCOMBE’S QUARTET\n\n\n\nlibrary(ggplot2)\nlibrary(grid)\nlibrary(gridExtra)\nlibrary(datasets)\nlibrary(tidyverse)\nlibrary(dplyr)\ndatasets::anscombe\n\n   x1 x2 x3 x4    y1   y2    y3    y4\n1  10 10 10  8  8.04 9.14  7.46  6.58\n2   8  8  8  8  6.95 8.14  6.77  5.76\n3  13 13 13  8  7.58 8.74 12.74  7.71\n4   9  9  9  8  8.81 8.77  7.11  8.84\n5  11 11 11  8  8.33 9.26  7.81  8.47\n6  14 14 14  8  9.96 8.10  8.84  7.04\n7   6  6  6  8  7.24 6.13  6.08  5.25\n8   4  4  4 19  4.26 3.10  5.39 12.50\n9  12 12 12  8 10.84 9.13  8.15  5.56\n10  7  7  7  8  4.82 7.26  6.42  7.91\n11  5  5  5  8  5.68 4.74  5.73  6.89\n\n\n\nAnscombe’s Quartet\nThe four x-y pairs have identical summary statistics.\n\n\n\n\n\nset\nx_mean\nx_var\ny_mean\ny_var\n\n\n\n\n1\n9\n11\n7.500909\n4.127269\n\n\n2\n9\n11\n7.500909\n4.127629\n\n\n3\n9\n11\n7.500000\n4.122620\n\n\n4\n9\n11\n7.500909\n4.123249"
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#viz-matters",
+    "href": "BCB520/posts/post-with-code/index.html#viz-matters",
+    "title": "LECTURE 1 - INTRO",
+    "section": "VIZ MATTERS",
+    "text": "VIZ MATTERS\n\n\nLearn more: TIDY ANSCOMBE"
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#resource-limitations",
+    "href": "BCB520/posts/post-with-code/index.html#resource-limitations",
+    "title": "LECTURE 1 - INTRO",
+    "section": "RESOURCE LIMITATIONS",
+    "text": "RESOURCE LIMITATIONS\nVisualization designers must take into account three very different kinds of resource limitations:\n\nLimitations of computers.\nLimitations of humans.\nLimitations of displays."
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#computational-limits",
+    "href": "BCB520/posts/post-with-code/index.html#computational-limits",
+    "title": "LECTURE 1 - INTRO",
+    "section": "COMPUTATIONAL LIMITS",
+    "text": "COMPUTATIONAL LIMITS\nCPU time\nSystem Memory"
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#display-limits",
+    "href": "BCB520/posts/post-with-code/index.html#display-limits",
+    "title": "LECTURE 1 - INTRO",
+    "section": "DISPLAY LIMITS",
+    "text": "DISPLAY LIMITS\nPixels are precious and are the most constrained resource.\n\nInformation Density: ratio of space used to encode information vs unused whitespace.\nThere is a tradeoff between clutter and wasting space.\nDesigner must find the sweet spot between dense and sparse."
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#human-limits",
+    "href": "BCB520/posts/post-with-code/index.html#human-limits",
+    "title": "LECTURE 1 - INTRO",
+    "section": "HUMAN LIMITS",
+    "text": "HUMAN LIMITS\n\nTime\nMemory\nAttention"
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#visualization-analysis-and-design",
+    "href": "BCB520/posts/post-with-code/index.html#visualization-analysis-and-design",
+    "title": "LECTURE 1 - INTRO",
+    "section": "VISUALIZATION ANALYSIS AND DESIGN",
+    "text": "VISUALIZATION ANALYSIS AND DESIGN\nANALYSIS?\n\nimposes structure on huge design space.\nscaffold to help you think systematically about choices.\nanalyzing existing as stepping stone to designing new.\nmost possibilities ineffective for particular task/data combination."
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#analysis-framework",
+    "href": "BCB520/posts/post-with-code/index.html#analysis-framework",
+    "title": "LECTURE 1 - INTRO",
+    "section": "ANALYSIS FRAMEWORK",
+    "text": "ANALYSIS FRAMEWORK"
+  },
+  {
+    "objectID": "BCB520/posts/post-with-code/index.html#analysis-framework-example",
+    "href": "BCB520/posts/post-with-code/index.html#analysis-framework-example",
+    "title": "LECTURE 1 - INTRO",
+    "section": "ANALYSIS FRAMEWORK EXAMPLE",
+    "text": "ANALYSIS FRAMEWORK EXAMPLE\nTree Juxtaposer\n\n\n\n\nhttps://canvas.uidaho.edu/courses/11081"
+  },
+  {
+    "objectID": "BCB520/posts/A1-Lit-Prog/index.html",
+    "href": "BCB520/posts/A1-Lit-Prog/index.html",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "",
+    "text": "The idea of Literate Programming is that source code that is executed as part of the program’s purpose is interspersed with documentation that describes the program’s logic. The concept of literate programming was first articulated by David Knuth in 1984. You know… back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren’t very many good arguments as to why you WOULDN’T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills."
+  },
+  {
+    "objectID": "BCB520/posts/A1-Lit-Prog/index.html#literate-programming-publishing-systems",
+    "href": "BCB520/posts/A1-Lit-Prog/index.html#literate-programming-publishing-systems",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "LITERATE PROGRAMMING PUBLISHING SYSTEMS",
+    "text": "LITERATE PROGRAMMING PUBLISHING SYSTEMS\nI’m trying to keep this course as technology agnostic as I can. The idea is that you should be practicing and building competencies in the languages and algorithms that are most useful to you. Who am I to tell you to use R instead of Python? If you have skills in a particular language I encourage you to keep using that during this course. That being said, I am going to work the examples using R and R Studio, and I will (mostly) use Quarto as the literate programming framework.\nIf all of this is new to you, no problem. Just follow along in R and Quarto and start your skill building journey with those languages.\nIf you are a python person, great! Quarto can accomodate that language as well. If you have another preference for literate programming, such as sticking with R Markdown until the Quarto bugs are fixed, that is great. Find the framework and tools that work for you, and practice, practice, practice!\n\nQuarto\nAn open source publishing system that allows you to create websites, documents, blogs, books, publications, presentations, and more while using R, Python, Julia, or Observable. Quarto is intended to be the more functional successor of R Markdown. I intend to use Quarto for most of my work in this course.\n\n\nR Markdown\nAnother publishing system for creating all the things … websites, slides, manuscripts, dashboards, etc. While most people (including me!) instinctively think of R and Python within R Markdown, the list of supported language engines is pretty extensive.\n\nnames(knitr::knit_engines$get())\n\n [1] \"awk\"       \"bash\"      \"coffee\"    \"gawk\"      \"groovy\"    \"haskell\"  \n [7] \"lein\"      \"mysql\"     \"node\"      \"octave\"    \"perl\"      \"php\"      \n[13] \"psql\"      \"Rscript\"   \"ruby\"      \"sas\"       \"scala\"     \"sed\"      \n[19] \"sh\"        \"stata\"     \"zsh\"       \"asis\"      \"asy\"       \"block\"    \n[25] \"block2\"    \"bslib\"     \"c\"         \"cat\"       \"cc\"        \"comment\"  \n[31] \"css\"       \"ditaa\"     \"dot\"       \"embed\"     \"eviews\"    \"exec\"     \n[37] \"fortran\"   \"fortran95\" \"go\"        \"highlight\" \"js\"        \"julia\"    \n[43] \"python\"    \"R\"         \"Rcpp\"      \"sass\"      \"scss\"      \"sql\"      \n[49] \"stan\"      \"targets\"   \"tikz\"      \"verbatim\"  \"ojs\"       \"mermaid\"  \n[55] \"include\""
+  },
+  {
+    "objectID": "BCB520/posts/A1-Lit-Prog/index.html#languages-and-toolsets",
+    "href": "BCB520/posts/A1-Lit-Prog/index.html#languages-and-toolsets",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "LANGUAGES AND TOOLSETS",
+    "text": "LANGUAGES AND TOOLSETS\nThere are quite a few, but the five that seemed to keep coming up as I prepped this course are:\n\nR\nA very powerful open source framework for statistical computing and graphics. R has a lot of base functionality, and its capabilities are increased by 100 fold with packages created by R users. Packages are the core units of R code. I’m going to use R for the vast majority of demonstrations in this course.\n\n\nPython\nPython is an open source general purpose programming language. It wasn’t developed just for statistical computing or data science, and people use this language for tons of different applications. There is no denying it has become a very powerful language for data science and data visualization.\n\n\nTableau\nTableau is proprietary software that is very powerful for creating beautiful and functional data visualizations. It can integrate with all sorts of data sources and is used a lot for analytics, especially in the business world. The downsides (that occur to me at least) are that it costs money, it is not open source, and is more of a one-trick-pony than the programming languages on this list.\n\n\nJavascript\nJavascript has been around for about 25 years, and is (I think) the world’s most popular programming language. Along with HTML and CSS, Javascript drives pretty much the entire internet. I mention Javascript here because it has the D3 library, which can create super cool interactive data visualizaitons. In my experience, the learning curve with Javascript and D3 was pretty steep. I bought a book about it once, but just haven’t been able to allocate the amount of time necessary to really start using it. Check out the gallery of examples. Amazing!\n\n\nObservable / D3\nObservable is a set of extensions to Javascript that features something called reactive runtime. This means that the code blocks are executed and compiled as they are written, and changes are implemented instantaneously. Observable is pretty great for data exploration, and is well supported by Quarto. In addition, you can use the Observable JS libraries in Quarto to access D3. We’ll use some of these tools in this course, especially when we start considering interactivity."
+  },
+  {
+    "objectID": "BCB520/posts/A1-Lit-Prog/index.html#assignment",
+    "href": "BCB520/posts/A1-Lit-Prog/index.html#assignment",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "ASSIGNMENT",
+    "text": "ASSIGNMENT\nAfter that long introduction, I suppose you are wondering what I want you to actually DO today.\nWell, I want you to set up your publishing system and preferred language on your computer. Then I want you to recreate the classic figure from Anscombe’s Quartet.\nNow, you might be asking…\n“How am I supposed to do that? You haven’t taught me how to do anything yet!”\nHere is the dirty little secret of modern education.\nThe Internet Exists.\nWhile I could use up an entire 90 minute lecture telling you how to:\ndownload and install R, R-Studio, and Quarto\ncreate a Quarto document that will publish in the .html format\ninstall the R packages you will need\ntidy up the Anscombe’s Quartet data\ncalculate the summary statistics for each x y pair\nand make a nice little plot…\nI’m not going to do that.\nInstead, I want you to use the resources I point towards, or other resources that make more sense to you, to figure out how to do those things."
+  },
+  {
+    "objectID": "BCB520/posts/A1-Lit-Prog/index.html#resources",
+    "href": "BCB520/posts/A1-Lit-Prog/index.html#resources",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "RESOURCES",
+    "text": "RESOURCES\nTidyverse and Anscombe’s Quartet"
+  },
+  {
+    "objectID": "BCB520/BCB520.html",
+    "href": "BCB520/BCB520.html",
+    "title": "BCB 520 :: Foundations of Data Visualization",
+    "section": "",
+    "text": "// About\nThis class will help students establish a foundational understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R programming language. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using R. The course is designed to be “discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.\n\n\n// Posts\n\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nASSIGNMENT 1 - Fun with literate programming.\n\n\n\nAssignment\n\n\nDataViz\n\n\nQuarto\n\n\n\n\n\n\n\nBarrie Robison\n\n\nDec 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLECTURE 1 - INTRO\n\n\n\nLecture\n\n\nDataViz\n\n\nIntro\n\n\n\n\n\n\n\nBarrie Robison\n\n\nOct 16, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "PolymorphicGames.html",
+    "href": "PolymorphicGames.html",
+    "title": "Polymorphic Games",
+    "section": "",
+    "text": "I am the cofounder (along with Professor Terry Soule) of Polymorphic Games, an experimental video game studio that applies game development technology to scientific research and STEM education. Polymorphic Games has released two evolutionary video games on Steam:\nDarwin’s Demons is an arcade style space shooter in which you battle a population of evolving aliens. The alien’s morphology, fire type, and behaviors are all encoded by a digital genome. The aliens that are best able to shoot or evade you reproduce to make the next generation.\nProject Hastur is an evolutionary tower defense game. Defend humanity against the ever changing threat of the alien Proteans. Project Hastur combines elements of 3D tower defense and real-time strategy with models of biological evolution to create a uniquely challenging experience.\nTo learn more about our game studio, check out the Polymorphic Games website.\nYou can learn more about our past and current projects at the Polymorphic Games website."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ROBISON LAB",
+    "section": "",
+    "text": "// Evolution // Data Science // Video Games // Horror Fiction\nI am a Professor of Biological Sciences at the University of Idaho, where I study evolution and adaptation using an unusual mixture of model systems. Over the course of my career, I have conducted research on the genetic basis of quantitative traits in salmonids, behavioral genomics and adaptation to captivity in zebrafish, and the implementation of evolutionary models in video games. I taught Genomics and General Genetics for 15 years, and I am about to deploy three graduate level courses in Data Science as part of our new Graduate Certificate in Professional Applications of Data Science.\nI am the co-founder (along with Professor Terry Soule) of Polymorphic Games, an experimental video game studio that applies game development technology to scientific research and STEM education.\nI am the Director of the Institute for Interdisciplinary Data Sciences (IIDS).\nFinally, I am a huge Horror and Science Fiction nerd. I am fascinated by the intersection of these genres with science, and I explore these intersections in my BLOG - Professor Polymorphic.\nBachelor of Science in Biology, University of Victoria, 1988-1993\nMaster of Science in Fisheries, University of Idaho, 1993-1995\nPHD in Biology, Washington State University, 1995-1999\nPostdoctoral Researcher in Evolutionary Genetics, University of Oregon 1999-2000\nPostdoctoral Researcher in Evolutionary Genetics, Indiana University 2000-2003"
+  },
+  {
+    "objectID": "Publications.html",
+    "href": "Publications.html",
+    "title": "PUBLICATIONS",
+    "section": "",
+    "text": "References\n\nLoftie-Eaton, W., Crabtree, A., Perry, D., Millstein, J., Baytosh, J., Stalder, T., Robison, B. D., Forney, L. J., & Top, E. M. (2021). Contagious antibiotic resistance: Plasmid transfer among bacterial residents of the zebrafish gut. Applied and Environmental Microbiology, 87(9), e02735–20.\n\n\nMa, X., Sheneman, L., Robison, B., Harris, F., & Shi, X. (2021). Framework vs System: Our experience with the TickBase project. AGU Fall Meeting Abstracts, 2021, IN13A–08.\n\n\nJohnson, B. D., Fox, A., Wright, L. R., Carney, G. E., Robison, B. D., & Jones, A. G. (2020). Nothobranchius furzeri as an emerging model for mate choice: female choice revealed by animations. Behaviour, 158(1), 35–49.\n\n\nSoule, T., & Robison, B. (2019). Polymorphic Games: Creating an On-Campus, Commercial Game Studio. EdMedia+ Innovate Learning, 1041–1045.\n\n\nSamuel, B., Reed, A., Short, E., Heck, S., Robison, B., Wright, L., Soule, T., Treanor, M., McCoy, J., & Sullivan, A. (2018). Playable experiences at AIIDE 2018. Fourteenth Artificial Intelligence and Interactive Digital Entertainment Conference.\n\n\nSoule, T., Heck, S., Haynes, T. E., Wood, N., & Robison, B. D. (2017). Darwin’s demons: Does evolution improve the game? European Conference on the Applications of Evolutionary Computation, 435–451.\n\n\nTreanor, M., Warren, N., Reed, M., Smith, A., Ortiz, P., Coney, L., Sherman, L., Carré, E., Vivatvisha, N., & Harrell, D. (2017). Playable experiences at AIIDE 2017. Proceedings of the AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment, 13, 308–314.\n\n\nGerritsen, A. T., New, D. D., Robison, B. D., Rashed, A., Hohenlohe, P., Forney, L., Rashidi, M., Wilson, C. M., & Settles, M. L. (2016). Full mitochondrial genome sequence of the sugar beet wireworm Limonius californicus (Coleoptera: Elateridae), a common agricultural pest. Genome Announcements, 4(1), e01628–15.\n\n\nSinger, M. L., Oreschak, K., Rhinehart, Z., & Robison, B. D. (2016). Anxiolytic effects of fluoxetine and nicotine exposure on exploratory behavior in zebrafish. PeerJ, 4, e2352.\n\n\nSoule, T., Robison, B. D., & Heckendorn, R. B. (2016). Co-evolution of Sensor Morphology and Behavior. Proceedings of the 2016 on Genetic and Evolutionary Computation Conference Companion, 135–136.\n\n\nSukeena, J. M., Galicia, C. A., Wilson, J. D., McGinn, T., Boughman, J. W., Robison, B. D., Postlethwait, J. H., Braasch, I., Stenkamp, D. L., & Fuerst, P. G. (2016). Characterization and evolution of the spotted gar retina. Journal of Experimental Zoology Part B: Molecular and Developmental Evolution, 326(7), 403–421.\n\n\nChapalamadugu, K. C., Murdoch, B. M., Robison, B. D., Hill, R. A., & Murdoch, G. K. (2015). Oncorhynchus mykiss pax7 sequence variations with comparative analyses against other teleost species. SpringerPlus, 4(1), 1–11.\n\n\nChapalamadugu, K. C., VandeVoort, C. A., Settles, M. L., Robison, B. D., & Murdoch, G. K. (2014). Maternal Bisphenol A Exposure Impacts the Fetal Heart.\n\n\nChapalamadugu, K. C., VandeVoort, C. A., Settles, M. L., Robison, B. D., & Murdoch, G. K. (2014). Maternal bisphenol a exposure impacts the fetal heart transcriptome. PLoS One, 9(2), e89096.\n\n\nSherpa, T., Lankford, T., McGinn, T. E., Hunter, S. S., Frey, R. A., Sun, C., Ryan, M., Robison, B. D., & Stenkamp, D. L. (2014). Retinal regeneration is facilitated by the presence of surviving neurons. Developmental Neurobiology, 74(9), 851–876.\n\n\nBenner, M. J., Hardy, R. W., Settles, M. L., & Robison, B. D. (2013). Genetic variation within the selenoproteome influences anxiety‐related behaviors in zebrafish (Danio rerio). The Federation of American Societies for Experimental Biology.\n\n\nBenner, M. J., Settles, M. L., Murdoch, G. K., Hardy, R. W., & Robison, B. D. (2013). Sex-specific transcriptional responses of the zebrafish (Danio rerio) brain selenoproteome to acute sodium selenite supplementation. Physiological Genomics, 45(15), 653–666.\n\n\nOswald, M. E., Singer, M., & Robison, B. D. (2013). The quantitative genetic architecture of the bold-shy continuum in zebrafish, Danio rerio. PloS One, 8(7), e68828.\n\n\nDrew, R. E., Settles, M. L., Churchill, E. J., Williams, S. M., Balli, S., & Robison, B. D. (2012). Brain transcriptome variation among behaviorally distinct strains of zebrafish (Danio rerio). BMC Genomics, 13(1), 1–13.\n\n\nOswald, M. E., Drew, R. E., Racine, M., Murdoch, G. K., & Robison, B. D. (2012). Is behavioral variation along the bold-shy continuum associated with variation in the stress axis in zebrafish? Physiological and Biochemical Zoology, 85(6), 718–728.\n\n\nPham, M., Raymond, J., Hester, J., Kyzar, E., Gaikwad, S., Bruce, I., Fryar, C., Chanin, S., Enriquez, J., & Bagawandoss, S. (2012). Assessing social behavior phenotypes in adult zebrafish: Shoaling, social preference, and mirror biting tests. In Zebrafish protocols for neurobehavioral research (pp. 231–246). Humana Press, Totowa, NJ.\n\n\nRobison, B. D., Benner, M. J., Singer, M. L., & Oswald, M. E. (2012). A High-Throughput and Inexpensive Assay for Anxiety-Related Behaviors in the Zebrafish, Based on Place Preference and Latency to Feed. In Zebrafish protocols for neurobehavioral research (pp. 203–215). Humana Press, Totowa, NJ.\n\n\nSettles, M. L., Coram, T., Soule, T., & Robison, B. D. (2012). An improved algorithm for the detection of genomic variation using short oligonucleotide expression microarrays. Molecular Ecology Resources, 12(6), 1079–1089.\n\n\nSinger, M. L., Oswald, M. E., Wiedeback, B. D., & Robison, B. D. (2012). The genetic architecture of the bold-shy continuum in zebrafish, Danio rerio. INTEGRATIVE AND COMPARATIVE BIOLOGY, 52, E161–E161.\n\n\nWiedeback, B. D., Oswald, M. E., & Robison, B. D. (2012). The link between stress and behavior in zebrafish: is embryonic perturbation a factor? INTEGRATIVE AND COMPARATIVE BIOLOGY, 52, E191–E191.\n\n\nKanuga, M. K., Benner, M. J., Doble, J. A., Wilson‐Leedy, J. G., Robison, B. D., & Ingermann, R. L. (2011). Effect of aging on male reproduction in zebrafish (Danio rerio). Journal of Experimental Zoology Part A: Ecological Genetics and Physiology, 315(3), 156–161.\n\n\nRobison, B. D., & Thorgaard, G. H. (2011). Prospects and pitfalls of clonal fishes in the postgenomic era. Aquaculture Biotechnology, 55.\n\n\nSherpa, T., Hunter, S. S., Frey, R. A., Robison, B. D., & Stenkamp, D. L. (2011). Retinal proliferation response in the buphthalmic zebrafish, bugeye. Experimental Eye Research, 93(4), 424–436.\n\n\nBenner, M. J., Drew, R. E., Hardy, R. W., & Robison, B. D. (2010). Zebrafish (Danio rerio) vary by strain and sex in their behavioral and transcriptional responses to selenium supplementation. Comparative Biochemistry and Physiology Part A: Molecular & Integrative Physiology, 157(4), 310–318.\n\n\nChapalamadugu, K. C., Robison, B. D., Drew, R. E., Powell, M. S., Hill, R. A., Amberg, J. J., Rodnick, K. J., Hardy, R. W., Hill, M. L., & Murdoch, G. K. (2009). Dietary carbohydrate level affects transcription factor expression that regulates skeletal muscle myogenesis in rainbow trout. Comparative Biochemistry and Physiology Part B: Biochemistry and Molecular Biology, 153(1), 66–72.\n\n\nRobison, B. (2009). The Role of Model Organisms in Aquaculture Research: Transient and Permanent Advantages. Molecular Research in Aquaculture, 175.\n\n\nDrew, R. E., Rodnick, K. J., Settles, M., Wacyk, J., Churchill, E., Powell, M. S., Hardy, R. W., Murdoch, G. K., Hill, R. A., & Robison, B. D. (2008). Effect of starvation on transcriptomes of brain and liver in adult female zebrafish (Danio rerio). Physiological Genomics, 35(3), 283–295.\n\n\nOswald, M., & Robison, B. D. (2008). Strain-specific alteration of zebrafish feeding behavior in response to aversive stimuli. Canadian Journal of Zoology, 86(10), 1085–1094.\n\n\nRobison, B. D., Drew, R. E., Murdoch, G. K., Powell, M., Rodnick, K. J., Settles, M., Stone, D., Churchill, E., Hill, R. A., & Papasani, M. R. (2008). Sexual dimorphism in hepatic gene expression and the response to dietary carbohydrate manipulation in the zebrafish (Danio rerio). Comparative Biochemistry and Physiology Part D: Genomics and Proteomics, 3(2), 141–154.\n\n\nMoretz, J. A., Martins, E. P., & Robison, B. D. (2007). Behavioral syndromes and the evolution of correlated behavior in zebrafish. Behavioral Ecology, 18(3), 556–562.\n\n\nMoretz, J. A., Martins, E. P., & Robison, B. D. (2007). The effects of early and adult social environment on zebrafish (Danio rerio) behavior. Environmental Biology of Fishes, 80(1), 91–101.\n\n\nRobison, B. D. (2007). Variation in behavior and global patterns of gene expression among wild and domesticated zebrafish: implications for teleost aquaculture. Aquaculture, 272, S305.\n\n\nOswald, M. E., & Robison, B. D. (2006). Behavioral syndromes and adaptation to captivity in the zebrafish, Danio rerio. INTEGRATIVE AND COMPARATIVE BIOLOGY, 46, E105–E105.\n\n\nPapasani, M. R., Robison, B. D., Hardy, R. W., & Hill, R. A. (2006). Early developmental expression of two insulins in zebrafish (Danio rerio). Physiological Genomics, 27(1), 79–85.\n\n\nRobison, B. D., Drew, R. E., Settles, M., Churchill, E., Moretz, J., & Martins, E. P. (2006). Variation in gene expression among the brains of behaviorally distinct zebrafish strains. no evidence for parallel transcriptome evolution during domestication. INTEGRATIVE AND COMPARATIVE BIOLOGY, 46, E120–E120.\n\n\nMartinez, V., Thorgaard, G., Robison, B., & Sillanpaa, M. J. (2005). Posterior evidence of multiple QTL influencing early development in double haploid lines of rainbow trout, Oncorhynchus mykiss. Aquaculture, 247, 25.\n\n\nMartinez, V., Thorgaard, G., Robison, B., & Sillanpää, M. J. (2005). An application of Bayesian QTL mapping to early development in double haploid lines of rainbow trout including environmental effects. Genetics Research, 86(3), 209–221.\n\n\nRobison, B. D., & Rowland, W. (2005). A potential model system for studying the genetics of domestication: behavioral variation among wild and domesticated strains of zebra danio (Danio rerio). Canadian Journal of Fisheries and Aquatic Sciences, 62(9), 2046–2054.\n\n\nColbourne, J. K., Robison, B., Bogart, K., & Lynch, M. (2004). Five hundred and twenty‐eight microsatellite markers for ecological genomic investigations using Daphnia. Molecular Ecology Notes, 4(3), 485–490.\n\n\nRobison, B. D., & Thorgaard, G. H. (2004). The phenotypic relationship of a clonal line to its population of origin: rapid embryonic development in an Alaskan population of rainbow trout. Transactions of the American Fisheries Society, 133(2), 455–461.\n\n\nTrevarrow, B., & Robison, B. (2004). Genetic backgrounds, standard lines, and husbandry of zebrafish. In Methods in cell biology (Vol. 77, pp. 599–616). Academic Press.\n\n\nNichols, K. M., Young, W. P., Danzmann, R. G., Robison, B. D., Rexroad, C., Noakes, M., Phillips, R. B., Bentzen, P., Spies, I., & Knudsen, K. (2003). A consolidated linkage map for rainbow trout (Oncorhynchus mykiss). Animal Genetics, 34(2), 102–115.\n\n\nThorgaard, G. H., Wheeler, P. A., Young, W. P., Robison, B. D., & Ristow, S. S. (2003). Genetic analysis of complex traits using clonal rainbow trout lines. In Aquatic genomics (pp. 395–398). Springer, Tokyo.\n\n\nMartinez, V., Sillanpaä, M., Thorgaard, G., Robinson, B., Woolliams, J., & Knott, S. (2002). Evidence of a pleiotropic QTL influencing components of early development in double haploid lines of rainbow trout. 7th World Congress on Genetics Applied to Livestock Production, 6–8.\n\n\nThorgaard, G. H., Bailey, G. S., Williams, D., Buhler, D. R., Kaattari, S. L., Ristow, S. S., Hansen, J. D., Winton, J. R., Bartholomew, J. L., & Nagler, J. J. (2002). Status and opportunities for genomics research with rainbow trout. Comparative Biochemistry and Physiology Part B: Biochemistry and Molecular Biology, 133(4), 609–646.\n\n\nThorgaard, G., Bailey, G., Williams, D., Buhler, D., Kaattari, S., Ristow, S., Hansen, J., Winton, J., Bartholomew, J., & Nagler, J. (2002). A white paper advocating complete sequencing of the genome of the rainbow trout, Oncorhynchus mykiss.\n\n\nBrunelli, J. P., Robison, B. D., & Thorgaard, G. H. (2001). Ancient and recent duplications of the rainbow trout Wilms’ tumor gene. Genome, 44(3), 455–462.\n\n\nRobison, B. D., Wheeler, P. A., Sundin, K., Sikka, P., & Thorgaard, G. H. (2001). Composite interval mapping reveals a major locus influencing embryonic development rate in rainbow trout (Oncorhynchus mykiss). Journal of Heredity, 92(1), 16–22.\n\n\nZhang, H., Robison, B., Thorgaard, G. H., & Ristow, S. S. (2000). Cloning, mapping and genomic organization of a fish C-type lectin gene from homozygous clones of rainbow trout (Oncorhynchus mykiss). Biochimica Et Biophysica Acta (BBA)-Gene Structure and Expression, 1494(1-2), 14–22.\n\n\nZhang, H., Robison, B., Thorgaard, G., & Ristow, S. (2000). Genes which possess sequence similarity to mammalian C-type lectins mediating natural killer cell activity are present in rainbow trout. FASEB JOURNAL, 14, A1053–A1053.\n\n\nRobison, B. D. (1999). Quantitative and molecular genetic analysis of embryonic development rate in rainbow trout (Oncorhynchus mykiss). Washington State University.\n\n\nRobison, B. D., Wheeler, P. A., & Thorgaard, G. H. (1999). Variation in development rate among clonal lines of rainbow trout (Oncorhynchus mykiss). Aquaculture, 173(1-4), 131–141.\n\n\nRistow, S. S., Grabowski, L. D., Ostberg, C., Robison, B., & Thorgaard, G. H. (1998). Development of long-term cell lines from homozygous clones of rainbow trout. Journal of Aquatic Animal Health, 10(1), 75–82.\n\n\nRobison, B. D. (1995). Genetic relationships between maternal lineages of sympatric anadromous and resident forms of Oncorhynchus nerka determined through PCR RFLP analysis of mtDNA. University of Idaho."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Evolution. Data Science. Video Games. Horror Fiction.\nI am a Professor of Biological Sciences at the University of Idaho, and the cofounder of Polymorphic Games, an experimental video game studio that applies game development technology to scientific research and education. We have released two evolutionary video games on Steam:\nDarwin’s Demons is an rcade style space shooter in which you battle a population of evolving aliens. The alien’s morphology, fire type, and behaviors are all encoded by a digital genome. The aliens that are best able to shoot or evade you reproduce to make the next generation.\nProject Hastur is an evolutionary tower defense game. Defend humanity against the ever changing threat of the alien Proteans. Project Hastur combines elements of 3D tower defense and real-time strategy with models of biological evolution to create a uniquely challenging experience.\nI am also a huge Horror and Science Fiction nerd, and am fascinated by the intersection of these genres with science."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/post-with-code/index.html",
+    "href": "ProfessorPolymorphic/posts/post-with-code/index.html",
+    "title": "Observable Experiment",
+    "section": "",
+    "text": "Testing out observable and D3 in Quarto!\n\nviewof Year = Inputs.range(\n  [2017, 2022], \n  {value: 2017, step: 1, label: \"Year:\"}\n)\nviewof Degree = Inputs.checkbox(\n  [\"Biochemistry\", \"Biology\", \"MBB\", \"Medical Sciences\", \"Microbiology\"], \n  { value: [\"Biochemistry\", \"Biology\"], \n    label: \"Degrees:\"\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlotData\n\n\n\nPlot.plot({\n  marks: [\n    Plot.barY(filtered, {y: \"Enrollment\", x: \"Class\", fill: \"Class\"}),\n    Plot.ruleX([0])\n  ],\n  facet: {\n  data: filtered,\n      x: \"Year\",\n      y: \"Degree\",\n      marginRight: 80\n}\n})\n\n\n\n\n\n\n\n\n\nInputs.table(filtered)\n\n\n\n\n\n\n\n\n\n\ndata = FileAttachment(\"TidyEnrollment.csv\").csv({ typed: true })\n\n\n\n\n\n\n\nfiltered = data.filter(function(enroll) {\n  return Year < enroll.Year &&\n         Degree.includes(enroll.Degree);\n})\n\n\n\n\n\n\n\nrandoms = Array.from({length: 1000}, () => Math.random() * Math.random())\nimport {Histogram} from \"@d3/histogram\"\nHistogram(randoms)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHistogram(randoms, {\n  width,\n  thresholds: 100,\n  domain: [0, 1],\n  color: \"steelblue\",\n  height: 240\n})\n\n\n\n\n\n\n\n\n\nd3 = require(\"d3@7\")\nimport {howto, altplot} from \"@d3/example-components\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsunburst = {\n  const root = partition(flareData);\n\n  root.each(d => d.current = d);\n\n  const svg = d3.create(\"svg\")\n      .attr(\"viewBox\", [0, 0, width, width])\n      .style(\"font\", \"15px sans-serif\");\n\n  const g = svg.append(\"g\")\n      .attr(\"transform\", `translate(${width / 2},${width / 2})`);\n\n  const path = g.append(\"g\")\n    .selectAll(\"path\")\n    .data(root.descendants().slice(1))\n    .join(\"path\")\n      .attr(\"fill\", d => { while (d.depth > 1) d = d.parent; return color(d.data.name); })\n      .attr(\"fill-opacity\", d => arcVisible(d.current) ? (d.children ? 0.6 : 0.4) : 0)\n      .attr(\"d\", d => arc(d.current));\n\n  path.filter(d => d.children)\n      .style(\"cursor\", \"pointer\")\n      .on(\"click\", clicked);\n\n  path.append(\"title\")\n      .text(d => `${d.ancestors().map(d => d.data.name).reverse().join(\"/\")}\\n${format(d.value)}`);\n\n  const label = g.append(\"g\")\n      .attr(\"pointer-events\", \"none\")\n      .attr(\"text-anchor\", \"middle\")\n      .style(\"user-select\", \"none\")\n    .selectAll(\"text\")\n    .data(root.descendants().slice(1))\n    .join(\"text\")\n      .attr(\"dy\", \"0.35em\")\n      .attr(\"fill-opacity\", d => +labelVisible(d.current))\n      .attr(\"transform\", d => labelTransform(d.current))\n      .text(d => d.data.name);\n\n  const parent = g.append(\"circle\")\n      .datum(root)\n      .attr(\"r\", radius)\n      .attr(\"fill\", \"none\")\n      .attr(\"pointer-events\", \"all\")\n      .on(\"click\", clicked);\n\n  function clicked(event, p) {\n    parent.datum(p.parent || root);\n\n    root.each(d => d.target = {\n      x0: Math.max(0, Math.min(1, (d.x0 - p.x0) / (p.x1 - p.x0))) * 2 * Math.PI,\n      x1: Math.max(0, Math.min(1, (d.x1 - p.x0) / (p.x1 - p.x0))) * 2 * Math.PI,\n      y0: Math.max(0, d.y0 - p.depth),\n      y1: Math.max(0, d.y1 - p.depth)\n    });\n\n    const t = g.transition().duration(750);\n\n    // Transition the data on all arcs, even the ones that aren’t visible,\n    // so that if this transition is interrupted, entering arcs will start\n    // the next transition from the desired position.\n    path.transition(t)\n        .tween(\"data\", d => {\n          const i = d3.interpolate(d.current, d.target);\n          return t => d.current = i(t);\n        })\n      .filter(function(d) {\n        return +this.getAttribute(\"fill-opacity\") || arcVisible(d.target);\n      })\n        .attr(\"fill-opacity\", d => arcVisible(d.target) ? (d.children ? 0.6 : 0.4) : 0)\n        .attrTween(\"d\", d => () => arc(d.current));\n\n    label.filter(function(d) {\n        return +this.getAttribute(\"fill-opacity\") || labelVisible(d.target);\n      }).transition(t)\n        .attr(\"fill-opacity\", d => +labelVisible(d.target))\n        .attrTween(\"transform\", d => () => labelTransform(d.current));\n  }\n  \n  function arcVisible(d) {\n    return d.y1 <= 3 && d.y0 >= 1 && d.x1 > d.x0;\n  }\n\n  function labelVisible(d) {\n    return d.y1 <= 3 && d.y0 >= 1 && (d.y1 - d.y0) * (d.x1 - d.x0) > 0.03;\n  }\n\n  function labelTransform(d) {\n    const x = (d.x0 + d.x1) / 2 * 180 / Math.PI;\n    const y = (d.y0 + d.y1) / 2 * radius;\n    return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;\n  }\n\n  return svg.node();\n}\n\n\n\n\n\n\n\nflareData = FileAttachment(\"flare-2.json\").json()\n\npartition = flareData => {\n  const root = d3.hierarchy(flareData)\n      .sum(d => d.value)\n      .sort((a, b) => b.value - a.value);\n  return d3.partition()\n      .size([2 * Math.PI, root.height + 1])\n    (root);\n}\n\ncolor = d3.scaleOrdinal(\n  d3.quantize(d3.interpolateRainbow, flareData.children.length + 1)\n)\n\nformat = d3.format(\",d\")\n\nwidth = 932\n\nradius = width / 6\n\narc = d3.arc()\n    .startAngle(d => d.x0)\n    .endAngle(d => d.x1)\n    .padAngle(d => Math.min((d.x1 - d.x0) / 2, 0.005))\n    .padRadius(radius * 1.5)\n    .innerRadius(d => d.y0 * radius)\n    .outerRadius(d => Math.max(d.y0 * radius, d.y1 * radius - 1))"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#who-am-i",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#who-am-i",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "WHO AM I?",
+    "text": "WHO AM I?\n\n// Evolution // Data Science // Video Games // Horror Fiction\nBarrie Robison\nDepartment of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#who-are-you",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#who-are-you",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "WHO ARE YOU?",
+    "text": "WHO ARE YOU?\n\nmidjourney // a terrified undergraduate researcher\nBriefly:\n\nYour name\nYour major\nYour career goal(s)\nYour darkest fear"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#the-plan",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#the-plan",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "THE PLAN",
+    "text": "THE PLAN\nApproximately:\n\n\nExplain WHY you are at University.\nExplain how undergraduate research might help you achieve your goals.\nExplain how to find potential research mentors.\nExplain some of the mechanisms that support undergraduate research.\nTell you that everything will be OK."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#why-are-you-here",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#why-are-you-here",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "WHY ARE YOU HERE?",
+    "text": "WHY ARE YOU HERE?\nUniversity is expensive, stressful, and difficult… yet here you are.\n\nBAD ANSWERSGOOD ANSWERS\n\n\n\n\nMy parents expect me to…\nEveryone else is going…\nI want a good job…\nParties!\nSportsball (watching, not playing)\n\n\n\n\n\nI want to invest in myself.\nI want to learn about…\nI want to be the best version of myself.\nI want a fulfilling career…\nI want to solve an important problem."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#an-important-distinction",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#an-important-distinction",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "AN IMPORTANT DISTINCTION",
+    "text": "AN IMPORTANT DISTINCTION\nGetting an education vs. getting a degree."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#undergraduate-research",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#undergraduate-research",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "UNDERGRADUATE RESEARCH",
+    "text": "UNDERGRADUATE RESEARCH\n\nBenefits\n\nDisciplinary skills\nSoft skills\nPerseverance and Grit\nDemonstrated experience\nNetwork building"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#how-to-find-a-mentor",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#how-to-find-a-mentor",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "HOW TO FIND A MENTOR",
+    "text": "HOW TO FIND A MENTOR\nYour Interests vs. Faculty Interests"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#the-script",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#the-script",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "THE SCRIPT",
+    "text": "THE SCRIPT\n\nAre the research questions compelling?\nField work vs bench work.\nMath? ($%*& no! to theory)\nProgramming?\nScale of biological organization? (molecules to ecosystems)\nModel organism? (simulations to microbes to plants to humans)\nBasic vs. Applied"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#thinking-about-research",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#thinking-about-research",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "THINKING ABOUT RESEARCH",
+    "text": "THINKING ABOUT RESEARCH\nDifferentiate between:\n\nMethods, Tools, Approaches, Model systems AND\nDisciplines, Questions, Hypotheses, Motivations"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#finding-the-information",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#finding-the-information",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "FINDING THE INFORMATION",
+    "text": "FINDING THE INFORMATION\n\nPay attention to WHO IS TEACHING YOUR CLASSES!\nFaculty websites…\nAsk your peers.\nAsk your advisor.\nMeet with me (or another non-terrifying faculty member)."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#narrow-your-list",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#narrow-your-list",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "NARROW YOUR LIST",
+    "text": "NARROW YOUR LIST\nTry to get to a ranked list of 2 to 4 faculty who align with your interests and what you want to learn."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#reach-out",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#reach-out",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "REACH OUT",
+    "text": "REACH OUT\n\nStart with an email.\nFirst impressions matter.\nComplete sentences are nice.\nWhy are you interested in their lab (the hardest part).\nNever cut and paste and no bulk emails!\nPerseverance versus peskiness."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#how-faculty-screen-candidates",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#how-faculty-screen-candidates",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "HOW FACULTY SCREEN CANDIDATES",
+    "text": "HOW FACULTY SCREEN CANDIDATES\n\nForgetting to reply.\nGrades.\nWritten and verbal coherence.\nIntellectual curiosity."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#what-faculty-want",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#what-faculty-want",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "WHAT FACULTY WANT",
+    "text": "WHAT FACULTY WANT\nWe enjoy investing time in undergraduate training if you bring…\n\nIntellectual curiosity.\nDiligence, reliability, eagerness to learn.\nA mostly functional personality that won’t piss off the rest of the lab.\nIntelligence, talent, etc…"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#mechanics",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#mechanics",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "MECHANICS",
+    "text": "MECHANICS\nThere are a variety of ways to engage in undergraduate research.\n\nCourse credit (Biol 301, 401)\nPaid as IH (usually from a grant)\nREU, INBRE, and other funding mechanisms\nVolunteering (which I DO NOT RECOMMEND)\nSome special classes (such as VIP)"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#it-will-all-be-ok",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#it-will-all-be-ok",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "IT WILL ALL BE OK!",
+    "text": "IT WILL ALL BE OK!\n midjouney // an anxious undergraduate\n\nsome text\n\n\n\nbrobison@uidaho.edu"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/welcome/index.html",
+    "href": "ProfessorPolymorphic/posts/welcome/index.html",
+    "title": "You’ve gotta be f***ing kidding…",
+    "section": "",
+    "text": "Mac wants the flamethrower…\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/index.html",
+    "href": "ProfessorPolymorphic/index.html",
+    "title": "Professor Polymorphic",
+    "section": "",
+    "text": "“The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown”.\n– H.P. Lovecraft, Supernatural Horror in Literature\n\n\nHorror emerges at the boundaries between the known and the unknown. We fear the dark because it hides the unknown beyond our senses. We fear death because we we do not truly know what happens when we die. Even when we push back the boundaries of the unknown, we actually just push back the curtain, creating new boundaries and new opportunities for horror to emerge."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/about.html",
+    "href": "ProfessorPolymorphic/about.html",
+    "title": "About",
+    "section": "",
+    "text": "Evolution. Data Science. Video Games. Horror Fiction.\nI am a Professor of Biological Sciences at the University of Idaho, and the cofounder of Polymorphic Games, an experimental video game studio that applies game development technology to scientific research and education. We have released two evolutionary video games on Steam:\nDarwin’s Demons is an rcade style space shooter in which you battle a population of evolving aliens. The alien’s morphology, fire type, and behaviors are all encoded by a digital genome. The aliens that are best able to shoot or evade you reproduce to make the next generation.\nProject Hastur is an evolutionary tower defense game. Defend humanity against the ever changing threat of the alien Proteans. Project Hastur combines elements of 3D tower defense and real-time strategy with models of biological evolution to create a uniquely challenging experience.\nI am also a huge Horror and Science Fiction nerd, and am fascinated by the intersection of these genres with science."
+  }
+]

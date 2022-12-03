@@ -1,0 +1,317 @@
+[
+  {
+    "objectID": "posts/post-with-code/index.html#who-am-i",
+    "href": "posts/post-with-code/index.html#who-am-i",
+    "title": "Lecture 1 - INTRO",
+    "section": "WHO AM I?",
+    "text": "WHO AM I?\nBarrie Robison\nDepartment of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#who-are-you",
+    "href": "posts/post-with-code/index.html#who-are-you",
+    "title": "Lecture 1 - INTRO",
+    "section": "WHO ARE YOU?",
+    "text": "WHO ARE YOU?\nBriefly:\n\nYour name\nYour discipline\nYour degree progress\nYour technical proficiency with data visualization"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#course-summary",
+    "href": "posts/post-with-code/index.html#course-summary",
+    "title": "Lecture 1 - INTRO",
+    "section": "COURSE SUMMARY",
+    "text": "COURSE SUMMARY\nStudents completing this course will be able to:\n\n\nDescribe and manipulate tabular, network, and spatial data; transform these data into a form suitable for visualization.\nMake effective data visualization design choices related to marks and channels, spatial arrangement, and components of color.\nDesign effective data visualizations for tabular, network, and spatial data with quantitative and categorical attributes.\nImplement their data visualization designs using existing tools in R (or other toolkits preferred by the student).\nExplain whether a visual encoding is perceptually appropriate for a specific combination of task and data.\nDemonstrate their skills with at least two novel visualizations suitable suitable for inclusion in an online Data Science Portfolio.\n\nThe course materials are located on Canvas."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#visualization",
+    "href": "posts/post-with-code/index.html#visualization",
+    "title": "Lecture 1 - INTRO",
+    "section": "VISUALIZATION",
+    "text": "VISUALIZATION\nComputer-based systems provide visual representations of datasets designed to help people carry out tasks more effectively.\nTamara Munzner\nDepartment of Computer Science\nInfoVis Group\nUniversity of British Columbia"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#the-human",
+    "href": "posts/post-with-code/index.html#the-human",
+    "title": "Lecture 1 - INTRO",
+    "section": "THE HUMAN",
+    "text": "THE HUMAN\nWhy have a human in the loop?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\nWe don’t need visualiztion when a trusted fully automatic solution exists. Visualization is suitable when there is a need to augment human capabilities rather than replace people with computational decision-making methods.\n\nVisualization is useful when:\n-analysis problem is ill-specified and we don’t know exactly what questions to ask in advance -long-term use for end users (ex: exploratory analysis of scientific data) -presentation of known results (ex: New York Times Upshot) -stepping stone to assess requirements before developing models -help automatic solution developers refine & determine parameters -help end users of automatic solutions verify, build trust"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#the-representation",
+    "href": "posts/post-with-code/index.html#the-representation",
+    "title": "Lecture 1 - INTRO",
+    "section": "THE REPRESENTATION",
+    "text": "THE REPRESENTATION\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#why-depend-on-vision",
+    "href": "posts/post-with-code/index.html#why-depend-on-vision",
+    "title": "Lecture 1 - INTRO",
+    "section": "WHY DEPEND ON VISION?",
+    "text": "WHY DEPEND ON VISION?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\nhuman visual system is high-bandwidth channel to brain overview possible due to background processing subjective experience of seeing everything simultaneously significant processing occurs in parallel and pre-attentively sound: lower bandwidth and different semantics overview not supported subjective experience of sequential stream touch/haptics: impoverished record/replay capacity only very low-bandwidth communication thus far taste, smell: no viable record/replay devices"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#why-represent-all-the-data",
+    "href": "posts/post-with-code/index.html#why-represent-all-the-data",
+    "title": "Lecture 1 - INTRO",
+    "section": "WHY REPRESENT (ALL THE) DATA?",
+    "text": "WHY REPRESENT (ALL THE) DATA?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\nsummaries lose information, details matter confirm expected and find unexpected patterns assess validity of statistical model"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#anscombes-quartet",
+    "href": "posts/post-with-code/index.html#anscombes-quartet",
+    "title": "Lecture 1 - INTRO",
+    "section": "ANSCOMBE’S QUARTET",
+    "text": "ANSCOMBE’S QUARTET\n\nlibrary(ggplot2)\nlibrary(grid)\nlibrary(gridExtra)\nlibrary(datasets)\nlibrary(tidyverse)\nlibrary(dplyr)\ndatasets::anscombe\n\n   x1 x2 x3 x4    y1   y2    y3    y4\n1  10 10 10  8  8.04 9.14  7.46  6.58\n2   8  8  8  8  6.95 8.14  6.77  5.76\n3  13 13 13  8  7.58 8.74 12.74  7.71\n4   9  9  9  8  8.81 8.77  7.11  8.84\n5  11 11 11  8  8.33 9.26  7.81  8.47\n6  14 14 14  8  9.96 8.10  8.84  7.04\n7   6  6  6  8  7.24 6.13  6.08  5.25\n8   4  4  4 19  4.26 3.10  5.39 12.50\n9  12 12 12  8 10.84 9.13  8.15  5.56\n10  7  7  7  8  4.82 7.26  6.42  7.91\n11  5  5  5  8  5.68 4.74  5.73  6.89"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#column-layout",
+    "href": "posts/post-with-code/index.html#column-layout",
+    "title": "Lecture 1 - INTRO",
+    "section": "Column Layout",
+    "text": "Column Layout\nArrange content into columns of varying widths:\n\n\nAnscombe’s Quartet\nThe four x,y pairs have identical summary statistics, but visualization reveals dramatic differences in the relationship between x and y.\n\n\n\n\n\n\n\n\nset\nx_mean\nx_var\ny_mean\ny_var\n\n\n\n\n1\n9\n11\n7.500909\n4.127269\n\n\n2\n9\n11\n7.500909\n4.127629\n\n\n3\n9\n11\n7.500000\n4.122620\n\n\n4\n9\n11\n7.500909\n4.123249\n\n\n\n\n\n\n\n\n\n\n\nLearn more: Multiple Columns"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#resource-limitations",
+    "href": "posts/post-with-code/index.html#resource-limitations",
+    "title": "Lecture 1 - INTRO",
+    "section": "RESOURCE LIMITATIONS",
+    "text": "RESOURCE LIMITATIONS\nVis designers must take into account three very different kinds of resource limitations: those of computers, of humans, and of displays.\ncomputational limits computation time, system memory display limits pixels are precious & most constrained resource information density: ratio of space used to encode info vs unused whitespace tradeoff between clutter and wasting space find sweet spot between dense and sparse human limits human time, human memory, human attention"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#visualization-analysis-and-design",
+    "href": "posts/post-with-code/index.html#visualization-analysis-and-design",
+    "title": "Lecture 1 - INTRO",
+    "section": "VISUALIZATION ANALYSIS AND DESIGN",
+    "text": "VISUALIZATION ANALYSIS AND DESIGN\nANALYSIS?\nimposes structure on huge design space scaffold to help you think systematically about choices analyzing existing as stepping stone to designing new most possibilities ineffective for particular task/data combination"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#section",
+    "href": "posts/post-with-code/index.html#section",
+    "title": "Lecture 1 - INTRO",
+    "section": "",
+    "text": "https://canvas.uidaho.edu/courses/11081"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "You’ve gotta be f***ing kidding…",
+    "section": "",
+    "text": "Mac wants the flamethrower…\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Professor Polymorphic",
+    "section": "",
+    "text": "“The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown”.\n– H.P. Lovecraft, Supernatural Horror in Literature\n\n\nHorror emerges at the boundaries between the known and the unknown. We fear the dark because it hides the unknown beyond our senses. We fear death because we we do not truly know what happens when we die. Even when we push back the boundaries of the unknown, we actually just push back the curtain, creating new boundaries and new opportunities for horror to emerge."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Evolution. Data Science. Video Games. Horror Fiction.\nI am a Professor of Biological Sciences at the University of Idaho, and the cofounder of Polymorphic Games, an experimental video game studio that applies game development technology to scientific research and education. We have released two evolutionary video games on Steam:\nDarwin’s Demons is an rcade style space shooter in which you battle a population of evolving aliens. The alien’s morphology, fire type, and behaviors are all encoded by a digital genome. The aliens that are best able to shoot or evade you reproduce to make the next generation.\nProject Hastur is an evolutionary tower defense game. Defend humanity against the ever changing threat of the alien Proteans. Project Hastur combines elements of 3D tower defense and real-time strategy with models of biological evolution to create a uniquely challenging experience.\nI am also a huge Horror and Science Fiction nerd, and am fascinated by the intersection of these genres with science."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Observable Experiment",
+    "section": "",
+    "text": "Testing out observable and D3 in Quarto!\n\nviewof Year = Inputs.range(\n  [2017, 2022], \n  {value: 2017, step: 1, label: \"Year:\"}\n)\nviewof Degree = Inputs.checkbox(\n  [\"Biochemistry\", \"Biology\", \"MBB\", \"Medical Sciences\", \"Microbiology\"], \n  { value: [\"Biochemistry\", \"Biology\"], \n    label: \"Degrees:\"\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlotData\n\n\n\nPlot.plot({\n  marks: [\n    Plot.barY(filtered, {y: \"Enrollment\", x: \"Class\", fill: \"Class\"}),\n    Plot.ruleX([0])\n  ],\n  facet: {\n  data: filtered,\n      x: \"Year\",\n      y: \"Degree\",\n      marginRight: 80\n}\n})\n\n\n\n\n\n\n\n\n\nInputs.table(filtered)\n\n\n\n\n\n\n\n\n\n\ndata = FileAttachment(\"TidyEnrollment.csv\").csv({ typed: true })\n\n\n\n\n\n\n\nfiltered = data.filter(function(enroll) {\n  return Year < enroll.Year &&\n         Degree.includes(enroll.Degree);\n})\n\n\n\n\n\n\n\nrandoms = Array.from({length: 1000}, () => Math.random() * Math.random())\nimport {Histogram} from \"@d3/histogram\"\nHistogram(randoms)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHistogram(randoms, {\n  width,\n  thresholds: 100,\n  domain: [0, 1],\n  color: \"steelblue\",\n  height: 240\n})\n\n\n\n\n\n\n\n\n\nd3 = require(\"d3@7\")\nimport {howto, altplot} from \"@d3/example-components\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsunburst = {\n  const root = partition(flareData);\n\n  root.each(d => d.current = d);\n\n  const svg = d3.create(\"svg\")\n      .attr(\"viewBox\", [0, 0, width, width])\n      .style(\"font\", \"15px sans-serif\");\n\n  const g = svg.append(\"g\")\n      .attr(\"transform\", `translate(${width / 2},${width / 2})`);\n\n  const path = g.append(\"g\")\n    .selectAll(\"path\")\n    .data(root.descendants().slice(1))\n    .join(\"path\")\n      .attr(\"fill\", d => { while (d.depth > 1) d = d.parent; return color(d.data.name); })\n      .attr(\"fill-opacity\", d => arcVisible(d.current) ? (d.children ? 0.6 : 0.4) : 0)\n      .attr(\"d\", d => arc(d.current));\n\n  path.filter(d => d.children)\n      .style(\"cursor\", \"pointer\")\n      .on(\"click\", clicked);\n\n  path.append(\"title\")\n      .text(d => `${d.ancestors().map(d => d.data.name).reverse().join(\"/\")}\\n${format(d.value)}`);\n\n  const label = g.append(\"g\")\n      .attr(\"pointer-events\", \"none\")\n      .attr(\"text-anchor\", \"middle\")\n      .style(\"user-select\", \"none\")\n    .selectAll(\"text\")\n    .data(root.descendants().slice(1))\n    .join(\"text\")\n      .attr(\"dy\", \"0.35em\")\n      .attr(\"fill-opacity\", d => +labelVisible(d.current))\n      .attr(\"transform\", d => labelTransform(d.current))\n      .text(d => d.data.name);\n\n  const parent = g.append(\"circle\")\n      .datum(root)\n      .attr(\"r\", radius)\n      .attr(\"fill\", \"none\")\n      .attr(\"pointer-events\", \"all\")\n      .on(\"click\", clicked);\n\n  function clicked(event, p) {\n    parent.datum(p.parent || root);\n\n    root.each(d => d.target = {\n      x0: Math.max(0, Math.min(1, (d.x0 - p.x0) / (p.x1 - p.x0))) * 2 * Math.PI,\n      x1: Math.max(0, Math.min(1, (d.x1 - p.x0) / (p.x1 - p.x0))) * 2 * Math.PI,\n      y0: Math.max(0, d.y0 - p.depth),\n      y1: Math.max(0, d.y1 - p.depth)\n    });\n\n    const t = g.transition().duration(750);\n\n    // Transition the data on all arcs, even the ones that aren’t visible,\n    // so that if this transition is interrupted, entering arcs will start\n    // the next transition from the desired position.\n    path.transition(t)\n        .tween(\"data\", d => {\n          const i = d3.interpolate(d.current, d.target);\n          return t => d.current = i(t);\n        })\n      .filter(function(d) {\n        return +this.getAttribute(\"fill-opacity\") || arcVisible(d.target);\n      })\n        .attr(\"fill-opacity\", d => arcVisible(d.target) ? (d.children ? 0.6 : 0.4) : 0)\n        .attrTween(\"d\", d => () => arc(d.current));\n\n    label.filter(function(d) {\n        return +this.getAttribute(\"fill-opacity\") || labelVisible(d.target);\n      }).transition(t)\n        .attr(\"fill-opacity\", d => +labelVisible(d.target))\n        .attrTween(\"transform\", d => () => labelTransform(d.current));\n  }\n  \n  function arcVisible(d) {\n    return d.y1 <= 3 && d.y0 >= 1 && d.x1 > d.x0;\n  }\n\n  function labelVisible(d) {\n    return d.y1 <= 3 && d.y0 >= 1 && (d.y1 - d.y0) * (d.x1 - d.x0) > 0.03;\n  }\n\n  function labelTransform(d) {\n    const x = (d.x0 + d.x1) / 2 * 180 / Math.PI;\n    const y = (d.y0 + d.y1) / 2 * radius;\n    return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;\n  }\n\n  return svg.node();\n}\n\n\n\n\n\n\n\nflareData = FileAttachment(\"flare-2.json\").json()\n\npartition = flareData => {\n  const root = d3.hierarchy(flareData)\n      .sum(d => d.value)\n      .sort((a, b) => b.value - a.value);\n  return d3.partition()\n      .size([2 * Math.PI, root.height + 1])\n    (root);\n}\n\ncolor = d3.scaleOrdinal(\n  d3.quantize(d3.interpolateRainbow, flareData.children.length + 1)\n)\n\nformat = d3.format(\",d\")\n\nwidth = 932\n\nradius = width / 6\n\narc = d3.arc()\n    .startAngle(d => d.x0)\n    .endAngle(d => d.x1)\n    .padAngle(d => Math.min((d.x1 - d.x0) / 2, 0.005))\n    .padRadius(radius * 1.5)\n    .innerRadius(d => d.y0 * radius)\n    .outerRadius(d => Math.max(d.y0 * radius, d.y1 * radius - 1))"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#who-am-i",
+    "href": "posts/UndergradResearch/index.html#who-am-i",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "WHO AM I?",
+    "text": "WHO AM I?\n\n// Evolution // Data Science // Video Games // Horror Fiction\nBarrie Robison\nDepartment of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#who-are-you",
+    "href": "posts/UndergradResearch/index.html#who-are-you",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "WHO ARE YOU?",
+    "text": "WHO ARE YOU?\n\nmidjourney // a terrified undergraduate researcher\nBriefly:\n\nYour name\nYour major\nYour career goal(s)\nYour darkest fear"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#course-summary",
+    "href": "posts/UndergradResearch/index.html#course-summary",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "COURSE SUMMARY",
+    "text": "COURSE SUMMARY\nStudents completing this course will be able to:\n\n\nDescribe and manipulate tabular, network, and spatial data; transform these data into a form suitable for visualization.\nMake effective data visualization design choices related to marks and channels, spatial arrangement, and components of color.\nDesign effective data visualizations for tabular, network, and spatial data with quantitative and categorical attributes.\nImplement their data visualization designs using existing tools in R (or other toolkits preferred by the student).\nExplain whether a visual encoding is perceptually appropriate for a specific combination of task and data.\nDemonstrate their skills with at least two novel visualizations suitable suitable for inclusion in an online Data Science Portfolio.\n\nThe course materials are located on Canvas."
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#visualization",
+    "href": "posts/UndergradResearch/index.html#visualization",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "VISUALIZATION",
+    "text": "VISUALIZATION\nComputer-based systems provide visual representations of datasets designed to help people carry out tasks more effectively.\nTamara Munzner\nDepartment of Computer Science\nInfoVis Group\nUniversity of British Columbia"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#the-human",
+    "href": "posts/UndergradResearch/index.html#the-human",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "THE HUMAN",
+    "text": "THE HUMAN\nWhy have a human in the loop?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\nWe don’t need visualiztion when a trusted fully automatic solution exists. Visualization is suitable when there is a need to augment human capabilities rather than replace people with computational decision-making methods.\n\nVisualization is useful when:\n-analysis problem is ill-specified and we don’t know exactly what questions to ask in advance -long-term use for end users (ex: exploratory analysis of scientific data) -presentation of known results (ex: New York Times Upshot) -stepping stone to assess requirements before developing models -help automatic solution developers refine & determine parameters -help end users of automatic solutions verify, build trust"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#the-representation",
+    "href": "posts/UndergradResearch/index.html#the-representation",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "THE REPRESENTATION",
+    "text": "THE REPRESENTATION\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#why-depend-on-vision",
+    "href": "posts/UndergradResearch/index.html#why-depend-on-vision",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "WHY DEPEND ON VISION?",
+    "text": "WHY DEPEND ON VISION?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\nhuman visual system is high-bandwidth channel to brain overview possible due to background processing subjective experience of seeing everything simultaneously significant processing occurs in parallel and pre-attentively sound: lower bandwidth and different semantics overview not supported subjective experience of sequential stream touch/haptics: impoverished record/replay capacity only very low-bandwidth communication thus far taste, smell: no viable record/replay devices"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#why-represent-all-the-data",
+    "href": "posts/UndergradResearch/index.html#why-represent-all-the-data",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "WHY REPRESENT (ALL THE) DATA?",
+    "text": "WHY REPRESENT (ALL THE) DATA?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\nsummaries lose information, details matter confirm expected and find unexpected patterns assess validity of statistical model"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#anscombes-quartet",
+    "href": "posts/UndergradResearch/index.html#anscombes-quartet",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "ANSCOMBE’S QUARTET",
+    "text": "ANSCOMBE’S QUARTET\n\nlibrary(ggplot2)\nlibrary(grid)\nlibrary(gridExtra)\nlibrary(datasets)\nlibrary(tidyverse)\nlibrary(dplyr)\ndatasets::anscombe\n\n   x1 x2 x3 x4    y1   y2    y3    y4\n1  10 10 10  8  8.04 9.14  7.46  6.58\n2   8  8  8  8  6.95 8.14  6.77  5.76\n3  13 13 13  8  7.58 8.74 12.74  7.71\n4   9  9  9  8  8.81 8.77  7.11  8.84\n5  11 11 11  8  8.33 9.26  7.81  8.47\n6  14 14 14  8  9.96 8.10  8.84  7.04\n7   6  6  6  8  7.24 6.13  6.08  5.25\n8   4  4  4 19  4.26 3.10  5.39 12.50\n9  12 12 12  8 10.84 9.13  8.15  5.56\n10  7  7  7  8  4.82 7.26  6.42  7.91\n11  5  5  5  8  5.68 4.74  5.73  6.89"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#column-layout",
+    "href": "posts/UndergradResearch/index.html#column-layout",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "Column Layout",
+    "text": "Column Layout\nArrange content into columns of varying widths:\n\n\nAnscombe’s Quartet\nThe four x,y pairs have identical summary statistics, but visualization reveals dramatic differences in the relationship between x and y.\n\n\n\n\n\n\n\n\nset\nx_mean\nx_var\ny_mean\ny_var\n\n\n\n\n1\n9\n11\n7.500909\n4.127269\n\n\n2\n9\n11\n7.500909\n4.127629\n\n\n3\n9\n11\n7.500000\n4.122620\n\n\n4\n9\n11\n7.500909\n4.123249\n\n\n\n\n\n\n\n\n\n\n\nLearn more: Multiple Columns"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#resource-limitations",
+    "href": "posts/UndergradResearch/index.html#resource-limitations",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "RESOURCE LIMITATIONS",
+    "text": "RESOURCE LIMITATIONS\nVis designers must take into account three very different kinds of resource limitations: those of computers, of humans, and of displays.\ncomputational limits computation time, system memory display limits pixels are precious & most constrained resource information density: ratio of space used to encode info vs unused whitespace tradeoff between clutter and wasting space find sweet spot between dense and sparse human limits human time, human memory, human attention"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#visualization-analysis-and-design",
+    "href": "posts/UndergradResearch/index.html#visualization-analysis-and-design",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "VISUALIZATION ANALYSIS AND DESIGN",
+    "text": "VISUALIZATION ANALYSIS AND DESIGN\nANALYSIS?\nimposes structure on huge design space scaffold to help you think systematically about choices analyzing existing as stepping stone to designing new most possibilities ineffective for particular task/data combination"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#section",
+    "href": "posts/UndergradResearch/index.html#section",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "",
+    "text": "https://canvas.uidaho.edu/courses/11081"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#the-plan",
+    "href": "posts/UndergradResearch/index.html#the-plan",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "THE PLAN",
+    "text": "THE PLAN\nApproximately:\n\n\nExplain WHY you are at University.\nExplain how undergraduate research might help you achieve your goals.\nExplain how to find potential research mentors.\nExplain some of the mechanisms that support undergraduate research.\nTell you that everything will be OK."
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#why-are-you-here",
+    "href": "posts/UndergradResearch/index.html#why-are-you-here",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "WHY ARE YOU HERE?",
+    "text": "WHY ARE YOU HERE?\nUniversity is expensive, stressful, and difficult… yet here you are.\n\nBAD ANSWERSGOOD ANSWERS\n\n\n\n\nMy parents expect me to…\nEveryone else is going…\nI want a good job…\nParties!\nSportsball (watching, not playing)\n\n\n\n\n\nI want to invest in myself.\nI want to learn about…\nI want to be the best version of myself.\nI want a fulfilling career…\nI want to solve an important problem."
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#an-important-distinction",
+    "href": "posts/UndergradResearch/index.html#an-important-distinction",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "AN IMPORTANT DISTINCTION",
+    "text": "AN IMPORTANT DISTINCTION\nGetting an education vs. getting a degree."
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#undergraduate-research",
+    "href": "posts/UndergradResearch/index.html#undergraduate-research",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "UNDERGRADUATE RESEARCH",
+    "text": "UNDERGRADUATE RESEARCH\n\nBenefits\n\nDisciplinary skills\nSoft skills\nPerseverance and Grit\nDemonstrated experience\nNetwork building"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#how-to-find-a-mentor",
+    "href": "posts/UndergradResearch/index.html#how-to-find-a-mentor",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "HOW TO FIND A MENTOR",
+    "text": "HOW TO FIND A MENTOR\nYour Interests vs. Faculty Interests"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#the-script",
+    "href": "posts/UndergradResearch/index.html#the-script",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "THE SCRIPT",
+    "text": "THE SCRIPT\n\nAre the research questions compelling?\nField work vs bench work.\nMath? ($%*& no! to theory)\nProgramming?\nScale of biological organization? (molecules to ecosystems)\nModel organism? (simulations to microbes to plants to humans)\nBasic vs. Applied"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#thinking-about-research",
+    "href": "posts/UndergradResearch/index.html#thinking-about-research",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "THINKING ABOUT RESEARCH",
+    "text": "THINKING ABOUT RESEARCH\nDifferentiate between:\n\nMethods, Tools, Approaches, Model systems AND\nDisciplines, Questions, Hypotheses, Motivations"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#finding-the-information",
+    "href": "posts/UndergradResearch/index.html#finding-the-information",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "FINDING THE INFORMATION",
+    "text": "FINDING THE INFORMATION\n\nPay attention to WHO IS TEACHING YOUR CLASSES!\nFaculty websites…\nAsk your peers.\nAsk your advisor.\nMeet with me (or another non-terrifying faculty member)."
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#narrow-your-list",
+    "href": "posts/UndergradResearch/index.html#narrow-your-list",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "NARROW YOUR LIST",
+    "text": "NARROW YOUR LIST\nTry to get to a ranked list of 2 to 4 faculty who align with your interests and what you want to learn."
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#reach-out",
+    "href": "posts/UndergradResearch/index.html#reach-out",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "REACH OUT",
+    "text": "REACH OUT\n\nStart with an email.\nFirst impressions matter.\nComplete sentences are nice.\nWhy are you interested in their lab (the hardest part).\nNever cut and paste and no bulk emails!\nPerseverance versus peskiness."
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#how-faculty-screen-candidates",
+    "href": "posts/UndergradResearch/index.html#how-faculty-screen-candidates",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "HOW FACULTY SCREEN CANDIDATES",
+    "text": "HOW FACULTY SCREEN CANDIDATES\n\nForgetting to reply.\nGrades.\nWritten and verbal coherence.\nIntellectual curiosity."
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#what-faculty-want",
+    "href": "posts/UndergradResearch/index.html#what-faculty-want",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "WHAT FACULTY WANT",
+    "text": "WHAT FACULTY WANT\nWe enjoy investing time in undergraduate training if you bring…\n\nIntellectual curiosity.\nDiligence, reliability, eagerness to learn.\nA mostly functional personality that won’t piss off the rest of the lab.\nIntelligence, talent, etc…"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#mechanics",
+    "href": "posts/UndergradResearch/index.html#mechanics",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "MECHANICS",
+    "text": "MECHANICS\nThere are a variety of ways to engage in undergraduate research.\n\nCourse credit (Biol 301, 401)\nPaid as IH (usually from a grant)\nREU, INBRE, and other funding mechanisms\nVolunteering (which I DO NOT RECOMMEND)\nSome special classes (such as VIP)"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#it-will-all-be-ok",
+    "href": "posts/UndergradResearch/index.html#it-will-all-be-ok",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "IT WILL ALL BE OK!",
+    "text": "IT WILL ALL BE OK!\n midjouney // an anxious undergraduate\n\nsome text\n\n\n\nbrobison@uidaho.edu"
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html#test",
+    "href": "posts/UndergradResearch/index.html#test",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "Test",
+    "text": "Test\ndiv.polaroid { width: 80%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 25px; }\ndiv.container { text-align: center; padding: 10px 20px; }\n\n\n\n\nResponsive Polaroid Images / Cards\n\n\n\n\n\nCinque Terre\n\n\n\n\n\n\n\nNorthern Lights\n\n\n\n\n\nbrobison@uidaho.edu"
+  }
+]

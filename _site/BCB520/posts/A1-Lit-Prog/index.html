@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.203">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Barrie Robison">
+<meta name="dcterms.date" content="2022-12-01">
+
+<title>Robison - ASSIGNMENT 1 - Fun with literate programming.</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Robison</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html">
+ <span class="menu-text">HOME</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Research.html">
+ <span class="menu-text">RESEARCH</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Publications.html">
+ <span class="menu-text">PUBLICATIONS</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Teaching.html">
+ <span class="menu-text">TEACHING</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../PolymorphicGames.html">
+ <span class="menu-text">Polymorphic Games</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../ProfessorPolymorphic/index.html">
+ <span class="menu-text">BLOG</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">ASSIGNMENT 1 - Fun with literate programming.</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Assignment</div>
+                <div class="quarto-category">DataViz</div>
+                <div class="quarto-category">Quarto</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Barrie Robison </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 1, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">SUMMARY</a></li>
+  <li><a href="#literate-programming-publishing-systems" id="toc-literate-programming-publishing-systems" class="nav-link" data-scroll-target="#literate-programming-publishing-systems">LITERATE PROGRAMMING PUBLISHING SYSTEMS</a>
+  <ul class="collapse">
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
+  <li><a href="#r-markdown" id="toc-r-markdown" class="nav-link" data-scroll-target="#r-markdown">R Markdown</a></li>
+  </ul></li>
+  <li><a href="#languages-and-toolsets" id="toc-languages-and-toolsets" class="nav-link" data-scroll-target="#languages-and-toolsets">LANGUAGES AND TOOLSETS</a>
+  <ul class="collapse">
+  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
+  <li><a href="#tableau" id="toc-tableau" class="nav-link" data-scroll-target="#tableau">Tableau</a></li>
+  <li><a href="#javascript" id="toc-javascript" class="nav-link" data-scroll-target="#javascript">Javascript</a></li>
+  <li><a href="#observable-d3" id="toc-observable-d3" class="nav-link" data-scroll-target="#observable-d3">Observable / D3</a></li>
+  </ul></li>
+  <li><a href="#assignment" id="toc-assignment" class="nav-link" data-scroll-target="#assignment">ASSIGNMENT</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">RESOURCES</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">SUMMARY</h2>
+<p>The idea of Literate Programming is that source code that is executed as part of the program’s purpose is interspersed with documentation that describes the program’s logic. The concept of literate programming was first articulated by David Knuth in 1984. You know… back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren’t very many good arguments as to why you WOULDN’T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills.</p>
+</section>
+<section id="literate-programming-publishing-systems" class="level2">
+<h2 class="anchored" data-anchor-id="literate-programming-publishing-systems">LITERATE PROGRAMMING PUBLISHING SYSTEMS</h2>
+<p>I’m trying to keep this course as technology agnostic as I can. The idea is that you should be practicing and building competencies in the languages and algorithms that are most useful to you. Who am I to tell you to use R instead of Python? If you have skills in a particular language I encourage you to keep using that during this course. That being said, I am going to work the examples using R and R Studio, and I will (mostly) use Quarto as the literate programming framework.</p>
+<p>If all of this is new to you, no problem. Just follow along in R and Quarto and start your skill building journey with those languages.</p>
+<p>If you are a python person, great! Quarto can accomodate that language as well. If you have another preference for literate programming, such as sticking with R Markdown until the Quarto bugs are fixed, that is great. Find the framework and tools that work for you, and practice, practice, practice!</p>
+<section id="quarto" class="level3">
+<h3 class="anchored" data-anchor-id="quarto"><a href="https://quarto.org">Quarto</a></h3>
+<p>An open source publishing system that allows you to create websites, documents, blogs, books, publications, presentations, and more while using R, Python, Julia, or Observable. Quarto is intended to be the more functional successor of R Markdown. I intend to use Quarto for most of my work in this course.</p>
+</section>
+<section id="r-markdown" class="level3">
+<h3 class="anchored" data-anchor-id="r-markdown"><a href="https://rmarkdown.rstudio.com">R Markdown</a></h3>
+<p>Another publishing system for creating all the things … websites, slides, manuscripts, dashboards, etc. While most people (including me!) instinctively think of R and Python within R Markdown, the list of supported language engines is pretty extensive.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(knitr<span class="sc">::</span>knit_engines<span class="sc">$</span><span class="fu">get</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "awk"       "bash"      "coffee"    "gawk"      "groovy"    "haskell"  
+ [7] "lein"      "mysql"     "node"      "octave"    "perl"      "php"      
+[13] "psql"      "Rscript"   "ruby"      "sas"       "scala"     "sed"      
+[19] "sh"        "stata"     "zsh"       "asis"      "asy"       "block"    
+[25] "block2"    "bslib"     "c"         "cat"       "cc"        "comment"  
+[31] "css"       "ditaa"     "dot"       "embed"     "eviews"    "exec"     
+[37] "fortran"   "fortran95" "go"        "highlight" "js"        "julia"    
+[43] "python"    "R"         "Rcpp"      "sass"      "scss"      "sql"      
+[49] "stan"      "targets"   "tikz"      "verbatim"  "ojs"       "mermaid"  
+[55] "include"  </code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="languages-and-toolsets" class="level2">
+<h2 class="anchored" data-anchor-id="languages-and-toolsets">LANGUAGES AND TOOLSETS</h2>
+<p>There are quite a few, but the five that seemed to keep coming up as I prepped this course are:</p>
+<section id="r" class="level3">
+<h3 class="anchored" data-anchor-id="r"><a href="https://www.r-project.org">R</a></h3>
+<p>A very powerful open source framework for statistical computing and graphics. R has a lot of base functionality, and its capabilities are increased by 100 fold with packages created by R users. Packages are the core units of R code. I’m going to use R for the vast majority of demonstrations in this course.</p>
+</section>
+<section id="python" class="level3">
+<h3 class="anchored" data-anchor-id="python"><a href="https://www.python.org">Python</a></h3>
+<p>Python is an open source general purpose programming language. It wasn’t developed just for statistical computing or data science, and people use this language for tons of different applications. There is no denying it has become a very powerful language for data science and data visualization.</p>
+</section>
+<section id="tableau" class="level3">
+<h3 class="anchored" data-anchor-id="tableau"><a href="https://www.tableau.com">Tableau</a></h3>
+<p>Tableau is proprietary software that is very powerful for creating beautiful and functional data visualizations. It can integrate with all sorts of data sources and is used a lot for analytics, especially in the business world. The downsides (that occur to me at least) are that it costs money, it is not open source, and is more of a one-trick-pony than the programming languages on this list.</p>
+</section>
+<section id="javascript" class="level3">
+<h3 class="anchored" data-anchor-id="javascript"><a href="https://www.javascript.com">Javascript</a></h3>
+<p>Javascript has been around for about 25 years, and is (I think) the world’s most popular programming language. Along with HTML and CSS, Javascript drives pretty much the entire internet. I mention Javascript here because it has the <a href="https://d3js.org">D3</a> library, which can create super cool interactive data visualizaitons. In my experience, the learning curve with Javascript and D3 was pretty steep. I bought a <a href="https://www.amazon.com/Interactive-Data-Visualization-Web-Introduction/dp/1491921285">book</a> about it once, but just haven’t been able to allocate the amount of time necessary to really start using it. Check out the <a href="https://observablehq.com/@d3/gallery">gallery</a> of examples. Amazing!</p>
+</section>
+<section id="observable-d3" class="level3">
+<h3 class="anchored" data-anchor-id="observable-d3"><a href="https://observablehq.com/">Observable / D3</a></h3>
+<p>Observable is a set of extensions to Javascript that features something called reactive runtime. This means that the code blocks are executed and compiled as they are written, and changes are implemented instantaneously. Observable is pretty great for data exploration, and is well <a href="https://quarto.org/docs/computations/ojs.html">supported by Quarto</a>. In addition, you can use the Observable JS libraries in Quarto to access <a href="https://d3js.org">D3</a>. We’ll use some of these tools in this course, especially when we start considering interactivity.</p>
+</section>
+</section>
+<section id="assignment" class="level2">
+<h2 class="anchored" data-anchor-id="assignment">ASSIGNMENT</h2>
+<p>After that long introduction, I suppose you are wondering what I want you to actually DO today.</p>
+<p><strong>Well, I want you to set up your publishing system and preferred language on your computer. Then I want you to recreate the classic figure from Anscombe’s Quartet.</strong></p>
+<p>Now, you might be asking…</p>
+<p>“How am I supposed to do that? You haven’t taught me how to do anything yet!”</p>
+<p>Here is the dirty little secret of modern education.</p>
+<p><strong>The Internet Exists.</strong></p>
+<p>While I could use up an entire 90 minute lecture telling you how to:</p>
+<p>download and install R, R-Studio, and Quarto</p>
+<p>create a Quarto document that will publish in the .html format</p>
+<p>install the R packages you will need</p>
+<p>tidy up the Anscombe’s Quartet data</p>
+<p>calculate the summary statistics for each x y pair</p>
+<p>and make a nice little plot…</p>
+<p>I’m not going to do that.</p>
+<p>Instead, I want you to use the resources I point towards, or other resources that make more sense to you, to figure out how to do those things.</p>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">RESOURCES</h2>
+<p><a href="https://www.njtierney.com/post/2020/06/01/tidy-anscombe/">Tidyverse and Anscombe’s Quartet</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

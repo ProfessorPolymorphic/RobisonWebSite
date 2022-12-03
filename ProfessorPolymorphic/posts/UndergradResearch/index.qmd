@@ -1,0 +1,207 @@
+---
+title: "UNDERGRADUATE RESEARCH"
+subtitle: "...into the abyss."
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    css: styles.css
+    theme: [default, custom.scss]
+    footer: brobison@uidaho.edu
+resources:
+  - demo.pdf
+author: "Barrie Robison"
+date: "2022-11-07"
+categories: [Presentation, Research, Undergraduate]
+
+---
+
+## WHO AM I?
+
+
+![**// Evolution // Data Science // Video Games // Horror Fiction**](BarrieBanner.png){.left}
+
+
+::: {.smaller}
+### [Barrie Robison]{.absolute top="270" left="10"}
+
+[[Department of Biological Sciences](https://www.uidaho.edu/sci/biology)]{.absolute top="320" left="10"}
+
+[[Institute for Interdisicplinary Data Sciences](https://www.iids.uidaho.edu)]{.absolute top="350" left="10"}
+
+[[Polymorphic Games](http://www.polymorphicgames.com)]{.absolute top="380" left="10"}
+
+[University of Idaho]{.absolute top="410" left="10"}
+:::
+
+
+
+
+## WHO ARE YOU?
+
+![](terror.png){.absolute right=0 width="520" height="520"}
+
+[midjourney // a terrified undergraduate researcher]{.absolute top="640" right="10"}
+
+
+### Briefly:
+
+-   Your name
+-   Your major
+-   Your career goal(s)
+-   Your darkest fear
+
+
+
+
+
+## THE PLAN
+
+Approximately:
+
+::: r-fit-text
+1.  Explain WHY you are at University.
+2.  Explain how undergraduate research might help you achieve your goals.
+3.  Explain how to find potential research mentors.
+4.  Explain some of the mechanisms that support undergraduate research.
+5.  Tell you that everything will be OK.
+
+:::
+
+## WHY ARE YOU HERE?
+
+University is [expensive]{.red}, [stressful]{.red}, and [difficult]{.red}... yet here you are. 
+
+
+::: {.panel-tabset}
+
+## BAD ANSWERS
+![](meanparents.png){.absolute right=0 width="300" height="300"}
+
+- My parents expect me to...
+- Everyone else is going...
+- I want a good job...
+- Parties!
+- Sportsball (watching, not playing)
+
+## GOOD ANSWERS
+![](excited.png){.absolute right=0 width="300" height="300"}
+
+
+- I want to invest in myself.
+- I want to learn about...
+- I want to be the best version of myself.
+- I want a fulfilling career...
+- I want to solve an important problem.
+
+:::
+
+
+## AN IMPORTANT DISTINCTION
+
+Getting an education vs. getting a degree.
+
+
+![](education.png){.absolute left=0 width="500" height="500"}
+![](a degree.png){.absolute right=0 width="500" height="500"}
+
+## UNDERGRADUATE RESEARCH 
+
+![](swim.png){.absolute right=0 width="500" height="500"}
+
+Benefits
+
+- Disciplinary skills
+- Soft skills
+- Perseverance and Grit
+- Demonstrated experience
+- Network building
+
+## HOW TO FIND A MENTOR
+
+Your Interests vs. Faculty Interests
+
+## THE SCRIPT
+
+- Are the research questions compelling?
+- Field work vs bench work.
+- Math? ($%*& no! to theory)
+- Programming? 
+- Scale of biological organization? (molecules to ecosystems)
+- Model organism? (simulations to microbes to plants to humans)
+- Basic vs. Applied
+
+
+## THINKING ABOUT RESEARCH
+
+Differentiate between:
+
+- Methods, Tools, Approaches, Model systems AND
+- Disciplines, Questions, Hypotheses, Motivations
+
+
+
+## FINDING THE INFORMATION
+
+1. Pay attention to WHO IS TEACHING YOUR CLASSES!
+2. Faculty websites...
+3. Ask your peers.
+4. Ask your advisor.
+5. Meet with me (or another non-terrifying faculty member).
+
+
+## NARROW YOUR LIST
+
+Try to get to a ranked list of 2 to 4 faculty who align with your interests and what you want to learn.
+
+## REACH OUT
+
+1. Start with an email.
+2. First impressions matter.
+3. Complete sentences are nice.
+4. Why are you interested in their lab (the hardest part).
+5. Never cut and paste and no bulk emails!
+6. Perseverance versus peskiness.
+
+## HOW FACULTY SCREEN CANDIDATES
+
+1. Forgetting to reply.
+2. Grades.
+3. Written and verbal coherence.
+4. Intellectual curiosity.
+
+## WHAT FACULTY WANT
+
+We enjoy investing time in undergraduate training if you bring...
+
+1. Intellectual curiosity.
+2. Diligence, reliability, eagerness to learn.
+3. A mostly functional personality that won't piss off the rest of the lab.
+4. Intelligence, talent, etc...
+
+
+
+## MECHANICS
+
+There are a variety of ways to engage in undergraduate research.
+
+1. Course credit (Biol 301, 401)
+2. Paid as IH (usually from a grant)
+3. REU, INBRE, and other funding mechanisms
+4. Volunteering (which I DO NOT RECOMMEND)
+5. Some special classes (such as VIP)
+
+## IT WILL ALL BE OK!
+
+![](anxious.png){.absolute right=0 width="500" height="500"}
+[midjouney // an anxious undergraduate]{.abstest}
+
+::: {.container}
+
+some text
+
+:::
+
+

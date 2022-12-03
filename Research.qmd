@@ -1,0 +1,91 @@
+---
+title: "RESEARCH"
+
+image: WelkerZfish.jpg
+---
+
+My research group is an interdisicplinary blend of biologists, developers, modelers, programmers, and artists. I am always interested in recruiting new undergraduates, graduate students, and postdocs. Contact me via email if you are interested in learning more.
+
+# **// Active**
+
+## Evolutionary Video Games
+
+<video width="800" height="auto" autoplay loop>
+
+<source src="BannerVid.mp4" type="video/mp4">
+
+</video>
+
+
+In 2015, Terry Soule and I co-founded [Polymorphic Games](http://www.polymorphicgames.com), an experimental game studio that makes evolution based video games. Our original concept was that a model of biological evolution would make a great game mechanic. We observed that traditional video games were usually scripted, featuring "waves" of enemies with defined and predictable characteristics. A player's success in such games is based on learning the predictable, rote script necessary to advance to subsequent levels. By integrating principles of evolutionary biology, we suspected that video games could be made more compelling. For example, by replacing the traditional *waves* of enemies with *generations* of enemies we could introduce adaptation through natural selection. If you want to learn more about our approach, scroll down to the section on Video Games and STEM Education.
+
+Since 2015 we have commercially released two evolutionary video games on Steam, and developed many other interactive simulations and outreach exhibits.
+
+### Commercial Releases
+
+![](Darwins.jpg)
+
+[Darwin's Demons](https://store.steampowered.com/app/572020/Darwins_Demons/) is an arcade style space shooter in which you battle a population of evolving aliens. The alien's morphology, fire type, and behaviors are all encoded by a digital genome. The aliens that are best able to shoot or evade you reproduce to make the next generation.
+
+![](Hastur.jpg)
+
+[Project Hastur](https://store.steampowered.com/app/800700/Project_Hastur/) is an evolutionary tower defense game. Defend humanity against the ever changing threat of the alien Proteans. Project Hastur combines elements of 3D tower defense and real-time strategy with models of biological evolution to create a uniquely challenging experience.
+
+## Video Games and STEM Education
+
+### Adding Evolution to Video Games
+
+The best way to explain the concept is to frame our video games in the context of the "ingredients" of evolution:
+
+-   Variation
+-   Inheritance
+-   Selection
+-   Time
+
+When these components are present, it leads to Adaptation.
+
+#### Variation
+
+Think about the enemies in the old school video games that I used to play in arcades. Space Invaders, Asteroids, Centipede, Tempest, etc. What kinds of variation can you descripbe in these enemies? In Space Invaders, you had three types of aliens in each wave, plus the occassional bonus flying saucer. In Centipede and Tempest, you actually had categorically different enemy types that varied in how they looked and in their capabilities.
+
+::: panel-tabset
+## Space Invaders
+
+![Screenshot of the original Space Invaders](SpaceInvaders.png){.left} Enemy variation in Space Invaders includes the shape of each alien type (four types), but also their position in the armada (each type has its own row) and their speed of movement (which is adjusted based on how many remain in each wave). For our purposes, we will ignore the flying saucer that occassionally passes across the top of the screen. The game increases in difficulty by having the movement speed of each wave increase. Ironically, the increased movement speed of the aliens within a wave as the population size was reduced was actually an unintended function of the increased frame rate achieved by having fewer aliens to draw on the screen.
+
+## Centipede
+
+![Enemies in Centipede](centipede.gif){.left}Centipede includes enemy types with very different behaviors and abilities. The segmented centipede can split into component parts. Fleas drop vertically, leave a trail of mushrooms, and take two hits to destroy. Spiders move in a diagonal zig zag pattern. Scorpions move horizontally across the screen and turn mushrooms poisonous. Each wave the game difficulty increases by changing the behavior and segment number of the centipede.
+
+https://www.retrogamedeconstructionzone.com/2020/08/the-characters-of-centipede.html
+
+## Tempest
+:::
+
+This variation is a big part of what makes video games exciting. The difficulty in video games is usually increased over time by introducing new variations of enemies, changing the enemies' capabilities (like speed or fire rate) over time, or increasing the number of enemies. The problem (as we see it) is that these variations are introduced as part of a script that is programmed and balanced by the game developers.
+
+#### Inheritance
+
+#### Selection
+
+#### Time
+
+We reasoned that playing these types of games might have implications for STEM education. The success of the player is based on her comprehension and application of principles of evolutionary biology. The parallels to real world examples are numerous, and include the rapid evolution of antibiotic resistance in microbial pathogens, adaptation of crop pests to chemical and biological control measures, and behavioral adaptation to captivity in domesticated animals.
+
+Adding biological evolution to video games makes the games better for the game player and facilitates player comprehension of complex concepts that are hard to teach.
+
+## Get Involved
+
+# **// Archived**
+
+## Behavioral Genomics and Adaptation to Captivity
+
+![Image is a scan of an original drawing by Samantha Welker, a former advisee.](WelkerZfish.jpg){.left} The process of adaptation to captivity can cause striking changes in a variety of behavioral phenotypes, including aggressive, feeding, and reproductive behaviors. However, some of the most profound and consistent evolutionary changes occur in behaviors related to fearfulness and anxiety, with domesticated animals often described as less fearful than their wild progenitor populations. The evolution of reduced fearfulness during captivity has been observed in a variety of vertebrate taxa, including mammals (Harri et al., 2003), birds (Jensen & Andersson, 2005), and fish (Johnsson & Abrahams, 1991; Robison & Rowland, 2005). Despite the prevalence of behavioral evolution during adaptation to captivity, we know surprisingly little about the underlying genetic changes that occur during domestication. What kinds of molecular variation (amino acid sequence, regulatory, or non coding RNA) are associated with variation in fear and anxiety related behaviors? What kinds of genes are typically changed in response to domestication selection? Are the apparently parallel changes in behavior across independent domestication events reflective of parallel molecular evolution, or does domestication result from myriad molecular routes to the same phenotypic endpoint? The answers to these questions are important in many contexts, including the study of the molecular mechanisms of behavioral evolution, the genetic basis of complex behaviors, and the effective conservation of captively reared species.
+
+We use the zebrafish to study the genetic basis of fear related behaviors that commonly change during domestication in fish. The zebrafish is an excellent system for this purpose, combining a robust genomics toolset with superior experimental tractability. Our lab has documented variation among wild and laboratory derived strains consistent with the effects of domestication. The behavioral variation among wild and domesticated strains can be seen in the video on this page. This video shows two tanks of zebrafish randomly pulled from our zebrafish colony. One tank contains a highly domesticated (\>30 generations) strain (Scientific Hatcheries), and the other tank contains a strain with a more recent history (\~5 generations) of domestication (Nadia). We have quantified surface orientation (Robison and Rowland 2005, Benner et al 2010), observer orientation (Benner et al 2010), feeding latency (Oswald and Robison 2008), and open field behavior (Oswald and Robison in review) in these strains, and shown that they vary markedly in these anxiety related behaviors.
+
+We use a variety of genomics approaches to understand the mechanisms that drive behavioral adaptation to captivity. We have compared the brain transcriptomes of wild and domesticated strains using both microarray platforms and Illumina and 454 based RNAseq. We have discovered many promising candidate genes that appear to differentiate behaviorally bold and behaviorally shy animals. We have also used RNAseq approaches to identify more than 20,000 SNPs that vary among our zebrafish strains. We are currently using these SNPs for quantitative trait locus (QTL) analyses.
+
+We also combine these genomics approaches with quantitative genetics experiments. Mary Oswald, a recent Ph.D. graduate from our lab, has performed selection experiments on observer orientation. She has shown that these fear related behaviors have a significant genetic basis and are genetically correlated. Her selection experiment is now being continued by Matt Singer, who is a current Ph.D.
+
+## Quantitative Genetics

@@ -1,0 +1,12 @@
+---
+title: "You've gotta be f***ing kidding..."
+author: "Barrie Robison"
+date: "2022-10-19"
+categories: [news]
+---
+
+Mac wants the flamethrower...
+
+![](Palmerquote.jpg)
+
+Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.

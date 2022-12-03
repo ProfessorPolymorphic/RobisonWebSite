@@ -1,0 +1,10 @@
+---
+title: "PUBLICATIONS"
+bibliography: Barriepubs.bib
+csl: apa-cv.csl
+
+nocite: |
+  @*
+---
+
+

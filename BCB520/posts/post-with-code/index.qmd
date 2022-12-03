@@ -1,0 +1,233 @@
+---
+title: "LECTURE 1 - INTRO"
+subtitle: "BCB 504 / 520"
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    css: styles.css
+    footer: <https://canvas.uidaho.edu/courses/11081>
+    theme: [default, custom.scss]
+resources:
+  - demo.pdf
+author: "Barrie Robison"
+date: "2022-10-16"
+categories: [Lecture, DataViz, Intro]
+image: "braindata.png"
+---
+
+## WHO AM I?
+
+### [Barrie Robison]{.absolute bottom="210" left="10"}
+
+[[Department of Biological Sciences](https://www.uidaho.edu/sci/biology)]{.absolute bottom="170" left="10"}
+
+[[Institute for Interdisicplinary Data Sciences](https://www.iids.uidaho.edu)]{.absolute bottom="130" left="10"}
+
+[[Polymorphic Games](http://www.polymorphicgames.com)]{.absolute bottom="90" left="10"}
+
+[University of Idaho]{.absolute bottom="50" left="10"}
+
+![](Barrie.jpeg){.absolute bottom="270" left="10" width="300"}
+
+![](IIDS.png){.absolute bottom="270" right="10" height="150"} ![](Polymorphic.png){.absolute bottom="440" right="10" height="170"}
+
+## WHO ARE YOU?
+
+### Briefly:
+
+-   Your name
+-   Your discipline
+-   Your degree progress
+-   Your technical proficiency with data visualization
+
+## COURSE SUMMARY
+
+Students completing this course will be able to:
+
+::: r-fit-text
+1.  Describe and manipulate tabular, network, and spatial data; transform these data into a form suitable for visualization.
+2.  Make effective data visualization design choices related to marks and channels, spatial arrangement, and components of color.
+3.  Design effective data visualizations for tabular, network, and spatial data with quantitative and categorical attributes.
+4.  Implement their data visualization designs using existing tools in R (or other toolkits preferred by the student).
+5.  Explain whether a visual encoding is perceptually appropriate for a specific combination of task and data.
+6.  Demonstrate their skills with at least two novel visualizations suitable suitable for inclusion in an online Data Science Portfolio.
+
+The course materials are located on [Canvas](https://canvas.uidaho.edu/courses/11081) and the [course website](https://github.com/ProfessorPolymorphic).
+:::
+
+## VISUALIZATION
+
+Computers provide [visual]{.red} representations of datasets designed to help people carry out tasks more effectively.
+
+### [Tamara Munzner]{.absolute bottom="160" left="10"}
+
+[Department of Computer Science]{.absolute bottom="120" left="10"}
+
+[[InfoVis Group](https://www.cs.ubc.ca/group/infovis/)]{.absolute bottom="80" left="10"}
+
+[University of British Columbia]{.absolute bottom="40" left="10"}
+
+![](VADcover.jpg){.absolute bottom="70" right="10" width="300"} ![](TamaraMunzner.jpg){.absolute top="240" left="10" width="330"}
+
+## THE HUMAN
+
+**Why have a human in the loop?**
+
+Computer-based visualization systems provide visual representations of datasets designed to help [people]{.red} carry out [tasks]{.red} more effectively.
+
+-   We don't need visualization when a **trusted** fully automatic solution exists.
+
+-   Visualization is suitable when there is a need to [augment human capabilities]{.red} rather than replace people with computational decision-making methods.
+
+## WHEN TO VISUALIZE
+
+**Visualization is useful when:**
+
+::: r-fit-text
+-   The analysis problem is ill-specified and we don't know exactly what questions to ask in advance.
+-   We are interested in long-term use for end users (ex: exploratory analysis of scientific data).
+-   We are presentating known results (ex: [New York Times Upshot](https://www.nytimes.com/section/upshot)).
+-   We need a stepping stone to assess requirements before developing models.
+-   Developers of an automatic solution want to refine & determine parameters.
+-   We need to help end users of automatic solutions verify and build trust.
+:::
+
+## THE REPRESENTATION
+
+Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.
+
+## WHY DEPEND ON VISION?
+
+Computer-based visualization systems provide [visual representations]{.red} of datasets designed to help people carry out tasks more effectively.
+
+::: r-fit-text
+-   The human visual system is a high-bandwidth channel to the brain.
+-   Overview is possible due to background processing, providing the subjective experience of seeing everything simultaneously.
+-   Significant processing occurs in parallel and pre-attentively.
+-   **What about sound?** lower bandwidth and different semantics, overview not supported, subjective experience of sequential stream.
+-   **What about touch/haptics?** impoverished record/replay capacity, only very low-bandwidth communication thus far.
+-   **What about taste, smell?** no viable record/replay devices.
+:::
+
+## WHY REPRESENT (ALL THE) DATA?
+
+Computer-based visualization systems provide visual representations of [datasets]{.red} designed to help people carry out tasks more effectively.
+
+::: r-fit-text
+-   summaries lose information
+-   details matter
+-   confirm expected and find unexpected patterns
+-   assess validity of statistical model
+-   ANSCOMBE'S QUARTET is a fun example that we shall use to illustrate these points!
+:::
+
+## ANSCOMBE'S QUARTET 
+
+::: columns 
+::: {.column width="50%" style="font-size: 25px"}
+```{r}
+#| echo: true
+#| fontsize: 2
+library(ggplot2)
+library(grid)
+library(gridExtra)
+library(datasets)
+library(tidyverse)
+library(dplyr)
+datasets::anscombe
+```
+:::
+
+::: {.column width="50%" style="font-size: 25px"}
+#### Anscombe's Quartet 
+
+The four x-y pairs have identical summary statistics.
+
+```{r}
+tidy_anscombe <- anscombe %>%
+ pivot_longer(cols = everything(),
+              names_to = c(".value", "set"),
+              names_pattern = "(.)(.)")
+tidy_anscombe_summary <- tidy_anscombe %>%
+  group_by(set) %>%
+  summarise(across(.cols = everything(),
+                   .fns = lst(min,max,median,mean,sd,var),
+                   .names = "{col}_{fn}"))
+#> `summarise()` ungrouping output (override with `.groups` argument)
+
+vars<-c("set", "x_mean", "x_var",  "y_mean", "y_var")
+thing<- as.data.frame(tidy_anscombe_summary[vars])
+knitr::kable(thing)
+```
+:::
+:::
+
+## VIZ MATTERS
+
+```{r}
+ggplot(tidy_anscombe,
+       aes(x = x,
+           y = y)) +
+  geom_point() +
+  geom_point(data = tidy_anscombe_summary, aes(x=x_mean, y = y_mean, color = "red", size = 5),
+             show.legend = FALSE)+
+  facet_wrap(~set) +
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+::: footer
+Learn more: [TIDY ANSCOMBE](https://www.njtierney.com/post/2020/06/01/tidy-anscombe/)
+:::
+
+## RESOURCE LIMITATIONS
+
+Visualization designers must take into account three very different kinds of resource limitations: 
+
+- Limitations of computers. 
+- Limitations of humans.
+- Limitations of displays. 
+
+## COMPUTATIONAL LIMITS
+
+CPU time
+
+
+System Memory 
+
+## DISPLAY LIMITS 
+
+Pixels are precious and are the most constrained resource.
+
+- [Information Density]{.red}: ratio of space used to encode information vs unused whitespace.
+- There is a tradeoff between clutter and wasting space.
+- Designer must find the sweet spot between dense and sparse. 
+
+## HUMAN LIMITS
+
+- Time
+- Memory
+- Attention
+
+## VISUALIZATION ANALYSIS AND DESIGN
+
+### ANALYSIS?
+
+- imposes structure on huge design space.
+- scaffold to help you think systematically about choices.
+- analyzing existing as stepping stone to designing new.
+- most possibilities ineffective for particular task/data combination.
+
+## ANALYSIS FRAMEWORK
+
+![](frameworkbig.jpg){.absolute bottom="70"}
+
+## ANALYSIS FRAMEWORK EXAMPLE
+
+[Tree Juxtaposer](https://www.researchgate.net/publication/220184028_TreeJuxtaposer_Scalable_Tree_Comparison_Using_FocusContext_with_Guaranteed_Visibility)
+
+![](Fremework.png){.absolute bottom="0"}
+
+![](spacetree.png){.absolute top="100" right="10" width="400"}

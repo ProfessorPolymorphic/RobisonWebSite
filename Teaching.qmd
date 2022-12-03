@@ -1,0 +1,27 @@
+---
+title: "TEACHING"
+---
+
+# **// Active**
+
+## **BIO 315 ::** Genetics Laboratory
+1 credit, Fall semester only
+
+The companion laboratory to Biology 310.  This is an open lab course in which students test genetic hypotheses using Drosophila melanogaster or game based simulations.
+
+[Canvas Page](https://canvas.uidaho.edu/courses/13668)
+
+## **BCB 520 ::** Foundations of Data Visualization
+3 credits, Spring semester, asynchronous online
+
+This class will help students establish a foundational understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R programming language. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using R.  The course is designed to be "discipline agnostic" -  each student is encouraged to use data sets that they deem important / interesting.  The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.
+
+[Canvas Page](https://canvas.uidaho.edu/courses/11081)
+
+[Course WebPage](BCB520/BCB520.qmd)
+
+## **BCB 521 ::** Communicating with Data
+
+## **BCB 522 ::** Data Science Portfolio
+
+# **// Archive**
