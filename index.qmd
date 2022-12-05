@@ -2,7 +2,7 @@
 title: "ROBISON LAB"
 ---
 
-![](BarrieBanner.png)
+![](Barriebanner.png)
 
 **// Evolution // Data Science // Video Games // Horror Fiction**
 
@@ -14,7 +14,7 @@ I am the Director of the [Institute for Interdisciplinary Data Sciences](https:/
 
 Finally, I am a huge Horror and Science Fiction nerd. I am fascinated by the intersection of these genres with science, and I explore these intersections in my BLOG - Professor Polymorphic.
 
-![](Uvic.webp){.icon}[Bachelor of Science in Biology, University of Victoria, 1988-1993]{.caption}
+![](uvic.webp){.icon}[Bachelor of Science in Biology, University of Victoria, 1988-1993]{.caption}
 
 ![](UI_Main_stacked_4c.png){.icon}[Master of Science in Fisheries, University of Idaho, 1993-1995]{.caption}
 
