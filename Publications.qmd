@@ -7,4 +7,4 @@ nocite: |
   @*
 ---
 
-
+In addition to the list below, you can find links to most of my papers at my [Google Scholar](https://scholar.google.com/citations?user=DKj4SqkAAAAJ&hl=en) page.

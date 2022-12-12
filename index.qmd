@@ -1,18 +1,21 @@
 ---
-title: "ROBISON LAB"
+title: "BARRIE D. ROBISON"
 ---
 
 ![](Barriebanner.png)
 
 **// Evolution // Data Science // Video Games // Horror Fiction**
 
-I am a Professor of Biological Sciences at the University of Idaho, where I study evolution and adaptation using an unusual mixture of model systems. Over the course of my career, I have conducted research on the genetic basis of quantitative traits in salmonids, behavioral genomics and adaptation to captivity in zebrafish, and the implementation of evolutionary models in video games. I taught Genomics and General Genetics for 15 years, and I am about to deploy three graduate level courses in Data Science as part of our new Graduate Certificate in Professional Applications of Data Science.
+I am a Professor of Biological Sciences at the University of Idaho, where I study evolution and adaptation using an unusual mixture of model systems. Over the course of my career, I have conducted research on the genetic basis of quantitative traits in Salmonids, behavioral genomics and adaptation to captivity in zebrafish, and the implementation of evolutionary models in video games. I taught Genomics and General Genetics for 15 years, and I now teach various courses in Data Science as part of our new Graduate Certificate in Professional Applications of Data Science.
 
 I am the co-founder (along with Professor Terry Soule) of [Polymorphic Games](http://www.polymorphicgames.com), an experimental video game studio that applies game development technology to scientific research and STEM education.
 
 I am the Director of the [Institute for Interdisciplinary Data Sciences](https://www.iids.uidaho.edu) (IIDS).
 
 Finally, I am a huge Horror and Science Fiction nerd. I am fascinated by the intersection of these genres with science, and I explore these intersections in my BLOG - Professor Polymorphic.
+
+## Education and Training
+
 
 ![](uvic.webp){.icon}[Bachelor of Science in Biology, University of Victoria, 1988-1993]{.caption}
 
@@ -23,3 +26,32 @@ Finally, I am a huge Horror and Science Fiction nerd. I am fascinated by the int
 ![](UO-logo.png){.icon}[Postdoctoral Researcher in Evolutionary Genetics, University of Oregon 1999-2000]{.caption}
 
 ![](Indiana_Hoosiers_logo.svg){.icon}[Postdoctoral Researcher in Evolutionary Genetics, Indiana University 2000-2003]{.caption}
+
+## Contact
+
+**BARRIE D. ROBISON, PhD** 
+
+Professor, Department of Biological Sciences 
+
+Director, Institute for Interdisciplinary Data Sciences 
+
+Office: 208-885-7137
+
+Email:    brobison [at] uidaho.edu
+
+**Office of Research and Economic Development**
+
+Institute for Interdisciplinary Data Sciences  
+
+www.iids.uidaho.edu
+
+
+**College of Science**
+
+Department of Biological Sciences  
+
+www.uidaho.edu/sci/biology
+
+
+ 
+

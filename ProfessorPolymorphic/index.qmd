@@ -9,18 +9,22 @@ listing:
   filter-ui: true
 page-layout: full
 title-block-banner: true
+format:
+  html:
+    auto-play-media: true
 ---
+
 # **// About**
 
-“The oldest and strongest emotion of mankind is [fear]{.red}, and the oldest and strongest kind of fear is fear of the [unknown]{.red}”.
+"The oldest and strongest emotion of mankind is [fear]{.red}, and the oldest and strongest kind of fear is fear of the [unknown]{.red}".
 
 -- H.P. Lovecraft, Supernatural Horror in Literature
 
 ## Musings at the Intersection of Horror and Science
 
-Horror emerges at the boundaries between the known and the unknown.  We fear the dark because it hides the unknown beyond our senses.  We fear death because we we do not truly know what happens when we die.  Even when we push back the boundaries of the unknown, we actually just push back the curtain, creating new boundaries and new opportunities for horror to emerge.
+![](DemonBarrie.mp4)
+<video data-autoplay src="http://DemonBarrie.mp4"></video>
+
+Horror emerges at the boundaries between the known and the unknown. We fear the dark because it hides the unknown beyond our senses. We fear death because we we do not truly know what happens when we die. Even when we push back the boundaries of the unknown, we actually just push back the curtain, creating new boundaries and new opportunities for horror to emerge.
 
 # **// Posts**
-
-
-

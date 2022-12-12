@@ -1,0 +1,145 @@
+---
+title: "SYLLABUS 2023"
+author: "Barrie Robison"
+date: "2022-12-12"
+categories: [Resources, DataViz]
+image: "Cthulhusyllabus.png"
+---
+
+This forbidden tome contains information students were not meant to know...
+
+# BCB 504: Foundations of Data Visualization
+
+**Barrie D. Robison**
+
+**Spring 2023**
+
+
+
+
+## Course Description
+
+This class will help students establish a foundational understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R programming language. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using R.  The course is designed to be "discipline agnostic" -  each student is encouraged to use data sets that they deem important / interesting.  The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.
+
+## Course Objectives
+
+Students completing this course will be able to:
+
+1. Describe and manipulate tabular, network, and spatial data; transform these data into a form suitable for visualization.
+2. Analyze data visualization design choices related to marks and channels, spatial arrangement, and components of color.
+3. Design new data visualizations with appropriate use of visual channels for tabular, network, and spatial data with quantitative and categorical attributes.
+4. Implement their data visualization designs using existing tools in R (or other toolkits preferred by the student).
+5. Explain whether a visual encoding is perceptually appropriate for a specific combination of task and data.
+6. Demonstrate their skills with at least two novel visualizations suitable for inclusion in an online Data Science Portfolio.
+
+## Required Readings
+
+Tamara Munzner. Visualization Analysis and Design. A K Peters Visualization Series, CRC Press, 2014.
+
+[Hard Copy on Amazon]()
+
+[kindle/ebook on Amazon]()
+
+## Course Policies
+
+### GRADING
+
+50% of your grade will be determined by homework exercises related to each course unit.
+
+20% of your grade will be determined by a mid term project (which would be a great item to include in your Data Science Portfolio).
+
+20% of your grade will be determined by a final project (which would be great item to include in your Data Science Portfolio).
+
+10% of your grade will be determined by participation in class discussions.
+
+GRADING SCALE: The grading scale is standard: A (90 -100 %), B (89 - 80 %), C (79 - 70 %), D (69-60 %), F( below 60 %).
+
+### HEALTHY VANDALS POLICY
+
+It is a longstanding tradition that Vandals take care of Vandals, and we all do our best to look out for the Vandal Family. These simple precautions go a long way in reducing the impact of coronavirus on our campuses and in our communities. With everyone engaging in these small actions, we can continue to participate in our vibrant campus culture where we are able to learn, live, and grow. Please bookmark the University of Idaho Covid-19 webpage and visit it often for the most up-to-date information about the U of I’s response to Covid-19.
+
+• All classes are offered in the modality listed in the catalog. 
+• All Vandals are highly encouraged to be vaccinated. 
+• COVID-19 tests are not required to attend class in person.
+
+Additionally, faculty and students must follow the Healthy Vandal Pledge: Daily Symptom Monitoring and In-Person Class Attendance. Evaluate your own health status before attending in-person classes and refrain from attending class in-person if you are ill, if you are experiencing any of the known symptoms of coronavirus, or if you have tested positive for COVID-19 or have been potentially exposed to someone with COVID-19. Stay home if you experience any symptoms related to COVID 19 and that are not attributed to a non-infectious health condition regardless of how mild. Contact your medical provider or local Idaho Public Health District for assessment of symptoms and possible COVID19 testing. Positive COVID 19 tests should be submitted via a VandalCare Report in order to make arrangements that involve classroom absences due to illness, and/or quarantine or isolation requirements directed by a medical provider.
+
+### ATTENDANCE POLICY
+
+Missing a scheduled lecture is at your discretion. I will be posting all the lecture notes online, and recording the lectures for future online versions of the course. I have no intention of offering a zoom option this semester. If a discussion or in-class exercise occurs and you miss it, you will lose those participation points. There is no way to make up those points.
+
+### LATE ARRIVAL OF PROFESSOR POLICY
+
+The R Markdown template I used for this syllabus was created by Dr. Steven V. Miller at Stockholm University. It contained this section, which I found amusing and have therefore retained. Professor Miller’s current university asks professors to have policies written into their syllabus about what students should do if the professor is more than 15 minutes late to class. Here is my version of that policy:
+
+I will inform students via e-mail in advance of class if class is cancelled for the day. Events that might create such a scenario include travel obligations that emerged after the semester has begun, a family emergency that encompasses multiple days, or some other thing. I will also contact our department secretary in emergent situations, such as something happening on the way to work. Failing that, assume the worst. Alien abduction, the return of one or more Old Ones to our plane, or some kind of attack by wizards are all viable explanations for my inability to attend class. I ask that the students make sure that my story gets the proper treatment on the “Mr. Ballen” YouTube channel. I also ask that my story be narrated by Morgan Freeman and that the role of me in the made for TV movie be played by Keanu Reeves or Danny DeVito.
+
+### MAKE UP EXAM POLICY
+
+The bad news is that there are NO make-ups for missed exams. Don’t bother asking. The good news is that there aren’t any exams.
+
+### ACADEMIC DISHONESTY POLICY
+
+All students are expected to uphold the highest standards of academic honesty. This includes but is not limited to: not cheating, not using the ideas of others without giving appropriate credit (including Wikipedia!), and not falsifying data. Any incident of academic dishonesty will be handled according to the guidelines of the University of Idaho. 
+
+## Class Schedule
+DATE	TOPIC	READING	ASSIGNMENT DEPLOYED	DUE FOR SUBMISSION
+Jan 12, 2023	
+
+INTRODUCTION.  Why Visualization Matters
+
+L1 INTRO.html
+
+	VAD Ch 1.	Assignment 1 - Fun with literate programming.	
+Jan 17, 2023	WHAT?  Abstraction of Data	VAD Ch 2.		Assignment 1 - Fun with literate programming.
+Jan 19, 2023	WHY?  Task Abstraction	VAD Ch 3.		
+Jan 24, 2023	ANALYZE.  Nested Design Model Part 1.	VAD Ch 4.		
+Jan 26, 2023	ANALYZE. Nested Design Model Part 2.	VAD Ch 4.		
+Jan 31, 2023	MARKS. Geometric elements to depict data	VAD Ch 5.		
+
+
+Feb 02, 2023
+
+	CHANNELS. Controlling the appearance of marks.	VAD Ch 5.		
+Feb 07, 2023	RULES OF THUMB.	VAD Ch. 6.		
+Feb 09, 2023	TABULAR DATA I	VAD Ch. 7.		
+Feb 14, 2023	TABULAR DATA II	VAD Ch. 7.		
+Feb 16, 2023				Midterm Assignment Presentations
+Feb 21, 2023				Midterm Assignment Presentations
+Feb 23, 2023	SPATIAL DATA I: Geographic Maps	VAD Ch 8.		
+
+
+Feb 28, 2023
+
+	SPATIAL DATA II:  Spatial Fields	VAD Ch 8.		
+Mar 02, 2023	NETWORK DATA I	VAD Ch 9.		
+Mar 07, 2023	NETWORK DATA II	VAD Ch 9.		
+Mar 09, 2023	COLOR I	VAD Ch 10.		
+Mar 14, 2023				SPRING BREAK
+Mar 16, 2023				SPRING BREAK
+Mar 21, 2023	COLOR II	VAD Ch 10.		
+Mar 23, 2023	COLOR III	VAD Ch 10.		
+
+
+Mar 28, 2023
+
+	INTERACTIVITY	VAD Ch 11.		
+Mar 30, 2023	MULTIPLE VIEWS	VAD Ch 12.		
+Apr 04, 2023	AGGREGATION	VAD Ch 13.		
+Apr 06, 2023	FILTERING	VAD Ch 13.		
+Apr 11, 2023	EMBEDDING: Focus and Context	VAD Ch 14.		
+Apr 13, 2023				CoS DATA SCIENCE COMPETITION
+Apr 18, 2023				
+Apr 20, 2023				
+Apr 25, 2023				FINAL PROJECT PRESENTATIONS
+
+
+Apr 27, 2023
+
+				FINAL PROJECT PRESENTATIONS
+May 02, 2023	DEAD WEEK			
+May 04, 2023	DEAD WEEK			
+May 09, 2023	FINALS WEEK			
+
+
+
