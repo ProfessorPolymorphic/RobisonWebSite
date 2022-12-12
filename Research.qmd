@@ -82,3 +82,5 @@ We use a variety of genomics approaches to understand the mechanisms that drive 
 We also combine these genomics approaches with quantitative genetics experiments. Mary Oswald, a recent Ph.D. graduate from our lab, has performed selection experiments on observer orientation. She has shown that these fear related behaviors have a significant genetic basis and are genetically correlated. Her selection experiment is now being continued by Matt Singer, who is a current Ph.D.
 
 ## Quantitative Genetics
+
+![](horrortrout.png)
