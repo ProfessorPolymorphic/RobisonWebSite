@@ -33,9 +33,9 @@ Students completing this course will be able to:
 
 Tamara Munzner. Visualization Analysis and Design. A K Peters Visualization Series, CRC Press, 2014.
 
-[Hard Copy on Amazon]()
+[Hard Copy on Amazon](https://www.amazon.com/Visualization-Analysis-Design-AK-Peters/dp/1466508914/ref=sr_1_1?crid=5AX2UJ4ZP5Y&keywords=munzner&qid=1670957518&sprefix=munzner%2Caps%2C237&sr=8-1)
 
-[kindle/ebook on Amazon]()
+[kindle/ebook on Amazon](https://www.amazon.com/Visualization-Analysis-Design-AK-Peters-ebook/dp/B00OGLE3XE/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1670957518&sr=8-1)
 
 ## Course Policies
 
@@ -55,7 +55,9 @@ GRADING SCALE: The grading scale is standard: A (90 -100 %), B (89 - 80 %), C (7
 
 It is a longstanding tradition that Vandals take care of Vandals, and we all do our best to look out for the Vandal Family. These simple precautions go a long way in reducing the impact of coronavirus on our campuses and in our communities. With everyone engaging in these small actions, we can continue to participate in our vibrant campus culture where we are able to learn, live, and grow. Please bookmark the University of Idaho Covid-19 webpage and visit it often for the most up-to-date information about the U of I's response to Covid-19.
 
-• All classes are offered in the modality listed in the catalog. • All Vandals are highly encouraged to be vaccinated. • COVID-19 tests are not required to attend class in person.
+- All classes are offered in the modality listed in the catalog.
+- All Vandals are highly encouraged to be vaccinated.
+- COVID-19 tests are not required to attend class in person.
 
 Additionally, faculty and students must follow the Healthy Vandal Pledge: Daily Symptom Monitoring and In-Person Class Attendance. Evaluate your own health status before attending in-person classes and refrain from attending class in-person if you are ill, if you are experiencing any of the known symptoms of coronavirus, or if you have tested positive for COVID-19 or have been potentially exposed to someone with COVID-19. Stay home if you experience any symptoms related to COVID 19 and that are not attributed to a non-infectious health condition regardless of how mild. Contact your medical provider or local Idaho Public Health District for assessment of symptoms and possible COVID19 testing. Positive COVID 19 tests should be submitted via a VandalCare Report in order to make arrangements that involve classroom absences due to illness, and/or quarantine or isolation requirements directed by a medical provider.
 
@@ -88,54 +90,3 @@ knitr::kable(Schedule, caption = '')
 ```
 
 
-DATE TOPIC READING ASSIGNMENT DEPLOYED DUE FOR SUBMISSION Jan 12, 2023
-
-INTRODUCTION.  Why Visualization Matters
-
-L1 INTRO.html
-
-    VAD Ch 1.   Assignment 1 - Fun with literate programming.   
-
-Jan 17, 2023 WHAT?  Abstraction of Data VAD Ch 2. Assignment 1 - Fun with literate programming. Jan 19, 2023 WHY?  Task Abstraction VAD Ch 3.\
-Jan 24, 2023 ANALYZE.  Nested Design Model Part 1. VAD Ch 4.\
-Jan 26, 2023 ANALYZE. Nested Design Model Part 2. VAD Ch 4.\
-Jan 31, 2023 MARKS. Geometric elements to depict data VAD Ch 5.
-
-Feb 02, 2023
-
-    CHANNELS. Controlling the appearance of marks.  VAD Ch 5.       
-
-Feb 07, 2023 RULES OF THUMB. VAD Ch. 6.\
-Feb 09, 2023 TABULAR DATA I VAD Ch. 7.\
-Feb 14, 2023 TABULAR DATA II VAD Ch. 7.\
-Feb 16, 2023 Midterm Assignment Presentations Feb 21, 2023 Midterm Assignment Presentations Feb 23, 2023 SPATIAL DATA I: Geographic Maps VAD Ch 8.
-
-Feb 28, 2023
-
-    SPATIAL DATA II:  Spatial Fields    VAD Ch 8.       
-
-Mar 02, 2023 NETWORK DATA I VAD Ch 9.\
-Mar 07, 2023 NETWORK DATA II VAD Ch 9.\
-Mar 09, 2023 COLOR I VAD Ch 10.\
-Mar 14, 2023 SPRING BREAK Mar 16, 2023 SPRING BREAK Mar 21, 2023 COLOR II VAD Ch 10.\
-Mar 23, 2023 COLOR III VAD Ch 10.
-
-Mar 28, 2023
-
-    INTERACTIVITY   VAD Ch 11.      
-
-Mar 30, 2023 MULTIPLE VIEWS VAD Ch 12.\
-Apr 04, 2023 AGGREGATION VAD Ch 13.\
-Apr 06, 2023 FILTERING VAD Ch 13.\
-Apr 11, 2023 EMBEDDING: Focus and Context VAD Ch 14.\
-Apr 13, 2023 CoS DATA SCIENCE COMPETITION Apr 18, 2023\
-Apr 20, 2023\
-Apr 25, 2023 FINAL PROJECT PRESENTATIONS
-
-Apr 27, 2023
-
-                FINAL PROJECT PRESENTATIONS
-
-May 02, 2023 DEAD WEEK\
-May 04, 2023 DEAD WEEK\
-May 09, 2023 FINALS WEEK

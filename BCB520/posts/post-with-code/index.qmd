@@ -89,7 +89,7 @@ Computer-based visualization systems provide visual representations of datasets 
 ::: r-fit-text
 -   The analysis problem is ill-specified and we don't know exactly what questions to ask in advance.
 -   We are interested in long-term use for end users (ex: exploratory analysis of scientific data).
--   We are presentating known results (ex: [New York Times Upshot](https://www.nytimes.com/section/upshot)).
+-   We are presenting known results (ex: [New York Times Upshot](https://www.nytimes.com/section/upshot)).
 -   We need a stepping stone to assess requirements before developing models.
 -   Developers of an automatic solution want to refine & determine parameters.
 -   We need to help end users of automatic solutions verify and build trust.
@@ -124,9 +124,9 @@ Computer-based visualization systems provide visual representations of [datasets
 -   ANSCOMBE'S QUARTET is a fun example that we shall use to illustrate these points!
 :::
 
-## ANSCOMBE'S QUARTET 
+## ANSCOMBE'S QUARTET
 
-::: columns 
+::: columns
 ::: {.column width="50%" style="font-size: 25px"}
 ```{r}
 #| echo: true
@@ -142,7 +142,7 @@ datasets::anscombe
 :::
 
 ::: {.column width="50%" style="font-size: 25px"}
-#### Anscombe's Quartet 
+#### Anscombe's Quartet
 
 The four x-y pairs have identical summary statistics.
 
@@ -184,41 +184,40 @@ Learn more: [TIDY ANSCOMBE](https://www.njtierney.com/post/2020/06/01/tidy-ansco
 
 ## RESOURCE LIMITATIONS
 
-Visualization designers must take into account three very different kinds of resource limitations: 
+Visualization designers must take into account three very different kinds of resource limitations:
 
-- Limitations of computers. 
-- Limitations of humans.
-- Limitations of displays. 
+-   Limitations of computers.
+-   Limitations of humans.
+-   Limitations of displays.
 
 ## COMPUTATIONAL LIMITS
 
 CPU time
 
+System Memory
 
-System Memory 
-
-## DISPLAY LIMITS 
+## DISPLAY LIMITS
 
 Pixels are precious and are the most constrained resource.
 
-- [Information Density]{.red}: ratio of space used to encode information vs unused whitespace.
-- There is a tradeoff between clutter and wasting space.
-- Designer must find the sweet spot between dense and sparse. 
+-   [Information Density]{.red}: ratio of space used to encode information vs unused whitespace.
+-   There is a tradeoff between clutter and wasting space.
+-   Designer must find the sweet spot between dense and sparse.
 
 ## HUMAN LIMITS
 
-- Time
-- Memory
-- Attention
+-   Time
+-   Memory
+-   Attention
 
 ## VISUALIZATION ANALYSIS AND DESIGN
 
 ### ANALYSIS?
 
-- imposes structure on huge design space.
-- scaffold to help you think systematically about choices.
-- analyzing existing as stepping stone to designing new.
-- most possibilities ineffective for particular task/data combination.
+-   imposes structure on huge design space.
+-   scaffold to help you think systematically about choices.
+-   analyzing existing designs serves as stepping stone to designing new visualizations.
+-   most possibilities in a design space are ineffective for a particular task/data combination.
 
 ## ANALYSIS FRAMEWORK
 
