@@ -20,11 +20,14 @@ format:
 
 -- H.P. Lovecraft, Supernatural Horror in Literature
 
+![](DemonBarrie.mp4) 
+
 ## Musings at the Intersection of Horror and Science
 
-![](DemonBarrie.mp4)
-<video data-autoplay src="http://DemonBarrie.mp4"></video>
+Hello!  This BLOG is where I share my thoughts on how science informs horror fiction, and whether horror fiction can be used to at least help teach science, if not directly inform scientific research.  The posts that appear here will vary in their focus.  Some will directly address the intersection of horror and science, while some might focus primarily on either horror fiction or science concepts.
 
-Horror emerges at the boundaries between the known and the unknown. We fear the dark because it hides the unknown beyond our senses. We fear death because we we do not truly know what happens when we die. Even when we push back the boundaries of the unknown, we actually just push back the curtain, creating new boundaries and new opportunities for horror to emerge.
+My basic premise is driven by the Lovecraft quote you see at the top of the screen.  I find this compelling because I am a scientist, and science is one of two tools humanity has invented that pushes back against the unknown.  
+
+
 
 # **// Posts**
