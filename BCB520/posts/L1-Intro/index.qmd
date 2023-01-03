@@ -210,6 +210,8 @@ Pixels are precious and are the most constrained resource.
 -   Memory
 -   Attention
 
+![](braindata.png){.absolute bottom="100" right="10" height="500"}
+
 ## VISUALIZATION ANALYSIS AND DESIGN
 
 ### ANALYSIS?
