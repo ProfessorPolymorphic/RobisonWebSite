@@ -55,11 +55,11 @@ GRADING SCALE: The grading scale is standard: A (90 -100 %), B (89 - 80 %), C (7
 
 It is a longstanding tradition that Vandals take care of Vandals, and we all do our best to look out for the Vandal Family. These simple precautions go a long way in reducing the impact of coronavirus on our campuses and in our communities. With everyone engaging in these small actions, we can continue to participate in our vibrant campus culture where we are able to learn, live, and grow. Please bookmark the University of Idaho Covid-19 webpage and visit it often for the most up-to-date information about the U of I's response to Covid-19.
 
-- All classes are offered in the modality listed in the catalog.
-- All Vandals are highly encouraged to be vaccinated.
-- COVID-19 tests are not required to attend class in person.
+-   All classes are offered in the modality listed in the catalog.
+-   All Vandals are highly encouraged to be vaccinated.
+-   COVID-19 tests are not required to attend class in person.
 
-Additionally, faculty and students must follow the Healthy Vandal Pledge: Daily Symptom Monitoring and In-Person Class Attendance. Evaluate your own health status before attending in-person classes and refrain from attending class in-person if you are ill, if you are experiencing any of the known symptoms of coronavirus, or if you have tested positive for COVID-19 or have been potentially exposed to someone with COVID-19. Stay home if you experience any symptoms related to COVID 19 and that are not attributed to a non-infectious health condition regardless of how mild. Contact your medical provider or local Idaho Public Health District for assessment of symptoms and possible COVID19 testing. Positive COVID 19 tests should be submitted via a VandalCare Report in order to make arrangements that involve classroom absences due to illness, and/or quarantine or isolation requirements directed by a medical provider.
+Additionally, faculty and students must follow the Healthy Vandal Pledge: Daily Symptom Monitoring and In-Person Class Attendance. Evaluate your own health status before attending in-person classes and refrain from attending class in-person if you are ill, if you are experiencing any of the known symptoms of Coronavirus, or if you have tested positive for COVID-19 or have been potentially exposed to someone with COVID-19. Stay home if you experience any symptoms related to COVID 19 and that are not attributed to a non-infectious health condition regardless of how mild. Contact your medical provider or local Idaho Public Health District for assessment of symptoms and possible COVID19 testing. Positive COVID 19 tests should be submitted via a VandalCare Report in order to make arrangements that involve classroom absences due to illness, and/or quarantine or isolation requirements directed by a medical provider.
 
 ### ATTENDANCE POLICY
 
@@ -88,5 +88,3 @@ Schedule <- read_excel("Schedule.xlsx")
 
 knitr::kable(Schedule, caption = '')
 ```
-
-

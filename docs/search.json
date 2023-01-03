@@ -49,127 +49,127 @@
     "text": "Quantitative Genetics"
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#who-am-i",
-    "href": "BCB520/posts/post-with-code/index.html#who-am-i",
+    "objectID": "BCB520/posts/L1-Intro/index.html#who-am-i",
+    "href": "BCB520/posts/L1-Intro/index.html#who-am-i",
     "title": "LECTURE 1 - INTRO",
     "section": "WHO AM I?",
     "text": "WHO AM I?\nBarrie Robison\nDepartment of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#who-are-you",
-    "href": "BCB520/posts/post-with-code/index.html#who-are-you",
+    "objectID": "BCB520/posts/L1-Intro/index.html#who-are-you",
+    "href": "BCB520/posts/L1-Intro/index.html#who-are-you",
     "title": "LECTURE 1 - INTRO",
     "section": "WHO ARE YOU?",
     "text": "WHO ARE YOU?\nBriefly:\n\nYour name\nYour discipline\nYour degree progress\nYour technical proficiency with data visualization"
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#course-summary",
-    "href": "BCB520/posts/post-with-code/index.html#course-summary",
+    "objectID": "BCB520/posts/L1-Intro/index.html#course-summary",
+    "href": "BCB520/posts/L1-Intro/index.html#course-summary",
     "title": "LECTURE 1 - INTRO",
     "section": "COURSE SUMMARY",
     "text": "COURSE SUMMARY\nStudents completing this course will be able to:\n\n\nDescribe and manipulate tabular, network, and spatial data; transform these data into a form suitable for visualization.\nMake effective data visualization design choices related to marks and channels, spatial arrangement, and components of color.\nDesign effective data visualizations for tabular, network, and spatial data with quantitative and categorical attributes.\nImplement their data visualization designs using existing tools in R (or other toolkits preferred by the student).\nExplain whether a visual encoding is perceptually appropriate for a specific combination of task and data.\nDemonstrate their skills with at least two novel visualizations suitable suitable for inclusion in an online Data Science Portfolio.\n\nThe course materials are located on Canvas and the course website."
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#visualization",
-    "href": "BCB520/posts/post-with-code/index.html#visualization",
+    "objectID": "BCB520/posts/L1-Intro/index.html#visualization",
+    "href": "BCB520/posts/L1-Intro/index.html#visualization",
     "title": "LECTURE 1 - INTRO",
     "section": "VISUALIZATION",
     "text": "VISUALIZATION\nComputers provide visual representations of datasets designed to help people carry out tasks more effectively.\nTamara Munzner\nDepartment of Computer Science\nInfoVis Group\nUniversity of British Columbia"
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#the-human",
-    "href": "BCB520/posts/post-with-code/index.html#the-human",
+    "objectID": "BCB520/posts/L1-Intro/index.html#the-human",
+    "href": "BCB520/posts/L1-Intro/index.html#the-human",
     "title": "LECTURE 1 - INTRO",
     "section": "THE HUMAN",
     "text": "THE HUMAN\nWhy have a human in the loop?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\nWe don’t need visualization when a trusted fully automatic solution exists.\nVisualization is suitable when there is a need to augment human capabilities rather than replace people with computational decision-making methods."
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#when-to-visualize",
-    "href": "BCB520/posts/post-with-code/index.html#when-to-visualize",
+    "objectID": "BCB520/posts/L1-Intro/index.html#when-to-visualize",
+    "href": "BCB520/posts/L1-Intro/index.html#when-to-visualize",
     "title": "LECTURE 1 - INTRO",
     "section": "WHEN TO VISUALIZE",
     "text": "WHEN TO VISUALIZE\nVisualization is useful when:\n\n\nThe analysis problem is ill-specified and we don’t know exactly what questions to ask in advance.\nWe are interested in long-term use for end users (ex: exploratory analysis of scientific data).\nWe are presenting known results (ex: New York Times Upshot).\nWe need a stepping stone to assess requirements before developing models.\nDevelopers of an automatic solution want to refine & determine parameters.\nWe need to help end users of automatic solutions verify and build trust."
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#the-representation",
-    "href": "BCB520/posts/post-with-code/index.html#the-representation",
+    "objectID": "BCB520/posts/L1-Intro/index.html#the-representation",
+    "href": "BCB520/posts/L1-Intro/index.html#the-representation",
     "title": "LECTURE 1 - INTRO",
     "section": "THE REPRESENTATION",
     "text": "THE REPRESENTATION\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#why-depend-on-vision",
-    "href": "BCB520/posts/post-with-code/index.html#why-depend-on-vision",
+    "objectID": "BCB520/posts/L1-Intro/index.html#why-depend-on-vision",
+    "href": "BCB520/posts/L1-Intro/index.html#why-depend-on-vision",
     "title": "LECTURE 1 - INTRO",
     "section": "WHY DEPEND ON VISION?",
     "text": "WHY DEPEND ON VISION?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\nThe human visual system is a high-bandwidth channel to the brain.\nOverview is possible due to background processing, providing the subjective experience of seeing everything simultaneously.\nSignificant processing occurs in parallel and pre-attentively.\nWhat about sound? lower bandwidth and different semantics, overview not supported, subjective experience of sequential stream.\nWhat about touch/haptics? impoverished record/replay capacity, only very low-bandwidth communication thus far.\nWhat about taste, smell? no viable record/replay devices."
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#why-represent-all-the-data",
-    "href": "BCB520/posts/post-with-code/index.html#why-represent-all-the-data",
+    "objectID": "BCB520/posts/L1-Intro/index.html#why-represent-all-the-data",
+    "href": "BCB520/posts/L1-Intro/index.html#why-represent-all-the-data",
     "title": "LECTURE 1 - INTRO",
     "section": "WHY REPRESENT (ALL THE) DATA?",
     "text": "WHY REPRESENT (ALL THE) DATA?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\nsummaries lose information\ndetails matter\nconfirm expected and find unexpected patterns\nassess validity of statistical model\nANSCOMBE’S QUARTET is a fun example that we shall use to illustrate these points!"
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#anscombes-quartet",
-    "href": "BCB520/posts/post-with-code/index.html#anscombes-quartet",
+    "objectID": "BCB520/posts/L1-Intro/index.html#anscombes-quartet",
+    "href": "BCB520/posts/L1-Intro/index.html#anscombes-quartet",
     "title": "LECTURE 1 - INTRO",
     "section": "ANSCOMBE’S QUARTET",
     "text": "ANSCOMBE’S QUARTET\n\n\n\nlibrary(ggplot2)\nlibrary(grid)\nlibrary(gridExtra)\nlibrary(datasets)\nlibrary(tidyverse)\nlibrary(dplyr)\ndatasets::anscombe\n\n   x1 x2 x3 x4    y1   y2    y3    y4\n1  10 10 10  8  8.04 9.14  7.46  6.58\n2   8  8  8  8  6.95 8.14  6.77  5.76\n3  13 13 13  8  7.58 8.74 12.74  7.71\n4   9  9  9  8  8.81 8.77  7.11  8.84\n5  11 11 11  8  8.33 9.26  7.81  8.47\n6  14 14 14  8  9.96 8.10  8.84  7.04\n7   6  6  6  8  7.24 6.13  6.08  5.25\n8   4  4  4 19  4.26 3.10  5.39 12.50\n9  12 12 12  8 10.84 9.13  8.15  5.56\n10  7  7  7  8  4.82 7.26  6.42  7.91\n11  5  5  5  8  5.68 4.74  5.73  6.89\n\n\n\nAnscombe’s Quartet\nThe four x-y pairs have identical summary statistics.\n\n\n\n\n\nset\nx_mean\nx_var\ny_mean\ny_var\n\n\n\n\n1\n9\n11\n7.500909\n4.127269\n\n\n2\n9\n11\n7.500909\n4.127629\n\n\n3\n9\n11\n7.500000\n4.122620\n\n\n4\n9\n11\n7.500909\n4.123249"
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#viz-matters",
-    "href": "BCB520/posts/post-with-code/index.html#viz-matters",
+    "objectID": "BCB520/posts/L1-Intro/index.html#viz-matters",
+    "href": "BCB520/posts/L1-Intro/index.html#viz-matters",
     "title": "LECTURE 1 - INTRO",
     "section": "VIZ MATTERS",
     "text": "VIZ MATTERS\n\n\nLearn more: TIDY ANSCOMBE"
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#resource-limitations",
-    "href": "BCB520/posts/post-with-code/index.html#resource-limitations",
+    "objectID": "BCB520/posts/L1-Intro/index.html#resource-limitations",
+    "href": "BCB520/posts/L1-Intro/index.html#resource-limitations",
     "title": "LECTURE 1 - INTRO",
     "section": "RESOURCE LIMITATIONS",
     "text": "RESOURCE LIMITATIONS\nVisualization designers must take into account three very different kinds of resource limitations:\n\nLimitations of computers.\nLimitations of humans.\nLimitations of displays."
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#computational-limits",
-    "href": "BCB520/posts/post-with-code/index.html#computational-limits",
+    "objectID": "BCB520/posts/L1-Intro/index.html#computational-limits",
+    "href": "BCB520/posts/L1-Intro/index.html#computational-limits",
     "title": "LECTURE 1 - INTRO",
     "section": "COMPUTATIONAL LIMITS",
     "text": "COMPUTATIONAL LIMITS\nCPU time\nSystem Memory"
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#display-limits",
-    "href": "BCB520/posts/post-with-code/index.html#display-limits",
+    "objectID": "BCB520/posts/L1-Intro/index.html#display-limits",
+    "href": "BCB520/posts/L1-Intro/index.html#display-limits",
     "title": "LECTURE 1 - INTRO",
     "section": "DISPLAY LIMITS",
     "text": "DISPLAY LIMITS\nPixels are precious and are the most constrained resource.\n\nInformation Density: ratio of space used to encode information vs unused whitespace.\nThere is a tradeoff between clutter and wasting space.\nDesigner must find the sweet spot between dense and sparse."
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#human-limits",
-    "href": "BCB520/posts/post-with-code/index.html#human-limits",
+    "objectID": "BCB520/posts/L1-Intro/index.html#human-limits",
+    "href": "BCB520/posts/L1-Intro/index.html#human-limits",
     "title": "LECTURE 1 - INTRO",
     "section": "HUMAN LIMITS",
     "text": "HUMAN LIMITS\n\nTime\nMemory\nAttention"
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#visualization-analysis-and-design",
-    "href": "BCB520/posts/post-with-code/index.html#visualization-analysis-and-design",
+    "objectID": "BCB520/posts/L1-Intro/index.html#visualization-analysis-and-design",
+    "href": "BCB520/posts/L1-Intro/index.html#visualization-analysis-and-design",
     "title": "LECTURE 1 - INTRO",
     "section": "VISUALIZATION ANALYSIS AND DESIGN",
     "text": "VISUALIZATION ANALYSIS AND DESIGN\nANALYSIS?\n\nimposes structure on huge design space.\nscaffold to help you think systematically about choices.\nanalyzing existing designs serves as stepping stone to designing new visualizations.\nmost possibilities in a design space are ineffective for a particular task/data combination."
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#analysis-framework",
-    "href": "BCB520/posts/post-with-code/index.html#analysis-framework",
+    "objectID": "BCB520/posts/L1-Intro/index.html#analysis-framework",
+    "href": "BCB520/posts/L1-Intro/index.html#analysis-framework",
     "title": "LECTURE 1 - INTRO",
     "section": "ANALYSIS FRAMEWORK",
     "text": "ANALYSIS FRAMEWORK"
   },
   {
-    "objectID": "BCB520/posts/post-with-code/index.html#analysis-framework-example",
-    "href": "BCB520/posts/post-with-code/index.html#analysis-framework-example",
+    "objectID": "BCB520/posts/L1-Intro/index.html#analysis-framework-example",
+    "href": "BCB520/posts/L1-Intro/index.html#analysis-framework-example",
     "title": "LECTURE 1 - INTRO",
     "section": "ANALYSIS FRAMEWORK EXAMPLE",
     "text": "ANALYSIS FRAMEWORK EXAMPLE\nTree Juxtaposer\n\n\n\n\nhttps://canvas.uidaho.edu/courses/11081"
@@ -242,14 +242,14 @@
     "href": "BCB520/posts/Syllabus/index.html#course-policies",
     "title": "SYLLABUS 2023",
     "section": "Course Policies",
-    "text": "Course Policies\n\nGRADING\n50% of your grade will be determined by homework exercises related to each course unit.\n20% of your grade will be determined by a mid term project (which would be a great item to include in your Data Science Portfolio).\n20% of your grade will be determined by a final project (which would be great item to include in your Data Science Portfolio).\n10% of your grade will be determined by participation in class discussions.\nGRADING SCALE: The grading scale is standard: A (90 -100 %), B (89 - 80 %), C (79 - 70 %), D (69-60 %), F( below 60 %).\n\n\nHEALTHY VANDALS POLICY\nIt is a longstanding tradition that Vandals take care of Vandals, and we all do our best to look out for the Vandal Family. These simple precautions go a long way in reducing the impact of coronavirus on our campuses and in our communities. With everyone engaging in these small actions, we can continue to participate in our vibrant campus culture where we are able to learn, live, and grow. Please bookmark the University of Idaho Covid-19 webpage and visit it often for the most up-to-date information about the U of I’s response to Covid-19.\n\nAll classes are offered in the modality listed in the catalog.\nAll Vandals are highly encouraged to be vaccinated.\nCOVID-19 tests are not required to attend class in person.\n\nAdditionally, faculty and students must follow the Healthy Vandal Pledge: Daily Symptom Monitoring and In-Person Class Attendance. Evaluate your own health status before attending in-person classes and refrain from attending class in-person if you are ill, if you are experiencing any of the known symptoms of coronavirus, or if you have tested positive for COVID-19 or have been potentially exposed to someone with COVID-19. Stay home if you experience any symptoms related to COVID 19 and that are not attributed to a non-infectious health condition regardless of how mild. Contact your medical provider or local Idaho Public Health District for assessment of symptoms and possible COVID19 testing. Positive COVID 19 tests should be submitted via a VandalCare Report in order to make arrangements that involve classroom absences due to illness, and/or quarantine or isolation requirements directed by a medical provider.\n\n\nATTENDANCE POLICY\nMissing a scheduled lecture is at your discretion. I will be posting all the lecture notes online, and recording the lectures for future online versions of the course. I have no intention of offering a zoom option this semester. If a discussion or in-class exercise occurs and you miss it, you will lose those participation points. There is no way to make up those points.\n\n\nLATE ARRIVAL OF PROFESSOR POLICY\nThe R Markdown template I used for this syllabus was created by Dr. Steven V. Miller at Stockholm University. It contained this section, which I found amusing and have therefore retained. Professor Miller’s current university asks professors to have policies written into their syllabus about what students should do if the professor is more than 15 minutes late to class. Here is my version of that policy:\nI will inform students via e-mail in advance of class if class is cancelled for the day. Events that might create such a scenario include travel obligations that emerged after the semester has begun, a family emergency that encompasses multiple days, or some other thing. I will also contact our department secretary in emergent situations, such as something happening on the way to work. Failing that, assume the worst. Alien abduction, the return of one or more Old Ones to our plane, or some kind of attack by wizards are all viable explanations for my inability to attend class. I ask that the students make sure that my story gets the proper treatment on the “Mr. Ballen” YouTube channel. I also ask that my story be narrated by Morgan Freeman and that the role of me in the made for TV movie be played by Keanu Reeves or Danny DeVito.\n\n\nMAKE UP EXAM POLICY\nThe bad news is that there are NO make-ups for missed exams. Don’t bother asking. The good news is that there aren’t any exams.\n\n\nACADEMIC DISHONESTY POLICY\nAll students are expected to uphold the highest standards of academic honesty. This includes but is not limited to: not cheating, not using the ideas of others without giving appropriate credit (including Wikipedia!), and not falsifying data. Any incident of academic dishonesty will be handled according to the guidelines of the University of Idaho."
+    "text": "Course Policies\n\nGRADING\n50% of your grade will be determined by homework exercises related to each course unit.\n20% of your grade will be determined by a mid term project (which would be a great item to include in your Data Science Portfolio).\n20% of your grade will be determined by a final project (which would be great item to include in your Data Science Portfolio).\n10% of your grade will be determined by participation in class discussions.\nGRADING SCALE: The grading scale is standard: A (90 -100 %), B (89 - 80 %), C (79 - 70 %), D (69-60 %), F( below 60 %).\n\n\nHEALTHY VANDALS POLICY\nIt is a longstanding tradition that Vandals take care of Vandals, and we all do our best to look out for the Vandal Family. These simple precautions go a long way in reducing the impact of coronavirus on our campuses and in our communities. With everyone engaging in these small actions, we can continue to participate in our vibrant campus culture where we are able to learn, live, and grow. Please bookmark the University of Idaho Covid-19 webpage and visit it often for the most up-to-date information about the U of I’s response to Covid-19.\n\nAll classes are offered in the modality listed in the catalog.\nAll Vandals are highly encouraged to be vaccinated.\nCOVID-19 tests are not required to attend class in person.\n\nAdditionally, faculty and students must follow the Healthy Vandal Pledge: Daily Symptom Monitoring and In-Person Class Attendance. Evaluate your own health status before attending in-person classes and refrain from attending class in-person if you are ill, if you are experiencing any of the known symptoms of Coronavirus, or if you have tested positive for COVID-19 or have been potentially exposed to someone with COVID-19. Stay home if you experience any symptoms related to COVID 19 and that are not attributed to a non-infectious health condition regardless of how mild. Contact your medical provider or local Idaho Public Health District for assessment of symptoms and possible COVID19 testing. Positive COVID 19 tests should be submitted via a VandalCare Report in order to make arrangements that involve classroom absences due to illness, and/or quarantine or isolation requirements directed by a medical provider.\n\n\nATTENDANCE POLICY\nMissing a scheduled lecture is at your discretion. I will be posting all the lecture notes online, and recording the lectures for future online versions of the course. I have no intention of offering a zoom option this semester. If a discussion or in-class exercise occurs and you miss it, you will lose those participation points. There is no way to make up those points.\n\n\nLATE ARRIVAL OF PROFESSOR POLICY\nThe R Markdown template I used for this syllabus was created by Dr. Steven V. Miller at Stockholm University. It contained this section, which I found amusing and have therefore retained. Professor Miller’s current university asks professors to have policies written into their syllabus about what students should do if the professor is more than 15 minutes late to class. Here is my version of that policy:\nI will inform students via e-mail in advance of class if class is cancelled for the day. Events that might create such a scenario include travel obligations that emerged after the semester has begun, a family emergency that encompasses multiple days, or some other thing. I will also contact our department secretary in emergent situations, such as something happening on the way to work. Failing that, assume the worst. Alien abduction, the return of one or more Old Ones to our plane, or some kind of attack by wizards are all viable explanations for my inability to attend class. I ask that the students make sure that my story gets the proper treatment on the “Mr. Ballen” YouTube channel. I also ask that my story be narrated by Morgan Freeman and that the role of me in the made for TV movie be played by Keanu Reeves or Danny DeVito.\n\n\nMAKE UP EXAM POLICY\nThe bad news is that there are NO make-ups for missed exams. Don’t bother asking. The good news is that there aren’t any exams.\n\n\nACADEMIC DISHONESTY POLICY\nAll students are expected to uphold the highest standards of academic honesty. This includes but is not limited to: not cheating, not using the ideas of others without giving appropriate credit (including Wikipedia!), and not falsifying data. Any incident of academic dishonesty will be handled according to the guidelines of the University of Idaho."
   },
   {
     "objectID": "BCB520/posts/Syllabus/index.html#class-schedule",
     "href": "BCB520/posts/Syllabus/index.html#class-schedule",
     "title": "SYLLABUS 2023",
     "section": "Class Schedule",
-    "text": "Class Schedule\n\nlibrary(readxl)\nSchedule <- read_excel(\"Schedule.xlsx\")\n\nknitr::kable(Schedule, caption = '')\n\n\n\n\n\n\n\n\n\n\n\nDATE\nTOPIC\nREADING\nRECEIVE\nTURN IN\n\n\n\n\n2023-01-12\nINTRODUCTION.  Why Visualization Matters\nVAD Ch 1.\nAssignment 1 - Fun with literate programming.\nNA\n\n\n2023-01-17\nWHAT?  Abstraction of Data\nVAD Ch 2.\nNA\nAssignment 1 - Fun with literate programming.\n\n\n2023-01-19\nWHY?  Task Abstraction\nVAD Ch 3.\nAssignment 2 - You’ll need some data…\nNA\n\n\n2023-01-24\nANALYZE.  Nested Design Model Part 1.\nVAD Ch 4.\nNA\nNA\n\n\n2023-01-26\nANALYZE. Nested Design Model Part 2.\nVAD Ch 4.\nAssignment 3 - ggplot\nNA\n\n\n2023-01-31\nMARKS. Geometric elements to depict data\nVAD Ch 5.\nNA\nNA\n\n\n2023-02-02\nCHANNELS. Controlling the appearance of marks.\nVAD Ch 5.\nAssignment 4 - Midterm Outline\nNA\n\n\n2023-02-07\nRULES OF THUMB.\nVAD Ch. 6.\nNA\nNA\n\n\n2023-02-09\nTABULAR DATA I\nVAD Ch. 7.\nAssignment 5 - Portfolio plans\nNA\n\n\n2023-02-14\nTABULAR DATA II\nVAD Ch. 7.\nNA\nNA\n\n\n2023-02-16\nStudent Presentations\nNA\nNA\nMidterm Assignment Presentations\n\n\n2023-02-21\nStudent Presentations\nNA\nNA\nMidterm Assignment Presentations\n\n\n2023-02-23\nSPATIAL DATA I: Geographic Maps\nVAD Ch 8.\nAssignment 6 - Spatial things\nNA\n\n\n2023-02-28\nSPATIAL DATA II:  Spatial Fields\nVAD Ch 8.\nNA\nNA\n\n\n2023-03-02\nNETWORK DATA I\nVAD Ch 9.\nAssignment 7 - Network things\nNA\n\n\n2023-03-07\nNETWORK DATA II\nVAD Ch 9.\nNA\nNA\n\n\n2023-03-09\nCOLOR I\nVAD Ch 10.\nAssignment 8 - Find some stuff for critique\nNA\n\n\n2023-03-14\nNo Class\nNA\nNA\nSPRING BREAK\n\n\n2023-03-16\nNo Class\nNA\nNA\nSPRING BREAK\n\n\n2023-03-21\nBarrie in NV\nVAD Ch 10.\nNA\nNA\n\n\n2023-03-23\nCOLOR II\nVAD Ch 10.\nAssignment 9 - Let’s practice Observable!\nNA\n\n\n2023-03-28\nCOLOR III\nVAD Ch 11.\nNA\nNA\n\n\n2023-03-30\nINTERACTIVITY\nVAD Ch 12.\nAssignment 10 - Cool interactive stuff\nNA\n\n\n2023-04-04\nMULTIPLE VIEWS\nVAD Ch 13.\nNA\nNA\n\n\n2023-04-06\nAGGREGATION\nVAD Ch 13.\nAssignment 11 - Data Science Competition\nNA\n\n\n2023-04-11\nFILTERING\nVAD Ch 14.\nNA\nNA\n\n\n2023-04-13\nEMBEDDING: Focus and Context\nNA\nNA\nCoS DATA SCIENCE COMPETITION\n\n\n2023-04-18\nTBA\nNA\nNA\nNA\n\n\n2023-04-20\nTBA\nNA\nNA\nNA\n\n\n2023-04-25\nStudent Presentations\nNA\nNA\nFINAL PROJECT PRESENTATIONS\n\n\n2023-04-27\nStudent Presentations\nNA\nNA\nFINAL PROJECT PRESENTATIONS\n\n\n2023-05-02\nDEAD WEEK\nNA\nPortfolio Review\nNA\n\n\n2023-05-04\nDEAD WEEK\nNA\nPortfolio Review\nNA\n\n\n2023-05-09\nFINALS WEEK\nNA\nNA\nNA"
+    "text": "Class Schedule\n\nlibrary(readxl)\nSchedule <- read_excel(\"Schedule.xlsx\")\n\nknitr::kable(Schedule, caption = '')\n\n\n\n\nDATE\nTOPIC\nREADING\nRECEIVE\nTURN IN\n\n\n\n\n2023-01-12\nINTRODUCTION.  Why Visualization Matters\nVAD Ch 1.\nAssignment 1 - Fun with literate programming.\nNA\n\n\n2023-01-17\nWHAT?  Abstraction of Data\nVAD Ch 2.\nNA\nAssignment 1 - Fun with literate programming.\n\n\n2023-01-19\nWHY?  Task Abstraction\nVAD Ch 3.\nAssignment 2 - You’ll need some data…\nNA\n\n\n2023-01-24\nANALYZE.  Nested Design Model Part 1.\nVAD Ch 4.\nNA\nNA\n\n\n2023-01-26\nANALYZE. Nested Design Model Part 2.\nVAD Ch 4.\nAssignment 3 - ggplot\nNA\n\n\n2023-01-31\nMARKS. Geometric elements to depict data\nVAD Ch 5.\nNA\nNA\n\n\n2023-02-02\nCHANNELS. Controlling the appearance of marks.\nVAD Ch 5.\nAssignment 4 - Midterm Outline\nNA\n\n\n2023-02-07\nRULES OF THUMB.\nVAD Ch. 6.\nNA\nNA\n\n\n2023-02-09\nTABULAR DATA I\nVAD Ch. 7.\nAssignment 5 - Portfolio plans\nNA\n\n\n2023-02-14\nTABULAR DATA II\nVAD Ch. 7.\nNA\nNA\n\n\n2023-02-16\nStudent Presentations\nNA\nNA\nMidterm Assignment Presentations\n\n\n2023-02-21\nStudent Presentations\nNA\nNA\nMidterm Assignment Presentations\n\n\n2023-02-23\nSPATIAL DATA I: Geographic Maps\nVAD Ch 8.\nAssignment 6 - Spatial things\nNA\n\n\n2023-02-28\nSPATIAL DATA II:  Spatial Fields\nVAD Ch 8.\nNA\nNA\n\n\n2023-03-02\nNETWORK DATA I\nVAD Ch 9.\nAssignment 7 - Network things\nNA\n\n\n2023-03-07\nNETWORK DATA II\nVAD Ch 9.\nNA\nNA\n\n\n2023-03-09\nCOLOR I\nVAD Ch 10.\nAssignment 8 - Find some stuff for critique\nNA\n\n\n2023-03-14\nNo Class\nNA\nNA\nSPRING BREAK\n\n\n2023-03-16\nNo Class\nNA\nNA\nSPRING BREAK\n\n\n2023-03-21\nBarrie in NV\nVAD Ch 10.\nNA\nNA\n\n\n2023-03-23\nCOLOR II\nVAD Ch 10.\nAssignment 9 - Let’s practice Observable!\nNA\n\n\n2023-03-28\nCOLOR III\nVAD Ch 11.\nNA\nNA\n\n\n2023-03-30\nINTERACTIVITY\nVAD Ch 12.\nAssignment 10 - Cool interactive stuff\nNA\n\n\n2023-04-04\nMULTIPLE VIEWS\nVAD Ch 13.\nNA\nNA\n\n\n2023-04-06\nAGGREGATION\nVAD Ch 13.\nAssignment 11 - Data Science Competition\nNA\n\n\n2023-04-11\nFILTERING\nVAD Ch 14.\nNA\nNA\n\n\n2023-04-13\nEMBEDDING: Focus and Context\nNA\nNA\nCoS DATA SCIENCE COMPETITION\n\n\n2023-04-18\nTBA\nNA\nNA\nNA\n\n\n2023-04-20\nTBA\nNA\nNA\nNA\n\n\n2023-04-25\nStudent Presentations\nNA\nNA\nFINAL PROJECT PRESENTATIONS\n\n\n2023-04-27\nStudent Presentations\nNA\nNA\nFINAL PROJECT PRESENTATIONS\n\n\n2023-05-02\nDEAD WEEK\nNA\nPortfolio Review\nNA\n\n\n2023-05-04\nDEAD WEEK\nNA\nPortfolio Review\nNA\n\n\n2023-05-09\nFINALS WEEK\nNA\nNA\nNA"
   },
   {
     "objectID": "BCB520/BCB520.html",
