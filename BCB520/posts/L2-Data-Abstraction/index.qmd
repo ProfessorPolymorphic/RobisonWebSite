@@ -10,8 +10,6 @@ format:
     css: styles.css
     footer: <https://canvas.uidaho.edu/courses/11081>
     theme: [default, custom.scss]
-resources:
-  - demo.pdf
 author: "Barrie Robison"
 date: "2023-01-17"
 categories: [Lecture, DataViz, Data]
