@@ -60,7 +60,7 @@
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#what",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "WHAT?",
-    "text": "WHAT?\n Before you design a visualization, you need to understand the data. Here, we consider the DATA TYPE, and the DATA ATTRIBUTES."
+    "text": "WHAT?\n Before you design a visualization, you need to understand the data. Here, we consider the semantics to describe the DATA TYPES and DATA ATTRIBUTES."
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#the-three-major-data-types",
@@ -77,18 +77,18 @@
     "text": "DATA ATTRIBUTES"
   },
   {
-    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#the-human",
-    "href": "BCB520/posts/L2-Data-Abstraction/index.html#the-human",
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#what-1",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#what-1",
     "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "THE HUMAN",
-    "text": "THE HUMAN\nWhy have a human in the loop?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\nWe don’t need visualization when a trusted fully automatic solution exists.\nVisualization is suitable when there is a need to augment human capabilities rather than replace people with computational decision-making methods."
+    "section": "WHAT?",
+    "text": "WHAT?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   },
   {
-    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#when-to-visualize",
-    "href": "BCB520/posts/L2-Data-Abstraction/index.html#when-to-visualize",
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#data-semantics",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#data-semantics",
     "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "WHEN TO VISUALIZE",
-    "text": "WHEN TO VISUALIZE\nVisualization is useful when:\n\n\nThe analysis problem is ill-specified and we don’t know exactly what questions to ask in advance.\nWe are interested in long-term use for end users (ex: exploratory analysis of scientific data).\nWe are presenting known results (ex: New York Times Upshot).\nWe need a stepping stone to assess requirements before developing models.\nDevelopers of an automatic solution want to refine & determine parameters.\nWe need to help end users of automatic solutions verify and build trust."
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\nWhat does data mean?\n\n14, 2.6, 30, 30, 15, 100001\nWhat does this sequence of six numbers mean?\n\ntwo points far from each other in 3D space?\n\n\n\n\ntwo points far from each other in 3D space?\n\n\n\n\ntwo points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?\n\n\nsomething else??\nBasil, 7, S, Pear\nWhat about this data? ::: {.fragment .fade-in-then-out} food shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month\n\n\n\nBasil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service\n ::: {.fragment .fade-in-then-out}\n\n\n\nlab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food"
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#the-representation",
@@ -172,7 +172,7 @@
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#analysis-framework-example",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "ANALYSIS FRAMEWORK EXAMPLE",
-    "text": "ANALYSIS FRAMEWORK EXAMPLE\nTree Juxtaposer\n\n\n\n\nhttps://canvas.uidaho.edu/courses/11081"
+    "text": "ANALYSIS FRAMEWORK EXAMPLE\nTree Juxtaposer\n\n\n\n\nhttps://canvas.uidaho.edu/courses/17806"
   },
   {
     "objectID": "BCB520/posts/L1-Intro/index.html#who-am-i",
@@ -361,7 +361,7 @@
     "href": "BCB520/posts/Syllabus/index.html#required-readings",
     "title": "SYLLABUS 2023",
     "section": "Required Readings",
-    "text": "Required Readings\nTamara Munzner. Visualization Analysis and Design. A K Peters Visualization Series, CRC Press, 2014.\nHard Copy on Amazon\nkindle/ebook on Amazon"
+    "text": "Required Readings\nTamara Munzner. Visualization Analysis and Design. A K Peters Visualization Series, CRC Press, 2014. For the 2023 version of the class, I am trying out the Inclusive Access option. Erolled students should have access to the text on the course canvas page.\nHard Copy on Amazon\nkindle/ebook on Amazon"
   },
   {
     "objectID": "BCB520/posts/Syllabus/index.html#course-policies",
@@ -382,7 +382,7 @@
     "href": "BCB520/BCB520.html",
     "title": "BCB 520 :: Foundations of Data Visualization",
     "section": "",
-    "text": "// About\nThis class will help students establish a foundational understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R programming language. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using R. The course is designed to be “discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.\n\n\n// Posts\n\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLECTURE 2 - DATA ABSTRACTION\n\n\n\nLecture\n\n\nDataViz\n\n\nData\n\n\n\n\n\n\n\nBarrie Robison\n\n\nJan 17, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSYLLABUS 2023\n\n\n\nResources\n\n\nDataViz\n\n\n\n\n\n\n\nBarrie Robison\n\n\nDec 12, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nASSIGNMENT 1 - Fun with literate programming.\n\n\n\nAssignment\n\n\nDataViz\n\n\nQuarto\n\n\n\n\n\n\n\nBarrie Robison\n\n\nDec 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLECTURE 1 - INTRO\n\n\n\nLecture\n\n\nDataViz\n\n\nIntro\n\n\n\n\n\n\n\nBarrie Robison\n\n\nOct 16, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "This class will help students establish a foundational understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R programming language. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using R. The course is designed to be “discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.\n\n\nI am maintaining the course here and on its CANVAS PAGE (for enrolled students)."
   },
   {
     "objectID": "PolymorphicGames.html",

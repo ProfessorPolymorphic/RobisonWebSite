@@ -385,6 +385,14 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../../../site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+  <script src="../../../site_libs/plotly-binding-4.10.1/plotly.js"></script>
+  <script src="../../../site_libs/typedarray-0.1/typedarray.min.js"></script>
+  <script src="../../../site_libs/jquery-3.5.1/jquery.min.js"></script>
+  <link href="../../../site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+  <script src="../../../site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+  <link href="../../../site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+  <script src="../../../site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -406,12 +414,12 @@ Barrie Robison
 </section>
 <section id="last-lecture" class="slide level2">
 <h2>LAST LECTURE</h2>
-<p>Computer-based visualization systems provide visual representations of datasets designed to help <span class="red">people</span> carry out <span class="red">tasks</span> more effectively.</p>
+<p>Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.</p>
 <p><img data-src="frameworkbig.jpg" class="absolute" style="bottom: 0px; width: 800px; "></p>
 </section>
 <section id="what" class="slide level2">
 <h2>WHAT?</h2>
-<p><img data-src="what.png" class="absolute" style="bottom: 0px; height: 400px; "> Before you design a visualization, you need to understand the <span class="red">data</span>. Here, we consider the <span class="blue">DATA TYPE</span>, and the <span class="blue">DATA ATTRIBUTES</span>.</p>
+<p><img data-src="what.png" class="absolute" style="bottom: 0px; height: 400px; "> Before you design a visualization, you need to understand the <span class="red">data</span>. Here, we consider the semantics to describe the <span class="blue">DATA TYPES</span> and <span class="blue">DATA ATTRIBUTES</span>.</p>
 </section>
 <section id="the-three-major-data-types" class="slide level2">
 <h2>THE THREE MAJOR DATA TYPES</h2>
@@ -425,27 +433,46 @@ Barrie Robison
 <h2>DATA ATTRIBUTES</h2>
 <p><img data-src="Attributes.png" class="absolute" style="bottom: 70px; width: 800px; "></p>
 </section>
-<section id="the-human" class="slide level2">
-<h2>THE HUMAN</h2>
-<p><strong>Why have a human in the loop?</strong></p>
-<p>Computer-based visualization systems provide visual representations of datasets designed to help <span class="red">people</span> carry out <span class="red">tasks</span> more effectively.</p>
-<ul>
-<li><p>We don’t need visualization when a <strong>trusted</strong> fully automatic solution exists.</p></li>
-<li><p>Visualization is suitable when there is a need to <span class="red">augment human capabilities</span> rather than replace people with computational decision-making methods.</p></li>
-</ul>
+<section id="what-1" class="slide level2">
+<h2>WHAT?</h2>
+<p>Computer-based visualization systems provide visual representations of <span class="red">datasets</span> designed to help people carry out tasks more effectively.</p>
+<p><img data-src="whatexpanded.png" class="absolute" style="bottom: 0px; right: 0px; width: 450px; "></p>
+<p><img data-src="what.png" class="absolute" style="bottom: 0px; height: 400px; "></p>
 </section>
-<section id="when-to-visualize" class="slide level2">
-<h2>WHEN TO VISUALIZE</h2>
-<p><strong>Visualization is useful when:</strong></p>
+<section id="data-semantics" class="slide level2">
+<h2>DATA SEMANTICS</h2>
+<p><strong>What does data mean?</strong></p>
 <div class="r-fit-text">
-<ul>
-<li>The analysis problem is ill-specified and we don’t know exactly what questions to ask in advance.</li>
-<li>We are interested in long-term use for end users (ex: exploratory analysis of scientific data).</li>
-<li>We are presenting known results (ex: <a href="https://www.nytimes.com/section/upshot">New York Times Upshot</a>).</li>
-<li>We need a stepping stone to assess requirements before developing models.</li>
-<li>Developers of an automatic solution want to refine &amp; determine parameters.</li>
-<li>We need to help end users of automatic solutions verify and build trust.</li>
-</ul>
+<p><span class="fragment blue">14, 2.6, 30, 30, 15, 100001</span></p>
+<p><span class="fragment">What does this sequence of six numbers mean?</span></p>
+<div class="fragment fade-in-then-out">
+<p>two points far from each other in 3D space?</p>
+<div class="cell" data-layout-align="right">
+<div class="cell-output-display">
+<div id="htmlwidget-88bc2187c87124a152cb" style="width:960px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-88bc2187c87124a152cb">{"x":{"visdat":{"ae045988ce8a":["function () ","plotlyVisDat"]},"cur_data":"ae045988ce8a","attrs":{"ae045988ce8a":{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":[]},"yaxis":{"title":[]},"zaxis":{"title":[]}},"xaxis":{"type":"category","categoryorder":"array","categoryarray":["14","30"]},"yaxis":{"type":"category","categoryorder":"array","categoryarray":["15","2.6"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","type":"scatter3d","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>two points far from each other in 3D space?</p>
+</div>
+</div>
+</div>
+<div class="fragment fade-in-then-out">
+<p>two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?</p>
+<p><img data-src="RidiculousNetwork.png"></p>
+</div>
+<p><span class="fragment fade-in-then-out">something else??</span></p>
+<p><span class="fragment blue">Basil, 7, S, Pear</span></p>
+<p><span class="fragment">What about this data?</span> ::: {.fragment .fade-in-then-out} food shipment of produce (basil &amp; pear) arrived in satisfactory condition on 7th day of month</p>
+<p><img data-src="BasilPearDelivery.png"></p>
+</div>
+<div class="fragment fade-in-then-out">
+<p>Basil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service</p>
+<p><img data-src="snowremoval.png"> ::: {.fragment .fade-in-then-out}</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="ratmazepear.png"></p>
+<p></p><figcaption>lab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food</figcaption><p></p>
+</figure>
+</div>
 </div>
 </section>
 <section id="the-representation" class="slide level2">
@@ -560,7 +587,7 @@ Barrie Robison
 <section id="viz-matters" class="slide level2">
 <h2>VIZ MATTERS</h2>
 
-<img data-src="index_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"><div class="footer">
+<img data-src="index_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"><div class="footer">
 <p>Learn more: <a href="https://www.njtierney.com/post/2020/06/01/tidy-anscombe/">TIDY ANSCOMBE</a></p>
 </div>
 </section>
@@ -617,7 +644,7 @@ Barrie Robison
 <p><img data-src="spacetree.png" class="absolute" style="top: 100px; right: 10px; width: 400px; "></p>
 
 <div class="footer footer-default">
-<p><a href="https://canvas.uidaho.edu/courses/11081" class="uri">https://canvas.uidaho.edu/courses/11081</a></p>
+<p><a href="https://canvas.uidaho.edu/courses/17806" class="uri">https://canvas.uidaho.edu/courses/17806</a></p>
 </div>
 </section>
     </div>

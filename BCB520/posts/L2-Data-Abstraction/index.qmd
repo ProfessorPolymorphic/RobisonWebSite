@@ -8,7 +8,7 @@ format:
       buttons: false
     preview-links: auto
     css: styles.css
-    footer: <https://canvas.uidaho.edu/courses/11081>
+    footer: <https://canvas.uidaho.edu/courses/17806>
     theme: [default, custom.scss]
 author: "Barrie Robison"
 date: "2023-01-17"
@@ -18,13 +18,13 @@ image: "CthulhuAbstracts.png"
 
 ## LAST LECTURE
 
-Computer-based visualization systems provide visual representations of datasets designed to help [people]{.red} carry out [tasks]{.red} more effectively.
+Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.
 
 ![](frameworkbig.jpg){.absolute bottom="0" width="800"}
 
 ## WHAT?
 
-![](what.png){.absolute bottom="0" height="400"} Before you design a visualization, you need to understand the [data]{.red}.  Here, we consider the [DATA TYPE]{.blue}, and the [DATA ATTRIBUTES]{.blue}.
+![](what.png){.absolute bottom="0" height="400"} Before you design a visualization, you need to understand the [data]{.red}.  Here, we consider the semantics to describe the [DATA TYPES]{.blue} and [DATA ATTRIBUTES]{.blue}.
 
 ## THE THREE MAJOR DATA TYPES
 
@@ -42,27 +42,70 @@ Computer-based visualization systems provide visual representations of datasets 
 
 ![](Attributes.png){.absolute bottom="70" width="800"} 
 
-## THE HUMAN
+## WHAT?
 
-**Why have a human in the loop?**
+Computer-based visualization systems provide visual representations of [datasets]{.red} designed to help people carry out tasks more effectively.
 
-Computer-based visualization systems provide visual representations of datasets designed to help [people]{.red} carry out [tasks]{.red} more effectively.
+![](whatexpanded.png){.absolute bottom="0" right=0 width="450"} 
 
--   We don't need visualization when a **trusted** fully automatic solution exists.
+![](what.png){.absolute bottom="0" height="400"}
 
--   Visualization is suitable when there is a need to [augment human capabilities]{.red} rather than replace people with computational decision-making methods.
+## DATA SEMANTICS
 
-## WHEN TO VISUALIZE
-
-**Visualization is useful when:**
+**What does data mean?**
 
 ::: r-fit-text
--   The analysis problem is ill-specified and we don't know exactly what questions to ask in advance.
--   We are interested in long-term use for end users (ex: exploratory analysis of scientific data).
--   We are presenting known results (ex: [New York Times Upshot](https://www.nytimes.com/section/upshot)).
--   We need a stepping stone to assess requirements before developing models.
--   Developers of an automatic solution want to refine & determine parameters.
--   We need to help end users of automatic solutions verify and build trust.
+[14, 2.6, 30, 30, 15, 100001]{.fragment .blue}
+
+[What does this sequence of six numbers mean?]{.fragment}
+
+:::{.fragment .fade-in-then-out}
+two points far from each other in 3D space?
+
+```{r}
+#| fig-cap: "two points far from each other in 3D space?"
+#| fig-align: right
+
+
+df <- data.frame (x  = c("14", "30"),
+                  y = c("2.6", "15"),
+                  z = c("30","100001")
+                  )
+library(plotly)
+
+plot_ly(x=df$x, y=df$y, z=df$z, type="scatter3d", mode="markers")
+
+```
+
+:::
+
+:::{.fragment .fade-in-then-out}
+two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?
+
+![](RidiculousNetwork.png)
+
+:::
+
+[something else??]{.fragment .fade-in-then-out}
+
+[Basil, 7, S, Pear]{.fragment .blue}
+
+[What about this data?]{.fragment}
+::: {.fragment .fade-in-then-out}
+food shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month
+
+![](BasilPearDelivery.png)
+:::
+
+::: {.fragment .fade-in-then-out}
+Basil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service
+
+![](snowremoval.png)
+::: {.fragment .fade-in-then-out}
+
+![lab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food](ratmazepear.png)
+
+
 :::
 
 ## THE REPRESENTATION
