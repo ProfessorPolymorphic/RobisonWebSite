@@ -1,0 +1,60 @@
+/* css styles */
+
+.left {
+ float: left;
+ padding: 0 20px 20px 0;
+}
+
+.absolutething {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  border: 3px solid #73AD21;
+}
+
+.blue {
+  color: $theme-blue;
+  font-weight: bold;
+}
+
+.yellow {
+  color: $theme-yellow;
+  font-weight: bold;
+}
+
+.red {
+  color: #de2d26;
+  font-weight: bold;
+}
+
+.icon {
+  padding: 5px;
+  width: 50px;
+}
+
+.caption {
+  font-size: 14px;
+}
+
+.abstest {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  width: 500px;
+  height: 50px;
+  border: 3px solid #73AD21;
+  font-size: 14px;
+}
+
+.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+.container {
+  text-align: center;
+  padding: 10px 20px;
+}
