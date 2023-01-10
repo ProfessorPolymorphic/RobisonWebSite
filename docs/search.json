@@ -565,5 +565,131 @@
     "title": "About",
     "section": "",
     "text": "Evolution. Data Science. Video Games. Horror Fiction.\nI am a Professor of Biological Sciences at the University of Idaho, and the cofounder of Polymorphic Games, an experimental video game studio that applies game development technology to scientific research and education. We have released two evolutionary video games on Steam:\nDarwin’s Demons is an rcade style space shooter in which you battle a population of evolving aliens. The alien’s morphology, fire type, and behaviors are all encoded by a digital genome. The aliens that are best able to shoot or evade you reproduce to make the next generation.\nProject Hastur is an evolutionary tower defense game. Defend humanity against the ever changing threat of the alien Proteans. Project Hastur combines elements of 3D tower defense and real-time strategy with models of biological evolution to create a uniquely challenging experience.\nI am also a huge Horror and Science Fiction nerd, and am fascinated by the intersection of these genres with science."
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#semantics",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#semantics",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SEMANTICS",
+    "text": "SEMANTICS\nThe meaning of a word, phrase, sentence, or text.\nBasil, 7, S, Pear"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#semantics-for-data",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#semantics-for-data",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SEMANTICS FOR DATA",
+    "text": "SEMANTICS FOR DATA\n\n\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#semantics-for-data-1",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#semantics-for-data-1",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SEMANTICS FOR DATA …",
+    "text": "SEMANTICS FOR DATA …\n\n\n\nitem: individual entity, discrete – eg patient, car, stock, city – “independent variable”\nattribute: property that is measured, observed, logged… – eg height, blood pressure for patient – eg horsepower, make for car – “dependent variable”\n\n\nITEM: person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#other-data-types",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#other-data-types",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "OTHER DATA TYPES",
+    "text": "OTHER DATA TYPES\n-links –express relationship between two items –eg friendship on facebook, interaction between proteins -positions –spatial data: location in 2D or 3D –pixels in photo, voxels in MRI scan, latitude/longitude -grids –sampling strategy for continuous data"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#what-2",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#what-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "WHAT?",
+    "text": "WHAT?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#dataset-types-tables",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#dataset-types-tables",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATASET TYPES: TABLES",
+    "text": "DATASET TYPES: TABLES\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#multidimensional-tables",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#multidimensional-tables",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "MULTIDIMENSIONAL TABLES",
+    "text": "MULTIDIMENSIONAL TABLES\n-indexing based on multiple keys –eg genes, patients"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#networks",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#networks",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "NETWORKS",
+    "text": "NETWORKS\n\nnetwork/graph nodes (vertices) connected by links (edges) tree is special case: no cycles often have roots and are directed"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#fields",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#fields",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "FIELDS",
+    "text": "FIELDS"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#spatial-fields-1",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#spatial-fields-1",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SPATIAL FIELDS 1",
+    "text": "SPATIAL FIELDS 1\nattribute values associated w/ cells cell contains value from continuous domain eg temperature, pressure, wind velocity measured or simulated"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#spatial-fields-2",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#spatial-fields-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SPATIAL FIELDS 2",
+    "text": "SPATIAL FIELDS 2\nattribute values associated w/ cells cell contains value from continuous domain eg temperature, pressure, wind velocity measured or simulated major concerns sampling:\u000bwhere attributes are measured interpolation:\u000bhow to model attributes elsewhere grid types"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#spatial-fields-3",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#spatial-fields-3",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SPATIAL FIELDS 3",
+    "text": "SPATIAL FIELDS 3\nattribute values associated w/ cells cell contains value from continuous domain eg temperature, pressure, wind velocity measured or simulated major concerns sampling:\u000bwhere attributes are measured interpolation:\u000bhow to model attributes elsewhere grid types major divisions attributes per cell: \u000bscalar (1), vector (2), tensor (many)"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#geometry",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#geometry",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "GEOMETRY",
+    "text": "GEOMETRY"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#geometry-2",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#geometry-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "GEOMETRY 2",
+    "text": "GEOMETRY 2\nshape of items explicit spatial positions / regions points, lines, curves, surfaces, volumes boundary between computer graphics and visualization graphics: geometry taken as given vis: geometry is result of a design decision\n ## COLLECTIONS\n ## COLLECTIONS 2\nhow we group items sets unique items, unordered lists ordered, duplicates possible clusters groups of similar items"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#data-types",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#data-types",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA TYPES",
+    "text": "DATA TYPES"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#attribute-types",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#attribute-types",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "ATTRIBUTE TYPES",
+    "text": "ATTRIBUTE TYPES\nwhich classes of values & measurements? categorical (nominal) compare equality no implicit ordering ordered ordinal less/greater than defined quantitative meaningful magnitude arithmetic possib"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#example",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#example",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "EXAMPLE",
+    "text": "EXAMPLE\ncategorical\nordinal\nquantitative\n ## EXAMPLE\ncategorical\nordinal\nquantitative\n\n\n\nhttps://canvas.uidaho.edu/courses/17806"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#flat-table-example",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#flat-table-example",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "FLAT TABLE EXAMPLE",
+    "text": "FLAT TABLE EXAMPLE"
   }
 ]

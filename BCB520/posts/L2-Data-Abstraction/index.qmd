@@ -24,11 +24,11 @@ Computer-based visualization systems provide visual representations of datasets 
 
 ## WHAT?
 
-![](what.png){.absolute bottom="0" height="400"} Before you design a visualization, you need to understand the [data]{.red}.  Here, we consider the semantics to describe the [DATA TYPES]{.blue} and [DATA ATTRIBUTES]{.blue}.
+![](what.png){.absolute bottom="0" height="400"} Before you design a visualization, you need to understand the [data]{.red}. Here, we consider the semantics to describe the [DATA TYPES]{.blue} and [DATA ATTRIBUTES]{.blue}.
 
 ## THE THREE MAJOR DATA TYPES
 
-::: {.r-stack}
+::: r-stack
 ![](Tables.png){.fragment .absolute bottom="100" left="0" height="400"}
 
 ![](Networks.png){.fragment .absolute bottom="100" left="280" height="400"}
@@ -38,15 +38,13 @@ Computer-based visualization systems provide visual representations of datasets 
 
 ## DATA ATTRIBUTES
 
-
-
-![](Attributes.png){.absolute bottom="70" width="800"} 
+![](Attributes.png){.absolute bottom="70" width="800"}
 
 ## WHAT?
 
 Computer-based visualization systems provide visual representations of [datasets]{.red} designed to help people carry out tasks more effectively.
 
-![](whatexpanded.png){.absolute bottom="0" right=0 width="450"} 
+![](whatexpanded.png){.absolute bottom="0" right="0" width="450"}
 
 ![](what.png){.absolute bottom="0" height="400"}
 
@@ -59,7 +57,7 @@ Computer-based visualization systems provide visual representations of [datasets
 
 [What does this sequence of six numbers mean?]{.fragment}
 
-:::{.fragment .fade-in-then-out}
+::: {.fragment .fade-in-then-out}
 two points far from each other in 3D space?
 
 ```{r}
@@ -76,23 +74,19 @@ library(plotly)
 plot_ly(x=df$x, y=df$y, z=df$z, type="scatter3d", mode="markers")
 
 ```
-
 :::
 
-:::{.fragment .fade-in-then-out}
+::: {.fragment .fade-in-then-out}
 two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?
 
 ![](RidiculousNetwork.png)
-
 :::
 
 [something else??]{.fragment .fade-in-then-out}
 
 [Basil, 7, S, Pear]{.fragment .blue}
 
-[What about this data?]{.fragment}
-::: {.fragment .fade-in-then-out}
-food shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month
+[What about this data?]{.fragment} ::: {.fragment .fade-in-then-out} food shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month
 
 ![](BasilPearDelivery.png)
 :::
@@ -100,148 +94,175 @@ food shipment of produce (basil & pear) arrived in satisfactory condition on 7th
 ::: {.fragment .fade-in-then-out}
 Basil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service
 
-![](snowremoval.png)
-::: {.fragment .fade-in-then-out}
+![](snowremoval.png) ::: {.fragment .fade-in-then-out}
 
 ![lab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food](ratmazepear.png)
-
-
 :::
 
-## THE REPRESENTATION
+## SEMANTICS
 
-Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.
+The meaning of a word, phrase, sentence, or text.
 
-## WHY DEPEND ON VISION?
+[Basil, 7, S, Pear]{.fragment .blue}
 
-Computer-based visualization systems provide [visual representations]{.red} of datasets designed to help people carry out tasks more effectively.
+![](datatable.png){.absolute bottom="0" right="0" width="550"}
+
+## SEMANTICS FOR DATA
+
+![](datatable2.png){.absolute bottom="0" right="0" width="550"}
 
 ::: r-fit-text
--   The human visual system is a high-bandwidth channel to the brain.
--   Overview is possible due to background processing, providing the subjective experience of seeing everything simultaneously.
--   Significant processing occurs in parallel and pre-attentively.
--   **What about sound?** lower bandwidth and different semantics, overview not supported, subjective experience of sequential stream.
--   **What about touch/haptics?** impoverished record/replay capacity, only very low-bandwidth communication thus far.
--   **What about taste, smell?** no viable record/replay devices.
+-   [item:]{.red} individual entity, discrete
+
+    -   eg patient, car, stock, city
+
+    -   "independent variable"
+
+-   [attribute:]{.red} property that is measured, observed, logged...
+
+    -   eg height, blood pressure for patient
+
+    -   eg horsepower, make for car
+
+    -   "dependent variable"
 :::
 
-## WHY REPRESENT (ALL THE) DATA?
+## SEMANTICS FOR DATA ...
+
+![](datatable2.png){.absolute bottom="0" right="0" width="550"}
+
+::: r-fit-text
+-   [item:]{.red} individual entity, discrete -- eg patient, car, stock, city -- "independent variable"
+-   [attribute:]{.red} property that is measured, observed, logged... -- eg height, blood pressure for patient -- eg horsepower, make for car -- "dependent variable"
+:::
+
+[ITEM:]{.red} person
+
+[ATTRIBUTES:]{.red} Name, Age, Shirt Size, Favorite Fruit
+
+## OTHER DATA TYPES
+
+-links --express relationship between two items --eg friendship on facebook, interaction between proteins -positions --spatial data: location in 2D or 3D --pixels in photo, voxels in MRI scan, latitude/longitude -grids --sampling strategy for continuous data
+
+## WHAT?
 
 Computer-based visualization systems provide visual representations of [datasets]{.red} designed to help people carry out tasks more effectively.
 
-::: r-fit-text
--   summaries lose information
--   details matter
--   confirm expected and find unexpected patterns
--   assess validity of statistical model
--   ANSCOMBE'S QUARTET is a fun example that we shall use to illustrate these points!
+![](whatexpanded.png){.absolute bottom="0" right="0" width="450"}
+
+![](what.png){.absolute bottom="0" height="400"}
+
+## DATASET TYPES: TABLES
+
+Flat Table
+
+:::: {.columns}
+
+::: {.r-fit-text .column width="40%"}
+-   One ITEM per row
+
+    -   often called an observation
+
+-   Each column is an ATTRIBUTE
+
+    -   often called a variable
+
+-   A cell holds the VALUE for an item/attribute pair
+
+-   A UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes
 :::
 
-## ANSCOMBE'S QUARTET
+::: {.column width="60%"}
 
-::: columns
-::: {.column width="50%" style="font-size: 25px"}
-```{r}
-#| echo: true
-#| fontsize: 2
-library(ggplot2)
-library(grid)
-library(gridExtra)
-library(datasets)
-library(tidyverse)
-library(dplyr)
-datasets::anscombe
-```
+![](flattable.png)
 :::
 
-::: {.column width="50%" style="font-size: 25px"}
-#### Anscombe's Quartet
+::::
 
-The four x-y pairs have identical summary statistics.
 
-```{r}
-tidy_anscombe <- anscombe %>%
- pivot_longer(cols = everything(),
-              names_to = c(".value", "set"),
-              names_pattern = "(.)(.)")
-tidy_anscombe_summary <- tidy_anscombe %>%
-  group_by(set) %>%
-  summarise(across(.cols = everything(),
-                   .fns = lst(min,max,median,mean,sd,var),
-                   .names = "{col}_{fn}"))
-#> `summarise()` ungrouping output (override with `.groups` argument)
 
-vars<-c("set", "x_mean", "x_var",  "y_mean", "y_var")
-thing<- as.data.frame(tidy_anscombe_summary[vars])
-knitr::kable(thing)
-```
-:::
-:::
+## FLAT TABLE EXAMPLE
 
-## VIZ MATTERS
+![](spreadsheet.png)
 
-```{r}
-ggplot(tidy_anscombe,
-       aes(x = x,
-           y = y)) +
-  geom_point() +
-  geom_point(data = tidy_anscombe_summary, aes(x=x_mean, y = y_mean, color = "red", size = 5),
-             show.legend = FALSE)+
-  facet_wrap(~set) +
-  geom_smooth(method = "lm", se = FALSE)
-```
+## MULTIDIMENSIONAL TABLES
 
-::: footer
-Learn more: [TIDY ANSCOMBE](https://www.njtierney.com/post/2020/06/01/tidy-anscombe/)
-:::
+-indexing based on multiple keys --eg genes, patients
 
-## RESOURCE LIMITATIONS
+![](multidimtable1.png)
 
-Visualization designers must take into account three very different kinds of resource limitations:
+![](multidimtable2.png)
 
--   Limitations of computers.
--   Limitations of humans.
--   Limitations of displays.
+## NETWORKS
 
-## COMPUTATIONAL LIMITS
+![](treeandnet.png)
 
-CPU time
+network/graph nodes (vertices) connected by links (edges) tree is special case: no cycles often have roots and are directed
 
-System Memory
+![](Networks.png)
 
-## DISPLAY LIMITS
+## FIELDS
 
-Pixels are precious and are the most constrained resource.
+![](treenetfield.png)
 
--   [Information Density]{.red}: ratio of space used to encode information vs unused whitespace.
--   There is a tradeoff between clutter and wasting space.
--   Designer must find the sweet spot between dense and sparse.
+## SPATIAL FIELDS 1
 
-## HUMAN LIMITS
+attribute values associated w/ cells cell contains value from continuous domain eg temperature, pressure, wind velocity measured or simulated
 
--   Time
--   Memory
--   Attention
+![](spatialfields.png) ![](map1.png)
 
-![](braindata.png){.absolute bottom="100" right="10" height="500"}
+## SPATIAL FIELDS 2
 
-## VISUALIZATION ANALYSIS AND DESIGN
+attribute values associated w/ cells cell contains value from continuous domain eg temperature, pressure, wind velocity measured or simulated major concerns sampling:where attributes are measured interpolation:how to model attributes elsewhere grid types
 
-### ANALYSIS?
+![](MRI.png)
 
--   imposes structure on huge design space.
--   scaffold to help you think systematically about choices.
--   analyzing existing designs serves as stepping stone to designing new visualizations.
--   most possibilities in a design space are ineffective for a particular task/data combination.
+## SPATIAL FIELDS 3
 
-## ANALYSIS FRAMEWORK
+attribute values associated w/ cells cell contains value from continuous domain eg temperature, pressure, wind velocity measured or simulated major concerns sampling:where attributes are measured interpolation:how to model attributes elsewhere grid types major divisions attributes per cell: scalar (1), vector (2), tensor (many)
 
-![](frameworkbig.jpg){.absolute bottom="70"}
+![](cellfields.png)
 
-## ANALYSIS FRAMEWORK EXAMPLE
+## GEOMETRY
 
-[Tree Juxtaposer](https://www.researchgate.net/publication/220184028_TreeJuxtaposer_Scalable_Tree_Comparison_Using_FocusContext_with_Guaranteed_Visibility)
+![](alltypes.png)
 
-![](Fremework.png){.absolute bottom="0"}
+## GEOMETRY 2
 
-![](spacetree.png){.absolute top="100" right="10" width="400"}
+shape of items explicit spatial positions / regions points, lines, curves, surfaces, volumes boundary between computer graphics and visualization graphics: geometry taken as given vis: geometry is result of a design decision
+
+![](geometrymap.png) \## COLLECTIONS
+
+![](Clusters1.png) \## COLLECTIONS 2
+
+how we group items sets unique items, unordered lists ordered, duplicates possible clusters groups of similar items
+
+![](Collections.png)
+
+## DATA TYPES
+
+![](datatype1.png)
+
+## ATTRIBUTE TYPES
+
+which classes of values & measurements? categorical (nominal) compare equality no implicit ordering ordered ordinal less/greater than defined quantitative meaningful magnitude arithmetic possib
+
+![](Attributes.png)
+
+## EXAMPLE
+
+categorical
+
+ordinal
+
+quantitative
+
+![](spreadsheet.png) \## EXAMPLE
+
+categorical
+
+ordinal
+
+quantitative
+
+![](colorspreadsheet.png)
