@@ -6,7 +6,6 @@ categories: [Assignment, DataViz, Quarto]
 image: "Cthulhuhacking1.png"
 ---
 
-
 ## SUMMARY
 
 The idea of Literate Programming is that source code that is executed as part of the program's purpose is interspersed with documentation that describes the program's logic. The concept of literate programming was first articulated by David Knuth in 1984. You know... back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren't very many good arguments as to why you WOULDN'T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills.
@@ -17,7 +16,7 @@ I'm trying to keep this course as technology agnostic as I can. The idea is that
 
 If all of this is new to you, no problem. Just follow along in R and Quarto and start your skill building journey with those languages.
 
-If you are a python person, great! Quarto can accomodate that language as well. If you have another preference for literate programming, such as sticking with R Markdown until the Quarto bugs are fixed, that is great. Find the framework and tools that work for you, and practice, practice, practice!
+If you are a Python person, great! Quarto can accommodate that language as well. If you have another preference for literate programming, such as sticking with R Markdown until the Quarto bugs are fixed, that is great. Find the framework and tools that work for you, and practice, practice, practice!
 
 ### [Quarto](https://quarto.org)
 
@@ -71,17 +70,17 @@ Here is the dirty little secret of modern education.
 
 While I could use up an entire 90 minute lecture telling you how to:
 
-download and install R, R-Studio, and Quarto
+-   Download and install R, [R-Studio](https://posit.co/downloads/), and Quarto (included by default with R-Studio).
 
-create a Quarto document that will publish in the .html format
+-   [Create a Quarto document that will publish in the .html format](https://quarto.org/docs/output-formats/html-basics.html)
 
-install the R packages you will need
+-   [Install the R packages you will need](https://www.dataquest.io/blog/install-package-r/)
 
-tidy up the Anscombe's Quartet data
+-   [Tidy up the Anscombe's Quartet data](https://www.njtierney.com/post/2020/06/01/tidy-anscombe/)
 
-calculate the summary statistics for each x y pair
+-   Calculate the summary statistics for each x y pair
 
-and make a nice little plot...
+-   Make a nice little plot...
 
 I'm not going to do that.
 
@@ -91,3 +90,4 @@ Instead, I want you to use the resources I point towards, or other resources tha
 
 [Tidyverse and Anscombe's Quartet](https://www.njtierney.com/post/2020/06/01/tidy-anscombe/)
 
+[Handy cheat-sheets for many different R packages](https://posit.co/resources/cheatsheets/)

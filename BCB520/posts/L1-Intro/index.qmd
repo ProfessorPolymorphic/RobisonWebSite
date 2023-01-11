@@ -8,7 +8,7 @@ format:
       buttons: false
     preview-links: auto
     css: styles.css
-    footer: <https://canvas.uidaho.edu/courses/11081>
+    footer: <https://canvas.uidaho.edu/courses/17806>
     theme: [default, custom.scss]
 resources:
   - demo.pdf
@@ -36,6 +36,8 @@ image: "braindata.png"
 
 ## WHO ARE YOU?
 
+"...The course is designed to be"discipline agnostic" - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests..."
+
 ### Briefly:
 
 -   Your name
@@ -55,7 +57,7 @@ Students completing this course will be able to:
 5.  Explain whether a visual encoding is perceptually appropriate for a specific combination of task and data.
 6.  Demonstrate their skills with at least two novel visualizations suitable suitable for inclusion in an online Data Science Portfolio.
 
-The course materials are located on [Canvas](https://canvas.uidaho.edu/courses/11081) and the [course website](https://github.com/ProfessorPolymorphic).
+The course materials are located on [Canvas](https://canvas.uidaho.edu/courses/17806) and the [course website](https://github.com/ProfessorPolymorphic).
 :::
 
 ## VISUALIZATION
@@ -70,7 +72,7 @@ Computers provide [visual]{.red} representations of datasets designed to help pe
 
 [University of British Columbia]{.absolute bottom="40" left="10"}
 
-![](VADcover.jpg){.absolute bottom="70" right="10" width="300"} ![](TamaraMunzner.jpg){.absolute top="240" left="10" width="330"}
+![Unless you opted out, registered students should have INCLUSIVE ACCESS to the text through Canvas.](VADcover.jpg){.absolute bottom="70" right="10" width="300"} ![](TamaraMunzner.jpg){.absolute top="240" left="10" width="330"}
 
 ## THE HUMAN
 
