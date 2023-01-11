@@ -70,13 +70,13 @@ Here is the dirty little secret of modern education.
 
 While I could use up an entire 90 minute lecture telling you how to:
 
--   Download and install R, [R-Studio](https://posit.co/downloads/), and Quarto (included by default with R-Studio).
+-   Download and install R, [R-Studio](https://posit.co/downloads/){target="_blank"}, and Quarto (included by default with R-Studio).
 
--   [Create a Quarto document that will publish in the .html format](https://quarto.org/docs/output-formats/html-basics.html)
+-   [Create a Quarto document that will publish in the .html format](https://quarto.org/docs/output-formats/html-basics.html){target="_blank"}
 
--   [Install the R packages you will need](https://www.dataquest.io/blog/install-package-r/)
+-   [Install the R packages you will need](https://www.dataquest.io/blog/install-package-r/){target="_blank"}
 
--   [Tidy up the Anscombe's Quartet data](https://www.njtierney.com/post/2020/06/01/tidy-anscombe/)
+-   [Tidy up the Anscombe's Quartet data](https://www.njtierney.com/post/2020/06/01/tidy-anscombe/){target="_blank"}
 
 -   Calculate the summary statistics for each x y pair
 

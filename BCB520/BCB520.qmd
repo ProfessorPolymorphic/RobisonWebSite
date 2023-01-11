@@ -17,14 +17,14 @@ This class will help students establish a foundational understanding of data vis
 
 ## Quick Links
 
-I am maintaining the course here and on its [CANVAS PAGE](https://canvas.uidaho.edu/courses/17806) (for enrolled students).
+I am maintaining the course here and on its [CANVAS PAGE](https://canvas.uidaho.edu/courses/17806){target="_blank"} (for enrolled students).
 
-[Awesome Quarto:](https://github.com/mcanouil/awesome-quarto) A potentially interesting repository of Quarto documents, talks, tools, examples, etc.
+[Awesome Quarto:](https://github.com/mcanouil/awesome-quarto){target="_blank"} A potentially interesting repository of Quarto documents, talks, tools, examples, etc.
 
-[Riffomonas Project](https://www.youtube.com/@Riffomonas/featured): Pat Schloss is a [Professor at the University of Michigan](https://www.schlosslab.org). The Riffomonas Project is his Youtube channel, which has HUNDREDS of easy to follow and amazingly useful instructional videos on R, ggplot, version control, and literate programming.
+[Riffomonas Project](https://www.youtube.com/@Riffomonas/featured){target="_blank"}: Pat Schloss is a [Professor at the University of Michigan](https://www.schlosslab.org){target="_blank"}. The Riffomonas Project is his Youtube channel, which has HUNDREDS of easy to follow and amazingly useful instructional videos on R, ggplot, version control, and literate programming.
 
-[Dr. Tamara Munzner's Website:](https://www.cs.ubc.ca/~tmm/) It isn't fancy, but Dr. Munzner's website has tons of resources from her textbook and the many data visualization courses she has offered. This includes recorded lectures that align directly with the chapters of the text, much like what we are using.
+[Dr. Tamara Munzner's Website:](https://www.cs.ubc.ca/~tmm/){target="_blank"} It isn't fancy, but Dr. Munzner's website has tons of resources from her textbook and the many data visualization courses she has offered. This includes recorded lectures that align directly with the chapters of the text, much like what we are using.
 
-[Cheat Sheets:](https://posit.co/resources/cheatsheets/) So many visual guides for many R packages, including the tidyverse, ggplot, dplyr, etc.
+[Cheat Sheets:](https://posit.co/resources/cheatsheets/){target="_blank"} So many visual guides for many R packages, including the tidyverse, ggplot, dplyr, etc.
 
 # **// Posts**
