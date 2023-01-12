@@ -8,7 +8,7 @@ format:
       buttons: false
     preview-links: auto
     css: styles.css
-    footer: <https://canvas.uidaho.edu/courses/17806>
+    footer: <a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/BCB520.html" target="_blank">HOME</a>
     theme: [default, custom.scss]
 author: "Barrie Robison"
 date: "2023-01-17"
@@ -156,8 +156,7 @@ Computer-based visualization systems provide visual representations of [datasets
 
 Flat Table
 
-:::: {.columns}
-
+::: columns
 ::: {.r-fit-text .column width="40%"}
 -   One ITEM per row
 
@@ -173,13 +172,9 @@ Flat Table
 :::
 
 ::: {.column width="60%"}
-
 ![](flattable.png)
 :::
-
-::::
-
-
+:::
 
 ## FLAT TABLE EXAMPLE
 
@@ -257,7 +252,9 @@ ordinal
 
 quantitative
 
-![](spreadsheet.png) \## EXAMPLE
+![](spreadsheet.png)
+
+## EXAMPLE
 
 categorical
 
@@ -266,3 +263,76 @@ ordinal
 quantitative
 
 ![](colorspreadsheet.png)
+
+## ADDITIONAL SEMANTIC COMPONENTS
+
+![](Otherstuff.png)
+
+## DATA ABSTRACTION
+
+translate from domain-specific language to generic visualization language
+
+identify dataset type(s), attribute types
+identify cardinality
+how many items in the dataset?
+what is cardinality of each attribute?
+number of levels for categorical data
+range for quantitative data
+
+consider whether to transform data
+guided by understanding of task
+
+## MODELS: DATA VS CONCEPTUAL
+
+data model
+mathematical abstraction
+sets with operations, eg floats with * / - +
+variable data types in programming languages
+conceptual model
+mental construction (semantics)
+supports reasoning
+typically based on understanding of tasks [stay tuned!]
+
+data abstraction process relies on conceptual model
+for transforming data if needed 
+
+## MODELS: EXAMPLE
+
+data model: floats
+32.52, 54.06, -14.35, ...
+conceptual model
+temperature
+multiple possible data abstractions
+continuous to 2 significant figures: quantitative
+task: forecasting the weather
+hot, warm, cold: ordinal
+task: deciding if bath water is ready
+above freezing, below freezing: categorical
+task: decide if I should leave the house today
+
+## DERIVED ATTRIBUTES
+
+derived attribute: compute from originals
+simple change of type
+acquire additional data
+complex transformation
+
+![](derived.png)
+
+
+## EXAMPLE
+
+[Using Strahler numbers for real time visual exploration of huge graphs. Auber. Proc. Intl. Conf. Computer Vision and Graphics, pp. 56–69, 2002.]
+
+Strahler number
+centrality metric for trees/networks
+derived quantitative attribute
+draw top 5K of 500K for good skeleton
+
+![](Strahler.png)
+![](StrahlerAnalysis.png)
+## SUMMARY
+
+![](what.png)
+
+![](whatexpanded.png)

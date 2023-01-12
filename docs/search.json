@@ -214,7 +214,56 @@
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#example",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "EXAMPLE",
-    "text": "EXAMPLE\ncategorical\nordinal\nquantitative\n ## EXAMPLE\ncategorical\nordinal\nquantitative\n\n\n\nhttps://canvas.uidaho.edu/courses/17806"
+    "text": "EXAMPLE\ncategorical\nordinal\nquantitative"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#example-1",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#example-1",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "EXAMPLE",
+    "text": "EXAMPLE\ncategorical\nordinal\nquantitative"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#additional-semantic-components",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#additional-semantic-components",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "ADDITIONAL SEMANTIC COMPONENTS",
+    "text": "ADDITIONAL SEMANTIC COMPONENTS"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#data-abstraction",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#data-abstraction",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA ABSTRACTION",
+    "text": "DATA ABSTRACTION\ntranslate from domain-specific language to generic visualization language\nidentify dataset type(s), attribute types identify cardinality how many items in the dataset? what is cardinality of each attribute? number of levels for categorical data range for quantitative data\nconsider whether to transform data guided by understanding of task"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#models-data-vs-conceptual",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#models-data-vs-conceptual",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "MODELS: DATA VS CONCEPTUAL",
+    "text": "MODELS: DATA VS CONCEPTUAL\ndata model mathematical abstraction sets with operations, eg floats with * / - + variable data types in programming languages conceptual model mental construction (semantics) supports reasoning typically based on understanding of tasks [stay tuned!]\ndata abstraction process relies on conceptual model for transforming data if needed"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#models-example",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#models-example",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "MODELS: EXAMPLE",
+    "text": "MODELS: EXAMPLE\ndata model: floats 32.52, 54.06, -14.35, … conceptual model temperature multiple possible data abstractions continuous to 2 significant figures: quantitative task: forecasting the weather hot, warm, cold: ordinal task: deciding if bath water is ready above freezing, below freezing: categorical task: decide if I should leave the house today"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#derived-attributes",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#derived-attributes",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DERIVED ATTRIBUTES",
+    "text": "DERIVED ATTRIBUTES\nderived attribute: compute from originals simple change of type acquire additional data complex transformation"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#example-2",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#example-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "EXAMPLE",
+    "text": "EXAMPLE\n[Using Strahler numbers for real time visual exploration of huge graphs. Auber. Proc. Intl. Conf. Computer Vision and Graphics, pp. 56–69, 2002.]\nStrahler number centrality metric for trees/networks derived quantitative attribute draw top 5K of 500K for good skeleton\n  ## SUMMARY\n\n\n\n\nCANVAS…HOME"
   },
   {
     "objectID": "BCB520/posts/L1-Intro/index.html#who-am-i",
@@ -228,7 +277,7 @@
     "href": "BCB520/posts/L1-Intro/index.html#who-are-you",
     "title": "LECTURE 1 - INTRO",
     "section": "WHO ARE YOU?",
-    "text": "WHO ARE YOU?\nBriefly:\n\nYour name\nYour discipline\nYour degree progress\nYour technical proficiency with data visualization"
+    "text": "WHO ARE YOU?\n“…The course is designed to be”discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests…”\nBriefly:\n\nYour name\nYour discipline\nYour degree progress\nYour technical proficiency with data visualization"
   },
   {
     "objectID": "BCB520/posts/L1-Intro/index.html#course-summary",
@@ -340,7 +389,7 @@
     "href": "BCB520/posts/L1-Intro/index.html#analysis-framework-example",
     "title": "LECTURE 1 - INTRO",
     "section": "ANALYSIS FRAMEWORK EXAMPLE",
-    "text": "ANALYSIS FRAMEWORK EXAMPLE\nTree Juxtaposer\n\n\n\n\nhttps://canvas.uidaho.edu/courses/17806"
+    "text": "ANALYSIS FRAMEWORK EXAMPLE\nTree Juxtaposer\n\n\n\n\nCANVAS…HOME"
   },
   {
     "objectID": "BCB520/posts/A1-Lit-Prog/index.html",

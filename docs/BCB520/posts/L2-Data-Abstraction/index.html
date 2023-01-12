@@ -385,8 +385,8 @@ Barrie Robison
 <p>two points far from each other in 3D space?</p>
 <div class="cell" data-layout-align="right">
 <div class="cell-output-display">
-<div id="htmlwidget-373d2877d66638ee41af" style="width:960px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-373d2877d66638ee41af">{"x":{"visdat":{"16b712558d324":["function () ","plotlyVisDat"]},"cur_data":"16b712558d324","attrs":{"16b712558d324":{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":[]},"yaxis":{"title":[]},"zaxis":{"title":[]}},"xaxis":{"type":"category","categoryorder":"array","categoryarray":["14","30"]},"yaxis":{"type":"category","categoryorder":"array","categoryarray":["15","2.6"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","type":"scatter3d","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c7bdfb1c87a7b945bb22" style="width:960px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c7bdfb1c87a7b945bb22">{"x":{"visdat":{"77577bd3e602":["function () ","plotlyVisDat"]},"cur_data":"77577bd3e602","attrs":{"77577bd3e602":{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":[]},"yaxis":{"title":[]},"zaxis":{"title":[]}},"xaxis":{"type":"category","categoryorder":"array","categoryarray":["14","30"]},"yaxis":{"type":"category","categoryorder":"array","categoryarray":["15","2.6"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","type":"scatter3d","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 <p>two points far from each other in 3D space?</p>
 </div>
 </div>
@@ -541,14 +541,49 @@ Barrie Robison
 <p>categorical</p>
 <p>ordinal</p>
 <p>quantitative</p>
-<p><img data-src="spreadsheet.png"> ## EXAMPLE</p>
+
+<img data-src="spreadsheet.png" class="r-stretch"></section>
+<section id="example-1" class="slide level2">
+<h2>EXAMPLE</h2>
 <p>categorical</p>
 <p>ordinal</p>
 <p>quantitative</p>
-<p><img data-src="colorspreadsheet.png"></p>
+
+<img data-src="colorspreadsheet.png" class="r-stretch"></section>
+<section id="additional-semantic-components" class="slide level2">
+<h2>ADDITIONAL SEMANTIC COMPONENTS</h2>
+
+<img data-src="Otherstuff.png" class="r-stretch"></section>
+<section id="data-abstraction" class="slide level2">
+<h2>DATA ABSTRACTION</h2>
+<p>translate from domain-specific language to generic visualization language</p>
+<p>identify dataset type(s), attribute types identify cardinality how many items in the dataset? what is cardinality of each attribute? number of levels for categorical data range for quantitative data</p>
+<p>consider whether to transform data guided by understanding of task</p>
+</section>
+<section id="models-data-vs-conceptual" class="slide level2">
+<h2>MODELS: DATA VS CONCEPTUAL</h2>
+<p>data model mathematical abstraction sets with operations, eg floats with * / - + variable data types in programming languages conceptual model mental construction (semantics) supports reasoning typically based on understanding of tasks [stay tuned!]</p>
+<p>data abstraction process relies on conceptual model for transforming data if needed</p>
+</section>
+<section id="models-example" class="slide level2">
+<h2>MODELS: EXAMPLE</h2>
+<p>data model: floats 32.52, 54.06, -14.35, … conceptual model temperature multiple possible data abstractions continuous to 2 significant figures: quantitative task: forecasting the weather hot, warm, cold: ordinal task: deciding if bath water is ready above freezing, below freezing: categorical task: decide if I should leave the house today</p>
+</section>
+<section id="derived-attributes" class="slide level2">
+<h2>DERIVED ATTRIBUTES</h2>
+<p>derived attribute: compute from originals simple change of type acquire additional data complex transformation</p>
+
+<img data-src="derived.png" class="r-stretch"></section>
+<section id="example-2" class="slide level2">
+<h2>EXAMPLE</h2>
+<p>[Using Strahler numbers for real time visual exploration of huge graphs. Auber. Proc. Intl. Conf. Computer Vision and Graphics, pp.&nbsp;56–69, 2002.]</p>
+<p>Strahler number centrality metric for trees/networks derived quantitative attribute draw top 5K of 500K for good skeleton</p>
+<p><img data-src="Strahler.png"> <img data-src="StrahlerAnalysis.png"> ## SUMMARY</p>
+<p><img data-src="what.png"></p>
+<p><img data-src="whatexpanded.png"></p>
 
 <div class="footer footer-default">
-<p><a href="https://canvas.uidaho.edu/courses/17806" class="uri">https://canvas.uidaho.edu/courses/17806</a></p>
+<p><a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>…<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/BCB520.html" target="_blank">HOME</a></p>
 </div>
 </section>
     </div>
