@@ -3,7 +3,7 @@ title: "SYLLABUS 2023"
 author: "Barrie Robison"
 date: "2022-12-12"
 categories: [Resources, DataViz]
-image: "Cthulhusyllabus.png"
+image: "Cthulhusyllabus2.png"
 ---
 
 This forbidden tome contains information students were not meant to know...

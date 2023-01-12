@@ -91,7 +91,7 @@ Computer-based visualization systems provide visual representations of datasets 
 ::: r-fit-text
 -   The analysis problem is ill-specified and we don't know exactly what questions to ask in advance.
 -   We are interested in long-term use for end users (ex: exploratory analysis of scientific data).
--   We are presenting known results (ex: [New York Times Upshot](https://www.nytimes.com/section/upshot)).
+-   We are presenting known results (ex: DATA JOURNALISM - [New York Times Upshot](https://www.nytimes.com/section/upshot)).
 -   We need a stepping stone to assess requirements before developing models.
 -   Developers of an automatic solution want to refine & determine parameters.
 -   We need to help end users of automatic solutions verify and build trust.
@@ -100,6 +100,8 @@ Computer-based visualization systems provide visual representations of datasets 
 ## THE REPRESENTATION
 
 Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.
+
+EXTERNAL REPRESENTATIONS: Replace [cognition]{.red} with [perception]{.red}.
 
 ## WHY DEPEND ON VISION?
 
