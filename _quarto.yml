@@ -10,10 +10,14 @@ website:
         text: HOME
       - Research.qmd
       - Publications.qmd
-      - Teaching.qmd
+      - text: "Teaching"
+        file: Teaching.qmd
       - PolymorphicGames.qmd
       - text: "BLOG"
         file: ProfessorPolymorphic/index.qmd
+
+  sidebar:
+   contents: auto
 
 format:
   html:
