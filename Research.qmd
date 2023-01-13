@@ -39,25 +39,26 @@ When these components are present, it leads to Adaptation.
 
 #### Variation
 
-Think about the enemies in the old school video games that I used to play in arcades. Space Invaders, Asteroids, Centipede, Tempest, etc. What kinds of variation can you descripbe in these enemies? In Space Invaders, you had three types of aliens in each wave, plus the occassional bonus flying saucer. In Centipede and Tempest, you actually had categorically different enemy types that varied in how they looked and in their capabilities.
+Think about the enemies in the old school video games that I used to play in arcades. Space Invaders, Asteroids, Centipede, Tempest, etc. What kinds of variation can you describe in these enemies? In Space Invaders, you had three types of aliens in each wave, plus the occasional bonus flying saucer. In Centipede and Tempest, you actually had categorically different enemy types that varied in how they looked and in their capabilities.  Below you can see a few examples of what I mean:
 
 ::: panel-tabset
 ## Space Invaders
 
-![Screenshot of the original Space Invaders](SpaceInvaders.png){.left} Enemy variation in Space Invaders includes the shape of each alien type (four types), but also their position in the armada (each type has its own row) and their speed of movement (which is adjusted based on how many remain in each wave). For our purposes, we will ignore the flying saucer that occassionally passes across the top of the screen. The game increases in difficulty by having the movement speed of each wave increase. Ironically, the increased movement speed of the aliens within a wave as the population size was reduced was actually an unintended function of the increased frame rate achieved by having fewer aliens to draw on the screen.
+![Screenshot of the original Space Invaders](SpaceInvaders.png){.left} Enemy variation in Space Invaders includes the shape of each alien type (four types), but also their position in the armada (each type has its own row) and their speed of movement (which is adjusted based on how many remain in each wave). For now, we will ignore the flying saucer that passes across the top of the screen. The game increases in difficulty by having the movement speed of each wave increase. Ironically, the increased movement speed of the aliens within a wave as the population size was reduced was an unintended function of the increased frame rate achieved by having fewer aliens draw calls.
 
 ## Centipede
 
-![Enemies in Centipede](centipede.gif){.left}Centipede includes enemy types with very different behaviors and abilities. The segmented centipede can split into component parts. Fleas drop vertically, leave a trail of mushrooms, and take two hits to destroy. Spiders move in a diagonal zig zag pattern. Scorpions move horizontally across the screen and turn mushrooms poisonous. Each wave the game difficulty increases by changing the behavior and segment number of the centipede.
-
-https://www.retrogamedeconstructionzone.com/2020/08/the-characters-of-centipede.html
+![Enemies in Centipede](centipede.gif){.left} Centipede includes [enemy types](https://www.retrogamedeconstructionzone.com/2020/08/the-characters-of-centipede.html){target="_blank} with very different behaviors and abilities. The segmented centipede can split into component parts. Fleas drop vertically, leave a trail of mushrooms, and take two hits to destroy. Spiders move in a diagonal zig zag pattern. Scorpions move horizontally across the screen and turn mushrooms poisonous. Each wave the game difficulty increases by changing the behavior and segment number of the centipede.
 
 ## Tempest
+![](Tempest.png){.left} While not as famous as Space Invaders or Centipede, Tempest was one of my favorite games in the early 80s.  The player navigated their ship across various geometric shapes, shooting at different types of enemies with different capabilities.  These included player capturing Flippers, lane electrifying Pulsars, and obstacle creating Spikers.  So many quarters gone...
+
 :::
 
-This variation is a big part of what makes video games exciting. The difficulty in video games is usually increased over time by introducing new variations of enemies, changing the enemies' capabilities (like speed or fire rate) over time, or increasing the number of enemies. The problem (as we see it) is that these variations are introduced as part of a script that is programmed and balanced by the game developers.
+This variation is a big part of what makes video games exciting. The difficulty in video games is usually increased over time by introducing new variations of enemies, changing the enemies' capabilities (like speed or fire rate) over time, or increasing the number of enemies. The problem (as we see it) is that these variations are introduced as part of a script that is programmed and balanced by the game developers.  Beating the game means memorizing the script.
 
 #### Inheritance
+In most games, there is no relationship between enemies within a wave or between waves.  They are instantiated (spawned) with developer defined traits at a specified rate, location, and time (or level or wave).  This is the key difference in the games that our lab creates.  In our games, the enemies traits are specified by digital genomes that they pass on to their offspring through a form of reproduction.  If the enemy has a speed value of 4, that means that when it reproduces, its offspring inherit that speed value of 4.  Most of the games we work on specify about 40 to 80 "genes" in the enemy genome, each of which can influence one or more game traits such as speed, fire rate, morphology, behavior, health, armor, resistances, etc.
 
 #### Selection
 

@@ -8,11 +8,14 @@ website:
     left:
       - href: index.qmd
         text: HOME
-      - Research.qmd
-      - Publications.qmd
-      - text: "Teaching"
+      - text: "RESEARCH"
+        file: Research.qmd
+      - text: "PUPBLICATIONS"
+        file: Publications.qmd
+      - text: "TEACHING"
         file: Teaching.qmd
-      - PolymorphicGames.qmd
+      - text: "STUDIO"
+        file: PolymorphicGames.qmd
       - text: "BLOG"
         file: ProfessorPolymorphic/index.qmd
 
