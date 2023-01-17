@@ -88,7 +88,35 @@
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#data-semantics",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\nWhat does data mean?\n\n14, 2.6, 30, 30, 15, 100001\nWhat does this sequence of six numbers mean?\n\ntwo points far from each other in 3D space?\n\n\n\n\ntwo points far from each other in 3D space?\n\n\n\n\ntwo points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?\n\n\nsomething else??\nBasil, 7, S, Pear\nWhat about this data? ::: {.fragment .fade-in-then-out} food shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month\n\n\n\nBasil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service\n ::: {.fragment .fade-in-then-out}\n\n\n\nlab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food"
+    "text": "DATA SEMANTICS\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points far from each other in 3D space?\n\n\nVIZ"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#data-semantics-1",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#data-semantics-1",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?\n\n\nVIZ"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#data-semantics-2",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#data-semantics-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nFood shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month\n\n\nVIZ"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#data-semantics-3",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#data-semantics-3",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nBasil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service\n\n\nVIZ"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#data-semantics-4",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#data-semantics-4",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nLab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food\n\n\nVIZ"
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#semantics",
@@ -102,21 +130,14 @@
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#semantics-for-data",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "SEMANTICS FOR DATA",
-    "text": "SEMANTICS FOR DATA\n\n\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”"
-  },
-  {
-    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#semantics-for-data-1",
-    "href": "BCB520/posts/L2-Data-Abstraction/index.html#semantics-for-data-1",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "SEMANTICS FOR DATA …",
-    "text": "SEMANTICS FOR DATA …\n\n\n\nitem: individual entity, discrete – eg patient, car, stock, city – “independent variable”\nattribute: property that is measured, observed, logged… – eg height, blood pressure for patient – eg horsepower, make for car – “dependent variable”\n\n\nITEM: person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
+    "text": "SEMANTICS FOR DATA\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#other-data-types",
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#other-data-types",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "OTHER DATA TYPES",
-    "text": "OTHER DATA TYPES\n-links –express relationship between two items –eg friendship on facebook, interaction between proteins -positions –spatial data: location in 2D or 3D –pixels in photo, voxels in MRI scan, latitude/longitude -grids –sampling strategy for continuous data"
+    "text": "OTHER DATA TYPES\n\nLinks\n\nexpress relationship between two items\ne.g/ friendship on facebook, interaction between proteins\n\nPositions\n\nspatial data: location in 2D or 3D\ne.g. pixels in photo, voxels in MRI scan, latitude/longitude\n\nGrids\n\nsampling strategy for continuous data"
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#what-2",
@@ -144,14 +165,14 @@
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#multidimensional-tables",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "MULTIDIMENSIONAL TABLES",
-    "text": "MULTIDIMENSIONAL TABLES\n-indexing based on multiple keys –eg genes, patients"
+    "text": "MULTIDIMENSIONAL TABLES\nindexing based on multiple keys (eg genes, patients)"
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#networks",
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#networks",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "NETWORKS",
-    "text": "NETWORKS\n\nnetwork/graph nodes (vertices) connected by links (edges) tree is special case: no cycles often have roots and are directed"
+    "text": "NETWORKS\nNetwork/graph nodes (vertices) connected by links (edges). A tree is special case: no cycles, often have roots, and are directed."
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#fields",
@@ -165,14 +186,14 @@
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#spatial-fields-1",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "SPATIAL FIELDS 1",
-    "text": "SPATIAL FIELDS 1\nattribute values associated w/ cells cell contains value from continuous domain eg temperature, pressure, wind velocity measured or simulated"
+    "text": "SPATIAL FIELDS 1\nAttribute values associated w/ cells cell contains value from continuous domain (eg temperature, pressure, wind velocity measured or simulated)."
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#spatial-fields-2",
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#spatial-fields-2",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "SPATIAL FIELDS 2",
-    "text": "SPATIAL FIELDS 2\nattribute values associated w/ cells cell contains value from continuous domain eg temperature, pressure, wind velocity measured or simulated major concerns sampling:\u000bwhere attributes are measured interpolation:\u000bhow to model attributes elsewhere grid types"
+    "text": "SPATIAL FIELDS 2\n\n\n\n\nAttribute values associated w/ cells.\nCell contains value from continuous domain\n\n(eg temperature, pressure, wind velocity)\n\nMeasured or simulated.\nMajor concerns\n\nsampling:\n\nwhere attributes are measured\n\ninterpolation:\n\nhow to model attributes elsewhere\n\ngrid types"
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#spatial-fields-3",

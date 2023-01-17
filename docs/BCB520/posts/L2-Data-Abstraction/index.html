@@ -377,80 +377,138 @@ Barrie Robison
 </section>
 <section id="data-semantics" class="slide level2">
 <h2>DATA SEMANTICS</h2>
-<p><strong>What does data mean?</strong></p>
-<div class="r-fit-text">
-<p><span class="fragment blue">14, 2.6, 30, 30, 15, 100001</span></p>
-<p><span class="fragment">What does this sequence of six numbers mean?</span></p>
-<div class="fragment fade-in-then-out">
-<p>two points far from each other in 3D space?</p>
-<div class="cell" data-layout-align="right">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>What does this sequence of six numbers mean?</strong></p>
+<p><span class="blue">14, 2.6, 30, 30, 15, 100001</span> Two points far from each other in 3D space?</p>
+</div>
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>VIZ</strong></p>
 <div class="cell-output-display">
-<div id="htmlwidget-c7bdfb1c87a7b945bb22" style="width:960px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c7bdfb1c87a7b945bb22">{"x":{"visdat":{"77577bd3e602":["function () ","plotlyVisDat"]},"cur_data":"77577bd3e602","attrs":{"77577bd3e602":{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":[]},"yaxis":{"title":[]},"zaxis":{"title":[]}},"xaxis":{"type":"category","categoryorder":"array","categoryarray":["14","30"]},"yaxis":{"type":"category","categoryorder":"array","categoryarray":["15","2.6"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","type":"scatter3d","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
-<p>two points far from each other in 3D space?</p>
+<div id="htmlwidget-dd5bac95ee0449094416" style="width:960px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-dd5bac95ee0449094416">{"x":{"visdat":{"e1754f1563fd":["function () ","plotlyVisDat"]},"cur_data":"e1754f1563fd","attrs":{"e1754f1563fd":{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":[]},"yaxis":{"title":[]},"zaxis":{"title":[]}},"xaxis":{"type":"category","categoryorder":"array","categoryarray":["14","30"]},"yaxis":{"type":"category","categoryorder":"array","categoryarray":["15","2.6"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","type":"scatter3d","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
-<div class="fragment fade-in-then-out">
-<p>two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?</p>
+</div>
+</section>
+<section id="data-semantics-1" class="slide level2">
+<h2>DATA SEMANTICS</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>What does this sequence of six numbers mean?</strong></p>
+<p><span class="blue">14, 2.6, 30, 30, 15, 100001</span> Two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>VIZ</strong></p>
 <p><img data-src="RidiculousNetwork.png"></p>
 </div>
-<p><span class="fragment fade-in-then-out">something else??</span></p>
-<p><span class="fragment blue">Basil, 7, S, Pear</span></p>
-<p><span class="fragment">What about this data?</span> ::: {.fragment .fade-in-then-out} food shipment of produce (basil &amp; pear) arrived in satisfactory condition on 7th day of month</p>
+</div>
+</div>
+</section>
+<section id="data-semantics-2" class="slide level2">
+<h2>DATA SEMANTICS</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>What about this data?</strong></p>
+<p><span class="blue">Basil, 7, S, Pear</span>:<br>
+Food shipment of produce (basil &amp; pear) arrived in satisfactory condition on 7th day of month</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>VIZ</strong></p>
 <p><img data-src="BasilPearDelivery.png"></p>
 </div>
-<div class="fragment fade-in-then-out">
-<p>Basil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service</p>
-<p><img data-src="snowremoval.png"> ::: {.fragment .fade-in-then-out}</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
+</div>
+</div>
+</section>
+<section id="data-semantics-3" class="slide level2">
+<h2>DATA SEMANTICS</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>What about this data?</strong></p>
+<p><span class="blue">Basil, 7, S, Pear</span>:<br>
+Basil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>VIZ</strong></p>
+<p><img data-src="snowremoval.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="data-semantics-4" class="slide level2">
+<h2>DATA SEMANTICS</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>What about this data?</strong></p>
+<p><span class="blue">Basil, 7, S, Pear</span>:<br>
+Lab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>VIZ</strong></p>
 <p><img data-src="ratmazepear.png"></p>
-<p></p><figcaption>lab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food</figcaption><p></p>
-</figure>
+</div>
 </div>
 </div>
 </section>
 <section id="semantics" class="slide level2">
 <h2>SEMANTICS</h2>
 <p>The meaning of a word, phrase, sentence, or text.</p>
-<p><span class="fragment blue">Basil, 7, S, Pear</span></p>
-<p><img data-src="datatable.png" class="absolute" style="bottom: 0px; right: 0px; width: 550px; "></p>
+<p><span class="blue">Basil, 7, S, Pear</span></p>
+<p><img data-src="datatable.png" class="absolute" style="bottom: 100px; right: 0px; width: 550px; "></p>
 </section>
-<section id="semantics-for-data" class="slide level2">
+<section id="semantics-for-data" class="slide level2 smaller">
 <h2>SEMANTICS FOR DATA</h2>
-<p><img data-src="datatable2.png" class="absolute" style="bottom: 0px; right: 0px; width: 550px; "></p>
-<div class="r-fit-text">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>Semantics</strong></p>
 <ul>
-<li><p><span class="red">item:</span> individual entity, discrete</p>
+<li><span class="red">item:</span> individual entity, discrete
 <ul>
-<li><p>eg patient, car, stock, city</p></li>
-<li><p>“independent variable”</p></li>
+<li>eg patient, car, stock, city</li>
+<li>“independent variable”</li>
 </ul></li>
-<li><p><span class="red">attribute:</span> property that is measured, observed, logged…</p>
+<li><span class="red">attribute:</span> property that is measured, observed, logged…
 <ul>
-<li><p>eg height, blood pressure for patient</p></li>
-<li><p>eg horsepower, make for car</p></li>
-<li><p>“dependent variable”</p></li>
+<li>eg height, blood pressure for patient</li>
+<li>eg horsepower, make for car</li>
+<li>“dependent variable”</li>
 </ul></li>
 </ul>
 </div>
-</section>
-<section id="semantics-for-data-1" class="slide level2">
-<h2>SEMANTICS FOR DATA …</h2>
-<p><img data-src="datatable2.png" class="absolute" style="bottom: 0px; right: 0px; width: 550px; "></p>
-<div class="r-fit-text">
-<ul>
-<li><span class="red">item:</span> individual entity, discrete – eg patient, car, stock, city – “independent variable”</li>
-<li><span class="red">attribute:</span> property that is measured, observed, logged… – eg height, blood pressure for patient – eg horsepower, make for car – “dependent variable”</li>
-</ul>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>Data Table</strong></p>
+<p><img data-src="datatable2.png"></p>
 </div>
-<p><span class="red">ITEM:</span> person</p>
-<p><span class="red">ATTRIBUTES:</span> Name, Age, Shirt Size, Favorite Fruit</p>
+</div>
+</div>
+<p><span class="fragment"><span class="red">ITEM:</span> Person</span></p>
+<p><span class="fragment"><span class="red">ATTRIBUTES:</span> Name, Age, Shirt Size, Favorite Fruit</span></p>
 </section>
 <section id="other-data-types" class="slide level2">
 <h2>OTHER DATA TYPES</h2>
-<p>-links –express relationship between two items –eg friendship on facebook, interaction between proteins -positions –spatial data: location in 2D or 3D –pixels in photo, voxels in MRI scan, latitude/longitude -grids –sampling strategy for continuous data</p>
+<ul>
+<li>Links
+<ul>
+<li>express relationship between two items</li>
+<li>e.g/ friendship on facebook, interaction between proteins</li>
+</ul></li>
+<li>Positions
+<ul>
+<li>spatial data: location in 2D or 3D</li>
+<li>e.g.&nbsp;pixels in photo, voxels in MRI scan, latitude/longitude</li>
+</ul></li>
+<li>Grids
+<ul>
+<li>sampling strategy for continuous data</li>
+</ul></li>
+</ul>
 </section>
 <section id="what-2" class="slide level2">
 <h2>WHAT?</h2>
@@ -460,19 +518,19 @@ Barrie Robison
 </section>
 <section id="dataset-types-tables" class="slide level2">
 <h2>DATASET TYPES: TABLES</h2>
-<p>Flat Table</p>
+<h3 id="flat-table">Flat Table</h3>
 <div class="columns">
 <div class="r-fit-text column" style="width:40%;">
 <ul>
-<li><p>One ITEM per row</p>
+<li><p>One <span class="red">ITEM</span> per row</p>
 <ul>
-<li>often called an observation</li>
+<li>often called an <strong>observation</strong></li>
 </ul></li>
-<li><p>Each column is an ATTRIBUTE</p>
+<li><p>Each column is an <span class="red">ATTRIBUTE</span></p>
 <ul>
-<li>often called a variable</li>
+<li>often called a <strong>variable</strong></li>
 </ul></li>
-<li><p>A cell holds the VALUE for an item/attribute pair</p></li>
+<li><p>A cell holds the <span class="red">VALUE</span> for an item/attribute pair</p></li>
 <li><p>A UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes</p></li>
 </ul>
 </div><div class="column" style="width:60%;">
@@ -486,15 +544,31 @@ Barrie Robison
 <img data-src="spreadsheet.png" class="r-stretch"></section>
 <section id="multidimensional-tables" class="slide level2">
 <h2>MULTIDIMENSIONAL TABLES</h2>
-<p>-indexing based on multiple keys –eg genes, patients</p>
+<p>indexing based on multiple keys (eg genes, patients)</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img data-src="multidimtable1.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img data-src="multidimtable2.png"></p>
+</div>
+</div>
+</div>
 </section>
 <section id="networks" class="slide level2">
 <h2>NETWORKS</h2>
+<p>Network/graph nodes (vertices) connected by links (edges). A tree is special case: no cycles, often have roots, and are directed.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img data-src="treeandnet.png"></p>
-<p>network/graph nodes (vertices) connected by links (edges) tree is special case: no cycles often have roots and are directed</p>
-<p><img data-src="Networks.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="Networks.png" width="200"></p>
+</div>
+</div>
+</div>
 </section>
 <section id="fields" class="slide level2">
 <h2>FIELDS</h2>
@@ -502,14 +576,50 @@ Barrie Robison
 <img data-src="treenetfield.png" class="r-stretch"></section>
 <section id="spatial-fields-1" class="slide level2">
 <h2>SPATIAL FIELDS 1</h2>
-<p>attribute values associated w/ cells cell contains value from continuous domain eg temperature, pressure, wind velocity measured or simulated</p>
-<p><img data-src="spatialfields.png"> <img data-src="map1.png"></p>
+<p>Attribute values associated w/ cells cell contains value from continuous domain (eg temperature, pressure, wind velocity measured or simulated).</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: center;">
+<p><img data-src="spatialfields.png" width="300"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: center;">
+<p><img data-src="map1.png" width="400"></p>
+</div>
+</div>
+</div>
 </section>
-<section id="spatial-fields-2" class="slide level2">
+<section id="spatial-fields-2" class="slide level2 smaller">
 <h2>SPATIAL FIELDS 2</h2>
-<p>attribute values associated w/ cells cell contains value from continuous domain eg temperature, pressure, wind velocity measured or simulated major concerns sampling:where attributes are measured interpolation:how to model attributes elsewhere grid types</p>
-
-<img data-src="MRI.png" class="r-stretch"></section>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<ul>
+<li>Attribute values associated w/ cells.</li>
+<li>Cell contains value from continuous domain
+<ul>
+<li>(eg temperature, pressure, wind velocity)</li>
+</ul></li>
+<li>Measured or simulated.</li>
+<li>Major concerns
+<ul>
+<li>sampling:
+<ul>
+<li>where attributes are measured</li>
+</ul></li>
+<li>interpolation:
+<ul>
+<li>how to model attributes elsewhere</li>
+</ul></li>
+<li>grid types</li>
+</ul></li>
+</ul>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="MRI.png" width="500"></p>
+</div>
+</div>
+</div>
+</section>
 <section id="spatial-fields-3" class="slide level2">
 <h2>SPATIAL FIELDS 3</h2>
 <p>attribute values associated w/ cells cell contains value from continuous domain eg temperature, pressure, wind velocity measured or simulated major concerns sampling:where attributes are measured interpolation:how to model attributes elsewhere grid types major divisions attributes per cell: scalar (1), vector (2), tensor (many)</p>

@@ -50,18 +50,14 @@ Computer-based visualization systems provide visual representations of [datasets
 
 ## DATA SEMANTICS
 
-**What does data mean?**
+::: {layout-ncol="2"}
+### What does this sequence of six numbers mean?
 
-::: r-fit-text
-[14, 2.6, 30, 30, 15, 100001]{.fragment .blue}
+[14, 2.6, 30, 30, 15, 100001]{.blue} Two points far from each other in 3D space?
 
-[What does this sequence of six numbers mean?]{.fragment}
-
-::: {.fragment .fade-in-then-out}
-two points far from each other in 3D space?
+### VIZ
 
 ```{r}
-#| fig-cap: "two points far from each other in 3D space?"
 #| fig-align: right
 
 
@@ -76,73 +72,99 @@ plot_ly(x=df$x, y=df$y, z=df$z, type="scatter3d", mode="markers")
 ```
 :::
 
-::: {.fragment .fade-in-then-out}
-two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?
+## DATA SEMANTICS
+
+::: {layout-ncol="2"}
+### What does this sequence of six numbers mean?
+
+[14, 2.6, 30, 30, 15, 100001]{.blue} Two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?
+
+### VIZ
 
 ![](RidiculousNetwork.png)
 :::
 
-[something else??]{.fragment .fade-in-then-out}
+## DATA SEMANTICS
 
-[Basil, 7, S, Pear]{.fragment .blue}
+::: {layout-ncol="2"}
+### What about this data?
 
-[What about this data?]{.fragment} ::: {.fragment .fade-in-then-out} food shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month
+[Basil, 7, S, Pear]{.blue}:\
+Food shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month
+
+### VIZ
 
 ![](BasilPearDelivery.png)
 :::
 
-::: {.fragment .fade-in-then-out}
+## DATA SEMANTICS
+
+::: {layout-ncol="2"}
+### What about this data?
+
+[Basil, 7, S, Pear]{.blue}:\
 Basil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service
 
-![](snowremoval.png) ::: {.fragment .fade-in-then-out}
+### VIZ
 
-![lab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food](ratmazepear.png)
+![](snowremoval.png)
+:::
+
+## DATA SEMANTICS
+
+::: {layout-ncol="2"}
+### What about this data?
+
+[Basil, 7, S, Pear]{.blue}:\
+Lab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food
+
+### VIZ
+
+![](ratmazepear.png)
 :::
 
 ## SEMANTICS
 
 The meaning of a word, phrase, sentence, or text.
 
-[Basil, 7, S, Pear]{.fragment .blue}
+[Basil, 7, S, Pear]{.blue}
 
-![](datatable.png){.absolute bottom="0" right="0" width="550"}
+![](datatable.png){.absolute bottom="100" right="0" width="550"}
 
-## SEMANTICS FOR DATA
+## SEMANTICS FOR DATA {.smaller}
 
-![](datatable2.png){.absolute bottom="0" right="0" width="550"}
+:::: {layout-ncol="2"}
+### Semantics
 
-::: r-fit-text
 -   [item:]{.red} individual entity, discrete
-
     -   eg patient, car, stock, city
-
     -   "independent variable"
-
 -   [attribute:]{.red} property that is measured, observed, logged...
-
     -   eg height, blood pressure for patient
-
     -   eg horsepower, make for car
-
     -   "dependent variable"
-:::
 
-## SEMANTICS FOR DATA ...
 
-![](datatable2.png){.absolute bottom="0" right="0" width="550"}
+### Data Table
+![](datatable2.png)
+::::
 
-::: r-fit-text
--   [item:]{.red} individual entity, discrete -- eg patient, car, stock, city -- "independent variable"
--   [attribute:]{.red} property that is measured, observed, logged... -- eg height, blood pressure for patient -- eg horsepower, make for car -- "dependent variable"
-:::
+[[ITEM:]{.red} Person]{.fragment}
 
-[ITEM:]{.red} person
+[[ATTRIBUTES:]{.red} Name, Age, Shirt Size, Favorite Fruit]{.fragment}
 
-[ATTRIBUTES:]{.red} Name, Age, Shirt Size, Favorite Fruit
+
 
 ## OTHER DATA TYPES
 
--links --express relationship between two items --eg friendship on facebook, interaction between proteins -positions --spatial data: location in 2D or 3D --pixels in photo, voxels in MRI scan, latitude/longitude -grids --sampling strategy for continuous data
+-   Links
+    -   express relationship between two items
+    -   e.g/ friendship on facebook, interaction between proteins 
+-   Positions
+    -   spatial data: location in 2D or 3D
+    -   e.g. pixels in photo, voxels in MRI scan, latitude/longitude 
+-   Grids
+    -   sampling strategy for continuous data
 
 ## WHAT?
 
@@ -154,19 +176,19 @@ Computer-based visualization systems provide visual representations of [datasets
 
 ## DATASET TYPES: TABLES
 
-Flat Table
+### Flat Table
 
 ::: columns
 ::: {.r-fit-text .column width="40%"}
--   One ITEM per row
+-   One [ITEM]{.red} per row
 
-    -   often called an observation
+    -   often called an **observation**
 
--   Each column is an ATTRIBUTE
+-   Each column is an [ATTRIBUTE]{.red}
 
-    -   often called a variable
+    -   often called a **variable**
 
--   A cell holds the VALUE for an item/attribute pair
+-   A cell holds the [VALUE]{.red} for an item/attribute pair
 
 -   A UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes
 :::
@@ -182,19 +204,22 @@ Flat Table
 
 ## MULTIDIMENSIONAL TABLES
 
--indexing based on multiple keys --eg genes, patients
+indexing based on multiple keys (eg genes, patients)
 
+::: {layout-ncol="2"}
 ![](multidimtable1.png)
 
 ![](multidimtable2.png)
+:::
 
 ## NETWORKS
+Network/graph nodes (vertices) connected by links (edges). A tree is special case: no cycles, often have roots, and are directed.
 
+::: {layout-ncol="2"}
 ![](treeandnet.png)
 
-network/graph nodes (vertices) connected by links (edges) tree is special case: no cycles often have roots and are directed
-
-![](Networks.png)
+![](Networks.png){width=200}
+:::
 
 ## FIELDS
 
@@ -202,15 +227,31 @@ network/graph nodes (vertices) connected by links (edges) tree is special case: 
 
 ## SPATIAL FIELDS 1
 
-attribute values associated w/ cells cell contains value from continuous domain eg temperature, pressure, wind velocity measured or simulated
+Attribute values associated w/ cells cell contains value from continuous domain (eg temperature, pressure, wind velocity measured or simulated).
 
-![](spatialfields.png) ![](map1.png)
+::: {layout-ncol="2"}
+![](spatialfields.png){width=300}
 
-## SPATIAL FIELDS 2
+![](map1.png){width=400}
+:::
 
-attribute values associated w/ cells cell contains value from continuous domain eg temperature, pressure, wind velocity measured or simulated major concerns sampling:where attributes are measured interpolation:how to model attributes elsewhere grid types
+## SPATIAL FIELDS 2 {.smaller}
 
-![](MRI.png)
+::: {layout-ncol="2"}
+-   Attribute values associated w/ cells.
+-   Cell contains value from continuous domain
+    - (eg temperature, pressure, wind velocity)
+-   Measured or simulated. 
+-   Major concerns
+    -   sampling:
+        -   where attributes are measured
+    -   interpolation:
+        -   how to model attributes elsewhere
+    -   grid types
+
+
+![](MRI.png){width=500}
+:::
 
 ## SPATIAL FIELDS 3
 
@@ -272,66 +313,33 @@ quantitative
 
 translate from domain-specific language to generic visualization language
 
-identify dataset type(s), attribute types
-identify cardinality
-how many items in the dataset?
-what is cardinality of each attribute?
-number of levels for categorical data
-range for quantitative data
+identify dataset type(s), attribute types identify cardinality how many items in the dataset? what is cardinality of each attribute? number of levels for categorical data range for quantitative data
 
-consider whether to transform data
-guided by understanding of task
+consider whether to transform data guided by understanding of task
 
 ## MODELS: DATA VS CONCEPTUAL
 
-data model
-mathematical abstraction
-sets with operations, eg floats with * / - +
-variable data types in programming languages
-conceptual model
-mental construction (semantics)
-supports reasoning
-typically based on understanding of tasks [stay tuned!]
+data model mathematical abstraction sets with operations, eg floats with \* / - + variable data types in programming languages conceptual model mental construction (semantics) supports reasoning typically based on understanding of tasks \[stay tuned!\]
 
-data abstraction process relies on conceptual model
-for transforming data if needed 
+data abstraction process relies on conceptual model for transforming data if needed
 
 ## MODELS: EXAMPLE
 
-data model: floats
-32.52, 54.06, -14.35, ...
-conceptual model
-temperature
-multiple possible data abstractions
-continuous to 2 significant figures: quantitative
-task: forecasting the weather
-hot, warm, cold: ordinal
-task: deciding if bath water is ready
-above freezing, below freezing: categorical
-task: decide if I should leave the house today
+data model: floats 32.52, 54.06, -14.35, ... conceptual model temperature multiple possible data abstractions continuous to 2 significant figures: quantitative task: forecasting the weather hot, warm, cold: ordinal task: deciding if bath water is ready above freezing, below freezing: categorical task: decide if I should leave the house today
 
 ## DERIVED ATTRIBUTES
 
-derived attribute: compute from originals
-simple change of type
-acquire additional data
-complex transformation
+derived attribute: compute from originals simple change of type acquire additional data complex transformation
 
 ![](derived.png)
 
-
 ## EXAMPLE
 
-[Using Strahler numbers for real time visual exploration of huge graphs. Auber. Proc. Intl. Conf. Computer Vision and Graphics, pp. 56–69, 2002.]
+\[Using Strahler numbers for real time visual exploration of huge graphs. Auber. Proc. Intl. Conf. Computer Vision and Graphics, pp. 56--69, 2002.\]
 
-Strahler number
-centrality metric for trees/networks
-derived quantitative attribute
-draw top 5K of 500K for good skeleton
+Strahler number centrality metric for trees/networks derived quantitative attribute draw top 5K of 500K for good skeleton
 
-![](Strahler.png)
-![](StrahlerAnalysis.png)
-## SUMMARY
+![](Strahler.png) ![](StrahlerAnalysis.png) \## SUMMARY
 
 ![](what.png)
 
