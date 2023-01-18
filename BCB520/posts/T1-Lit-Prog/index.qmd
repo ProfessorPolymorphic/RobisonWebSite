@@ -1,0 +1,13 @@
+---
+title: "Tutorial 1 - Literate Programming"
+author: "Barrie Robison"
+date: "2022-12-01"
+categories: [Tutorial, DataViz, Quarto, Literate Programming]
+image: "Cthulhudata.png"
+---
+
+## MAINTAINING YOUR SANITY
+
+Learning new tools is hard.  Plowing though the tomes of the data science mythos is hard.  Unlike Cosmic Horror, however, these secrets are meant for humanity to discover...
+
+{{< video https://youtu.be/NnMDV3CuWoo >}}
