@@ -6,8 +6,8 @@ categories: [Tutorial, DataViz, Quarto, Literate Programming]
 image: "Cthulhudata.png"
 ---
 
-## MAINTAINING YOUR SANITY
+## INTRO TO QUARTO
 
-Learning new tools is hard.  Plowing though the tomes of the data science mythos is hard.  Unlike Cosmic Horror, however, these secrets are meant for humanity to discover...
+Learning new tools is hard.  Plowing though the tomes of the Data Science Mythos is hard.  Perhaps this tutorial will guide you through the mind shattering truths of... **LITERATE PROGRAMMING**.
 
 {{< video https://youtu.be/NnMDV3CuWoo >}}

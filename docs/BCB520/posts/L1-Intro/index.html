@@ -510,6 +510,8 @@ Barrie Robison
 <div class="columns">
 <div class="column" style="font-size: 25px">
 <div class="cell" data-fontsize="2">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(grid)</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(gridExtra)</span>
@@ -517,6 +519,7 @@ Barrie Robison
 <span id="cb1-5"><a href="#cb1-5"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-6"><a href="#cb1-6"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-7"><a href="#cb1-7"></a>datasets<span class="sc">::</span>anscombe</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>   x1 x2 x3 x4    y1   y2    y3    y4
 1  10 10 10  8  8.04 9.14  7.46  6.58
@@ -536,6 +539,23 @@ Barrie Robison
 <h4 id="anscombes-quartet-1">Anscombe’s Quartet</h4>
 <p>The four x-y pairs have identical summary statistics.</p>
 <div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>tidy_anscombe <span class="ot">&lt;-</span> anscombe <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a> <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>(),</span>
+<span id="cb3-3"><a href="#cb3-3"></a>              <span class="at">names_to =</span> <span class="fu">c</span>(<span class="st">".value"</span>, <span class="st">"set"</span>),</span>
+<span id="cb3-4"><a href="#cb3-4"></a>              <span class="at">names_pattern =</span> <span class="st">"(.)(.)"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5"></a>tidy_anscombe_summary <span class="ot">&lt;-</span> tidy_anscombe <span class="sc">%&gt;%</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>  <span class="fu">group_by</span>(set) <span class="sc">%&gt;%</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="at">.cols =</span> <span class="fu">everything</span>(),</span>
+<span id="cb3-8"><a href="#cb3-8"></a>                   <span class="at">.fns =</span> <span class="fu">lst</span>(min,max,median,mean,sd,var),</span>
+<span id="cb3-9"><a href="#cb3-9"></a>                   <span class="at">.names =</span> <span class="st">"{col}_{fn}"</span>))</span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="co">#&gt; `summarise()` ungrouping output (override with `.groups` argument)</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a></span>
+<span id="cb3-12"><a href="#cb3-12"></a>vars<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"set"</span>, <span class="st">"x_mean"</span>, <span class="st">"x_var"</span>,  <span class="st">"y_mean"</span>, <span class="st">"y_var"</span>)</span>
+<span id="cb3-13"><a href="#cb3-13"></a>thing<span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(tidy_anscombe_summary[vars])</span>
+<span id="cb3-14"><a href="#cb3-14"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(thing)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <table>
 <thead>
@@ -585,7 +605,20 @@ Barrie Robison
 </section>
 <section id="viz-matters" class="slide level2">
 <h2>VIZ MATTERS</h2>
+<div class="cell" data-fontsize="2">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(tidy_anscombe,</span>
+<span id="cb4-2"><a href="#cb4-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x,</span>
+<span id="cb4-3"><a href="#cb4-3"></a>           <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> tidy_anscombe_summary, <span class="fu">aes</span>(<span class="at">x=</span>x_mean, <span class="at">y =</span> y_mean, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">5</span>),</span>
+<span id="cb4-6"><a href="#cb4-6"></a>             <span class="at">show.legend =</span> <span class="cn">FALSE</span>)<span class="sc">+</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>set) <span class="sc">+</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 
+</div>
 <img data-src="index_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"><div class="footer">
 <p>Learn more: <a href="https://www.njtierney.com/post/2020/06/01/tidy-anscombe/">TIDY ANSCOMBE</a></p>
 </div>

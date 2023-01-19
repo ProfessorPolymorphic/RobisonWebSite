@@ -134,6 +134,7 @@ Computer-based visualization systems provide visual representations of [datasets
 ::: {.column width="50%" style="font-size: 25px"}
 ```{r}
 #| echo: true
+#| code-fold: true
 #| fontsize: 2
 library(ggplot2)
 library(grid)
@@ -151,6 +152,9 @@ datasets::anscombe
 The four x-y pairs have identical summary statistics.
 
 ```{r}
+#| echo: true
+#| code-fold: true
+
 tidy_anscombe <- anscombe %>%
  pivot_longer(cols = everything(),
               names_to = c(".value", "set"),
@@ -172,6 +176,9 @@ knitr::kable(thing)
 ## VIZ MATTERS
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| fontsize: 2
 ggplot(tidy_anscombe,
        aes(x = x,
            y = y)) +
