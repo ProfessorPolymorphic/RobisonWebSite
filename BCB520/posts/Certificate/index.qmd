@@ -1,6 +1,5 @@
 ---
-title: "Certificate"
-subtitle: "BCB 504 / 520"
+title: "CERTIFICATE"
 format:
   html: 
     code-fold: true
@@ -10,7 +9,9 @@ date: "2023-01-12"
 categories: [Resources, Education]
 image: "certdata.png"
 ---
-A graduate certificate that trains non-specialists how to think about, organize, analyze, and visualize data, and communicate data-driven insights to technical and lay audiences.
+
+Learn how to think about, organize, analyze, and visualize data. Communicate data-driven insights to technical and lay audiences.
+
 ```{r}
 #| include: false
 

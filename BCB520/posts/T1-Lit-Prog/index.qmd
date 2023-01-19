@@ -1,5 +1,5 @@
 ---
-title: "Tutorial 1 - Literate Programming"
+title: "TUTORIAL 1 - Literate Programming"
 author: "Barrie Robison"
 date: "2023-01-18"
 categories: [Tutorial, DataViz, Quarto, Literate Programming]

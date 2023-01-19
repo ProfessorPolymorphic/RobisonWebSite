@@ -1,5 +1,5 @@
 ---
-title: "TUTORIAL 3 - PYTHON"
+title: "TUTORIAL 3 - Python"
 date: "2023-01-19"
 format:
   html:

@@ -1,6 +1,5 @@
 ---
 title: "LECTURE 1 - INTRO"
-subtitle: "BCB 504 / 520"
 format:
   revealjs: 
     slide-number: true

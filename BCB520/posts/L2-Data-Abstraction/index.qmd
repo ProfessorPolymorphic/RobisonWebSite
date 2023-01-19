@@ -1,6 +1,5 @@
 ---
 title: "LECTURE 2 - DATA ABSTRACTION"
-subtitle: "BCB 504 / 520"
 format:
   revealjs: 
     slide-number: true
