@@ -27,4 +27,6 @@ I am maintaining the course here and on its [CANVAS PAGE](https://canvas.uidaho.
 
 [Cheat Sheets:](https://posit.co/resources/cheatsheets/){target="_blank"} So many visual guides for many R packages, including the tidyverse, ggplot, dplyr, etc.
 
+[Learning Vis Tools: Teaching Data Visualization Tutorials](https://ieeexplore.ieee.org/document/8933751){target="_blank"} An interesting paper for discussion as we forge the structure for this class.
+
 # **// Posts**

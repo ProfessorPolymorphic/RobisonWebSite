@@ -448,6 +448,20 @@
     "text": "ANALYSIS FRAMEWORK EXAMPLE\nTree Juxtaposer\n\n\n\n\nCANVAS…HOME"
   },
   {
+    "objectID": "BCB520/posts/T3-Python/index.html",
+    "href": "BCB520/posts/T3-Python/index.html",
+    "title": "TUTORIAL # - PYTHON",
+    "section": "",
+    "text": "I relied heavily on the Quarto documentation for this tutorial.\nThe basic things I learned were:\n\nInstall Python (again). I downloaded the newest version from the Python website.\nInstall the `jupyter’ package using the terminal:\n\n\nWindows: py -m pip install jupyter\nMac: python3 -m pip install jupyter\n\n\nInstall the modules you need using the terminal (Mac examples below):\n\n\npython3 -m pip install numpy\npython3 -m pip install matplotlib\n\nAfter I did this, the code from the Quarto website example (below) seemed to work!"
+  },
+  {
+    "objectID": "BCB520/posts/T3-Python/index.html#quarto-example-code",
+    "href": "BCB520/posts/T3-Python/index.html#quarto-example-code",
+    "title": "TUTORIAL # - PYTHON",
+    "section": "QUARTO EXAMPLE CODE",
+    "text": "QUARTO EXAMPLE CODE\nFor a demonstration of a line plot on a polar axis, see Figure 1.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
+  },
+  {
     "objectID": "BCB520/posts/A1-Lit-Prog/index.html",
     "href": "BCB520/posts/A1-Lit-Prog/index.html",
     "title": "ASSIGNMENT 1 - Fun with literate programming.",
@@ -571,7 +585,7 @@
     "href": "BCB520/BCB520.html",
     "title": "BCB 520 :: Foundations of Data Visualization",
     "section": "",
-    "text": "This class will help students establish a foundational understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R programming language. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using R. The course is designed to be “discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.\n\n\nI am maintaining the course here and on its CANVAS PAGE (for enrolled students).\nAwesome Quarto: A potentially interesting repository of Quarto documents, talks, tools, examples, etc.\nRiffomonas Project: Pat Schloss is a Professor at the University of Michigan. The Riffomonas Project is his Youtube channel, which has HUNDREDS of easy to follow and amazingly useful instructional videos on R, ggplot, version control, and literate programming.\nDr. Tamara Munzner’s Website: It isn’t fancy, but Dr. Munzner’s website has tons of resources from her textbook and the many data visualization courses she has offered. This includes recorded lectures that align directly with the chapters of the text, much like what we are using.\nCheat Sheets: So many visual guides for many R packages, including the tidyverse, ggplot, dplyr, etc."
+    "text": "This class will help students establish a foundational understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R programming language. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using R. The course is designed to be “discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.\n\n\nI am maintaining the course here and on its CANVAS PAGE (for enrolled students).\nAwesome Quarto: A potentially interesting repository of Quarto documents, talks, tools, examples, etc.\nRiffomonas Project: Pat Schloss is a Professor at the University of Michigan. The Riffomonas Project is his Youtube channel, which has HUNDREDS of easy to follow and amazingly useful instructional videos on R, ggplot, version control, and literate programming.\nDr. Tamara Munzner’s Website: It isn’t fancy, but Dr. Munzner’s website has tons of resources from her textbook and the many data visualization courses she has offered. This includes recorded lectures that align directly with the chapters of the text, much like what we are using.\nCheat Sheets: So many visual guides for many R packages, including the tidyverse, ggplot, dplyr, etc.\nLearning Vis Tools: Teaching Data Visualization Tutorials An interesting paper for discussion as we forge the structure for this class."
   },
   {
     "objectID": "PolymorphicGames.html",

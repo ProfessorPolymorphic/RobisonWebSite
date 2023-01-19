@@ -10,7 +10,7 @@ date: "2023-01-12"
 categories: [Resources, Education]
 image: "certdata.png"
 ---
-
+A graduate certificate that trains non-specialists how to think about, organize, analyze, and visualize data, and communicate data-driven insights to technical and lay audiences.
 ```{r}
 #| include: false
 
@@ -18,7 +18,6 @@ library(readxl)
 library(tidyverse)
 
 ```
-A graduate certificate that trains non-specialists how to think about, organize, analyze, and visualize data, and communicate data-driven insights to technical and lay audiences.
 
 
 # **PROFESSIONAL APPLICATIONS IN DATA SCIENCE**
@@ -90,7 +89,7 @@ knitr::kable(DSCore, caption = '')
 
 Students are provided a foundation for "thinking with data" through the introduction of computational, statistical, and data literacy skills. This includes the selection, collection, cleaning, management, descriptive analysis, and exploratory analysis of a dataset unique to their professional interests using modern computing languages. This course is taught by Dr. Michael Overton.
 
-#### BCB 5XX Communicating with Data (2 credits)
+#### BCB 521 Communicating with Data (2 credits)
 
 \*In person (spring) and asynchronous online.\*
 
@@ -102,7 +101,7 @@ Prerequisites: INTR 509 OR A BS degree OR permission.
 
 \*Note: This course could be divided into two 1 credit modules (verbal and written communication) which may facilitate online delivery and movement toward a stacking microcredential model.\*
 
-#### BCB 5XX Data Visualization (3 credits)
+#### BCB 520 Data Visualization (3 credits)
 
 \*In person (fall) and asynchronous online\*
 
@@ -114,7 +113,7 @@ Prerequisites: INTR 509 OR A BS degree OR Stat 251 OR Permission.
 
 \*Note: This course could be divided into three 1 credit modules (Foundations, Tabular Data, Advanced Topics) which may facilitate online delivery and movement toward a stacking microcredential model.\*
 
-#### BCB 5XX Online Portfolio (1 credit)
+#### BCB 522 Online Portfolio (1 credit)
 
 \*Asynchronous online\*
 
