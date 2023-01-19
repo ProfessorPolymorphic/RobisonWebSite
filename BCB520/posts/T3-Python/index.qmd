@@ -4,6 +4,7 @@ date: "2023-01-19"
 format:
   html:
     code-fold: true
+categories: [Tutorial, Quarto, Literate Programming, Python]
 jupyter: python3
 image: Pythonred.png
 ---
