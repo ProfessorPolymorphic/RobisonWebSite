@@ -1,0 +1,13 @@
+---
+title: "Tutorial 2 - Literate Programming and Anscombe's Quartet"
+author: "Barrie Robison"
+date: "2023-01-18"
+categories: [Tutorial, DataViz, Quarto, Literate Programming]
+image: "Cthulhunetwork.png"
+---
+
+## MORE QUARTO!
+
+Do the summary statistics reveal the truth?  Or are they **FILLED WITH LIES**?  A simple demonstration with Anscombe's Quartet.
+
+{{< video https://youtu.be/rxVmYNkikNY >}}
