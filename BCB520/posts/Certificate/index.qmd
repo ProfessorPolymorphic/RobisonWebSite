@@ -8,6 +8,7 @@ author: "Barrie Robison, Michael Overton"
 date: "2023-01-12"
 categories: [Resources, Education]
 image: "certdata.png"
+description: "Learn how to think about, organize, analyze, and visualize data. Communicate data-driven insights to technical and lay audiences."
 ---
 
 Learn how to think about, organize, analyze, and visualize data. Communicate data-driven insights to technical and lay audiences.
@@ -19,7 +20,6 @@ library(readxl)
 library(tidyverse)
 
 ```
-
 
 # **PROFESSIONAL APPLICATIONS IN DATA SCIENCE**
 

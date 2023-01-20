@@ -3,6 +3,7 @@ title: "Polymorphic Games Lab Meeting"
 author: "Barrie Robison"
 date: "2023-01-20"
 categories: [Lab Meeting, Polymorphic Games, DevBlog]
+image: digitalCthulhu.png
 ---
 
 ## AGENDA
@@ -38,6 +39,9 @@ There are lots of looming opportunities related to this project, and we need to 
 7. Additional interventions (movement restrictions).
 8. Additional scenarios.
 9. Model testing (movement and infection).
+10. Globe model implementation.
+11. Touchscreen implementation.
+12. BLOG / Youtube posts.
 
 ## CONFERENCE OPPORTUNITIES
 
