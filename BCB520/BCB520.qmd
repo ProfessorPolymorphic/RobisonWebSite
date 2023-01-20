@@ -29,4 +29,6 @@ I am maintaining the course here and on its [CANVAS PAGE](https://canvas.uidaho.
 
 [Learning Vis Tools: Teaching Data Visualization Tutorials](https://ieeexplore.ieee.org/document/8933751){target="_blank"} An interesting paper for discussion as we forge the structure for this class.
 
+[Barrie's GitHub](https://github.com/ProfessorPolymorphic){target="_blank"}
+
 # **// Posts**

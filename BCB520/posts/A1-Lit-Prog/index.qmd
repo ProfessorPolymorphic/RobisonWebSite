@@ -91,3 +91,9 @@ Instead, I want you to use the resources I point towards, or other resources tha
 [Tidyverse and Anscombe's Quartet](https://www.njtierney.com/post/2020/06/01/tidy-anscombe/)
 
 [Handy cheat-sheets for many different R packages](https://posit.co/resources/cheatsheets/)
+
+[Tutorial 1 - Literate Programming](../T1-Lit-Prog/index.qmd)
+
+[Tutorial 2 - Literate Programming and Anscombe's Quartet](../T2-Anscombe/index.qmd)
+
+[Tutorial 3 - Python](../T3-Python/index.qmd)
