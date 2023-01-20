@@ -291,6 +291,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#video-games-and-stem-education" id="toc-video-games-and-stem-education" class="nav-link" data-scroll-target="#video-games-and-stem-education">Video Games and STEM Education</a>
   <ul class="collapse">
   <li><a href="#adding-evolution-to-video-games" id="toc-adding-evolution-to-video-games" class="nav-link" data-scroll-target="#adding-evolution-to-video-games">Adding Evolution to Video Games</a></li>
+  <li><a href="#educational-outcomes" id="toc-educational-outcomes" class="nav-link" data-scroll-target="#educational-outcomes">Educational Outcomes</a></li>
   </ul></li>
   <li><a href="#get-involved" id="toc-get-involved" class="nav-link" data-scroll-target="#get-involved">Get Involved</a></li>
   </ul></li>
@@ -370,20 +371,29 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="inheritance" class="level4">
 <h4 class="anchored" data-anchor-id="inheritance">Inheritance</h4>
+<p><strong>The addition of an inheritance model is the primary differentiator in our games that creates adaptation.</strong></p>
 <p>In most games, there is no relationship between enemies within a wave or between waves. They are instantiated (spawned) with developer defined traits at a specified rate, location, and time (or level or wave). This is the key difference in the games that our lab creates. In our games, the enemies traits are specified by digital genomes that they pass on to their offspring through a form of reproduction. If the enemy has a speed value of 4, that means that when it reproduces, its offspring inherit that speed value of 4. Most of the games we work on specify about 40 to 80 “genes” in the enemy genome, each of which can influence one or more game traits such as speed, fire rate, morphology, behavior, health, armor, resistances, etc.</p>
 </section>
 <section id="selection" class="level4">
 <h4 class="anchored" data-anchor-id="selection">Selection</h4>
+<p>Selection occurs when there is a correlation between a trait (say… hit points or movement behavior) and <strong>Fitness</strong>. In biological populations, <code>Fitness</code> is usually defined in terms of the number of offspring produced by a given individual. We often measure proxies for fitness in empirical biology that are typically predictive of (or at least correlated with ) <code>Fitness</code>, such as seed set in plants, survivorship, or number of eggs. In our games, we can make explicit linkages between performance and fitness using <code>Fitness Functions</code>.</p>
+<p>For example, in Darwin’s Demons the enemies accrue <code>Aggression</code> by moving downward on the screen. The closer they get to the bottom, the higher their <code>Aggression</code> score. if they move past the player and off the bottom of the screen, their <code>Aggression</code> score gets an even larger boost. After each wave, the enemies with the highest <code>Aggression</code> score also have the highest probability of mating and producing offspring. Thus, we have created an explicit link in which <code>Aggression</code> is correlated with <code>Fitness</code> (number of offspring). Our games often have more than one of these <code>Fitness Functions</code>. For example, the Protean Swarm in Darwin’s Demons can also increase their mating chance with <code>Accuracy</code> (which measures how often they shoot at the player and how close they came to hitting the player) and <code>Lifetime</code> (which measures how long they last on the screen) .</p>
+<p>If we turn off the fitness functions, then after each wave the enemies undergo random mating. Adaptive evolution does not occur, but the enemy traits might still evolve randomly because of Random Genetic Drift.</p>
 </section>
 <section id="time" class="level4">
 <h4 class="anchored" data-anchor-id="time">Time</h4>
+<p>The concept of time in video games is often defined in terms of waves or levels. Both of these terms imply a progression toward the game’s goal, along with a corresponding increase in difficulty. In our games, we usually specify time in terms of generations. A wave of enemies begin the game, the player defeats them, and then the next wave is created with Inheritance using a mating function specified as described above. As the generations (waves) proceed, the enemies with traits that are best able to optimize the fitness functions have more offspring, and the population adapts to the game play conditions. Most of these conditions are created by player choices and playstyle, and thus the enemies adapt to the player. Difficulty increases organically and repeated gameplay often creates novel adaptive solutions to the same play style.</p>
+</section>
+</section>
+<section id="educational-outcomes" class="level3">
+<h3 class="anchored" data-anchor-id="educational-outcomes">Educational Outcomes</h3>
 <p>We reasoned that playing these types of games might have implications for STEM education. The success of the player is based on her comprehension and application of principles of evolutionary biology. The parallels to real world examples are numerous, and include the rapid evolution of antibiotic resistance in microbial pathogens, adaptation of crop pests to chemical and biological control measures, and behavioral adaptation to captivity in domesticated animals.</p>
 <p>Adding biological evolution to video games makes the games better for the game player and facilitates player comprehension of complex concepts that are hard to teach.</p>
 </section>
 </section>
-</section>
 <section id="get-involved" class="level2">
 <h2 class="anchored" data-anchor-id="get-involved">Get Involved</h2>
+<p>If you are interested in joining the lab and working in the studio, reach out to me by email.</p>
 </section>
 </section>
 <section id="archived" class="level1">
