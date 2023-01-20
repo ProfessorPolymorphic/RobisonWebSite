@@ -10,7 +10,7 @@ website:
         text: HOME
       - text: "RESEARCH"
         file: Research.qmd
-      - text: "PUPBLICATIONS"
+      - text: "PUBLICATIONS"
         file: Publications.qmd
       - text: "TEACHING"
         file: Teaching.qmd

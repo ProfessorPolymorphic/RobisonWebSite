@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -110,9 +110,35 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./../index.qmd">
+ <span class="menu-text">HOME</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../Research.qmd">
+ <span class="menu-text">RESEARCH</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../Publications.qmd">
+ <span class="menu-text">PUBLICATIONS</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../Teaching.qmd">
+ <span class="menu-text">TEACHING</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../PolymorphicGames.qmd">
+ <span class="menu-text">STUDIO</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./ProfessorPolymorphic/index.qmd">
+ <span class="menu-text">BLOG</span></a>
+  </li>  
+</ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">
+    <a class="nav-link active" href="./about.html" aria-current="page">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -130,12 +156,20 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Professor Polymorphic</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Professor Polymorphic</h1>
+    <div class="quarto-title column-body">
+      <h1 class="title d-none d-lg-block">Professor Polymorphic</h1>
                       </div>
   </div>
     
@@ -150,21 +184,89 @@ ul.task-list li input[type="checkbox"] {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./about.html" class="sidebar-item-text sidebar-link">About</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Posts</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./posts/post-with-code/index.html" class="sidebar-item-text sidebar-link">Observable Experiment</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./posts/UndergradResearch/index.html" class="sidebar-item-text sidebar-link">UNDERGRADUATE RESEARCH</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./posts/welcome/index.html" class="sidebar-item-text sidebar-link">You’ve gotta be f***ing kidding…</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./posts/LabMeetingJan20/index.html" class="sidebar-item-text sidebar-link">Polymorphic Games Lab Meeting</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./posts/LabMeetingJan20/OSTime.html" class="sidebar-item-text sidebar-link">OSDevTimeline</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./posts/LabMeetingJan20/SanteFeWorkshop.html" class="sidebar-item-text sidebar-link">SanteFe Workshop</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Presentation">Presentation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Research">Research <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Undergraduate">Undergraduate <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="DevBlog">DevBlog <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Lab Meeting">Lab Meeting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Polymorphic Games">Polymorphic Games <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Presentation">Presentation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Research">Research <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Undergraduate">Undergraduate <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-body" id="quarto-document-content">
 
 
 
 
 <section id="about" class="level1">
 <h1><strong>// About</strong></h1>
-<p>“The oldest and strongest emotion of mankind is <span class="red">fear</span>, and the oldest and strongest kind of fear is fear of the <span class="red">unknown</span>”.</p>
-<p>– H.P. Lovecraft, Supernatural Horror in Literature</p>
-<p><video src="DemonBarrie.mp4" class="img-fluid" controls=""><a href="DemonBarrie.mp4">Video</a></video></p>
+<table class="table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 73%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><video controls="" autoplay="" loop="" width="250">
+<source src="DemonBarrie.mp4" type="video/mp4">
+</video></td>
+<td><p>“The oldest and strongest emotion of mankind is <span class="red">fear</span>, and the oldest and strongest kind of fear is fear of the <span class="red">unknown</span>”.</p>
+<p>– H.P. Lovecraft, Supernatural Horror in Literature</p></td>
+</tr>
+</tbody>
+</table>
 <section id="musings-at-the-intersection-of-horror-and-science" class="level2">
 <h2 class="anchored" data-anchor-id="musings-at-the-intersection-of-horror-and-science">Musings at the Intersection of Horror and Science</h2>
 <p>Hello! This BLOG is where I share my thoughts on how science informs horror fiction, and whether horror fiction can be used to at least help teach science, if not directly inform scientific research. The posts that appear here will vary in their focus. Some will directly address the intersection of horror and science, while some might focus primarily on either horror fiction or science concepts.</p>
@@ -180,13 +282,32 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1667941189482" data-listing-reading-time-sort="4.54">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1674238391380" data-listing-reading-time-sort="4.54">
 <a href="./posts/post-with-code/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-img-bg" style="height: 150px;">
@@ -208,7 +329,43 @@ Testing out observable and D3 in Quarto!
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Presentation,Research,Undergraduate" data-listing-date-sort="1667808000000" data-listing-file-modified-sort="1670029583285" data-listing-reading-time-sort="2.715">
+<div class="g-col-1" data-index="1" data-categories="Lab Meeting,Polymorphic Games,DevBlog" data-listing-date-sort="1674201600000" data-listing-file-modified-sort="1674241196737" data-listing-reading-time-sort="1.46">
+<a href="./posts/LabMeetingJan20/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/LabMeetingJan20/digitalCthulhu.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Polymorphic Games Lab Meeting
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Lab Meeting'); return false;">
+Lab Meeting
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Polymorphic Games'); return false;">
+Polymorphic Games
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DevBlog'); return false;">
+DevBlog
+</div>
+</div>
+<div class="card-text listing-description">
+There are lots of looming opportunities related to this project, and we need to set up this semester’s burn down list and timeline.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Barrie Robison
+</div>
+<div class="listing-date">
+Jan 20, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Presentation,Research,Undergraduate" data-listing-date-sort="1667808000000" data-listing-file-modified-sort="1674238394999" data-listing-reading-time-sort="2.715">
 <a href="./posts/UndergradResearch/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -230,7 +387,7 @@ Undergraduate
 </div>
 </div>
 <div class="card-text listing-description">
-
+<span class="absolute" data-top="320" data-left="10">Department of Biological Sciences</span>
 </div>
 <div class="card-attribution card-text-small justify">
 <div class="listing-author">
@@ -244,7 +401,7 @@ Nov 7, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="news" data-listing-date-sort="1666162800000" data-listing-file-modified-sort="1671044636733" data-listing-reading-time-sort="2.435">
+<div class="g-col-1" data-index="3" data-categories="news" data-listing-date-sort="1666162800000" data-listing-file-modified-sort="1671044636733" data-listing-reading-time-sort="2.435">
 <a href="./posts/welcome/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">

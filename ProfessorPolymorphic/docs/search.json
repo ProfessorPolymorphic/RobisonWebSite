@@ -102,14 +102,14 @@
     "href": "index.html",
     "title": "Professor Polymorphic",
     "section": "",
-    "text": "“The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown”.\n– H.P. Lovecraft, Supernatural Horror in Literature\nVideo\n\n\nHello! This BLOG is where I share my thoughts on how science informs horror fiction, and whether horror fiction can be used to at least help teach science, if not directly inform scientific research. The posts that appear here will vary in their focus. Some will directly address the intersection of horror and science, while some might focus primarily on either horror fiction or science concepts.\nMy basic premise is driven by the Lovecraft quote you see at the top of the screen. I find this compelling because I am a scientist, and science is one of two tools humanity has invented that pushes back against the unknown."
+    "text": "“The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown”.\n– H.P. Lovecraft, Supernatural Horror in Literature\n\n\n\n\n\nHello! This BLOG is where I share my thoughts on how science informs horror fiction, and whether horror fiction can be used to at least help teach science, if not directly inform scientific research. The posts that appear here will vary in their focus. Some will directly address the intersection of horror and science, while some might focus primarily on either horror fiction or science concepts.\nMy basic premise is driven by the Lovecraft quote you see at the top of the screen. I find this compelling because I am a scientist, and science is one of two tools humanity has invented that pushes back against the unknown."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Evolution. Data Science. Video Games. Horror Fiction.\nI am a Professor of Biological Sciences at the University of Idaho, and the cofounder of Polymorphic Games, an experimental video game studio that applies game development technology to scientific research and education. We have released two evolutionary video games on Steam:\nDarwin’s Demons is an rcade style space shooter in which you battle a population of evolving aliens. The alien’s morphology, fire type, and behaviors are all encoded by a digital genome. The aliens that are best able to shoot or evade you reproduce to make the next generation.\nProject Hastur is an evolutionary tower defense game. Defend humanity against the ever changing threat of the alien Proteans. Project Hastur combines elements of 3D tower defense and real-time strategy with models of biological evolution to create a uniquely challenging experience.\nI am also a huge Horror and Science Fiction nerd, and am fascinated by the intersection of these genres with science."
+    "text": "Evolution. Data Science. Video Games. Horror Fiction.\nI am a Professor of Biological Sciences at the University of Idaho, and the cofounder of Polymorphic Games, an experimental video game studio that applies game development technology to scientific research and education. We have released two evolutionary video games on Steam:\nDarwin’s Demons is an rcade style space shooter in which you battle a population of evolving aliens. The alien’s morphology, fire type, and behaviors are all encoded by a digital genome. The aliens that are best able to shoot or evade you reproduce to make the next generation.\nProject Hastur is an evolutionary tower defense game. Defend humanity against the ever changing threat of the alien Proteans. Project Hastur combines elements of 3D tower defense and real-time strategy with models of biological evolution to create a uniquely challenging experience.\nI am also a huge Horror and Science Fiction nerd, and am fascinated by the intersection of these genres with science.\nVideo"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -130,7 +130,7 @@
     "href": "posts/UndergradResearch/index.html#who-are-you",
     "title": "UNDERGRADUATE RESEARCH",
     "section": "WHO ARE YOU?",
-    "text": "WHO ARE YOU?\n\nmidjourney // a terrified undergraduate researcher\nBriefly:\n\nYour name\nYour major\nYour career goal(s)\nYour darkest fear"
+    "text": "WHO ARE YOU?\n\nmidjourney // a terrified undergraduate researcher\n\nBriefly:\n\nYour name\nYour major\nYour career goal(s)\nYour darkest fear"
   },
   {
     "objectID": "posts/UndergradResearch/index.html#course-summary",
@@ -305,7 +305,7 @@
     "href": "posts/UndergradResearch/index.html#it-will-all-be-ok",
     "title": "UNDERGRADUATE RESEARCH",
     "section": "IT WILL ALL BE OK!",
-    "text": "IT WILL ALL BE OK!\n midjouney // an anxious undergraduate\n\nsome text\n\n\n\nbrobison@uidaho.edu"
+    "text": "IT WILL ALL BE OK!\n midjouney // an anxious undergraduate\n\nsome text"
   },
   {
     "objectID": "posts/UndergradResearch/index.html#test",
@@ -313,5 +313,54 @@
     "title": "UNDERGRADUATE RESEARCH",
     "section": "Test",
     "text": "Test\ndiv.polaroid { width: 80%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 25px; }\ndiv.container { text-align: center; padding: 10px 20px; }\n\n\n\n\nResponsive Polaroid Images / Cards\n\n\n\n\n\nCinque Terre\n\n\n\n\n\n\n\nNorthern Lights\n\n\n\n\n\nbrobison@uidaho.edu"
+  },
+  {
+    "objectID": "posts/LabMeetingJan20/index.html",
+    "href": "posts/LabMeetingJan20/index.html",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "",
+    "text": "Development goals for Outbreak Simulator.\nConference opportunities (March to August).\nDevelopment goals for the twin stick evolutionary sheep guarding slime game.\nPossible additional hires (Programmer and UI/UX).\nPreliminary thoughts for the Yeast Evolution collaboration with Syracuse."
+  },
+  {
+    "objectID": "posts/LabMeetingJan20/index.html#outbreak-simulator",
+    "href": "posts/LabMeetingJan20/index.html#outbreak-simulator",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "OUTBREAK SIMULATOR",
+    "text": "OUTBREAK SIMULATOR\nThere are lots of looming opportunities related to this project, and we need to set up this semester’s burn down list and timeline.\n\nRelevant dates include:\n\nJanuary 30, 2023: Deadline to submit an application (4 pages) for an interactive demo to ISLS meeting in Montreal (June 13-17).\nMarch 19-22, 2023: Tickbase Annual Meeting, Lake Tahoe, NV.\nMay 17-18, 2023: Workshop on Simulation Games for Global Pandemic Resilience, Santa Fe Institute, in Santa Fe, New Mexico.\nJuly 2023: SEPA Resubmission likely.\n\n\n\nDevelopment needs:\n\nAirports / Air travel.\nSimple build with pre/post tests installed.\nSimple build that writes simulation session data to a csv.\nHeadless mode for cluster deployment.\nPerformance optimization.\nUI/UX Improvements (Timeline from Elisha).\nAdditional interventions (movement restrictions).\nAdditional scenarios.\nModel testing (movement and infection).\nGlobe model implementation.\nTouchscreen implementation.\nBLOG / Youtube posts.\nModel creator."
+  },
+  {
+    "objectID": "posts/LabMeetingJan20/index.html#conference-opportunities",
+    "href": "posts/LabMeetingJan20/index.html#conference-opportunities",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "CONFERENCE OPPORTUNITIES",
+    "text": "CONFERENCE OPPORTUNITIES\n\nMarch 19-22, 2023: Tickbase Annual Meeting, Lake Taho, NV\nApril 28-30, 2023: EVO WIBO in Port Townsend, WA\nMay 17-18, 2023: Workshop on Simulation Games for Global Pandemic Resilience, Santa Fe Institute, in Santa Fe, New Mexico\nMay 30-June 2, 2023: SEPA SciEd Conference in Washington DC\nJune 13-17, 2023: ISLS meeting in Montreal\nJune 21-25, 2023: Evolution in Albuquerque, NM\nOctober 22-27, 2023: IEEE VIS: Visualization and Analytics in Melbourne, Australia"
+  },
+  {
+    "objectID": "posts/LabMeetingJan20/index.html#twin-stick-dev-goals",
+    "href": "posts/LabMeetingJan20/index.html#twin-stick-dev-goals",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "TWIN STICK DEV GOALS",
+    "text": "TWIN STICK DEV GOALS"
+  },
+  {
+    "objectID": "posts/LabMeetingJan20/index.html#possible-additional-hires",
+    "href": "posts/LabMeetingJan20/index.html#possible-additional-hires",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "POSSIBLE ADDITIONAL HIRES",
+    "text": "POSSIBLE ADDITIONAL HIRES\n\nProgrammer\nUI/UX"
+  },
+  {
+    "objectID": "posts/LabMeetingJan20/index.html#yeast-coevolution",
+    "href": "posts/LabMeetingJan20/index.html#yeast-coevolution",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "YEAST COEVOLUTION",
+    "text": "YEAST COEVOLUTION\nThis is a funded grant to Dave Althoff and Kari Seagraves at Syracuse University. We have a subcontract (~$200k) for development of educational games related to yeast coevolution."
+  },
+  {
+    "objectID": "posts/UndergradResearch/index.html",
+    "href": "posts/UndergradResearch/index.html",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "",
+    "text": "// Evolution // Data Science // Video Games // Horror Fiction\n\n\n\n\nDepartment of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
   }
 ]

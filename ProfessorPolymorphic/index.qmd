@@ -5,29 +5,27 @@ listing:
   sort: "date desc"
   type: grid
   categories: true
-  sort-ui: false
+  sort-ui: true
   filter-ui: true
 page-layout: full
 title-block-banner: true
-format:
-  html:
-    auto-play-media: true
 ---
 
 # **// About**
 
-"The oldest and strongest emotion of mankind is [fear]{.red}, and the oldest and strongest kind of fear is fear of the [unknown]{.red}".
++-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| <video controls autoplay loop width = "250">    | "The oldest and strongest emotion of mankind is [fear]{.red}, and the oldest and strongest kind of fear is fear of the [unknown]{.red}". |
+|                                                 |                                                                                                                                          |
+| <source src="DemonBarrie.mp4" type="video/mp4"> | -- H.P. Lovecraft, Supernatural Horror in Literature                                                                                     |
+|                                                 |                                                                                                                                          |
+| </video>                                        |                                                                                                                                          |
++-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 
--- H.P. Lovecraft, Supernatural Horror in Literature
-
-![](DemonBarrie.mp4) 
 
 ## Musings at the Intersection of Horror and Science
 
-Hello!  This BLOG is where I share my thoughts on how science informs horror fiction, and whether horror fiction can be used to at least help teach science, if not directly inform scientific research.  The posts that appear here will vary in their focus.  Some will directly address the intersection of horror and science, while some might focus primarily on either horror fiction or science concepts.
+Hello! This BLOG is where I share my thoughts on how science informs horror fiction, and whether horror fiction can be used to at least help teach science, if not directly inform scientific research. The posts that appear here will vary in their focus. Some will directly address the intersection of horror and science, while some might focus primarily on either horror fiction or science concepts.
 
-My basic premise is driven by the Lovecraft quote you see at the top of the screen.  I find this compelling because I am a scientist, and science is one of two tools humanity has invented that pushes back against the unknown.  
-
-
+My basic premise is driven by the Lovecraft quote you see at the top of the screen. I find this compelling because I am a scientist, and science is one of two tools humanity has invented that pushes back against the unknown.
 
 # **// Posts**

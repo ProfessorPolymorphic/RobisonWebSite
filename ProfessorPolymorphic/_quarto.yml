@@ -11,6 +11,23 @@ website:
         href: https://github.com/
       - icon: twitter
         href: https://twitter.com
+    left:
+      - href: ../index.qmd
+        text: HOME
+      - text: "RESEARCH"
+        file: ../Research.qmd
+      - text: "PUBLICATIONS"
+        file: ../Publications.qmd
+      - text: "TEACHING"
+        file: ../Teaching.qmd
+      - text: "STUDIO"
+        file: ../PolymorphicGames.qmd
+      - text: "BLOG"
+        file: ProfessorPolymorphic/index.qmd
+
+  sidebar:
+   contents: auto
+        
 format:
   html:
     theme: spacelab

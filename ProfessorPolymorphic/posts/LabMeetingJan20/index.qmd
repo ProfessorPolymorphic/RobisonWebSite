@@ -42,6 +42,7 @@ There are lots of looming opportunities related to this project, and we need to 
 10. Globe model implementation.
 11. Touchscreen implementation.
 12. BLOG / Youtube posts.
+13. Model creator.
 
 ## CONFERENCE OPPORTUNITIES
 

@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../Publications.html">
- <span class="menu-text">PUPBLICATIONS</span></a>
+ <span class="menu-text">PUBLICATIONS</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../Teaching.html">
@@ -346,9 +346,21 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="about" class="level1">
 <h1><strong>// About</strong></h1>
-<p>“The oldest and strongest emotion of mankind is <span class="red">fear</span>, and the oldest and strongest kind of fear is fear of the <span class="red">unknown</span>”.</p>
-<p>– H.P. Lovecraft, Supernatural Horror in Literature</p>
-<p><video src="DemonBarrie.mp4" class="img-fluid" controls=""><a href="DemonBarrie.mp4">Video</a></video></p>
+<table class="table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 73%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><video controls="" autoplay="" loop="" width="250">
+<source src="DemonBarrie.mp4" type="video/mp4">
+</video></td>
+<td><p>“The oldest and strongest emotion of mankind is <span class="red">fear</span>, and the oldest and strongest kind of fear is fear of the <span class="red">unknown</span>”.</p>
+<p>– H.P. Lovecraft, Supernatural Horror in Literature</p></td>
+</tr>
+</tbody>
+</table>
 <section id="musings-at-the-intersection-of-horror-and-science" class="level2">
 <h2 class="anchored" data-anchor-id="musings-at-the-intersection-of-horror-and-science">Musings at the Intersection of Horror and Science</h2>
 <p>Hello! This BLOG is where I share my thoughts on how science informs horror fiction, and whether horror fiction can be used to at least help teach science, if not directly inform scientific research. The posts that appear here will vary in their focus. Some will directly address the intersection of horror and science, while some might focus primarily on either horror fiction or science concepts.</p>
@@ -364,6 +376,25 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
@@ -392,7 +423,7 @@ Testing out observable and D3 in Quarto!
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Lab Meeting,Polymorphic Games,DevBlog" data-listing-date-sort="1674201600000" data-listing-file-modified-sort="1674240541193" data-listing-reading-time-sort="1.45">
+<div class="g-col-1" data-index="1" data-categories="Lab Meeting,Polymorphic Games,DevBlog" data-listing-date-sort="1674201600000" data-listing-file-modified-sort="1674241196737" data-listing-reading-time-sort="1.46">
 <a href="../ProfessorPolymorphic/posts/LabMeetingJan20/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
