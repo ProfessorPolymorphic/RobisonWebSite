@@ -132,7 +132,7 @@ The meaning of a word, phrase, sentence, or text.
 
 ## SEMANTICS FOR DATA {.smaller}
 
-:::: {layout-ncol="2"}
+::: {layout-ncol="2"}
 ### Semantics
 
 -   [item:]{.red} individual entity, discrete
@@ -143,25 +143,23 @@ The meaning of a word, phrase, sentence, or text.
     -   eg horsepower, make for car
     -   "dependent variable"
 
-
 ### Data Table
+
 ![](datatable2.png)
-::::
+:::
 
-[[ITEM:]{.red} Person]{.fragment}
+[ITEM:]{.red} Person
 
-[[ATTRIBUTES:]{.red} Name, Age, Shirt Size, Favorite Fruit]{.fragment}
-
-
+[ATTRIBUTES:]{.red} Name, Age, Shirt Size, Favorite Fruit
 
 ## OTHER DATA TYPES
 
 -   Links
     -   express relationship between two items
-    -   e.g/ friendship on facebook, interaction between proteins 
+    -   e.g/ friendship on facebook, interaction between proteins
 -   Positions
     -   spatial data: location in 2D or 3D
-    -   e.g. pixels in photo, voxels in MRI scan, latitude/longitude 
+    -   e.g. pixels in photo, voxels in MRI scan, latitude/longitude
 -   Grids
     -   sampling strategy for continuous data
 
@@ -212,12 +210,13 @@ indexing based on multiple keys (eg genes, patients)
 :::
 
 ## NETWORKS
+
 Network/graph nodes (vertices) connected by links (edges). A tree is special case: no cycles, often have roots, and are directed.
 
 ::: {layout-ncol="2"}
 ![](treeandnet.png)
 
-![](Networks.png){width=200}
+![](Networks.png){width="200"}
 :::
 
 ## FIELDS
@@ -229,9 +228,9 @@ Network/graph nodes (vertices) connected by links (edges). A tree is special cas
 Attribute values associated w/ cells cell contains value from continuous domain (eg temperature, pressure, wind velocity measured or simulated).
 
 ::: {layout-ncol="2"}
-![](spatialfields.png){width=300}
+![](spatialfields.png){width="300"}
 
-![](map1.png){width=400}
+![](map1.png){width="400"}
 :::
 
 ## SPATIAL FIELDS 2 {.smaller}
@@ -239,8 +238,8 @@ Attribute values associated w/ cells cell contains value from continuous domain 
 ::: {layout-ncol="2"}
 -   Attribute values associated w/ cells.
 -   Cell contains value from continuous domain
-    - (eg temperature, pressure, wind velocity)
--   Measured or simulated. 
+    -   (eg temperature, pressure, wind velocity)
+-   Measured or simulated.
 -   Major concerns
     -   sampling:
         -   where attributes are measured
@@ -248,15 +247,33 @@ Attribute values associated w/ cells cell contains value from continuous domain 
         -   how to model attributes elsewhere
     -   grid types
 
-
-![](MRI.png){width=500}
+![](MRI.png){width="500"}
 :::
 
-## SPATIAL FIELDS 3
+## SPATIAL FIELDS 3 {.smaller}
 
-attribute values associated w/ cells cell contains value from continuous domain eg temperature, pressure, wind velocity measured or simulated major concerns sampling:where attributes are measured interpolation:how to model attributes elsewhere grid types major divisions attributes per cell: scalar (1), vector (2), tensor (many)
+::: columns
+::: {.r-fit-text .column width="60%"}
+-   Attribute values associated w/ cells.
+-   Cell contains value from continuous domain
+    -   (eg temperature, pressure, wind velocity)
+-   Measured or simulated.
+-   Major concerns
+    -   sampling:
+        -   where attributes are measured
+    -   interpolation:
+        -   how to model attributes elsewhere
+    -   grid types
+-   Major divisions - attributes per cell:
+    -   scalar (1)
+    -   vector (2)
+    -   tensor (many)
+:::
 
+::: {.column width="40%"}
 ![](cellfields.png)
+:::
+:::
 
 ## GEOMETRY
 
@@ -264,15 +281,45 @@ attribute values associated w/ cells cell contains value from continuous domain 
 
 ## GEOMETRY 2
 
-shape of items explicit spatial positions / regions points, lines, curves, surfaces, volumes boundary between computer graphics and visualization graphics: geometry taken as given vis: geometry is result of a design decision
+::: columns
+::: {.r-fit-text .column width="60%"}
+-   Shape of items
+-   Explicit spatial positions / regions
+    -   points, lines, curves, surfaces, volumes
+-   Boundary between computer graphics and visualization
+    -   graphics: geometry taken as given
+    -   vis: geometry is result of a design decision
+:::
 
-![](geometrymap.png) \## COLLECTIONS
+::: {.column width="40%"}
+![](geometrymap.png)
+:::
+:::
 
-![](Clusters1.png) \## COLLECTIONS 2
+## COLLECTIONS
 
-how we group items sets unique items, unordered lists ordered, duplicates possible clusters groups of similar items
+![](Clusters1.png)
 
+## COLLECTIONS 2
+
+::: columns
+::: {.r-fit-text .column width="60%"}
+Grouping Items:
+
+-   sets
+    -   unique items
+    -   unordered
+-   lists
+    -   ordered
+    -   duplicates possible
+-   clusters
+    -   groups of similar items
+:::
+
+::: {.column width="40%"}
 ![](Collections.png)
+:::
+:::
 
 ## DATA TYPES
 
@@ -280,27 +327,41 @@ how we group items sets unique items, unordered lists ordered, duplicates possib
 
 ## ATTRIBUTE TYPES
 
-which classes of values & measurements? categorical (nominal) compare equality no implicit ordering ordered ordinal less/greater than defined quantitative meaningful magnitude arithmetic possib
+::: columns
+::: {.r-fit-text .column width="40%"}
+-   [Categorical]{.red} (nominal):
+    -   compare equality
+    -   no implicit ordering
+-   [Ordered]{.red}:
+    -   ordinal
+    -   less/greater than defined
+-   [Quantitative]{.red}:
+    -   meaningful magnitude
+    -   arithmetic possible
+:::
 
+::: {.column width="60%"}
 ![](Attributes.png)
+:::
+:::
 
 ## EXAMPLE
 
-categorical
+[Categorical]{.red}
 
-ordinal
+[Ordinal]{.green}
 
-quantitative
+[Quantitative]{.blue}
 
 ![](spreadsheet.png)
 
 ## EXAMPLE
 
-categorical
+[Categorical]{.red}
 
-ordinal
+[Ordinal]{.green}
 
-quantitative
+[Quantitative]{.blue}
 
 ![](colorspreadsheet.png)
 
@@ -310,17 +371,29 @@ quantitative
 
 ## DATA ABSTRACTION
 
-translate from domain-specific language to generic visualization language
+::: {.r-fit-text}
+**GOAL:** Translate from domain-specific language to generic (and consistent) visualization language.
 
-identify dataset type(s), attribute types identify cardinality how many items in the dataset? what is cardinality of each attribute? number of levels for categorical data range for quantitative data
-
-consider whether to transform data guided by understanding of task
+- Identify dataset type(s) and attribute types.
+- Identify cardinality.
+    -   how many items in the dataset?
+    -   what is cardinality of each attribute? 
+        -     number of levels for categorical data? 
+        -     range for quantitative data
+-  Consider whether to transform the data.
+    -   guided by your understanding of the [task]{.red}.
+:::
 
 ## MODELS: DATA VS CONCEPTUAL
 
-data model mathematical abstraction sets with operations, eg floats with \* / - + variable data types in programming languages conceptual model mental construction (semantics) supports reasoning typically based on understanding of tasks \[stay tuned!\]
-
-data abstraction process relies on conceptual model for transforming data if needed
+-     data model
+    -   mathematical abstraction
+    -   sets with operations, eg floats with \* / - + variable data types in programming languages
+-     conceptual model
+    -   mental construction (semantics)
+    -   supports reasoning
+    -   typically based on understanding of [tasks]{.red}
+-       data abstraction process relies on conceptual model for transforming data if needed
 
 ## MODELS: EXAMPLE
 
@@ -338,7 +411,9 @@ derived attribute: compute from originals simple change of type acquire addition
 
 Strahler number centrality metric for trees/networks derived quantitative attribute draw top 5K of 500K for good skeleton
 
-![](Strahler.png) ![](StrahlerAnalysis.png) \## SUMMARY
+![](Strahler.png) ![](StrahlerAnalysis.png)
+
+## SUMMARY
 
 ![](what.png)
 

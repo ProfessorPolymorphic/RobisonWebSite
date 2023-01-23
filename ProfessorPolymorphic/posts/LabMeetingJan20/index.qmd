@@ -8,37 +8,37 @@ image: digitalCthulhu.png
 
 ## AGENDA
 
-1. Development goals for Outbreak Simulator.
-2. Conference opportunities (March to August).
-3. Development goals for the twin stick evolutionary sheep guarding slime game.
-4. Possible additional hires (Programmer and UI/UX).
-5. Preliminary thoughts for the Yeast Evolution collaboration with Syracuse.
+1.  Development goals for Outbreak Simulator.
+2.  Conference opportunities (March to August).
+3.  Development goals for the twin stick evolutionary sheep guarding slime game.
+4.  Possible additional hires (Programmer and UI/UX).
+5.  Preliminary thoughts for the Yeast Evolution collaboration with Syracuse.
 
 ## OUTBREAK SIMULATOR
 
-There are lots of looming opportunities related to this project, and we need to set up this semester's burn down list and timeline.  
+There are lots of looming opportunities related to this project, and we need to set up this semester's burn down list and timeline.
 
 ### Relevant dates include:
 
-- January 30, 2023:  Deadline to submit an application (4 pages) for an interactive demo to ISLS meeting in Montreal (June 13-17).
+-   January 30, 2023: Deadline to submit an application (4 pages) for an interactive demo to ISLS meeting in Montreal (June 13-17).
 
-- March 19-22, 2023:  Tickbase Annual Meeting, Lake Tahoe, NV.
+-   March 19-22, 2023: Tickbase Annual Meeting, Lake Tahoe, NV.
 
-- May 17-18, 2023: [Workshop on Simulation Games for Global Pandemic Resilience](SanteFeWorkshop.qmd), Santa Fe Institute, in Santa Fe, New Mexico.
+-   May 17-18, 2023: [Workshop on Simulation Games for Global Pandemic Resilience](SanteFeWorkshop.qmd), Santa Fe Institute, in Santa Fe, New Mexico.
 
-- July 2023:  SEPA Resubmission likely.
+-   July 2023: SEPA Resubmission likely.
 
 ### Development needs:
 
-1. Airports / Air travel.
-2. Simple build with pre/post tests installed.
-3. Simple build that writes simulation session data to a csv.
-4. Headless mode for cluster deployment.
-5. Performance optimization.
-6. UI/UX Improvements ([Timeline from Elisha](OSTime.qmd)).
-7. Additional interventions (movement restrictions).
-8. Additional scenarios.
-9. Model testing (movement and infection).
+1.  Airports / Air travel.
+2.  Simple build with pre/post tests installed.
+3.  Simple build that writes simulation session data to a csv.
+4.  Headless mode for cluster deployment.
+5.  Performance optimization.
+6.  UI/UX Improvements ([Timeline from Elisha](OSTime.qmd)).
+7.  Additional interventions (movement restrictions).
+8.  Additional scenarios.
+9.  Model testing (movement and infection).
 10. Globe model implementation.
 11. Touchscreen implementation.
 12. BLOG / Youtube posts.
@@ -46,21 +46,21 @@ There are lots of looming opportunities related to this project, and we need to 
 
 ## CONFERENCE OPPORTUNITIES
 
-- March 19-22, 2023: Tickbase Annual Meeting, Lake Taho, NV
-- April 28-30, 2023: [EVO WIBO](https://www.zoology.ubc.ca/evo-wibo/index.html) in Port Townsend, WA
-- May 17-18, 2023: [Workshop on Simulation Games for Global Pandemic Resilience](SanteFeWorkshop.qmd), Santa Fe Institute, in Santa Fe, New Mexico
-- May 30-June 2, 2023: [SEPA SciEd Conference](https://nihsepa.org/annual-meeting/) in Washington DC
-- June 13-17, 2023: [ISLS meeting](https://www.isls.org/event/isls-annual-meeting-2023/) in Montreal
-- June 21-25, 2023: [Evolution](https://www.evolutionmeetings.org) in Albuquerque, NM
-- October 22-27, 2023: [IEEE VIS: Visualization and Analytics](https://ieeevis.org/year/2023/welcome) in Melbourne, Australia
+-   March 19-22, 2023: Tickbase Annual Meeting, Lake Taho, NV
+-   April 28-30, 2023: [EVO WIBO](https://www.zoology.ubc.ca/evo-wibo/index.html) in Port Townsend, WA
+-   May 17-18, 2023: [Workshop on Simulation Games for Global Pandemic Resilience](SanteFeWorkshop.qmd), Santa Fe Institute, in Santa Fe, New Mexico
+-   May 30-June 2, 2023: [SEPA SciEd Conference](https://nihsepa.org/annual-meeting/) in Washington DC
+-   June 13-17, 2023: [ISLS meeting](https://www.isls.org/event/isls-annual-meeting-2023/) in Montreal
+-   June 21-25, 2023: [Evolution](https://www.evolutionmeetings.org) in Albuquerque, NM
+-   October 22-27, 2023: [IEEE VIS: Visualization and Analytics](https://ieeevis.org/year/2023/welcome) in Melbourne, Australia
 
 ## TWIN STICK DEV GOALS
 
 ## POSSIBLE ADDITIONAL HIRES
 
-1. Programmer
-2. UI/UX
+1.  Programmer
+2.  UI/UX
 
 ## YEAST COEVOLUTION
 
-This is a funded grant to Dave Althoff and Kari Seagraves at Syracuse University.  We have a subcontract (~$200k) for development of educational games related to yeast coevolution.
+This is a funded grant to Dave Althoff and Kari Seagraves at Syracuse University. We have a subcontract (\~\$200k) for development of educational games related to yeast coevolution.

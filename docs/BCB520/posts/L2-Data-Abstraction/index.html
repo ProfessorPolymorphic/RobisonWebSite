@@ -385,8 +385,8 @@ Barrie Robison
 <div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><strong>VIZ</strong></p>
 <div class="cell-output-display">
-<div id="htmlwidget-005672524dcbefa6e734" style="width:960px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-005672524dcbefa6e734">{"x":{"visdat":{"3e4e15cd0a3":["function () ","plotlyVisDat"]},"cur_data":"3e4e15cd0a3","attrs":{"3e4e15cd0a3":{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":[]},"yaxis":{"title":[]},"zaxis":{"title":[]}},"xaxis":{"type":"category","categoryorder":"array","categoryarray":["14","30"]},"yaxis":{"type":"category","categoryorder":"array","categoryarray":["15","2.6"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","type":"scatter3d","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-988da63186af5a2e40e3" style="width:960px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-988da63186af5a2e40e3">{"x":{"visdat":{"d74f7a8b3841":["function () ","plotlyVisDat"]},"cur_data":"d74f7a8b3841","attrs":{"d74f7a8b3841":{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":[]},"yaxis":{"title":[]},"zaxis":{"title":[]}},"xaxis":{"type":"category","categoryorder":"array","categoryarray":["14","30"]},"yaxis":{"type":"category","categoryorder":"array","categoryarray":["15","2.6"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","type":"scatter3d","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -487,8 +487,8 @@ Lab rat Basil made 7 attempts to find way through south section of maze, these t
 </div>
 </div>
 </div>
-<p><span class="fragment"><span class="red">ITEM:</span> Person</span></p>
-<p><span class="fragment"><span class="red">ATTRIBUTES:</span> Name, Age, Shirt Size, Favorite Fruit</span></p>
+<p><span class="red">ITEM:</span> Person</p>
+<p><span class="red">ATTRIBUTES:</span> Name, Age, Shirt Size, Favorite Fruit</p>
 </section>
 <section id="other-data-types" class="slide level2">
 <h2>OTHER DATA TYPES</h2>
@@ -619,22 +619,95 @@ Lab rat Basil made 7 attempts to find way through south section of maze, these t
 </div>
 </div>
 </section>
-<section id="spatial-fields-3" class="slide level2">
+<section id="spatial-fields-3" class="slide level2 smaller">
 <h2>SPATIAL FIELDS 3</h2>
-<p>attribute values associated w/ cells cell contains value from continuous domain eg temperature, pressure, wind velocity measured or simulated major concerns sampling:where attributes are measured interpolation:how to model attributes elsewhere grid types major divisions attributes per cell: scalar (1), vector (2), tensor (many)</p>
-
-<img data-src="cellfields.png" class="r-stretch"></section>
+<div class="columns">
+<div class="r-fit-text column" style="width:60%;">
+<ul>
+<li>Attribute values associated w/ cells.</li>
+<li>Cell contains value from continuous domain
+<ul>
+<li>(eg temperature, pressure, wind velocity)</li>
+</ul></li>
+<li>Measured or simulated.</li>
+<li>Major concerns
+<ul>
+<li>sampling:
+<ul>
+<li>where attributes are measured</li>
+</ul></li>
+<li>interpolation:
+<ul>
+<li>how to model attributes elsewhere</li>
+</ul></li>
+<li>grid types</li>
+</ul></li>
+<li>Major divisions - attributes per cell:
+<ul>
+<li>scalar (1)</li>
+<li>vector (2)</li>
+<li>tensor (many)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="cellfields.png"></p>
+</div>
+</div>
+</section>
 <section id="geometry" class="slide level2">
 <h2>GEOMETRY</h2>
 
 <img data-src="alltypes.png" class="r-stretch"></section>
 <section id="geometry-2" class="slide level2">
 <h2>GEOMETRY 2</h2>
-<p>shape of items explicit spatial positions / regions points, lines, curves, surfaces, volumes boundary between computer graphics and visualization graphics: geometry taken as given vis: geometry is result of a design decision</p>
-<p><img data-src="geometrymap.png"> ## COLLECTIONS</p>
-<p><img data-src="Clusters1.png"> ## COLLECTIONS 2</p>
-<p>how we group items sets unique items, unordered lists ordered, duplicates possible clusters groups of similar items</p>
+<div class="columns">
+<div class="r-fit-text column" style="width:60%;">
+<ul>
+<li>Shape of items</li>
+<li>Explicit spatial positions / regions
+<ul>
+<li>points, lines, curves, surfaces, volumes</li>
+</ul></li>
+<li>Boundary between computer graphics and visualization
+<ul>
+<li>graphics: geometry taken as given</li>
+<li>vis: geometry is result of a design decision</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="geometrymap.png"></p>
+</div>
+</div>
+</section>
+<section id="collections" class="slide level2">
+<h2>COLLECTIONS</h2>
+
+<img data-src="Clusters1.png" class="r-stretch"></section>
+<section id="collections-2" class="slide level2">
+<h2>COLLECTIONS 2</h2>
+<div class="columns">
+<div class="r-fit-text column" style="width:60%;">
+<p>Grouping Items:</p>
+<ul>
+<li>sets
+<ul>
+<li>unique items</li>
+<li>unordered</li>
+</ul></li>
+<li>lists
+<ul>
+<li>ordered</li>
+<li>duplicates possible</li>
+</ul></li>
+<li>clusters
+<ul>
+<li>groups of similar items</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
 <p><img data-src="Collections.png"></p>
+</div>
+</div>
 </section>
 <section id="data-types" class="slide level2">
 <h2>DATA TYPES</h2>
@@ -642,21 +715,42 @@ Lab rat Basil made 7 attempts to find way through south section of maze, these t
 <img data-src="datatype1.png" class="r-stretch"></section>
 <section id="attribute-types" class="slide level2">
 <h2>ATTRIBUTE TYPES</h2>
-<p>which classes of values &amp; measurements? categorical (nominal) compare equality no implicit ordering ordered ordinal less/greater than defined quantitative meaningful magnitude arithmetic possib</p>
-
-<img data-src="Attributes.png" class="r-stretch"></section>
+<div class="columns">
+<div class="r-fit-text column" style="width:40%;">
+<ul>
+<li><span class="red">Categorical</span> (nominal):
+<ul>
+<li>compare equality</li>
+<li>no implicit ordering</li>
+</ul></li>
+<li><span class="red">Ordered</span>:
+<ul>
+<li>ordinal</li>
+<li>less/greater than defined</li>
+</ul></li>
+<li><span class="red">Quantitative</span>:
+<ul>
+<li>meaningful magnitude</li>
+<li>arithmetic possible</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="Attributes.png"></p>
+</div>
+</div>
+</section>
 <section id="example" class="slide level2">
 <h2>EXAMPLE</h2>
-<p>categorical</p>
-<p>ordinal</p>
-<p>quantitative</p>
+<p><span class="red">Categorical</span></p>
+<p><span class="green">Ordinal</span></p>
+<p><span class="blue">Quantitative</span></p>
 
 <img data-src="spreadsheet.png" class="r-stretch"></section>
 <section id="example-1" class="slide level2">
 <h2>EXAMPLE</h2>
-<p>categorical</p>
-<p>ordinal</p>
-<p>quantitative</p>
+<p><span class="red">Categorical</span></p>
+<p><span class="green">Ordinal</span></p>
+<p><span class="blue">Quantitative</span></p>
 
 <img data-src="colorspreadsheet.png" class="r-stretch"></section>
 <section id="additional-semantic-components" class="slide level2">
@@ -665,14 +759,42 @@ Lab rat Basil made 7 attempts to find way through south section of maze, these t
 <img data-src="Otherstuff.png" class="r-stretch"></section>
 <section id="data-abstraction" class="slide level2">
 <h2>DATA ABSTRACTION</h2>
-<p>translate from domain-specific language to generic visualization language</p>
-<p>identify dataset type(s), attribute types identify cardinality how many items in the dataset? what is cardinality of each attribute? number of levels for categorical data range for quantitative data</p>
-<p>consider whether to transform data guided by understanding of task</p>
+<div class="r-fit-text">
+<p><strong>GOAL:</strong> Translate from domain-specific language to generic (and consistent) visualization language.</p>
+<ul>
+<li>Identify dataset type(s) and attribute types.</li>
+<li>Identify cardinality.
+<ul>
+<li>how many items in the dataset?</li>
+<li>what is cardinality of each attribute?
+<ul>
+<li><pre><code>number of levels for categorical data? </code></pre></li>
+<li><pre><code>range for quantitative data</code></pre></li>
+</ul></li>
+</ul></li>
+<li>Consider whether to transform the data.
+<ul>
+<li>guided by your understanding of the <span class="red">task</span>.</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="models-data-vs-conceptual" class="slide level2">
 <h2>MODELS: DATA VS CONCEPTUAL</h2>
-<p>data model mathematical abstraction sets with operations, eg floats with * / - + variable data types in programming languages conceptual model mental construction (semantics) supports reasoning typically based on understanding of tasks [stay tuned!]</p>
-<p>data abstraction process relies on conceptual model for transforming data if needed</p>
+<ul>
+<li><pre><code>data model</code></pre>
+<ul>
+<li>mathematical abstraction</li>
+<li>sets with operations, eg floats with * / - + variable data types in programming languages</li>
+</ul></li>
+<li><pre><code>conceptual model</code></pre>
+<ul>
+<li>mental construction (semantics)</li>
+<li>supports reasoning</li>
+<li>typically based on understanding of <span class="red">tasks</span></li>
+</ul></li>
+<li><pre><code>  data abstraction process relies on conceptual model for transforming data if needed</code></pre></li>
+</ul>
 </section>
 <section id="models-example" class="slide level2">
 <h2>MODELS: EXAMPLE</h2>
@@ -687,7 +809,10 @@ Lab rat Basil made 7 attempts to find way through south section of maze, these t
 <h2>EXAMPLE</h2>
 <p>[Using Strahler numbers for real time visual exploration of huge graphs. Auber. Proc. Intl. Conf. Computer Vision and Graphics, pp.&nbsp;56–69, 2002.]</p>
 <p>Strahler number centrality metric for trees/networks derived quantitative attribute draw top 5K of 500K for good skeleton</p>
-<p><img data-src="Strahler.png"> <img data-src="StrahlerAnalysis.png"> ## SUMMARY</p>
+<p><img data-src="Strahler.png"> <img data-src="StrahlerAnalysis.png"></p>
+</section>
+<section id="summary" class="slide level2">
+<h2>SUMMARY</h2>
 <p><img data-src="what.png"></p>
 <p><img data-src="whatexpanded.png"></p>
 

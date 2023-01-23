@@ -200,7 +200,7 @@
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#spatial-fields-3",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "SPATIAL FIELDS 3",
-    "text": "SPATIAL FIELDS 3\nattribute values associated w/ cells cell contains value from continuous domain eg temperature, pressure, wind velocity measured or simulated major concerns sampling:\u000bwhere attributes are measured interpolation:\u000bhow to model attributes elsewhere grid types major divisions attributes per cell: \u000bscalar (1), vector (2), tensor (many)"
+    "text": "SPATIAL FIELDS 3\n\n\n\nAttribute values associated w/ cells.\nCell contains value from continuous domain\n\n(eg temperature, pressure, wind velocity)\n\nMeasured or simulated.\nMajor concerns\n\nsampling:\n\nwhere attributes are measured\n\ninterpolation:\n\nhow to model attributes elsewhere\n\ngrid types\n\nMajor divisions - attributes per cell:\n\nscalar (1)\nvector (2)\ntensor (many)"
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#geometry",
@@ -214,7 +214,21 @@
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#geometry-2",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "GEOMETRY 2",
-    "text": "GEOMETRY 2\nshape of items explicit spatial positions / regions points, lines, curves, surfaces, volumes boundary between computer graphics and visualization graphics: geometry taken as given vis: geometry is result of a design decision\n ## COLLECTIONS\n ## COLLECTIONS 2\nhow we group items sets unique items, unordered lists ordered, duplicates possible clusters groups of similar items"
+    "text": "GEOMETRY 2\n\n\n\nShape of items\nExplicit spatial positions / regions\n\npoints, lines, curves, surfaces, volumes\n\nBoundary between computer graphics and visualization\n\ngraphics: geometry taken as given\nvis: geometry is result of a design decision"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#collections",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#collections",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "COLLECTIONS",
+    "text": "COLLECTIONS"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#collections-2",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#collections-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "COLLECTIONS 2",
+    "text": "COLLECTIONS 2\n\n\nGrouping Items:\n\nsets\n\nunique items\nunordered\n\nlists\n\nordered\nduplicates possible\n\nclusters\n\ngroups of similar items"
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#data-types",
@@ -228,21 +242,21 @@
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#attribute-types",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "ATTRIBUTE TYPES",
-    "text": "ATTRIBUTE TYPES\nwhich classes of values & measurements? categorical (nominal) compare equality no implicit ordering ordered ordinal less/greater than defined quantitative meaningful magnitude arithmetic possib"
+    "text": "ATTRIBUTE TYPES\n\n\n\nCategorical (nominal):\n\ncompare equality\nno implicit ordering\n\nOrdered:\n\nordinal\nless/greater than defined\n\nQuantitative:\n\nmeaningful magnitude\narithmetic possible"
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#example",
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#example",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "EXAMPLE",
-    "text": "EXAMPLE\ncategorical\nordinal\nquantitative"
+    "text": "EXAMPLE\nCategorical\nOrdinal\nQuantitative"
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#example-1",
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#example-1",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "EXAMPLE",
-    "text": "EXAMPLE\ncategorical\nordinal\nquantitative"
+    "text": "EXAMPLE\nCategorical\nOrdinal\nQuantitative"
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#additional-semantic-components",
@@ -256,14 +270,14 @@
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#data-abstraction",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA ABSTRACTION",
-    "text": "DATA ABSTRACTION\ntranslate from domain-specific language to generic visualization language\nidentify dataset type(s), attribute types identify cardinality how many items in the dataset? what is cardinality of each attribute? number of levels for categorical data range for quantitative data\nconsider whether to transform data guided by understanding of task"
+    "text": "DATA ABSTRACTION\n\nGOAL: Translate from domain-specific language to generic (and consistent) visualization language.\n\nIdentify dataset type(s) and attribute types.\nIdentify cardinality.\n\nhow many items in the dataset?\nwhat is cardinality of each attribute?\n\nnumber of levels for categorical data? \nrange for quantitative data\n\n\nConsider whether to transform the data.\n\nguided by your understanding of the task."
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#models-data-vs-conceptual",
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#models-data-vs-conceptual",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "MODELS: DATA VS CONCEPTUAL",
-    "text": "MODELS: DATA VS CONCEPTUAL\ndata model mathematical abstraction sets with operations, eg floats with * / - + variable data types in programming languages conceptual model mental construction (semantics) supports reasoning typically based on understanding of tasks [stay tuned!]\ndata abstraction process relies on conceptual model for transforming data if needed"
+    "text": "MODELS: DATA VS CONCEPTUAL\n\ndata model\n\nmathematical abstraction\nsets with operations, eg floats with * / - + variable data types in programming languages\n\nconceptual model\n\nmental construction (semantics)\nsupports reasoning\ntypically based on understanding of tasks\n\n  data abstraction process relies on conceptual model for transforming data if needed"
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#models-example",
@@ -284,7 +298,14 @@
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#example-2",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "EXAMPLE",
-    "text": "EXAMPLE\n[Using Strahler numbers for real time visual exploration of huge graphs. Auber. Proc. Intl. Conf. Computer Vision and Graphics, pp. 56–69, 2002.]\nStrahler number centrality metric for trees/networks derived quantitative attribute draw top 5K of 500K for good skeleton\n  ## SUMMARY\n\n\n\n\nCANVAS…HOME"
+    "text": "EXAMPLE\n[Using Strahler numbers for real time visual exploration of huge graphs. Auber. Proc. Intl. Conf. Computer Vision and Graphics, pp. 56–69, 2002.]\nStrahler number centrality metric for trees/networks derived quantitative attribute draw top 5K of 500K for good skeleton"
+  },
+  {
+    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#summary",
+    "href": "BCB520/posts/L2-Data-Abstraction/index.html#summary",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SUMMARY",
+    "text": "SUMMARY\n\n\n\n\nCANVAS…HOME"
   },
   {
     "objectID": "BCB520/posts/Certificate/index.html",

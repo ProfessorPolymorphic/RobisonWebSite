@@ -3,6 +3,7 @@ $theme-darkblue: #01364C;
 $theme-blue: #99D9DD;
 $theme-white: #F7F8F9;
 $theme-yellow: #F4BA02;
+$theme-green:#00FF00;
 
 
 /*-- scss:rules --*/
@@ -19,5 +20,10 @@ $theme-yellow: #F4BA02;
 
 .red {
   color: #de2d26;
+  font-weight: bold;
+}
+
+.green {
+  color: $theme-green;
   font-weight: bold;
 }
