@@ -1,0 +1,55 @@
+---
+title: "ASSIGNMENT 2 - Your Data."
+author: "Barrie Robison"
+date: "2023-01-23"
+categories: [Assignment, DataViz, Quarto, Data Sets]
+image: "MythosData1.png"
+code-fold: true
+---
+
+## SUMMARY
+
+A key feature of this course is that students should be using their own data whenever possible.  This is critical to forging a learning experience that is customized to each student's aspirations and the eccentricities of their chosen research domain.  This assignment begins the process of helping you identify the data sets with which you want to work, and aligns with the notion of understanding the concepts of Data Semantics and Data Abstraction.
+
+## ASSIGNMENT
+
+The basic structure of this assignment is for you to identify, import, describe, and host a data set.  I'll break down the specifics for each of these actions below.   
+
+### Identify a Data Set
+
+The main criteria is that [the data set has to matter to you]{.red} in some way.  Often, this will mean that it is **your** data set.  It was collected by you and has a central role in your current or past graduate research.  Awesome!  Another scenario is that the data you want to use comes from your current job.  Maybe it isn't part of a research project, but you are motivated to learn how to better visualize the data or you are very interested in learning more about it.  Also Awesome!
+
+Some of you might not have your own data.  Perhaps you have just started your graduate training.  Maybe your job doesn't yet have data that you need to work with.  No Problem!
+
+It is perfectly fine to find publicly available data sets online.  As long as the data set is interesting to you!  You just need to make sure that the data:
+
+1. Are publicly available.
+2. Are not restricted by some kind of license or copyright.
+3. Do not contain private information.
+4. Are not covered by HIPPA, FERPA, CMMC, or other federal regulations related to data.
+
+If you need help finding a data set, just let me know.
+
+Some fun potential categories for data sources include:
+
+1. Sports Analytics from your favorite sport or team.
+2. Publicly available genomics data bases.
+3. Keggle.
+4. The movie data base.
+5. Classic data sets from your field.
+
+### Import the Data Set
+
+This one is probably straightforward if your data set comes from your own research and lives on your local hard drive already.  
+
+## RESOURCES
+
+[Tidyverse and Anscombe's Quartet](https://www.njtierney.com/post/2020/06/01/tidy-anscombe/)
+
+[Handy cheat-sheets for many different R packages](https://posit.co/resources/cheatsheets/)
+
+[Tutorial 1 - Literate Programming](../T1-Lit-Prog/index.qmd)
+
+[Tutorial 2 - Literate Programming and Anscombe's Quartet](../T2-Anscombe/index.qmd)
+
+[Tutorial 3 - Python](../T3-Python/index.qmd)

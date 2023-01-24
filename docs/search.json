@@ -270,42 +270,35 @@
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#data-abstraction",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA ABSTRACTION",
-    "text": "DATA ABSTRACTION\n\nGOAL: Translate from domain-specific language to generic (and consistent) visualization language.\n\nIdentify dataset type(s) and attribute types.\nIdentify cardinality.\n\nhow many items in the dataset?\nwhat is cardinality of each attribute?\n\nnumber of levels for categorical data? \nrange for quantitative data\n\n\nConsider whether to transform the data.\n\nguided by your understanding of the task."
+    "text": "DATA ABSTRACTION\n\nGOAL: Translate from domain-specific language to generic (and consistent) visualization language.\n\nIdentify dataset type(s) and attribute types.\nIdentify cardinality.\n\nhow many items in the dataset?\nwhat is cardinality of each attribute?\n\nnumber of levels for categorical data?\nrange for quantitative data\n\n\nConsider whether to transform the data.\n\nguided by your understanding of the task."
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#models-data-vs-conceptual",
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#models-data-vs-conceptual",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "MODELS: DATA VS CONCEPTUAL",
-    "text": "MODELS: DATA VS CONCEPTUAL\n\ndata model\n\nmathematical abstraction\nsets with operations, eg floats with * / - + variable data types in programming languages\n\nconceptual model\n\nmental construction (semantics)\nsupports reasoning\ntypically based on understanding of tasks\n\n  data abstraction process relies on conceptual model for transforming data if needed"
+    "text": "MODELS: DATA VS CONCEPTUAL\n\n\nData Model\n\nmathematical abstraction\nsets with operations, eg floats with * / - + variable data types in programming languages\n\nConceptual Model\n\nmental construction (semantics)\nsupports reasoning\ntypically based on understanding of tasks\n\nThe Data Abstraction process relies on conceptual model for transforming data if needed"
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#models-example",
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#models-example",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "MODELS: EXAMPLE",
-    "text": "MODELS: EXAMPLE\ndata model: floats 32.52, 54.06, -14.35, … conceptual model temperature multiple possible data abstractions continuous to 2 significant figures: quantitative task: forecasting the weather hot, warm, cold: ordinal task: deciding if bath water is ready above freezing, below freezing: categorical task: decide if I should leave the house today"
+    "text": "MODELS: EXAMPLE\n\nData Model: floats\n\n32.52, 54.06, -14.35,\n\nConceptual Model:\n\ntemperature\n\nPossible data abstractions:\n\nQUANTITATIVE: continuous to 2 significant figures:\n\nTASK: Forecasting the weather\n\nORDINAL: Hot, Warm, Cold:\n\nTASK: Deciding if my bath water is ready\n\nCATEGORICAL: Above Freezing, Below Freezing:\n\nTASK: Deciding if I should leave the house today"
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#derived-attributes",
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#derived-attributes",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DERIVED ATTRIBUTES",
-    "text": "DERIVED ATTRIBUTES\nderived attribute: compute from originals simple change of type acquire additional data complex transformation"
-  },
-  {
-    "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#example-2",
-    "href": "BCB520/posts/L2-Data-Abstraction/index.html#example-2",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "EXAMPLE",
-    "text": "EXAMPLE\n[Using Strahler numbers for real time visual exploration of huge graphs. Auber. Proc. Intl. Conf. Computer Vision and Graphics, pp. 56–69, 2002.]\nStrahler number centrality metric for trees/networks derived quantitative attribute draw top 5K of 500K for good skeleton"
+    "text": "DERIVED ATTRIBUTES\nDerived attribute: Data computed from original (collected, observed) attributes."
   },
   {
     "objectID": "BCB520/posts/L2-Data-Abstraction/index.html#summary",
     "href": "BCB520/posts/L2-Data-Abstraction/index.html#summary",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "SUMMARY",
-    "text": "SUMMARY\n\n\n\n\nCANVAS…HOME"
+    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\n\n\nCANVAS…HOME"
   },
   {
     "objectID": "BCB520/posts/Certificate/index.html",
@@ -565,6 +558,27 @@
     "title": "SYLLABUS 2023",
     "section": "Class Schedule",
     "text": "Class Schedule\n\nlibrary(readxl)\nSchedule <- read_excel(\"Schedule.xlsx\")\n\nknitr::kable(Schedule, caption = '')\n\n\n\n\nDATE\nTOPIC\nREADING\nRECEIVE\nTURN IN\n\n\n\n\n2023-01-12\nINTRODUCTION.  Why Visualization Matters\nVAD Ch 1.\nAssignment 1 - Fun with literate programming.\nNA\n\n\n2023-01-17\nWHAT?  Abstraction of Data\nVAD Ch 2.\nNA\nAssignment 1 - Fun with literate programming.\n\n\n2023-01-19\nWHY?  Task Abstraction\nVAD Ch 3.\nAssignment 2 - You’ll need some data…\nNA\n\n\n2023-01-24\nANALYZE.  Nested Design Model Part 1.\nVAD Ch 4.\nNA\nNA\n\n\n2023-01-26\nANALYZE. Nested Design Model Part 2.\nVAD Ch 4.\nAssignment 3 - ggplot\nNA\n\n\n2023-01-31\nMARKS. Geometric elements to depict data\nVAD Ch 5.\nNA\nNA\n\n\n2023-02-02\nCHANNELS. Controlling the appearance of marks.\nVAD Ch 5.\nAssignment 4 - Midterm Outline\nNA\n\n\n2023-02-07\nRULES OF THUMB.\nVAD Ch. 6.\nNA\nNA\n\n\n2023-02-09\nTABULAR DATA I\nVAD Ch. 7.\nAssignment 5 - Portfolio plans\nNA\n\n\n2023-02-14\nTABULAR DATA II\nVAD Ch. 7.\nNA\nNA\n\n\n2023-02-16\nStudent Presentations\nNA\nNA\nMidterm Assignment Presentations\n\n\n2023-02-21\nStudent Presentations\nNA\nNA\nMidterm Assignment Presentations\n\n\n2023-02-23\nSPATIAL DATA I: Geographic Maps\nVAD Ch 8.\nAssignment 6 - Spatial things\nNA\n\n\n2023-02-28\nSPATIAL DATA II:  Spatial Fields\nVAD Ch 8.\nNA\nNA\n\n\n2023-03-02\nNETWORK DATA I\nVAD Ch 9.\nAssignment 7 - Network things\nNA\n\n\n2023-03-07\nNETWORK DATA II\nVAD Ch 9.\nNA\nNA\n\n\n2023-03-09\nCOLOR I\nVAD Ch 10.\nAssignment 8 - Find some stuff for critique\nNA\n\n\n2023-03-14\nNo Class\nNA\nNA\nSPRING BREAK\n\n\n2023-03-16\nNo Class\nNA\nNA\nSPRING BREAK\n\n\n2023-03-21\nBarrie in NV\nVAD Ch 10.\nNA\nNA\n\n\n2023-03-23\nCOLOR II\nVAD Ch 10.\nAssignment 9 - Let’s practice Observable!\nNA\n\n\n2023-03-28\nCOLOR III\nVAD Ch 11.\nNA\nNA\n\n\n2023-03-30\nINTERACTIVITY\nVAD Ch 12.\nAssignment 10 - Cool interactive stuff\nNA\n\n\n2023-04-04\nMULTIPLE VIEWS\nVAD Ch 13.\nNA\nNA\n\n\n2023-04-06\nAGGREGATION\nVAD Ch 13.\nAssignment 11 - Data Science Competition\nNA\n\n\n2023-04-11\nFILTERING\nVAD Ch 14.\nNA\nNA\n\n\n2023-04-13\nEMBEDDING: Focus and Context\nNA\nNA\nCoS DATA SCIENCE COMPETITION\n\n\n2023-04-18\nTBA\nNA\nNA\nNA\n\n\n2023-04-20\nTBA\nNA\nNA\nNA\n\n\n2023-04-25\nStudent Presentations\nNA\nNA\nFINAL PROJECT PRESENTATIONS\n\n\n2023-04-27\nStudent Presentations\nNA\nNA\nFINAL PROJECT PRESENTATIONS\n\n\n2023-05-02\nDEAD WEEK\nNA\nPortfolio Review\nNA\n\n\n2023-05-04\nDEAD WEEK\nNA\nPortfolio Review\nNA\n\n\n2023-05-09\nFINALS WEEK\nNA\nNA\nNA"
+  },
+  {
+    "objectID": "BCB520/posts/A2-YourData/index.html",
+    "href": "BCB520/posts/A2-YourData/index.html",
+    "title": "ASSIGNMENT 2 - Your Data.",
+    "section": "",
+    "text": "A key feature of this course is that students should be using their own data whenever possible. This is critical to forging a learning experience that is customized to each student’s aspirations and the eccentricities of their chosen research domain. This assignment begins the process of helping you identify the data sets with which you want to work, and aligns with the notion of understanding the concepts of Data Semantics and Data Abstraction."
+  },
+  {
+    "objectID": "BCB520/posts/A2-YourData/index.html#assignment",
+    "href": "BCB520/posts/A2-YourData/index.html#assignment",
+    "title": "ASSIGNMENT 2 - Your Data.",
+    "section": "ASSIGNMENT",
+    "text": "ASSIGNMENT\nThe basic structure of this assignment is for you to identify, import, describe, and host a data set. I’ll break down the specifics for each of these actions below.\n\nIdentify a Data Set\nThe main criteria is that the data set has to matter to you in some way. Often, this will mean that it is your data set. It was collected by you and has a central role in your current or past graduate research. Awesome! Another scenario is that the data you want to use comes from your current job. Maybe it isn’t part of a research project, but you are motivated to learn how to better visualize the data or you are very interested in learning more about it. Also Awesome!\nSome of you might not have your own data. Perhaps you have just started your graduate training. Maybe your job doesn’t yet have data that you need to work with. No Problem!\nIt is perfectly fine to find publicly available data sets online. As long as the data set is interesting to you! You just need to make sure that the data:\n\nAre publicly available.\nAre not restricted by some kind of license or copyright.\nDo not contain private information.\nAre not covered by HIPPA, FERPA, CMMC, or other federal regulations related to data.\n\nIf you need help finding a data set, just let me know.\nSome fun potential categories for data sources include:\n\nSports Analytics from your favorite sport or team.\nPublicly available genomics data bases.\nKeggle.\nThe movie data base.\nClassic data sets from your field.\n\n\n\nImport the Data Set\nThis one is probably straightforward if your data set comes from your own research and lives on your local hard drive already."
+  },
+  {
+    "objectID": "BCB520/posts/A2-YourData/index.html#resources",
+    "href": "BCB520/posts/A2-YourData/index.html#resources",
+    "title": "ASSIGNMENT 2 - Your Data.",
+    "section": "RESOURCES",
+    "text": "RESOURCES\nTidyverse and Anscombe’s Quartet\nHandy cheat-sheets for many different R packages\nTutorial 1 - Literate Programming\nTutorial 2 - Literate Programming and Anscombe’s Quartet\nTutorial 3 - Python"
   },
   {
     "objectID": "BCB520/posts/T2-Anscombe/index.html",
