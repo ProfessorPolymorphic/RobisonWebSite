@@ -6,13 +6,13 @@ author: "Barrie D. Robison"
 format: html
 code-fold: true
 categories: [Tutorial, Resources, Quarto, Data Sets]
-description: "Barrie attempts ASSIGMENT 2!"
+description: "Barrie attempts ASSIGMENT 2!  Will his glimpse of the Data Science Mythos drive him **MAD**?"
 image: Hasturcodes.png
 ---
 
 # ASSIGNMENT 2: Your Data
 
-In this assignment, I will identify, import, describe, and host a data set that will be used throughout the remainder of the BCB 504 course for Data Visualizations.
+In this assignment (detalied [here](../A2-YourData/index.qmd)), I will identify, import, describe, and host a data set that will be used throughout the remainder of the BCB 504 course for Data Visualizations.
 
 ## MY DATASET
 
@@ -86,5 +86,5 @@ Attributes
 
 ## HOST THE DATA
 
-I'm publishing to GitHub!
+I'm publishing to GitHub!  We will elaborate on this step as everyone progresses through the assignment.
 

@@ -58,4 +58,4 @@ Ultimately, we are moving toward each of you hosting your assignments within an 
 
 [TidyTuesday](https://www.tidytuesday.com){target="_blank"}
 
-Tutorials and more resource links coming soon!
+Barrie attempts this assignment in [Tutorial 4](../T4-BarriesData/index.qmd){target="_blank"}.

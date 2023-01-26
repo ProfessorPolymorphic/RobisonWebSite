@@ -21,13 +21,13 @@ library(tidyverse)
 
 ```
 
-# **PROFESSIONAL APPLICATIONS IN DATA SCIENCE**
+# **PROFESSIONAL APPLICATIONS OF DATA SCIENCE**
 
 ## **OVERVIEW**
 
 We live in an increasingly data-driven world. Basic data literacy and data science skills are becoming central to virtually every industry. Yet, limited opportunities exist to gain these skills without an advanced background in math and computer science. To address this workforce development need, we propose a competitively valued on-line graduate certificate in the Professional Applications in Data Science. The certificate is designed to offer rigorous training in the foundations of data science to anyone with a bachelor's degree. Participants will learn how to think about, organize, analyze, and visualize data, and communicate data driven insights to diverse audiences. The curriculum emphasizes the use of data sets drawn from each student's individual discipline, aligning the certificate's workforce development impacts with the University of Idaho's land grant mission.
 
-### **The University of Idaho's value proposition for a certificate in the Professional Applications in Data Science:**
+### **The University of Idaho's value proposition for a certificate in the Professional Applications of Data Science:**
 
 The graduate certificate in Professional Applications in Data Science will provide unique value to UI constituencies by:
 
