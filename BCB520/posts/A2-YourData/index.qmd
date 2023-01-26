@@ -58,4 +58,6 @@ Ultimately, we are moving toward each of you hosting your assignments within an 
 
 [TidyTuesday](https://www.tidytuesday.com){target="_blank"}
 
+[A fun Spotify example](https://www.kaylinpavlik.com/classifying-songs-genres/){target="_blank"} from TidyTuesday by Kaylin Pavlik.
+
 Barrie attempts this assignment in [Tutorial 4](../T4-BarriesData/index.qmd){target="_blank"}.
