@@ -411,6 +411,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#attribute-types" id="toc-attribute-types" class="nav-link" data-scroll-target="#attribute-types">Attribute Types</a></li>
   </ul></li>
   <li><a href="#host-the-data" id="toc-host-the-data" class="nav-link" data-scroll-target="#host-the-data">HOST THE DATA</a></li>
+  <li><a href="#graphs" id="toc-graphs" class="nav-link" data-scroll-target="#graphs">GRAPHS!</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -469,7 +470,8 @@ Note
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                               SightRange, Armor, Damage, WalkSpeed, RunSpeed, Acceleration, </span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                               TurnRate, Attraction0, Attraction1, Attraction2))</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Hastur<span class="sc">$</span>Fit <span class="ot">&lt;-</span> <span class="fu">str_split_i</span>(Hastur<span class="sc">$</span>path, <span class="at">pattern =</span> <span class="st">""</span>, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Hastur<span class="sc">$</span>Fit <span class="ot">&lt;-</span> <span class="fu">str_split_i</span>(Hastur<span class="sc">$</span>path, <span class="at">pattern =</span> <span class="st">""</span>, <span class="dv">1</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Hastur<span class="sc">$</span>replicate <span class="ot">&lt;-</span> <span class="fu">str_split_i</span>(Hastur<span class="sc">$</span>path, <span class="at">pattern =</span> <span class="st">""</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>The <code>glimpse</code> command in the <code>Tidyverse</code> package is a nice way to summarize the data frame:</p>
@@ -480,7 +482,7 @@ Note
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 232,246
-Columns: 18</code></pre>
+Columns: 19</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: One or more parsing issues, call `problems()` on your data frame for details,
@@ -506,7 +508,8 @@ $ TurnRate            &lt;dbl&gt; 360.6254, 357.9564, 365.7268, 361.3743, 356.88
 $ Attraction0         &lt;dbl&gt; -0.01474968, -0.05083919, 0.16160530, -0.17245110,…
 $ Attraction1         &lt;dbl&gt; 0.109532600, -0.048011400, 0.035674940, 0.04642526…
 $ Attraction2         &lt;dbl&gt; 0.120717600, -0.121935400, 0.094071920, -0.0339948…
-$ Fit                 &lt;chr&gt; "H", "H", "H", "H", "H", "H", "H", "H", "H", "H", …</code></pre>
+$ Fit                 &lt;chr&gt; "H", "H", "H", "H", "H", "H", "H", "H", "H", "H", …
+$ replicate           &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", …</code></pre>
 </div>
 </div>
 </section>
@@ -554,6 +557,34 @@ $ Fit                 &lt;chr&gt; "H", "H", "H", "H", "H", "H", "H", "H", "H", "
 <section id="host-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="host-the-data">HOST THE DATA</h2>
 <p>I’m publishing to GitHub! We will elaborate on this step as everyone progresses through the assignment.</p>
+</section>
+<section id="graphs" class="level2">
+<h2 class="anchored" data-anchor-id="graphs">GRAPHS!</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur, <span class="fu">aes</span>(<span class="at">x=</span>Generation, <span class="at">y =</span> WalkSpeed))<span class="sc">+</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>TurnRate), <span class="at">alpha =</span> <span class="fl">0.01</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_continuous</span>(<span class="at">low=</span><span class="st">"red"</span>, <span class="at">high =</span> <span class="st">"blue"</span>)<span class="sc">+</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Hastur50 <span class="ot">&lt;-</span> <span class="fu">filter</span>(Hastur, Generation <span class="sc">==</span> <span class="dv">49</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur50, <span class="fu">aes</span>(<span class="at">x=</span>TurnRate, <span class="at">y =</span> WalkSpeed))<span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>Fit), <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(Fit<span class="sc">~</span>replicate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-4-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 
 </section>

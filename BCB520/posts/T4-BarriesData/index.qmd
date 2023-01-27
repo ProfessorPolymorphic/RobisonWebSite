@@ -58,6 +58,7 @@ Hastur <- vroom(files, id = "path",
                                TurnRate, Attraction0, Attraction1, Attraction2))
 
 Hastur$Fit <- str_split_i(Hastur$path, pattern = "", 1)
+Hastur$replicate <- str_split_i(Hastur$path, pattern = "", 4)
 
 ```
 
@@ -88,3 +89,21 @@ Attributes
 
 I'm publishing to GitHub!  We will elaborate on this step as everyone progresses through the assignment.
 
+## GRAPHS!
+
+```{r}
+ggplot(Hastur, aes(x=Generation, y = WalkSpeed))+
+  geom_point(aes(color=TurnRate), alpha = 0.01, size = 1)+
+  scale_color_continuous(low="red", high = "blue")+
+  facet_grid(replicate~Fit)
+
+Hastur50 <- filter(Hastur, Generation == 49)
+  
+
+ggplot(Hastur50, aes(x=TurnRate, y = WalkSpeed))+
+  geom_point(aes(color=Fit), alpha = 0.5, size = 1)+
+  
+  facet_grid(Fit~replicate)
+
+
+```
