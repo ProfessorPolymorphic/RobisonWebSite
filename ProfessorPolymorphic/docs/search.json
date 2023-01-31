@@ -362,5 +362,12 @@
     "title": "UNDERGRADUATE RESEARCH",
     "section": "",
     "text": "// Evolution // Data Science // Video Games // Horror Fiction\n\n\n\n\nDepartment of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
+  },
+  {
+    "objectID": "posts/OpenAItest/Index.html",
+    "href": "posts/OpenAItest/Index.html",
+    "title": "Chattest",
+    "section": "",
+    "text": "import openai\n\n# Set the API key\nopenai.api_key = \"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\"\n# Use the ChatGPT model to generate text\nmodel_engine = \"text-davinci-003\"\nprompt = \"Product description: A spatially explicit infectious disease simulator\\nSeed words: simulation, differential equations, map.\\nProduct names: Outbreak Simulator, PathoSim, Infectron, SimPathogen\"\ncompletion = openai.Completion.create(engine=model_engine, prompt=prompt,max_tokens=1024, n=1,stop=None,temperature=0.7)\nmessage = completion.choices[0].text\nprint(message)\n\n."
   }
 ]
