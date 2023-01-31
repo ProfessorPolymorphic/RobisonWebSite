@@ -4,6 +4,7 @@ author: "Barrie Robison"
 date: "2022-12-01"
 categories: [Assignment, DataViz, Quarto]
 image: "Cthulhuhacking1.png"
+description: "Source code hybridized with documentation adds to your data science spellbook."
 ---
 
 ## SUMMARY

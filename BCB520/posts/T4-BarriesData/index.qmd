@@ -16,12 +16,12 @@ In this assignment (detalied [here](../A2-YourData/index.qmd)), I will identify,
 
 ## MY DATASET
 
-I've chosen a subset of a large dataset produced by our evolutionary video game, [Project Hastur](https://store.steampowered.com/app/800700/Project_Hastur/).  We built Project Hatur to be an evolutionary video game, and we are bold in our assertions of that fact.  But we haven't really published any evidence that the evolutionary model works.  This data set is the beginning of that exercise.
+I've chosen a subset of a large dataset produced by our evolutionary video game, [Project Hastur](https://store.steampowered.com/app/800700/Project_Hastur/). We built Project Hatur to be an evolutionary video game, and we are bold in our assertions of that fact. But we haven't really published any evidence that the evolutionary model works. This data set is the beginning of that exercise.
 
 ::: callout-note
-PROJECT HASTUR creates a unique challenge by combining elements of 3D tower defense and real-time strategy with biological evolution. Fight against alien Proteans that evolve - using biologically accurate models of evolution - to overcome the player’s defenses. 
+PROJECT HASTUR creates a unique challenge by combining elements of 3D tower defense and real-time strategy with biological evolution. Fight against alien Proteans that evolve - using biologically accurate models of evolution - to overcome the player's defenses.
 
-Each creature you will face has its own unique genome controlling its abilities, behaviors, and appearance. Those that make it the furthest and do the most damage to your defenses have the most offspring you will have to defeat in the next generation. The result? Evolution responds to the player’s strategy and makes every playthrough a unique experience.
+Each creature you will face has its own unique genome controlling its abilities, behaviors, and appearance. Those that make it the furthest and do the most damage to your defenses have the most offspring you will have to defeat in the next generation. The result? Evolution responds to the player's strategy and makes every playthrough a unique experience.
 
 Use four upgradable turret classes, plus airstrikes and combat robots, to fight against the Protean invasion. Make strategic decisions about which turrets to build, when to upgrade them, and where to place them on the hex grid. A well-timed airstrike can change the flow of the game, but you'll have to wait before you can use it again. Unlock powerful upgrades for each turret class as you move across the Nyx system. As you play, the Proteans evolve new weapon resistances, behaviors, and movement capabilities to better destroy your defenses.
 
@@ -42,7 +42,7 @@ Each experimental condition was run 9 times (9 replicates).
 
 ## IMPORTING THE DATA
 
-I'm going to use the `vroom` package to import multiple files.  Each file is a replicate and the filename tells us about the experimental condition.  Below I convert the filename variable (I named it `path`) into a a single categorical attribute called `Fit`.
+I'm going to use the `vroom` package to import multiple files. Each file is a replicate and the filename tells us about the experimental condition. Below I convert the filename variable (I named it `path`) into a a single categorical attribute called `Fit`.
 
 ```{r}
 #| output: false
@@ -63,6 +63,7 @@ Hastur$replicate <- str_split_i(Hastur$path, pattern = "", 4)
 ```
 
 The `glimpse` command in the `Tidyverse` package is a nice way to summarize the data frame:
+
 ```{r}
 
 glimpse(Hastur)
@@ -73,11 +74,11 @@ glimpse(Hastur)
 
 ### Data Set Type
 
-What we have here is a (big) **Flat Table**.  The **Items** are the rows, and each row is an individual alien enemy that existed during one of the replicates.  Each Item (alien) is described by **Attributes**, which are arranged in the columns. 
+What we have here is a (big) **Flat Table**. The **Items** are the rows, and each row is an individual alien enemy that existed during one of the replicates. Each Item (alien) is described by **Attributes**, which are arranged in the columns.
 
 ### Attribute Types
 
-The `glimpse` we did in the preceding section gives us a hint as to what each attribute type might be.  Let's flesh that out a bit though.  I'm going to create a new data frame that describes the attributes.
+The `glimpse` we did in the preceding section gives us a hint as to what each attribute type might be. Let's flesh that out a bit though. I'm going to create a new data frame that describes the attributes.
 
 ```{r}
 
@@ -87,7 +88,7 @@ Attributes
 
 ## HOST THE DATA
 
-I'm publishing to GitHub!  We will elaborate on this step as everyone progresses through the assignment.
+I'm publishing to GitHub! We will elaborate on this step as everyone progresses through the assignment.
 
 ## GRAPHS!
 

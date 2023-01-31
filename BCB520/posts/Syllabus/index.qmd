@@ -4,9 +4,8 @@ author: "Barrie Robison"
 date: "2022-12-12"
 categories: [Resources, DataViz]
 image: "Cthulhusyllabus2.png"
+description: "This forbidden tome contains information students were not meant to know…"
 ---
-
-This forbidden tome contains information students were not meant to know...
 
 # BCB 504: Foundations of Data Visualization
 
@@ -31,7 +30,7 @@ Students completing this course will be able to:
 
 ## Required Readings
 
-Tamara Munzner. Visualization Analysis and Design. A K Peters Visualization Series, CRC Press, 2014.  For the 2023 version of the class, I am trying out the Inclusive Access option.  Erolled students should have access to the text on the course [canvas page](https://canvas.uidaho.edu/courses/17806).
+Tamara Munzner. Visualization Analysis and Design. A K Peters Visualization Series, CRC Press, 2014. For the 2023 version of the class, I am trying out the Inclusive Access option. Erolled students should have access to the text on the course [canvas page](https://canvas.uidaho.edu/courses/17806).
 
 [Hard Copy on Amazon](https://www.amazon.com/Visualization-Analysis-Design-AK-Peters/dp/1466508914/ref=sr_1_1?crid=5AX2UJ4ZP5Y&keywords=munzner&qid=1670957518&sprefix=munzner%2Caps%2C237&sr=8-1)
 
