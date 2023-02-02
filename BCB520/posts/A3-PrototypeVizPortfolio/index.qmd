@@ -64,7 +64,17 @@ There are quite a few ways to do this part.  I'm going to use GitHub Desktop, bu
 1. Go to GitHub Desktop.
 2. Type some text in the summary box.
 3. Click COMMIT TO MASTER.
-4. 
+4. Click PUSH ORIGIN.
+5. Go to your GitHub in your browser.  You should see your new repository!  Yay!
+
+## Part 6 - Make it a website with GitHub pages.
+
+1. In your browser, click on your repository.
+2. Go to SETTINGS.
+3. Select PAGES.
+4. Set the SOURCE option to `Deploy from a branch`.
+5. Set the BRANCH to `master` and the directory to `docs`
+6. Deploy that stuff and wait.  Then visit your site!
 
 ## RESOURCES
 
