@@ -950,5 +950,26 @@
     "title": "About",
     "section": "",
     "text": "Evolution. Data Science. Video Games. Horror Fiction.\nI am a Professor of Biological Sciences at the University of Idaho, and the cofounder of Polymorphic Games, an experimental video game studio that applies game development technology to scientific research and education. We have released two evolutionary video games on Steam:\nDarwin’s Demons is an rcade style space shooter in which you battle a population of evolving aliens. The alien’s morphology, fire type, and behaviors are all encoded by a digital genome. The aliens that are best able to shoot or evade you reproduce to make the next generation.\nProject Hastur is an evolutionary tower defense game. Defend humanity against the ever changing threat of the alien Proteans. Project Hastur combines elements of 3D tower defense and real-time strategy with models of biological evolution to create a uniquely challenging experience.\nI am also a huge Horror and Science Fiction nerd, and am fascinated by the intersection of these genres with science.\nVideo"
+  },
+  {
+    "objectID": "BCB520/posts/A3-PrototypeVizPortfolio/index.html",
+    "href": "BCB520/posts/A3-PrototypeVizPortfolio/index.html",
+    "title": "ASSIGNMENT 3",
+    "section": "",
+    "text": "Enough with the theory and conceptual mumbo jumbo! Let’s get down to making a visualization and posting it somewhere for all the world to see! The basic idea of this assignment is to set up a repository that will serve as an experimental portfolio, and then create your first novel visualization element inside the portfolio. Its gonna be fun! Or at least educational…"
+  },
+  {
+    "objectID": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#assignment",
+    "href": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#assignment",
+    "title": "ASSIGNMENT 3",
+    "section": "ASSIGNMENT",
+    "text": "ASSIGNMENT\nThis assignment has two parts. The first part is technical. We’ll set up a Quarto Blog project as a new repository in your GitHub account. Then you’ll be a Blogger! Prestigious! The second part should be more fun. We are going to create your first Blog post as a visualization that explores an ACTION - TARGET pair relevant to your data set from Assignment 2.\n\nPart 1.\nHopefully by now you have created / dusted off / logged in to your GitHub account. Go ahead and log in to your account on the web and leave it open in a tab in your browser. There is a really great video about the next few steps (also linked below in RESORUCES) from Posit, but I’m giving you the condensed version here.\n\nFire up RStudio.\nGo to File->New Project and then select NEW DIRECTORY.\nYou are going to create a new project in a new working directory. It is best practice to put this in a senstible directory structure on your local hard drive where your other GitHub repositories also live. Here is what mine looks like:"
+  },
+  {
+    "objectID": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#resources",
+    "href": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#resources",
+    "title": "ASSIGNMENT 3",
+    "section": "RESOURCES",
+    "text": "RESOURCES\nA YouTube Video from Posit on Building your Data Science Portfolio\nTidyTuesday\nA fun Spotify example from TidyTuesday by Kaylin Pavlik.\nBarrie attempts this assignment in Tutorial 4."
   }
 ]
