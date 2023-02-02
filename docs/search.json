@@ -665,6 +665,48 @@
     "text": "Class Schedule\n\nlibrary(readxl)\nSchedule <- read_excel(\"Schedule.xlsx\")\n\nknitr::kable(Schedule, caption = '')\n\n\n\n\nDATE\nTOPIC\nREADING\nRECEIVE\nTURN IN\n\n\n\n\n2023-01-12\nINTRODUCTION.  Why Visualization Matters\nVAD Ch 1.\nAssignment 1 - Fun with literate programming.\nNA\n\n\n2023-01-17\nWHAT?  Abstraction of Data\nVAD Ch 2.\nNA\nAssignment 1 - Fun with literate programming.\n\n\n2023-01-19\nWHY?  Task Abstraction\nVAD Ch 3.\nAssignment 2 - You’ll need some data…\nNA\n\n\n2023-01-24\nANALYZE.  Nested Design Model Part 1.\nVAD Ch 4.\nNA\nNA\n\n\n2023-01-26\nANALYZE. Nested Design Model Part 2.\nVAD Ch 4.\nAssignment 3 - ggplot\nNA\n\n\n2023-01-31\nMARKS. Geometric elements to depict data\nVAD Ch 5.\nNA\nNA\n\n\n2023-02-02\nCHANNELS. Controlling the appearance of marks.\nVAD Ch 5.\nAssignment 4 - Midterm Outline\nNA\n\n\n2023-02-07\nRULES OF THUMB.\nVAD Ch. 6.\nNA\nNA\n\n\n2023-02-09\nTABULAR DATA I\nVAD Ch. 7.\nAssignment 5 - Portfolio plans\nNA\n\n\n2023-02-14\nTABULAR DATA II\nVAD Ch. 7.\nNA\nNA\n\n\n2023-02-16\nStudent Presentations\nNA\nNA\nMidterm Assignment Presentations\n\n\n2023-02-21\nStudent Presentations\nNA\nNA\nMidterm Assignment Presentations\n\n\n2023-02-23\nSPATIAL DATA I: Geographic Maps\nVAD Ch 8.\nAssignment 6 - Spatial things\nNA\n\n\n2023-02-28\nSPATIAL DATA II:  Spatial Fields\nVAD Ch 8.\nNA\nNA\n\n\n2023-03-02\nNETWORK DATA I\nVAD Ch 9.\nAssignment 7 - Network things\nNA\n\n\n2023-03-07\nNETWORK DATA II\nVAD Ch 9.\nNA\nNA\n\n\n2023-03-09\nCOLOR I\nVAD Ch 10.\nAssignment 8 - Find some stuff for critique\nNA\n\n\n2023-03-14\nNo Class\nNA\nNA\nSPRING BREAK\n\n\n2023-03-16\nNo Class\nNA\nNA\nSPRING BREAK\n\n\n2023-03-21\nBarrie in NV\nVAD Ch 10.\nNA\nNA\n\n\n2023-03-23\nCOLOR II\nVAD Ch 10.\nAssignment 9 - Let’s practice Observable!\nNA\n\n\n2023-03-28\nCOLOR III\nVAD Ch 11.\nNA\nNA\n\n\n2023-03-30\nINTERACTIVITY\nVAD Ch 12.\nAssignment 10 - Cool interactive stuff\nNA\n\n\n2023-04-04\nMULTIPLE VIEWS\nVAD Ch 13.\nNA\nNA\n\n\n2023-04-06\nAGGREGATION\nVAD Ch 13.\nAssignment 11 - Data Science Competition\nNA\n\n\n2023-04-11\nFILTERING\nVAD Ch 14.\nNA\nNA\n\n\n2023-04-13\nEMBEDDING: Focus and Context\nNA\nNA\nCoS DATA SCIENCE COMPETITION\n\n\n2023-04-18\nTBA\nNA\nNA\nNA\n\n\n2023-04-20\nTBA\nNA\nNA\nNA\n\n\n2023-04-25\nStudent Presentations\nNA\nNA\nFINAL PROJECT PRESENTATIONS\n\n\n2023-04-27\nStudent Presentations\nNA\nNA\nFINAL PROJECT PRESENTATIONS\n\n\n2023-05-02\nDEAD WEEK\nNA\nPortfolio Review\nNA\n\n\n2023-05-04\nDEAD WEEK\nNA\nPortfolio Review\nNA\n\n\n2023-05-09\nFINALS WEEK\nNA\nNA\nNA"
   },
   {
+    "objectID": "BCB520/posts/A3-PrototypeVizPortfolio/index.html",
+    "href": "BCB520/posts/A3-PrototypeVizPortfolio/index.html",
+    "title": "ASSIGNMENT 3",
+    "section": "",
+    "text": "Enough with the theory and conceptual mumbo jumbo! Let’s get down to making a visualization and posting it somewhere for all the world to see! The basic idea of this assignment is to set up a repository that will serve as an experimental portfolio, and then create your first novel visualization element inside the portfolio. Its gonna be fun! Or at least educational…"
+  },
+  {
+    "objectID": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#assignment",
+    "href": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#assignment",
+    "title": "ASSIGNMENT 3",
+    "section": "ASSIGNMENT",
+    "text": "ASSIGNMENT\nThis assignment has two parts. The first part is technical. We’ll set up a Quarto Blog project as a new repository in your GitHub account. Then you’ll be a Blogger! Prestigious! The second part should be more fun. We are going to create your first Blog post as a visualization that explores an ACTION - TARGET pair relevant to your data set from Assignment 2.\n\nPart 1 - Create your BLOG project.\nHopefully by now you have created / dusted off / logged in to your GitHub account. Go ahead and log in to your account on the web and leave it open in a tab in your browser. There is a really great video about the next few steps (also linked below in RESORUCES) from Posit, but I’m giving you the condensed version here.\n\nFire up RStudio.\nGo to File->New Project and then select NEW DIRECTORY.\nNow select QUARTO BLOG.\nYou are going to create a the project in a new working directory. It is best practice to put this in a senstible directory structure on your local hard drive where your other GitHub repositories also live. Here is what mine looks like:\n\n 4. I suggest making the directory name something informative, like BCB504Portfolio, but hey… If you want to call your repository HasturBoxerShorts I won’t stop you. 5. Most of you will select Knitr as your Engine, but Cody “Mr. Hacker McPythonPants” might select Jupyter. 6. Check Create a git repository. The other boxes are optional and we can talk more about them later. 7. Click CREATE PROJECT.\nNow you’ve got a BLOG template all set up! Ha Ha! Onward to Internet Fame!\n\n\nPart 2 - Make the BLOG about you.\nWe won’t spend a ton of time here, because this will be an ongoing process. You’ll go and watch all those cool videos and tutorials this weekend to figure this out. But lets do a couple things.\n\nMaybe you should modify the about.qmd file so that your name is in there somewhere.\nMaybe you should modify the index.qmd file with a better title in the YAML header.\nMaybe you should navigate to the posts folder, open the Welcome to my blog folder, open index.qmd from that directory, and add a sentence or two.\n\n\n\nPart 3 - Customize your first post.\n\nNavigate to the posts folder, open the post with code folder, and open index.qmd.\nReplace ALL of the content of index.qmd with the most recent version of your .qmd file from ASSIGNMENT 2. Keep the file name index.qmd. Save that file!\nMove your data files to the post with code folder.\nRender the index.qmd file from this folder. Hopefully it worked!"
+  },
+  {
+    "objectID": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#part-4---render-the-blog-as-a-website.",
+    "href": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#part-4---render-the-blog-as-a-website.",
+    "title": "ASSIGNMENT 3",
+    "section": "Part 4 - Render the BLOG as a website.",
+    "text": "Part 4 - Render the BLOG as a website.\n\nSave all the files you’ve modified.\nGo to the BUILD tab in the (probably) top right section of RStudio.\nClick RENDER WEBSITE.\nClick through your new Blog and see how it works!"
+  },
+  {
+    "objectID": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#part-5---push-to-github.",
+    "href": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#part-5---push-to-github.",
+    "title": "ASSIGNMENT 3",
+    "section": "Part 5 - Push to GitHub.",
+    "text": "Part 5 - Push to GitHub.\nThere are quite a few ways to do this part. I’m going to use GitHub Desktop, but those video will show you other ways.\n\nGo to GitHub Desktop.\nType some text in the summary box.\nClick COMMIT TO MASTER.\nClick PUSH ORIGIN.\nGo to your GitHub in your browser. You should see your new repository! Yay!"
+  },
+  {
+    "objectID": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#part-6---make-it-a-website-with-github-pages.",
+    "href": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#part-6---make-it-a-website-with-github-pages.",
+    "title": "ASSIGNMENT 3",
+    "section": "Part 6 - Make it a website with GitHub pages.",
+    "text": "Part 6 - Make it a website with GitHub pages.\n\nIn your browser, click on your repository.\nGo to SETTINGS.\nSelect PAGES.\nSet the SOURCE option to Deploy from a branch.\nSet the BRANCH to master and the directory to docs\nDeploy that stuff and wait. Then visit your site!"
+  },
+  {
+    "objectID": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#resources",
+    "href": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#resources",
+    "title": "ASSIGNMENT 3",
+    "section": "RESOURCES",
+    "text": "RESOURCES\nA YouTube Video from Posit on Building your Data Science Portfolio\nTidyTuesday\nA fun Spotify example from TidyTuesday by Kaylin Pavlik.\nBarrie attempts this assignment in Tutorial 4."
+  },
+  {
     "objectID": "BCB520/posts/A2-YourData/index.html",
     "href": "BCB520/posts/A2-YourData/index.html",
     "title": "ASSIGNMENT 2 - Your Data.",
@@ -950,26 +992,5 @@
     "title": "About",
     "section": "",
     "text": "Evolution. Data Science. Video Games. Horror Fiction.\nI am a Professor of Biological Sciences at the University of Idaho, and the cofounder of Polymorphic Games, an experimental video game studio that applies game development technology to scientific research and education. We have released two evolutionary video games on Steam:\nDarwin’s Demons is an rcade style space shooter in which you battle a population of evolving aliens. The alien’s morphology, fire type, and behaviors are all encoded by a digital genome. The aliens that are best able to shoot or evade you reproduce to make the next generation.\nProject Hastur is an evolutionary tower defense game. Defend humanity against the ever changing threat of the alien Proteans. Project Hastur combines elements of 3D tower defense and real-time strategy with models of biological evolution to create a uniquely challenging experience.\nI am also a huge Horror and Science Fiction nerd, and am fascinated by the intersection of these genres with science.\nVideo"
-  },
-  {
-    "objectID": "BCB520/posts/A3-PrototypeVizPortfolio/index.html",
-    "href": "BCB520/posts/A3-PrototypeVizPortfolio/index.html",
-    "title": "ASSIGNMENT 3",
-    "section": "",
-    "text": "Enough with the theory and conceptual mumbo jumbo! Let’s get down to making a visualization and posting it somewhere for all the world to see! The basic idea of this assignment is to set up a repository that will serve as an experimental portfolio, and then create your first novel visualization element inside the portfolio. Its gonna be fun! Or at least educational…"
-  },
-  {
-    "objectID": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#assignment",
-    "href": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#assignment",
-    "title": "ASSIGNMENT 3",
-    "section": "ASSIGNMENT",
-    "text": "ASSIGNMENT\nThis assignment has two parts. The first part is technical. We’ll set up a Quarto Blog project as a new repository in your GitHub account. Then you’ll be a Blogger! Prestigious! The second part should be more fun. We are going to create your first Blog post as a visualization that explores an ACTION - TARGET pair relevant to your data set from Assignment 2.\n\nPart 1.\nHopefully by now you have created / dusted off / logged in to your GitHub account. Go ahead and log in to your account on the web and leave it open in a tab in your browser. There is a really great video about the next few steps (also linked below in RESORUCES) from Posit, but I’m giving you the condensed version here.\n\nFire up RStudio.\nGo to File->New Project and then select NEW DIRECTORY.\nYou are going to create a new project in a new working directory. It is best practice to put this in a senstible directory structure on your local hard drive where your other GitHub repositories also live. Here is what mine looks like:"
-  },
-  {
-    "objectID": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#resources",
-    "href": "BCB520/posts/A3-PrototypeVizPortfolio/index.html#resources",
-    "title": "ASSIGNMENT 3",
-    "section": "RESOURCES",
-    "text": "RESOURCES\nA YouTube Video from Posit on Building your Data Science Portfolio\nTidyTuesday\nA fun Spotify example from TidyTuesday by Kaylin Pavlik.\nBarrie attempts this assignment in Tutorial 4."
   }
 ]

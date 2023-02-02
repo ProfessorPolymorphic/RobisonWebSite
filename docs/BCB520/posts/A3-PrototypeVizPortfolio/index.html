@@ -413,8 +413,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">SUMMARY</a></li>
   <li><a href="#assignment" id="toc-assignment" class="nav-link" data-scroll-target="#assignment">ASSIGNMENT</a>
   <ul class="collapse">
-  <li><a href="#part-1." id="toc-part-1." class="nav-link" data-scroll-target="#part-1.">Part 1.</a></li>
+  <li><a href="#part-1---create-your-blog-project." id="toc-part-1---create-your-blog-project." class="nav-link" data-scroll-target="#part-1---create-your-blog-project.">Part 1 - Create your BLOG project.</a></li>
+  <li><a href="#part-2---make-the-blog-about-you." id="toc-part-2---make-the-blog-about-you." class="nav-link" data-scroll-target="#part-2---make-the-blog-about-you.">Part 2 - Make the BLOG about you.</a></li>
+  <li><a href="#part-3---customize-your-first-post." id="toc-part-3---customize-your-first-post." class="nav-link" data-scroll-target="#part-3---customize-your-first-post.">Part 3 - Customize your first post.</a></li>
   </ul></li>
+  <li><a href="#part-4---render-the-blog-as-a-website." id="toc-part-4---render-the-blog-as-a-website." class="nav-link" data-scroll-target="#part-4---render-the-blog-as-a-website.">Part 4 - Render the BLOG as a website.</a></li>
+  <li><a href="#part-5---push-to-github." id="toc-part-5---push-to-github." class="nav-link" data-scroll-target="#part-5---push-to-github.">Part 5 - Push to GitHub.</a></li>
+  <li><a href="#part-6---make-it-a-website-with-github-pages." id="toc-part-6---make-it-a-website-with-github-pages." class="nav-link" data-scroll-target="#part-6---make-it-a-website-with-github-pages.">Part 6 - Make it a website with GitHub pages.</a></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">RESOURCES</a></li>
   </ul>
 </nav>
@@ -432,16 +437,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="assignment" class="level2">
 <h2 class="anchored" data-anchor-id="assignment">ASSIGNMENT</h2>
 <p>This assignment has two parts. The first part is technical. We’ll set up a Quarto Blog project as a new repository in your GitHub account. Then you’ll be a Blogger! Prestigious! The second part should be more fun. We are going to create your first Blog post as a visualization that explores an ACTION - TARGET pair relevant to your data set from Assignment 2.</p>
-<section id="part-1." class="level3">
-<h3 class="anchored" data-anchor-id="part-1.">Part 1.</h3>
+<section id="part-1---create-your-blog-project." class="level3">
+<h3 class="anchored" data-anchor-id="part-1---create-your-blog-project.">Part 1 - Create your BLOG project.</h3>
 <p>Hopefully by now you have created / dusted off / logged in to your <a href="https://github.com">GitHub</a> account. Go ahead and log in to your account on the web and leave it open in a tab in your browser. There is a really great <a href="https://www.youtube.com/watch?v=xtSFXtDf4cM" target="_blank">video</a> about the next few steps (also linked below in RESORUCES) from Posit, but I’m giving you the condensed version here.</p>
 <ol type="1">
 <li>Fire up RStudio.</li>
 <li>Go to File-&gt;New Project and then select NEW DIRECTORY.</li>
-<li>You are going to create a new project in a new working directory. It is best practice to put this in a senstible directory structure on your local hard drive where your other GitHub repositories also live. Here is what mine looks like:</li>
+<li>Now select <a href="">QUARTO BLOG</a>.</li>
+<li>You are going to create a the project in a new working directory. It is best practice to put this in a senstible directory structure on your local hard drive where your other GitHub repositories also live. Here is what mine looks like:</li>
 </ol>
-<p><img src="BarrieDir.png" class="img-fluid"></p>
+<p><img src="BarrieDir.png" class="img-fluid"> 4. I suggest making the directory name something informative, like BCB504Portfolio, but hey… If you want to call your repository HasturBoxerShorts I won’t stop you. 5. Most of you will select <code>Knitr</code> as your Engine, but Cody “Mr.&nbsp;Hacker McPythonPants” might select <code>Jupyter</code>. 6. Check <strong>Create a git repository</strong>. The other boxes are optional and we can talk more about them later. 7. Click CREATE PROJECT.</p>
+<p>Now you’ve got a BLOG template all set up! Ha Ha! Onward to <strong>Internet Fame</strong>!</p>
 </section>
+<section id="part-2---make-the-blog-about-you." class="level3">
+<h3 class="anchored" data-anchor-id="part-2---make-the-blog-about-you.">Part 2 - Make the BLOG about you.</h3>
+<p>We won’t spend a ton of time here, because this will be an ongoing process. You’ll go and watch all those cool videos and tutorials this weekend to figure this out. But lets do a couple things.</p>
+<ol type="1">
+<li>Maybe you should modify the <code>about.qmd</code> file so that your name is in there somewhere.</li>
+<li>Maybe you should modify the <code>index.qmd</code> file with a better title in the YAML header.</li>
+<li>Maybe you should navigate to the <code>posts</code> folder, open the <code>Welcome to my blog</code> folder, open <code>index.qmd</code> from that directory, and add a sentence or two.</li>
+</ol>
+</section>
+<section id="part-3---customize-your-first-post." class="level3">
+<h3 class="anchored" data-anchor-id="part-3---customize-your-first-post.">Part 3 - Customize your first post.</h3>
+<ol type="1">
+<li>Navigate to the <code>posts</code> folder, open the <code>post with code</code> folder, and open <code>index.qmd</code>.</li>
+<li>Replace ALL of the content of <code>index.qmd</code> with the most recent version of your <code>.qmd</code> file from <a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/posts/A2-YourData/">ASSIGNMENT 2</a>. Keep the file name <code>index.qmd</code>. Save that file!</li>
+<li>Move your data files to the <code>post with code</code> folder.</li>
+<li>Render the index.qmd file from this folder. Hopefully it worked!</li>
+</ol>
+</section>
+</section>
+<section id="part-4---render-the-blog-as-a-website." class="level2">
+<h2 class="anchored" data-anchor-id="part-4---render-the-blog-as-a-website.">Part 4 - Render the BLOG as a website.</h2>
+<ol type="1">
+<li>Save all the files you’ve modified.</li>
+<li>Go to the BUILD tab in the (probably) top right section of RStudio.</li>
+<li>Click RENDER WEBSITE.</li>
+<li>Click through your new Blog and see how it works!</li>
+</ol>
+</section>
+<section id="part-5---push-to-github." class="level2">
+<h2 class="anchored" data-anchor-id="part-5---push-to-github.">Part 5 - Push to GitHub.</h2>
+<p>There are quite a few ways to do this part. I’m going to use GitHub Desktop, but those video will show you other ways.</p>
+<ol type="1">
+<li>Go to GitHub Desktop.</li>
+<li>Type some text in the summary box.</li>
+<li>Click COMMIT TO MASTER.</li>
+<li>Click PUSH ORIGIN.</li>
+<li>Go to your GitHub in your browser. You should see your new repository! Yay!</li>
+</ol>
+</section>
+<section id="part-6---make-it-a-website-with-github-pages." class="level2">
+<h2 class="anchored" data-anchor-id="part-6---make-it-a-website-with-github-pages.">Part 6 - Make it a website with GitHub pages.</h2>
+<ol type="1">
+<li>In your browser, click on your repository.</li>
+<li>Go to SETTINGS.</li>
+<li>Select PAGES.</li>
+<li>Set the SOURCE option to <code>Deploy from a branch</code>.</li>
+<li>Set the BRANCH to <code>master</code> and the directory to <code>docs</code></li>
+<li>Deploy that stuff and wait. Then visit your site!</li>
+</ol>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">RESOURCES</h2>
@@ -660,25 +716,73 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>This assignment has two parts.  The first part is technical.  We'll set up a Quarto Blog project as a new repository in your GitHub account.  Then you'll be a Blogger!  Prestigious!  The second part should be more fun.  We are going to create your first Blog post as a visualization that explores an ACTION - TARGET pair relevant to your data set from Assignment 2.</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">### Part 1.</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">### Part 1 - Create your BLOG project.</span></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Hopefully by now you have created / dusted off / logged in to your  <span class="co">[</span><span class="ot">GitHub</span><span class="co">](https://github.com)</span> account. Go ahead and log in to your account on the web and leave it open in a tab in your browser.  There is a really great <span class="co">[</span><span class="ot">video</span><span class="co">](https://www.youtube.com/watch?v=xtSFXtDf4cM)</span>{target="_blank"} about the next few steps (also linked below in RESORUCES) from Posit, but I'm giving you the condensed version here.</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Fire up RStudio.</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Go to File-&gt;New Project and then select NEW DIRECTORY.</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>You are going to create a new project in a new working directory.  It is best practice to put this in a senstible directory structure on your local hard drive where your other GitHub repositories also live.  Here is what mine looks like:</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="al">![](BarrieDir.png)</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## RESOURCES</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">A YouTube Video from Posit on Building your Data Science Portfolio</span><span class="co">](https://www.youtube.com/watch?v=xtSFXtDf4cM)</span>{target="_blank"}</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">TidyTuesday</span><span class="co">](https://www.tidytuesday.com)</span>{target="_blank"}</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">A fun Spotify example</span><span class="co">](https://www.kaylinpavlik.com/classifying-songs-genres/)</span>{target="_blank"} from TidyTuesday by Kaylin Pavlik.</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>Barrie attempts this assignment in <span class="co">[</span><span class="ot">Tutorial 4</span><span class="co">](../T4-BarriesData/index.qmd)</span>{target="_blank"}.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Now select <span class="co">[</span><span class="ot">QUARTO BLOG</span><span class="co">]()</span>.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>You are going to create a the project in a new working directory.  It is best practice to put this in a senstible directory structure on your local hard drive where your other GitHub repositories also live.  Here is what mine looks like:</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="al">![](BarrieDir.png)</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>I suggest making the directory name something informative, like BCB504Portfolio, but hey... If you want to call your repository HasturBoxerShorts I won't stop you.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Most of you will select <span class="in">`Knitr`</span> as your Engine, but Cody "Mr. Hacker McPythonPants" might select <span class="in">`Jupyter`</span>.</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Check **Create a git repository**.  The other boxes are optional and we can talk more about them later.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>Click CREATE PROJECT.</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>Now you've got a BLOG template all set up!  Ha Ha!  Onward to **Internet Fame**!</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="fu">### Part 2 - Make the BLOG about you.</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>We won't spend a ton of time here, because this will be an ongoing process.  You'll go and watch all those cool videos and tutorials this weekend to figure this out.  But lets do a couple things.</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Maybe you should modify the <span class="in">`about.qmd`</span> file so that your name is in there somewhere.</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Maybe you should modify the <span class="in">`index.qmd`</span> file with a better title in the YAML header.</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Maybe you should navigate to the <span class="in">`posts`</span> folder, open the <span class="in">`Welcome to my blog`</span> folder, open <span class="in">`index.qmd`</span> from that directory, and add a sentence or two.</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="fu">### Part 3 - Customize your first post.</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Navigate to the <span class="in">`posts`</span> folder, open the <span class="in">`post with code`</span> folder, and open <span class="in">`index.qmd`</span>.</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Replace ALL of the content of <span class="in">`index.qmd`</span> with the most recent version of your <span class="in">`.qmd`</span> file from <span class="co">[</span><span class="ot">ASSIGNMENT 2</span><span class="co">](https://professorpolymorphic.github.io/RobisonWebSite/BCB520/posts/A2-YourData/)</span>.  Keep the file name <span class="in">`index.qmd`</span>. Save that file!</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Move your data files to the <span class="in">`post with code`</span> folder.</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Render the index.qmd file from this folder.  Hopefully it worked!</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## Part 4 - Render the BLOG as a website.</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Save all the files you've modified.</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Go to the BUILD tab in the (probably) top right section of RStudio.</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Click RENDER WEBSITE.</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Click through your new Blog and see how it works!</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## Part 5 - Push to GitHub.</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>There are quite a few ways to do this part.  I'm going to use GitHub Desktop, but those video will show you other ways.</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Go to GitHub Desktop.</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Type some text in the summary box.</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Click COMMIT TO MASTER.</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Click PUSH ORIGIN.</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Go to your GitHub in your browser.  You should see your new repository!  Yay!</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="fu">## Part 6 - Make it a website with GitHub pages.</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>In your browser, click on your repository.</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Go to SETTINGS.</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Select PAGES.</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Set the SOURCE option to <span class="in">`Deploy from a branch`</span>.</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Set the BRANCH to <span class="in">`master`</span> and the directory to <span class="in">`docs`</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Deploy that stuff and wait.  Then visit your site!</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="fu">## RESOURCES</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">A YouTube Video from Posit on Building your Data Science Portfolio</span><span class="co">](https://www.youtube.com/watch?v=xtSFXtDf4cM)</span>{target="_blank"}</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">TidyTuesday</span><span class="co">](https://www.tidytuesday.com)</span>{target="_blank"}</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">A fun Spotify example</span><span class="co">](https://www.kaylinpavlik.com/classifying-songs-genres/)</span>{target="_blank"} from TidyTuesday by Kaylin Pavlik.</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>Barrie attempts this assignment in <span class="co">[</span><span class="ot">Tutorial 4</span><span class="co">](../T4-BarriesData/index.qmd)</span>{target="_blank"}.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
