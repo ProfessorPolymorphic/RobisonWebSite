@@ -18,7 +18,9 @@ Enough with the theory and conceptual mumbo jumbo!  Let's get down to making a v
 
 This assignment has two parts.  The first part is technical.  We'll set up a Quarto Blog project as a new repository in your GitHub account.  Then you'll be a Blogger!  Prestigious!  The second part should be more fun.  We are going to create your first Blog post as a visualization that explores an ACTION - TARGET pair relevant to your data set from Assignment 2.
 
-### Part 1 - Create your BLOG project.
+## PART 1 TECHNICAL SORCERY
+
+### 1A - Create your BLOG project.
 
 Hopefully by now you have created / dusted off / logged in to your  [GitHub](https://github.com) account. Go ahead and log in to your account on the web and leave it open in a tab in your browser.  There is a really great [video](https://www.youtube.com/watch?v=xtSFXtDf4cM){target="_blank"} about the next few steps (also linked below in RESORUCES) from Posit, but I'm giving you the condensed version here.
 
@@ -35,7 +37,7 @@ Hopefully by now you have created / dusted off / logged in to your  [GitHub](htt
 
 Now you've got a BLOG template all set up!  Ha Ha!  Onward to **Internet Fame**!
 
-### Part 2 - Make the BLOG about you.
+### 1B - Make the BLOG about you.
 
 We won't spend a ton of time here, because this will be an ongoing process.  You'll go and watch all those cool videos and tutorials this weekend to figure this out.  But lets do a couple things.
 
@@ -43,21 +45,21 @@ We won't spend a ton of time here, because this will be an ongoing process.  You
 2. Maybe you should modify the `index.qmd` file with a better title in the YAML header.
 3. Maybe you should navigate to the `posts` folder, open the `Welcome to my blog` folder, open `index.qmd` from that directory, and add a sentence or two.
 
-### Part 3 - Customize your first post.
+### 1C - Customize your first post.
 
 1. Navigate to the `posts` folder, open the `post with code` folder, and open `index.qmd`.
 2. Replace ALL of the content of `index.qmd` with the most recent version of your `.qmd` file from [ASSIGNMENT 2](https://professorpolymorphic.github.io/RobisonWebSite/BCB520/posts/A2-YourData/).  Keep the file name `index.qmd`. Save that file!
 3. Move your data files to the `post with code` folder.
 4. Render the index.qmd file from this folder.  Hopefully it worked!
 
-## Part 4 - Render the BLOG as a website.
+### 1D - Render the BLOG as a website.
 
 1. Save all the files you've modified.
 2. Go to the BUILD tab in the (probably) top right section of RStudio.
 3. Click RENDER WEBSITE.
 4. Click through your new Blog and see how it works!
 
-## Part 5 - Push to GitHub.
+### 1E - Push to GitHub.
 
 There are quite a few ways to do this part.  I'm going to use GitHub Desktop, but those video will show you other ways.
 
@@ -67,7 +69,7 @@ There are quite a few ways to do this part.  I'm going to use GitHub Desktop, bu
 4. Click PUSH ORIGIN.
 5. Go to your GitHub in your browser.  You should see your new repository!  Yay!
 
-## Part 6 - Make it a website with GitHub pages.
+### 1F - Make it a website with GitHub pages.
 
 1. In your browser, click on your repository.
 2. Go to SETTINGS.
@@ -75,6 +77,19 @@ There are quite a few ways to do this part.  I'm going to use GitHub Desktop, bu
 4. Set the SOURCE option to `Deploy from a branch`.
 5. Set the BRANCH to `master` and the directory to `docs`
 6. Deploy that stuff and wait.  Then visit your site!
+
+## PART 2 ELDRITCH VISUALIZATION RITUAL
+
+### 2A Define your ACTION - TARGET pair(s)
+
+In [LECTURE 3] we discussed the concept of [Task Abstraction]{.red} in which you define the viz task that you want to help the user accomplish.  This was represented as sets of [ACTIONS]{.red} that the user would perform (e.g. Discover, Present, Browse, Identify) on [TARGETS]{.red} related to the data set (e.g. Trends, Attributes, etc.).
+
+Think about one or two visualizations you wish to construct with your data, and try to define them in terms of ACTION - TARGET pairs.  While you are at it, why don't you update the `index.qmd` file of your BLOG POST with a new seciton at the bottom titled TASK ABSTRACTION, and put a sentence describing your visualizations and the ACTION - TARGET pairs they represent?  
+
+### 2B Construct your Visualization
+
+Let's get to work!  Using whatever tools you can, code up your visualization in that new section of your BLOG post.  
+
 
 ## RESOURCES
 
@@ -84,4 +99,6 @@ There are quite a few ways to do this part.  I'm going to use GitHub Desktop, bu
 
 [A fun Spotify example](https://www.kaylinpavlik.com/classifying-songs-genres/){target="_blank"} from TidyTuesday by Kaylin Pavlik.
 
-Barrie attempts this assignment in [Tutorial 4](../T4-BarriesData/index.qmd){target="_blank"}.
+[Quarto's BLOG Documentation](https://quarto.org/docs/websites/website-blog.html){target=_blank"}
+
+[A YouTube Video from Posit on Building a BLOG with Quarto](https://www.youtube.com/watch?v=CVcvXfRyfE0&t=0s){target="_blank"}

@@ -90,14 +90,31 @@ Attributes
 
 I'm publishing to GitHub! We will elaborate on this step as everyone progresses through the assignment.
 
-## GRAPHS!
+## TASK ABSTRACTION
+
+For this data set, I am currently defining the user as ... me!  My hypothesis is that the two Fitness conditions create different evolutionary outcomes of the aliens in Project Hastur.  Some relevant ACTION TARGET pairs might be:
+
+DISCOVER TRENDS
+
+DISCOVER DISTRIBUTION
+
+DISCOVER SIMILARITY
+
+COMPARE TRENDS
+
+COMPARE DISTRIBUTION
+
+I'm going to try COMPARE TRENDS.  I want to COMPARE the TREND in `WalkSpeed` over time (`Generation`) between the two `Fit` categories.  To do this, I'll create a scatterplot, faceted by `Fit`.
 
 ```{r}
 ggplot(Hastur, aes(x=Generation, y = WalkSpeed))+
   geom_point(aes(color=TurnRate), alpha = 0.01, size = 1)+
   scale_color_continuous(low="red", high = "blue")+
   facet_grid(replicate~Fit)
+```
 
+
+```{r}
 Hastur50 <- filter(Hastur, Generation == 49)
   
 

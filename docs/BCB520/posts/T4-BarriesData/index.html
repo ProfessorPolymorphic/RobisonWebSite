@@ -421,7 +421,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#attribute-types" id="toc-attribute-types" class="nav-link" data-scroll-target="#attribute-types">Attribute Types</a></li>
   </ul></li>
   <li><a href="#host-the-data" id="toc-host-the-data" class="nav-link" data-scroll-target="#host-the-data">HOST THE DATA</a></li>
-  <li><a href="#graphs" id="toc-graphs" class="nav-link" data-scroll-target="#graphs">GRAPHS!</a></li>
+  <li><a href="#task-abstraction" id="toc-task-abstraction" class="nav-link" data-scroll-target="#task-abstraction">TASK ABSTRACTION</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -568,19 +568,28 @@ $ replicate           &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "
 <h2 class="anchored" data-anchor-id="host-the-data">HOST THE DATA</h2>
 <p>I’m publishing to GitHub! We will elaborate on this step as everyone progresses through the assignment.</p>
 </section>
-<section id="graphs" class="level2">
-<h2 class="anchored" data-anchor-id="graphs">GRAPHS!</h2>
+<section id="task-abstraction" class="level2">
+<h2 class="anchored" data-anchor-id="task-abstraction">TASK ABSTRACTION</h2>
+<p>For this data set, I am currently defining the user as … me! My hypothesis is that the two Fitness conditions create different evolutionary outcomes of the aliens in Project Hastur. Some relevant ACTION TARGET pairs might be:</p>
+<p>DISCOVER TRENDS</p>
+<p>DISCOVER DISTRIBUTION</p>
+<p>DISCOVER SIMILARITY</p>
+<p>COMPARE TRENDS</p>
+<p>COMPARE DISTRIBUTION</p>
+<p>I’m going to try COMPARE TRENDS. I want to COMPARE the TREND in <code>WalkSpeed</code> over time (<code>Generation</code>) between the two <code>Fit</code> categories. To do this, I’ll create a scatterplot, faceted by <code>Fit</code>.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur, <span class="fu">aes</span>(<span class="at">x=</span>Generation, <span class="at">y =</span> WalkSpeed))<span class="sc">+</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>TurnRate), <span class="at">alpha =</span> <span class="fl">0.01</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_continuous</span>(<span class="at">low=</span><span class="st">"red"</span>, <span class="at">high =</span> <span class="st">"blue"</span>)<span class="sc">+</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(replicate<span class="sc">~</span>Fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
+</div>
+<div class="cell">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Hastur50 <span class="ot">&lt;-</span> <span class="fu">filter</span>(Hastur, Generation <span class="sc">==</span> <span class="dv">49</span>)</span>
@@ -592,7 +601,7 @@ $ replicate           &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(Fit<span class="sc">~</span>replicate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-4-2.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 
