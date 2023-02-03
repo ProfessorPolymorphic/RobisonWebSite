@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.203">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Barrie D. Robison">
+<meta name="dcterms.date" content="2023-01-25">
+<meta name="description" content="Barrie attempts ASSIGMENT 2! Will his glimpse of the Data Science Mythos drive him MAD?">
+
+<title>Robison - TUTORIAL 4</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Robison</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html">
+ <span class="menu-text">HOME</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../Research.html" aria-current="page">
+ <span class="menu-text">RESEARCH</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Publications.html">
+ <span class="menu-text">PUBLICATIONS</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Teaching.html">
+ <span class="menu-text">TEACHING</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../PolymorphicGames.html">
+ <span class="menu-text">STUDIO</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../ProfessorPolymorphic/index.html">
+ <span class="menu-text">BLOG</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">TUTORIAL 4</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title d-none d-lg-block">TUTORIAL 4</h1>
+            <p class="subtitle lead">Barrie describes his data…</p>
+                  <div>
+        <div class="description">
+          Barrie attempts ASSIGMENT 2! Will his glimpse of the Data Science Mythos drive him <strong>MAD</strong>?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Tutorial</div>
+                <div class="quarto-category">Resources</div>
+                <div class="quarto-category">Quarto</div>
+                <div class="quarto-category">Data Sets</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Barrie D. Robison </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 25, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../about.html" class="sidebar-item-text sidebar-link">About</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PolymorphicGames.html" class="sidebar-item-text sidebar-link">Polymorphic Games</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Publications.html" class="sidebar-item-text sidebar-link">PUBLICATIONS</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Research.html" class="sidebar-item-text sidebar-link">RESEARCH</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Teaching.html" class="sidebar-item-text sidebar-link">TEACHING</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">BCB520</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../BCB520/BCB520.html" class="sidebar-item-text sidebar-link">BCB 520 :: Foundations of Data Visualization</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Posts</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../BCB520/posts/A1-Lit-Prog/index.html" class="sidebar-item-text sidebar-link">ASSIGNMENT 1 - Fun with literate programming.</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../BCB520/posts/A2-YourData/index.html" class="sidebar-item-text sidebar-link">ASSIGNMENT 2 - Your Data.</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../BCB520/posts/A3-PrototypeVizPortfolio/index.html" class="sidebar-item-text sidebar-link">ASSIGNMENT 3</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../BCB520/posts/Certificate/index.html" class="sidebar-item-text sidebar-link">CERTIFICATE</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../BCB520/posts/L1-Intro/index.html" class="sidebar-item-text sidebar-link">LECTURE 1 - INTRO</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../BCB520/posts/L2-Data-Abstraction/index.html" class="sidebar-item-text sidebar-link">LECTURE 2 - DATA ABSTRACTION</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../BCB520/posts/L3-TaskAbstraction/index.html" class="sidebar-item-text sidebar-link">LECTURE 3 - TASK ABSTRACTION</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../BCB520/posts/Syllabus/index.html" class="sidebar-item-text sidebar-link">SYLLABUS 2023</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../BCB520/posts/T1-Lit-Prog/index.html" class="sidebar-item-text sidebar-link">TUTORIAL 1 - Literate Programming</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../BCB520/posts/T2-Anscombe/index.html" class="sidebar-item-text sidebar-link">TUTORIAL 2 - Literate Programming and Anscombe’s Quartet</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../BCB520/posts/T3-Python/index.html" class="sidebar-item-text sidebar-link">TUTORIAL 3 - Python</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../BCB520/posts/T4-BarriesData/index.html" class="sidebar-item-text sidebar-link active">TUTORIAL 4</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../ProfessorPolymorphic/index.html" class="sidebar-item-text sidebar-link">Professor Polymorphic</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../ProfessorPolymorphic/about.html" class="sidebar-item-text sidebar-link">About</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">Posts</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../ProfessorPolymorphic/posts/post-with-code/index.html" class="sidebar-item-text sidebar-link">Observable Experiment</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../ProfessorPolymorphic/posts/DataScienceMythos/index.html" class="sidebar-item-text sidebar-link">The Data Science Mythos</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../ProfessorPolymorphic/posts/UndergradResearch/index.html" class="sidebar-item-text sidebar-link">UNDERGRADUATE RESEARCH</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../ProfessorPolymorphic/posts/welcome/index.html" class="sidebar-item-text sidebar-link">You’ve gotta be f***ing kidding…</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../ProfessorPolymorphic/posts/LabMeetingJan20/index.html" class="sidebar-item-text sidebar-link">Polymorphic Games Lab Meeting</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../ProfessorPolymorphic/posts/LabMeetingJan20/OSTime.html" class="sidebar-item-text sidebar-link">OSDevTimeline</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../ProfessorPolymorphic/posts/LabMeetingJan20/SanteFeWorkshop.html" class="sidebar-item-text sidebar-link">SanteFe Workshop</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#assignment-2-your-data" id="toc-assignment-2-your-data" class="nav-link active" data-scroll-target="#assignment-2-your-data">ASSIGNMENT 2: Your Data</a>
+  <ul class="collapse">
+  <li><a href="#my-dataset" id="toc-my-dataset" class="nav-link" data-scroll-target="#my-dataset">MY DATASET</a>
+  <ul class="collapse">
+  <li><a href="#data-collection" id="toc-data-collection" class="nav-link" data-scroll-target="#data-collection">Data Collection</a></li>
+  </ul></li>
+  <li><a href="#importing-the-data" id="toc-importing-the-data" class="nav-link" data-scroll-target="#importing-the-data">IMPORTING THE DATA</a></li>
+  <li><a href="#describe-the-data" id="toc-describe-the-data" class="nav-link" data-scroll-target="#describe-the-data">DESCRIBE THE DATA</a>
+  <ul class="collapse">
+  <li><a href="#data-set-type" id="toc-data-set-type" class="nav-link" data-scroll-target="#data-set-type">Data Set Type</a></li>
+  <li><a href="#attribute-types" id="toc-attribute-types" class="nav-link" data-scroll-target="#attribute-types">Attribute Types</a></li>
+  </ul></li>
+  <li><a href="#host-the-data" id="toc-host-the-data" class="nav-link" data-scroll-target="#host-the-data">HOST THE DATA</a></li>
+  <li><a href="#task-abstraction" id="toc-task-abstraction" class="nav-link" data-scroll-target="#task-abstraction">TASK ABSTRACTION</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="assignment-2-your-data" class="level1">
+<h1>ASSIGNMENT 2: Your Data</h1>
+<p>In this assignment (detalied <a href="../../../BCB520/posts/A2-YourData/index.html">here</a>), I will identify, import, describe, and host a data set that will be used throughout the remainder of the BCB 504 course for Data Visualizations.</p>
+<section id="my-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="my-dataset">MY DATASET</h2>
+<p>I’ve chosen a subset of a large dataset produced by our evolutionary video game, <a href="https://store.steampowered.com/app/800700/Project_Hastur/">Project Hastur</a>. We built Project Hatur to be an evolutionary video game, and we are bold in our assertions of that fact. But we haven’t really published any evidence that the evolutionary model works. This data set is the beginning of that exercise.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>PROJECT HASTUR creates a unique challenge by combining elements of 3D tower defense and real-time strategy with biological evolution. Fight against alien Proteans that evolve - using biologically accurate models of evolution - to overcome the player’s defenses.</p>
+<p>Each creature you will face has its own unique genome controlling its abilities, behaviors, and appearance. Those that make it the furthest and do the most damage to your defenses have the most offspring you will have to defeat in the next generation. The result? Evolution responds to the player’s strategy and makes every playthrough a unique experience.</p>
+<p>Use four upgradable turret classes, plus airstrikes and combat robots, to fight against the Protean invasion. Make strategic decisions about which turrets to build, when to upgrade them, and where to place them on the hex grid. A well-timed airstrike can change the flow of the game, but you’ll have to wait before you can use it again. Unlock powerful upgrades for each turret class as you move across the Nyx system. As you play, the Proteans evolve new weapon resistances, behaviors, and movement capabilities to better destroy your defenses.</p>
+<p>In CAMPAIGN MODE, battle through a series of maps as a military defense commander to protect the planet Nyx from the ever-evolving threat of the Proteans. Unlock weapons and upgrades and use them to fight against the Protean swarm and learn about the mysteries of Project Hastur.</p>
+<p>In EXPERIMENT MODE, choose any map, tweak the parameters, and play infinitely to see what you can evolve. Change the number of creatures and the parameters of evolution, make your turrets invincible, or crank up the biomatter and experiment with the most powerful turret upgrades. Experiment mode lets you experience Project Hastur your way.</p>
+</div>
+</div>
+<section id="data-collection" class="level3">
+<h3 class="anchored" data-anchor-id="data-collection">Data Collection</h3>
+<p>The data were collected by running Project Hastur in Experiment mode using two predefined conditions:</p>
+<p>The CHIP SHREDDER towers when Fitness Functions were turned ON and Civilians were PRESENT.</p>
+<p>The CHIP SHREDDER towers when Fitness Functions were turned OFF and Civilians were PRESENT.</p>
+<p>Each experimental condition was run 9 times (9 replicates).</p>
+</section>
+</section>
+<section id="importing-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="importing-the-data">IMPORTING THE DATA</h2>
+<p>I’m going to use the <code>vroom</code> package to import multiple files. Each file is a replicate and the filename tells us about the experimental condition. Below I convert the filename variable (I named it <code>path</code>) into a a single categorical attribute called <code>Fit</code>.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vroom)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> fs<span class="sc">::</span><span class="fu">dir_ls</span>(<span class="at">glob =</span> <span class="st">"*.csv"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Hastur <span class="ot">&lt;-</span> <span class="fu">vroom</span>(files, <span class="at">id =</span> <span class="st">"path"</span>, </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                <span class="at">col_select =</span> <span class="fu">c</span>(path, Generation, ID, Origin, AsexualReproduction, Fitness, Health,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                               SightRange, Armor, Damage, WalkSpeed, RunSpeed, Acceleration, </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                               TurnRate, Attraction0, Attraction1, Attraction2))</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Hastur<span class="sc">$</span>Fit <span class="ot">&lt;-</span> <span class="fu">str_split_i</span>(Hastur<span class="sc">$</span>path, <span class="at">pattern =</span> <span class="st">""</span>, <span class="dv">1</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Hastur<span class="sc">$</span>replicate <span class="ot">&lt;-</span> <span class="fu">str_split_i</span>(Hastur<span class="sc">$</span>path, <span class="at">pattern =</span> <span class="st">""</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>The <code>glimpse</code> command in the <code>Tidyverse</code> package is a nice way to summarize the data frame:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(Hastur)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 232,246
+Columns: 19</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: One or more parsing issues, call `problems()` on your data frame for details,
+e.g.:
+  dat &lt;- vroom(...)
+  problems(dat)</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$ path                &lt;chr&gt; "HSC1.csv", "HSC1.csv", "HSC1.csv", "HSC1.csv", "H…
+$ Generation          &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ ID                  &lt;dbl&gt; 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, …
+$ Origin              &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ AsexualReproduction &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ Fitness             &lt;dbl&gt; 66.85666, 63.94595, 57.76577, 66.73540, 66.69711, …
+$ Health              &lt;dbl&gt; 1018, 1041, 968, 991, 1020, 1016, 948, 1016, 1006,…
+$ SightRange          &lt;dbl&gt; 10.024340, 9.877473, 10.074020, 9.936288, 9.866014…
+$ Armor               &lt;dbl&gt; 0.04796165, 0.04707340, 0.04771014, 0.05201733, 0.…
+$ Damage              &lt;dbl&gt; 50, 51, 50, 50, 50, 50, 50, 49, 50, 50, 51, 49, 50…
+$ WalkSpeed           &lt;dbl&gt; 6.913904, 6.939496, 6.993181, 6.975009, 6.999002, …
+$ RunSpeed            &lt;dbl&gt; 19.94220, 19.76403, 20.08624, 19.93098, 20.00746, …
+$ Acceleration        &lt;dbl&gt; 14.77040, 14.63761, 15.32552, 15.03673, 14.80417, …
+$ TurnRate            &lt;dbl&gt; 360.6254, 357.9564, 365.7268, 361.3743, 356.8892, …
+$ Attraction0         &lt;dbl&gt; -0.01474968, -0.05083919, 0.16160530, -0.17245110,…
+$ Attraction1         &lt;dbl&gt; 0.109532600, -0.048011400, 0.035674940, 0.04642526…
+$ Attraction2         &lt;dbl&gt; 0.120717600, -0.121935400, 0.094071920, -0.0339948…
+$ Fit                 &lt;chr&gt; "H", "H", "H", "H", "H", "H", "H", "H", "H", "H", …
+$ replicate           &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", …</code></pre>
+</div>
+</div>
+</section>
+<section id="describe-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="describe-the-data">DESCRIBE THE DATA</h2>
+<section id="data-set-type" class="level3">
+<h3 class="anchored" data-anchor-id="data-set-type">Data Set Type</h3>
+<p>What we have here is a (big) <strong>Flat Table</strong>. The <strong>Items</strong> are the rows, and each row is an individual alien enemy that existed during one of the replicates. Each Item (alien) is described by <strong>Attributes</strong>, which are arranged in the columns.</p>
+</section>
+<section id="attribute-types" class="level3">
+<h3 class="anchored" data-anchor-id="attribute-types">Attribute Types</h3>
+<p>The <code>glimpse</code> we did in the preceding section gives us a hint as to what each attribute type might be. Let’s flesh that out a bit though. I’m going to create a new data frame that describes the attributes.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Attributes <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"Attributes.xlsx"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(Attributes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 12%">
+<col style="width: 67%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Attribute</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">path</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">each File Name is a unique replicate</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Generation</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">Each Enemy Wave is a Generation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ID</td>
+<td style="text-align: left;">Ordinal</td>
+<td style="text-align: left;">Each enemy has a unique ID within each replicate</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Origin</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">The hive from which the enemy was spawned</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AsexualReproduction</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">Was the enemy spawned by infectiing a civilian?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fitness</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">The value of Fitness is used to determine probability of reproduction</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Health</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">Hit Points</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SightRange</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">How far they can see civilians, towers, etc</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Armor</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">resistance to physical damage</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Damage</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">how much damage they do to towers</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">WalkSpeed</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">how fast they can walk</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RunSpeed</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">how fast they can run</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Acceleration</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">how fast they can transition from walking to running</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TurnRate</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">how fast they can turn</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Attraction0</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">negative values is attraction to civilians, positive is avoidance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Attraction1</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">negative values is attraction to towers, positive is avoidance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Attraction2</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">negative values is attraction to the base, positive is avoidance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fit</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">Whether fitness functions were ON (I) or OFF (H)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+<section id="host-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="host-the-data">HOST THE DATA</h2>
+<p>I’m publishing to GitHub! We will elaborate on this step as everyone progresses through the assignment.</p>
+</section>
+<section id="task-abstraction" class="level2">
+<h2 class="anchored" data-anchor-id="task-abstraction">TASK ABSTRACTION</h2>
+<p>For this data set, I am currently defining the user as … me! My hypothesis is that the two Fitness conditions create different evolutionary outcomes of the aliens in Project Hastur. Some relevant ACTION TARGET pairs might be:</p>
+<p>DISCOVER TRENDS</p>
+<p>DISCOVER DISTRIBUTION</p>
+<p>DISCOVER SIMILARITY</p>
+<p>COMPARE TRENDS</p>
+<p>COMPARE DISTRIBUTION</p>
+<p>I’m going to try COMPARE TRENDS. I want to COMPARE the TREND in <code>WalkSpeed</code> over time (<code>Generation</code>) between the two <code>Fit</code> categories. To do this, I’ll create a scatterplot, faceted by <code>Fit</code>. I’m suspicious that <code>TurnRate</code> is involved somehow, so I’m coloring with that variable.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur, <span class="fu">aes</span>(<span class="at">x=</span>Generation, <span class="at">y =</span> WalkSpeed))<span class="sc">+</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>TurnRate), <span class="at">alpha =</span> <span class="fl">0.01</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_continuous</span>(<span class="at">low=</span><span class="st">"red"</span>, <span class="at">high =</span> <span class="st">"blue"</span>)<span class="sc">+</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(replicate<span class="sc">~</span>Fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Hastur50 <span class="ot">&lt;-</span> <span class="fu">filter</span>(Hastur, Generation <span class="sc">==</span> <span class="dv">49</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur50, <span class="fu">aes</span>(<span class="at">x=</span>TurnRate, <span class="at">y =</span> WalkSpeed))<span class="sc">+</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>Fit), <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(Fit<span class="sc">~</span>replicate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
