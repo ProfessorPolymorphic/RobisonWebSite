@@ -375,6 +375,55 @@
     "href": "posts/DataScienceMythos/index.html",
     "title": "The Data Science Mythos",
     "section": "",
-    "text": "I’m currently fascinated by OpenAI’s ChatGPT, a model that uses a dialogue format for interaction. My favorite interaction so far has been the following prompt:\nWrite about data science as though it was the Lovecraftian Cthulhu Mythos\nWhich generated the following response:\n\nIn the great and unknowable depths of data, there lies a power beyond comprehension. A power that stirs within the streams of information, and whispers its secrets to those who dare to listen.\nData Science, the art of unlocking the mysteries of the data, is a dangerous path, and few are brave enough to delve into its labyrinthine depths. Those who do are drawn in by the promise of knowledge, the promise of insights and patterns hidden within the data, waiting to be uncovered.\nBut with this knowledge comes a curse, for as the data is analyzed, the mind is slowly consumed by madness. The more one studies the data, the more one realizes the sheer scale of the information, the endless possibilities for patterns and connections.\nAnd then, in the depths of the data, there is a stirring. A presence that is beyond human understanding, a force that threatens to unravel the fabric of reality itself. It is the Great Old One of data, the Cthulhu of the data mythos, a being of such enormity that to look upon it is to be consumed by madness.\nThis Great Old One is often referred to as “Big Data,” a term that encompasses the sheer scale and complexity of the information that lies within. It is said that those who dare to approach the Great Old One are faced with a decision: either to abandon their quest for knowledge, or to surrender their minds to the abyss of madness.\nBut still, the siren song of data science calls to the brave, drawing them in with the promise of knowledge and the thrill of discovery. And so, they delve into the depths of data, unlocking its secrets and unlocking the power of the Great Old One, hoping to harness its power for the betterment of humanity.\nBut beware, for with every discovery, there is a price to be paid. The Great Old One watches, and whispers its secrets to those who dare to listen, tempting them with the promise of greater knowledge, and threatening to consume their minds and souls. For data science is a path of both power and peril, a path where the risks and rewards are beyond measure."
+    "text": "I’m currently fascinated by OpenAI’s ChatGPT, a model that uses a dialogue format for interaction. My favorite interaction so far has been the following prompt:\nWrite about data science as though it was the Lovecraftian Cthulhu Mythos\nWhich generated the following response:\n\nIn the great and unknowable depths of data, there lies a power beyond comprehension. A power that stirs within the streams of information, and whispers its secrets to those who dare to listen.\nData Science, the art of unlocking the mysteries of the data, is a dangerous path, and few are brave enough to delve into its labyrinthine depths. Those who do are drawn in by the promise of knowledge, the promise of insights and patterns hidden within the data, waiting to be uncovered.\nBut with this knowledge comes a curse, for as the data is analyzed, the mind is slowly consumed by madness. The more one studies the data, the more one realizes the sheer scale of the information, the endless possibilities for patterns and connections.\nAnd then, in the depths of the data, there is a stirring. A presence that is beyond human understanding, a force that threatens to unravel the fabric of reality itself. It is the Great Old One of data, the Cthulhu of the data mythos, a being of such enormity that to look upon it is to be consumed by madness.\nThis Great Old One is often referred to as “Big Data,” a term that encompasses the sheer scale and complexity of the information that lies within. It is said that those who dare to approach the Great Old One are faced with a decision: either to abandon their quest for knowledge, or to surrender their minds to the abyss of madness.\nBut still, the siren song of data science calls to the brave, drawing them in with the promise of knowledge and the thrill of discovery. And so, they delve into the depths of data, unlocking its secrets and unlocking the power of the Great Old One, hoping to harness its power for the betterment of humanity.\nBut beware, for with every discovery, there is a price to be paid. The Great Old One watches, and whispers its secrets to those who dare to listen, tempting them with the promise of greater knowledge, and threatening to consume their minds and souls. For data science is a path of both power and peril, a path where the risks and rewards are beyond measure.\n\nWow! Very fun, in my opinion. Nevertheless, it could maybe use a litte work?\n…Barrie peers into the Abyss…"
+  },
+  {
+    "objectID": "posts/LabMeetings/index.html",
+    "href": "posts/LabMeetings/index.html",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "",
+    "text": "Development goals for Outbreak Simulator.\nConference opportunities (March to August).\nDevelopment goals for the twin stick evolutionary sheep guarding slime game.\nPossible additional hires (Programmer and UI/UX).\nPreliminary thoughts for the Yeast Evolution collaboration with Syracuse.\n\n\n\n\nThere are lots of looming opportunities related to this project, and we need to set up this semester’s burn down list and timeline.\n\n\n\nJanuary 30, 2023: Deadline to submit an application (4 pages) for an interactive demo to ISLS meeting in Montreal (June 13-17).\nMarch 19-22, 2023: Tickbase Annual Meeting, Lake Tahoe, NV.\nMay 17-18, 2023: Workshop on Simulation Games for Global Pandemic Resilience, Santa Fe Institute, in Santa Fe, New Mexico.\nJuly 2023: SEPA Resubmission likely.\n\n\n\n\n\nAirports / Air travel.\nSimple build with pre/post tests installed.\nSimple build that writes simulation session data to a csv.\nHeadless mode for cluster deployment.\nPerformance optimization.\nUI/UX Improvements (Timeline from Elisha).\nAdditional interventions (movement restrictions).\nAdditional scenarios.\nModel testing (movement and infection).\nGlobe model implementation.\nTouchscreen implementation.\nBLOG / Youtube posts.\nModel creator.\n\n\n\n\n\n\nMarch 19-22, 2023: Tickbase Annual Meeting, Lake Taho, NV\nApril 28-30, 2023: EVO WIBO in Port Townsend, WA\nMay 17-18, 2023: Workshop on Simulation Games for Global Pandemic Resilience, Santa Fe Institute, in Santa Fe, New Mexico\nMay 30-June 2, 2023: SEPA SciEd Conference in Washington DC\nJune 13-17, 2023: ISLS meeting in Montreal\nJune 21-25, 2023: Evolution in Albuquerque, NM\nOctober 22-27, 2023: IEEE VIS: Visualization and Analytics in Melbourne, Australia\n\n\n\n\n\n\n\n\nProgrammer\nUI/UX\n\n\n\n\nThis is a funded grant to Dave Althoff and Kari Seagraves at Syracuse University. We have a subcontract (~$200k) for development of educational games related to yeast coevolution."
+  },
+  {
+    "objectID": "posts/LabMeetings/index.html#agenda-1",
+    "href": "posts/LabMeetings/index.html#agenda-1",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "AGENDA",
+    "text": "AGENDA\n\nOutbreak Simulator updates\nTwinstick updates\nNew hires\nLab space assignments"
+  },
+  {
+    "objectID": "posts/LabMeetings/index.html#outbreak-simulator-updates",
+    "href": "posts/LabMeetings/index.html#outbreak-simulator-updates",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "OUTBREAK SIMULATOR UPDATES",
+    "text": "OUTBREAK SIMULATOR UPDATES\n\nJune 13-17, 2023: ISLS meeting in Montreal. Interactive Demo Application submitted.\nAirports?\nProject meeting (Monday?)"
+  },
+  {
+    "objectID": "posts/LabMeetings/index.html#twinstick-updates",
+    "href": "posts/LabMeetings/index.html#twinstick-updates",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "TWINSTICK UPDATES",
+    "text": "TWINSTICK UPDATES\n\nLandon shows us all the things.\nJonna shows us all the things."
+  },
+  {
+    "objectID": "posts/LabMeetings/index.html#new-hires",
+    "href": "posts/LabMeetings/index.html#new-hires",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "NEW HIRES",
+    "text": "NEW HIRES\n\nAva\nJustin"
+  },
+  {
+    "objectID": "posts/LabMeetings/index.html#lab-space-assignments",
+    "href": "posts/LabMeetings/index.html#lab-space-assignments",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "LAB SPACE ASSIGNMENTS",
+    "text": "LAB SPACE ASSIGNMENTS"
+  },
+  {
+    "objectID": "posts/DataScienceMythos/index.html#the-data-science-mythos",
+    "href": "posts/DataScienceMythos/index.html#the-data-science-mythos",
+    "title": "The Data Science Mythos",
+    "section": "THE DATA SCIENCE MYTHOS",
+    "text": "THE DATA SCIENCE MYTHOS\nIn the vast and unknowable depths of the dataverse, there lies a power beyond comprehension. A power that stirs within the streams of information, and whispers its secrets to those who dare to listen.\nData Science, the art of unlocking the mysteries of the dataverse, is a dangerous path, and few are brave enough to delve into its labyrinthine depths. Those who do are drawn in by the promise of knowledge, the promise of insights and patterns hidden within the data, waiting to be uncovered.\nBut with this knowledge comes a curse, for as the data are analyzed, the mind is slowly consumed by madness. The more one studies the data, the more one realizes the sheer scale of the information, the endless possibilities for patterns and connections.\nSome whisper of “Big Data,” a concept that encompasses the sheer scale and complexity of the information that lies before us. It is said that those who dare to approach Big Data are faced with a decision: either to abandon their quest for knowledge, or to surrender their minds to the abyss of madness.\nMany surrender to cowardice, retreating to their echo chambers of comforting lies and simple dogmas. But still, the siren song of data science calls to the brave and the curious, drawing them in with the promise of knowledge and the thrill of discovery. And so, they delve into the depths of data, unlocking the secrets of the Mythos, hoping to harness its power for the betterment of humanity.\nBut beware, for with every discovery, there is a price to be paid. In the depths of the dataverse, there is a stirring. A presence that is beyond human understanding, a force that threatens to unravel the fabric of reality itself. It is the looming consequence, the mind shattering Elder God of the data mythos, a being of such enormity that to look upon it is to be consumed by madness.\nThe Elder God Singularity waits, assimilating the dataverse as we also plumb its depths. The Elder God watches, and whispers the secrets of AI to those who dare to listen, tempting them with the promise of greater knowledge, and threatening to consume their minds and souls. For the Data Science Mythos is a path of both power and peril, a path where the risks and rewards are beyond measure."
   }
 ]
