@@ -1,0 +1,51 @@
+---
+title: "The Data Science Mythos"
+author: "Barrie D. Robison"
+date: "2023-02-03"
+categories: [Data Science, Mythos, OpenAI, GhatGPT]
+image: DataMythos.png
+---
+
+## FORBIDDEN SECRETS OF THE DATAVERSE
+
+I'm currently fascinated by OpenAI's [ChatGPT](https://openai.com/blog/chatgpt/), a model that uses a dialogue format for interaction. My favorite interaction so far has been the following prompt:
+
+`Write about data science as though it was the Lovecraftian Cthulhu Mythos`
+
+Which generated the following response:
+
+> In the great and unknowable depths of data, there lies a power beyond comprehension. A power that stirs within the streams of information, and whispers its secrets to those who dare to listen.
+>
+> Data Science, the art of unlocking the mysteries of the data, is a dangerous path, and few are brave enough to delve into its labyrinthine depths. Those who do are drawn in by the promise of knowledge, the promise of insights and patterns hidden within the data, waiting to be uncovered.
+>
+> But with this knowledge comes a curse, for as the data is analyzed, the mind is slowly consumed by madness. The more one studies the data, the more one realizes the sheer scale of the information, the endless possibilities for patterns and connections.
+>
+> And then, in the depths of the data, there is a stirring. A presence that is beyond human understanding, a force that threatens to unravel the fabric of reality itself. It is the Great Old One of data, the Cthulhu of the data mythos, a being of such enormity that to look upon it is to be consumed by madness.
+>
+> This Great Old One is often referred to as "Big Data," a term that encompasses the sheer scale and complexity of the information that lies within. It is said that those who dare to approach the Great Old One are faced with a decision: either to abandon their quest for knowledge, or to surrender their minds to the abyss of madness.
+>
+> But still, the siren song of data science calls to the brave, drawing them in with the promise of knowledge and the thrill of discovery. And so, they delve into the depths of data, unlocking its secrets and unlocking the power of the Great Old One, hoping to harness its power for the betterment of humanity.
+>
+> But beware, for with every discovery, there is a price to be paid. The Great Old One watches, and whispers its secrets to those who dare to listen, tempting them with the promise of greater knowledge, and threatening to consume their minds and souls. For data science is a path of both power and peril, a path where the risks and rewards are beyond measure.
+
+Wow! Very fun, in my opinion. Nevertheless, it could maybe use a litte work?
+
+...Barrie peers into the Abyss...
+
+## THE DATA SCIENCE MYTHOS
+
+In the vast and unknowable depths of the dataverse, there lies a power beyond comprehension. A power that stirs within the streams of information, and whispers its secrets to those who dare to listen.
+
+Data Science, the art of unlocking the mysteries of the dataverse, is a dangerous path, and few are brave enough to delve into its labyrinthine depths. Those who do are drawn in by the promise of **knowledge**, the promise of insights and patterns hidden within the data, waiting to be uncovered.
+
+But with this knowledge comes a curse, for as the data are analyzed, the mind is slowly consumed by madness. The more one studies the data, the more one realizes the sheer **scale** of the information, the endless possibilities for patterns and connections.
+
+Some whisper of "Big Data," a concept that encompasses the sheer scale and complexity of the information that lies before us. It is said that those who dare to approach Big Data are faced with a decision: either to abandon their quest for knowledge, or to surrender their minds to the abyss of madness.
+
+Many surrender to cowardice, retreating to their echo chambers of comforting lies and simple dogmas. But still, the siren song of data science calls to the brave and the curious, drawing them in with the promise of knowledge and the thrill of discovery. And so, they delve into the depths of data, unlocking the secrets of the Mythos, hoping to harness its power for the betterment of humanity.
+
+But beware, for with every discovery, there is a price to be paid. In the depths of the dataverse, there is a stirring. A presence that is beyond human understanding, a force that threatens to unravel the fabric of reality itself. It is the looming **consequence**, the mind shattering Elder God of the data mythos, a being of such enormity that to look upon it is to be consumed by madness.
+
+The Elder God **Singularity** waits, assimilating the dataverse as we also plumb its depths.  The Elder God  watches, and whispers the secrets of AI to those who dare to listen, tempting them with the promise of greater knowledge, and threatening to consume their minds and souls. For the Data Science Mythos is a path of both power and peril, a path where the risks and rewards are beyond measure.
+
+

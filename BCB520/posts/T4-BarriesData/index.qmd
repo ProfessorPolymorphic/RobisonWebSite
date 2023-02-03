@@ -83,7 +83,7 @@ The `glimpse` we did in the preceding section gives us a hint as to what each at
 ```{r}
 
 Attributes <- read_excel("Attributes.xlsx")
-Attributes
+knitr::kable(Attributes)
 ```
 
 ## HOST THE DATA
@@ -104,7 +104,7 @@ COMPARE TRENDS
 
 COMPARE DISTRIBUTION
 
-I'm going to try COMPARE TRENDS.  I want to COMPARE the TREND in `WalkSpeed` over time (`Generation`) between the two `Fit` categories.  To do this, I'll create a scatterplot, faceted by `Fit`.
+I'm going to try COMPARE TRENDS.  I want to COMPARE the TREND in `WalkSpeed` over time (`Generation`) between the two `Fit` categories.  To do this, I'll create a scatterplot, faceted by `Fit`.  I'm suspicious that `TurnRate` is involved somehow, so I'm coloring with that variable.
 
 ```{r}
 ggplot(Hastur, aes(x=Generation, y = WalkSpeed))+

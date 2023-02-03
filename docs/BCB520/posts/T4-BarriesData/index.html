@@ -367,6 +367,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../../ProfessorPolymorphic/posts/DataScienceMythos/index.html" class="sidebar-item-text sidebar-link">The Data Science Mythos</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../../ProfessorPolymorphic/posts/UndergradResearch/index.html" class="sidebar-item-text sidebar-link">UNDERGRADUATE RESEARCH</a>
   </div>
 </li>
@@ -536,30 +541,115 @@ $ replicate           &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Attributes <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"Attributes.xlsx"</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>Attributes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(Attributes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 18 × 3
-   Attribute           Type         Note                                        
-   &lt;chr&gt;               &lt;chr&gt;        &lt;chr&gt;                                       
- 1 path                Categorical  each File Name is a unique replicate        
- 2 Generation          Quantitative Each Enemy Wave is a Generation             
- 3 ID                  Ordinal      Each enemy has a unique ID within each repl…
- 4 Origin              Categorical  The hive from which the enemy was spawned   
- 5 AsexualReproduction Categorical  Was the enemy spawned by infectiing a civil…
- 6 Fitness             Quantitative The value of Fitness is used to determine p…
- 7 Health              Quantitative Hit Points                                  
- 8 SightRange          Quantitative How far they can see civilians, towers, etc 
- 9 Armor               Quantitative resistance to physical damage               
-10 Damage              Quantitative how much damage they do to towers           
-11 WalkSpeed           Quantitative how fast they can walk                      
-12 RunSpeed            Quantitative how fast they can run                       
-13 Acceleration        Quantitative how fast they can transition from walking t…
-14 TurnRate            Quantitative how fast they can turn                      
-15 Attraction0         Quantitative negative values is attraction to civilians,…
-16 Attraction1         Quantitative negative values is attraction to towers, po…
-17 Attraction2         Quantitative negative values is attraction to the base, …
-18 Fit                 Categorical  Whether fitness functions were ON (I) or OF…</code></pre>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 12%">
+<col style="width: 67%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Attribute</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">path</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">each File Name is a unique replicate</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Generation</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">Each Enemy Wave is a Generation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ID</td>
+<td style="text-align: left;">Ordinal</td>
+<td style="text-align: left;">Each enemy has a unique ID within each replicate</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Origin</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">The hive from which the enemy was spawned</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AsexualReproduction</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">Was the enemy spawned by infectiing a civilian?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fitness</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">The value of Fitness is used to determine probability of reproduction</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Health</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">Hit Points</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SightRange</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">How far they can see civilians, towers, etc</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Armor</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">resistance to physical damage</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Damage</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">how much damage they do to towers</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">WalkSpeed</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">how fast they can walk</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RunSpeed</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">how fast they can run</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Acceleration</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">how fast they can transition from walking to running</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TurnRate</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">how fast they can turn</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Attraction0</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">negative values is attraction to civilians, positive is avoidance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Attraction1</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">negative values is attraction to towers, positive is avoidance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Attraction2</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">negative values is attraction to the base, positive is avoidance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fit</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">Whether fitness functions were ON (I) or OFF (H)</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </section>
@@ -576,14 +666,14 @@ $ replicate           &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "
 <p>DISCOVER SIMILARITY</p>
 <p>COMPARE TRENDS</p>
 <p>COMPARE DISTRIBUTION</p>
-<p>I’m going to try COMPARE TRENDS. I want to COMPARE the TREND in <code>WalkSpeed</code> over time (<code>Generation</code>) between the two <code>Fit</code> categories. To do this, I’ll create a scatterplot, faceted by <code>Fit</code>.</p>
+<p>I’m going to try COMPARE TRENDS. I want to COMPARE the TREND in <code>WalkSpeed</code> over time (<code>Generation</code>) between the two <code>Fit</code> categories. To do this, I’ll create a scatterplot, faceted by <code>Fit</code>. I’m suspicious that <code>TurnRate</code> is involved somehow, so I’m coloring with that variable.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur, <span class="fu">aes</span>(<span class="at">x=</span>Generation, <span class="at">y =</span> WalkSpeed))<span class="sc">+</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>TurnRate), <span class="at">alpha =</span> <span class="fl">0.01</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_continuous</span>(<span class="at">low=</span><span class="st">"red"</span>, <span class="at">high =</span> <span class="st">"blue"</span>)<span class="sc">+</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(replicate<span class="sc">~</span>Fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur, <span class="fu">aes</span>(<span class="at">x=</span>Generation, <span class="at">y =</span> WalkSpeed))<span class="sc">+</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>TurnRate), <span class="at">alpha =</span> <span class="fl">0.01</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_continuous</span>(<span class="at">low=</span><span class="st">"red"</span>, <span class="at">high =</span> <span class="st">"blue"</span>)<span class="sc">+</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(replicate<span class="sc">~</span>Fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
@@ -592,13 +682,13 @@ $ replicate           &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Hastur50 <span class="ot">&lt;-</span> <span class="fu">filter</span>(Hastur, Generation <span class="sc">==</span> <span class="dv">49</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur50, <span class="fu">aes</span>(<span class="at">x=</span>TurnRate, <span class="at">y =</span> WalkSpeed))<span class="sc">+</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>Fit), <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(Fit<span class="sc">~</span>replicate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Hastur50 <span class="ot">&lt;-</span> <span class="fu">filter</span>(Hastur, Generation <span class="sc">==</span> <span class="dv">49</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur50, <span class="fu">aes</span>(<span class="at">x=</span>TurnRate, <span class="at">y =</span> WalkSpeed))<span class="sc">+</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>Fit), <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(Fit<span class="sc">~</span>replicate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
