@@ -25,6 +25,8 @@ I am maintaining the course here and on its [CANVAS PAGE](https://canvas.uidaho.
 
 [Jiyin's Portfolio](https://chubl.github.io/bcb504-blog/)
 
+[Cody's Portfolio](https://cody-appa.github.io/Data_Science_Portfolio/)
+
 [Awesome Quarto:](https://github.com/mcanouil/awesome-quarto){target="_blank"} A potentially interesting repository of Quarto documents, talks, tools, examples, etc.
 
 [Riffomonas Project](https://www.youtube.com/@Riffomonas/featured){target="_blank"}: Pat Schloss is a [Professor at the University of Michigan](https://www.schlosslab.org){target="_blank"}. The Riffomonas Project is his Youtube channel, which has HUNDREDS of easy to follow and amazingly useful instructional videos on R, ggplot, version control, and literate programming.
@@ -34,7 +36,5 @@ I am maintaining the course here and on its [CANVAS PAGE](https://canvas.uidaho.
 [Cheat Sheets:](https://posit.co/resources/cheatsheets/){target="_blank"} So many visual guides for many R packages, including the tidyverse, ggplot, dplyr, etc.
 
 [Learning Vis Tools: Teaching Data Visualization Tutorials](https://ieeexplore.ieee.org/document/8933751){target="_blank"} An interesting paper for discussion as we forge the structure for this class.
-
-
 
 # **// Posts**
