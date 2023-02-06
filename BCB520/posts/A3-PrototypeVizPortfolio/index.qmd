@@ -25,7 +25,7 @@ This assignment has two parts. The first part is technical. We'll set up a Quart
 Hopefully by now you have created / dusted off / logged in to your [GitHub](https://github.com) account. Go ahead and log in to your account on the web and leave it open in a tab in your browser. There is a really great [video](https://www.youtube.com/watch?v=xtSFXtDf4cM){target="_blank"} about the next few steps (also linked below in RESORUCES) from Posit, but I'm giving you the condensed version here.
 
 1.  Fire up RStudio.
-2.  Go to File-\>New Project and then select NEW DIRECTORY.
+2.  Go to File->New Project and then select NEW DIRECTORY.
 3.  Now select [QUARTO BLOG]().
 4.  You are going to create a the project in a new working directory. It is best practice to put this in a senstible directory structure on your local hard drive where your other GitHub repositories also live. Here is what mine looks like:
 
