@@ -682,8 +682,8 @@ $ replicate           &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Hastur50 <span class="ot">&lt;-</span> <span class="fu">filter</span>(Hastur, Generation <span class="sc">==</span> <span class="dv">49</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Hastur50 <span class="ot">&lt;-</span> <span class="fu">filter</span>(Hastur, Generation <span class="sc">==</span> <span class="dv">49</span> <span class="sc">&amp;</span> replicate <span class="sc">==</span> <span class="dv">1</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>Hastur1 <span class="ot">&lt;-</span>  <span class="fu">filter</span>(Hastur, replicate <span class="sc">==</span> <span class="dv">1</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur50, <span class="fu">aes</span>(<span class="at">x=</span>TurnRate, <span class="at">y =</span> WalkSpeed))<span class="sc">+</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>Fit), <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
@@ -692,6 +692,16 @@ $ replicate           &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "
 </details>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur1, <span class="fu">aes</span>(<span class="at">x=</span>Generation, <span class="at">y =</span> WalkSpeed))<span class="sc">+</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>TurnRate), <span class="at">alpha =</span> <span class="fl">0.1</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_continuous</span>(<span class="at">low=</span><span class="st">"red"</span>, <span class="at">high =</span> <span class="st">"blue"</span>)<span class="sc">+</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(replicate<span class="sc">~</span>Fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 

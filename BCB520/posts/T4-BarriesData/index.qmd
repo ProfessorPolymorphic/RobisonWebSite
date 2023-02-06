@@ -92,7 +92,7 @@ I'm publishing to GitHub! We will elaborate on this step as everyone progresses 
 
 ## TASK ABSTRACTION
 
-For this data set, I am currently defining the user as ... me!  My hypothesis is that the two Fitness conditions create different evolutionary outcomes of the aliens in Project Hastur.  Some relevant ACTION TARGET pairs might be:
+For this data set, I am currently defining the user as ... me! My hypothesis is that the two Fitness conditions create different evolutionary outcomes of the aliens in Project Hastur. Some relevant ACTION TARGET pairs might be:
 
 DISCOVER TRENDS
 
@@ -104,7 +104,7 @@ COMPARE TRENDS
 
 COMPARE DISTRIBUTION
 
-I'm going to try COMPARE TRENDS.  I want to COMPARE the TREND in `WalkSpeed` over time (`Generation`) between the two `Fit` categories.  To do this, I'll create a scatterplot, faceted by `Fit`.  I'm suspicious that `TurnRate` is involved somehow, so I'm coloring with that variable.
+I'm going to try COMPARE TRENDS. I want to COMPARE the TREND in `WalkSpeed` over time (`Generation`) between the two `Fit` categories. To do this, I'll create a scatterplot, faceted by `Fit`. I'm suspicious that `TurnRate` is involved somehow, so I'm coloring with that variable.
 
 ```{r}
 ggplot(Hastur, aes(x=Generation, y = WalkSpeed))+
@@ -113,10 +113,9 @@ ggplot(Hastur, aes(x=Generation, y = WalkSpeed))+
   facet_grid(replicate~Fit)
 ```
 
-
 ```{r}
-Hastur50 <- filter(Hastur, Generation == 49)
-  
+Hastur50 <- filter(Hastur, Generation == 49 & replicate == 1)
+Hastur1 <-  filter(Hastur, replicate == 1)
 
 ggplot(Hastur50, aes(x=TurnRate, y = WalkSpeed))+
   geom_point(aes(color=Fit), alpha = 0.5, size = 1)+
@@ -124,4 +123,9 @@ ggplot(Hastur50, aes(x=TurnRate, y = WalkSpeed))+
   facet_grid(Fit~replicate)
 
 
+
+ggplot(Hastur1, aes(x=Generation, y = WalkSpeed))+
+  geom_point(aes(color=TurnRate), alpha = 0.1, size = 1)+
+  scale_color_continuous(low="red", high = "blue")+
+  facet_grid(replicate~Fit)
 ```
