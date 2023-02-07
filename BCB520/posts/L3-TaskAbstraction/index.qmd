@@ -48,6 +48,7 @@ Computer-based visualization systems provide visual representations of [datasets
 ![](Whybig.png)
 
 ## ACTIONS - Analyze
+
 ::: columns
 ::: {.r-fit-text .column width="60%"}
 -   [Consume:]{.red} Information has already been generated and stored as data.
@@ -61,7 +62,6 @@ Computer-based visualization systems provide visual representations of [datasets
     -   [Annotate:]{.blue} addition of graphical or text to existing visualization elements
     -   [Record:]{.blue} saves or captures visualization elements as persistent artifacts (screenshots, lists, parameter sets, annotations)
     -   [Derive:]{.blue} produce new data based on existing data (aka transform)
-
 :::
 
 ::: {.column width="40%"}
@@ -70,12 +70,12 @@ Computer-based visualization systems provide visual representations of [datasets
 :::
 
 ## ACTIONS - Search
+
 ::: columns
 ::: {.r-fit-text .column width="60%"}
 -   [Lookup:]{.red} Location and target both known
 
     -   Example: Look up humans in the Tree of Life, knowing they are mammals.
-
 
 -   [Locate:]{.red} Location unknown and target known
 
@@ -84,7 +84,6 @@ Computer-based visualization systems provide visual representations of [datasets
 -   [Browse:]{.red} Location known and target unknown
 
     -   Example: Find any clades within Mammalia that have only one species.
-
 
 -   [Explore:]{.red} Location unknown and target unknown
 
@@ -95,7 +94,9 @@ Computer-based visualization systems provide visual representations of [datasets
 ![](search.png)
 :::
 :::
+
 ## ACTIONS - Query
+
 ::: columns
 ::: {.r-fit-text .column width="60%"}
 -   [Query:]{.red} How much of the data matters to the task?
@@ -103,9 +104,6 @@ Computer-based visualization systems provide visual representations of [datasets
     -   Identify: One (specific Item, individual, cell, etc)
     -   Compare: Some (multiple targets)
     -   Summarize: All (very common, aka Overview)
-
-
-
 :::
 
 ::: {.column width="40%"}
@@ -133,7 +131,6 @@ Computer-based visualization systems provide visual representations of datasets 
 
 ## EXAMPLES! {.scrollable .smaller}
 
-
 ```{r}
 #| code-fold: true
 #| echo: true
@@ -151,8 +148,7 @@ Target <- read_excel("Tasks.xlsx", sheet = "Target",
 
 ```
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="30%"}
 `r knitr::kable(Person)`
 :::
@@ -164,9 +160,7 @@ Target <- read_excel("Tasks.xlsx", sheet = "Target",
 ::: {.column width="30%"}
 `r knitr::kable(Target)`
 :::
-
-::::
-
+:::
 
 ## MANDATORY FUN {.scrollable .smaller}
 
@@ -174,37 +168,26 @@ Target <- read_excel("Tasks.xlsx", sheet = "Target",
 
 [`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
 
-
 [`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
 
-
 [`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
-
-
-[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
-
-
-[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
-
-
-[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
-
 
 [`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
 
 [`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
 
+[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
 
 [`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
 
+[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
 
 [`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
 
+[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
 
 [`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
 
-
 [`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
-
 
 [`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}

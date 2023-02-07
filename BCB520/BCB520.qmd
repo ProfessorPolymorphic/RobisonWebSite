@@ -27,6 +27,8 @@ I am maintaining the course here and on its [CANVAS PAGE](https://canvas.uidaho.
 
 [Cody's Portfolio](https://cody-appa.github.io/Data_Science_Portfolio/)
 
+[Erik's Portfolio](https://erickrios5.github.io/BCB-504-My-Data-Blog/)
+
 [Awesome Quarto:](https://github.com/mcanouil/awesome-quarto){target="_blank"} A potentially interesting repository of Quarto documents, talks, tools, examples, etc.
 
 [The MockUp Blog - TABLES!](https://themockup.blog/posts/2022-06-13-gtextras-cran/){target="_blank"} This blog post explores the R packages `gt` and `gtextras` which will help us up our table game!
