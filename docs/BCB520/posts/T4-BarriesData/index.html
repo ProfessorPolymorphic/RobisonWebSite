@@ -462,15 +462,17 @@ Note
 </div>
 <section id="data-collection" class="level3">
 <h3 class="anchored" data-anchor-id="data-collection">Data Collection</h3>
-<p>The data were collected by running Project Hastur in Experiment mode using two predefined conditions:</p>
-<p>The CHIP SHREDDER towers when Fitness Functions were turned ON and Civilians were PRESENT.</p>
-<p>The CHIP SHREDDER towers when Fitness Functions were turned OFF and Civilians were PRESENT.</p>
+<p>The data were collected by running Project Hastur in Experiment mode using four predefined conditions:</p>
+<p><strong>I:</strong> The CHIP SHREDDER towers when Fitness Functions were turned ON and Civilians were PRESENT.</p>
+<p><strong>H:</strong> The CHIP SHREDDER towers when Fitness Functions were turned OFF and Civilians were PRESENT.</p>
+<p><strong>G:</strong> The CHIP SHREDDER towers when Fitness Functions were turned ON and Civilians were ABSENT.</p>
+<p><strong>K:</strong> The AUTOCANNON towers when Fitness Functions were turned ON and Civilians were ABSENT.</p>
 <p>Each experimental condition was run 9 times (9 replicates).</p>
 </section>
 </section>
 <section id="importing-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="importing-the-data">IMPORTING THE DATA</h2>
-<p>I’m going to use the <code>vroom</code> package to import multiple files. Each file is a replicate and the filename tells us about the experimental condition. Below I convert the filename variable (I named it <code>path</code>) into a a single categorical attribute called <code>Fit</code>.</p>
+<p>I’m going to use the <code>vroom</code> package to import multiple files. Each file is a replicate and the filename tells us about the experimental condition. Below I convert the filename variable (I named it <code>path</code>) into a a single categorical attribute called <code>Fit</code> that uses the letter codes above.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -496,7 +498,7 @@ Note
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(Hastur)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Rows: 232,246
+<pre><code>Rows: 412,246
 Columns: 19</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
@@ -506,24 +508,24 @@ e.g.:
   problems(dat)</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>$ path                &lt;chr&gt; "HSC1.csv", "HSC1.csv", "HSC1.csv", "HSC1.csv", "H…
+<pre><code>$ path                &lt;chr&gt; "GSC1.csv", "GSC1.csv", "GSC1.csv", "GSC1.csv", "G…
 $ Generation          &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
 $ ID                  &lt;dbl&gt; 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, …
 $ Origin              &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
 $ AsexualReproduction &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-$ Fitness             &lt;dbl&gt; 66.85666, 63.94595, 57.76577, 66.73540, 66.69711, …
-$ Health              &lt;dbl&gt; 1018, 1041, 968, 991, 1020, 1016, 948, 1016, 1006,…
-$ SightRange          &lt;dbl&gt; 10.024340, 9.877473, 10.074020, 9.936288, 9.866014…
-$ Armor               &lt;dbl&gt; 0.04796165, 0.04707340, 0.04771014, 0.05201733, 0.…
-$ Damage              &lt;dbl&gt; 50, 51, 50, 50, 50, 50, 50, 49, 50, 50, 51, 49, 50…
-$ WalkSpeed           &lt;dbl&gt; 6.913904, 6.939496, 6.993181, 6.975009, 6.999002, …
-$ RunSpeed            &lt;dbl&gt; 19.94220, 19.76403, 20.08624, 19.93098, 20.00746, …
-$ Acceleration        &lt;dbl&gt; 14.77040, 14.63761, 15.32552, 15.03673, 14.80417, …
-$ TurnRate            &lt;dbl&gt; 360.6254, 357.9564, 365.7268, 361.3743, 356.8892, …
-$ Attraction0         &lt;dbl&gt; -0.01474968, -0.05083919, 0.16160530, -0.17245110,…
-$ Attraction1         &lt;dbl&gt; 0.109532600, -0.048011400, 0.035674940, 0.04642526…
-$ Attraction2         &lt;dbl&gt; 0.120717600, -0.121935400, 0.094071920, -0.0339948…
-$ Fit                 &lt;chr&gt; "H", "H", "H", "H", "H", "H", "H", "H", "H", "H", …
+$ Fitness             &lt;dbl&gt; 57.83508, 66.87755, 66.14652, 65.88873, 62.12119, …
+$ Health              &lt;dbl&gt; 1006, 1012, 1011, 992, 983, 1020, 982, 963, 996, 9…
+$ SightRange          &lt;dbl&gt; 9.952521, 10.096590, 9.954091, 10.066170, 10.02955…
+$ Armor               &lt;dbl&gt; 0.05081077, 0.05080924, 0.05010696, 0.04903501, 0.…
+$ Damage              &lt;dbl&gt; 49, 51, 51, 50, 50, 51, 50, 49, 51, 50, 49, 50, 49…
+$ WalkSpeed           &lt;dbl&gt; 6.930266, 7.034348, 6.970608, 6.903729, 6.962081, …
+$ RunSpeed            &lt;dbl&gt; 20.03562, 19.88800, 19.80754, 19.94738, 19.95583, …
+$ Acceleration        &lt;dbl&gt; 14.70648, 15.05868, 14.85994, 14.89853, 15.01570, …
+$ TurnRate            &lt;dbl&gt; 356.3890, 361.2032, 358.9919, 361.8476, 360.6143, …
+$ Attraction0         &lt;dbl&gt; 0.158477500, -0.007134318, -0.063494000, 0.0125864…
+$ Attraction1         &lt;dbl&gt; -0.070695680, 0.059872570, -0.003332689, 0.0458469…
+$ Attraction2         &lt;dbl&gt; -0.108705200, 0.015018780, -0.007600136, 0.0120656…
+$ Fit                 &lt;chr&gt; "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", …
 $ replicate           &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", …</code></pre>
 </div>
 </div>
@@ -646,7 +648,148 @@ $ replicate           &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "
 <tr class="even">
 <td style="text-align: left;">Fit</td>
 <td style="text-align: left;">Categorical</td>
-<td style="text-align: left;">Whether fitness functions were ON (I) or OFF (H)</td>
+<td style="text-align: left;">I, H, G, or K - an inscrutable code about fitness conditions</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>The problem here is my inscrutable filename codes for that Fit variable. Those letter codes actually contain information on a couple hidden variables. I’m going to create a new variable called <code>Gun</code> and another called <code>Civilians</code>. I’ll add those to the main data file and also the Data Dicttionary.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Hastur<span class="sc">$</span>Gun <span class="ot">&lt;-</span> <span class="st">"CHIP SHREDDER"</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>Hastur<span class="sc">$</span>Civilians <span class="ot">&lt;-</span> <span class="st">"Present"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  Hastur<span class="sc">$</span>Gun[Hastur<span class="sc">$</span>Fit<span class="sc">==</span><span class="st">"K"</span>]<span class="ot">&lt;-</span> <span class="st">"AUTOCANNON"</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>     </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  Hastur<span class="sc">$</span>Civilians[Hastur<span class="sc">$</span>Fit<span class="sc">==</span><span class="st">"K"</span> <span class="sc">|</span> Hastur<span class="sc">$</span>Fit <span class="sc">==</span><span class="st">"G"</span>] <span class="ot">&lt;-</span> <span class="st">"ABSENT"</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>     </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  Attributes<span class="ot">&lt;-</span><span class="fu">rbind</span>(Attributes, <span class="fu">c</span>(<span class="st">"Gun"</span>,<span class="st">"Categorical"</span>, <span class="st">"Autocannon or Chip Shredder"</span>))</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  Attributes<span class="ot">&lt;-</span><span class="fu">rbind</span>(Attributes, <span class="fu">c</span>(<span class="st">"Civilians"</span>,<span class="st">"Categorical"</span>, <span class="st">"Present or Absent"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(Attributes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 12%">
+<col style="width: 67%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Attribute</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">path</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">each File Name is a unique replicate</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Generation</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">Each Enemy Wave is a Generation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ID</td>
+<td style="text-align: left;">Ordinal</td>
+<td style="text-align: left;">Each enemy has a unique ID within each replicate</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Origin</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">The hive from which the enemy was spawned</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AsexualReproduction</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">Was the enemy spawned by infectiing a civilian?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fitness</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">The value of Fitness is used to determine probability of reproduction</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Health</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">Hit Points</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SightRange</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">How far they can see civilians, towers, etc</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Armor</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">resistance to physical damage</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Damage</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">how much damage they do to towers</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">WalkSpeed</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">how fast they can walk</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RunSpeed</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">how fast they can run</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Acceleration</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">how fast they can transition from walking to running</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TurnRate</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">how fast they can turn</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Attraction0</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">negative values is attraction to civilians, positive is avoidance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Attraction1</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">negative values is attraction to towers, positive is avoidance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Attraction2</td>
+<td style="text-align: left;">Quantitative</td>
+<td style="text-align: left;">negative values is attraction to the base, positive is avoidance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fit</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">I, H, G, or K - an inscrutable code about fitness conditions</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gun</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">Autocannon or Chip Shredder</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Civilians</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">Present or Absent</td>
 </tr>
 </tbody>
 </table>
@@ -666,42 +809,61 @@ $ replicate           &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "
 <p>DISCOVER SIMILARITY</p>
 <p>COMPARE TRENDS</p>
 <p>COMPARE DISTRIBUTION</p>
-<p>I’m going to try COMPARE TRENDS. I want to COMPARE the TREND in <code>WalkSpeed</code> over time (<code>Generation</code>) between the two <code>Fit</code> categories. To do this, I’ll create a scatterplot, faceted by <code>Fit</code>. I’m suspicious that <code>TurnRate</code> is involved somehow, so I’m coloring with that variable.</p>
+<p>I’m going to try COMPARE TRENDS. I want to COMPARE the TREND in <code>Health</code> over time (<code>Generation</code>) between the two <code>Gun</code> types. To do this, I’ll create a scatterplot, faceted by <code>Gun</code>. I’m suspicious that <code>Acceleration</code> is involved somehow, so I’m coloring with that variable.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur, <span class="fu">aes</span>(<span class="at">x=</span>Generation, <span class="at">y =</span> WalkSpeed))<span class="sc">+</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>TurnRate), <span class="at">alpha =</span> <span class="fl">0.01</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_continuous</span>(<span class="at">low=</span><span class="st">"red"</span>, <span class="at">high =</span> <span class="st">"blue"</span>)<span class="sc">+</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(replicate<span class="sc">~</span>Fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Hastur50 <span class="ot">&lt;-</span> <span class="fu">filter</span>(Hastur, Generation <span class="sc">==</span> <span class="dv">49</span> <span class="sc">&amp;</span> replicate <span class="sc">==</span> <span class="dv">1</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>Hastur1 <span class="ot">&lt;-</span>  <span class="fu">filter</span>(Hastur, replicate <span class="sc">==</span> <span class="dv">1</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur50, <span class="fu">aes</span>(<span class="at">x=</span>TurnRate, <span class="at">y =</span> WalkSpeed))<span class="sc">+</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>Fit), <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(Fit<span class="sc">~</span>replicate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
-</div>
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur1, <span class="fu">aes</span>(<span class="at">x=</span>Generation, <span class="at">y =</span> WalkSpeed))<span class="sc">+</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>TurnRate), <span class="at">alpha =</span> <span class="fl">0.1</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur, <span class="fu">aes</span>(<span class="at">x=</span>Generation, <span class="at">y =</span> Health))<span class="sc">+</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>Acceleration), <span class="at">alpha =</span> <span class="fl">0.01</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_continuous</span>(<span class="at">low=</span><span class="st">"red"</span>, <span class="at">high =</span> <span class="st">"blue"</span>)<span class="sc">+</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(replicate<span class="sc">~</span>Fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(replicate<span class="sc">~</span>Gun)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Interesting… it looks like a clear trend for <code>Health</code> to increase under the withering fire of the AUTO CANNONS, but not when the player uses the CHIP SHREDDER. It is a bit hard to see what is going on with <code>Acceleration</code>, so let’s reverse the graphs so that we plot <code>Acceleration</code> on the y axis but color by <code>Health</code>.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur, <span class="fu">aes</span>(<span class="at">x=</span>Generation, <span class="at">y =</span> Acceleration))<span class="sc">+</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>Health), <span class="at">alpha =</span> <span class="fl">0.01</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_continuous</span>(<span class="at">low=</span><span class="st">"red"</span>, <span class="at">high =</span> <span class="st">"blue"</span>)<span class="sc">+</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(replicate<span class="sc">~</span>Gun)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>I’m now confident that the replicates within each <code>Gun</code> type are pretty similar, and I can SUMMARIZE the individual data points. This will help with the COMPARE TRENDS task, I think.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur, <span class="fu">aes</span>(<span class="at">x=</span>Generation, <span class="at">y =</span> Health))<span class="sc">+</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>Acceleration), <span class="at">alpha =</span> <span class="fl">0.01</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>()<span class="sc">+</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_continuous</span>(<span class="at">low=</span><span class="st">"red"</span>, <span class="at">high =</span> <span class="st">"blue"</span>)<span class="sc">+</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Gun)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = "cs")'</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Hastur, <span class="fu">aes</span>(<span class="at">x=</span>Generation, <span class="at">y =</span> Acceleration))<span class="sc">+</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>Health), <span class="at">alpha =</span> <span class="fl">0.01</span>, <span class="at">size =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>()<span class="sc">+</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_continuous</span>(<span class="at">low=</span><span class="st">"red"</span>, <span class="at">high =</span> <span class="st">"blue"</span>)<span class="sc">+</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Gun)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = "cs")'</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-8-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 
