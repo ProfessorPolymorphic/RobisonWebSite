@@ -29,6 +29,8 @@ I am maintaining the course here and on its [CANVAS PAGE](https://canvas.uidaho.
 
 [Awesome Quarto:](https://github.com/mcanouil/awesome-quarto){target="_blank"} A potentially interesting repository of Quarto documents, talks, tools, examples, etc.
 
+[The MockUp Blog - TABLES!](https://themockup.blog/posts/2022-06-13-gtextras-cran/){target="_blank"} This blog post explores the R packages `gt` and `gtextras` which will help us up our table game!
+
 [Riffomonas Project](https://www.youtube.com/@Riffomonas/featured){target="_blank"}: Pat Schloss is a [Professor at the University of Michigan](https://www.schlosslab.org){target="_blank"}. The Riffomonas Project is his Youtube channel, which has HUNDREDS of easy to follow and amazingly useful instructional videos on R, ggplot, version control, and literate programming.
 
 [Dr. Tamara Munzner's Website:](https://www.cs.ubc.ca/~tmm/){target="_blank"} It isn't fancy, but Dr. Munzner's website has tons of resources from her textbook and the many data visualization courses she has offered. This includes recorded lectures that align directly with the chapters of the text, much like what we are using.
