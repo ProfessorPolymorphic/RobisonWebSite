@@ -13,7 +13,7 @@ format:
 author: "Barrie Robison"
 date: "2023-01-31"
 categories: [Lecture, DataViz, Idiom, Observable, Tidyverse]
-image: "Idiom.png"
+image: "idiom.png"
 code-fold: true
 description: "Just what is an **IDIOM**, anyway?"
 ---
@@ -131,7 +131,6 @@ We are defining the structure of the visualization (the idiom).
 
 To do this, we use [MARKS]{.red} and [CHANNELS]{.red}:
 
-
 -   [MARKS]{.red} represent **ITEMS** or **LINKS**
 
 -   [CHANNELS]{.red} change the appearance of **MARKS** based on **ATTRIBUTES**
@@ -142,7 +141,6 @@ To do this, we use [MARKS]{.red} and [CHANNELS]{.red}:
 
 ## MARKS FOR LINKS
 
-
 ![](marksforlinks.png){.absolute top="100" height="175"}
 
 ![](bubblesets.png){.absolute top="300" left="0" height="250"} [[Bubblesets](vialab.science.uoit.ca/portfolio/bubblesets)]{.absolute left="0" bottom="70"}
@@ -150,6 +148,7 @@ To do this, we use [MARKS]{.red} and [CHANNELS]{.red}:
 ![](forcedirected.png){.absolute top="300" left="330" height="250"} [[Force Directed Graph](https://observablehq.com/@d3/force-directed-graph)]{.absolute left="330" bottom="70"}
 
 ## OBSERVABLE IN QUARTO!
+
 ```{ojs}
 //| echo: true
 //| code-fold: true
@@ -317,9 +316,9 @@ import {Swatches} from "@d3/color-legend"
 
 ## CHANNELS {.smaller}
 
-:::: {.columns}
+::: columns
 ::: {.column width="40%"}
--   **CHANNELS** control the appearance of **MARKS**.  
+-   **CHANNELS** control the appearance of **MARKS**.\
 -   They are proportional to or based on **ATTRIBUTES**.
 -   Their properties differ in the type and amount of information that can be conveyed to the human perceptual system.
 :::
@@ -327,8 +326,7 @@ import {Swatches} from "@d3/color-legend"
 ::: {.column width="60%"}
 ![](channels.png)
 :::
-::::
-
+:::
 
 ## VISUAL ENCODING EXAMPLE
 
@@ -351,7 +349,7 @@ Uses multiple channels for the same attribute.
     -   Match channel to data type.
 -   [EFFECTIVENESS]{.red}
     -   Channels differ in accuracy of perception.
-  
+
 ## CHANNEL RANKINGS {.smaller}
 
 ![](ChannelRank.png)
@@ -360,7 +358,7 @@ Uses multiple channels for the same attribute.
 
 ## GROUPING
 
-:::: {.columns}
+::: columns
 ::: {.column width="50%"}
 -   Containment
 -   Connection
@@ -375,5 +373,4 @@ Uses multiple channels for the same attribute.
 
 ![](IdentityChannels.png)
 :::
-::::
-
+:::
