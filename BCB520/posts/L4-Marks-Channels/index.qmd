@@ -12,10 +12,10 @@ format:
     theme: [default, custom.scss]
 author: "Barrie Robison"
 date: "2023-01-31"
-categories: [Lecture, DataViz, Task]
-image: "Nyarlathotep.png"
+categories: [Lecture, DataViz, Idiom, Observable, Tidyverse]
+image: "Idiom.png"
 code-fold: true
-description: "Action - Target pairs ... of **eldritch horror**?"
+description: "Just what is an **IDIOM**, anyway?"
 ---
 
 ## PLAN
@@ -373,7 +373,7 @@ Uses multiple channels for the same attribute.
 ::: {.column width="50%"}
 ![](marksforlinks.png)
 
-![](identityChannels.png)
+![](IdentityChannels.png)
 :::
 ::::
 
