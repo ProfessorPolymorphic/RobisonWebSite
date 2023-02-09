@@ -308,6 +308,153 @@
     "text": "In this assignment (detalied here), I will identify, import, describe, and host a data set that will be used throughout the remainder of the BCB 504 course for Data Visualizations.\n\n\nI’ve chosen a subset of a large dataset produced by our evolutionary video game, Project Hastur. We built Project Hatur to be an evolutionary video game, and we are bold in our assertions of that fact. But we haven’t really published any evidence that the evolutionary model works. This data set is the beginning of that exercise.\n\n\n\n\n\n\nNote\n\n\n\nPROJECT HASTUR creates a unique challenge by combining elements of 3D tower defense and real-time strategy with biological evolution. Fight against alien Proteans that evolve - using biologically accurate models of evolution - to overcome the player’s defenses.\nEach creature you will face has its own unique genome controlling its abilities, behaviors, and appearance. Those that make it the furthest and do the most damage to your defenses have the most offspring you will have to defeat in the next generation. The result? Evolution responds to the player’s strategy and makes every playthrough a unique experience.\nUse four upgradable turret classes, plus airstrikes and combat robots, to fight against the Protean invasion. Make strategic decisions about which turrets to build, when to upgrade them, and where to place them on the hex grid. A well-timed airstrike can change the flow of the game, but you’ll have to wait before you can use it again. Unlock powerful upgrades for each turret class as you move across the Nyx system. As you play, the Proteans evolve new weapon resistances, behaviors, and movement capabilities to better destroy your defenses.\nIn CAMPAIGN MODE, battle through a series of maps as a military defense commander to protect the planet Nyx from the ever-evolving threat of the Proteans. Unlock weapons and upgrades and use them to fight against the Protean swarm and learn about the mysteries of Project Hastur.\nIn EXPERIMENT MODE, choose any map, tweak the parameters, and play infinitely to see what you can evolve. Change the number of creatures and the parameters of evolution, make your turrets invincible, or crank up the biomatter and experiment with the most powerful turret upgrades. Experiment mode lets you experience Project Hastur your way.\n\n\n\n\nThe data were collected by running Project Hastur in Experiment mode using four predefined conditions:\nI: The CHIP SHREDDER towers when Fitness Functions were turned ON and Civilians were PRESENT.\nH: The CHIP SHREDDER towers when Fitness Functions were turned OFF and Civilians were PRESENT.\nG: The CHIP SHREDDER towers when Fitness Functions were turned ON and Civilians were ABSENT.\nK: The AUTOCANNON towers when Fitness Functions were turned ON and Civilians were ABSENT.\nEach experimental condition was run 9 times (9 replicates).\n\n\n\n\nI’m going to use the vroom package to import multiple files. Each file is a replicate and the filename tells us about the experimental condition. Below I convert the filename variable (I named it path) into a a single categorical attribute called Fit that uses the letter codes above.\n\n\nCode\nlibrary(vroom)\nlibrary(stringr)\nlibrary(tidyverse)\nlibrary(readxl)\nfiles <- fs::dir_ls(glob = \"*.csv\")\n\nHastur <- vroom(files, id = \"path\", \n                col_select = c(path, Generation, ID, Origin, AsexualReproduction, Fitness, Health,\n                               SightRange, Armor, Damage, WalkSpeed, RunSpeed, Acceleration, \n                               TurnRate, Attraction0, Attraction1, Attraction2))\n\nHastur$Fit <- str_split_i(Hastur$path, pattern = \"\", 1)\nHastur$replicate <- str_split_i(Hastur$path, pattern = \"\", 4)\n\n\nThe glimpse command in the Tidyverse package is a nice way to summarize the data frame:\n\n\nCode\nglimpse(Hastur)\n\n\nRows: 412,246\nColumns: 19\n\n\nWarning: One or more parsing issues, call `problems()` on your data frame for details,\ne.g.:\n  dat <- vroom(...)\n  problems(dat)\n\n\n$ path                <chr> \"GSC1.csv\", \"GSC1.csv\", \"GSC1.csv\", \"GSC1.csv\", \"G…\n$ Generation          <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…\n$ ID                  <dbl> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, …\n$ Origin              <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…\n$ AsexualReproduction <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…\n$ Fitness             <dbl> 57.83508, 66.87755, 66.14652, 65.88873, 62.12119, …\n$ Health              <dbl> 1006, 1012, 1011, 992, 983, 1020, 982, 963, 996, 9…\n$ SightRange          <dbl> 9.952521, 10.096590, 9.954091, 10.066170, 10.02955…\n$ Armor               <dbl> 0.05081077, 0.05080924, 0.05010696, 0.04903501, 0.…\n$ Damage              <dbl> 49, 51, 51, 50, 50, 51, 50, 49, 51, 50, 49, 50, 49…\n$ WalkSpeed           <dbl> 6.930266, 7.034348, 6.970608, 6.903729, 6.962081, …\n$ RunSpeed            <dbl> 20.03562, 19.88800, 19.80754, 19.94738, 19.95583, …\n$ Acceleration        <dbl> 14.70648, 15.05868, 14.85994, 14.89853, 15.01570, …\n$ TurnRate            <dbl> 356.3890, 361.2032, 358.9919, 361.8476, 360.6143, …\n$ Attraction0         <dbl> 0.158477500, -0.007134318, -0.063494000, 0.0125864…\n$ Attraction1         <dbl> -0.070695680, 0.059872570, -0.003332689, 0.0458469…\n$ Attraction2         <dbl> -0.108705200, 0.015018780, -0.007600136, 0.0120656…\n$ Fit                 <chr> \"G\", \"G\", \"G\", \"G\", \"G\", \"G\", \"G\", \"G\", \"G\", \"G\", …\n$ replicate           <chr> \"1\", \"1\", \"1\", \"1\", \"1\", \"1\", \"1\", \"1\", \"1\", \"1\", …\n\n\n\n\n\n\n\nWhat we have here is a (big) Flat Table. The Items are the rows, and each row is an individual alien enemy that existed during one of the replicates. Each Item (alien) is described by Attributes, which are arranged in the columns.\n\n\n\nThe glimpse we did in the preceding section gives us a hint as to what each attribute type might be. Let’s flesh that out a bit though. I’m going to create a new data frame that describes the attributes.\n\n\nCode\nAttributes <- read_excel(\"Attributes.xlsx\")\nknitr::kable(Attributes)\n\n\n\n\n\n\n\n\n\n\nAttribute\nType\nNote\n\n\n\n\npath\nCategorical\neach File Name is a unique replicate\n\n\nGeneration\nQuantitative\nEach Enemy Wave is a Generation\n\n\nID\nOrdinal\nEach enemy has a unique ID within each replicate\n\n\nOrigin\nCategorical\nThe hive from which the enemy was spawned\n\n\nAsexualReproduction\nCategorical\nWas the enemy spawned by infectiing a civilian?\n\n\nFitness\nQuantitative\nThe value of Fitness is used to determine probability of reproduction\n\n\nHealth\nQuantitative\nHit Points\n\n\nSightRange\nQuantitative\nHow far they can see civilians, towers, etc\n\n\nArmor\nQuantitative\nresistance to physical damage\n\n\nDamage\nQuantitative\nhow much damage they do to towers\n\n\nWalkSpeed\nQuantitative\nhow fast they can walk\n\n\nRunSpeed\nQuantitative\nhow fast they can run\n\n\nAcceleration\nQuantitative\nhow fast they can transition from walking to running\n\n\nTurnRate\nQuantitative\nhow fast they can turn\n\n\nAttraction0\nQuantitative\nnegative values is attraction to civilians, positive is avoidance\n\n\nAttraction1\nQuantitative\nnegative values is attraction to towers, positive is avoidance\n\n\nAttraction2\nQuantitative\nnegative values is attraction to the base, positive is avoidance\n\n\nFit\nCategorical\nI, H, G, or K - an inscrutable code about fitness conditions\n\n\n\n\n\nThe problem here is my inscrutable filename codes for that Fit variable. Those letter codes actually contain information on a couple hidden variables. I’m going to create a new variable called Gun and another called Civilians. I’ll add those to the main data file and also the Data Dicttionary.\n\n\nCode\nHastur$Gun <- \"CHIP SHREDDER\"\nHastur$Civilians <- \"Present\"\n  \n\n  Hastur$Gun[Hastur$Fit==\"K\"]<- \"AUTOCANNON\"\n     \n  Hastur$Civilians[Hastur$Fit==\"K\" | Hastur$Fit ==\"G\"] <- \"ABSENT\"\n     \n\n  Attributes<-rbind(Attributes, c(\"Gun\",\"Categorical\", \"Autocannon or Chip Shredder\"))\n  Attributes<-rbind(Attributes, c(\"Civilians\",\"Categorical\", \"Present or Absent\"))\n\n\n\n\nCode\n  knitr::kable(Attributes)\n\n\n\n\n\n\n\n\n\n\nAttribute\nType\nNote\n\n\n\n\npath\nCategorical\neach File Name is a unique replicate\n\n\nGeneration\nQuantitative\nEach Enemy Wave is a Generation\n\n\nID\nOrdinal\nEach enemy has a unique ID within each replicate\n\n\nOrigin\nCategorical\nThe hive from which the enemy was spawned\n\n\nAsexualReproduction\nCategorical\nWas the enemy spawned by infectiing a civilian?\n\n\nFitness\nQuantitative\nThe value of Fitness is used to determine probability of reproduction\n\n\nHealth\nQuantitative\nHit Points\n\n\nSightRange\nQuantitative\nHow far they can see civilians, towers, etc\n\n\nArmor\nQuantitative\nresistance to physical damage\n\n\nDamage\nQuantitative\nhow much damage they do to towers\n\n\nWalkSpeed\nQuantitative\nhow fast they can walk\n\n\nRunSpeed\nQuantitative\nhow fast they can run\n\n\nAcceleration\nQuantitative\nhow fast they can transition from walking to running\n\n\nTurnRate\nQuantitative\nhow fast they can turn\n\n\nAttraction0\nQuantitative\nnegative values is attraction to civilians, positive is avoidance\n\n\nAttraction1\nQuantitative\nnegative values is attraction to towers, positive is avoidance\n\n\nAttraction2\nQuantitative\nnegative values is attraction to the base, positive is avoidance\n\n\nFit\nCategorical\nI, H, G, or K - an inscrutable code about fitness conditions\n\n\nGun\nCategorical\nAutocannon or Chip Shredder\n\n\nCivilians\nCategorical\nPresent or Absent\n\n\n\n\n\n\n\n\n\nI’m publishing to GitHub! We will elaborate on this step as everyone progresses through the assignment.\n\n\n\nFor this data set, I am currently defining the user as … me! My hypothesis is that the two Fitness conditions create different evolutionary outcomes of the aliens in Project Hastur. Some relevant ACTION TARGET pairs might be:\nDISCOVER TRENDS\nDISCOVER DISTRIBUTION\nDISCOVER SIMILARITY\nCOMPARE TRENDS\nCOMPARE DISTRIBUTION\nI’m going to try COMPARE TRENDS. I want to COMPARE the TREND in Health over time (Generation) between the two Gun types. To do this, I’ll create a scatterplot, faceted by Gun. I’m suspicious that Acceleration is involved somehow, so I’m coloring with that variable.\n\n\nCode\nggplot(Hastur, aes(x=Generation, y = Health))+\n  geom_point(aes(color=Acceleration), alpha = 0.01, size = 1)+\n  scale_color_continuous(low=\"red\", high = \"blue\")+\n  facet_grid(replicate~Gun)\n\n\n\n\n\nInteresting… it looks like a clear trend for Health to increase under the withering fire of the AUTO CANNONS, but not when the player uses the CHIP SHREDDER. It is a bit hard to see what is going on with Acceleration, so let’s reverse the graphs so that we plot Acceleration on the y axis but color by Health.\n\n\nCode\nggplot(Hastur, aes(x=Generation, y = Acceleration))+\n  geom_point(aes(color=Health), alpha = 0.01, size = 1)+\n  scale_color_continuous(low=\"red\", high = \"blue\")+\n  facet_grid(replicate~Gun)\n\n\n\n\n\nI’m now confident that the replicates within each Gun type are pretty similar, and I can SUMMARIZE the individual data points. This will help with the COMPARE TRENDS task, I think.\n\n\nCode\nggplot(Hastur, aes(x=Generation, y = Health))+\n  geom_point(aes(color=Acceleration), alpha = 0.01, size = 1)+\n  geom_smooth()+\n  scale_color_continuous(low=\"red\", high = \"blue\")+\n  facet_wrap(~Gun)\n\n\n`geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = \"cs\")'\n\n\n\n\n\nCode\nggplot(Hastur, aes(x=Generation, y = Acceleration))+\n  geom_point(aes(color=Health), alpha = 0.01, size = 1)+\n  geom_smooth()+\n  scale_color_continuous(low=\"red\", high = \"blue\")+\n  facet_wrap(~Gun)\n\n\n`geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = \"cs\")'"
   },
   {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#plan",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#plan",
+    "title": "LECTURE 4",
+    "section": "PLAN",
+    "text": "PLAN\n\nAssignment 3 Review.\nAligning the VAD model with other frameworks.\nEncoding with Marks and Channels."
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#assignment-3-review",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#assignment-3-review",
+    "title": "LECTURE 4",
+    "section": "ASSIGNMENT 3 REVIEW",
+    "text": "ASSIGNMENT 3 REVIEW\nRondald’s Portfolio\nJiyin’s Portfolio\nCody’s Portfolio\nErik’s Portfolio"
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#vad-model",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#vad-model",
+    "title": "LECTURE 4",
+    "section": "VAD MODEL",
+    "text": "VAD MODEL"
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#understand-the-data",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#understand-the-data",
+    "title": "LECTURE 4",
+    "section": "UNDERSTAND THE DATA",
+    "text": "UNDERSTAND THE DATA\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#understand-the-task",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#understand-the-task",
+    "title": "LECTURE 4",
+    "section": "UNDERSTAND THE TASK",
+    "text": "UNDERSTAND THE TASK\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#visual-encoding",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#visual-encoding",
+    "title": "LECTURE 4",
+    "section": "VISUAL ENCODING",
+    "text": "VISUAL ENCODING\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#other-frameworks",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#other-frameworks",
+    "title": "LECTURE 4",
+    "section": "OTHER FRAMEWORKS",
+    "text": "OTHER FRAMEWORKS\n\nThe Tidyverse\nThe Grammar of Graphics\nTufte"
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#tidyverse",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#tidyverse",
+    "title": "LECTURE 4",
+    "section": "TIDYVERSE",
+    "text": "TIDYVERSE\nR packages for data science:\n\n\nThe tidyverse is an opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures. The best way to explore and understand the tidyverse is with cheetsheets, like this one for tidyr!"
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#grammar-of-graphics",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#grammar-of-graphics",
+    "title": "LECTURE 4",
+    "section": "GRAMMAR OF GRAPHICS",
+    "text": "GRAMMAR OF GRAPHICS\nThe ggplot2 cheatsheet!"
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#tufte",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#tufte",
+    "title": "LECTURE 4",
+    "section": "TUFTE",
+    "text": "TUFTE\nTufte’s Website\nA Quarto Page Layout Example"
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#analysis-framework",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#analysis-framework",
+    "title": "LECTURE 4",
+    "section": "ANALYSIS FRAMEWORK",
+    "text": "ANALYSIS FRAMEWORK\nFour levels, three questions\n\n\n\nDomain situation defines the target users.\nAbstraction translate from specifics of domain to vocabulary of vis\n\nWHAT is shown? data abstraction\nWHY is the user looking at it? task abstraction\n\nIdiom defines the visualization\n\nHOW is it shown?\n\nvisual encoding idiom: how to draw\ninteraction idiom: how to manipulate\n\n\nAlgorithm creates the visualization\n\nevaluated with computational efficiency"
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#encoding",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#encoding",
+    "title": "LECTURE 4",
+    "section": "ENCODING",
+    "text": "ENCODING\nWe are defining the structure of the visualization (the idiom).\nTo do this, we use MARKS and CHANNELS:\n\nMARKS represent ITEMS or LINKS\nCHANNELS change the appearance of MARKS based on ATTRIBUTES"
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#marks-for-items",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#marks-for-items",
+    "title": "LECTURE 4",
+    "section": "MARKS FOR ITEMS",
+    "text": "MARKS FOR ITEMS"
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#marks-for-links",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#marks-for-links",
+    "title": "LECTURE 4",
+    "section": "MARKS FOR LINKS",
+    "text": "MARKS FOR LINKS\n\n Bubblesets\n Force Directed Graph"
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#observable-in-quarto",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#observable-in-quarto",
+    "title": "LECTURE 4",
+    "section": "OBSERVABLE IN QUARTO!",
+    "text": "OBSERVABLE IN QUARTO!\n\n\nCode\nd3 = require(\"d3@7\")\n\n\nchart = ForceGraph(miserables, {\n  nodeId: d => d.id,\n  nodeGroup: d => d.group,\n  nodeTitle: d => `${d.id}\\n${d.group}`,\n  linkStrokeWidth: l => Math.sqrt(l.value),\n  width,\n  height: 1000,\n  invalidation // a promise to stop the simulation when the cell is re-run\n})\n\n\nmiserables = FileAttachment(\"miserables.json\").json()\n\n\n// Copyright 2021 Observable, Inc.\n// Released under the ISC license.\n// https://observablehq.com/@d3/force-directed-graph\nfunction ForceGraph({\n  nodes, // an iterable of node objects (typically [{id}, …])\n  links // an iterable of link objects (typically [{source, target}, …])\n}, {\n  nodeId = d => d.id, // given d in nodes, returns a unique identifier (string)\n  nodeGroup, // given d in nodes, returns an (ordinal) value for color\n  nodeGroups, // an array of ordinal values representing the node groups\n  nodeTitle, // given d in nodes, a title string\n  nodeFill = \"currentColor\", // node stroke fill (if not using a group color encoding)\n  nodeStroke = \"#fff\", // node stroke color\n  nodeStrokeWidth = 1.5, // node stroke width, in pixels\n  nodeStrokeOpacity = 1, // node stroke opacity\n  nodeRadius = 5, // node radius, in pixels\n  nodeStrength,\n  linkSource = ({source}) => source, // given d in links, returns a node identifier string\n  linkTarget = ({target}) => target, // given d in links, returns a node identifier string\n  linkStroke = \"#999\", // link stroke color\n  linkStrokeOpacity = 0.6, // link stroke opacity\n  linkStrokeWidth = 1.5, // given d in links, returns a stroke width in pixels\n  linkStrokeLinecap = \"round\", // link stroke linecap\n  linkStrength,\n  colors = d3.schemeTableau10, // an array of color strings, for the node groups\n  width = 1000, // outer width, in pixels\n  height = 1000, // outer height, in pixels\n  invalidation // when this promise resolves, stop the simulation\n} = {}) {\n  // Compute values.\n  const N = d3.map(nodes, nodeId).map(intern);\n  const LS = d3.map(links, linkSource).map(intern);\n  const LT = d3.map(links, linkTarget).map(intern);\n  if (nodeTitle === undefined) nodeTitle = (_, i) => N[i];\n  const T = nodeTitle == null ? null : d3.map(nodes, nodeTitle);\n  const G = nodeGroup == null ? null : d3.map(nodes, nodeGroup).map(intern);\n  const W = typeof linkStrokeWidth !== \"function\" ? null : d3.map(links, linkStrokeWidth);\n  const L = typeof linkStroke !== \"function\" ? null : d3.map(links, linkStroke);\n\n  // Replace the input nodes and links with mutable objects for the simulation.\n  nodes = d3.map(nodes, (_, i) => ({id: N[i]}));\n  links = d3.map(links, (_, i) => ({source: LS[i], target: LT[i]}));\n\n  // Compute default domains.\n  if (G && nodeGroups === undefined) nodeGroups = d3.sort(G);\n\n  // Construct the scales.\n  const color = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);\n\n  // Construct the forces.\n  const forceNode = d3.forceManyBody();\n  const forceLink = d3.forceLink(links).id(({index: i}) => N[i]);\n  if (nodeStrength !== undefined) forceNode.strength(nodeStrength);\n  if (linkStrength !== undefined) forceLink.strength(linkStrength);\n\n  const simulation = d3.forceSimulation(nodes)\n      .force(\"link\", forceLink)\n      .force(\"charge\", forceNode)\n      .force(\"center\",  d3.forceCenter())\n      .on(\"tick\", ticked);\n\n  const svg = d3.create(\"svg\")\n      .attr(\"width\", width)\n      .attr(\"height\", height)\n      .attr(\"viewBox\", [-width / 2, -height / 2, width, height])\n      .attr(\"style\", \"max-width: 100%; height: auto; height: intrinsic;\");\n\n  const link = svg.append(\"g\")\n      .attr(\"stroke\", typeof linkStroke !== \"function\" ? linkStroke : null)\n      .attr(\"stroke-opacity\", linkStrokeOpacity)\n      .attr(\"stroke-width\", typeof linkStrokeWidth !== \"function\" ? linkStrokeWidth : null)\n      .attr(\"stroke-linecap\", linkStrokeLinecap)\n    .selectAll(\"line\")\n    .data(links)\n    .join(\"line\");\n\n  const node = svg.append(\"g\")\n      .attr(\"fill\", nodeFill)\n      .attr(\"stroke\", nodeStroke)\n      .attr(\"stroke-opacity\", nodeStrokeOpacity)\n      .attr(\"stroke-width\", nodeStrokeWidth)\n    .selectAll(\"circle\")\n    .data(nodes)\n    .join(\"circle\")\n      .attr(\"r\", nodeRadius)\n      .call(drag(simulation));\n\n  if (W) link.attr(\"stroke-width\", ({index: i}) => W[i]);\n  if (L) link.attr(\"stroke\", ({index: i}) => L[i]);\n  if (G) node.attr(\"fill\", ({index: i}) => color(G[i]));\n  if (T) node.append(\"title\").text(({index: i}) => T[i]);\n  if (invalidation != null) invalidation.then(() => simulation.stop());\n\n  function intern(value) {\n    return value !== null && typeof value === \"object\" ? value.valueOf() : value;\n  }\n\n  function ticked() {\n    link\n      .attr(\"x1\", d => d.source.x)\n      .attr(\"y1\", d => d.source.y)\n      .attr(\"x2\", d => d.target.x)\n      .attr(\"y2\", d => d.target.y);\n\n    node\n      .attr(\"cx\", d => d.x)\n      .attr(\"cy\", d => d.y);\n  }\n\n  function drag(simulation) {    \n    function dragstarted(event) {\n      if (!event.active) simulation.alphaTarget(0.3).restart();\n      event.subject.fx = event.subject.x;\n      event.subject.fy = event.subject.y;\n    }\n    \n    function dragged(event) {\n      event.subject.fx = event.x;\n      event.subject.fy = event.y;\n    }\n    \n    function dragended(event) {\n      if (!event.active) simulation.alphaTarget(0);\n      event.subject.fx = null;\n      event.subject.fy = null;\n    }\n    \n    return d3.drag()\n      .on(\"start\", dragstarted)\n      .on(\"drag\", dragged)\n      .on(\"end\", dragended);\n  }\n\n  return Object.assign(svg.node(), {scales: {color}});\n}\n\n\nimport {howto} from \"@d3/example-components\"\n\nimport {Swatches} from \"@d3/color-legend\""
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#channels",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#channels",
+    "title": "LECTURE 4",
+    "section": "CHANNELS",
+    "text": "CHANNELS\n\n\n\nCHANNELS control the appearance of MARKS.\n\nThey are proportional to or based on ATTRIBUTES.\nTheir properties differ in the type and amount of information that can be conveyed to the human perceptual system."
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#visual-encoding-example",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#visual-encoding-example",
+    "title": "LECTURE 4",
+    "section": "VISUAL ENCODING EXAMPLE",
+    "text": "VISUAL ENCODING EXAMPLE\nLet’s analyze the idiom structures below in terms of marks and channels."
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#redundant-encoding",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#redundant-encoding",
+    "title": "LECTURE 4",
+    "section": "REDUNDANT ENCODING",
+    "text": "REDUNDANT ENCODING\nUses multiple channels for the same attribute.\n\nSends a stronger message\nUses up channels"
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#choosing-channels",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#choosing-channels",
+    "title": "LECTURE 4",
+    "section": "CHOOSING CHANNELS",
+    "text": "CHOOSING CHANNELS\n\nEXPRESSIVENESS\n\nMatch channel to data type.\n\nEFFECTIVENESS\n\nChannels differ in accuracy of perception."
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#channel-rankings",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#channel-rankings",
+    "title": "LECTURE 4",
+    "section": "CHANNEL RANKINGS",
+    "text": "CHANNEL RANKINGS\n\nNote that spatial position ranks high for both types of channels."
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#grouping",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#grouping",
+    "title": "LECTURE 4",
+    "section": "GROUPING",
+    "text": "GROUPING\n\n\n\nContainment\nConnection\nProximity\n\nSame spatial region.\n\nSimilarity\n\nSame values as other channels.\n\n\n\n\n\n\n\n\n\nCANVAS…HOME"
+  },
+  {
     "objectID": "BCB520/posts/Certificate/index.html",
     "href": "BCB520/posts/Certificate/index.html",
     "title": "Certificate",

@@ -1,0 +1,379 @@
+---
+title: "LECTURE 4"
+subtitle: "Marks and Channels"
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    css: styles.css
+    footer: <a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/BCB520.html" target="_blank">HOME</a>
+    theme: [default, custom.scss]
+author: "Barrie Robison"
+date: "2023-01-31"
+categories: [Lecture, DataViz, Task]
+image: "Nyarlathotep.png"
+code-fold: true
+description: "Action - Target pairs ... of **eldritch horror**?"
+---
+
+## PLAN
+
+1.  Assignment 3 Review.
+2.  Aligning the VAD model with other frameworks.
+3.  Encoding with Marks and Channels.
+
+## ASSIGNMENT 3 REVIEW
+
+[Rondald's Portfolio](https://ronbentil.github.io/BCB504Portfolio/)
+
+[Jiyin's Portfolio](https://chubl.github.io/bcb504-blog/)
+
+[Cody's Portfolio](https://cody-appa.github.io/Data_Science_Portfolio/)
+
+[Erik's Portfolio](https://erickrios5.github.io/BCB-504-My-Data-Blog/)
+
+## VAD MODEL
+
+![](VADmodel.png)
+
+## UNDERSTAND THE DATA
+
+Computer-based visualization systems provide visual representations of [datasets]{.red} designed to help people carry out tasks more effectively.
+
+![](whatexpanded.png){.absolute bottom="0" right="0" width="450"}
+
+![](what.png){.absolute bottom="0" height="400"}
+
+## UNDERSTAND THE TASK
+
+Computer-based visualization systems provide visual representations of datasets designed to [help people carry out tasks]{.red} more effectively.
+
+![](Whybig.png){.absolute bottom="0" right="0" width="550"}
+
+![](Why.png){.absolute bottom="70" height="300"}
+
+## VISUAL ENCODING
+
+Computer-based visualization systems provide [visual representations]{.red} of datasets designed to help people carry out tasks more effectively.
+
+![](Howbig.png){.absolute bottom="0" left="100" width="700"}
+
+## OTHER FRAMEWORKS
+
+1.  The Tidyverse
+2.  The Grammar of Graphics
+3.  Tufte
+
+## TIDYVERSE {.smaller}
+
+**R packages for data science:**
+
+::: columns
+::: {.column width="45%"}
+[The tidyverse](https://www.tidyverse.org) is an opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures. The best way to explore and understand the tidyverse is with [cheetsheets](), like [this one](https://posit.co/wp-content/uploads/2022/10/tidyr.pdf) for `tidyr`!
+:::
+
+::: {.column width="55%"}
+![](tidyverse.png){height="400" bottom="100" left="0"}
+:::
+:::
+
+## GRAMMAR OF GRAPHICS
+
+The [ggplot2 cheatsheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf)!
+
+::: columns
+::: column
+![](ggplotbasics.png)
+:::
+
+::: column
+![](ggplottemplate.png)
+:::
+:::
+
+## TUFTE
+
+[Tufte's Website](https://www.edwardtufte.com/tufte/)
+
+[A Quarto Page Layout Example](https://quarto-dev.github.io/quarto-gallery/page-layout/tufte.html)
+
+![](5-books-stacked.jpg)
+
+## ANALYSIS FRAMEWORK {.smaller}
+
+Four levels, three questions
+
+::: columns
+::: {.column width="65%"}
+-   **Domain** situation defines the target users.
+-   **Abstraction** translate from specifics of domain to vocabulary of vis
+    -   [WHAT]{.red} is shown? data abstraction
+    -   [WHY]{.yellow} is the user looking at it? task abstraction
+-   **Idiom** defines the visualization
+    -   [HOW]{.green} is it shown?
+        -   visual encoding idiom: how to draw
+        -   interaction idiom: how to manipulate
+-   **Algorithm** creates the visualization
+    -   evaluated with computational efficiency
+:::
+
+::: {.column width="35%"}
+![](VADwithwhatwhyhow.png)
+:::
+:::
+
+## ENCODING
+
+We are defining the structure of the visualization (the idiom).
+
+To do this, we use [MARKS]{.red} and [CHANNELS]{.red}:
+
+
+-   [MARKS]{.red} represent **ITEMS** or **LINKS**
+
+-   [CHANNELS]{.red} change the appearance of **MARKS** based on **ATTRIBUTES**
+
+## MARKS FOR ITEMS
+
+![](basicgeometric.png)
+
+## MARKS FOR LINKS
+
+
+![](marksforlinks.png){.absolute top="100" height="175"}
+
+![](bubblesets.png){.absolute top="300" left="0" height="250"} [[Bubblesets](vialab.science.uoit.ca/portfolio/bubblesets)]{.absolute left="0" bottom="70"}
+
+![](forcedirected.png){.absolute top="300" left="330" height="250"} [[Force Directed Graph](https://observablehq.com/@d3/force-directed-graph)]{.absolute left="330" bottom="70"}
+
+## OBSERVABLE IN QUARTO!
+```{ojs}
+//| echo: true
+//| code-fold: true
+//| code-tools: true
+d3 = require("d3@7")
+
+
+chart = ForceGraph(miserables, {
+  nodeId: d => d.id,
+  nodeGroup: d => d.group,
+  nodeTitle: d => `${d.id}\n${d.group}`,
+  linkStrokeWidth: l => Math.sqrt(l.value),
+  width,
+  height: 1000,
+  invalidation // a promise to stop the simulation when the cell is re-run
+})
+
+
+miserables = FileAttachment("miserables.json").json()
+
+
+// Copyright 2021 Observable, Inc.
+// Released under the ISC license.
+// https://observablehq.com/@d3/force-directed-graph
+function ForceGraph({
+  nodes, // an iterable of node objects (typically [{id}, …])
+  links // an iterable of link objects (typically [{source, target}, …])
+}, {
+  nodeId = d => d.id, // given d in nodes, returns a unique identifier (string)
+  nodeGroup, // given d in nodes, returns an (ordinal) value for color
+  nodeGroups, // an array of ordinal values representing the node groups
+  nodeTitle, // given d in nodes, a title string
+  nodeFill = "currentColor", // node stroke fill (if not using a group color encoding)
+  nodeStroke = "#fff", // node stroke color
+  nodeStrokeWidth = 1.5, // node stroke width, in pixels
+  nodeStrokeOpacity = 1, // node stroke opacity
+  nodeRadius = 5, // node radius, in pixels
+  nodeStrength,
+  linkSource = ({source}) => source, // given d in links, returns a node identifier string
+  linkTarget = ({target}) => target, // given d in links, returns a node identifier string
+  linkStroke = "#999", // link stroke color
+  linkStrokeOpacity = 0.6, // link stroke opacity
+  linkStrokeWidth = 1.5, // given d in links, returns a stroke width in pixels
+  linkStrokeLinecap = "round", // link stroke linecap
+  linkStrength,
+  colors = d3.schemeTableau10, // an array of color strings, for the node groups
+  width = 1000, // outer width, in pixels
+  height = 1000, // outer height, in pixels
+  invalidation // when this promise resolves, stop the simulation
+} = {}) {
+  // Compute values.
+  const N = d3.map(nodes, nodeId).map(intern);
+  const LS = d3.map(links, linkSource).map(intern);
+  const LT = d3.map(links, linkTarget).map(intern);
+  if (nodeTitle === undefined) nodeTitle = (_, i) => N[i];
+  const T = nodeTitle == null ? null : d3.map(nodes, nodeTitle);
+  const G = nodeGroup == null ? null : d3.map(nodes, nodeGroup).map(intern);
+  const W = typeof linkStrokeWidth !== "function" ? null : d3.map(links, linkStrokeWidth);
+  const L = typeof linkStroke !== "function" ? null : d3.map(links, linkStroke);
+
+  // Replace the input nodes and links with mutable objects for the simulation.
+  nodes = d3.map(nodes, (_, i) => ({id: N[i]}));
+  links = d3.map(links, (_, i) => ({source: LS[i], target: LT[i]}));
+
+  // Compute default domains.
+  if (G && nodeGroups === undefined) nodeGroups = d3.sort(G);
+
+  // Construct the scales.
+  const color = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);
+
+  // Construct the forces.
+  const forceNode = d3.forceManyBody();
+  const forceLink = d3.forceLink(links).id(({index: i}) => N[i]);
+  if (nodeStrength !== undefined) forceNode.strength(nodeStrength);
+  if (linkStrength !== undefined) forceLink.strength(linkStrength);
+
+  const simulation = d3.forceSimulation(nodes)
+      .force("link", forceLink)
+      .force("charge", forceNode)
+      .force("center",  d3.forceCenter())
+      .on("tick", ticked);
+
+  const svg = d3.create("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .attr("viewBox", [-width / 2, -height / 2, width, height])
+      .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+
+  const link = svg.append("g")
+      .attr("stroke", typeof linkStroke !== "function" ? linkStroke : null)
+      .attr("stroke-opacity", linkStrokeOpacity)
+      .attr("stroke-width", typeof linkStrokeWidth !== "function" ? linkStrokeWidth : null)
+      .attr("stroke-linecap", linkStrokeLinecap)
+    .selectAll("line")
+    .data(links)
+    .join("line");
+
+  const node = svg.append("g")
+      .attr("fill", nodeFill)
+      .attr("stroke", nodeStroke)
+      .attr("stroke-opacity", nodeStrokeOpacity)
+      .attr("stroke-width", nodeStrokeWidth)
+    .selectAll("circle")
+    .data(nodes)
+    .join("circle")
+      .attr("r", nodeRadius)
+      .call(drag(simulation));
+
+  if (W) link.attr("stroke-width", ({index: i}) => W[i]);
+  if (L) link.attr("stroke", ({index: i}) => L[i]);
+  if (G) node.attr("fill", ({index: i}) => color(G[i]));
+  if (T) node.append("title").text(({index: i}) => T[i]);
+  if (invalidation != null) invalidation.then(() => simulation.stop());
+
+  function intern(value) {
+    return value !== null && typeof value === "object" ? value.valueOf() : value;
+  }
+
+  function ticked() {
+    link
+      .attr("x1", d => d.source.x)
+      .attr("y1", d => d.source.y)
+      .attr("x2", d => d.target.x)
+      .attr("y2", d => d.target.y);
+
+    node
+      .attr("cx", d => d.x)
+      .attr("cy", d => d.y);
+  }
+
+  function drag(simulation) {    
+    function dragstarted(event) {
+      if (!event.active) simulation.alphaTarget(0.3).restart();
+      event.subject.fx = event.subject.x;
+      event.subject.fy = event.subject.y;
+    }
+    
+    function dragged(event) {
+      event.subject.fx = event.x;
+      event.subject.fy = event.y;
+    }
+    
+    function dragended(event) {
+      if (!event.active) simulation.alphaTarget(0);
+      event.subject.fx = null;
+      event.subject.fy = null;
+    }
+    
+    return d3.drag()
+      .on("start", dragstarted)
+      .on("drag", dragged)
+      .on("end", dragended);
+  }
+
+  return Object.assign(svg.node(), {scales: {color}});
+}
+
+
+import {howto} from "@d3/example-components"
+
+import {Swatches} from "@d3/color-legend"
+
+
+```
+
+## CHANNELS {.smaller}
+
+:::: {.columns}
+::: {.column width="40%"}
+-   **CHANNELS** control the appearance of **MARKS**.  
+-   They are proportional to or based on **ATTRIBUTES**.
+-   Their properties differ in the type and amount of information that can be conveyed to the human perceptual system.
+:::
+
+::: {.column width="60%"}
+![](channels.png)
+:::
+::::
+
+
+## VISUAL ENCODING EXAMPLE
+
+Let's analyze the idiom structures below in terms of marks and channels.
+
+![](simpleencode.png)
+
+## REDUNDANT ENCODING
+
+Uses multiple channels for the same attribute.
+
+-   Sends a stronger message
+-   Uses up channels
+
+![](lengthluminance.png){.absolute right="0" bottom="50" height="400"}
+
+## CHOOSING CHANNELS
+
+-   [EXPRESSIVENESS]{.red}
+    -   Match channel to data type.
+-   [EFFECTIVENESS]{.red}
+    -   Channels differ in accuracy of perception.
+  
+## CHANNEL RANKINGS {.smaller}
+
+![](ChannelRank.png)
+
+[Note that spatial position ranks high for both types of channels.]{.absolute bottom="20" right="0" width="300"}
+
+## GROUPING
+
+:::: {.columns}
+::: {.column width="50%"}
+-   Containment
+-   Connection
+-   Proximity
+    -   Same spatial region.
+-   Similarity
+    -   Same values as other channels.
+:::
+
+::: {.column width="50%"}
+![](marksforlinks.png)
+
+![](identityChannels.png)
+:::
+::::
+
