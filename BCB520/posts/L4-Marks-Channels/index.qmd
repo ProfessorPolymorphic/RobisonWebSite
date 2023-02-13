@@ -374,3 +374,145 @@ Uses multiple channels for the same attribute.
 ![](IdentityChannels.png)
 :::
 :::
+
+## SUMMARY SO FAR
+
+![](basicgeometric.png){.absolute left="0" height="100" top="100"}
+
+![](marksforlinks.png){.absolute right="0" height="100" top="100"}
+
+![](ChannelRank.png){.absolute bottom="0" right="100" width="650"}
+
+## CHANNEL EFFECTIVENESS
+
+-   [Accuracy:]{.red} how precisely can we tell the difference between encoded items?
+-   [Discriminability:]{.red} how many unique steps can we perceive?
+-   [Separability:]{.red} is our ability to use this channel affected by another one?
+-   [Popout:]{.red} can things jump out using this channel?
+
+## ACCURACY (THEORY)
+
+Steven's Psychophisical Power Law: $S=I^N$
+
+:::: {.columns .r-fit-text}
+::: {.column width="80%"}
+```{r}
+
+library(ggplot2)
+I<-1:5
+df<-data.frame(I)
+
+
+
+ggplot(df,aes(I))+
+  stat_function(fun=function(I) I^1) +
+  stat_function(fun = function(I) I^3.5, color = "red")+
+  stat_function(fun = function(I) I^1.7, color = "blue")+
+  stat_function(fun = function(I) I^0.7, color = "purple")+
+  stat_function(fun = function(I) I^0.5, color = "yellow")+
+  xlim(0,5)+
+  ylim(0,5)+
+  labs(y="Perceived Sensation (S)", x="Physical Intensity (I)")
+```
+:::
+
+::: {.column width="20%"}
+[**LENGTH (N=1)**]{.fragment}
+
+[[ELECTRIC SHOCK (N=3.5)]{.red}]{.fragment}
+
+[[SATURATION (N=1.7)]{.blue}]{.fragment}
+
+[[AREA (N=0.7)]{.purple}]{.fragment}
+
+[[BRIGHTNESS (N=0.5)]{.yellow}]{.fragment}
+:::
+::::
+
+
+## ACCURACY (EXPERIMENTAL)
+
+![](ClevelandandMcGill.png)
+
+## DISCRIMINABILITY
+
+How many usable steps are in the channel?
+
+![](linewidths.png)
+
+## SEPARABILITY VS INTEGRALITY
+
+![](sepandint.png)
+
+## POPOUT
+
+::::{.columns}
+:::{.column width="60%"}
+find the red dot
+how long does it take?
+parallel processing on many individual channels
+speed independent of distractor count
+speed depends on channel and amount of difference from distractors
+serial search for (almost all) combinations
+speed depends on number of distractors
+:::
+
+:::{.column width="40%"}
+![](popout.png)
+:::
+::::
+
+## POPOUT
+
+::::{.columns}
+:::{.column width="60%"}
+many channels
+tilt, size, shape, proximity, shadow direction, ...
+but not all!
+ parallel line pairs do not pop out from tilted pairs
+:::
+
+:::{.column width="40%"}
+![](popout2.png)
+:::
+::::
+
+
+## FACTORS AFFECTING ACCURACY
+alignment
+distractors
+distance
+common scale / alignment
+
+
+![](accfactors.png)
+
+
+## RELATIVE VS ABSOLUTE JUDGEMENTS
+perceptual system mostly operates with relative judgements, not absolute 
+that’s why accuracy increases with common frame/scale and alignment
+
+Weber’s Law: ratio of increment to background is constant
+filled rectangles differ in length by 1:9, difficult judgement
+white rectangles differ in length by 1:2, easy judgement
+
+
+![](reljudge.png)
+
+## RELATIVE LUMINANCE JUDGEMENTS
+
+perception of luminance is contextual based on contrast with surroundings
+
+
+[![](luminance1.jpg){.absolute width=450 bottom=100 left=0}]{.fragment}
+
+[![](luminance2.jpg){.absolute width=450 bottom=100 right=0}]{.fragment}
+
+
+## RELATIVE COLOR JUDGEMENTS
+
+color constancy across broad range of illumination conditions
+
+![](colorjudge.png)
+
+![](colorjudge2.png)

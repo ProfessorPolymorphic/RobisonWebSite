@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.203">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Professor Polymorphic - VIZ EXPERIMENT 1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Professor Polymorphic</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.qmd">
+ <span class="menu-text">HOME</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Research.qmd">
+ <span class="menu-text">RESEARCH</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Publications.qmd">
+ <span class="menu-text">PUBLICATIONS</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Teaching.qmd">
+ <span class="menu-text">TEACHING</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../PolymorphicGames.qmd">
+ <span class="menu-text">STUDIO</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../ProfessorPolymorphic/index.qmd">
+ <span class="menu-text">BLOG</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../about.html" aria-current="page">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">VIZ EXPERIMENT 1</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title d-none d-lg-block">VIZ EXPERIMENT 1</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+            <p class="subtitle lead">2 Generation Pedigree</p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../about.html" class="sidebar-item-text sidebar-link">About</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Posts</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/post-with-code/index.html" class="sidebar-item-text sidebar-link">Observable Experiment</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/DataScienceMythos/index.html" class="sidebar-item-text sidebar-link">The Data Science Mythos</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/UndergradResearch/index.html" class="sidebar-item-text sidebar-link">UNDERGRADUATE RESEARCH</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/welcome/index.html" class="sidebar-item-text sidebar-link">You’ve gotta be f***ing kidding…</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../posts/LabMeetings/index.html" class="sidebar-item-text sidebar-link">Polymorphic Games Lab Meeting</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/LabMeetings/OSTime.html" class="sidebar-item-text sidebar-link">OSDevTimeline</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/LabMeetings/SanteFeWorkshop.html" class="sidebar-item-text sidebar-link">SanteFe Workshop</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../posts/Viz_2Gen_Pedigree/index.html" class="sidebar-item-text sidebar-link active">VIZ EXPERIMENT 1</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/Viz_2Gen_Pedigree/PedigreeViz.html" class="sidebar-item-text sidebar-link">PedigreeViz</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="overview" class="level1">
+<h1>OVERVIEW</h1>
+<p>We’ve been working on a new framework for respresenting some evolutionary and genetics concepts in our twin stick shooter prototype. The idea is to create a 2 generation bipartite network that shows parents and offspring. Ultimately, we want it to be interactive (sorting, filtering, highlighting). I’m going to use some data from <a href="https://professorpolymorphic.github.io/PolymorphicWeb/Games/ProjectHastur/">Project Hastur</a> to try out some visualizations.</p>
+</section>
+<section id="data-dictionary" class="level1">
+<h1>DATA DICTIONARY</h1>
+<p>I’m importing a single replicate from a larger experiment. The experimental conditions don’t particularly matter for this exercise but just in case you can find a more comprehensive description <a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/posts/T4-BarriesData/">here</a>.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>fulldata<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">"KSC1.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ ggplot2 3.4.0      ✔ purrr   0.3.5 
+✔ tibble  3.1.8      ✔ dplyr   1.0.10
+✔ tidyr   1.2.1      ✔ stringr 1.5.0 
+✔ readr   2.1.3      ✔ forcats 0.5.2 
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(fulldata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 10,000
+Columns: 84
+$ Generation          &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ ID                  &lt;int&gt; 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, …
+$ P1ID                &lt;int&gt; -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1…
+$ P2ID                &lt;int&gt; -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1…
+$ Origin              &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ AsexualReproduction &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ FitnessTowerDmg     &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ FitnessWorkerDmg    &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ FitnessGoalDist     &lt;dbl&gt; 64.97251, 64.24093, 64.10112, 63.24455, 63.32419, …
+$ FitnessBaseDmg      &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ Fitness             &lt;dbl&gt; 64.97251, 64.24093, 64.10112, 63.24455, 63.32419, …
+$ Health              &lt;int&gt; 966, 974, 1000, 1047, 1000, 995, 998, 1000, 961, 9…
+$ SightRange          &lt;dbl&gt; 10.012950, 10.111750, 10.069760, 9.789129, 9.92003…
+$ Armor               &lt;dbl&gt; 0.04796299, 0.05116085, 0.05098158, 0.05354469, 0.…
+$ Damage              &lt;int&gt; 49, 50, 49, 51, 50, 51, 50, 49, 50, 51, 50, 50, 49…
+$ FireRes             &lt;dbl&gt; 0.3298906, 0.3312858, 0.3327762, 0.3337934, 0.3356…
+$ IceRes              &lt;dbl&gt; 0.3349293, 0.3389257, 0.3352331, 0.3358691, 0.3311…
+$ AcidRes             &lt;dbl&gt; 0.3351800, 0.3297885, 0.3319907, 0.3303375, 0.3332…
+$ WalkSpeed           &lt;dbl&gt; 7.102335, 6.930169, 7.005324, 7.027983, 7.105358, …
+$ RunSpeed            &lt;dbl&gt; 20.18540, 19.76552, 20.22712, 19.88408, 20.21563, …
+$ Acceleration        &lt;dbl&gt; 15.23865, 14.81686, 15.24777, 14.96215, 15.26739, …
+$ TurnRate            &lt;dbl&gt; 356.8117, 355.6952, 366.8825, 362.8522, 361.5792, …
+$ Swim                &lt;dbl&gt; 1.0014150, 0.9769487, 1.0154400, 0.9984285, 1.0117…
+$ SwimWithNoise       &lt;dbl&gt; 0.8787168, 0.4773079, 1.2776070, 0.9793667, 0.6244…
+$ Jump                &lt;dbl&gt; 1.0231540, 0.9971217, 1.0015380, 0.9713355, 1.0075…
+$ JumpWithNoise       &lt;dbl&gt; 1.2409590, 1.5275760, 1.1031600, 1.2995490, 1.1868…
+$ ColliderSurfaceArea &lt;dbl&gt; 6.209729, 6.172303, 6.320741, 6.396849, 6.313437, …
+$ ScaleType0          &lt;dbl&gt; -0.1033154000, -0.0792117300, 0.0004616231, 0.1364…
+$ ScaleType1          &lt;dbl&gt; -0.088942350, 0.043931820, 0.077572060, -0.1016886…
+$ ScaleType2          &lt;dbl&gt; 0.087660300, -0.003392145, 0.021313410, 0.05817166…
+$ ScaleType3          &lt;dbl&gt; -0.021188500, 0.093789020, -0.117877600, 0.1386469…
+$ ScaleType4          &lt;dbl&gt; -0.0587274300, -0.0210980700, -0.1326126000, -0.01…
+$ ScaleType5          &lt;dbl&gt; -0.112457800, 0.099119690, 0.015900180, -0.0181972…
+$ ScaleType6          &lt;dbl&gt; -0.059212510, 0.045393570, 0.168531300, -0.0379926…
+$ ScaleType7          &lt;dbl&gt; -0.157625500, 0.015108590, 0.090477480, 0.00957754…
+$ ScaleType8          &lt;dbl&gt; -0.082724100, 0.049620260, 0.067003950, 0.06833311…
+$ ScaleType9          &lt;dbl&gt; -0.105900700, -0.055578600, -0.077422720, 0.135370…
+$ ScaleType10         &lt;dbl&gt; 0.1488413000, 0.0175231700, 0.0304277600, 0.063352…
+$ ScaleType11         &lt;dbl&gt; 0.1319735000, 0.0145204000, 0.0007104427, -0.03566…
+$ ScaleType12         &lt;dbl&gt; -0.063162530, -0.058905010, 0.091004380, 0.0383701…
+$ ScaleType13         &lt;dbl&gt; -0.07943537, -0.10759840, 0.16682960, 0.06987768, …
+$ ScaleType14         &lt;dbl&gt; 0.139502300, -0.098290650, 0.007387385, 0.03866397…
+$ ScaleType15         &lt;dbl&gt; -0.008125231, 0.043254390, -0.087867650, 0.1485266…
+$ ScaleType16         &lt;dbl&gt; -0.16126440, 0.04474576, -0.01866332, 0.10477840, …
+$ ScaleType17         &lt;dbl&gt; -0.03154949, -0.08952463, -0.01268417, -0.04393173…
+$ ScaleType18         &lt;dbl&gt; 0.144024100, -0.002873778, -0.058983610, 0.1165874…
+$ ScaleType19         &lt;dbl&gt; -0.087363970, -0.162258400, 0.007550336, 0.1939728…
+$ Pieces0             &lt;dbl&gt; 0.043614130, -0.179495000, -0.131240500, 0.0035323…
+$ Pieces1             &lt;dbl&gt; -0.007544771, -0.065671840, -0.069634010, 0.114909…
+$ Pieces2             &lt;dbl&gt; -0.061084170, 0.063866090, 0.168182400, -0.0009242…
+$ Pieces3             &lt;dbl&gt; -0.16783140, -0.12132110, -0.11624540, -0.01842951…
+$ Pieces4             &lt;dbl&gt; -0.028178020, -0.057762430, -0.139523300, -0.00265…
+$ Pieces5             &lt;dbl&gt; -0.005139172, 0.032281670, -0.019294720, -0.068588…
+$ Pieces6             &lt;dbl&gt; -0.052889610, 0.092304890, 0.025025490, 0.04880108…
+$ Pieces7             &lt;dbl&gt; -0.051443790, 0.027161050, 0.110779300, 0.02784086…
+$ Pieces8             &lt;dbl&gt; 0.1025807000, -0.1101358000, -0.0186070900, 0.0890…
+$ Morphers0           &lt;dbl&gt; 0.002044257, -0.093424200, 0.112869200, -0.0775622…
+$ Morphers1           &lt;dbl&gt; 0.0236720900, 0.1482817000, -0.0445871800, 0.01445…
+$ Morphers2           &lt;dbl&gt; -0.13978070, -0.00845702, -0.11443710, 0.15044980,…
+$ Morphers3           &lt;dbl&gt; -0.042357770, -0.043249530, -0.016266490, 0.196559…
+$ Morphers4           &lt;dbl&gt; 0.032489810, -0.097230920, -0.107966200, 0.0138330…
+$ Morphers5           &lt;dbl&gt; -0.14925800, 0.14611560, -0.16296340, 0.11448190, …
+$ BaseColor0          &lt;dbl&gt; -0.150314900, -0.081107210, 0.005130939, 0.0348517…
+$ BaseColor1          &lt;dbl&gt; -0.030402920, 0.101520700, 0.064233470, 0.08481959…
+$ BaseColor2          &lt;dbl&gt; -0.024435950, -0.116904200, -0.013766440, -0.04833…
+$ SecondaryColor0     &lt;dbl&gt; 0.002581388, 0.141290900, 0.045503440, -0.10434030…
+$ SecondaryColor1     &lt;dbl&gt; 0.070603500, -0.128935200, 0.160967500, 0.10166830…
+$ SecondaryColor2     &lt;dbl&gt; -0.03976498, -0.10893440, 0.04164386, 0.02901540, …
+$ SecondaryColor3     &lt;dbl&gt; 0.1374292000, 0.0838060800, 0.0245494800, 0.084913…
+$ SecondaryColor4     &lt;dbl&gt; 0.0651063300, -0.0071503740, 0.0261532000, -0.1181…
+$ TertiaryColor0      &lt;dbl&gt; 0.041684630, -0.067637050, 0.022251450, 0.03540896…
+$ TertiaryColor1      &lt;dbl&gt; -0.0745966100, -0.1181974000, 0.1300558000, -0.016…
+$ TertiaryColor2      &lt;dbl&gt; -0.011451250, 0.054511730, 0.086285110, -0.1140686…
+$ TertiaryColor3      &lt;dbl&gt; -0.021404750, 0.083676160, -0.090630310, 0.1647064…
+$ TertiaryColor4      &lt;dbl&gt; 0.161913300, 0.118766400, -0.076304190, 0.08833075…
+$ AccentColor0        &lt;dbl&gt; -0.114782500, 0.091891810, 0.022084200, 0.05331858…
+$ AccentColor1        &lt;dbl&gt; -0.0243467300, -0.1002791000, 0.0239724100, 0.0096…
+$ AccentColor2        &lt;dbl&gt; -0.067610090, -0.055500510, 0.074920210, 0.1029916…
+$ AccentColor3        &lt;dbl&gt; -0.003070697, -0.129752700, -0.003128096, 0.014030…
+$ AccentColor4        &lt;dbl&gt; -0.0766753800, 0.0890721400, 0.0651022700, 0.06549…
+$ Texture             &lt;dbl&gt; -0.102466100, 0.056743370, 0.048055470, 0.16978190…
+$ Attraction0         &lt;dbl&gt; -0.051399200, 0.166940200, 0.009419505, -0.0433794…
+$ Attraction1         &lt;dbl&gt; -0.033649020, -0.044263610, 0.017306760, 0.1247741…
+$ Attraction2         &lt;dbl&gt; -0.048112920, -0.063186870, 0.158974400, 0.0255425…</code></pre>
+</div>
+</div>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "VIZ EXPERIMENT 1"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "2 Generation Pedigree"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="an">code-fold:</span><span class="co"> true</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu"># OVERVIEW</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>We've been working on a new framework for respresenting some evolutionary and genetics concepts in our twin stick shooter prototype.  The idea is to create a 2 generation bipartite network that shows parents and offspring.  Ultimately, we want it to be interactive (sorting, filtering, highlighting).  I'm going to use some data from <span class="co">[</span><span class="ot">Project Hastur</span><span class="co">](https://professorpolymorphic.github.io/PolymorphicWeb/Games/ProjectHastur/)</span> to try out some visualizations.</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="fu"># DATA DICTIONARY</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>I'm importing a single replicate from a larger experiment.  The experimental conditions don't particularly matter for this exercise but just in case you can find a more comprehensive description <span class="co">[</span><span class="ot">here</span><span class="co">](https://professorpolymorphic.github.io/RobisonWebSite/BCB520/posts/T4-BarriesData/)</span>.</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>fulldata<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">"KSC1.csv"</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(fulldata)</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+</body></html>
