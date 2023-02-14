@@ -480,63 +480,56 @@
     "href": "BCB520/posts/L4-Marks-Channels/index.html#accuracy-experimental",
     "title": "LECTURE 4",
     "section": "ACCURACY (EXPERIMENTAL)",
-    "text": "ACCURACY (EXPERIMENTAL)"
+    "text": "ACCURACY (EXPERIMENTAL)\n\n\n\n\n[Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods]"
   },
   {
     "objectID": "BCB520/posts/L4-Marks-Channels/index.html#discriminability",
     "href": "BCB520/posts/L4-Marks-Channels/index.html#discriminability",
     "title": "LECTURE 4",
     "section": "DISCRIMINABILITY",
-    "text": "DISCRIMINABILITY\nHow many usable steps are in the channel?"
+    "text": "DISCRIMINABILITY\nHow many usable steps are in the channel? Are the differences between items perceptible to the human as intended?"
   },
   {
     "objectID": "BCB520/posts/L4-Marks-Channels/index.html#separability-vs-integrality",
     "href": "BCB520/posts/L4-Marks-Channels/index.html#separability-vs-integrality",
     "title": "LECTURE 4",
     "section": "SEPARABILITY VS INTEGRALITY",
-    "text": "SEPARABILITY VS INTEGRALITY"
+    "text": "SEPARABILITY VS INTEGRALITY\nSeparable channels are orthogonal and independent. Integral channels are inextricably combined. Attempts to encode different information with integral channels creates Interference.\n\n\nFigure 5.10. Pairs of visual channels fall along a continuum from fully separable to intrinsically integral. Color and location are separable channels well suited to encode different data attributes for two different groupings that can be selectively attended to. However, size interacts with hue, which is harder to perceive for small objects. The horizontal size and and vertical size channels are automatically fused into an integrated perception of area, yielding three groups. Attempts to code separate information along the red and green axes of the RGB color space fail, because we simply perceive four different hues."
   },
   {
     "objectID": "BCB520/posts/L4-Marks-Channels/index.html#popout",
     "href": "BCB520/posts/L4-Marks-Channels/index.html#popout",
     "title": "LECTURE 4",
     "section": "POPOUT",
-    "text": "POPOUT\n\n\nfind the red dot how long does it take? parallel processing on many individual channels speed independent of distractor count speed depends on channel and amount of difference from distractors serial search for (almost all) combinations speed depends on number of distractors"
+    "text": "POPOUT\nVISUAL POPOUT is often called preattentive processing or tunable detection.\n\n\nfind the red dot! How long does it take?\nPopout results from our low-level visual system performing massively parallel processing on certain visual channels, eliminating the need for the viewer to consciously direct attention to items one by one (serial search).\n\nFigure 5.11. Visual popout. (a) The red circle pops out from a small set of blue circles. (b) The red circle pops out from a large set of blue circles just as quickly. (c) The red circle also pops out from a small set of square shapes, although a bit slower than with color. (d) The red circle also pops out of a large set of red squares. (e) The red circle does not take long to find from a small set of mixed shapes and colors. (f) The red circle does not pop out from a large set of red squares and blue circles, and it can only be found by searching one by one through all the objects."
   },
   {
     "objectID": "BCB520/posts/L4-Marks-Channels/index.html#popout-1",
     "href": "BCB520/posts/L4-Marks-Channels/index.html#popout-1",
     "title": "LECTURE 4",
     "section": "POPOUT",
-    "text": "POPOUT\n\n\nmany channels tilt, size, shape, proximity, shadow direction, … but not all! parallel line pairs do not pop out from tilted pairs"
-  },
-  {
-    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#factors-affecting-accuracy",
-    "href": "BCB520/posts/L4-Marks-Channels/index.html#factors-affecting-accuracy",
-    "title": "LECTURE 4",
-    "section": "FACTORS AFFECTING ACCURACY",
-    "text": "FACTORS AFFECTING ACCURACY\nalignment distractors distance common scale / alignment"
+    "text": "POPOUT\n\n\nMany channels are compatible with preattentive processing and facilitate popout:\n\ntilt\nsize\nshape\nproximity\nshadow direction\n\nBut not all!\n\nExample: parallel line pairs do not pop out from tilted pairs."
   },
   {
     "objectID": "BCB520/posts/L4-Marks-Channels/index.html#relative-vs-absolute-judgements",
     "href": "BCB520/posts/L4-Marks-Channels/index.html#relative-vs-absolute-judgements",
     "title": "LECTURE 4",
     "section": "RELATIVE VS ABSOLUTE JUDGEMENTS",
-    "text": "RELATIVE VS ABSOLUTE JUDGEMENTS\nperceptual system mostly operates with relative judgements, not absolute that’s why accuracy increases with common frame/scale and alignment\nWeber’s Law: ratio of increment to background is constant filled rectangles differ in length by 1:9, difficult judgement white rectangles differ in length by 1:2, easy judgement"
+    "text": "RELATIVE VS ABSOLUTE JUDGEMENTS\nThe human perceptual system is fundamentally based on relative judgements, not absolute ones. This is why accuracy increases with common frame/scale and alignment.\nWeber’s Law: The detectable difference in stimulus intensity \\(I\\) as a fixed percentage \\(K\\) of the object magnitude: \\(dI/I=K\\) .\n\nThe filled rectangles differ in length by 1:9, and it is therefore difficult to detect the difference without aligment. The white rectangles differ in length by 1:2, it is easier to see this difference even when the objects are unaligned."
   },
   {
     "objectID": "BCB520/posts/L4-Marks-Channels/index.html#relative-luminance-judgements",
     "href": "BCB520/posts/L4-Marks-Channels/index.html#relative-luminance-judgements",
     "title": "LECTURE 4",
     "section": "RELATIVE LUMINANCE JUDGEMENTS",
-    "text": "RELATIVE LUMINANCE JUDGEMENTS\nperception of luminance is contextual based on contrast with surroundings"
+    "text": "RELATIVE LUMINANCE JUDGEMENTS\nHuman perception of luminance is completely contextual, and is based on contrast with surrounding colors."
   },
   {
     "objectID": "BCB520/posts/L4-Marks-Channels/index.html#relative-color-judgements",
     "href": "BCB520/posts/L4-Marks-Channels/index.html#relative-color-judgements",
     "title": "LECTURE 4",
     "section": "RELATIVE COLOR JUDGEMENTS",
-    "text": "RELATIVE COLOR JUDGEMENTS\ncolor constancy across broad range of illumination conditions\n\n\n\n\nCANVAS…HOME"
+    "text": "RELATIVE COLOR JUDGEMENTS\nOur visual system evolved to provide color constancy so that the same surface is identifiable across a broad set of illumination conditions, even though a physical light meter would yield very different readings. While the visual system works very well in natural environments, many of its mechanisms work against simple approaches to visually encoding information with color.\n\n\n\n\n\n\n\n\n\n\n\nFigure 5.15 shows two colorful cubes. In Figure 5.15(a) corresponding squares both appear to be red. In Figure 5.15(b), masks show that the tile color in the image apparently illuminated by a yellowish light source is actually orange, and for the bluish light the tiles are actually purple.\n\n\n\nCANVAS…HOME"
   },
   {
     "objectID": "BCB520/posts/Certificate/index.html",

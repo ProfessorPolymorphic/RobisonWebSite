@@ -25,7 +25,7 @@ This assignment has two parts. The first part is technical. We'll set up a Quart
 Hopefully by now you have created / dusted off / logged in to your [GitHub](https://github.com) account. Go ahead and log in to your account on the web and leave it open in a tab in your browser. There is a really great [video](https://www.youtube.com/watch?v=xtSFXtDf4cM){target="_blank"} about the next few steps (also linked below in RESORUCES) from Posit, but I'm giving you the condensed version here.
 
 1.  Fire up RStudio.
-2.  Go to File->New Project and then select NEW DIRECTORY.
+2.  Go to File-\>New Project and then select NEW DIRECTORY.
 3.  Now select [QUARTO BLOG]().
 4.  You are going to create a the project in a new working directory. It is best practice to put this in a senstible directory structure on your local hard drive where your other GitHub repositories also live. Here is what mine looks like:
 
@@ -84,13 +84,13 @@ There are quite a few ways to do this part. I'm going to use GitHub Desktop, but
 
 ### 2A Define your ACTION - TARGET pair(s)
 
-In [LECTURE 3] we discussed the concept of [Task Abstraction]{.red} in which you define the viz task that you want to help the user accomplish. This was represented as sets of [ACTIONS]{.red} that the user would perform (e.g. Discover, Present, Browse, Identify) on [TARGETS]{.red} related to the data set (e.g. Trends, Attributes, etc.).
+In \[LECTURE 3\] we discussed the concept of [Task Abstraction]{.red} in which you define the viz task that you want to help the user accomplish. This was represented as sets of [ACTIONS]{.red} that the user would perform (e.g. Discover, Present, Browse, Identify) on [TARGETS]{.red} related to the data set (e.g. Trends, Attributes, etc.).
 
 Think about one or two visualizations you wish to construct with your data, and try to define them in terms of ACTION - TARGET pairs. While you are at it, why don't you update the `index.qmd` file of your BLOG POST with a new seciton at the bottom titled TASK ABSTRACTION, and put a sentence describing your visualizations and the ACTION - TARGET pairs they represent?
 
 ### 2B Construct your Visualization
 
-Let's get to work! Using whatever tools you can, code up your visualization in that new section of your BLOG post.  You can check out how I approached this part in [TUTORIAL 4](../T4-BarriesData/index.qmd).
+Let's get to work! Using whatever tools you can, code up your visualization in that new section of your BLOG post. You can check out how I approached this part in [TUTORIAL 4](../T4-BarriesData/index.qmd).
 
 ## RESOURCES
 

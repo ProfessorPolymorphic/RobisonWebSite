@@ -1,0 +1,14 @@
+---
+title: "ASSIGNMENT 4"
+subtitle: "Marks and Channels"
+author: "Barrie Robison"
+date: "2023-02-13"
+categories: [Assignment, DataViz]
+image: "MythosPortfolio.png"
+code-fold: true
+code-tools: true
+description: "Trying out terrible combinations of marks and channels... for learning!"
+---
+
+
+## DO THE THINGS!
