@@ -346,9 +346,10 @@ Uses multiple channels for the same attribute.
 ## CHOOSING CHANNELS
 
 -   [EXPRESSIVENESS]{.red}
-    -   Match channel to data type.
+    -   The visual encoding should express all of, and only, the information in the dataset attributes.
 -   [EFFECTIVENESS]{.red}
     -   Channels differ in accuracy of perception.
+    -   The importance of the attribute should match the salience of the channel (its noticability).
 
 ## CHANNEL RANKINGS {.smaller}
 
