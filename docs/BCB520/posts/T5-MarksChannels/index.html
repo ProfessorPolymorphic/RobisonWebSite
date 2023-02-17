@@ -440,12 +440,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#marks-and-channels" id="toc-marks-and-channels" class="nav-link active" data-scroll-target="#marks-and-channels">MARKS AND CHANNELS</a>
+  <li><a href="#the-historic-futility-of-the-22-23-vancouver-canucks" id="toc-the-historic-futility-of-the-22-23-vancouver-canucks" class="nav-link active" data-scroll-target="#the-historic-futility-of-the-22-23-vancouver-canucks"><strong>THE HISTORIC FUTILITY OF THE 22-23 VANCOUVER CANUCKS</strong></a>
+  <ul class="collapse">
+  <li><a href="#penalty-kill" id="toc-penalty-kill" class="nav-link" data-scroll-target="#penalty-kill">PENALTY KILL</a></li>
+  <li><a href="#high-danger-shots-allowed" id="toc-high-danger-shots-allowed" class="nav-link" data-scroll-target="#high-danger-shots-allowed">HIGH DANGER SHOTS ALLOWED</a></li>
+  <li><a href="#goaltending" id="toc-goaltending" class="nav-link" data-scroll-target="#goaltending">GOALTENDING</a></li>
+  <li><a href="#changing-channels" id="toc-changing-channels" class="nav-link" data-scroll-target="#changing-channels">CHANGING CHANNELS</a>
   <ul class="collapse">
   <li><a href="#expressiveness-and-effectiveness" id="toc-expressiveness-and-effectiveness" class="nav-link" data-scroll-target="#expressiveness-and-effectiveness">Expressiveness and Effectiveness</a></li>
   <li><a href="#discriminability" id="toc-discriminability" class="nav-link" data-scroll-target="#discriminability">Discriminability</a></li>
   <li><a href="#separability" id="toc-separability" class="nav-link" data-scroll-target="#separability">Separability</a></li>
   <li><a href="#popout" id="toc-popout" class="nav-link" data-scroll-target="#popout">Popout</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -456,105 +462,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
+<section id="the-historic-futility-of-the-22-23-vancouver-canucks" class="level1">
+<h1><strong>THE HISTORIC FUTILITY OF THE 22-23 VANCOUVER CANUCKS</strong></h1>
 <p>This tutorial is my attempt at <a href="../../../BCB520/posts/A4-MarksChannels/index.html">Assignment 4</a>!</p>
-<section id="marks-and-channels" class="level2">
-<h2 class="anchored" data-anchor-id="marks-and-channels">MARKS AND CHANNELS</h2>
-<section id="expressiveness-and-effectiveness" class="level3">
-<h3 class="anchored" data-anchor-id="expressiveness-and-effectiveness">Expressiveness and Effectiveness</h3>
-<section id="directions" class="level4">
-<h4 class="anchored" data-anchor-id="directions">Directions</h4>
-<p><em>From Munzner, 5.4.1:</em></p>
-<p><span class="red">The expressiveness principle:</span> Visual encoding should express all of, and only, the information in the dataset attributes. Ordered data should be shown in a way that our perceptual system intrinsically senses as ordered. Conversely, unordered data should not be shown in a way that perceptually implies an ordering that does not exist.</p>
-<p><span class="red">The effectiveness principle:</span> The importance of the attribute should match the salience of the channel (its noticeablity). The most important attributes should be encoded with the most effective channels.</p>
-<p>Using whatever data set you choose, create a visualization called Figure 1 that adheres to these two principles. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 2 that violates these principles in the most extreme ways you can imagine while still having the visualization be recognizibly the same as the first. Write a caption that explains your choices of marks and channels and why they are bad compared to Figure 1.</p>
-</section>
-<section id="response" class="level4">
-<h4 class="anchored" data-anchor-id="response">Response</h4>
+<section id="penalty-kill" class="level2">
+<h2 class="anchored" data-anchor-id="penalty-kill">PENALTY KILL</h2>
 <p>I’m interested in testing the hypothesis that this season’s <a href="https://www.nhl.com/canucks">Vancouver Canucks</a> are a historically terrible team. One of the key factors in this hypothesis is that this year’s Canucks really, really suck at killing penalties. For this first assignment component, I’ll show you what I mean with a visualization!</p>
 <p>The data I am using was downloaded from <a href="https://moneypuck.com/data.htm">Moneypuck.com</a>.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
-✔ ggplot2 3.4.0      ✔ purrr   0.3.5 
-✔ tibble  3.1.8      ✔ dplyr   1.0.10
-✔ tidyr   1.2.1      ✔ stringr 1.5.0 
-✔ readr   2.1.3      ✔ forcats 0.5.2 
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()</code></pre>
-</div>
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vroom)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> fs<span class="sc">::</span><span class="fu">dir_ls</span>(<span class="at">glob =</span> <span class="st">"*teams.csv"</span>)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>allseasons <span class="ot">&lt;-</span> vroom<span class="sc">::</span><span class="fu">vroom</span>(files)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 1990 Columns: 107
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr   (5): team...1, name, team...4, position, situation
-dbl (102): season, games_played, xGoalsPercentage, corsiPercentage, fenwickP...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>allseasons<span class="sc">$</span>color<span class="ot">&lt;-</span><span class="st">"darkblue"</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>allseasons<span class="sc">$</span>color[allseasons<span class="sc">$</span>name<span class="sc">==</span><span class="st">"VAN"</span> <span class="sc">&amp;</span> allseasons<span class="sc">$</span>season<span class="sc">==</span><span class="st">"2022"</span>]  <span class="ot">&lt;-</span> <span class="st">"red"</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  allseasons<span class="sc">$</span>teamseason<span class="ot">&lt;-</span> <span class="fu">paste</span>(allseasons<span class="sc">$</span>name, allseasons<span class="sc">$</span>season)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  allseasons<span class="sc">$</span>HDSAR<span class="ot">&lt;-</span>allseasons<span class="sc">$</span>highDangerShotsAgainst<span class="sc">/</span>allseasons<span class="sc">$</span>iceTime<span class="sc">*</span><span class="dv">120</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  PKDATA<span class="ot">&lt;-</span>allseasons[<span class="fu">c</span>(<span class="st">"situation"</span>, <span class="st">"teamseason"</span>, <span class="st">"goalsAgainst"</span>, <span class="st">"penaltiesFor"</span>)]</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  PKpenalties<span class="ot">&lt;-</span><span class="fu">subset</span>(PKDATA, situation <span class="sc">==</span> <span class="st">"all"</span>)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  PKgoals<span class="ot">&lt;-</span><span class="fu">subset</span>(PKDATA, situation <span class="sc">==</span> <span class="st">"4on5"</span>)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  PK<span class="ot">&lt;-</span>PKgoals[<span class="fu">c</span>(<span class="st">"teamseason"</span>, <span class="st">"goalsAgainst"</span>)]</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  PK<span class="sc">$</span>penaltiesFor<span class="ot">&lt;-</span>PKpenalties<span class="sc">$</span>penaltiesFor</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  PK<span class="sc">$</span>PKpercent<span class="ot">&lt;-</span><span class="dv">100</span><span class="sc">-</span>(PK<span class="sc">$</span>goalsAgainst<span class="sc">/</span>PK<span class="sc">$</span>penaltiesFor<span class="sc">*</span><span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vroom)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> fs<span class="sc">::</span><span class="fu">dir_ls</span>(<span class="at">glob =</span> <span class="st">"*teams.csv"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>allseasons <span class="ot">&lt;-</span> vroom<span class="sc">::</span><span class="fu">vroom</span>(files)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>allseasons<span class="sc">$</span>color<span class="ot">&lt;-</span><span class="st">"darkblue"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>allseasons<span class="sc">$</span>color[allseasons<span class="sc">$</span>name<span class="sc">==</span><span class="st">"VAN"</span> <span class="sc">&amp;</span> allseasons<span class="sc">$</span>season<span class="sc">==</span><span class="st">"2022"</span>]  <span class="ot">&lt;-</span> <span class="st">"red"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  allseasons<span class="sc">$</span>teamseason<span class="ot">&lt;-</span> <span class="fu">paste</span>(allseasons<span class="sc">$</span>name, allseasons<span class="sc">$</span>season)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  allseasons<span class="sc">$</span>HDSAR<span class="ot">&lt;-</span>allseasons<span class="sc">$</span>highDangerShotsAgainst<span class="sc">/</span>allseasons<span class="sc">$</span>iceTime<span class="sc">*</span><span class="dv">120</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  PKDATA<span class="ot">&lt;-</span>allseasons[<span class="fu">c</span>(<span class="st">"situation"</span>, <span class="st">"teamseason"</span>, <span class="st">"goalsAgainst"</span>, <span class="st">"penaltiesFor"</span>)]</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  PKpenalties<span class="ot">&lt;-</span><span class="fu">subset</span>(PKDATA, situation <span class="sc">==</span> <span class="st">"all"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  PKgoals<span class="ot">&lt;-</span><span class="fu">subset</span>(PKDATA, situation <span class="sc">==</span> <span class="st">"4on5"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  PK<span class="ot">&lt;-</span>PKgoals[<span class="fu">c</span>(<span class="st">"teamseason"</span>, <span class="st">"goalsAgainst"</span>)]</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  PK<span class="sc">$</span>penaltiesFor<span class="ot">&lt;-</span>PKpenalties<span class="sc">$</span>penaltiesFor</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  PK<span class="sc">$</span>PKpercent<span class="ot">&lt;-</span><span class="dv">100</span><span class="sc">-</span>(PK<span class="sc">$</span>goalsAgainst<span class="sc">/</span>PK<span class="sc">$</span>penaltiesFor<span class="sc">*</span><span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>Now that I’ve massaged the data, I can tell you that the 2022-2023 Vancouver Canucks penalty kill percentage is 76.9633508.</p>
+<p>Now that I’ve massaged the data, I can tell you that the 2022-2023 Vancouver Canucks penalty kill percentage is 76.9633508. That means that when they get a penalty, there is about a 76.9633508 percent chance that they will prevent the opponent from scoring while they are short handed. However, unless you are a hockey super fan, you don’t have enough context to know if this is good or bad.</p>
+<p>The figure below shows the distribution of penalty kill percentage for all teams and seasons since the 2010 season.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">density</span>(PK<span class="sc">$</span>PKpercent)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create an ECDF</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(PK<span class="sc">$</span>PKpercent)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the quantile value</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">quantile</span>(PK<span class="sc">$</span>PKpercent, <span class="fl">0.01</span>)</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Calculate the empirical cumulative probability for the quantile value</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">e</span>(q)</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Estimate the density value for the quantile value</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">approxfun</span>(d<span class="sc">$</span>x, d<span class="sc">$</span>y)</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>d_q <span class="ot">&lt;-</span> <span class="fu">f</span>(q)</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Combine the results into a list</span></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>percentile <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">q =</span> q, <span class="at">p =</span> p, <span class="at">d =</span> d_q)</span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>VAN22 <span class="ot">&lt;-</span> PK<span class="sc">$</span>PKpercent[PK<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PK, <span class="fu">aes</span>(<span class="at">x=</span>PKpercent))<span class="sc">+</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..), <span class="at">binwidth =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="dv">4</span>,</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>)<span class="sc">+</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> VAN22, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>)<span class="sc">+</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> q, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Penalty Kill (%)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">density</span>(PK<span class="sc">$</span>PKpercent)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create an ECDF</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(PK<span class="sc">$</span>PKpercent)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the quantile value</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">quantile</span>(PK<span class="sc">$</span>PKpercent, <span class="fl">0.01</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Calculate the empirical cumulative probability for the quantile value</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">e</span>(q)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Estimate the density value for the quantile value</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">approxfun</span>(d<span class="sc">$</span>x, d<span class="sc">$</span>y)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>d_q <span class="ot">&lt;-</span> <span class="fu">f</span>(q)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Combine the results into a list</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>percentile <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">q =</span> q, <span class="at">p =</span> p, <span class="at">d =</span> d_q)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>VAN22 <span class="ot">&lt;-</span> PK<span class="sc">$</span>PKpercent[PK<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PK, <span class="fu">aes</span>(<span class="at">x=</span>PKpercent))<span class="sc">+</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..), <span class="at">binwidth =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="dv">4</span>,</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>)<span class="sc">+</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> VAN22, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>)<span class="sc">+</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> q, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Penalty Kill (%)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
@@ -568,44 +541,50 @@ dbl (102): season, games_played, xGoalsPercentage, corsiPercentage, fenwickP...
 <p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>This is fine. We know this to be true. Their PK sucks. But WHY is it so bad? Bad goaltending? Bad defense? My theory is that their defense hangs their goaltenders out to dry. This might be measured with the number of High Danger Shots Allowed. Below I calculate that and then standardize it to a rate per 2 minutes (the normal duration of an NHL minor penalty).</p>
+<p>So… yeah. The blue line is the 22 Canucks. The red dotted line is the <strong>1st!</strong> percentile of the density function. This is fine. We know this to be true. Their PK sucks. It is one of the worst in the history of the NHL. But WHY is it so bad? Bad goaltending? Bad defense? Both?</p>
+</section>
+<section id="high-danger-shots-allowed" class="level2">
+<h2 class="anchored" data-anchor-id="high-danger-shots-allowed">HIGH DANGER SHOTS ALLOWED</h2>
+<p>My theory is that their defense hangs their goaltenders out to dry. This might be measured with the number of High Danger Shots Allowed.</p>
+<p><strong>High Danger Shots</strong> are defined as unblocked shot attempts with greater than a 20% probability of being a goal, as calculated by hockey data nerds. High danger shots account for ~5% of shots and ~33% of goals in the NHL.</p>
+<p>Below I calculate <strong>High Danger Shots Allowed Rate</strong>, which is the number of HDS during penalty kill situations standardized it to a rate per 2 minutes spent killing penalties (the normal duration of an NHL minor penalty).</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>PKsituation<span class="ot">&lt;-</span><span class="fu">subset</span>(allseasons, situation <span class="sc">==</span> <span class="st">"4on5"</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Estimate the density of the data</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">density</span>(PKsituation<span class="sc">$</span>HDSAR)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create an ECDF</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(PKsituation<span class="sc">$</span>HDSAR)</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the quantile value</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">quantile</span>(PKsituation<span class="sc">$</span>HDSAR, <span class="fl">0.95</span>)</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Calculate the empirical cumulative probability for the quantile value</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">e</span>(q)</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Estimate the density value for the quantile value</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">approxfun</span>(d<span class="sc">$</span>x, d<span class="sc">$</span>y)</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>d_q <span class="ot">&lt;-</span> <span class="fu">f</span>(q)</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Combine the results into a list</span></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>percentile <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">q =</span> q, <span class="at">p =</span> p, <span class="at">d =</span> d_q)</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>VAN22HD <span class="ot">&lt;-</span> PKsituation<span class="sc">$</span>HDSAR[PKsituation<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKsituation, <span class="fu">aes</span>(<span class="at">x=</span>HDSAR))<span class="sc">+</span></span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..), <span class="at">binwidth =</span> <span class="fl">0.005</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
-<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="dv">4</span>,</span>
-<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>)<span class="sc">+</span></span>
-<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> VAN22HD, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>)<span class="sc">+</span></span>
-<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> q, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
-<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"High Danger Shots Allowed (rate per 2 minutes)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>PKsituation<span class="ot">&lt;-</span><span class="fu">subset</span>(allseasons, situation <span class="sc">==</span> <span class="st">"4on5"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Estimate the density of the data</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">density</span>(PKsituation<span class="sc">$</span>HDSAR)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create an ECDF</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(PKsituation<span class="sc">$</span>HDSAR)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the quantile value</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">quantile</span>(PKsituation<span class="sc">$</span>HDSAR, <span class="fl">0.95</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Calculate the empirical cumulative probability for the quantile value</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">e</span>(q)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Estimate the density value for the quantile value</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">approxfun</span>(d<span class="sc">$</span>x, d<span class="sc">$</span>y)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>d_q <span class="ot">&lt;-</span> <span class="fu">f</span>(q)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Combine the results into a list</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>percentile <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">q =</span> q, <span class="at">p =</span> p, <span class="at">d =</span> d_q)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>VAN22HD <span class="ot">&lt;-</span> PKsituation<span class="sc">$</span>HDSAR[PKsituation<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKsituation, <span class="fu">aes</span>(<span class="at">x=</span>HDSAR))<span class="sc">+</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..), <span class="at">binwidth =</span> <span class="fl">0.005</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="dv">4</span>,</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>)<span class="sc">+</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> VAN22HD, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>)<span class="sc">+</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> q, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"High Danger Shots Allowed (rate per 2 minutes)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
@@ -615,125 +594,163 @@ dbl (102): season, games_played, xGoalsPercentage, corsiPercentage, fenwickP...
 <p>In terms of the semantics of Data Visualization, I am trying to DISCOVER the DISTRIBUTION of <code>High Danger Shots Allowed</code>, and then ANNOTATE the DISTRIBUTION with information about the current Vancouver Canucks team and their approximate percentile in the distribution.</p>
 <p>To visualize this I am encoding a DERIVED attribute - the relative density of HDSAR as VERTICAL LENGTH of a bar (technically the MARK is a LINE) on an aligned axis. This is a pretty powerful encoding, which is why it is very common when visualizing distributions. In addtion, I am encoding HDSAR values themselves with HORIZONTAL POSITION. A nice, ordered channel for a nice, ordered attribute. The DENSITY FUNCTION is less clear to me. I’m obviously using a line, whose vertical and horizontal position encodes the relationship between the two variables. But the blue shaded fill? I kind of think that is using an AREA channel and REDUNDANT ENCODING to send a stronger signal.</p>
 <p>The annotations of the 95th percentile and the 2022 Canucks’ HDSAR are encoded with COLOR and HORIZONTAL POSITION CHANNELS, and LINES as MARKS.</p>
-<p>Now, lets mess this up!</p>
+<p>The 2022 Canucks indeed seem to be giving up HDS at a historically high rate.</p>
+</section>
+<section id="goaltending" class="level2">
+<h2 class="anchored" data-anchor-id="goaltending">GOALTENDING</h2>
+<p>But wait! You exclaim, shouting your objection into the uncaring Abyss. What about the goaltending? Surely that has also contributed to this season’s futility? “Perhaps..”, the Abyss murmurs back…</p>
+<p>Let’s see whether the futility of the penalty kill is also a function of bad goaltending. Now, we can’t just look at raw goals allowed, because if the defense is allowing really High Danger Shots, then even a good goaltender is going to allow some goals. Fortunately, the NHL nerds have developed an <strong>Expected Goals</strong> metric. Moneypuck provides this handy description in their data dictionary:</p>
+<p><strong>Expected Goals:</strong>. The sum of the probabilities of unblocked shot attempts being goals. For example, a rebound shot in the slot may be worth 0.5 expected goals, while a shot from the blueline while short handed may be worth 0.01 expected goals. The expected value of each shot attempt is calculated by the <a href="http://moneypuck.com/about.htm#shotModel">MoneyPuck Expected Goals model</a>. Expected goals is commonly abbreviated as <code>xGoals</code>. Blocked shot attempts are valued at 0 <code>xGoals</code>.</p>
+<p>Cool!</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKsituation, <span class="fu">aes</span>(<span class="at">x=</span>teamseason, <span class="at">y=</span>HDSAR)) <span class="sc">+</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>, <span class="fu">aes</span>(<span class="at">fill=</span>name, <span class="at">alpha=</span>season)) <span class="sc">+</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"NHL Team and Season"</span>) <span class="sc">+</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"High Danger Shots Allowed (rate per 2 minutes)"</span>) <span class="sc">+</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Are the Vancouver Canucks Historically Bad?"</span>) <span class="sc">+</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="fl">0.1</span>),</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"right"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>  Tending<span class="ot">&lt;-</span>allseasons[<span class="fu">c</span>(<span class="st">"situation"</span>, <span class="st">"teamseason"</span>, <span class="st">"goalsAgainst"</span>, <span class="st">"xGoalsAgainst"</span>, <span class="st">"shotsOnGoalAgainst"</span>, <span class="st">"games_played"</span>, <span class="st">"iceTime"</span>, <span class="st">"highDangerShotsAgainst"</span>)]</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>Tending<span class="sc">$</span>GArate<span class="ot">&lt;-</span>Tending<span class="sc">$</span>xGoalsAgainst<span class="sc">/</span>Tending<span class="sc">$</span>iceTime<span class="sc">*</span><span class="dv">120</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  PKTending<span class="ot">&lt;-</span><span class="fu">subset</span>(Tending, situation <span class="sc">==</span> <span class="st">"4on5"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">density</span>(PKTending<span class="sc">$</span>GArate)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create an ECDF</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(PKTending<span class="sc">$</span>GArate)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the quantile value</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">quantile</span>(PKTending<span class="sc">$</span>GArate, <span class="fl">0.95</span>)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Calculate the empirical cumulative probability for the quantile value</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">e</span>(q)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Estimate the density value for the quantile value</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">approxfun</span>(d<span class="sc">$</span>x, d<span class="sc">$</span>y)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>d_q <span class="ot">&lt;-</span> <span class="fu">f</span>(q)</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Combine the results into a list</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>percentile <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">q =</span> q, <span class="at">p =</span> p, <span class="at">d =</span> d_q)</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>VAN22GA <span class="ot">&lt;-</span> PKTending<span class="sc">$</span>GArate[PKTending<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKTending, <span class="fu">aes</span>(<span class="at">x=</span>GArate))<span class="sc">+</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..), <span class="at">binwidth =</span> <span class="fl">0.005</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="dv">4</span>,</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>)<span class="sc">+</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> VAN22GA, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>)<span class="sc">+</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> q, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Expected Goals Allowed while killing penalties (rate per 2 minutes)"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p><strong>Figure 2.</strong> Distribution of High Danger Shot Rate for NHL teams over the past 10 seasons.</p>
-<p>Holy Crap. What an absolute nightmate. In terms of MARKS, I’ve stayed with LINES. But the CHANNELS… wow. The COLOR CHANNEL is used to indicate the team. The ALPHA CHANNEL (transparency) is used to indicate season (time). These choices create HUGE problems related to discriminability (alpha channel) and separability. In addition, my choice to order these lines according to team and season is not at all compatible with my choice of channels. Not to mention that the important thing - to see where the 2022 Canucks stand in terms of historical futility - is completely wrecked because the horizontal position (a strong channel) is not closely tied to the most salient Attribute (HDSAR). Go ahead and pick out the the 2022 Canucks from this figure…. I’ll wait.</p>
-<p>But wait! You exclaim, shouting your objection into the uncaring Abyss. What about the goaltending? Surely that has also contributed to this season’s futility? “Perhaps..”, the Abyss murmurs back…</p>
+<p>This figure uses Expected Goals. It shows that Vancouver is playing a defense that is generating a historically high amount of expected goals, a result in line with our analysis of High Danger Chances.</p>
+<p>To truly evaluate the goaltending, tt might be better for us to look at a ratio of Expected Goals to actual Goals. If this number is close to 1, it indicates an expected level of NHL goaltending during the penalty kill. The goalies are making the saves that they should. If the number is higher than 1, it means the goaltenders are making more saves than they should and are playing well. If the number is lower than 1, it means the goaltenders are letting in easy goals.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>  Tending<span class="ot">&lt;-</span>allseasons[<span class="fu">c</span>(<span class="st">"situation"</span>, <span class="st">"teamseason"</span>, <span class="st">"goalsAgainst"</span>, <span class="st">"xGoalsAgainst"</span>, <span class="st">"shotsOnGoalAgainst"</span>, <span class="st">"games_played"</span>, <span class="st">"iceTime"</span>)]</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>Tending<span class="sc">$</span>GArate<span class="ot">&lt;-</span>Tending<span class="sc">$</span>xGoalsAgainst<span class="sc">/</span>Tending<span class="sc">$</span>iceTime<span class="sc">*</span><span class="dv">120</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  PKTending<span class="ot">&lt;-</span><span class="fu">subset</span>(Tending, situation <span class="sc">==</span> <span class="st">"4on5"</span>)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">density</span>(PKTending<span class="sc">$</span>GArate)</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create an ECDF</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(PKTending<span class="sc">$</span>GArate)</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the quantile value</span></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">quantile</span>(PKTending<span class="sc">$</span>GArate, <span class="fl">0.95</span>)</span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Calculate the empirical cumulative probability for the quantile value</span></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">e</span>(q)</span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Estimate the density value for the quantile value</span></span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">approxfun</span>(d<span class="sc">$</span>x, d<span class="sc">$</span>y)</span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>d_q <span class="ot">&lt;-</span> <span class="fu">f</span>(q)</span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Combine the results into a list</span></span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>percentile <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">q =</span> q, <span class="at">p =</span> p, <span class="at">d =</span> d_q)</span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>VAN22GA <span class="ot">&lt;-</span> PKTending<span class="sc">$</span>GArate[PKTending<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKTending, <span class="fu">aes</span>(<span class="at">x=</span>GArate))<span class="sc">+</span></span>
-<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..), <span class="at">binwidth =</span> <span class="fl">0.005</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
-<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="dv">4</span>,</span>
-<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>)<span class="sc">+</span></span>
-<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> VAN22GA, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>)<span class="sc">+</span></span>
-<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> q, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
-<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Expected Goals Allowed while killing penalties (rate per 2 minutes)"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Tending<span class="sc">$</span>XGrate<span class="ot">&lt;-</span>Tending<span class="sc">$</span>xGoalsAgainst<span class="sc">/</span>Tending<span class="sc">$</span>goalsAgainst</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  PKTending<span class="ot">&lt;-</span><span class="fu">subset</span>(Tending, situation <span class="sc">==</span> <span class="st">"4on5"</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">density</span>(PKTending<span class="sc">$</span>XGrate)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create an ECDF</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(PKTending<span class="sc">$</span>XGrate)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the quantile value</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">quantile</span>(PKTending<span class="sc">$</span>XGrate, <span class="fl">0.05</span>)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Calculate the empirical cumulative probability for the quantile value</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">e</span>(q)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Estimate the density value for the quantile value</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">approxfun</span>(d<span class="sc">$</span>x, d<span class="sc">$</span>y)</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>d_q <span class="ot">&lt;-</span> <span class="fu">f</span>(q)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Combine the results into a list</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>percentile <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">q =</span> q, <span class="at">p =</span> p, <span class="at">d =</span> d_q)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>VAN22XG <span class="ot">&lt;-</span> PKTending<span class="sc">$</span>XGrate[PKTending<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKTending, <span class="fu">aes</span>(<span class="at">x=</span>XGrate))<span class="sc">+</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..), <span class="at">binwidth =</span> <span class="fl">0.01</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="dv">4</span>,</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>)<span class="sc">+</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> VAN22XG, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>)<span class="sc">+</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> q, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Expected Goals / Goals Allowed ratio while killing penalties"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>This figure uses Expected Goals. It shows that Vancouver is playing a defense that is generating a historically high amount of expected goals, a result in line wiht our analysis of High Danger Chances. It might be better for us to look at a raito of Expected Goals to actual Goals. If this number is close to 1, it indicates an expected level of NHL goaltending during the penalty kill. The goalies are making the saves that they should. If the number is higher than 1, it means the goaltenders are making more saves than they should and are playing well. If the number is lower than 1, it means the goaltenders are letting in easy goals.</p>
+<p><strong>Figure 3.</strong> Distribution of Expected Goals to Goals Allowed during 4 on 5 situations for NHL teams over the past 10 seasons. The 2022-2023 Vancouver Canucks are shown with the dark blue line (XGrate = 0.6963636) and the 5th percentile is shown in <span class="red">red</span>.</p>
+<p>Uh Oh. Not only is the defense giving up a historically high number of High Danger scoring chances, the goaltenders are performing well below expectation. They are making about 70% of the saves they are supposed to make. So…. yeah. Why is the penalty kill so bad? Bad defense and bad goaltending. I mean, HISTORICALLY BAD.</p>
+<p>Is it because of the system? I don’t think so. I think it is because of the players. They don’t have enough defensive talent on the team to effectively kill penalties. I am sad.</p>
+</section>
+<section id="changing-channels" class="level2">
+<h2 class="anchored" data-anchor-id="changing-channels">CHANGING CHANNELS</h2>
+<p>Now, lets mess this up! First I’m going back to the HDSAR figure, and changing some of my choices for marks and channels.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Tending<span class="sc">$</span>XGrate<span class="ot">&lt;-</span>Tending<span class="sc">$</span>xGoalsAgainst<span class="sc">/</span>Tending<span class="sc">$</span>goalsAgainst</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  PKTending<span class="ot">&lt;-</span><span class="fu">subset</span>(Tending, situation <span class="sc">==</span> <span class="st">"4on5"</span>)</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">density</span>(PKTending<span class="sc">$</span>XGrate)</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create an ECDF</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(PKTending<span class="sc">$</span>XGrate)</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the quantile value</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">quantile</span>(PKTending<span class="sc">$</span>XGrate, <span class="fl">0.05</span>)</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Calculate the empirical cumulative probability for the quantile value</span></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">e</span>(q)</span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Estimate the density value for the quantile value</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">approxfun</span>(d<span class="sc">$</span>x, d<span class="sc">$</span>y)</span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>d_q <span class="ot">&lt;-</span> <span class="fu">f</span>(q)</span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Combine the results into a list</span></span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>percentile <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">q =</span> q, <span class="at">p =</span> p, <span class="at">d =</span> d_q)</span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>VAN22XG <span class="ot">&lt;-</span> PKTending<span class="sc">$</span>XGrate[PKTending<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKTending, <span class="fu">aes</span>(<span class="at">x=</span>XGrate))<span class="sc">+</span></span>
-<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..), <span class="at">binwidth =</span> <span class="fl">0.01</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
-<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="dv">4</span>,</span>
-<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>)<span class="sc">+</span></span>
-<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> VAN22XG, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>)<span class="sc">+</span></span>
-<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> q, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
-<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Expected Goals / Goals Allowed ratio while killing penalties"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKsituation, <span class="fu">aes</span>(<span class="at">x=</span>teamseason, <span class="at">y=</span>HDSAR)) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>, <span class="fu">aes</span>(<span class="at">fill=</span>name, <span class="at">alpha=</span>season)) <span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"NHL Team and Season"</span>) <span class="sc">+</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"High Danger Shots Allowed (rate per 2 minutes)"</span>) <span class="sc">+</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Are the Vancouver Canucks Historically Bad?"</span>) <span class="sc">+</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="fl">0.1</span>),</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"right"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p><strong>Figure 3.</strong> Distribution of Expected Goals to Goals Allowed during 4 on 5 situations for NHL teams over the past 10 seasons. The 2022-2023 Vancouver Canucks are shown with the dark blue line (XFrate = 0.6963636) and the 5th percentile is shown in <span class="red">red</span>.</p>
-<p>Uh Oh. Not only is the defense giving up a historically high number of High Danger scoring chances, the goaltenders are performing well below expectation. They are making about 70% of the saves they are supposed to make. So…. yeah. Why is the penalty kill so bad? Bad defense and bad goaltending. I mean, HISTORICALLY BAD.</p>
-<p>Is it because of the system? I don’t think so. I think it is because of the players. They don’t have enough defensive talent on the team to effectively kill penalties. I am sad.</p>
-</section>
+<p><strong>Figure 2.</strong> Distribution of High Danger Shot Rate for NHL teams over the past 10 seasons.</p>
+<p>Holy Crap. What an absolute nightmate. In terms of MARKS, I’ve stayed with LINES. But the CHANNELS… wow. The COLOR CHANNEL is used to indicate the team. The ALPHA CHANNEL (transparency) is used to indicate season (time). These choices create HUGE problems related to discriminability (alpha channel) and separability. In addition, my choice to order these lines according to team and season is not at all compatible with my choice of channels. Not to mention that the important thing - to see where the 2022 Canucks stand in terms of historical futility - is completely wrecked because the horizontal position (a strong channel) is not closely tied to the most salient Attribute (HDSAR). Go ahead and pick out the the 2022 Canucks from this figure…. I’ll wait.</p>
+<section id="expressiveness-and-effectiveness" class="level3">
+<h3 class="anchored" data-anchor-id="expressiveness-and-effectiveness">Expressiveness and Effectiveness</h3>
+<p><em>From Munzner, 5.4.1:</em></p>
+<p><span class="red">The expressiveness principle:</span> Visual encoding should express all of, and only, the information in the dataset attributes. Ordered data should be shown in a way that our perceptual system intrinsically senses as ordered. <span class="red">Well, using color sure violates that idea!</span> Conversely, unordered data should not be shown in a way that perceptually implies an ordering that does not exist.</p>
+<p><span class="red">The effectiveness principle:</span> The importance of the attribute should match the salience of the channel (its noticeablity). The most important attributes should be encoded with the most effective channels. <span class="red">Definitely not! Even though the Line Marks are using Length on an aligned axis, their width and ordering on the x axis completely obscures the focal team.</span></p>
 </section>
 <section id="discriminability" class="level3">
-<h3 class="anchored" data-anchor-id="discriminability"><a href="../../../BCB520/posts/L4-Marks-Channels/index.html#DISCRIMINABILITY">Discriminability</a></h3>
-<p>Using whatever data set you choose (it need not be the same data used for Figures 1 and 2), create a visualization called Figure 3 that uses a magnitude channel a number of bins that facilitate discriminiability of an attribute. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 4 that uses this same channel for WAY TOO MANY BINS, violating the guidelines for discriminability. Write a caption that explains why this number of bins is bad compared to Figure 3.</p>
+<h3 class="anchored" data-anchor-id="discriminability">Discriminability</h3>
+<p>Using whatever data set you choose (it need not be the same data used for Figures 1 and 2), create a visualization called Figure 3 that uses a magnitude channel with a number of bins that facilitate discriminiability of an attribute. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 4 that uses this same channel for WAY TOO MANY BINS, violating the guidelines for discriminability. Write a caption that explains why this number of bins is bad compared to Figure 3. <span class="red">Look at the NHL Rainbow! So many colors… so little ability to differentiate between teams. For example, go ahead and try to pick out Edmonton vs Florida</span></p>
 </section>
 <section id="separability" class="level3">
-<h3 class="anchored" data-anchor-id="separability"><a href="../../../BCB520/posts/L4-Marks-Channels/index.html#SEPARABILITY VS INTEGRALITY">Separability</a></h3>
-<p>Using whatever data set you choose (it need not be the same data used for Figures 1-4), create a visualization called Figure 5 that uses a two or more channels to encode two or more attributes while maintainig separability. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 6 that uses channels that are integral, or at least much less separable. Write a caption that explains why choosing these channels is bad compared to Figure 5.</p>
+<h3 class="anchored" data-anchor-id="separability">Separability</h3>
+<p>Using whatever data set you choose (it need not be the same data used for Figures 1-4), create a visualization called Figure 5 that uses a two or more channels to encode two or more attributes while maintaining separability. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 6 that uses channels that are integral, or at least much less separable. Write a caption that explains why choosing these channels is bad compared to Figure 5.</p>
+<p>For this one I’d like to try something else. Let’s look at the Expected Goals and Allowed Goals as a scatterplot:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>V22<span class="ot">&lt;-</span><span class="fu">subset</span>(PKTending, teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>VAN22XG <span class="ot">&lt;-</span> PKTending<span class="sc">$</span>XGrate[PKTending<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKTending, <span class="fu">aes</span>(<span class="at">x=</span>xGoalsAgainst<span class="sc">/</span>games_played<span class="sc">*</span><span class="dv">82</span>, <span class="at">y =</span>goalsAgainst<span class="sc">/</span>games_played<span class="sc">*</span><span class="dv">82</span> ))<span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">alpha=</span>highDangerShotsAgainst))<span class="sc">+</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">90</span>, <span class="at">slope =</span> <span class="sc">-</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>,<span class="dv">100</span>)<span class="sc">+</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>,<span class="dv">100</span>)<span class="sc">+</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(PKTending<span class="sc">$</span>xGoalsAgainst<span class="sc">/</span>PKTending<span class="sc">$</span>games_played<span class="sc">*</span><span class="dv">82</span>), <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(PKTending<span class="sc">$</span>goalsAgainst<span class="sc">/</span>PKTending<span class="sc">$</span>games_played<span class="sc">*</span><span class="dv">82</span>), <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> V22, <span class="fu">aes</span>(<span class="at">x=</span>xGoalsAgainst<span class="sc">/</span>games_played<span class="sc">*</span><span class="dv">82</span>, <span class="at">y =</span>goalsAgainst<span class="sc">/</span>games_played<span class="sc">*</span><span class="dv">82</span> ), <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 </section>
 <section id="popout" class="level3">
 <h3 class="anchored" data-anchor-id="popout">Popout</h3>
-<p>Using whatever data set you choose (it need not be the same data used for Figures 1-6… you get the idea), create a visualization called Figure 7 that effectively uses the concept of popout. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 8 that makes the identification task in Figure 7 much more difficult. Write a caption that explains why Figure 8 sucks compared to Figure 7.</p>
+<p>Using whatever data set you choose (it need not be the same data used for Figures 1-6… you get the idea), create a visualization called Figure 7 that effectively uses the concept of popout. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 8 that makes the identification task in Figure 7 much more difficult. Write a caption that explains why Figure 8 sucks compared to Figure 7. <span class="red">The popout concept is best shown by my use of a dark blue (color) line mark to indicate the 22 Canucks. Without that, you cannot achieve the task because the 22 Canucks are too hard to find without doing a serial search.</span></p>
 
 
 <!-- -->
 
+</section>
 </section>
 </section>
 
@@ -922,264 +939,307 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "TUTORIAL 5 - Marks and Channels"</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Barrie Robison"</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2023-02-13"</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [Assignment, DataViz]</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "Cthulhuhockey.png"</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="an">code-fold:</span><span class="co"> true</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Trying out terrible combinations of marks and channels... for learning!"</span></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>This tutorial is my attempt at <span class="co">[</span><span class="ot">Assignment 4</span><span class="co">](../A4-MarksChannels/index.qmd)</span>!</span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## MARKS AND CHANNELS</span></span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="fu">### Expressiveness and Effectiveness</span></span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Directions</span></span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>*From Munzner, 5.4.1:*</span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">The expressiveness principle:</span><span class="co">]</span>{.red} Visual encoding should express all of, and only, the information in the dataset attributes. Ordered data should be shown in a way that our perceptual system intrinsically senses as ordered. Conversely, unordered data should not be shown in a way that perceptually implies an ordering that does not exist.</span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">The effectiveness principle:</span><span class="co">]</span>{.red} The importance of the attribute should match the salience of the channel (its noticeablity). The most important attributes should be encoded with the most effective channels.</span>
-<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>Using whatever data set you choose, create a visualization called Figure 1 that adheres to these two principles. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 2 that violates these principles in the most extreme ways you can imagine while still having the visualization be recognizibly the same as the first. Write a caption that explains your choices of marks and channels and why they are bad compared to Figure 1.</span>
-<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Response</span></span>
-<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>I'm interested in testing the hypothesis that this season's <span class="co">[</span><span class="ot">Vancouver Canucks</span><span class="co">](https://www.nhl.com/canucks)</span> are a historically terrible team.  One of the key factors in this hypothesis is that this year's Canucks really, really suck at killing penalties. For this first assignment component, I'll show you what I mean with a visualization!</span>
-<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>The data I am using was downloaded from <span class="co">[</span><span class="ot">Moneypuck.com</span><span class="co">](https://moneypuck.com/data.htm)</span>. </span>
-<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vroom)</span>
-<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> fs<span class="sc">::</span><span class="fu">dir_ls</span>(<span class="at">glob =</span> <span class="st">"*teams.csv"</span>)</span>
-<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>allseasons <span class="ot">&lt;-</span> vroom<span class="sc">::</span><span class="fu">vroom</span>(files)</span>
-<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>allseasons<span class="sc">$</span>color<span class="ot">&lt;-</span><span class="st">"darkblue"</span></span>
-<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>allseasons<span class="sc">$</span>color[allseasons<span class="sc">$</span>name<span class="sc">==</span><span class="st">"VAN"</span> <span class="sc">&amp;</span> allseasons<span class="sc">$</span>season<span class="sc">==</span><span class="st">"2022"</span>]  <span class="ot">&lt;-</span> <span class="st">"red"</span></span>
-<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>  allseasons<span class="sc">$</span>teamseason<span class="ot">&lt;-</span> <span class="fu">paste</span>(allseasons<span class="sc">$</span>name, allseasons<span class="sc">$</span>season)</span>
-<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a>  allseasons<span class="sc">$</span>HDSAR<span class="ot">&lt;-</span>allseasons<span class="sc">$</span>highDangerShotsAgainst<span class="sc">/</span>allseasons<span class="sc">$</span>iceTime<span class="sc">*</span><span class="dv">120</span></span>
-<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a>  PKDATA<span class="ot">&lt;-</span>allseasons[<span class="fu">c</span>(<span class="st">"situation"</span>, <span class="st">"teamseason"</span>, <span class="st">"goalsAgainst"</span>, <span class="st">"penaltiesFor"</span>)]</span>
-<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a>  PKpenalties<span class="ot">&lt;-</span><span class="fu">subset</span>(PKDATA, situation <span class="sc">==</span> <span class="st">"all"</span>)</span>
-<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a>  PKgoals<span class="ot">&lt;-</span><span class="fu">subset</span>(PKDATA, situation <span class="sc">==</span> <span class="st">"4on5"</span>)</span>
-<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a>  PK<span class="ot">&lt;-</span>PKgoals[<span class="fu">c</span>(<span class="st">"teamseason"</span>, <span class="st">"goalsAgainst"</span>)]</span>
-<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a>  PK<span class="sc">$</span>penaltiesFor<span class="ot">&lt;-</span>PKpenalties<span class="sc">$</span>penaltiesFor</span>
-<span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a>  PK<span class="sc">$</span>PKpercent<span class="ot">&lt;-</span><span class="dv">100</span><span class="sc">-</span>(PK<span class="sc">$</span>goalsAgainst<span class="sc">/</span>PK<span class="sc">$</span>penaltiesFor<span class="sc">*</span><span class="dv">100</span>)</span>
-<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a>Now that I've massaged the data, I can tell you that the 2022-2023 Vancouver Canucks penalty kill percentage is <span class="in">`r PK$PKpercent[PK$teamseason=="VAN 2022"]`</span>.</span>
-<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb13-63"><a href="#cb13-63" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb13-66"><a href="#cb13-66" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb13-67"><a href="#cb13-67" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">density</span>(PK<span class="sc">$</span>PKpercent)</span>
-<span id="cb13-68"><a href="#cb13-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-69"><a href="#cb13-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create an ECDF</span></span>
-<span id="cb13-70"><a href="#cb13-70" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(PK<span class="sc">$</span>PKpercent)</span>
-<span id="cb13-71"><a href="#cb13-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-72"><a href="#cb13-72" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the quantile value</span></span>
-<span id="cb13-73"><a href="#cb13-73" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">quantile</span>(PK<span class="sc">$</span>PKpercent, <span class="fl">0.01</span>)</span>
-<span id="cb13-74"><a href="#cb13-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-75"><a href="#cb13-75" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Calculate the empirical cumulative probability for the quantile value</span></span>
-<span id="cb13-76"><a href="#cb13-76" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">e</span>(q)</span>
-<span id="cb13-77"><a href="#cb13-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-78"><a href="#cb13-78" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Estimate the density value for the quantile value</span></span>
-<span id="cb13-79"><a href="#cb13-79" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">approxfun</span>(d<span class="sc">$</span>x, d<span class="sc">$</span>y)</span>
-<span id="cb13-80"><a href="#cb13-80" aria-hidden="true" tabindex="-1"></a>d_q <span class="ot">&lt;-</span> <span class="fu">f</span>(q)</span>
-<span id="cb13-81"><a href="#cb13-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-82"><a href="#cb13-82" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Combine the results into a list</span></span>
-<span id="cb13-83"><a href="#cb13-83" aria-hidden="true" tabindex="-1"></a>percentile <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">q =</span> q, <span class="at">p =</span> p, <span class="at">d =</span> d_q)</span>
-<span id="cb13-84"><a href="#cb13-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-85"><a href="#cb13-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-86"><a href="#cb13-86" aria-hidden="true" tabindex="-1"></a>VAN22 <span class="ot">&lt;-</span> PK<span class="sc">$</span>PKpercent[PK<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
-<span id="cb13-87"><a href="#cb13-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-88"><a href="#cb13-88" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PK, <span class="fu">aes</span>(<span class="at">x=</span>PKpercent))<span class="sc">+</span></span>
-<span id="cb13-89"><a href="#cb13-89" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..), <span class="at">binwidth =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
-<span id="cb13-90"><a href="#cb13-90" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="dv">4</span>,</span>
-<span id="cb13-91"><a href="#cb13-91" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>)<span class="sc">+</span></span>
-<span id="cb13-92"><a href="#cb13-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> VAN22, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>)<span class="sc">+</span></span>
-<span id="cb13-93"><a href="#cb13-93" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> q, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
-<span id="cb13-94"><a href="#cb13-94" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Penalty Kill (%)"</span>)</span>
-<span id="cb13-95"><a href="#cb13-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-96"><a href="#cb13-96" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb13-97"><a href="#cb13-97" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-98"><a href="#cb13-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-99"><a href="#cb13-99" aria-hidden="true" tabindex="-1"></a>This is fine.  We know this to be true.  Their PK sucks.  But WHY is it so bad?  Bad goaltending?  Bad defense?  My theory is that their defense hangs their goaltenders out to dry.  This might be measured with the number of High Danger Shots Allowed.  Below I calculate that and then standardize it to a rate per 2 minutes (the normal duration of an NHL minor penalty).</span>
-<span id="cb13-100"><a href="#cb13-100" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb13-103"><a href="#cb13-103" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb13-104"><a href="#cb13-104" aria-hidden="true" tabindex="-1"></a>PKsituation<span class="ot">&lt;-</span><span class="fu">subset</span>(allseasons, situation <span class="sc">==</span> <span class="st">"4on5"</span>)</span>
-<span id="cb13-105"><a href="#cb13-105" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Estimate the density of the data</span></span>
-<span id="cb13-106"><a href="#cb13-106" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">density</span>(PKsituation<span class="sc">$</span>HDSAR)</span>
-<span id="cb13-107"><a href="#cb13-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-108"><a href="#cb13-108" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create an ECDF</span></span>
-<span id="cb13-109"><a href="#cb13-109" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(PKsituation<span class="sc">$</span>HDSAR)</span>
-<span id="cb13-110"><a href="#cb13-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-111"><a href="#cb13-111" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the quantile value</span></span>
-<span id="cb13-112"><a href="#cb13-112" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">quantile</span>(PKsituation<span class="sc">$</span>HDSAR, <span class="fl">0.95</span>)</span>
-<span id="cb13-113"><a href="#cb13-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-114"><a href="#cb13-114" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Calculate the empirical cumulative probability for the quantile value</span></span>
-<span id="cb13-115"><a href="#cb13-115" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">e</span>(q)</span>
-<span id="cb13-116"><a href="#cb13-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-117"><a href="#cb13-117" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Estimate the density value for the quantile value</span></span>
-<span id="cb13-118"><a href="#cb13-118" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">approxfun</span>(d<span class="sc">$</span>x, d<span class="sc">$</span>y)</span>
-<span id="cb13-119"><a href="#cb13-119" aria-hidden="true" tabindex="-1"></a>d_q <span class="ot">&lt;-</span> <span class="fu">f</span>(q)</span>
-<span id="cb13-120"><a href="#cb13-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-121"><a href="#cb13-121" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Combine the results into a list</span></span>
-<span id="cb13-122"><a href="#cb13-122" aria-hidden="true" tabindex="-1"></a>percentile <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">q =</span> q, <span class="at">p =</span> p, <span class="at">d =</span> d_q)</span>
-<span id="cb13-123"><a href="#cb13-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-124"><a href="#cb13-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-125"><a href="#cb13-125" aria-hidden="true" tabindex="-1"></a>VAN22HD <span class="ot">&lt;-</span> PKsituation<span class="sc">$</span>HDSAR[PKsituation<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
-<span id="cb13-126"><a href="#cb13-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-127"><a href="#cb13-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-128"><a href="#cb13-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-129"><a href="#cb13-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-130"><a href="#cb13-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-131"><a href="#cb13-131" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKsituation, <span class="fu">aes</span>(<span class="at">x=</span>HDSAR))<span class="sc">+</span></span>
-<span id="cb13-132"><a href="#cb13-132" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..), <span class="at">binwidth =</span> <span class="fl">0.005</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
-<span id="cb13-133"><a href="#cb13-133" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="dv">4</span>,</span>
-<span id="cb13-134"><a href="#cb13-134" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>)<span class="sc">+</span></span>
-<span id="cb13-135"><a href="#cb13-135" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> VAN22HD, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>)<span class="sc">+</span></span>
-<span id="cb13-136"><a href="#cb13-136" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> q, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
-<span id="cb13-137"><a href="#cb13-137" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"High Danger Shots Allowed (rate per 2 minutes)"</span>)</span>
-<span id="cb13-138"><a href="#cb13-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-139"><a href="#cb13-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-140"><a href="#cb13-140" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-141"><a href="#cb13-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-142"><a href="#cb13-142" aria-hidden="true" tabindex="-1"></a>**Figure 1.**  Distribution of High Danger Shot Rate for NHL teams over the past 10 seasons.  The 2022-2023 Vancouver Canucks are shown with the dark blue line (HDSAR = <span class="in">`r VAN22HD`</span>) and the 95th percentile is shown in <span class="co">[</span><span class="ot">red</span><span class="co">]</span>{.red}.  </span>
-<span id="cb13-143"><a href="#cb13-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-144"><a href="#cb13-144" aria-hidden="true" tabindex="-1"></a>In terms of the semantics of Data Visualization, I am trying to DISCOVER the DISTRIBUTION of <span class="in">`High Danger Shots Allowed`</span>, and then ANNOTATE the DISTRIBUTION with information about the current Vancouver Canucks team and their approximate percentile in the distribution.</span>
-<span id="cb13-145"><a href="#cb13-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-146"><a href="#cb13-146" aria-hidden="true" tabindex="-1"></a>To visualize this I am encoding a DERIVED attribute - the relative density of HDSAR as VERTICAL LENGTH of a bar (technically the MARK is a LINE) on an aligned axis.  This is a pretty powerful encoding, which is why it is very common when visualizing distributions.  In addtion, I am encoding HDSAR values themselves with HORIZONTAL POSITION.  A nice, ordered channel for a nice, ordered attribute.  The DENSITY FUNCTION is less clear to me.  I'm obviously using a line, whose vertical and horizontal position encodes the relationship between the two variables.  But the blue shaded fill?  I kind of think that is using an AREA channel and REDUNDANT ENCODING to send a stronger signal.  </span>
-<span id="cb13-147"><a href="#cb13-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-148"><a href="#cb13-148" aria-hidden="true" tabindex="-1"></a>The annotations of the 95th percentile and the 2022 Canucks' HDSAR are encoded with COLOR and HORIZONTAL POSITION CHANNELS, and LINES as MARKS.</span>
-<span id="cb13-149"><a href="#cb13-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-150"><a href="#cb13-150" aria-hidden="true" tabindex="-1"></a>Now, lets mess this up!</span>
-<span id="cb13-151"><a href="#cb13-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-154"><a href="#cb13-154" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb13-155"><a href="#cb13-155" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKsituation, <span class="fu">aes</span>(<span class="at">x=</span>teamseason, <span class="at">y=</span>HDSAR)) <span class="sc">+</span></span>
-<span id="cb13-156"><a href="#cb13-156" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>, <span class="fu">aes</span>(<span class="at">fill=</span>name, <span class="at">alpha=</span>season)) <span class="sc">+</span></span>
-<span id="cb13-157"><a href="#cb13-157" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"NHL Team and Season"</span>) <span class="sc">+</span></span>
-<span id="cb13-158"><a href="#cb13-158" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"High Danger Shots Allowed (rate per 2 minutes)"</span>) <span class="sc">+</span></span>
-<span id="cb13-159"><a href="#cb13-159" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Are the Vancouver Canucks Historically Bad?"</span>) <span class="sc">+</span></span>
-<span id="cb13-160"><a href="#cb13-160" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="fl">0.1</span>),</span>
-<span id="cb13-161"><a href="#cb13-161" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"right"</span>)</span>
-<span id="cb13-162"><a href="#cb13-162" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb13-163"><a href="#cb13-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-164"><a href="#cb13-164" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-165"><a href="#cb13-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-166"><a href="#cb13-166" aria-hidden="true" tabindex="-1"></a>**Figure 2.**  Distribution of High Danger Shot Rate for NHL teams over the past 10 seasons.    </span>
-<span id="cb13-167"><a href="#cb13-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-168"><a href="#cb13-168" aria-hidden="true" tabindex="-1"></a>Holy Crap.  What an absolute nightmate.  In terms of MARKS, I've stayed with LINES.  But the CHANNELS... wow.  The COLOR CHANNEL is used to indicate the team.  The ALPHA CHANNEL (transparency) is used to indicate season (time).  These choices create HUGE problems related to discriminability (alpha channel) and separability.  In addition, my choice to order these lines according to team and season is not at all compatible with my choice of channels.  Not to mention that the important thing - to see where the 2022 Canucks stand in terms of historical futility - is completely wrecked because the horizontal position (a strong channel) is not closely tied to the most salient Attribute (HDSAR).  Go ahead and pick out the the 2022 Canucks from this figure.... I'll wait.</span>
-<span id="cb13-169"><a href="#cb13-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-170"><a href="#cb13-170" aria-hidden="true" tabindex="-1"></a>But wait!  You exclaim, shouting your objection into the uncaring Abyss.  What about the goaltending?  Surely that has also contributed to this season's futility?  "Perhaps..", the Abyss murmurs back...</span>
-<span id="cb13-171"><a href="#cb13-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-174"><a href="#cb13-174" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb13-175"><a href="#cb13-175" aria-hidden="true" tabindex="-1"></a>  Tending<span class="ot">&lt;-</span>allseasons[<span class="fu">c</span>(<span class="st">"situation"</span>, <span class="st">"teamseason"</span>, <span class="st">"goalsAgainst"</span>, <span class="st">"xGoalsAgainst"</span>, <span class="st">"shotsOnGoalAgainst"</span>, <span class="st">"games_played"</span>, <span class="st">"iceTime"</span>)]</span>
-<span id="cb13-176"><a href="#cb13-176" aria-hidden="true" tabindex="-1"></a>Tending<span class="sc">$</span>GArate<span class="ot">&lt;-</span>Tending<span class="sc">$</span>xGoalsAgainst<span class="sc">/</span>Tending<span class="sc">$</span>iceTime<span class="sc">*</span><span class="dv">120</span></span>
-<span id="cb13-177"><a href="#cb13-177" aria-hidden="true" tabindex="-1"></a>  PKTending<span class="ot">&lt;-</span><span class="fu">subset</span>(Tending, situation <span class="sc">==</span> <span class="st">"4on5"</span>)</span>
-<span id="cb13-178"><a href="#cb13-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-179"><a href="#cb13-179" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">density</span>(PKTending<span class="sc">$</span>GArate)</span>
-<span id="cb13-180"><a href="#cb13-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-181"><a href="#cb13-181" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create an ECDF</span></span>
-<span id="cb13-182"><a href="#cb13-182" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(PKTending<span class="sc">$</span>GArate)</span>
-<span id="cb13-183"><a href="#cb13-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-184"><a href="#cb13-184" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the quantile value</span></span>
-<span id="cb13-185"><a href="#cb13-185" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">quantile</span>(PKTending<span class="sc">$</span>GArate, <span class="fl">0.95</span>)</span>
-<span id="cb13-186"><a href="#cb13-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-187"><a href="#cb13-187" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Calculate the empirical cumulative probability for the quantile value</span></span>
-<span id="cb13-188"><a href="#cb13-188" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">e</span>(q)</span>
-<span id="cb13-189"><a href="#cb13-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-190"><a href="#cb13-190" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Estimate the density value for the quantile value</span></span>
-<span id="cb13-191"><a href="#cb13-191" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">approxfun</span>(d<span class="sc">$</span>x, d<span class="sc">$</span>y)</span>
-<span id="cb13-192"><a href="#cb13-192" aria-hidden="true" tabindex="-1"></a>d_q <span class="ot">&lt;-</span> <span class="fu">f</span>(q)</span>
-<span id="cb13-193"><a href="#cb13-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-194"><a href="#cb13-194" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Combine the results into a list</span></span>
-<span id="cb13-195"><a href="#cb13-195" aria-hidden="true" tabindex="-1"></a>percentile <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">q =</span> q, <span class="at">p =</span> p, <span class="at">d =</span> d_q)</span>
-<span id="cb13-196"><a href="#cb13-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-197"><a href="#cb13-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-198"><a href="#cb13-198" aria-hidden="true" tabindex="-1"></a>VAN22GA <span class="ot">&lt;-</span> PKTending<span class="sc">$</span>GArate[PKTending<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
-<span id="cb13-199"><a href="#cb13-199" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb13-200"><a href="#cb13-200" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKTending, <span class="fu">aes</span>(<span class="at">x=</span>GArate))<span class="sc">+</span></span>
-<span id="cb13-201"><a href="#cb13-201" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..), <span class="at">binwidth =</span> <span class="fl">0.005</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
-<span id="cb13-202"><a href="#cb13-202" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="dv">4</span>,</span>
-<span id="cb13-203"><a href="#cb13-203" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>)<span class="sc">+</span></span>
-<span id="cb13-204"><a href="#cb13-204" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> VAN22GA, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>)<span class="sc">+</span></span>
-<span id="cb13-205"><a href="#cb13-205" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> q, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
-<span id="cb13-206"><a href="#cb13-206" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Expected Goals Allowed while killing penalties (rate per 2 minutes)"</span>)  </span>
-<span id="cb13-207"><a href="#cb13-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-208"><a href="#cb13-208" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-209"><a href="#cb13-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-210"><a href="#cb13-210" aria-hidden="true" tabindex="-1"></a>This figure uses Expected Goals.  It shows that Vancouver is playing a defense that is generating a historically high amount of expected goals, a result in line wiht our analysis of High Danger Chances.  It might be better for us to look at a raito of Expected Goals to actual Goals.  If this number is close to 1, it indicates an expected level of NHL goaltending during the penalty kill.  The goalies are making the saves that they should.  If the number is higher than 1, it means the goaltenders are making more saves than they should and are playing well.  If the number is lower than 1, it means the goaltenders are letting in easy goals.  </span>
-<span id="cb13-211"><a href="#cb13-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-214"><a href="#cb13-214" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb13-215"><a href="#cb13-215" aria-hidden="true" tabindex="-1"></a>Tending<span class="sc">$</span>XGrate<span class="ot">&lt;-</span>Tending<span class="sc">$</span>xGoalsAgainst<span class="sc">/</span>Tending<span class="sc">$</span>goalsAgainst</span>
-<span id="cb13-216"><a href="#cb13-216" aria-hidden="true" tabindex="-1"></a>  PKTending<span class="ot">&lt;-</span><span class="fu">subset</span>(Tending, situation <span class="sc">==</span> <span class="st">"4on5"</span>)</span>
-<span id="cb13-217"><a href="#cb13-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-218"><a href="#cb13-218" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">density</span>(PKTending<span class="sc">$</span>XGrate)</span>
-<span id="cb13-219"><a href="#cb13-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-220"><a href="#cb13-220" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create an ECDF</span></span>
-<span id="cb13-221"><a href="#cb13-221" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(PKTending<span class="sc">$</span>XGrate)</span>
-<span id="cb13-222"><a href="#cb13-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-223"><a href="#cb13-223" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the quantile value</span></span>
-<span id="cb13-224"><a href="#cb13-224" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">quantile</span>(PKTending<span class="sc">$</span>XGrate, <span class="fl">0.05</span>)</span>
-<span id="cb13-225"><a href="#cb13-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-226"><a href="#cb13-226" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Calculate the empirical cumulative probability for the quantile value</span></span>
-<span id="cb13-227"><a href="#cb13-227" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">e</span>(q)</span>
-<span id="cb13-228"><a href="#cb13-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-229"><a href="#cb13-229" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Estimate the density value for the quantile value</span></span>
-<span id="cb13-230"><a href="#cb13-230" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">approxfun</span>(d<span class="sc">$</span>x, d<span class="sc">$</span>y)</span>
-<span id="cb13-231"><a href="#cb13-231" aria-hidden="true" tabindex="-1"></a>d_q <span class="ot">&lt;-</span> <span class="fu">f</span>(q)</span>
-<span id="cb13-232"><a href="#cb13-232" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-233"><a href="#cb13-233" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Combine the results into a list</span></span>
-<span id="cb13-234"><a href="#cb13-234" aria-hidden="true" tabindex="-1"></a>percentile <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">q =</span> q, <span class="at">p =</span> p, <span class="at">d =</span> d_q)</span>
-<span id="cb13-235"><a href="#cb13-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-236"><a href="#cb13-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-237"><a href="#cb13-237" aria-hidden="true" tabindex="-1"></a>VAN22XG <span class="ot">&lt;-</span> PKTending<span class="sc">$</span>XGrate[PKTending<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
-<span id="cb13-238"><a href="#cb13-238" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb13-239"><a href="#cb13-239" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKTending, <span class="fu">aes</span>(<span class="at">x=</span>XGrate))<span class="sc">+</span></span>
-<span id="cb13-240"><a href="#cb13-240" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..), <span class="at">binwidth =</span> <span class="fl">0.01</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
-<span id="cb13-241"><a href="#cb13-241" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="dv">4</span>,</span>
-<span id="cb13-242"><a href="#cb13-242" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>)<span class="sc">+</span></span>
-<span id="cb13-243"><a href="#cb13-243" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> VAN22XG, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>)<span class="sc">+</span></span>
-<span id="cb13-244"><a href="#cb13-244" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> q, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
-<span id="cb13-245"><a href="#cb13-245" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Expected Goals / Goals Allowed ratio while killing penalties"</span>)  </span>
-<span id="cb13-246"><a href="#cb13-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-247"><a href="#cb13-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-248"><a href="#cb13-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-249"><a href="#cb13-249" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-250"><a href="#cb13-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-251"><a href="#cb13-251" aria-hidden="true" tabindex="-1"></a>**Figure 3.**  Distribution of Expected Goals to Goals Allowed during 4 on 5 situations for NHL teams over the past 10 seasons.  The 2022-2023 Vancouver Canucks are shown with the dark blue line (XFrate = <span class="in">`r VAN22XG`</span>) and the 5th percentile is shown in <span class="co">[</span><span class="ot">red</span><span class="co">]</span>{.red}. </span>
-<span id="cb13-252"><a href="#cb13-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-253"><a href="#cb13-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-254"><a href="#cb13-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-255"><a href="#cb13-255" aria-hidden="true" tabindex="-1"></a>Uh Oh.  Not only is the defense giving up a historically high number of High Danger scoring chances, the goaltenders are performing well below expectation.  They are making about 70% of the saves they are supposed to make.  So.... yeah.  Why is the penalty kill so bad?  Bad defense and bad goaltending.  I mean, HISTORICALLY BAD.</span>
-<span id="cb13-256"><a href="#cb13-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-257"><a href="#cb13-257" aria-hidden="true" tabindex="-1"></a>Is it because of the system?  I don't think so.  I think it is because of the players.  They don't have enough defensive talent on the team to effectively kill penalties.  I am sad.</span>
-<span id="cb13-258"><a href="#cb13-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-259"><a href="#cb13-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-260"><a href="#cb13-260" aria-hidden="true" tabindex="-1"></a><span class="fu">### [Discriminability](../L4-Marks-Channels/index.qmd#DISCRIMINABILITY)</span></span>
-<span id="cb13-261"><a href="#cb13-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-262"><a href="#cb13-262" aria-hidden="true" tabindex="-1"></a>Using whatever data set you choose (it need not be the same data used for Figures 1 and 2), create a visualization called Figure 3 that uses a magnitude channel a number of bins that facilitate discriminiability of an attribute. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 4 that uses this same channel for WAY TOO MANY BINS, violating the guidelines for discriminability. Write a caption that explains why this number of bins is bad compared to Figure 3.</span>
-<span id="cb13-263"><a href="#cb13-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-264"><a href="#cb13-264" aria-hidden="true" tabindex="-1"></a><span class="fu">### [Separability](../L4-Marks-Channels/index.qmd#SEPARABILITY%20VS%20INTEGRALITY)</span></span>
-<span id="cb13-265"><a href="#cb13-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-266"><a href="#cb13-266" aria-hidden="true" tabindex="-1"></a>Using whatever data set you choose (it need not be the same data used for Figures 1-4), create a visualization called Figure 5 that uses a two or more channels to encode two or more attributes while maintainig separability. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 6 that uses channels that are integral, or at least much less separable. Write a caption that explains why choosing these channels is bad compared to Figure 5.</span>
-<span id="cb13-267"><a href="#cb13-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-268"><a href="#cb13-268" aria-hidden="true" tabindex="-1"></a><span class="fu">### Popout</span></span>
-<span id="cb13-269"><a href="#cb13-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-270"><a href="#cb13-270" aria-hidden="true" tabindex="-1"></a>Using whatever data set you choose (it need not be the same data used for Figures 1-6... you get the idea), create a visualization called Figure 7 that effectively uses the concept of popout. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 8 that makes the identification task in Figure 7 much more difficult. Write a caption that explains why Figure 8 sucks compared to Figure 7.</span>
+<div class="sourceCode" id="cb10" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "TUTORIAL 5 - Marks and Channels"</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Barrie Robison"</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2023-02-13"</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [Assignment, DataViz]</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "Cthulhuhockey.png"</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="an">code-fold:</span><span class="co"> true</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Trying out terrible combinations of marks and channels... for learning!"</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="fu"># **THE HISTORIC FUTILITY OF THE 22-23 VANCOUVER CANUCKS**</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>This tutorial is my attempt at <span class="co">[</span><span class="ot">Assignment 4</span><span class="co">](../A4-MarksChannels/index.qmd)</span>!</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## PENALTY KILL</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>I'm interested in testing the hypothesis that this season's <span class="co">[</span><span class="ot">Vancouver Canucks</span><span class="co">](https://www.nhl.com/canucks)</span> are a historically terrible team.  One of the key factors in this hypothesis is that this year's Canucks really, really suck at killing penalties. For this first assignment component, I'll show you what I mean with a visualization!</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>The data I am using was downloaded from <span class="co">[</span><span class="ot">Moneypuck.com</span><span class="co">](https://moneypuck.com/data.htm)</span>. </span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="co">#| output: false</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vroom)</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> fs<span class="sc">::</span><span class="fu">dir_ls</span>(<span class="at">glob =</span> <span class="st">"*teams.csv"</span>)</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>allseasons <span class="ot">&lt;-</span> vroom<span class="sc">::</span><span class="fu">vroom</span>(files)</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>allseasons<span class="sc">$</span>color<span class="ot">&lt;-</span><span class="st">"darkblue"</span></span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>allseasons<span class="sc">$</span>color[allseasons<span class="sc">$</span>name<span class="sc">==</span><span class="st">"VAN"</span> <span class="sc">&amp;</span> allseasons<span class="sc">$</span>season<span class="sc">==</span><span class="st">"2022"</span>]  <span class="ot">&lt;-</span> <span class="st">"red"</span></span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>  allseasons<span class="sc">$</span>teamseason<span class="ot">&lt;-</span> <span class="fu">paste</span>(allseasons<span class="sc">$</span>name, allseasons<span class="sc">$</span>season)</span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>  allseasons<span class="sc">$</span>HDSAR<span class="ot">&lt;-</span>allseasons<span class="sc">$</span>highDangerShotsAgainst<span class="sc">/</span>allseasons<span class="sc">$</span>iceTime<span class="sc">*</span><span class="dv">120</span></span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>  PKDATA<span class="ot">&lt;-</span>allseasons[<span class="fu">c</span>(<span class="st">"situation"</span>, <span class="st">"teamseason"</span>, <span class="st">"goalsAgainst"</span>, <span class="st">"penaltiesFor"</span>)]</span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>  PKpenalties<span class="ot">&lt;-</span><span class="fu">subset</span>(PKDATA, situation <span class="sc">==</span> <span class="st">"all"</span>)</span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>  PKgoals<span class="ot">&lt;-</span><span class="fu">subset</span>(PKDATA, situation <span class="sc">==</span> <span class="st">"4on5"</span>)</span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>  PK<span class="ot">&lt;-</span>PKgoals[<span class="fu">c</span>(<span class="st">"teamseason"</span>, <span class="st">"goalsAgainst"</span>)]</span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>  PK<span class="sc">$</span>penaltiesFor<span class="ot">&lt;-</span>PKpenalties<span class="sc">$</span>penaltiesFor</span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>  PK<span class="sc">$</span>PKpercent<span class="ot">&lt;-</span><span class="dv">100</span><span class="sc">-</span>(PK<span class="sc">$</span>goalsAgainst<span class="sc">/</span>PK<span class="sc">$</span>penaltiesFor<span class="sc">*</span><span class="dv">100</span>)</span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a>Now that I've massaged the data, I can tell you that the 2022-2023 Vancouver Canucks penalty kill percentage is <span class="in">`r PK$PKpercent[PK$teamseason=="VAN 2022"]`</span>.  That means that when they get a penalty, there is about a <span class="in">`r PK$PKpercent[PK$teamseason=="VAN 2022"]`</span> percent chance that they will prevent the opponent from scoring while they are short handed. However, unless you are a hockey super fan, you don't have enough context to know if this is good or bad.</span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>The figure below shows the distribution of penalty kill percentage for all teams and seasons since the 2010 season.</span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">density</span>(PK<span class="sc">$</span>PKpercent)</span>
+<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create an ECDF</span></span>
+<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(PK<span class="sc">$</span>PKpercent)</span>
+<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the quantile value</span></span>
+<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">quantile</span>(PK<span class="sc">$</span>PKpercent, <span class="fl">0.01</span>)</span>
+<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Calculate the empirical cumulative probability for the quantile value</span></span>
+<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">e</span>(q)</span>
+<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Estimate the density value for the quantile value</span></span>
+<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">approxfun</span>(d<span class="sc">$</span>x, d<span class="sc">$</span>y)</span>
+<span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a>d_q <span class="ot">&lt;-</span> <span class="fu">f</span>(q)</span>
+<span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Combine the results into a list</span></span>
+<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a>percentile <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">q =</span> q, <span class="at">p =</span> p, <span class="at">d =</span> d_q)</span>
+<span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a>VAN22 <span class="ot">&lt;-</span> PK<span class="sc">$</span>PKpercent[PK<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
+<span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PK, <span class="fu">aes</span>(<span class="at">x=</span>PKpercent))<span class="sc">+</span></span>
+<span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..), <span class="at">binwidth =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
+<span id="cb10-82"><a href="#cb10-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="dv">4</span>,</span>
+<span id="cb10-83"><a href="#cb10-83" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>)<span class="sc">+</span></span>
+<span id="cb10-84"><a href="#cb10-84" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> VAN22, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>)<span class="sc">+</span></span>
+<span id="cb10-85"><a href="#cb10-85" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> q, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb10-86"><a href="#cb10-86" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Penalty Kill (%)"</span>)</span>
+<span id="cb10-87"><a href="#cb10-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-88"><a href="#cb10-88" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-89"><a href="#cb10-89" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-90"><a href="#cb10-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-91"><a href="#cb10-91" aria-hidden="true" tabindex="-1"></a>So... yeah.  The blue line is the 22 Canucks.  The red dotted line is the **1st!** percentile of the density function.  This is fine.  We know this to be true.  Their PK sucks.  It is one of the worst in the history of the NHL.  But WHY is it so bad?  Bad goaltending?  Bad defense?  Both?</span>
+<span id="cb10-92"><a href="#cb10-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-93"><a href="#cb10-93" aria-hidden="true" tabindex="-1"></a><span class="fu">## HIGH DANGER SHOTS ALLOWED</span></span>
+<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-95"><a href="#cb10-95" aria-hidden="true" tabindex="-1"></a>My theory is that their defense hangs their goaltenders out to dry.  This might be measured with the number of High Danger Shots Allowed.  </span>
+<span id="cb10-96"><a href="#cb10-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-97"><a href="#cb10-97" aria-hidden="true" tabindex="-1"></a>**High Danger Shots** are defined as unblocked shot attempts  with greater than a 20% probability of being a goal, as calculated by hockey data nerds. High danger shots account for ~5% of shots and ~33% of goals in the NHL.</span>
+<span id="cb10-98"><a href="#cb10-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-99"><a href="#cb10-99" aria-hidden="true" tabindex="-1"></a>Below I calculate **High Danger Shots Allowed Rate**, which is the number of HDS during penalty kill situations standardized it to a rate per 2 minutes spent killing penalties (the normal duration of an NHL minor penalty).</span>
+<span id="cb10-100"><a href="#cb10-100" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-103"><a href="#cb10-103" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-104"><a href="#cb10-104" aria-hidden="true" tabindex="-1"></a>PKsituation<span class="ot">&lt;-</span><span class="fu">subset</span>(allseasons, situation <span class="sc">==</span> <span class="st">"4on5"</span>)</span>
+<span id="cb10-105"><a href="#cb10-105" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Estimate the density of the data</span></span>
+<span id="cb10-106"><a href="#cb10-106" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">density</span>(PKsituation<span class="sc">$</span>HDSAR)</span>
+<span id="cb10-107"><a href="#cb10-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-108"><a href="#cb10-108" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create an ECDF</span></span>
+<span id="cb10-109"><a href="#cb10-109" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(PKsituation<span class="sc">$</span>HDSAR)</span>
+<span id="cb10-110"><a href="#cb10-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-111"><a href="#cb10-111" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the quantile value</span></span>
+<span id="cb10-112"><a href="#cb10-112" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">quantile</span>(PKsituation<span class="sc">$</span>HDSAR, <span class="fl">0.95</span>)</span>
+<span id="cb10-113"><a href="#cb10-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-114"><a href="#cb10-114" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Calculate the empirical cumulative probability for the quantile value</span></span>
+<span id="cb10-115"><a href="#cb10-115" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">e</span>(q)</span>
+<span id="cb10-116"><a href="#cb10-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-117"><a href="#cb10-117" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Estimate the density value for the quantile value</span></span>
+<span id="cb10-118"><a href="#cb10-118" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">approxfun</span>(d<span class="sc">$</span>x, d<span class="sc">$</span>y)</span>
+<span id="cb10-119"><a href="#cb10-119" aria-hidden="true" tabindex="-1"></a>d_q <span class="ot">&lt;-</span> <span class="fu">f</span>(q)</span>
+<span id="cb10-120"><a href="#cb10-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-121"><a href="#cb10-121" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Combine the results into a list</span></span>
+<span id="cb10-122"><a href="#cb10-122" aria-hidden="true" tabindex="-1"></a>percentile <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">q =</span> q, <span class="at">p =</span> p, <span class="at">d =</span> d_q)</span>
+<span id="cb10-123"><a href="#cb10-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-124"><a href="#cb10-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-125"><a href="#cb10-125" aria-hidden="true" tabindex="-1"></a>VAN22HD <span class="ot">&lt;-</span> PKsituation<span class="sc">$</span>HDSAR[PKsituation<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
+<span id="cb10-126"><a href="#cb10-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-127"><a href="#cb10-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-128"><a href="#cb10-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-129"><a href="#cb10-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-130"><a href="#cb10-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-131"><a href="#cb10-131" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKsituation, <span class="fu">aes</span>(<span class="at">x=</span>HDSAR))<span class="sc">+</span></span>
+<span id="cb10-132"><a href="#cb10-132" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..), <span class="at">binwidth =</span> <span class="fl">0.005</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
+<span id="cb10-133"><a href="#cb10-133" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="dv">4</span>,</span>
+<span id="cb10-134"><a href="#cb10-134" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>)<span class="sc">+</span></span>
+<span id="cb10-135"><a href="#cb10-135" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> VAN22HD, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>)<span class="sc">+</span></span>
+<span id="cb10-136"><a href="#cb10-136" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> q, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb10-137"><a href="#cb10-137" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"High Danger Shots Allowed (rate per 2 minutes)"</span>)</span>
+<span id="cb10-138"><a href="#cb10-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-139"><a href="#cb10-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-140"><a href="#cb10-140" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-141"><a href="#cb10-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-142"><a href="#cb10-142" aria-hidden="true" tabindex="-1"></a>**Figure 1.**  Distribution of High Danger Shot Rate for NHL teams over the past 10 seasons.  The 2022-2023 Vancouver Canucks are shown with the dark blue line (HDSAR = <span class="in">`r VAN22HD`</span>) and the 95th percentile is shown in <span class="co">[</span><span class="ot">red</span><span class="co">]</span>{.red}.  </span>
+<span id="cb10-143"><a href="#cb10-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-144"><a href="#cb10-144" aria-hidden="true" tabindex="-1"></a>In terms of the semantics of Data Visualization, I am trying to DISCOVER the DISTRIBUTION of <span class="in">`High Danger Shots Allowed`</span>, and then ANNOTATE the DISTRIBUTION with information about the current Vancouver Canucks team and their approximate percentile in the distribution.</span>
+<span id="cb10-145"><a href="#cb10-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-146"><a href="#cb10-146" aria-hidden="true" tabindex="-1"></a>To visualize this I am encoding a DERIVED attribute - the relative density of HDSAR as VERTICAL LENGTH of a bar (technically the MARK is a LINE) on an aligned axis.  This is a pretty powerful encoding, which is why it is very common when visualizing distributions.  In addtion, I am encoding HDSAR values themselves with HORIZONTAL POSITION.  A nice, ordered channel for a nice, ordered attribute.  The DENSITY FUNCTION is less clear to me.  I'm obviously using a line, whose vertical and horizontal position encodes the relationship between the two variables.  But the blue shaded fill?  I kind of think that is using an AREA channel and REDUNDANT ENCODING to send a stronger signal.  </span>
+<span id="cb10-147"><a href="#cb10-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-148"><a href="#cb10-148" aria-hidden="true" tabindex="-1"></a>The annotations of the 95th percentile and the 2022 Canucks' HDSAR are encoded with COLOR and HORIZONTAL POSITION CHANNELS, and LINES as MARKS.</span>
+<span id="cb10-149"><a href="#cb10-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-150"><a href="#cb10-150" aria-hidden="true" tabindex="-1"></a>The 2022 Canucks indeed seem to be giving up HDS at a historically high rate.</span>
+<span id="cb10-151"><a href="#cb10-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-152"><a href="#cb10-152" aria-hidden="true" tabindex="-1"></a><span class="fu">## GOALTENDING</span></span>
+<span id="cb10-153"><a href="#cb10-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-154"><a href="#cb10-154" aria-hidden="true" tabindex="-1"></a>But wait!  You exclaim, shouting your objection into the uncaring Abyss.  What about the goaltending?  Surely that has also contributed to this season's futility?  "Perhaps..", the Abyss murmurs back...</span>
+<span id="cb10-155"><a href="#cb10-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-156"><a href="#cb10-156" aria-hidden="true" tabindex="-1"></a>Let's see whether the futility of the penalty kill is also a function of bad goaltending.  Now, we can't just look at raw goals allowed, because if the defense is allowing really High Danger Shots, then even a good goaltender is going to allow some goals.  Fortunately, the NHL nerds have developed an **Expected Goals** metric.  Moneypuck provides this handy description in their data dictionary:</span>
+<span id="cb10-157"><a href="#cb10-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-158"><a href="#cb10-158" aria-hidden="true" tabindex="-1"></a>**Expected Goals:**. The sum of the probabilities of unblocked shot attempts being goals. For example, a rebound shot in the slot may be worth 0.5 expected goals, while a shot from the blueline while short handed may be worth 0.01 expected goals. The expected value of each shot attempt is calculated by the <span class="co">[</span><span class="ot">MoneyPuck Expected Goals model</span><span class="co">](http://moneypuck.com/about.htm#shotModel)</span>. Expected goals is commonly abbreviated as <span class="in">`xGoals`</span>. Blocked shot attempts are valued at 0 <span class="in">`xGoals`</span>. </span>
+<span id="cb10-159"><a href="#cb10-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-160"><a href="#cb10-160" aria-hidden="true" tabindex="-1"></a>Cool!</span>
+<span id="cb10-161"><a href="#cb10-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-164"><a href="#cb10-164" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-165"><a href="#cb10-165" aria-hidden="true" tabindex="-1"></a>  Tending<span class="ot">&lt;-</span>allseasons[<span class="fu">c</span>(<span class="st">"situation"</span>, <span class="st">"teamseason"</span>, <span class="st">"goalsAgainst"</span>, <span class="st">"xGoalsAgainst"</span>, <span class="st">"shotsOnGoalAgainst"</span>, <span class="st">"games_played"</span>, <span class="st">"iceTime"</span>, <span class="st">"highDangerShotsAgainst"</span>)]</span>
+<span id="cb10-166"><a href="#cb10-166" aria-hidden="true" tabindex="-1"></a>Tending<span class="sc">$</span>GArate<span class="ot">&lt;-</span>Tending<span class="sc">$</span>xGoalsAgainst<span class="sc">/</span>Tending<span class="sc">$</span>iceTime<span class="sc">*</span><span class="dv">120</span></span>
+<span id="cb10-167"><a href="#cb10-167" aria-hidden="true" tabindex="-1"></a>  PKTending<span class="ot">&lt;-</span><span class="fu">subset</span>(Tending, situation <span class="sc">==</span> <span class="st">"4on5"</span>)</span>
+<span id="cb10-168"><a href="#cb10-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-169"><a href="#cb10-169" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">density</span>(PKTending<span class="sc">$</span>GArate)</span>
+<span id="cb10-170"><a href="#cb10-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-171"><a href="#cb10-171" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create an ECDF</span></span>
+<span id="cb10-172"><a href="#cb10-172" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(PKTending<span class="sc">$</span>GArate)</span>
+<span id="cb10-173"><a href="#cb10-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-174"><a href="#cb10-174" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the quantile value</span></span>
+<span id="cb10-175"><a href="#cb10-175" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">quantile</span>(PKTending<span class="sc">$</span>GArate, <span class="fl">0.95</span>)</span>
+<span id="cb10-176"><a href="#cb10-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-177"><a href="#cb10-177" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Calculate the empirical cumulative probability for the quantile value</span></span>
+<span id="cb10-178"><a href="#cb10-178" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">e</span>(q)</span>
+<span id="cb10-179"><a href="#cb10-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-180"><a href="#cb10-180" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Estimate the density value for the quantile value</span></span>
+<span id="cb10-181"><a href="#cb10-181" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">approxfun</span>(d<span class="sc">$</span>x, d<span class="sc">$</span>y)</span>
+<span id="cb10-182"><a href="#cb10-182" aria-hidden="true" tabindex="-1"></a>d_q <span class="ot">&lt;-</span> <span class="fu">f</span>(q)</span>
+<span id="cb10-183"><a href="#cb10-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-184"><a href="#cb10-184" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Combine the results into a list</span></span>
+<span id="cb10-185"><a href="#cb10-185" aria-hidden="true" tabindex="-1"></a>percentile <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">q =</span> q, <span class="at">p =</span> p, <span class="at">d =</span> d_q)</span>
+<span id="cb10-186"><a href="#cb10-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-187"><a href="#cb10-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-188"><a href="#cb10-188" aria-hidden="true" tabindex="-1"></a>VAN22GA <span class="ot">&lt;-</span> PKTending<span class="sc">$</span>GArate[PKTending<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
+<span id="cb10-189"><a href="#cb10-189" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-190"><a href="#cb10-190" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKTending, <span class="fu">aes</span>(<span class="at">x=</span>GArate))<span class="sc">+</span></span>
+<span id="cb10-191"><a href="#cb10-191" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..), <span class="at">binwidth =</span> <span class="fl">0.005</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
+<span id="cb10-192"><a href="#cb10-192" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="dv">4</span>,</span>
+<span id="cb10-193"><a href="#cb10-193" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>)<span class="sc">+</span></span>
+<span id="cb10-194"><a href="#cb10-194" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> VAN22GA, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>)<span class="sc">+</span></span>
+<span id="cb10-195"><a href="#cb10-195" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> q, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb10-196"><a href="#cb10-196" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Expected Goals Allowed while killing penalties (rate per 2 minutes)"</span>)  </span>
+<span id="cb10-197"><a href="#cb10-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-198"><a href="#cb10-198" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-199"><a href="#cb10-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-200"><a href="#cb10-200" aria-hidden="true" tabindex="-1"></a>This figure uses Expected Goals.  It shows that Vancouver is playing a defense that is generating a historically high amount of expected goals, a result in line with our analysis of High Danger Chances.</span>
+<span id="cb10-201"><a href="#cb10-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-202"><a href="#cb10-202" aria-hidden="true" tabindex="-1"></a>To truly evaluate the goaltending, tt might be better for us to look at a ratio of Expected Goals to actual Goals.  If this number is close to 1, it indicates an expected level of NHL goaltending during the penalty kill.  The goalies are making the saves that they should.  If the number is higher than 1, it means the goaltenders are making more saves than they should and are playing well.  If the number is lower than 1, it means the goaltenders are letting in easy goals.  </span>
+<span id="cb10-203"><a href="#cb10-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-206"><a href="#cb10-206" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-207"><a href="#cb10-207" aria-hidden="true" tabindex="-1"></a>Tending<span class="sc">$</span>XGrate<span class="ot">&lt;-</span>Tending<span class="sc">$</span>xGoalsAgainst<span class="sc">/</span>Tending<span class="sc">$</span>goalsAgainst</span>
+<span id="cb10-208"><a href="#cb10-208" aria-hidden="true" tabindex="-1"></a>  PKTending<span class="ot">&lt;-</span><span class="fu">subset</span>(Tending, situation <span class="sc">==</span> <span class="st">"4on5"</span>)</span>
+<span id="cb10-209"><a href="#cb10-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-210"><a href="#cb10-210" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">density</span>(PKTending<span class="sc">$</span>XGrate)</span>
+<span id="cb10-211"><a href="#cb10-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-212"><a href="#cb10-212" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create an ECDF</span></span>
+<span id="cb10-213"><a href="#cb10-213" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(PKTending<span class="sc">$</span>XGrate)</span>
+<span id="cb10-214"><a href="#cb10-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-215"><a href="#cb10-215" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Calculate the quantile value</span></span>
+<span id="cb10-216"><a href="#cb10-216" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> <span class="fu">quantile</span>(PKTending<span class="sc">$</span>XGrate, <span class="fl">0.05</span>)</span>
+<span id="cb10-217"><a href="#cb10-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-218"><a href="#cb10-218" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Calculate the empirical cumulative probability for the quantile value</span></span>
+<span id="cb10-219"><a href="#cb10-219" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">e</span>(q)</span>
+<span id="cb10-220"><a href="#cb10-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-221"><a href="#cb10-221" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Estimate the density value for the quantile value</span></span>
+<span id="cb10-222"><a href="#cb10-222" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">approxfun</span>(d<span class="sc">$</span>x, d<span class="sc">$</span>y)</span>
+<span id="cb10-223"><a href="#cb10-223" aria-hidden="true" tabindex="-1"></a>d_q <span class="ot">&lt;-</span> <span class="fu">f</span>(q)</span>
+<span id="cb10-224"><a href="#cb10-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-225"><a href="#cb10-225" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Combine the results into a list</span></span>
+<span id="cb10-226"><a href="#cb10-226" aria-hidden="true" tabindex="-1"></a>percentile <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">q =</span> q, <span class="at">p =</span> p, <span class="at">d =</span> d_q)</span>
+<span id="cb10-227"><a href="#cb10-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-228"><a href="#cb10-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-229"><a href="#cb10-229" aria-hidden="true" tabindex="-1"></a>VAN22XG <span class="ot">&lt;-</span> PKTending<span class="sc">$</span>XGrate[PKTending<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
+<span id="cb10-230"><a href="#cb10-230" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-231"><a href="#cb10-231" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKTending, <span class="fu">aes</span>(<span class="at">x=</span>XGrate))<span class="sc">+</span></span>
+<span id="cb10-232"><a href="#cb10-232" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..), <span class="at">binwidth =</span> <span class="fl">0.01</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
+<span id="cb10-233"><a href="#cb10-233" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="dv">4</span>,</span>
+<span id="cb10-234"><a href="#cb10-234" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>)<span class="sc">+</span></span>
+<span id="cb10-235"><a href="#cb10-235" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> VAN22XG, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>)<span class="sc">+</span></span>
+<span id="cb10-236"><a href="#cb10-236" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> q, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb10-237"><a href="#cb10-237" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Expected Goals / Goals Allowed ratio while killing penalties"</span>)  </span>
+<span id="cb10-238"><a href="#cb10-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-239"><a href="#cb10-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-240"><a href="#cb10-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-241"><a href="#cb10-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-242"><a href="#cb10-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-243"><a href="#cb10-243" aria-hidden="true" tabindex="-1"></a>**Figure 3.**  Distribution of Expected Goals to Goals Allowed during 4 on 5 situations for NHL teams over the past 10 seasons.  The 2022-2023 Vancouver Canucks are shown with the dark blue line (XGrate = <span class="in">`r VAN22XG`</span>) and the 5th percentile is shown in <span class="co">[</span><span class="ot">red</span><span class="co">]</span>{.red}. </span>
+<span id="cb10-244"><a href="#cb10-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-245"><a href="#cb10-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-246"><a href="#cb10-246" aria-hidden="true" tabindex="-1"></a>Uh Oh.  Not only is the defense giving up a historically high number of High Danger scoring chances, the goaltenders are performing well below expectation.  They are making about 70% of the saves they are supposed to make.  So.... yeah.  Why is the penalty kill so bad?  Bad defense and bad goaltending.  I mean, HISTORICALLY BAD.</span>
+<span id="cb10-247"><a href="#cb10-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-248"><a href="#cb10-248" aria-hidden="true" tabindex="-1"></a>Is it because of the system?  I don't think so.  I think it is because of the players.  They don't have enough defensive talent on the team to effectively kill penalties.  I am sad.</span>
+<span id="cb10-249"><a href="#cb10-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-250"><a href="#cb10-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-251"><a href="#cb10-251" aria-hidden="true" tabindex="-1"></a><span class="fu">## CHANGING CHANNELS</span></span>
+<span id="cb10-252"><a href="#cb10-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-253"><a href="#cb10-253" aria-hidden="true" tabindex="-1"></a>Now, lets mess this up!  First I'm going back to the HDSAR figure, and changing some of my choices for marks and channels.</span>
+<span id="cb10-254"><a href="#cb10-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-257"><a href="#cb10-257" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-258"><a href="#cb10-258" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKsituation, <span class="fu">aes</span>(<span class="at">x=</span>teamseason, <span class="at">y=</span>HDSAR)) <span class="sc">+</span></span>
+<span id="cb10-259"><a href="#cb10-259" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>, <span class="fu">aes</span>(<span class="at">fill=</span>name, <span class="at">alpha=</span>season)) <span class="sc">+</span></span>
+<span id="cb10-260"><a href="#cb10-260" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"NHL Team and Season"</span>) <span class="sc">+</span></span>
+<span id="cb10-261"><a href="#cb10-261" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"High Danger Shots Allowed (rate per 2 minutes)"</span>) <span class="sc">+</span></span>
+<span id="cb10-262"><a href="#cb10-262" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Are the Vancouver Canucks Historically Bad?"</span>) <span class="sc">+</span></span>
+<span id="cb10-263"><a href="#cb10-263" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="fl">0.1</span>),</span>
+<span id="cb10-264"><a href="#cb10-264" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"right"</span>)</span>
+<span id="cb10-265"><a href="#cb10-265" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-266"><a href="#cb10-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-267"><a href="#cb10-267" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-268"><a href="#cb10-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-269"><a href="#cb10-269" aria-hidden="true" tabindex="-1"></a>**Figure 2.**  Distribution of High Danger Shot Rate for NHL teams over the past 10 seasons.    </span>
+<span id="cb10-270"><a href="#cb10-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-271"><a href="#cb10-271" aria-hidden="true" tabindex="-1"></a>Holy Crap.  What an absolute nightmate.  In terms of MARKS, I've stayed with LINES.  But the CHANNELS... wow.  The COLOR CHANNEL is used to indicate the team.  The ALPHA CHANNEL (transparency) is used to indicate season (time).  These choices create HUGE problems related to discriminability (alpha channel) and separability.  In addition, my choice to order these lines according to team and season is not at all compatible with my choice of channels.  Not to mention that the important thing - to see where the 2022 Canucks stand in terms of historical futility - is completely wrecked because the horizontal position (a strong channel) is not closely tied to the most salient Attribute (HDSAR).  Go ahead and pick out the the 2022 Canucks from this figure.... I'll wait.</span>
+<span id="cb10-272"><a href="#cb10-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-273"><a href="#cb10-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-274"><a href="#cb10-274" aria-hidden="true" tabindex="-1"></a><span class="fu">### Expressiveness and Effectiveness</span></span>
+<span id="cb10-275"><a href="#cb10-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-276"><a href="#cb10-276" aria-hidden="true" tabindex="-1"></a>*From Munzner, 5.4.1:*</span>
+<span id="cb10-277"><a href="#cb10-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-278"><a href="#cb10-278" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">The expressiveness principle:</span><span class="co">]</span>{.red} Visual encoding should express all of, and only, the information in the dataset attributes. Ordered data should be shown in a way that our perceptual system intrinsically senses as ordered. <span class="co">[</span><span class="ot">Well, using color sure violates that idea!</span><span class="co">]</span>{.red} Conversely, unordered data should not be shown in a way that perceptually implies an ordering that does not exist.</span>
+<span id="cb10-279"><a href="#cb10-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-280"><a href="#cb10-280" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">The effectiveness principle:</span><span class="co">]</span>{.red} The importance of the attribute should match the salience of the channel (its noticeablity). The most important attributes should be encoded with the most effective channels. <span class="co">[</span><span class="ot">Definitely not!  Even though the Line Marks are using Length on an aligned axis, their width and ordering on the x axis completely obscures the focal team.</span><span class="co">]</span>{.red}</span>
+<span id="cb10-281"><a href="#cb10-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-282"><a href="#cb10-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-283"><a href="#cb10-283" aria-hidden="true" tabindex="-1"></a><span class="fu">### Discriminability</span></span>
+<span id="cb10-284"><a href="#cb10-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-285"><a href="#cb10-285" aria-hidden="true" tabindex="-1"></a>Using whatever data set you choose (it need not be the same data used for Figures 1 and 2), create a visualization called Figure 3 that uses a magnitude channel with a number of bins that facilitate discriminiability of an attribute. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 4 that uses this same channel for WAY TOO MANY BINS, violating the guidelines for discriminability. Write a caption that explains why this number of bins is bad compared to Figure 3. <span class="co">[</span><span class="ot">Look at the NHL Rainbow!  So many colors... so little ability to differentiate between teams. For example, go ahead and try to pick out Edmonton vs Florida</span><span class="co">]</span>{.red}</span>
+<span id="cb10-286"><a href="#cb10-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-287"><a href="#cb10-287" aria-hidden="true" tabindex="-1"></a><span class="fu">### Separability</span></span>
+<span id="cb10-288"><a href="#cb10-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-289"><a href="#cb10-289" aria-hidden="true" tabindex="-1"></a>Using whatever data set you choose (it need not be the same data used for Figures 1-4), create a visualization called Figure 5 that uses a two or more channels to encode two or more attributes while maintaining separability. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 6 that uses channels that are integral, or at least much less separable. Write a caption that explains why choosing these channels is bad compared to Figure 5.</span>
+<span id="cb10-290"><a href="#cb10-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-291"><a href="#cb10-291" aria-hidden="true" tabindex="-1"></a>For this one I'd like to try something else.  Let's look at the Expected Goals and Allowed Goals as a scatterplot:</span>
+<span id="cb10-292"><a href="#cb10-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-295"><a href="#cb10-295" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-296"><a href="#cb10-296" aria-hidden="true" tabindex="-1"></a>V22<span class="ot">&lt;-</span><span class="fu">subset</span>(PKTending, teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>)</span>
+<span id="cb10-297"><a href="#cb10-297" aria-hidden="true" tabindex="-1"></a>VAN22XG <span class="ot">&lt;-</span> PKTending<span class="sc">$</span>XGrate[PKTending<span class="sc">$</span>teamseason <span class="sc">==</span> <span class="st">"VAN 2022"</span>]</span>
+<span id="cb10-298"><a href="#cb10-298" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-299"><a href="#cb10-299" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PKTending, <span class="fu">aes</span>(<span class="at">x=</span>xGoalsAgainst<span class="sc">/</span>games_played<span class="sc">*</span><span class="dv">82</span>, <span class="at">y =</span>goalsAgainst<span class="sc">/</span>games_played<span class="sc">*</span><span class="dv">82</span> ))<span class="sc">+</span></span>
+<span id="cb10-300"><a href="#cb10-300" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">alpha=</span>highDangerShotsAgainst))<span class="sc">+</span></span>
+<span id="cb10-301"><a href="#cb10-301" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb10-302"><a href="#cb10-302" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">90</span>, <span class="at">slope =</span> <span class="sc">-</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb10-303"><a href="#cb10-303" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb10-304"><a href="#cb10-304" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>,<span class="dv">100</span>)<span class="sc">+</span></span>
+<span id="cb10-305"><a href="#cb10-305" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>,<span class="dv">100</span>)<span class="sc">+</span></span>
+<span id="cb10-306"><a href="#cb10-306" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(PKTending<span class="sc">$</span>xGoalsAgainst<span class="sc">/</span>PKTending<span class="sc">$</span>games_played<span class="sc">*</span><span class="dv">82</span>), <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size=</span><span class="fl">1.0</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb10-307"><a href="#cb10-307" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(PKTending<span class="sc">$</span>goalsAgainst<span class="sc">/</span>PKTending<span class="sc">$</span>games_played<span class="sc">*</span><span class="dv">82</span>), <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb10-308"><a href="#cb10-308" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> V22, <span class="fu">aes</span>(<span class="at">x=</span>xGoalsAgainst<span class="sc">/</span>games_played<span class="sc">*</span><span class="dv">82</span>, <span class="at">y =</span>goalsAgainst<span class="sc">/</span>games_played<span class="sc">*</span><span class="dv">82</span> ), <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">2</span>)</span>
+<span id="cb10-309"><a href="#cb10-309" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-310"><a href="#cb10-310" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-311"><a href="#cb10-311" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-312"><a href="#cb10-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-313"><a href="#cb10-313" aria-hidden="true" tabindex="-1"></a><span class="fu">### Popout</span></span>
+<span id="cb10-314"><a href="#cb10-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-315"><a href="#cb10-315" aria-hidden="true" tabindex="-1"></a>Using whatever data set you choose (it need not be the same data used for Figures 1-6... you get the idea), create a visualization called Figure 7 that effectively uses the concept of popout. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 8 that makes the identification task in Figure 7 much more difficult. Write a caption that explains why Figure 8 sucks compared to Figure 7. <span class="co">[</span><span class="ot">The popout concept is best shown by my use of a dark blue (color) line mark to indicate the 22 Canucks.  Without that, you cannot achieve the task because the 22 Canucks are too hard to find without doing a serial search.</span><span class="co">]</span>{.red}</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
