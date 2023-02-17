@@ -1,0 +1,173 @@
+---
+title: "TUTORIAL 5 - Marks and Channels"
+author: "Barrie Robison"
+date: "2023-02-13"
+categories: [Assignment, DataViz]
+image: "Cthulhuscattergreen.png"
+code-fold: true
+code-tools: true
+description: "Trying out terrible combinations of marks and channels... for learning!"
+---
+
+This tutorial is my attempt at [Assignment 4](../A4-MarksChannels/index.qmd)!
+
+## MARKS AND CHANNELS
+
+### Expressiveness and Effectiveness
+
+#### Directions
+
+*From Munzner, 5.4.1:*
+
+[The expressiveness principle:]{.red} Visual encoding should express all of, and only, the information in the dataset attributes. Ordered data should be shown in a way that our perceptual system intrinsically senses as ordered. Conversely, unordered data should not be shown in a way that perceptually implies an ordering that does not exist.
+
+[The effectiveness principle:]{.red} The importance of the attribute should match the salience of the channel (its noticeablity). The most important attributes should be encoded with the most effective channels.
+
+Using whatever data set you choose, create a visualization called Figure 1 that adheres to these two principles. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 2 that violates these principles in the most extreme ways you can imagine while still having the visualization be recognizibly the same as the first. Write a caption that explains your choices of marks and channels and why they are bad compared to Figure 1.
+
+#### Response
+
+I'm interested in testing the hypothesis that this season's [Vancouver Canucks](https://www.nhl.com/canucks) are a historically terrible team.  One of the key factors in this hypothesis is that this year's Canucks really, really suck at killing penalties. For this first assignment component, I'll show you what I mean with a visualization!
+
+The data I am using was downloaded from [Moneypuck.com](https://moneypuck.com/data.htm). 
+
+```{r}
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(vroom)
+
+files <- fs::dir_ls(glob = "*teams.csv")
+
+allseasons <- vroom::vroom(files)
+
+allseasons$color<-"darkblue"
+allseasons$color[allseasons$name=="VAN" & allseasons$season=="2022"]  <- "red"
+  allseasons$teamseason<- paste(allseasons$name, allseasons$season)
+  
+  allseasons$HDSAR<-allseasons$highDangerShotsAgainst/allseasons$iceTime*120
+  
+  PKDATA<-allseasons[c("situation", "teamseason", "goalsAgainst", "penaltiesFor")]
+  PKpenalties<-subset(PKDATA, situation == "all")
+  PKgoals<-subset(PKDATA, situation == "4on5")
+  PK<-PKgoals[c("teamseason", "goalsAgainst")]
+  PK$penaltiesFor<-PKpenalties$penaltiesFor
+  PK$PKpercent<-100-(PK$goalsAgainst/PK$penaltiesFor*100)
+
+```
+
+Now that I've massaged the data, I can tell you that the 2022-2023 Vancouver Canucks penalty kill percentage is `r PK$PKpercent[PK$teamseason=="VAN 2022"]`.
+  
+  
+```{r}
+  d <- density(PK$PKpercent)
+
+# Step 3: Create an ECDF
+e <- ecdf(PK$PKpercent)
+
+# Step 4: Calculate the quantile value
+q <- quantile(PK$PKpercent, 0.01)
+
+# Step 5: Calculate the empirical cumulative probability for the quantile value
+p <- e(q)
+
+# Step 6: Estimate the density value for the quantile value
+f <- approxfun(d$x, d$y)
+d_q <- f(q)
+
+# Step 7: Combine the results into a list
+percentile <- list(q = q, p = p, d = d_q)
+
+
+VAN22 <- PK$PKpercent[PK$teamseason == "VAN 2022"]
+
+ggplot(PK, aes(x=PKpercent))+
+  geom_histogram(aes(y = ..density..), binwidth = 0.5, color = "black", fill="white")+
+  geom_density(lwd = 1, colour = 4,
+               fill = 4, alpha = 0.25)+
+  geom_vline(xintercept = VAN22, color = "blue", size=1.0)+
+  geom_vline(xintercept = q, color = "red", size = 1, linetype="dotted")+
+  xlab("Penalty Kill (%)")
+
+  
+```
+
+This is fine.  We know this to be true.  Their PK sucks.  But WHY is it so bad?  Bad goaltending?  Bad defense?  My theory is that their defense hangs their goaltenders out to dry.  This might be measured with the number of High Danger Shots Allowed.  Below I calculate that and then standardize it to a rate per 2 minutes (the normal duration of an NHL minor penalty).
+  
+```{r}
+PKsituation<-subset(allseasons, situation == "4on5")
+# Step 2: Estimate the density of the data
+d <- density(PKsituation$HDSAR)
+
+# Step 3: Create an ECDF
+e <- ecdf(PKsituation$HDSAR)
+
+# Step 4: Calculate the quantile value
+q <- quantile(PKsituation$HDSAR, 0.95)
+
+# Step 5: Calculate the empirical cumulative probability for the quantile value
+p <- e(q)
+
+# Step 6: Estimate the density value for the quantile value
+f <- approxfun(d$x, d$y)
+d_q <- f(q)
+
+# Step 7: Combine the results into a list
+percentile <- list(q = q, p = p, d = d_q)
+
+
+VAN22HD <- PKsituation$HDSAR[PKsituation$teamseason == "VAN 2022"]
+
+
+
+
+
+ggplot(PKsituation, aes(x=HDSAR))+
+  geom_histogram(aes(y = ..density..), binwidth = 0.005, color = "black", fill="white")+
+  geom_density(lwd = 1, colour = 4,
+               fill = 4, alpha = 0.25)+
+  geom_vline(xintercept = VAN22HD, color = "blue", size=1.0)+
+  geom_vline(xintercept = q, color = "red", size = 1, linetype="dotted")+
+  xlab("High Danger Shots Allowed (rate per 2 minutes)")
+
+
+```
+
+**Figure 1.**  Distribution of High Danger Shot Rate for NHL teams over the past 10 seasons.  The 2022-2023 Vancouver Canucks are shown with the dark blue line (HDSAR = `r VAN22HD`) and the 95th percentile is shown in [red]{.red}.  
+
+In terms of the semantics of Data Visualization, I am trying to DISCOVER the DISTRIBUTION of `High Danger Shots Allowed`, and then ANNOTATE the DISTRIBUTION with information about the current Vancouver Canucks team and their approximate percentile in the distribution.
+
+To visualize this I am encoding a DERIVED attribute - the relative density of HDSAR as VERTICAL LENGTH of a bar (technically the MARK is a LINE) on an aligned axis.  This is a pretty powerful encoding, which is why it is very common when visualizing distributions.  In addtion, I am encoding HDSAR values themselves with HORIZONTAL POSITION.  A nice, ordered channel for a nice, ordered attribute.  The DENSITY FUNCTION is less clear to me.  I'm obviously using a line, whose vertical and horizontal position encodes the relationship between the two variables.  But the blue shaded fill?  I kind of think that is using an AREA channel and REDUNDANT ENCODING to send a stronger signal.  
+
+The annotations of the 95th percentile and the 2022 Canucks' HDSAR are encoded with COLOR and HORIZONTAL POSITION CHANNELS, and LINES as MARKS.
+
+Now, lets mess this up!
+
+```{r}
+
+ggplot(PKsituation, aes(x=teamseason, y=HDSAR)) +
+  geom_bar(stat="identity", aes(fill=name, alpha=season)) +
+  xlab("NHL Team and Season") +
+  ylab("High Danger Shots Allowed (rate per 2 minutes)") +
+  ggtitle("Are the Vancouver Canucks Historically Bad?") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size = 0.1),
+        legend.position = "right")
+  
+
+```
+
+**Figure 2.**  Distribution of High Danger Shot Rate for NHL teams over the past 10 seasons.    
+
+Holy Crap.  What an absolute nightmate.  In terms of MARKS, I've stayed with LINES.  But the CHANNELS... wow.  The COLOR CHANNEL is used to indicate the team.  The ALPHA CHANNEL (transparency) is used to indicate season (time).  These choices create HUGE problems related to discriminability (alpha channel) and separability.  In addition, my choice to order these lines according to team and season is not at all compatible with my choice of channels.  Not to mention that the important thing - to see where the 2022 Canucks stand in terms of historical futility - is completely wrecked because the horizontal position (a strong channel) is not closely tied to the most salient Attribute (HDSAR).  Go ahead and pick out the the 2022 Canucks from this figure.... I'll wait.
+
+### [Discriminability](../L4-Marks-Channels/index.qmd#DISCRIMINABILITY)
+
+Using whatever data set you choose (it need not be the same data used for Figures 1 and 2), create a visualization called Figure 3 that uses a magnitude channel a number of bins that facilitate discriminiability of an attribute. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 4 that uses this same channel for WAY TOO MANY BINS, violating the guidelines for discriminability. Write a caption that explains why this number of bins is bad compared to Figure 3.
+
+### [Separability](../L4-Marks-Channels/index.qmd#SEPARABILITY%20VS%20INTEGRALITY)
+
+Using whatever data set you choose (it need not be the same data used for Figures 1-4), create a visualization called Figure 5 that uses a two or more channels to encode two or more attributes while maintainig separability. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 6 that uses channels that are integral, or at least much less separable. Write a caption that explains why choosing these channels is bad compared to Figure 5.
+
+### Popout
+
+Using whatever data set you choose (it need not be the same data used for Figures 1-6... you get the idea), create a visualization called Figure 7 that effectively uses the concept of popout. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 8 that makes the identification task in Figure 7 much more difficult. Write a caption that explains why Figure 8 sucks compared to Figure 7.

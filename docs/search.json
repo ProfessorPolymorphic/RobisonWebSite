@@ -438,7 +438,7 @@
     "href": "BCB520/posts/L4-Marks-Channels/index.html#choosing-channels",
     "title": "LECTURE 4",
     "section": "CHOOSING CHANNELS",
-    "text": "CHOOSING CHANNELS\n\nEXPRESSIVENESS\n\nThe visual encoding should express all of, and only, the information in the dataset attributes.\n\nEFFECTIVENESS\n\nChannels differ in accuracy of perception.\nThe importance of the attribute should match the salience of the channel (its noticability)."
+    "text": "CHOOSING CHANNELS\n\nEXPRESSIVENESS\n\nMatch channel to data type.\n\nEFFECTIVENESS\n\nChannels differ in accuracy of perception."
   },
   {
     "objectID": "BCB520/posts/L4-Marks-Channels/index.html#channel-rankings",
@@ -480,56 +480,63 @@
     "href": "BCB520/posts/L4-Marks-Channels/index.html#accuracy-experimental",
     "title": "LECTURE 4",
     "section": "ACCURACY (EXPERIMENTAL)",
-    "text": "ACCURACY (EXPERIMENTAL)\n\n\n\n\n[Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods]"
+    "text": "ACCURACY (EXPERIMENTAL)"
   },
   {
     "objectID": "BCB520/posts/L4-Marks-Channels/index.html#discriminability",
     "href": "BCB520/posts/L4-Marks-Channels/index.html#discriminability",
     "title": "LECTURE 4",
     "section": "DISCRIMINABILITY",
-    "text": "DISCRIMINABILITY\nHow many usable steps are in the channel? Are the differences between items perceptible to the human as intended?"
+    "text": "DISCRIMINABILITY\nHow many usable steps are in the channel?"
   },
   {
     "objectID": "BCB520/posts/L4-Marks-Channels/index.html#separability-vs-integrality",
     "href": "BCB520/posts/L4-Marks-Channels/index.html#separability-vs-integrality",
     "title": "LECTURE 4",
     "section": "SEPARABILITY VS INTEGRALITY",
-    "text": "SEPARABILITY VS INTEGRALITY\nSeparable channels are orthogonal and independent. Integral channels are inextricably combined. Attempts to encode different information with integral channels creates Interference.\n\n\nFigure 5.10. Pairs of visual channels fall along a continuum from fully separable to intrinsically integral. Color and location are separable channels well suited to encode different data attributes for two different groupings that can be selectively attended to. However, size interacts with hue, which is harder to perceive for small objects. The horizontal size and and vertical size channels are automatically fused into an integrated perception of area, yielding three groups. Attempts to code separate information along the red and green axes of the RGB color space fail, because we simply perceive four different hues."
+    "text": "SEPARABILITY VS INTEGRALITY"
   },
   {
     "objectID": "BCB520/posts/L4-Marks-Channels/index.html#popout",
     "href": "BCB520/posts/L4-Marks-Channels/index.html#popout",
     "title": "LECTURE 4",
     "section": "POPOUT",
-    "text": "POPOUT\nVISUAL POPOUT is often called preattentive processing or tunable detection.\n\n\nfind the red dot! How long does it take?\nPopout results from our low-level visual system performing massively parallel processing on certain visual channels, eliminating the need for the viewer to consciously direct attention to items one by one (serial search).\n\nFigure 5.11. Visual popout. (a) The red circle pops out from a small set of blue circles. (b) The red circle pops out from a large set of blue circles just as quickly. (c) The red circle also pops out from a small set of square shapes, although a bit slower than with color. (d) The red circle also pops out of a large set of red squares. (e) The red circle does not take long to find from a small set of mixed shapes and colors. (f) The red circle does not pop out from a large set of red squares and blue circles, and it can only be found by searching one by one through all the objects."
+    "text": "POPOUT\n\n\nfind the red dot how long does it take? parallel processing on many individual channels speed independent of distractor count speed depends on channel and amount of difference from distractors serial search for (almost all) combinations speed depends on number of distractors"
   },
   {
     "objectID": "BCB520/posts/L4-Marks-Channels/index.html#popout-1",
     "href": "BCB520/posts/L4-Marks-Channels/index.html#popout-1",
     "title": "LECTURE 4",
     "section": "POPOUT",
-    "text": "POPOUT\n\n\nMany channels are compatible with preattentive processing and facilitate popout:\n\ntilt\nsize\nshape\nproximity\nshadow direction\n\nBut not all!\n\nExample: parallel line pairs do not pop out from tilted pairs."
+    "text": "POPOUT\n\n\nmany channels tilt, size, shape, proximity, shadow direction, … but not all! parallel line pairs do not pop out from tilted pairs"
+  },
+  {
+    "objectID": "BCB520/posts/L4-Marks-Channels/index.html#factors-affecting-accuracy",
+    "href": "BCB520/posts/L4-Marks-Channels/index.html#factors-affecting-accuracy",
+    "title": "LECTURE 4",
+    "section": "FACTORS AFFECTING ACCURACY",
+    "text": "FACTORS AFFECTING ACCURACY\nalignment distractors distance common scale / alignment"
   },
   {
     "objectID": "BCB520/posts/L4-Marks-Channels/index.html#relative-vs-absolute-judgements",
     "href": "BCB520/posts/L4-Marks-Channels/index.html#relative-vs-absolute-judgements",
     "title": "LECTURE 4",
     "section": "RELATIVE VS ABSOLUTE JUDGEMENTS",
-    "text": "RELATIVE VS ABSOLUTE JUDGEMENTS\nThe human perceptual system is fundamentally based on relative judgements, not absolute ones. This is why accuracy increases with common frame/scale and alignment.\nWeber’s Law: The detectable difference in stimulus intensity \\(I\\) as a fixed percentage \\(K\\) of the object magnitude: \\(dI/I=K\\) .\n\nThe filled rectangles differ in length by 1:9, and it is therefore difficult to detect the difference without aligment. The white rectangles differ in length by 1:2, it is easier to see this difference even when the objects are unaligned."
+    "text": "RELATIVE VS ABSOLUTE JUDGEMENTS\nperceptual system mostly operates with relative judgements, not absolute that’s why accuracy increases with common frame/scale and alignment\nWeber’s Law: ratio of increment to background is constant filled rectangles differ in length by 1:9, difficult judgement white rectangles differ in length by 1:2, easy judgement"
   },
   {
     "objectID": "BCB520/posts/L4-Marks-Channels/index.html#relative-luminance-judgements",
     "href": "BCB520/posts/L4-Marks-Channels/index.html#relative-luminance-judgements",
     "title": "LECTURE 4",
     "section": "RELATIVE LUMINANCE JUDGEMENTS",
-    "text": "RELATIVE LUMINANCE JUDGEMENTS\nHuman perception of luminance is completely contextual, and is based on contrast with surrounding colors."
+    "text": "RELATIVE LUMINANCE JUDGEMENTS\nperception of luminance is contextual based on contrast with surroundings"
   },
   {
     "objectID": "BCB520/posts/L4-Marks-Channels/index.html#relative-color-judgements",
     "href": "BCB520/posts/L4-Marks-Channels/index.html#relative-color-judgements",
     "title": "LECTURE 4",
     "section": "RELATIVE COLOR JUDGEMENTS",
-    "text": "RELATIVE COLOR JUDGEMENTS\nOur visual system evolved to provide color constancy so that the same surface is identifiable across a broad set of illumination conditions, even though a physical light meter would yield very different readings. While the visual system works very well in natural environments, many of its mechanisms work against simple approaches to visually encoding information with color.\n\n\n\n\n\n\n\n\n\n\n\nFigure 5.15 shows two colorful cubes. In Figure 5.15(a) corresponding squares both appear to be red. In Figure 5.15(b), masks show that the tile color in the image apparently illuminated by a yellowish light source is actually orange, and for the bluish light the tiles are actually purple.\n\n\n\nCANVAS…HOME"
+    "text": "RELATIVE COLOR JUDGEMENTS\ncolor constancy across broad range of illumination conditions\n\n\n\n\nCANVAS…HOME"
   },
   {
     "objectID": "BCB520/posts/Certificate/index.html",
@@ -971,6 +978,20 @@
     "title": "Tutorial 2 - Literate Programming and Anscombe’s Quartet",
     "section": "Visualization reveals hidden patterns!",
     "text": "Visualization reveals hidden patterns!\n\n\nCode\nggplot(tidy_anscombe,\n       aes(x = x,\n           y = y)) +\n  geom_point() +\n  geom_point(data = tidy_anscombe_summary, aes(x=x_mean, y = y_mean, color = \"red\", size = 5),\n             show.legend = FALSE)+\n  facet_wrap(~set) +\n  geom_smooth(method = \"lm\", se = FALSE)\n\n\n`geom_smooth()` using formula = 'y ~ x'"
+  },
+  {
+    "objectID": "BCB520/posts/T5-MarksChannels/index.html",
+    "href": "BCB520/posts/T5-MarksChannels/index.html",
+    "title": "TUTORIAL 5 - Marks and Channels",
+    "section": "",
+    "text": "This tutorial is my attempt at Assignment 4!"
+  },
+  {
+    "objectID": "BCB520/posts/T5-MarksChannels/index.html#marks-and-channels",
+    "href": "BCB520/posts/T5-MarksChannels/index.html#marks-and-channels",
+    "title": "TUTORIAL 5 - Marks and Channels",
+    "section": "MARKS AND CHANNELS",
+    "text": "MARKS AND CHANNELS\n\nExpressiveness and Effectiveness\n\nDirections\nFrom Munzner, 5.4.1:\nThe expressiveness principle: Visual encoding should express all of, and only, the information in the dataset attributes. Ordered data should be shown in a way that our perceptual system intrinsically senses as ordered. Conversely, unordered data should not be shown in a way that perceptually implies an ordering that does not exist.\nThe effectiveness principle: The importance of the attribute should match the salience of the channel (its noticeablity). The most important attributes should be encoded with the most effective channels.\nUsing whatever data set you choose, create a visualization called Figure 1 that adheres to these two principles. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 2 that violates these principles in the most extreme ways you can imagine while still having the visualization be recognizibly the same as the first. Write a caption that explains your choices of marks and channels and why they are bad compared to Figure 1.\n\n\nResponse\nI’m interested in testing the hypothesis that this season’s Vancouver Canucks are a historically terrible team. One of the key factors in this hypothesis is that this year’s Canucks really, really suck at killing penalties. For this first assignment component, I’ll show you what I mean with a visualization!\nThe data I am using was downloaded from Moneypuck.com.\n\n\nCode\nlibrary(tidyverse)\n\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.4.0      ✔ purrr   0.3.5 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.5.0 \n✔ readr   2.1.3      ✔ forcats 0.5.2 \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\n\nCode\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(vroom)\n\nfiles <- fs::dir_ls(glob = \"*teams.csv\")\n\nallseasons <- vroom::vroom(files)\n\n\nRows: 1990 Columns: 107\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr   (5): team...1, name, team...4, position, situation\ndbl (102): season, games_played, xGoalsPercentage, corsiPercentage, fenwickP...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\nCode\nallseasons$color<-\"darkblue\"\nallseasons$color[allseasons$name==\"VAN\" & allseasons$season==\"2022\"]  <- \"red\"\n  allseasons$teamseason<- paste(allseasons$name, allseasons$season)\n  \n  allseasons$HDSAR<-allseasons$highDangerShotsAgainst/allseasons$iceTime*120\n  \n  PKDATA<-allseasons[c(\"situation\", \"teamseason\", \"goalsAgainst\", \"penaltiesFor\")]\n  PKpenalties<-subset(PKDATA, situation == \"all\")\n  PKgoals<-subset(PKDATA, situation == \"4on5\")\n  PK<-PKgoals[c(\"teamseason\", \"goalsAgainst\")]\n  PK$penaltiesFor<-PKpenalties$penaltiesFor\n  PK$PKpercent<-100-(PK$goalsAgainst/PK$penaltiesFor*100)\n\n\nNow that I’ve massaged the data, I can tell you that the 2022-2023 Vancouver Canucks penalty kill percentage is 76.9633508.\n\n\nCode\n  d <- density(PK$PKpercent)\n\n# Step 3: Create an ECDF\ne <- ecdf(PK$PKpercent)\n\n# Step 4: Calculate the quantile value\nq <- quantile(PK$PKpercent, 0.01)\n\n# Step 5: Calculate the empirical cumulative probability for the quantile value\np <- e(q)\n\n# Step 6: Estimate the density value for the quantile value\nf <- approxfun(d$x, d$y)\nd_q <- f(q)\n\n# Step 7: Combine the results into a list\npercentile <- list(q = q, p = p, d = d_q)\n\n\nVAN22 <- PK$PKpercent[PK$teamseason == \"VAN 2022\"]\n\nggplot(PK, aes(x=PKpercent))+\n  geom_histogram(aes(y = ..density..), binwidth = 0.5, color = \"black\", fill=\"white\")+\n  geom_density(lwd = 1, colour = 4,\n               fill = 4, alpha = 0.25)+\n  geom_vline(xintercept = VAN22, color = \"blue\", size=1.0)+\n  geom_vline(xintercept = q, color = \"red\", size = 1, linetype=\"dotted\")+\n  xlab(\"Penalty Kill (%)\")\n\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\nWarning: The dot-dot notation (`..density..`) was deprecated in ggplot2 3.4.0.\nℹ Please use `after_stat(density)` instead.\n\n\n\n\n\nThis is fine. We know this to be true. Their PK sucks. But WHY is it so bad? Bad goaltending? Bad defense? My theory is that their defense hangs their goaltenders out to dry. This might be measured with the number of High Danger Shots Allowed. Below I calculate that and then standardize it to a rate per 2 minutes (the normal duration of an NHL minor penalty).\n\n\nCode\nPKsituation<-subset(allseasons, situation == \"4on5\")\n# Step 2: Estimate the density of the data\nd <- density(PKsituation$HDSAR)\n\n# Step 3: Create an ECDF\ne <- ecdf(PKsituation$HDSAR)\n\n# Step 4: Calculate the quantile value\nq <- quantile(PKsituation$HDSAR, 0.95)\n\n# Step 5: Calculate the empirical cumulative probability for the quantile value\np <- e(q)\n\n# Step 6: Estimate the density value for the quantile value\nf <- approxfun(d$x, d$y)\nd_q <- f(q)\n\n# Step 7: Combine the results into a list\npercentile <- list(q = q, p = p, d = d_q)\n\n\nVAN22HD <- PKsituation$HDSAR[PKsituation$teamseason == \"VAN 2022\"]\n\n\n\n\n\nggplot(PKsituation, aes(x=HDSAR))+\n  geom_histogram(aes(y = ..density..), binwidth = 0.005, color = \"black\", fill=\"white\")+\n  geom_density(lwd = 1, colour = 4,\n               fill = 4, alpha = 0.25)+\n  geom_vline(xintercept = VAN22HD, color = \"blue\", size=1.0)+\n  geom_vline(xintercept = q, color = \"red\", size = 1, linetype=\"dotted\")+\n  xlab(\"High Danger Shots Allowed (rate per 2 minutes)\")\n\n\n\n\n\nFigure 1. Distribution of High Danger Shot Rate for NHL teams over the past 10 seasons. The 2022-2023 Vancouver Canucks are shown with the dark blue line (HDSAR = 0.3220996) and the 95th percentile is shown in red.\nIn terms of the semantics of Data Visualization, I am trying to DISCOVER the DISTRIBUTION of High Danger Shots Allowed, and then ANNOTATE the DISTRIBUTION with information about the current Vancouver Canucks team and their approximate percentile in the distribution.\nTo visualize this I am encoding a DERIVED attribute - the relative density of HDSAR as VERTICAL LENGTH of a bar (technically the MARK is a LINE) on an aligned axis. This is a pretty powerful encoding, which is why it is very common when visualizing distributions. In addtion, I am encoding HDSAR values themselves with HORIZONTAL POSITION. A nice, ordered channel for a nice, ordered attribute. The DENSITY FUNCTION is less clear to me. I’m obviously using a line, whose vertical and horizontal position encodes the relationship between the two variables. But the blue shaded fill? I kind of think that is using an AREA channel and REDUNDANT ENCODING to send a stronger signal.\nThe annotations of the 95th percentile and the 2022 Canucks’ HDSAR are encoded with COLOR and HORIZONTAL POSITION CHANNELS, and LINES as MARKS.\nNow, lets mess this up!\n\n\nCode\nggplot(PKsituation, aes(x=teamseason, y=HDSAR)) +\n  geom_bar(stat=\"identity\", aes(fill=name, alpha=season)) +\n  xlab(\"NHL Team and Season\") +\n  ylab(\"High Danger Shots Allowed (rate per 2 minutes)\") +\n  ggtitle(\"Are the Vancouver Canucks Historically Bad?\") +\n  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size = 0.1),\n        legend.position = \"right\")\n\n\n\n\n\nFigure 2. Distribution of High Danger Shot Rate for NHL teams over the past 10 seasons.\nHoly Crap. What an absolute nightmate. In terms of MARKS, I’ve stayed with LINES. But the CHANNELS… wow. The COLOR CHANNEL is used to indicate the team. The ALPHA CHANNEL (transparency) is used to indicate season (time). These choices create HUGE problems related to discriminability (alpha channel) and separability. In addition, my choice to order these lines according to team and season is not at all compatible with my choice of channels. Not to mention that the important thing - to see where the 2022 Canucks stand in terms of historical futility - is completely wrecked because the horizontal position (a strong channel) is not closely tied to the most salient Attribute (HDSAR). Go ahead and pick out the the 2022 Canucks from this figure…. I’ll wait.\n\n\n\nDiscriminability\nUsing whatever data set you choose (it need not be the same data used for Figures 1 and 2), create a visualization called Figure 3 that uses a magnitude channel a number of bins that facilitate discriminiability of an attribute. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 4 that uses this same channel for WAY TOO MANY BINS, violating the guidelines for discriminability. Write a caption that explains why this number of bins is bad compared to Figure 3.\n\n\nSeparability\nUsing whatever data set you choose (it need not be the same data used for Figures 1-4), create a visualization called Figure 5 that uses a two or more channels to encode two or more attributes while maintainig separability. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 6 that uses channels that are integral, or at least much less separable. Write a caption that explains why choosing these channels is bad compared to Figure 5.\n\n\nPopout\nUsing whatever data set you choose (it need not be the same data used for Figures 1-6… you get the idea), create a visualization called Figure 7 that effectively uses the concept of popout. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 8 that makes the identification task in Figure 7 much more difficult. Write a caption that explains why Figure 8 sucks compared to Figure 7."
   },
   {
     "objectID": "BCB520/BCB520.html",
