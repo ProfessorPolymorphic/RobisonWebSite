@@ -288,7 +288,7 @@ V22<-subset(PKTending, teamseason == "VAN 2022")
 VAN22XG <- PKTending$XGrate[PKTending$teamseason == "VAN 2022"]
     
 ggplot(PKTending, aes(x=xGoalsAgainst/games_played*82, y =goalsAgainst/games_played*82 ))+
-  geom_point(aes(alpha=highDangerShotsAgainst))+
+  geom_point(aes(alpha=highDangerShotsAgainst, size=highDangerShotsAgainst))+
   geom_abline(intercept = 0, slope = 1)+
   geom_abline(intercept = 90, slope = -1)+
  
@@ -296,7 +296,8 @@ ggplot(PKTending, aes(x=xGoalsAgainst/games_played*82, y =goalsAgainst/games_pla
   ylim(0,100)+
   geom_vline(xintercept = mean(PKTending$xGoalsAgainst/PKTending$games_played*82), color = "blue", size=1.0, linetype="dotted")+
   geom_hline(yintercept = mean(PKTending$goalsAgainst/PKTending$games_played*82), color = "blue", size = 1, linetype="dotted")+
-  geom_point(data = V22, aes(x=xGoalsAgainst/games_played*82, y =goalsAgainst/games_played*82 ), color = "red", size = 2)
+  geom_point(data = V22, aes(x=xGoalsAgainst/games_played*82, y =goalsAgainst/games_played*82),
+             color = "red")
   
   
 ```
