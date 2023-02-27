@@ -1,0 +1,377 @@
+---
+title: "LECTURE 6 - Tabular Data"
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    css: styles.css
+    footer: <a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/BCB520.html" target="_blank">HOME</a>
+    theme: [default, custom.scss]
+author: "Barrie Robison"
+date: "2023-02-28"
+categories: [Lecture, DataViz, Data, Tables]
+image: "Cthulhutabular.png"
+code-fold: true
+---
+
+
+## WHAT?
+
+![](what.png){.absolute bottom="0" height="400"} Before you design a visualization, you need to understand the [data]{.red}. Here, we consider the semantics to describe the [DATA TYPES]{.blue} and [DATA ATTRIBUTES]{.blue}.
+
+## THE THREE MAJOR DATA TYPES
+
+::: r-stack
+![](Tables.png){.fragment .absolute bottom="100" left="0" height="400"}
+
+![](Networks.png){.fragment .absolute bottom="100" left="280" height="400"}
+
+![](Spatial.png){.fragment .absolute bottom="75" left="520" height="390"}
+:::
+
+## DATA ATTRIBUTES
+
+![](Attributes.png){.absolute bottom="70" width="800"}
+
+## WHAT?
+
+Computer-based visualization systems provide visual representations of [datasets]{.red} designed to help people carry out tasks more effectively.
+
+![](whatexpanded.png){.absolute bottom="0" right="0" width="450"}
+
+![](what.png){.absolute bottom="0" height="400"}
+
+
+
+## SEMANTICS FOR DATA {.smaller}
+
+::: {layout-ncol="2"}
+### Semantics
+
+-   [item:]{.red} individual entity, discrete
+    -   eg patient, car, stock, city
+    -   "independent variable"
+-   [attribute:]{.red} property that is measured, observed, logged...
+    -   eg height, blood pressure for patient
+    -   eg horsepower, make for car
+    -   "dependent variable"
+
+### Data Table
+
+![](datatable2.png)
+:::
+
+[ITEM:]{.red} Person
+
+[ATTRIBUTES:]{.red} Name, Age, Shirt Size, Favorite Fruit
+
+
+
+
+## DATASET TYPES: TABLES
+
+### Flat Table
+
+::: columns
+::: {.r-fit-text .column width="40%"}
+-   One [ITEM]{.red} per row
+
+    -   often called an **observation**
+
+-   Each column is an [ATTRIBUTE]{.red}
+
+    -   often called a **variable**
+
+-   A cell holds the [VALUE]{.red} for an item/attribute pair
+
+-   A UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes
+:::
+
+::: {.column width="60%"}
+![](flattable.png)
+:::
+:::
+
+## FLAT TABLE EXAMPLE
+
+![](spreadsheet.png)
+
+![](Cthulhuflat.png)
+
+
+## MULTIDIMENSIONAL TABLES
+
+indexing based on multiple keys (eg genes, patients)
+
+::: {layout-ncol="2"}
+![](multidimtable1.png)
+
+![](multidimtable2.png)
+:::
+
+## KEYS AND VALUES
+
+key
+independent attribute
+used as unique index to look up items
+simple tables: 1 key
+multidimensional tables: multiple keys
+value
+dependent attribute, value of cell
+classify arrangements by keys used
+0, 1, 2, ... 
+
+![](numkeys.png)
+
+## IDIOM: Scatterplot
+
+express values (magnitudes)
+quantitative attributes
+no keys, only values
+no keys, only values
+data
+2 quant attribs
+mark: points
+channels
+horiz + vert position
+tasks
+find trends, outliers, distribution, correlation, clusters
+scalability
+hundreds of items
+
+## SCATTERPLOTS: More channels
+
+additional channels viable since using point marks
+color
+size (1 quant attribute, used to control 2D area)
+note radius would mislead, take square root since area grows quadratically
+shape
+
+
+## SCATTERPLOT TASKS
+
+Correlation
+
+clusters/groups, and clusters vs classes
+
+
+## KEYS: Categorical Regions
+
+regions: contiguous bounded areas distinct from each other
+separate into spatial regions: one mark per region (for now)
+use categorical or ordered attribute to separate into regions
+no conflict with expressiveness principle for categorical attributes
+use ordered attribute to order and align regions
+
+![](sepordalign.png)
+
+## Separated and aligned and ordered
+
+best case
+
+## Separated and aligned but not ordered
+
+limitation: hard to know rank. what's 4th? what's 7th?
+
+## Separated but not aligned or ordered
+
+limitation: hard to make comparisons with size (vs aligned position)
+
+![](circles.png)
+
+
+## IDIOM: Bar Chart
+
+
+one key, one value
+data
+1 categ attrib, 1 quant attrib
+mark: lines
+channels
+length to express quant value
+spatial regions: one per mark
+separated horizontally, aligned vertically
+ordered by quant attrib
+by label (alphabetical), by length attrib (data-driven)
+task
+compare, lookup values
+scalability
+dozens to hundreds of levels for key attrib [bars], hundreds for values
+
+## IDIOM: Stacked Bar Chart
+
+one more key
+data
+2 categ attrib, 1 quant attrib
+mark: vertical stack of line marks
+glyph: composite object, internal structure from multiple marks
+channels
+length and color hue
+spatial regions: one per glyph
+aligned: full glyph, lowest bar component
+unaligned: other bar components
+task
+part-to-whole relationship
+scalability: asymmetric
+for stacked key attrib, 10-12 levels [segments]
+for main key attrib, dozens to hundreds of levels [bars]
+
+## IDIOM: Streamgraph
+
+generalized stacked graph
+emphasizing horizontal continuity
+vs vertical items
+data
+1 categ key attrib (movies)
+1 ordered key attrib (time)
+1 quant value attrib (counts)
+derived data
+geometry: layers, where height encodes counts
+1 quant attrib (layer ordering)
+scalability
+hundreds of time keys
+dozens to hundreds of movies keys
+more than stacked bars: most layers don’t extend across whole chart
+
+![](stream.png)
+
+![](stream2.png)
+
+
+## IDIOM: Dot/Line Chart
+
+
+one key, one value
+data
+2 quant attribs
+mark: points AND line connection marks between them
+channels
+aligned lengths to express quant value
+separated and ordered by key attrib into horizontal regions
+task
+find trend
+connection marks emphasize ordering of items along key axis by explicitly showing relationship between one item and the next
+scalability
+hundreds of key levels, hundreds of value levels
+
+## BAR vs LINE CHARTS
+
+depends on type of key attrib
+bar charts if categorical
+line charts if ordered
+do not use line charts for categorical key attribs
+violates expressiveness principle
+implication of trend so strong that it overrides semantics!
+“The more male a person is, the taller he/she is”
+
+![](barsandlines.png)
+
+## CHART AXES
+
+best practice to label
+few exceptions: individual small multiple views could share axis label
+
+include 0 at bottom left or slope misleads
+some exceptions (arbitrary 0, small change matters)
+
+Truncating the Y-Axis: Threat or Menace?Correll, Bertini, & Franconeri, CHI 2020.]
+
+![](axes1.png)
+
+![](axes2.png)
+
+## IDIOM: Indexed Line Charts
+
+data: 2 quant attribs
+1 key + 1 value
+derived data: new quant value attrib
+index
+plot instead of original value
+task: show change over time
+principle: normalized, not absolute
+scalability
+same as standard line chart
+
+![](indexedline.png)
+
+## IDIOM: Gantt Charts
+
+one key, two (related) values
+data
+1 categ attrib, 2 quant attribs
+mark: line
+length: duration
+channels
+horiz position: start time (+end from duration)
+task
+emphasize temporal overlaps & start/end dependencies between items
+scalability
+dozens of key levels [bars]
+hundreds of value levels [durations]
+
+## IDIOM: Slopegraphs
+
+two values
+data
+2 quant value attribs
+(1 derived attrib: change magnitude)
+mark: point + line
+line connecting mark between pts
+channels
+2 vertical pos: express attrib value
+(linewidth/size, color)
+task
+emphasize changes in rank/value
+scalability
+hundreds of value levels
+dozens of items
+
+![](slopegraph.png)
+
+## 2 KEYS
+
+## IDIOM:  Heatmap
+
+two keys, one value
+data
+2 categ attribs (gene, experimental condition)
+1 quant attrib (expression levels)
+marks: point
+separate and align in 2D matrix
+indexed by 2 categorical attributes
+channels
+color by quant attrib
+(ordered diverging colormap)
+task
+find clusters, outliers
+scalability
+1M items, 100s of categ levels, ~10 quant attrib levels
+
+
+![](heatmapbad.png)
+
+## HEATMAP REORDERING
+
+![](heatmaporder.png)
+
+## CLUSTERED HEATMAP
+
+in addition
+derived data
+2 cluster hierarchies
+dendrogram
+parent-child relationships in tree with connection line marks
+leaves aligned so interior branch heights easy to compare
+heatmap
+marks (re-)ordered by cluster hierarchy traversal
+task: assess quality of clusters found by automatic methods
+
+![](heatmapcluster.png)
+
+
+
+
+
+
