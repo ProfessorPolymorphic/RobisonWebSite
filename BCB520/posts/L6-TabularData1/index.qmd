@@ -16,11 +16,6 @@ image: "Cthulhutabular.png"
 code-fold: true
 ---
 
-
-## WHAT?
-
-![](what.png){.absolute bottom="0" height="400"} Before you design a visualization, you need to understand the [data]{.red}. Here, we consider the semantics to describe the [DATA TYPES]{.blue} and [DATA ATTRIBUTES]{.blue}.
-
 ## THE THREE MAJOR DATA TYPES
 
 ::: r-stack
@@ -31,10 +26,6 @@ code-fold: true
 ![](Spatial.png){.fragment .absolute bottom="75" left="520" height="390"}
 :::
 
-## DATA ATTRIBUTES
-
-![](Attributes.png){.absolute bottom="70" width="800"}
-
 ## WHAT?
 
 Computer-based visualization systems provide visual representations of [datasets]{.red} designed to help people carry out tasks more effectively.
@@ -42,8 +33,6 @@ Computer-based visualization systems provide visual representations of [datasets
 ![](whatexpanded.png){.absolute bottom="0" right="0" width="450"}
 
 ![](what.png){.absolute bottom="0" height="400"}
-
-
 
 ## SEMANTICS FOR DATA {.smaller}
 
@@ -67,9 +56,6 @@ Computer-based visualization systems provide visual representations of [datasets
 
 [ATTRIBUTES:]{.red} Name, Age, Shirt Size, Favorite Fruit
 
-
-
-
 ## DATASET TYPES: TABLES
 
 ### Flat Table
@@ -86,7 +72,7 @@ Computer-based visualization systems provide visual representations of [datasets
 
 -   A cell holds the [VALUE]{.red} for an item/attribute pair
 
--   A UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes
+-   A unique [KEY]{.red} can be used (implicitly or explicitly) to identify each item even if they share all measured attributes
 :::
 
 ::: {.column width="60%"}
@@ -96,14 +82,17 @@ Computer-based visualization systems provide visual representations of [datasets
 
 ## FLAT TABLE EXAMPLE
 
-![](spreadsheet.png)
+::: {#fig-tables layout-ncol="2"}
+![A dumb spreadsheet](spreadsheet.png)
 
-![](Cthulhuflat.png)
+![A cool spreadsheet](Cthulhuflat.png){width="380"}
 
+Flat Tables
+:::
 
 ## MULTIDIMENSIONAL TABLES
 
-indexing based on multiple keys (eg genes, patients)
+Indexing based on multiple [keys]{.red} (eg genes, patients)
 
 ::: {layout-ncol="2"}
 ![](multidimtable1.png)
@@ -111,267 +100,438 @@ indexing based on multiple keys (eg genes, patients)
 ![](multidimtable2.png)
 :::
 
-## KEYS AND VALUES
+## KEYS AND VALUES {.smaller}
 
-key
-independent attribute
-used as unique index to look up items
-simple tables: 1 key
-multidimensional tables: multiple keys
-value
-dependent attribute, value of cell
-classify arrangements by keys used
-0, 1, 2, ... 
+::: columns
+::: {.column width="60%"}
+[KEY:]{.red} an independent attribute used as unique index to look up items.
 
+-   Simple tables: 1 key
+
+-   Multidimensional tables: multiple keys
+
+[Value:]{.red} a dependent attribute, value of cell
+
+We will classify visualization idioms by the number of keys used.
+
+0, 1, 2, ...
+:::
+
+::: {.column width="40%"}
 ![](numkeys.png)
+:::
+:::
 
-## IDIOM: Scatterplot
+## IDIOM: Scatterplot {.smaller}
 
-express values (magnitudes)
-quantitative attributes
-no keys, only values
-no keys, only values
-data
-2 quant attribs
-mark: points
-channels
-horiz + vert position
-tasks
-find trends, outliers, distribution, correlation, clusters
-scalability
-hundreds of items
+**0 KEYS:** Only values are available or salient to the task.
 
-## SCATTERPLOTS: More channels
+::: columns
+::: {.column width="60%"}
+**Express values** (magnitudes) of quantitative attributes.
 
-additional channels viable since using point marks
-color
-size (1 quant attribute, used to control 2D area)
-note radius would mislead, take square root since area grows quadratically
-shape
+**Data:** 2 quantitative attributes
 
+**Mark:** points
+
+**Channels:** horizontal and verical position
+
+**Tasks:** find trends, outliers, distribution, correlation, clusters
+
+**Scalability:** hundreds of items
+:::
+
+::: {.column width="40%"}
+```{r}
+#| fig-cap: 
+#|   - "Height and Weight of drafted NHL players."
+#| fig-height: 5
+#| fig-width: 4
+
+
+library(tidyverse)
+library(readxl)
+library(rjson)
+library(jsonlite)
+library(ggplot2)
+Bio<-fromJSON("draft.json")
+
+noway<-as.data.frame(Bio)
+
+players<- noway %>%
+  select(data.draftYear, data.playerId, data.playerName, data.draftYear,
+         data.roundNumber, data.overallPickNumber, data.pickInRound,
+         data.height, data.weight, data.position)
+
+ggplot(players, aes(x=data.height, y=data.weight))+
+  geom_point()
+
+```
+:::
+:::
+
+## IDIOM: Scatterplot {.smaller}
+
+**0 KEYS:** Only values are available or salient to the task.
+
+::: columns
+::: {.column width="60%"}
+**Express values** (magnitudes) of quantitative attributes.
+
+**Data:** 2 quantitative attributes
+
+**Mark:** points
+
+**Channels:** horizontal and verical position
+
+**Tasks:** find trends, [outliers]{.red}, distribution, correlation, clusters
+
+**Scalability:** hundreds of items
+:::
+
+::: {.column width="40%"}
+```{r}
+#| fig-cap: 
+#|   - "Height and Weight of drafted NHL players."
+#| fig-height: 5
+#| fig-width: 4
+
+
+ggplot(players, aes(x=data.height, y=data.weight))+
+  geom_point()
+
+```
+:::
+:::
+
+## SCATTERPLOTS: More channels {.smaller}
+
+**Additional channels are viable with scatterplots since we are using point marks.**
+
+::: columns
+::: {.column width="40%"}
+**Examples:**
+
+**Color:** But pay attention to Discriminability!
+
+**Size:** But pay attention to using a quantitative attribute used to control 2D area. Directly encoding radius would mislead. Take the square root since area grows quadratically.
+
+**Shape:**
+:::
+
+::: {.column width="60%"}
+```{r}
+#| fig-cap: "Height and Weight of drafted NHL goaltenders."
+#| fig-height: 5
+#| fig-width: 5
+
+goalies<-players %>% filter(data.position=="G")
+goalies$first<-"YES"
+goalies$first[goalies$data.roundNumber>1]<-"NO"
+
+ggplot(goalies, aes(x=data.height, y=data.weight))+
+  geom_point(aes(color=first))
+```
+:::
+:::
 
 ## SCATTERPLOT TASKS
 
 Correlation
 
-clusters/groups, and clusters vs classes
+![](correl.png)
 
+Clusters/groups, and clusters vs classes
 
-## KEYS: Categorical Regions
+![](clusters.png)
 
-regions: contiguous bounded areas distinct from each other
-separate into spatial regions: one mark per region (for now)
-use categorical or ordered attribute to separate into regions
-no conflict with expressiveness principle for categorical attributes
-use ordered attribute to order and align regions
+## KEYS: Categorical Regions {.smaller}
+
+::: columns
+::: {.column width="40%"}
+-   Regions: contiguous bounded areas distinct from each other
+    -   [NO OVERPLOTTING:]{.red} separate into spatial regions: one mark per region (for now)
+-   use categorical or ordered attribute to separate into regions
+    -   no conflict with expressiveness principle for categorical attributes
+-   use ordered attribute to order and align regions
+:::
+
+::: {.column width="60%"}
+![](somekeys.png)
 
 ![](sepordalign.png)
+:::
+:::
 
 ## Separated and aligned and ordered
 
-best case
+Best case!
 
-## Separated and aligned but not ordered
+![](orderedbar.png)
 
-limitation: hard to know rank. what's 4th? what's 7th?
+## Separated/aligned - not ordered
+
+Limitation: hard to know rank. what's 4th? what's 7th?
+
+![](unorderedbar.png)
 
 ## Separated but not aligned or ordered
 
-limitation: hard to make comparisons with size (vs aligned position)
+Limitation: hard to make comparisons with size (vs aligned position)
 
 ![](circles.png)
 
+## IDIOM: Bar Chart {.smaller}
 
-## IDIOM: Bar Chart
+**One key, One value**
+
+::: columns
+::: {.column width="60%"}
+**Data:** 1 categorical attribute, 1 quantitative attribute
+
+**Mark:** Lines
+
+**Channels:** Length to express quantitative value
+
+**Spatial regions:** one per mark - separated horizontally, aligned vertically. Ordered by quantitative attribute: by label (alphabetical), by length attribute (data-driven)
+
+**Tasks:** compare, lookup values
+
+**Scalability:** dozens to hundreds of levels for key attribute (bars), hundreds for values.
+:::
+
+::: {.column width="40%"}
+![](animalbar.png)
+:::
+:::
+
+## IDIOM: Stacked Bar Chart {.smaller}
+
+**Two keys, One value**
+
+::: columns
+::: {.column width="60%"}
+**Data:** 2 categorical attribute, 1 quantitative attribute
+
+**Mark:** vertical stack of line marks
+
+**Glyph:** composite object, internal structure from multiple marks
+
+**Channels:** length and color hue
+
+**Spatial regions:** one per glyph
+
+**Aligned:** full glyph, lowest bar component
+
+**Unaligned:** other bar components
+
+**Task:** part-to-whole relationship
+
+**Scalability:** asymmetric for stacked key attrib, 10-12 levels segments for main key attrib, dozens to hundreds of levels bars
+:::
+
+::: {.column width="40%"}
+
+![](stackedbar.png)
+
+:::
+:::
+
+## IDIOM: Streamgraph {.smaller}
+
+Generalized stacked graph emphasizing horizontal continuity vs vertical items [(example)](https://observablehq.com/@d3/streamgraph-transitions)
+
+::: columns
+::: {.column width="40%"}
+**Data:** 1 categ key attrib (movies) 1 ordered key attrib (time) 1 quant value attrib (counts) derived data geometry: layers, where height encodes counts 1 quant attrib (layer ordering)
+
+**Mark:** vertical stack of line marks
+
+**Channels:** length and color hue
 
 
-one key, one value
-data
-1 categ attrib, 1 quant attrib
-mark: lines
-channels
-length to express quant value
-spatial regions: one per mark
-separated horizontally, aligned vertically
-ordered by quant attrib
-by label (alphabetical), by length attrib (data-driven)
-task
-compare, lookup values
-scalability
-dozens to hundreds of levels for key attrib [bars], hundreds for values
+**Task:** part-to-whole relationship
 
-## IDIOM: Stacked Bar Chart
+**Scalability:** hundreds of time keys dozens to hundreds of movies keys more than stacked bars: most layers don't extend across whole chart
 
-one more key
-data
-2 categ attrib, 1 quant attrib
-mark: vertical stack of line marks
-glyph: composite object, internal structure from multiple marks
-channels
-length and color hue
-spatial regions: one per glyph
-aligned: full glyph, lowest bar component
-unaligned: other bar components
-task
-part-to-whole relationship
-scalability: asymmetric
-for stacked key attrib, 10-12 levels [segments]
-for main key attrib, dozens to hundreds of levels [bars]
+:::
 
-## IDIOM: Streamgraph
-
-generalized stacked graph
-emphasizing horizontal continuity
-vs vertical items
-data
-1 categ key attrib (movies)
-1 ordered key attrib (time)
-1 quant value attrib (counts)
-derived data
-geometry: layers, where height encodes counts
-1 quant attrib (layer ordering)
-scalability
-hundreds of time keys
-dozens to hundreds of movies keys
-more than stacked bars: most layers don’t extend across whole chart
-
+::: {.column width="60%"}
 ![](stream.png)
 
 ![](stream2.png)
+:::
+:::
 
+## IDIOM: Dot/Line Chart {.smaller}
 
-## IDIOM: Dot/Line Chart
+**One key, One value**
 
+::: columns
+::: {.column width="60%"}
 
-one key, one value
-data
-2 quant attribs
-mark: points AND line connection marks between them
-channels
-aligned lengths to express quant value
-separated and ordered by key attrib into horizontal regions
-task
-find trend
-connection marks emphasize ordering of items along key axis by explicitly showing relationship between one item and the next
-scalability
-hundreds of key levels, hundreds of value levels
+**Data:**2 quant attribs
 
-## BAR vs LINE CHARTS
+**Mark:** points AND line connection marks between them 
 
-depends on type of key attrib
-bar charts if categorical
-line charts if ordered
-do not use line charts for categorical key attribs
-violates expressiveness principle
-implication of trend so strong that it overrides semantics!
-“The more male a person is, the taller he/she is”
+**Channels:** aligned lengths to express quant value separated and ordered by key attrib into horizontal regions
+
+**Task:** find trend connection marks emphasize ordering of items along key axis by explicitly showing relationship between one item and the next 
+
+**Scalability:** hhundreds of key levels, hundreds of value levels
+
+:::
+
+::: {.column width="40%"}
+
+![](dotline.png){height="500"}
+:::
+::::
+
+## BAR vs LINE CHARTS {.smaller}
+
+Choice depends on the type of key attributes.
+
+Bar charts if categorical, Line charts if ordered. Do not use line charts for categorical key attributes as it violates the **expressiveness principle**. The implication of trend is so strong that it overrides semantics. "The more male a person is, the taller he/she is"
 
 ![](barsandlines.png)
 
-## CHART AXES
+## CHART AXES {.smaller}
 
-best practice to label
-few exceptions: individual small multiple views could share axis label
+::::{.columns}
+:::{.column width="30%"}
 
-include 0 at bottom left or slope misleads
-some exceptions (arbitrary 0, small change matters)
+**Best practice to label axes**, with few exceptions. Individual small multiple views could share axis label.
 
-Truncating the Y-Axis: Threat or Menace?Correll, Bertini, & Franconeri, CHI 2020.]
+**Include 0** at bottom left or the slope misleads.  There are some exceptions (arbitrary 0, small change matters).
+
+Truncating the Y-Axis: Threat or Menace? Correll, Bertini, & Franconeri, CHI 2020.
+
+:::
+
+:::{.column width="50%"}
 
 ![](axes1.png)
 
+:::
+
+:::{.column width="20%"}
+
 ![](axes2.png)
 
-## IDIOM: Indexed Line Charts
+:::
+::::
 
-data: 2 quant attribs
-1 key + 1 value
-derived data: new quant value attrib
-index
-plot instead of original value
-task: show change over time
-principle: normalized, not absolute
-scalability
-same as standard line chart
+## IDIOM: Indexed Line Charts {.smaller}
+
+::::{.columns}
+:::{.column width="40%"}
+
+**Data:** 2 quant attribs 1 key + 1 value 
+
+**Derived data:** new quant value attrib index plot instead of original value 
+
+**Task:** show change over time 
+
+**Principle:** normalized, not absolute 
+
+**Scalability:** same as standard line chart
+
+:::
+
+:::{.column width="60%"}
 
 ![](indexedline.png)
 
-## IDIOM: Gantt Charts
+[Cool Example](https://observablehq.com/@vega/vega-lite-interactive-index-chart)
+
+:::
+::::
+
+## IDIOM: Gantt Charts {.smaller}
 
 one key, two (related) values
-data
-1 categ attrib, 2 quant attribs
-mark: line
-length: duration
-channels
-horiz position: start time (+end from duration)
-task
-emphasize temporal overlaps & start/end dependencies between items
-scalability
-dozens of key levels [bars]
-hundreds of value levels [durations]
 
-## IDIOM: Slopegraphs
+::::{.columns}
+:::{.column width="40%"}
 
-two values
-data
-2 quant value attribs
-(1 derived attrib: change magnitude)
-mark: point + line
-line connecting mark between pts
-channels
-2 vertical pos: express attrib value
-(linewidth/size, color)
-task
-emphasize changes in rank/value
-scalability
-hundreds of value levels
-dozens of items
+**Data:** 1 categ attrib, 2 quant attribs 
+
+**Mark:** line length: duration
+
+**Channels:** horiz position: start time (+end from duration)
+
+**Task:** mphasize temporal overlaps & start/end dependencies between items
+
+**Scalability:** dozens of key levels bars hundreds of value levels durations
+:::
+
+:::{.column width="60%"}
+
+![](gantt.png)
+:::
+::::
+
+
+## IDIOM: Slopegraphs {.smaller}
+
+two values 
+
+::::{.columns}
+:::{.column width="40%"}
+
+**Data:** 2 quant value attribs (1 derived attrib: change magnitude)  
+
+**Mark:** point + line line connecting mark between pts
+
+**Channels:** 2 vertical pos: express attrib value (linewidth/size, color) 
+
+**Task:** emphasize changes in rank/value
+
+**Scalability:** hundreds of value levels dozens of item
+:::
+
+:::{.column width="60%"}
 
 ![](slopegraph.png)
+:::
+::::
 
 ## 2 KEYS
 
-## IDIOM:  Heatmap
+## IDIOM: Heatmap {.smaller}
 
-two keys, one value
-data
-2 categ attribs (gene, experimental condition)
-1 quant attrib (expression levels)
-marks: point
-separate and align in 2D matrix
-indexed by 2 categorical attributes
-channels
-color by quant attrib
-(ordered diverging colormap)
-task
-find clusters, outliers
-scalability
-1M items, 100s of categ levels, ~10 quant attrib levels
+two keys, one value 
 
+::::{.columns}
+:::{.column width="40%"}
+
+**Data:** 2 categ attribs (gene, experimental condition) 1 quant attrib (expression levels) 
+
+**Mark:** point separate and align in 2D matrix indexed by 2 categorical attributes 
+
+**Channels:** color by quant attrib (ordered diverging colormap) 
+
+**Task:** find clusters, outliers
+
+**Scalability:** 1M items, 100s of categ levels, \~10 quant attrib levels
+:::
+
+:::{.column width="60%"}
 
 ![](heatmapbad.png)
+:::
+::::
+
+
+
 
 ## HEATMAP REORDERING
 
 ![](heatmaporder.png)
 
-## CLUSTERED HEATMAP
+## CLUSTERED HEATMAP {.smaller}
 
-in addition
-derived data
-2 cluster hierarchies
-dendrogram
-parent-child relationships in tree with connection line marks
-leaves aligned so interior branch heights easy to compare
-heatmap
-marks (re-)ordered by cluster hierarchy traversal
-task: assess quality of clusters found by automatic methods
+[Use derived data:]{.red} compute 2 cluster hierarchies and represent as a dendrogram. Parent-child relationships represented in tree with connection line marks, leaves aligned so interior branch heights are easy to compare. Heatmap marks are (re-)ordered by cluster hierarchy traversal. **Task:** assess quality of clusters found by automatic methods
 
 ![](heatmapcluster.png)
-
-
-
-
-
-

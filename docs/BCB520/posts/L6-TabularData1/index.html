@@ -340,10 +340,6 @@ Barrie Robison
 
   <p class="date">2/28/23</p>
 </section>
-<section id="what" class="slide level2">
-<h2>WHAT?</h2>
-<p><img data-src="what.png" class="absolute" style="bottom: 0px; height: 400px; "> Before you design a visualization, you need to understand the <span class="red">data</span>. Here, we consider the semantics to describe the <span class="blue">DATA TYPES</span> and <span class="blue">DATA ATTRIBUTES</span>.</p>
-</section>
 <section id="the-three-major-data-types" class="slide level2">
 <h2>THE THREE MAJOR DATA TYPES</h2>
 <div class="r-stack">
@@ -352,11 +348,7 @@ Barrie Robison
 <p><img data-src="Spatial.png" class="fragment absolute" style="left: 520px; bottom: 75px; height: 390px; "></p>
 </div>
 </section>
-<section id="data-attributes" class="slide level2">
-<h2>DATA ATTRIBUTES</h2>
-<p><img data-src="Attributes.png" class="absolute" style="bottom: 70px; width: 800px; "></p>
-</section>
-<section id="what-1" class="slide level2">
+<section id="what" class="slide level2">
 <h2>WHAT?</h2>
 <p>Computer-based visualization systems provide visual representations of <span class="red">datasets</span> designed to help people carry out tasks more effectively.</p>
 <p><img data-src="whatexpanded.png" class="absolute" style="bottom: 0px; right: 0px; width: 450px; "></p>
@@ -406,7 +398,7 @@ Barrie Robison
 <li>often called a <strong>variable</strong></li>
 </ul></li>
 <li><p>A cell holds the <span class="red">VALUE</span> for an item/attribute pair</p></li>
-<li><p>A UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes</p></li>
+<li><p>A unique <span class="red">KEY</span> can be used (implicitly or explicitly) to identify each item even if they share all measured attributes</p></li>
 </ul>
 </div><div class="column" style="width:60%;">
 <p><img data-src="flattable.png"></p>
@@ -415,12 +407,33 @@ Barrie Robison
 </section>
 <section id="flat-table-example" class="slide level2">
 <h2>FLAT TABLE EXAMPLE</h2>
+<div id="fig-tables" class="quarto-layout-panel">
+<figure>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
 <p><img data-src="spreadsheet.png"></p>
-<p><img data-src="Cthulhuflat.png"></p>
+<p></p><figcaption>A dumb spreadsheet</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Cthulhuflat.png" width="380"></p>
+<p></p><figcaption>A cool spreadsheet</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption>Figure&nbsp;1: Flat Tables</figcaption><p></p>
+</figure>
+</div>
 </section>
 <section id="multidimensional-tables" class="slide level2">
 <h2>MULTIDIMENSIONAL TABLES</h2>
-<p>indexing based on multiple keys (eg genes, patients)</p>
+<p>Indexing based on multiple <span class="red">keys</span> (eg genes, patients)</p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -432,102 +445,295 @@ Barrie Robison
 </div>
 </div>
 </section>
-<section id="keys-and-values" class="slide level2">
+<section id="keys-and-values" class="slide level2 smaller">
 <h2>KEYS AND VALUES</h2>
-<p>key independent attribute used as unique index to look up items simple tables: 1 key multidimensional tables: multiple keys value dependent attribute, value of cell classify arrangements by keys used 0, 1, 2, …</p>
-
-<img data-src="numkeys.png" class="r-stretch"></section>
-<section id="idiom-scatterplot" class="slide level2">
-<h2>IDIOM: Scatterplot</h2>
-<p>express values (magnitudes) quantitative attributes no keys, only values no keys, only values data 2 quant attribs mark: points channels horiz + vert position tasks find trends, outliers, distribution, correlation, clusters scalability hundreds of items</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><span class="red">KEY:</span> an independent attribute used as unique index to look up items.</p>
+<ul>
+<li><p>Simple tables: 1 key</p></li>
+<li><p>Multidimensional tables: multiple keys</p></li>
+</ul>
+<p><span class="red">Value:</span> a dependent attribute, value of cell</p>
+<p>We will classify visualization idioms by the number of keys used.</p>
+<p>0, 1, 2, …</p>
+</div><div class="column" style="width:40%;">
+<p><img data-src="numkeys.png"></p>
+</div>
+</div>
 </section>
-<section id="scatterplots-more-channels" class="slide level2">
+<section id="idiom-scatterplot" class="slide level2 smaller">
+<h2>IDIOM: Scatterplot</h2>
+<p><strong>0 KEYS:</strong> Only values are available or salient to the task.</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><strong>Express values</strong> (magnitudes) of quantitative attributes.</p>
+<p><strong>Data:</strong> 2 quantitative attributes</p>
+<p><strong>Mark:</strong> points</p>
+<p><strong>Channels:</strong> horizontal and verical position</p>
+<p><strong>Tasks:</strong> find trends, outliers, distribution, correlation, clusters</p>
+<p><strong>Scalability:</strong> hundreds of items</p>
+</div><div class="column" style="width:40%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-1-1.png" width="384"></p>
+<p></p><figcaption>Height and Weight of drafted NHL players.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="idiom-scatterplot-1" class="slide level2 smaller">
+<h2>IDIOM: Scatterplot</h2>
+<p><strong>0 KEYS:</strong> Only values are available or salient to the task.</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><strong>Express values</strong> (magnitudes) of quantitative attributes.</p>
+<p><strong>Data:</strong> 2 quantitative attributes</p>
+<p><strong>Mark:</strong> points</p>
+<p><strong>Channels:</strong> horizontal and verical position</p>
+<p><strong>Tasks:</strong> find trends, <span class="red">outliers</span>, distribution, correlation, clusters</p>
+<p><strong>Scalability:</strong> hundreds of items</p>
+</div><div class="column" style="width:40%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="384"></p>
+<p></p><figcaption>Height and Weight of drafted NHL players.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="scatterplots-more-channels" class="slide level2 smaller">
 <h2>SCATTERPLOTS: More channels</h2>
-<p>additional channels viable since using point marks color size (1 quant attribute, used to control 2D area) note radius would mislead, take square root since area grows quadratically shape</p>
+<p><strong>Additional channels are viable with scatterplots since we are using point marks.</strong></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><strong>Examples:</strong></p>
+<p><strong>Color:</strong> But pay attention to Discriminability!</p>
+<p><strong>Size:</strong> But pay attention to using a quantitative attribute used to control 2D area. Directly encoding radius would mislead. Take the square root since area grows quadratically.</p>
+<p><strong>Shape:</strong></p>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-3-1.png" width="480"></p>
+<p></p><figcaption>Height and Weight of drafted NHL goaltenders.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="scatterplot-tasks" class="slide level2">
 <h2>SCATTERPLOT TASKS</h2>
 <p>Correlation</p>
-<p>clusters/groups, and clusters vs classes</p>
+<p><img data-src="correl.png"></p>
+<p>Clusters/groups, and clusters vs classes</p>
+<p><img data-src="clusters.png"></p>
 </section>
-<section id="keys-categorical-regions" class="slide level2">
+<section id="keys-categorical-regions" class="slide level2 smaller">
 <h2>KEYS: Categorical Regions</h2>
-<p>regions: contiguous bounded areas distinct from each other separate into spatial regions: one mark per region (for now) use categorical or ordered attribute to separate into regions no conflict with expressiveness principle for categorical attributes use ordered attribute to order and align regions</p>
-
-<img data-src="sepordalign.png" class="r-stretch"></section>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Regions: contiguous bounded areas distinct from each other
+<ul>
+<li><span class="red">NO OVERPLOTTING:</span> separate into spatial regions: one mark per region (for now)</li>
+</ul></li>
+<li>use categorical or ordered attribute to separate into regions
+<ul>
+<li>no conflict with expressiveness principle for categorical attributes</li>
+</ul></li>
+<li>use ordered attribute to order and align regions</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="somekeys.png"></p>
+<p><img data-src="sepordalign.png"></p>
+</div>
+</div>
+</section>
 <section id="separated-and-aligned-and-ordered" class="slide level2">
 <h2>Separated and aligned and ordered</h2>
-<p>best case</p>
-</section>
-<section id="separated-and-aligned-but-not-ordered" class="slide level2">
-<h2>Separated and aligned but not ordered</h2>
-<p>limitation: hard to know rank. what’s 4th? what’s 7th?</p>
-</section>
+<p>Best case!</p>
+
+<img data-src="orderedbar.png" class="r-stretch"></section>
+<section id="separatedaligned---not-ordered" class="slide level2">
+<h2>Separated/aligned - not ordered</h2>
+<p>Limitation: hard to know rank. what’s 4th? what’s 7th?</p>
+
+<img data-src="unorderedbar.png" class="r-stretch"></section>
 <section id="separated-but-not-aligned-or-ordered" class="slide level2">
 <h2>Separated but not aligned or ordered</h2>
-<p>limitation: hard to make comparisons with size (vs aligned position)</p>
+<p>Limitation: hard to make comparisons with size (vs aligned position)</p>
 
 <img data-src="circles.png" class="r-stretch"></section>
-<section id="idiom-bar-chart" class="slide level2">
+<section id="idiom-bar-chart" class="slide level2 smaller">
 <h2>IDIOM: Bar Chart</h2>
-<p>one key, one value data 1 categ attrib, 1 quant attrib mark: lines channels length to express quant value spatial regions: one per mark separated horizontally, aligned vertically ordered by quant attrib by label (alphabetical), by length attrib (data-driven) task compare, lookup values scalability dozens to hundreds of levels for key attrib [bars], hundreds for values</p>
+<p><strong>One key, One value</strong></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><strong>Data:</strong> 1 categorical attribute, 1 quantitative attribute</p>
+<p><strong>Mark:</strong> Lines</p>
+<p><strong>Channels:</strong> Length to express quantitative value</p>
+<p><strong>Spatial regions:</strong> one per mark - separated horizontally, aligned vertically. Ordered by quantitative attribute: by label (alphabetical), by length attribute (data-driven)</p>
+<p><strong>Tasks:</strong> compare, lookup values</p>
+<p><strong>Scalability:</strong> dozens to hundreds of levels for key attribute (bars), hundreds for values.</p>
+</div><div class="column" style="width:40%;">
+<p><img data-src="animalbar.png"></p>
+</div>
+</div>
 </section>
-<section id="idiom-stacked-bar-chart" class="slide level2">
+<section id="idiom-stacked-bar-chart" class="slide level2 smaller">
 <h2>IDIOM: Stacked Bar Chart</h2>
-<p>one more key data 2 categ attrib, 1 quant attrib mark: vertical stack of line marks glyph: composite object, internal structure from multiple marks channels length and color hue spatial regions: one per glyph aligned: full glyph, lowest bar component unaligned: other bar components task part-to-whole relationship scalability: asymmetric for stacked key attrib, 10-12 levels [segments] for main key attrib, dozens to hundreds of levels [bars]</p>
+<p><strong>Two keys, One value</strong></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><strong>Data:</strong> 2 categorical attribute, 1 quantitative attribute</p>
+<p><strong>Mark:</strong> vertical stack of line marks</p>
+<p><strong>Glyph:</strong> composite object, internal structure from multiple marks</p>
+<p><strong>Channels:</strong> length and color hue</p>
+<p><strong>Spatial regions:</strong> one per glyph</p>
+<p><strong>Aligned:</strong> full glyph, lowest bar component</p>
+<p><strong>Unaligned:</strong> other bar components</p>
+<p><strong>Task:</strong> part-to-whole relationship</p>
+<p><strong>Scalability:</strong> asymmetric for stacked key attrib, 10-12 levels segments for main key attrib, dozens to hundreds of levels bars</p>
+</div><div class="column" style="width:40%;">
+<p><img data-src="stackedbar.png"></p>
+</div>
+</div>
 </section>
-<section id="idiom-streamgraph" class="slide level2">
+<section id="idiom-streamgraph" class="slide level2 smaller">
 <h2>IDIOM: Streamgraph</h2>
-<p>generalized stacked graph emphasizing horizontal continuity vs vertical items data 1 categ key attrib (movies) 1 ordered key attrib (time) 1 quant value attrib (counts) derived data geometry: layers, where height encodes counts 1 quant attrib (layer ordering) scalability hundreds of time keys dozens to hundreds of movies keys more than stacked bars: most layers don’t extend across whole chart</p>
+<p>Generalized stacked graph emphasizing horizontal continuity vs vertical items <a href="https://observablehq.com/@d3/streamgraph-transitions">(example)</a></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><strong>Data:</strong> 1 categ key attrib (movies) 1 ordered key attrib (time) 1 quant value attrib (counts) derived data geometry: layers, where height encodes counts 1 quant attrib (layer ordering)</p>
+<p><strong>Mark:</strong> vertical stack of line marks</p>
+<p><strong>Channels:</strong> length and color hue</p>
+<p><strong>Task:</strong> part-to-whole relationship</p>
+<p><strong>Scalability:</strong> hundreds of time keys dozens to hundreds of movies keys more than stacked bars: most layers don’t extend across whole chart</p>
+</div><div class="column" style="width:60%;">
 <p><img data-src="stream.png"></p>
 <p><img data-src="stream2.png"></p>
+</div>
+</div>
 </section>
-<section id="idiom-dotline-chart" class="slide level2">
+<section id="idiom-dotline-chart" class="slide level2 smaller">
 <h2>IDIOM: Dot/Line Chart</h2>
-<p>one key, one value data 2 quant attribs mark: points AND line connection marks between them channels aligned lengths to express quant value separated and ordered by key attrib into horizontal regions task find trend connection marks emphasize ordering of items along key axis by explicitly showing relationship between one item and the next scalability hundreds of key levels, hundreds of value levels</p>
+<p><strong>One key, One value</strong></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><strong>Data:</strong>2 quant attribs</p>
+<p><strong>Mark:</strong> points AND line connection marks between them</p>
+<p><strong>Channels:</strong> aligned lengths to express quant value separated and ordered by key attrib into horizontal regions</p>
+<p><strong>Task:</strong> find trend connection marks emphasize ordering of items along key axis by explicitly showing relationship between one item and the next</p>
+<p><strong>Scalability:</strong> hhundreds of key levels, hundreds of value levels</p>
+</div><div class="column" style="width:40%;">
+<p><img data-src="dotline.png" height="500"></p>
+</div>
+</div>
 </section>
-<section id="bar-vs-line-charts" class="slide level2">
+<section id="bar-vs-line-charts" class="slide level2 smaller">
 <h2>BAR vs LINE CHARTS</h2>
-<p>depends on type of key attrib bar charts if categorical line charts if ordered do not use line charts for categorical key attribs violates expressiveness principle implication of trend so strong that it overrides semantics! “The more male a person is, the taller he/she is”</p>
+<p>Choice depends on the type of key attributes.</p>
+<p>Bar charts if categorical, Line charts if ordered. Do not use line charts for categorical key attributes as it violates the <strong>expressiveness principle</strong>. The implication of trend is so strong that it overrides semantics. “The more male a person is, the taller he/she is”</p>
 
 <img data-src="barsandlines.png" class="r-stretch"></section>
-<section id="chart-axes" class="slide level2">
+<section id="chart-axes" class="slide level2 smaller">
 <h2>CHART AXES</h2>
-<p>best practice to label few exceptions: individual small multiple views could share axis label</p>
-<p>include 0 at bottom left or slope misleads some exceptions (arbitrary 0, small change matters)</p>
-<p>Truncating the Y-Axis: Threat or Menace?Correll, Bertini, &amp; Franconeri, CHI 2020.]</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><strong>Best practice to label axes</strong>, with few exceptions. Individual small multiple views could share axis label.</p>
+<p><strong>Include 0</strong> at bottom left or the slope misleads. There are some exceptions (arbitrary 0, small change matters).</p>
+<p>Truncating the Y-Axis: Threat or Menace? Correll, Bertini, &amp; Franconeri, CHI 2020.</p>
+</div><div class="column" style="width:50%;">
 <p><img data-src="axes1.png"></p>
+</div><div class="column" style="width:20%;">
 <p><img data-src="axes2.png"></p>
+</div>
+</div>
 </section>
-<section id="idiom-indexed-line-charts" class="slide level2">
+<section id="idiom-indexed-line-charts" class="slide level2 smaller">
 <h2>IDIOM: Indexed Line Charts</h2>
-<p>data: 2 quant attribs 1 key + 1 value derived data: new quant value attrib index plot instead of original value task: show change over time principle: normalized, not absolute scalability same as standard line chart</p>
-
-<img data-src="indexedline.png" class="r-stretch"></section>
-<section id="idiom-gantt-charts" class="slide level2">
-<h2>IDIOM: Gantt Charts</h2>
-<p>one key, two (related) values data 1 categ attrib, 2 quant attribs mark: line length: duration channels horiz position: start time (+end from duration) task emphasize temporal overlaps &amp; start/end dependencies between items scalability dozens of key levels [bars] hundreds of value levels [durations]</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><strong>Data:</strong> 2 quant attribs 1 key + 1 value</p>
+<p><strong>Derived data:</strong> new quant value attrib index plot instead of original value</p>
+<p><strong>Task:</strong> show change over time</p>
+<p><strong>Principle:</strong> normalized, not absolute</p>
+<p><strong>Scalability:</strong> same as standard line chart</p>
+</div><div class="column" style="width:60%;">
+<p><img data-src="indexedline.png"></p>
+<p><a href="https://observablehq.com/@vega/vega-lite-interactive-index-chart">Cool Example</a></p>
+</div>
+</div>
 </section>
-<section id="idiom-slopegraphs" class="slide level2">
+<section id="idiom-gantt-charts" class="slide level2 smaller">
+<h2>IDIOM: Gantt Charts</h2>
+<p>one key, two (related) values</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><strong>Data:</strong> 1 categ attrib, 2 quant attribs</p>
+<p><strong>Mark:</strong> line length: duration</p>
+<p><strong>Channels:</strong> horiz position: start time (+end from duration)</p>
+<p><strong>Task:</strong> mphasize temporal overlaps &amp; start/end dependencies between items</p>
+<p><strong>Scalability:</strong> dozens of key levels bars hundreds of value levels durations</p>
+</div><div class="column" style="width:60%;">
+<p><img data-src="gantt.png"></p>
+</div>
+</div>
+</section>
+<section id="idiom-slopegraphs" class="slide level2 smaller">
 <h2>IDIOM: Slopegraphs</h2>
-<p>two values data 2 quant value attribs (1 derived attrib: change magnitude) mark: point + line line connecting mark between pts channels 2 vertical pos: express attrib value (linewidth/size, color) task emphasize changes in rank/value scalability hundreds of value levels dozens of items</p>
-
-<img data-src="slopegraph.png" class="r-stretch"></section>
+<p>two values</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><strong>Data:</strong> 2 quant value attribs (1 derived attrib: change magnitude)</p>
+<p><strong>Mark:</strong> point + line line connecting mark between pts</p>
+<p><strong>Channels:</strong> 2 vertical pos: express attrib value (linewidth/size, color)</p>
+<p><strong>Task:</strong> emphasize changes in rank/value</p>
+<p><strong>Scalability:</strong> hundreds of value levels dozens of item</p>
+</div><div class="column" style="width:60%;">
+<p><img data-src="slopegraph.png"></p>
+</div>
+</div>
+</section>
 <section id="keys" class="slide level2">
 <h2>2 KEYS</h2>
 </section>
-<section id="idiom-heatmap" class="slide level2">
+<section id="idiom-heatmap" class="slide level2 smaller">
 <h2>IDIOM: Heatmap</h2>
-<p>two keys, one value data 2 categ attribs (gene, experimental condition) 1 quant attrib (expression levels) marks: point separate and align in 2D matrix indexed by 2 categorical attributes channels color by quant attrib (ordered diverging colormap) task find clusters, outliers scalability 1M items, 100s of categ levels, ~10 quant attrib levels</p>
-
-<img data-src="heatmapbad.png" class="r-stretch"></section>
+<p>two keys, one value</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><strong>Data:</strong> 2 categ attribs (gene, experimental condition) 1 quant attrib (expression levels)</p>
+<p><strong>Mark:</strong> point separate and align in 2D matrix indexed by 2 categorical attributes</p>
+<p><strong>Channels:</strong> color by quant attrib (ordered diverging colormap)</p>
+<p><strong>Task:</strong> find clusters, outliers</p>
+<p><strong>Scalability:</strong> 1M items, 100s of categ levels, ~10 quant attrib levels</p>
+</div><div class="column" style="width:60%;">
+<p><img data-src="heatmapbad.png"></p>
+</div>
+</div>
+</section>
 <section id="heatmap-reordering" class="slide level2">
 <h2>HEATMAP REORDERING</h2>
 
 <img data-src="heatmaporder.png" class="r-stretch"></section>
-<section id="clustered-heatmap" class="slide level2">
+<section id="clustered-heatmap" class="slide level2 smaller">
 <h2>CLUSTERED HEATMAP</h2>
-<p>in addition derived data 2 cluster hierarchies dendrogram parent-child relationships in tree with connection line marks leaves aligned so interior branch heights easy to compare heatmap marks (re-)ordered by cluster hierarchy traversal task: assess quality of clusters found by automatic methods</p>
+<p><span class="red">Use derived data:</span> compute 2 cluster hierarchies and represent as a dendrogram. Parent-child relationships represented in tree with connection line marks, leaves aligned so interior branch heights are easy to compare. Heatmap marks are (re-)ordered by cluster hierarchy traversal. <strong>Task:</strong> assess quality of clusters found by automatic methods</p>
 
 
 <img data-src="heatmapcluster.png" class="r-stretch"><div class="footer footer-default">
@@ -747,6 +953,44 @@ Barrie Robison
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

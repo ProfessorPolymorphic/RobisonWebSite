@@ -1397,7 +1397,7 @@
     "href": "BCB520/posts/L6-TabularData1/index.html#what",
     "title": "LECTURE 6 - Tabular Data",
     "section": "WHAT?",
-    "text": "WHAT?\n Before you design a visualization, you need to understand the data. Here, we consider the semantics to describe the DATA TYPES and DATA ATTRIBUTES."
+    "text": "WHAT?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#the-three-major-data-types",
@@ -1432,119 +1432,119 @@
     "href": "BCB520/posts/L6-TabularData1/index.html#dataset-types-tables",
     "title": "LECTURE 6 - Tabular Data",
     "section": "DATASET TYPES: TABLES",
-    "text": "DATASET TYPES: TABLES\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
+    "text": "DATASET TYPES: TABLES\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA unique KEY can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#flat-table-example",
     "href": "BCB520/posts/L6-TabularData1/index.html#flat-table-example",
     "title": "LECTURE 6 - Tabular Data",
     "section": "FLAT TABLE EXAMPLE",
-    "text": "FLAT TABLE EXAMPLE"
+    "text": "FLAT TABLE EXAMPLE\n\n\n\n\n\n\n\nA dumb spreadsheet\n\n\n\n\n\n\n\nA cool spreadsheet\n\n\n\n\nFigure 1: Flat Tables"
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#multidimensional-tables",
     "href": "BCB520/posts/L6-TabularData1/index.html#multidimensional-tables",
     "title": "LECTURE 6 - Tabular Data",
     "section": "MULTIDIMENSIONAL TABLES",
-    "text": "MULTIDIMENSIONAL TABLES\nindexing based on multiple keys (eg genes, patients)"
+    "text": "MULTIDIMENSIONAL TABLES\nIndexing based on multiple keys (eg genes, patients)"
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#keys-and-values",
     "href": "BCB520/posts/L6-TabularData1/index.html#keys-and-values",
     "title": "LECTURE 6 - Tabular Data",
     "section": "KEYS AND VALUES",
-    "text": "KEYS AND VALUES\nkey independent attribute used as unique index to look up items simple tables: 1 key multidimensional tables: multiple keys value dependent attribute, value of cell classify arrangements by keys used 0, 1, 2, …"
+    "text": "KEYS AND VALUES\n\n\nKEY: an independent attribute used as unique index to look up items.\n\nSimple tables: 1 key\nMultidimensional tables: multiple keys\n\nValue: a dependent attribute, value of cell\nWe will classify visualization idioms by the number of keys used.\n0, 1, 2, …"
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#idiom-scatterplot",
     "href": "BCB520/posts/L6-TabularData1/index.html#idiom-scatterplot",
     "title": "LECTURE 6 - Tabular Data",
     "section": "IDIOM: Scatterplot",
-    "text": "IDIOM: Scatterplot\nexpress values (magnitudes) quantitative attributes no keys, only values no keys, only values data 2 quant attribs mark: points channels horiz + vert position tasks find trends, outliers, distribution, correlation, clusters scalability hundreds of items"
+    "text": "IDIOM: Scatterplot\n0 KEYS: Only values are available or salient to the task.\n\n\nExpress values (magnitudes) of quantitative attributes.\nData: 2 quantitative attributes\nMark: points\nChannels: horizontal and verical position\nTasks: find trends, outliers, distribution, correlation, clusters\nScalability: hundreds of items\n\n\n\n\n\n\nHeight and Weight of drafted NHL players."
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#scatterplots-more-channels",
     "href": "BCB520/posts/L6-TabularData1/index.html#scatterplots-more-channels",
     "title": "LECTURE 6 - Tabular Data",
     "section": "SCATTERPLOTS: More channels",
-    "text": "SCATTERPLOTS: More channels\nadditional channels viable since using point marks color size (1 quant attribute, used to control 2D area) note radius would mislead, take square root since area grows quadratically shape"
+    "text": "SCATTERPLOTS: More channels\nAdditional channels are viable with scatterplots since we are using point marks.\n\n\nExamples:\nColor: But pay attention to Discriminability!\nSize: But pay attention to using a quantitative attribute used to control 2D area. Directly encoding radius would mislead. Take the square root since area grows quadratically.\nShape:\n\n\n\n\n\n\nHeight and Weight of drafted NHL goaltenders."
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#scatterplot-tasks",
     "href": "BCB520/posts/L6-TabularData1/index.html#scatterplot-tasks",
     "title": "LECTURE 6 - Tabular Data",
     "section": "SCATTERPLOT TASKS",
-    "text": "SCATTERPLOT TASKS\nCorrelation\nclusters/groups, and clusters vs classes"
+    "text": "SCATTERPLOT TASKS\nCorrelation\n\nClusters/groups, and clusters vs classes"
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#keys-categorical-regions",
     "href": "BCB520/posts/L6-TabularData1/index.html#keys-categorical-regions",
     "title": "LECTURE 6 - Tabular Data",
     "section": "KEYS: Categorical Regions",
-    "text": "KEYS: Categorical Regions\nregions: contiguous bounded areas distinct from each other separate into spatial regions: one mark per region (for now) use categorical or ordered attribute to separate into regions no conflict with expressiveness principle for categorical attributes use ordered attribute to order and align regions"
+    "text": "KEYS: Categorical Regions\n\n\n\nRegions: contiguous bounded areas distinct from each other\n\nNO OVERPLOTTING: separate into spatial regions: one mark per region (for now)\n\nuse categorical or ordered attribute to separate into regions\n\nno conflict with expressiveness principle for categorical attributes\n\nuse ordered attribute to order and align regions"
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#separated-and-aligned-and-ordered",
     "href": "BCB520/posts/L6-TabularData1/index.html#separated-and-aligned-and-ordered",
     "title": "LECTURE 6 - Tabular Data",
     "section": "Separated and aligned and ordered",
-    "text": "Separated and aligned and ordered\nbest case"
+    "text": "Separated and aligned and ordered\nBest case!"
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#separated-and-aligned-but-not-ordered",
     "href": "BCB520/posts/L6-TabularData1/index.html#separated-and-aligned-but-not-ordered",
     "title": "LECTURE 6 - Tabular Data",
     "section": "Separated and aligned but not ordered",
-    "text": "Separated and aligned but not ordered\nlimitation: hard to know rank. what’s 4th? what’s 7th?"
+    "text": "Separated and aligned but not ordered\nLimitation: hard to know rank. what’s 4th? what’s 7th?"
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#separated-but-not-aligned-or-ordered",
     "href": "BCB520/posts/L6-TabularData1/index.html#separated-but-not-aligned-or-ordered",
     "title": "LECTURE 6 - Tabular Data",
     "section": "Separated but not aligned or ordered",
-    "text": "Separated but not aligned or ordered\nlimitation: hard to make comparisons with size (vs aligned position)"
+    "text": "Separated but not aligned or ordered\nLimitation: hard to make comparisons with size (vs aligned position)"
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#idiom-bar-chart",
     "href": "BCB520/posts/L6-TabularData1/index.html#idiom-bar-chart",
     "title": "LECTURE 6 - Tabular Data",
     "section": "IDIOM: Bar Chart",
-    "text": "IDIOM: Bar Chart\none key, one value data 1 categ attrib, 1 quant attrib mark: lines channels length to express quant value spatial regions: one per mark separated horizontally, aligned vertically ordered by quant attrib by label (alphabetical), by length attrib (data-driven) task compare, lookup values scalability dozens to hundreds of levels for key attrib [bars], hundreds for values"
+    "text": "IDIOM: Bar Chart\nOne key, One value\n\n\nData: 1 categorical attribute, 1 quantitative attribute\nMark: Lines\nChannels: Length to express quantitative value\nSpatial regions: one per mark - separated horizontally, aligned vertically. Ordered by quantitative attribute: by label (alphabetical), by length attribute (data-driven)\nTasks: compare, lookup values\nScalability: dozens to hundreds of levels for key attribute (bars), hundreds for values."
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#idiom-stacked-bar-chart",
     "href": "BCB520/posts/L6-TabularData1/index.html#idiom-stacked-bar-chart",
     "title": "LECTURE 6 - Tabular Data",
     "section": "IDIOM: Stacked Bar Chart",
-    "text": "IDIOM: Stacked Bar Chart\none more key data 2 categ attrib, 1 quant attrib mark: vertical stack of line marks glyph: composite object, internal structure from multiple marks channels length and color hue spatial regions: one per glyph aligned: full glyph, lowest bar component unaligned: other bar components task part-to-whole relationship scalability: asymmetric for stacked key attrib, 10-12 levels [segments] for main key attrib, dozens to hundreds of levels [bars]"
+    "text": "IDIOM: Stacked Bar Chart\nTwo keys, One value\n\n\nData: 2 categorical attribute, 1 quantitative attribute\nMark: vertical stack of line marks\nGlyph: composite object, internal structure from multiple marks\nChannels: length and color hue\nSpatial regions: one per glyph\nAligned: full glyph, lowest bar component\nUnaligned: other bar components\nTask: part-to-whole relationship\nScalability: asymmetric for stacked key attrib, 10-12 levels segments for main key attrib, dozens to hundreds of levels bars"
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#idiom-streamgraph",
     "href": "BCB520/posts/L6-TabularData1/index.html#idiom-streamgraph",
     "title": "LECTURE 6 - Tabular Data",
     "section": "IDIOM: Streamgraph",
-    "text": "IDIOM: Streamgraph\ngeneralized stacked graph emphasizing horizontal continuity vs vertical items data 1 categ key attrib (movies) 1 ordered key attrib (time) 1 quant value attrib (counts) derived data geometry: layers, where height encodes counts 1 quant attrib (layer ordering) scalability hundreds of time keys dozens to hundreds of movies keys more than stacked bars: most layers don’t extend across whole chart"
+    "text": "IDIOM: Streamgraph\nGeneralized stacked graph emphasizing horizontal continuity vs vertical items (example)\n\n\nData: 1 categ key attrib (movies) 1 ordered key attrib (time) 1 quant value attrib (counts) derived data geometry: layers, where height encodes counts 1 quant attrib (layer ordering)\nMark: vertical stack of line marks\nChannels: length and color hue\nTask: part-to-whole relationship\nScalability: hundreds of time keys dozens to hundreds of movies keys more than stacked bars: most layers don’t extend across whole chart"
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#idiom-dotline-chart",
     "href": "BCB520/posts/L6-TabularData1/index.html#idiom-dotline-chart",
     "title": "LECTURE 6 - Tabular Data",
     "section": "IDIOM: Dot/Line Chart",
-    "text": "IDIOM: Dot/Line Chart\none key, one value data 2 quant attribs mark: points \u000bAND line connection marks between them channels aligned lengths to express quant value separated and ordered by key attrib into horizontal regions task find trend connection marks emphasize ordering of items along key axis by explicitly showing relationship between one item and the next scalability hundreds of key levels, hundreds of value levels"
+    "text": "IDIOM: Dot/Line Chart\nOne key, One value\n\n\nData:2 quant attribs\nMark: points AND line connection marks between them\nChannels: aligned lengths to express quant value separated and ordered by key attrib into horizontal regions\nTask: find trend connection marks emphasize ordering of items along key axis by explicitly showing relationship between one item and the next\nScalability: hhundreds of key levels, hundreds of value levels"
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#bar-vs-line-charts",
     "href": "BCB520/posts/L6-TabularData1/index.html#bar-vs-line-charts",
     "title": "LECTURE 6 - Tabular Data",
     "section": "BAR vs LINE CHARTS",
-    "text": "BAR vs LINE CHARTS\ndepends on type of key attrib bar charts if categorical line charts if ordered do not use line charts for categorical key attribs violates expressiveness principle implication of trend so strong that it overrides semantics! “The more male a person is, the taller he/she is”"
+    "text": "BAR vs LINE CHARTS\nChoice depends on the type of key attributes.\nBar charts if categorical, Line charts if ordered. Do not use line charts for categorical key attributes as it violates the expressiveness principle. The implication of trend is so strong that it overrides semantics. “The more male a person is, the taller he/she is”"
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#chart-axes",
     "href": "BCB520/posts/L6-TabularData1/index.html#chart-axes",
     "title": "LECTURE 6 - Tabular Data",
     "section": "CHART AXES",
-    "text": "CHART AXES\nbest practice to label few exceptions: individual small multiple views could share axis label\ninclude 0 at bottom left or slope misleads some exceptions (arbitrary 0, small change matters)\nTruncating the Y-Axis: Threat or Menace?\u000bCorrell, Bertini, & Franconeri, CHI 2020.]"
+    "text": "CHART AXES\n\n\nBest practice to label axes, with few exceptions. Individual small multiple views could share axis label.\nInclude 0 at bottom left or the slope misleads. There are some exceptions (arbitrary 0, small change matters).\nTruncating the Y-Axis: Threat or Menace? Correll, Bertini, & Franconeri, CHI 2020."
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#section",
@@ -1558,21 +1558,21 @@
     "href": "BCB520/posts/L6-TabularData1/index.html#idiom-indexed-line-charts",
     "title": "LECTURE 6 - Tabular Data",
     "section": "IDIOM: Indexed Line Charts",
-    "text": "IDIOM: Indexed Line Charts\ndata: 2 quant attribs 1 key + 1 value derived data: new quant value attrib index plot instead of original value task: show change over time principle: normalized, not absolute scalability same as standard line chart"
+    "text": "IDIOM: Indexed Line Charts\n\n\nData: 2 quant attribs 1 key + 1 value\nDerived data: new quant value attrib index plot instead of original value\nTask: show change over time\nPrinciple: normalized, not absolute\nScalability: same as standard line chart\n\n\nCool Example"
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#idiom-gantt-charts",
     "href": "BCB520/posts/L6-TabularData1/index.html#idiom-gantt-charts",
     "title": "LECTURE 6 - Tabular Data",
     "section": "IDIOM: Gantt Charts",
-    "text": "IDIOM: Gantt Charts\none key, two (related) values data 1 categ attrib, 2 quant attribs mark: line length: duration channels horiz position: start time \u000b(+end from duration) task emphasize temporal overlaps & start/end dependencies between items scalability dozens of key levels [bars] hundreds of value levels [durations]"
+    "text": "IDIOM: Gantt Charts\none key, two (related) values\n\n\nData: 1 categ attrib, 2 quant attribs\nMark: line length: duration\nChannels: horiz position: start time (+end from duration)\nTask: mphasize temporal overlaps & start/end dependencies between items\nScalability: dozens of key levels bars hundreds of value levels durations"
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#idiom-slopegraphs",
     "href": "BCB520/posts/L6-TabularData1/index.html#idiom-slopegraphs",
     "title": "LECTURE 6 - Tabular Data",
     "section": "IDIOM: Slopegraphs",
-    "text": "IDIOM: Slopegraphs\ntwo values data 2 quant value attribs (1 derived attrib: change magnitude) mark: point + line line connecting mark between pts channels 2 vertical pos: express attrib value (linewidth/size, color) task emphasize changes in rank/value scalability hundreds of value levels dozens of items"
+    "text": "IDIOM: Slopegraphs\ntwo values\n\n\nData: 2 quant value attribs (1 derived attrib: change magnitude)\nMark: point + line line connecting mark between pts\nChannels: 2 vertical pos: express attrib value (linewidth/size, color)\nTask: emphasize changes in rank/value\nScalability: hundreds of value levels dozens of item"
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#keys",
@@ -1586,7 +1586,7 @@
     "href": "BCB520/posts/L6-TabularData1/index.html#idiom-heatmap",
     "title": "LECTURE 6 - Tabular Data",
     "section": "IDIOM: Heatmap",
-    "text": "IDIOM: Heatmap\ntwo keys, one value data 2 categ attribs (gene, experimental condition) 1 quant attrib (expression levels) marks: point separate and align in 2D matrix indexed by 2 categorical attributes channels color by quant attrib (ordered diverging colormap) task find clusters, outliers scalability 1M items, 100s of categ levels, ~10 quant attrib levels"
+    "text": "IDIOM: Heatmap\ntwo keys, one value\n\n\nData: 2 categ attribs (gene, experimental condition) 1 quant attrib (expression levels)\nMark: point separate and align in 2D matrix indexed by 2 categorical attributes\nChannels: color by quant attrib (ordered diverging colormap)\nTask: find clusters, outliers\nScalability: 1M items, 100s of categ levels, ~10 quant attrib levels"
   },
   {
     "objectID": "BCB520/posts/L6-TabularData1/index.html#heatmap-reordering",
@@ -1600,6 +1600,20 @@
     "href": "BCB520/posts/L6-TabularData1/index.html#clustered-heatmap",
     "title": "LECTURE 6 - Tabular Data",
     "section": "CLUSTERED HEATMAP",
-    "text": "CLUSTERED HEATMAP\nin addition derived data 2 cluster hierarchies dendrogram parent-child relationships in tree with connection line marks leaves aligned so interior branch heights easy to compare heatmap marks (re-)ordered by cluster hierarchy traversal task: assess quality of clusters found by automatic methods\n\n\n\nCANVAS…HOME"
+    "text": "CLUSTERED HEATMAP\nUse derived data: compute 2 cluster hierarchies and represent as a dendrogram. Parent-child relationships represented in tree with connection line marks, leaves aligned so interior branch heights are easy to compare. Heatmap marks are (re-)ordered by cluster hierarchy traversal. Task: assess quality of clusters found by automatic methods\n\n\n\nCANVAS…HOME"
+  },
+  {
+    "objectID": "BCB520/posts/L6-TabularData1/index.html#idiom-scatterplot-1",
+    "href": "BCB520/posts/L6-TabularData1/index.html#idiom-scatterplot-1",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "IDIOM: Scatterplot",
+    "text": "IDIOM: Scatterplot\n0 KEYS: Only values are available or salient to the task.\n\n\nExpress values (magnitudes) of quantitative attributes.\nData: 2 quantitative attributes\nMark: points\nChannels: horizontal and verical position\nTasks: find trends, outliers, distribution, correlation, clusters\nScalability: hundreds of items\n\n\n\n\n\n\nHeight and Weight of drafted NHL players."
+  },
+  {
+    "objectID": "BCB520/posts/L6-TabularData1/index.html#separatedaligned---not-ordered",
+    "href": "BCB520/posts/L6-TabularData1/index.html#separatedaligned---not-ordered",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "Separated/aligned - not ordered",
+    "text": "Separated/aligned - not ordered\nLimitation: hard to know rank. what’s 4th? what’s 7th?"
   }
 ]
