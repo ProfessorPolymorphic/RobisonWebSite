@@ -1,0 +1,14 @@
+{
+  "hash": "6a8e90be08097135a0c64064d80a6573",
+  "result": {
+    "markdown": "---\ntitle: \"TUTORIAL 6 - APIs and JSON data\"\nexecute: \n  eval: false\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyr)\nlibrary(dplyr)\nlibrary(repurrrsive)\nlibrary(tibblify)\nlibrary(purrr)\nlibrary(tidyverse)\nlibrary(readxl)\nlibrary(rjson)\nlibrary(jsonlite)\nlibrary(ggplot2)\n\n\nBio<-fromJSON(\"draft.json\")\n\nnoway<-as.data.frame(Bio)\n\nplayers<- noway %>%\n  select(data.draftYear, data.playerId, data.playerName, data.draftYear,\n         data.roundNumber, data.overallPickNumber, data.pickInRound,\n         data.height, data.weight, data.position)\n\ncleanplayers <- drop_na(players)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\napi_url <- \"https://statsapi.web.nhl.com\"\n\n\nrecentdrafts<-cleanplayers%>%\n  filter(data.draftYear>1999, data.draftYear<2018)\nrecentdrafts$playerId<-recentdrafts$data.playerId\nplayerIds <- as.list(recentdrafts$data.playerId)\n\ntestloop<-data.frame()\n\nfor (player_id in playerIds){\n  \n  \n\nendpoint <- paste0(\"/api/v1/people/\", player_id, \"/stats?stats=yearByYear\")\n\n\nurl_json <- paste0(api_url,endpoint)\n\nraw_json <- url_json %>% \n  httr::GET() %>% \n  httr::content()\n\nargh <- tibblify(raw_json$stats[[1]]$splits)\n\nplayerstats<- unnest_wider(argh, col=c(stat,league))\nplayerstats$playerId<-player_id\nplayerstatsfinal<-playerstats %>%\n  filter(name==\"National Hockey League\") %>%\n  select(season, games, \n         name, playerId) \n  \ntestloop<-rbind(testloop,playerstatsfinal)\n}\n\nargh2 <- tibblify(glorp$stats$splits[[1]])\n\nd2000on<-full_join(testloop,recentdrafts, by=\"playerId\")\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ndataIwant <- rbind(d2000on, d2018, d2019, d2020, d2020on)\nwrite.csv(dataIwant, file=\"NHLdraftgames.csv\")\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

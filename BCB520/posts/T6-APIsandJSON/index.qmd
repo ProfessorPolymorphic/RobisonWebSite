@@ -1,8 +1,13 @@
 ---
 title: "TUTORIAL 6 - APIs and JSON data"
+execute: 
+  eval: false
 ---
 
 ```{r}
+
+
+
 library(tidyr)
 library(dplyr)
 library(repurrrsive)
@@ -29,6 +34,8 @@ cleanplayers <- drop_na(players)
 
 
 ```{r}
+#| eval: false
+
 
 api_url <- "https://statsapi.web.nhl.com"
 
@@ -74,14 +81,8 @@ d2000on<-full_join(testloop,recentdrafts, by="playerId")
 
 ```{r}
 
-library(tibblify)
 
-gh_users_small <- purrr::map(gh_users, ~ .x[c("followers", "login", "url", "name", "location", "email", "public_gists")])
-
-names(gh_users_small[[1]])
-
-tibblify(gh_users_small)
-
-guess_tspec(gh_users_small)
+dataIwant <- rbind(d2000on, d2018, d2019, d2020, d2020on)
+write.csv(dataIwant, file="NHLdraftgames.csv")
 
 ```
