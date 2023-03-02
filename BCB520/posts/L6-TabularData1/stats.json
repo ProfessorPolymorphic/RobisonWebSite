@@ -1,0 +1,597 @@
+{
+  "copyright" : "NHL and the NHL Shield are registered trademarks of the National Hockey League. NHL and NHL team marks are the property of the NHL and its teams. © NHL 2023. All Rights Reserved.",
+  "stats" : [ {
+    "type" : {
+      "displayName" : "yearByYear",
+      "gameType" : null
+    },
+    "splits" : [ {
+      "season" : "20092010",
+      "stat" : {
+        "assists" : 53,
+        "goals" : 16,
+        "pim" : 74,
+        "games" : 29,
+        "penaltyMinutes" : "74",
+        "plusMinus" : 0,
+        "points" : 69
+      },
+      "team" : {
+        "name" : "Winnipeg Monarchs Bantam AAA",
+        "link" : "/api/v1/teams/null"
+      },
+      "league" : {
+        "name" : "WBAAA",
+        "link" : "/api/v1/league/null"
+      },
+      "sequenceNumber" : 129109
+    }, {
+      "season" : "20102011",
+      "stat" : {
+        "assists" : 22,
+        "goals" : 16,
+        "pim" : 35,
+        "games" : 41,
+        "penaltyMinutes" : "35",
+        "points" : 38
+      },
+      "team" : {
+        "name" : "Wpg. Wild",
+        "link" : "/api/v1/teams/null"
+      },
+      "league" : {
+        "name" : "MMHL",
+        "link" : "/api/v1/league/null"
+      },
+      "sequenceNumber" : 1
+    }, {
+      "season" : "20102011",
+      "stat" : {
+        "assists" : 1,
+        "goals" : 0,
+        "pim" : 4,
+        "games" : 3,
+        "powerPlayGoals" : 0,
+        "penaltyMinutes" : "4",
+        "shortHandedGoals" : 0,
+        "plusMinus" : 2,
+        "points" : 1
+      },
+      "team" : {
+        "id" : 4778,
+        "name" : "Kelowna",
+        "link" : "/api/v1/teams/4778"
+      },
+      "league" : {
+        "id" : 21,
+        "name" : "WHL",
+        "link" : "/api/v1/league/21"
+      },
+      "sequenceNumber" : 2
+    }, {
+      "season" : "20112012",
+      "stat" : {
+        "assists" : 13,
+        "goals" : 8,
+        "pim" : 39,
+        "games" : 57,
+        "powerPlayGoals" : 4,
+        "penaltyMinutes" : "39",
+        "shortHandedGoals" : 1,
+        "plusMinus" : 3,
+        "points" : 21
+      },
+      "team" : {
+        "id" : 4778,
+        "name" : "Kelowna",
+        "link" : "/api/v1/teams/4778"
+      },
+      "league" : {
+        "id" : 21,
+        "name" : "WHL",
+        "link" : "/api/v1/league/21"
+      },
+      "sequenceNumber" : 1
+    }, {
+      "season" : "20122013",
+      "stat" : {
+        "assists" : 18,
+        "goals" : 12,
+        "pim" : 75,
+        "games" : 69,
+        "powerPlayGoals" : 3,
+        "penaltyMinutes" : "75",
+        "shortHandedGoals" : 0,
+        "plusMinus" : 41,
+        "points" : 30
+      },
+      "team" : {
+        "id" : 4778,
+        "name" : "Kelowna",
+        "link" : "/api/v1/teams/4778"
+      },
+      "league" : {
+        "id" : 21,
+        "name" : "WHL",
+        "link" : "/api/v1/league/21"
+      },
+      "sequenceNumber" : 1
+    }, {
+      "season" : "20122013",
+      "stat" : {
+        "assists" : 2,
+        "goals" : 2,
+        "pim" : 6,
+        "shots" : 18,
+        "games" : 7,
+        "powerPlayGoals" : 1,
+        "penaltyMinutes" : "6",
+        "shotPct" : 11.11,
+        "gameWinningGoals" : 0,
+        "shortHandedGoals" : 0,
+        "plusMinus" : 3,
+        "points" : 4
+      },
+      "team" : {
+        "id" : 60,
+        "name" : "Canada",
+        "link" : "/api/v1/teams/60"
+      },
+      "league" : {
+        "id" : 147,
+        "name" : "WJ18-A",
+        "link" : "/api/v1/league/147"
+      },
+      "sequenceNumber" : 2
+    }, {
+      "season" : "20132014",
+      "stat" : {
+        "assists" : 39,
+        "goals" : 21,
+        "pim" : 93,
+        "games" : 72,
+        "powerPlayGoals" : 6,
+        "penaltyMinutes" : "93",
+        "shortHandedGoals" : 0,
+        "plusMinus" : 44,
+        "points" : 60
+      },
+      "team" : {
+        "id" : 4778,
+        "name" : "Kelowna",
+        "link" : "/api/v1/teams/4778"
+      },
+      "league" : {
+        "id" : 21,
+        "name" : "WHL",
+        "link" : "/api/v1/league/21"
+      },
+      "sequenceNumber" : 1
+    }, {
+      "season" : "20142015",
+      "stat" : {
+        "assists" : 3,
+        "goals" : 1,
+        "pim" : 2,
+        "shots" : 17,
+        "games" : 7,
+        "powerPlayGoals" : 1,
+        "penaltyMinutes" : "2",
+        "gameWinningGoals" : 0,
+        "shortHandedGoals" : 0,
+        "plusMinus" : 8,
+        "points" : 4
+      },
+      "team" : {
+        "id" : 60,
+        "name" : "Canada",
+        "link" : "/api/v1/teams/60"
+      },
+      "league" : {
+        "id" : 147,
+        "name" : "WJC-A",
+        "link" : "/api/v1/league/147"
+      },
+      "sequenceNumber" : 1
+    }, {
+      "season" : "20142015",
+      "stat" : {
+        "assists" : 43,
+        "goals" : 17,
+        "pim" : 66,
+        "games" : 58,
+        "powerPlayGoals" : 6,
+        "penaltyMinutes" : "66",
+        "gameWinningGoals" : 3,
+        "shortHandedGoals" : 2,
+        "plusMinus" : 38,
+        "points" : 60
+      },
+      "team" : {
+        "id" : 4778,
+        "name" : "Kelowna",
+        "link" : "/api/v1/teams/4778"
+      },
+      "league" : {
+        "id" : 21,
+        "name" : "WHL",
+        "link" : "/api/v1/league/21"
+      },
+      "sequenceNumber" : 2
+    }, {
+      "season" : "20152016",
+      "stat" : {
+        "assists" : 25,
+        "goals" : 4,
+        "pim" : 58,
+        "shots" : 94,
+        "games" : 70,
+        "powerPlayGoals" : 1,
+        "penaltyMinutes" : "58",
+        "shotPct" : 4.3,
+        "gameWinningGoals" : 0,
+        "shortHandedGoals" : 0,
+        "plusMinus" : 22,
+        "points" : 29
+      },
+      "team" : {
+        "id" : 6660,
+        "name" : "Hershey",
+        "link" : "/api/v1/teams/6660"
+      },
+      "league" : {
+        "name" : "AHL",
+        "link" : "/api/v1/league/null"
+      },
+      "sequenceNumber" : 1
+    }, {
+      "season" : "20162017",
+      "stat" : {
+        "assists" : 11,
+        "goals" : 3,
+        "pim" : 28,
+        "games" : 34,
+        "penaltyMinutes" : "28",
+        "plusMinus" : 6,
+        "points" : 14
+      },
+      "team" : {
+        "name" : "Hershey Bears",
+        "link" : "/api/v1/teams/null"
+      },
+      "league" : {
+        "name" : "AHL",
+        "link" : "/api/v1/league/null"
+      },
+      "sequenceNumber" : 997
+    }, {
+      "season" : "20172018",
+      "stat" : {
+        "timeOnIce" : "699:23",
+        "assists" : 12,
+        "goals" : 0,
+        "pim" : 24,
+        "shots" : 47,
+        "games" : 51,
+        "hits" : 48,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "00:56",
+        "evenTimeOnIce" : "683:51",
+        "penaltyMinutes" : "24",
+        "faceOffPct" : 0.0,
+        "shotPct" : 0.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "14:36",
+        "blocked" : 42,
+        "plusMinus" : -3,
+        "points" : 12,
+        "shifts" : 862
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "league" : {
+        "id" : 133,
+        "name" : "National Hockey League",
+        "link" : "/api/v1/league/133"
+      },
+      "sequenceNumber" : 1
+    }, {
+      "season" : "20172018",
+      "stat" : {
+        "assists" : 6,
+        "goals" : 2,
+        "pim" : 6,
+        "games" : 9,
+        "penaltyMinutes" : "6",
+        "plusMinus" : -1,
+        "points" : 8
+      },
+      "team" : {
+        "name" : "Hershey Bears",
+        "link" : "/api/v1/teams/null"
+      },
+      "league" : {
+        "name" : "AHL",
+        "link" : "/api/v1/league/null"
+      },
+      "sequenceNumber" : 997
+    }, {
+      "season" : "20182019",
+      "stat" : {
+        "timeOnIce" : "453:39",
+        "assists" : 5,
+        "goals" : 1,
+        "pim" : 38,
+        "shots" : 34,
+        "games" : 33,
+        "hits" : 47,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "01:32",
+        "evenTimeOnIce" : "429:54",
+        "penaltyMinutes" : "38",
+        "faceOffPct" : 0.0,
+        "shotPct" : 2.94,
+        "gameWinningGoals" : 1,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "22:13",
+        "blocked" : 41,
+        "plusMinus" : 3,
+        "points" : 6,
+        "shifts" : 577
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "league" : {
+        "id" : 133,
+        "name" : "National Hockey League",
+        "link" : "/api/v1/league/133"
+      },
+      "sequenceNumber" : 1
+    }, {
+      "season" : "20182019",
+      "stat" : {
+        "timeOnIce" : "309:16",
+        "assists" : 3,
+        "goals" : 1,
+        "pim" : 8,
+        "shots" : 14,
+        "games" : 17,
+        "hits" : 25,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "00:31",
+        "evenTimeOnIce" : "283:09",
+        "penaltyMinutes" : "8",
+        "faceOffPct" : 0.0,
+        "shotPct" : 7.14,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "25:36",
+        "blocked" : 22,
+        "plusMinus" : -4,
+        "points" : 4,
+        "shifts" : 393
+      },
+      "team" : {
+        "id" : 17,
+        "name" : "Detroit Red Wings",
+        "link" : "/api/v1/teams/17"
+      },
+      "league" : {
+        "id" : 133,
+        "name" : "National Hockey League",
+        "link" : "/api/v1/league/133"
+      },
+      "sequenceNumber" : 2
+    }, {
+      "season" : "20192020",
+      "stat" : {
+        "timeOnIce" : "949:07",
+        "assists" : 14,
+        "goals" : 3,
+        "pim" : 34,
+        "shots" : 70,
+        "games" : 53,
+        "hits" : 53,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 1,
+        "powerPlayTimeOnIce" : "36:16",
+        "evenTimeOnIce" : "840:53",
+        "penaltyMinutes" : "34",
+        "faceOffPct" : 0.0,
+        "shotPct" : 4.3,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "71:58",
+        "blocked" : 58,
+        "plusMinus" : -16,
+        "points" : 17,
+        "shifts" : 1211
+      },
+      "team" : {
+        "id" : 17,
+        "name" : "Detroit Red Wings",
+        "link" : "/api/v1/teams/17"
+      },
+      "league" : {
+        "id" : 133,
+        "name" : "National Hockey League",
+        "link" : "/api/v1/league/133"
+      },
+      "sequenceNumber" : 1
+    }, {
+      "season" : "20192020",
+      "stat" : {
+        "assists" : 1,
+        "goals" : 0,
+        "pim" : 2,
+        "games" : 1,
+        "penaltyMinutes" : "2",
+        "plusMinus" : 1,
+        "points" : 1
+      },
+      "team" : {
+        "name" : "Grand Rapids Griffins",
+        "link" : "/api/v1/teams/null"
+      },
+      "league" : {
+        "name" : "AHL",
+        "link" : "/api/v1/league/null"
+      },
+      "sequenceNumber" : 987
+    }, {
+      "season" : "20202021",
+      "stat" : {
+        "timeOnIce" : "22:17",
+        "assists" : 1,
+        "goals" : 0,
+        "pim" : 0,
+        "shots" : 0,
+        "games" : 2,
+        "hits" : 4,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "00:00",
+        "evenTimeOnIce" : "22:04",
+        "penaltyMinutes" : "0",
+        "faceOffPct" : 0.0,
+        "shotPct" : 0.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:13",
+        "blocked" : 1,
+        "plusMinus" : 1,
+        "points" : 1,
+        "shifts" : 28
+      },
+      "team" : {
+        "id" : 16,
+        "name" : "Chicago Blackhawks",
+        "link" : "/api/v1/teams/16"
+      },
+      "league" : {
+        "id" : 133,
+        "name" : "National Hockey League",
+        "link" : "/api/v1/league/133"
+      },
+      "sequenceNumber" : 1
+    }, {
+      "season" : "20202021",
+      "stat" : {
+        "assists" : 0,
+        "goals" : 0,
+        "pim" : 6,
+        "games" : 2,
+        "penaltyMinutes" : "6",
+        "plusMinus" : -2,
+        "points" : 0
+      },
+      "team" : {
+        "name" : "Rockford IceHogs",
+        "link" : "/api/v1/teams/null"
+      },
+      "league" : {
+        "name" : "AHL",
+        "link" : "/api/v1/league/null"
+      },
+      "sequenceNumber" : 8267
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "31:28",
+        "assists" : 0,
+        "goals" : 0,
+        "pim" : 0,
+        "shots" : 0,
+        "games" : 2,
+        "hits" : 4,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "00:00",
+        "evenTimeOnIce" : "26:53",
+        "penaltyMinutes" : "0",
+        "faceOffPct" : 0.0,
+        "shotPct" : 0.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "04:35",
+        "blocked" : 2,
+        "plusMinus" : -3,
+        "points" : 0,
+        "shifts" : 46
+      },
+      "team" : {
+        "id" : 23,
+        "name" : "Vancouver Canucks",
+        "link" : "/api/v1/teams/23"
+      },
+      "league" : {
+        "id" : 133,
+        "name" : "National Hockey League",
+        "link" : "/api/v1/league/133"
+      },
+      "sequenceNumber" : 1
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "assists" : 20,
+        "goals" : 8,
+        "pim" : 80,
+        "games" : 53,
+        "penaltyMinutes" : "80",
+        "plusMinus" : 18,
+        "points" : 28
+      },
+      "team" : {
+        "name" : "Abbotsford Canucks",
+        "link" : "/api/v1/teams/null"
+      },
+      "league" : {
+        "name" : "AHL",
+        "link" : "/api/v1/league/null"
+      },
+      "sequenceNumber" : 33767
+    }, {
+      "season" : "20222023",
+      "stat" : {
+        "assists" : 9,
+        "goals" : 4,
+        "pim" : 18,
+        "games" : 28,
+        "penaltyMinutes" : "18",
+        "plusMinus" : 5,
+        "points" : 13
+      },
+      "team" : {
+        "name" : "Laval Rocket",
+        "link" : "/api/v1/teams/null"
+      },
+      "league" : {
+        "name" : "AHL",
+        "link" : "/api/v1/league/null"
+      },
+      "sequenceNumber" : 222817
+    } ]
+  } ]
+}

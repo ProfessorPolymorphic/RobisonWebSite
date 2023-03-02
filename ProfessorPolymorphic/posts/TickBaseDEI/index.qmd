@@ -1,0 +1,103 @@
+---
+title: "Reflections on Mentoring and Diversity"
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    css: styles.css
+    theme: [default, custom.scss]
+    footer: brobison@uidaho.edu
+author: "Barrie Robison"
+date: "2023-03-18"
+categories: [Presentation, TickBase, DEI]
+image: "cybertick.png"
+---
+
+## PURPOSE
+
+Discuss and reflect upon mentoring and diversity.
+
+Hear perspectives and ideas from outside our usual echo chambers. 
+
+Identify actionable suggestions that can be implemented in Year 4.
+
+## INTSTRUCTIONS
+
+`for i in 1:3{`
+
+1. Randomized table assignments.
+2. 10 minute discussion of a prompt.
+3. Table scribe records the highlights and themes of the discussion.
+
+`}`
+
+4. Debrief.
+
+![](tickdata.png)
+
+## TOPIC 1
+
+**What defines a highly effective mentoring relationship? What are the roles and responsibilities of the mentor in this relationship? What are the roles and responsibilitees of the mentee?**
+
+Table Assignments:
+
+
+```{r}
+library(readxl)
+
+people<-read_excel("people.xlsx")
+
+shuffled_people <- sample(people$Name)
+tables <- split(shuffled_people, ceiling(seq_along(shuffled_people)/6))
+
+for (i in 1:length(tables)) {
+  cat("Table", i, ": ", tables[[i]], "\n")
+}
+
+```
+
+
+## TOPIC 2
+
+**What is something positive that your institution is doing to promote diversity and inclusion in STEM? Do you have any recommendations that could support safety and belonging or improve inclusion on the Tickbase project?**
+
+Table Assignments:
+
+
+```{r}
+
+
+shuffled_people <- sample(people$Name)
+tables <- split(shuffled_people, ceiling(seq_along(shuffled_people)/6))
+
+for (i in 1:length(tables)) {
+  cat("Table", i, ": ", tables[[i]], "\n")
+}
+
+```
+## TOPIC 3
+
+**Think about a research project that you would like to work on in the future. Imagine the project has just been funded and you are asked for suggestions on how to develop a productive, collaborative, and enjoyable environment for the team. What structure or activities would you suggest?**
+
+Table Assignments:
+
+```{r}
+
+shuffled_people <- sample(people$Name)
+tables <- split(shuffled_people, ceiling(seq_along(shuffled_people)/6))
+
+for (i in 1:length(tables)) {
+  cat("Table", i, ": ", tables[[i]], "\n")
+}
+
+```
+
+## DEBRIEF
+
+Barrie calls on people to provide summaries and feedback, and their poster board summaries are grouped together on the wall.
+
+Can we summarize the themes or ideas that emerged for each question across all of the groups?
+
+Ask the PI and Co-PIs which suggestions appeal to them as something they could help implement on the Ticbase grant before it ends. 

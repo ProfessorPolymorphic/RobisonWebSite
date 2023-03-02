@@ -462,6 +462,10 @@ Barrie Robison
 </div>
 </div>
 </section>
+<section id="framework" class="slide level2">
+<h2>FRAMEWORK</h2>
+
+<img data-src="tableencode.png" class="r-stretch"></section>
 <section id="idiom-scatterplot" class="slide level2 smaller">
 <h2>IDIOM: Scatterplot</h2>
 <p><strong>0 KEYS:</strong> Only values are available or salient to the task.</p>
@@ -735,8 +739,201 @@ Barrie Robison
 <h2>CLUSTERED HEATMAP</h2>
 <p><span class="red">Use derived data:</span> compute 2 cluster hierarchies and represent as a dendrogram. Parent-child relationships represented in tree with connection line marks, leaves aligned so interior branch heights are easy to compare. Heatmap marks are (re-)ordered by cluster hierarchy traversal. <strong>Task:</strong> assess quality of clusters found by automatic methods</p>
 
+<img data-src="heatmapcluster.png" class="r-stretch"></section>
+<section id="axis-orientation" class="slide level2">
+<h2>AXIS ORIENTATION</h2>
 
-<img data-src="heatmapcluster.png" class="r-stretch"><div class="footer footer-default">
+<img data-src="axisorient.png" class="r-stretch"></section>
+<section id="discuss" class="slide level2">
+<h2>DISCUSS</h2>
+
+<img data-src="nightengale.png" class="r-stretch"></section>
+<section id="radial-bar-chart" class="slide level2 smaller">
+<h2>RADIAL BAR CHART</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="radial.png"></p>
+</div><div class="column">
+<p><span class="red">Star plot:</span> line mark, radial axes meet at central point</p>
+<p><span class="red">Radial bar chart:</span> line mark, radial axes meet at central ring</p>
+<p><strong>Channels:</strong> length, angle/orientation</p>
+<p><span class="blue">Bar chart:</span> rectilinear axes, aligned vertically</p>
+<p><strong>Accuracy:</strong> length not aligned with radial layouts, making them less accurately perceived than rectilinear aligned layouts.</p>
+<p><span class="caption">Vismon: Facilitating Risk Assessment and Decision Making In Fisheries Management. Booshehrian, Möller, Peterman, and Munzner. Technical Report TR 2011-04, Simon Fraser University, School of Computing Science, 2011.</span></p>
+</div>
+</div>
+</section>
+<section id="radar-plot" class="slide level2">
+<h2>RADAR PLOT</h2>
+<p>Radial line chart with point marks, radial layout, and connecting line marks. <span class="red">Avoid unless data are cyclic.</span></p>
+
+<img data-src="radar.png" class="r-stretch"></section>
+<section id="radar-plot-example" class="slide level2">
+<h2>RADAR PLOT EXAMPLE</h2>
+
+<img data-src="radarexample.png" class="r-stretch"><p><a href="http://www.thefunctionalart.com/2012/11/radar-graphs-avoid-them-999-of-time.html">TheFunctionalArt</a></p>
+</section>
+<section id="pie-and-coxcomb-charts" class="slide level2 smaller">
+<h2>PIE AND COXCOMB CHARTS</h2>
+<p>1 categorical key attribute, 1 quantitative value attribute</p>
+<div class="columns">
+<div class="column">
+<p><span class="red">Pie chart:</span> <strong>interlocking area</strong> marks with angle channel causes <span class="blue">variation in 2D area</span>. Keys are separated &amp; ordered radially with <span class="blue">uniform height</span>. accuracy: area less accurate than rectilinear aligned line length.</p>
+<p><strong>Task:</strong> part-to-whole judgements.</p>
+<p><span class="red">Coxcomb chart:</span> line marks with length channel, creating <span class="blue">variation in only 1D length</span>. Keys are separated &amp; ordered radially with <span class="blue">uniform width</span>. These charts are a direct analog to radial bar charts.</p>
+</div><div class="column">
+<p><img data-src="piecox.png" data-right="0" height="500"></p>
+</div>
+</div>
+</section>
+<section id="nightengale-rose" class="slide level2">
+<h2>NIGHTENGALE ROSE</h2>
+<p><strong>Coxcomb / Nightengale Rose/ Polar Area Chart</strong> Invented by Florence Nightingale.</p>
+
+<img data-src="nightengale.png" class="r-stretch"></section>
+<section id="coxcomb-perception" class="slide level2 smaller">
+<h2>COXCOMB: Perception</h2>
+<div class="columns">
+<div class="column">
+<p><strong>Encode:</strong> 1D length</p>
+<p><strong>Decode/perceive:</strong> 2D area</p>
+<p>The nonuniform relationship between line/sector width and mark length causes area variation to scale nonlinearly with line mark length!</p>
+<p><strong>A standard bar chart is safer:</strong> bars are uniform width, so area is linear with line mark length in both radial &amp; rectilinear cases.</p>
+</div><div class="column">
+<p><img data-src="coxperc.png"></p>
+</div>
+</div>
+</section>
+<section id="pie-charts-perception" class="slide level2">
+<h2>PIE CHARTS: Perception</h2>
+<div class="columns">
+<div class="column">
+<p>Some empirical evidence that people respond to arc length.</p>
+<p><strong>Decode/perceive:</strong> arc length, maybe also areas, but not angles.</p>
+<p>Donut charts are no worse than pie charts.</p>
+</div><div class="column">
+<p><img data-src="pieperc.png"></p>
+</div>
+</div>
+<p><span class="caption">Arcs, Angles, or Areas: Individual Data Encodings in Pie and Donut Charts. Skau and Kosara. Proc. EuroVis 2016</span></p>
+<p><a href="https://eagereyes.org/blog/2016/an-illustrated-tour-of-the-pie-chart-study-results">Explore this concept</a></p>
+</section>
+<section id="pie-charts-best-practices" class="slide level2">
+<h2>PIE CHARTS: Best Practices</h2>
+<p>Not so bad for two (or few) levels and part-to-whole tasks. Dubious for several levels if details matter. Terrible for many levels.</p>
+
+<img data-src="piebest.png" class="r-stretch"></section>
+<section id="normalized-stacked-bar" class="slide level2 smaller">
+<h2>NORMALIZED STACKED BAR</h2>
+<div class="columns">
+<div class="column">
+<p><strong>Task:</strong> part-to-whole judgements</p>
+<p><strong>Normalized stacked bar chart:</strong> stacked bar chart, normalized to full vertical height. A single stacked bar is equivalent to a full pie chart.</p>
+<p>High information density can be achieved with narrow rectangles. Pie chart information density is much more limited and requires a large circle.</p>
+</div><div class="column">
+<p><img data-src="normstack.png" height="500"></p>
+</div>
+</div>
+</section>
+<section id="glyphmaps" class="slide level2">
+<h2>GLYPHMAPS</h2>
+<p><span class="red">Rectilinear glyphs</span> are good for linear vs nonlinear trends. <span class="red">Radial glyphs</span> are good for cyclic patterns and evaluating periodicity.</p>
+
+<img data-src="glyphmap.png" class="r-stretch"><p><span class="caption">Glyph-maps for Visually Exploring Temporal Patterns in Climate Data and Models. Wickham, Hofmann, Wickham, and Cook. Environmetrics 23:5 (2012), 382–393.</span></p>
+</section>
+<section id="parallel-axes" class="slide level2">
+<h2>PARALLEL AXES</h2>
+
+<img data-src="rectparralell.png" class="r-stretch"></section>
+<section id="splom" class="slide level2">
+<h2>SPLOM</h2>
+<div class="columns">
+<div class="column">
+<p><span class="red">Scatterplot matrix (SPLOM):</span> Rectilinear axes with point mark. All possible pairs of axes are visualized.</p>
+<p><strong>Scalability:</strong> about a dozen attributes and dozens to hundreds of items.</p>
+</div><div class="column">
+<p><img data-src="splom.png"></p>
+</div>
+</div>
+</section>
+<section id="parallel-coordinates" class="slide level2 smaller">
+<h2>PARALLEL COORDINATES</h2>
+<p><strong>Scatterplot limitation:</strong> visual representation with orthogonal axes can show only two attributes with spatial position channel.</p>
+
+<img data-src="splomtable.png" class="r-stretch"></section>
+<section id="parallel-coordinates-1" class="slide level2 smaller">
+<h2>PARALLEL COORDINATES</h2>
+<div class="columns">
+<div class="column">
+<p><strong>Alternative:</strong> Line up axes in parallel to show many attributes with position. Items are encoded with a line with <code>n</code> segments (<code>n</code> is the number of attributes shown). Ordering is a major challenge.</p>
+<p><strong>Scalability:</strong> dozens of attributes and hundreds of items.</p>
+</div><div class="column">
+<p><img data-src="parcoord.png"></p>
+</div>
+</div>
+</section>
+<section id="parallel-coordinates-limitations" class="slide level2 smaller">
+<h2>PARALLEL COORDINATES: Limitations</h2>
+<p>Patterns only visible between neighboring axis pairs. How to pick axis order? The usual solution is reorderable axes and interactive exploration. The downside of interaction is human-powered search.</p>
+
+<img data-src="parcoordcars.png" class="r-stretch"><p>As usual, <a href="https://observablehq.com/@d3/parallel-coordinates">OBSERVABLE</a> really shines for these types of interactive plots!</p>
+</section>
+<section id="orientation-limitations" class="slide level2 smaller">
+<h2>ORIENTATION LIMITATIONS</h2>
+<div class="columns">
+<div class="column">
+<p><strong>Rectilinear:</strong> Scalability is limited with regard to the number of axes. (2 axes best, 3 problematic, 4+ impossible.)</p>
+<p><strong>Parallel:</strong> Unfamiliarity and training time.</p>
+<p><strong>Radial:</strong> Perceptual limits include polar coordinate asymmetry, lower precision with angle channles compated to length channels, nonuniform sector width/size depending on radial distance. While thes limits are frequently problematic, they can sometimes be deliberately exploited. (Example: for 2 attribs of very unequal importance)</p>
+</div><div class="column">
+<p><img data-src="orientlim.png"></p>
+</div>
+</div>
+<p>Uncovering Strengths and Weaknesses of Radial Visualizations - an Empirical Approach. Diehl, Beck and Burch. IEEE TVCG (Proc. InfoVis) 16(6):935–942, 2010.</p>
+</section>
+<section id="chart-axes-1" class="slide level2 smaller">
+<h2>CHART AXES</h2>
+<div class="columns">
+<div class="column">
+<p>Labelled axes are critical! Avoid cropping the y-axis (include 0 at bottom left) or the slope misleads the viewer.</p>
+</div><div class="column">
+<p><img data-src="plannedparent.png"></p>
+</div>
+</div>
+<p>http://www.thefunctionalart.com/2015/10/if-you-see-bullshit-say-bullshit.html</p>
+</section>
+<section id="dual-axis-line-charts" class="slide level2 smaller">
+<h2>DUAL AXIS LINE CHARTS</h2>
+<p>This approach is controversial. Dual axes are acceptable if they are commensurate, but beware, as they make it very easy to mislead!</p>
+
+<img data-src="dualaxis.png" class="r-stretch"></section>
+<section id="connected-scatterplots" class="slide level2 smaller">
+<h2>CONNECTED SCATTERPLOTS</h2>
+<p>Scatterplot with line connection marks. These are popular in journalism.</p>
+<div class="columns">
+<div class="column">
+<p><strong>Horiz + vert axes:</strong> value attributes</p>
+<p><strong>Line connection marks:</strong> temporal order</p>
+<p>Alternative to dual-axis charts (horiz: time vert: two value attributes).</p>
+<p>empirical study suggests these are engaging, but correlations are unclear.</p>
+</div><div class="column">
+<p><img data-src="connscatter.png"></p>
+</div>
+</div>
+<p><span class="caption">http://steveharoz.com/research/connected_scatterplot/</span></p>
+</section>
+<section id="breaking-conventions" class="slide level2">
+<h2>BREAKING CONVENTIONS</h2>
+<p>The inverted y axis is evocative of blood dripping down on Poe.</p>
+
+<img data-src="poe.png" class="r-stretch"><p><span class="caption">https://public.tableau.com/profile/ben.jones#!/vizhome/EdgarAllanPoeViz/EdgarAllanPoeViz</span></p>
+</section>
+<section id="arranging-tabular-data" class="slide level2 smaller">
+<h2>ARRANGING TABULAR DATA</h2>
+<p>What did we miss?</p>
+<p>https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf</p>
+
+<div class="footer footer-default">
 <p><a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>…<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/BCB520.html" target="_blank">HOME</a></p>
 </div>
 </section>

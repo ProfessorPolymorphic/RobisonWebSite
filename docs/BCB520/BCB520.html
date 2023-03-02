@@ -71,7 +71,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
+      page: 18,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
@@ -306,6 +307,9 @@ ul.task-list li input[type="checkbox"] {
   <a href="../BCB520/posts/T5-MarksChannels/index.html" class="sidebar-item-text sidebar-link">TUTORIAL 5 - Marks and Channels</a>
   </div>
 </li>
+          <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">TUTORIAL 6 - APIs and JSON data</span>
+  </li>
       </ul>
   </li>
       </ul>
@@ -313,11 +317,11 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../ProfessorPolymorphic/index.html" class="sidebar-item-text sidebar-link">Professor Polymorphic</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ProfessorPolymorphic/about.html" class="sidebar-item-text sidebar-link">About</a>
@@ -325,12 +329,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">Posts</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">Posts</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ProfessorPolymorphic/posts/post-with-code/index.html" class="sidebar-item-text sidebar-link">Observable Experiment</a>
@@ -348,17 +352,22 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../ProfessorPolymorphic/posts/TickBaseDEI/index.html" class="sidebar-item-text sidebar-link">Reflections on Mentoring and Diversity</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../ProfessorPolymorphic/posts/welcome/index.html" class="sidebar-item-text sidebar-link">You’ve gotta be f***ing kidding…</a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../ProfessorPolymorphic/posts/LabMeetings/index.html" class="sidebar-item-text sidebar-link">Polymorphic Games Lab Meeting</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ProfessorPolymorphic/posts/LabMeetings/OSTime.html" class="sidebar-item-text sidebar-link">OSDevTimeline</a>
@@ -374,11 +383,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../ProfessorPolymorphic/posts/Viz_2Gen_Pedigree/index.html" class="sidebar-item-text sidebar-link">VIZ EXPERIMENT 1</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ProfessorPolymorphic/posts/Viz_2Gen_Pedigree/PedigreeViz.html" class="sidebar-item-text sidebar-link">PedigreeViz</a>
@@ -407,7 +416,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#posts" id="toc-posts" class="nav-link" data-scroll-target="#posts"><strong>// Posts</strong></a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(17)</span></div><div class="category" data-category="Assignment">Assignment <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Data">Data <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Data Sets">Data Sets <span class="quarto-category-count">(2)</span></div><div class="category" data-category="DataViz">DataViz <span class="quarto-category-count">(14)</span></div><div class="category" data-category="Education">Education <span class="quarto-category-count">(1)</span></div><div class="category" data-category="GitHub">GitHub <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Idiom">Idiom <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Intro">Intro <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Lecture">Lecture <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Literate Programming">Literate Programming <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Observable">Observable <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Portfolio">Portfolio <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Quarto">Quarto <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Resources">Resources <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Tables">Tables <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Task">Task <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tidyverse">Tidyverse <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tutorial">Tutorial <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Version Control">Version Control <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(19)</span></div><div class="category" data-category="Assignment">Assignment <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Data">Data <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Data Sets">Data Sets <span class="quarto-category-count">(2)</span></div><div class="category" data-category="DataViz">DataViz <span class="quarto-category-count">(14)</span></div><div class="category" data-category="Education">Education <span class="quarto-category-count">(1)</span></div><div class="category" data-category="GitHub">GitHub <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Idiom">Idiom <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Intro">Intro <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Lecture">Lecture <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Literate Programming">Literate Programming <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Observable">Observable <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Portfolio">Portfolio <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Quarto">Quarto <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Resources">Resources <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Tables">Tables <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Task">Task <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tidyverse">Tidyverse <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tutorial">Tutorial <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Version Control">Version Control <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-body" id="quarto-document-content">
 
@@ -467,7 +476,51 @@ ul.task-list li input[type="checkbox"] {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Lecture,DataViz,Data,Tables" data-listing-date-sort="1677571200000" data-listing-file-modified-sort="1677620400905" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6.055">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1677776750067" data-listing-reading-time-sort="0.51">
+<a href="../BCB520/posts/T6-APIsandJSON/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-img-bg" style="height: 150px;">
+&nbsp;
+</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+TUTORIAL 6 - APIs and JSON data
+</h5>
+<div class="card-text listing-description">
+
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1677782763278" data-listing-reading-time-sort="0.51">
+<a href="../BCB520/posts/T6-APIsandJSON/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-img-bg" style="height: 150px;">
+&nbsp;
+</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+TUTORIAL 6 - APIs and JSON data
+</h5>
+<div class="card-text listing-description">
+
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Lecture,DataViz,Data,Tables" data-listing-date-sort="1677571200000" data-listing-file-modified-sort="1677788552289" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9.66">
 <a href="../BCB520/posts/L6-TabularData1/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -506,7 +559,7 @@ Feb 28, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Lecture,DataViz" data-listing-date-sort="1677139200000" data-listing-file-modified-sort="1677185236080" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5.14">
+<div class="g-col-1" data-index="3" data-categories="Lecture,DataViz" data-listing-date-sort="1677139200000" data-listing-file-modified-sort="1677185236080" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5.14">
 <a href="../BCB520/posts/L5-ThumbRules/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -539,7 +592,7 @@ Feb 23, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Assignment,DataViz" data-listing-date-sort="1676275200000" data-listing-file-modified-sort="1676500000992" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3.985">
+<div class="g-col-1" data-index="4" data-categories="Assignment,DataViz" data-listing-date-sort="1676275200000" data-listing-file-modified-sort="1676500000992" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3.985">
 <a href="../BCB520/posts/A4-MarksChannels/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -572,7 +625,7 @@ Feb 13, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="Assignment,DataViz" data-listing-date-sort="1676275200000" data-listing-file-modified-sort="1676671166139" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12.34">
+<div class="g-col-1" data-index="5" data-categories="Assignment,DataViz" data-listing-date-sort="1676275200000" data-listing-file-modified-sort="1676671166139" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12.34">
 <a href="../BCB520/posts/T5-MarksChannels/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -605,7 +658,7 @@ Feb 13, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="Assignment,DataViz,Quarto,Portfolio,GitHub,Version Control" data-listing-date-sort="1675238400000" data-listing-file-modified-sort="1676332758365" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4.455">
+<div class="g-col-1" data-index="6" data-categories="Assignment,DataViz,Quarto,Portfolio,GitHub,Version Control" data-listing-date-sort="1675238400000" data-listing-file-modified-sort="1676332758365" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4.455">
 <a href="../BCB520/posts/A3-PrototypeVizPortfolio/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -650,7 +703,7 @@ Feb 1, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="Lecture,DataViz,Idiom,Observable,Tidyverse" data-listing-date-sort="1675152000000" data-listing-file-modified-sort="1676406501111" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11.25">
+<div class="g-col-1" data-index="7" data-categories="Lecture,DataViz,Idiom,Observable,Tidyverse" data-listing-date-sort="1675152000000" data-listing-file-modified-sort="1676406501111" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11.25">
 <a href="../BCB520/posts/L4-Marks-Channels/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -692,7 +745,7 @@ Jan 31, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="Lecture,DataViz,Task" data-listing-date-sort="1675152000000" data-listing-file-modified-sort="1675961126948" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2.62">
+<div class="g-col-1" data-index="8" data-categories="Lecture,DataViz,Task" data-listing-date-sort="1675152000000" data-listing-file-modified-sort="1675961126948" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2.62">
 <a href="../BCB520/posts/L3-TaskAbstraction/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -728,7 +781,7 @@ Jan 31, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="7" data-categories="Tutorial,Resources,Quarto,Data Sets" data-listing-date-sort="1674633600000" data-listing-file-modified-sort="1675800871959" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5.48">
+<div class="g-col-1" data-index="9" data-categories="Tutorial,Resources,Quarto,Data Sets" data-listing-date-sort="1674633600000" data-listing-file-modified-sort="1675800871959" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5.48">
 <a href="../BCB520/posts/T4-BarriesData/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -767,7 +820,7 @@ Jan 25, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="8" data-categories="Assignment,DataViz,Quarto,Data Sets" data-listing-date-sort="1674460800000" data-listing-file-modified-sort="1674768929285" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2.8">
+<div class="g-col-1" data-index="10" data-categories="Assignment,DataViz,Quarto,Data Sets" data-listing-date-sort="1674460800000" data-listing-file-modified-sort="1674768929285" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2.8">
 <a href="../BCB520/posts/A2-YourData/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -806,7 +859,7 @@ Jan 23, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="9" data-categories="Tutorial,Quarto,Literate Programming,Python" data-listing-date-sort="1674115200000" data-listing-file-modified-sort="1674163612675" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="0.74">
+<div class="g-col-1" data-index="11" data-categories="Tutorial,Quarto,Literate Programming,Python" data-listing-date-sort="1674115200000" data-listing-file-modified-sort="1674163612675" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="0.74">
 <a href="../BCB520/posts/T3-Python/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -845,7 +898,7 @@ Jan 19, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="10" data-categories="Tutorial,DataViz,Quarto,Literate Programming" data-listing-date-sort="1674028800000" data-listing-file-modified-sort="1674163443965" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="0.175">
+<div class="g-col-1" data-index="12" data-categories="Tutorial,DataViz,Quarto,Literate Programming" data-listing-date-sort="1674028800000" data-listing-file-modified-sort="1674163443965" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="0.175">
 <a href="../BCB520/posts/T1-Lit-Prog/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -884,7 +937,7 @@ Jan 18, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="11" data-categories="Tutorial,DataViz,Quarto,Literate Programming" data-listing-date-sort="1674028800000" data-listing-file-modified-sort="1674163434127" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1.575">
+<div class="g-col-1" data-index="13" data-categories="Tutorial,DataViz,Quarto,Literate Programming" data-listing-date-sort="1674028800000" data-listing-file-modified-sort="1674163434127" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1.575">
 <a href="../BCB520/posts/T2-Anscombe/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -923,7 +976,7 @@ Jan 18, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="12" data-categories="Lecture,DataViz,Data" data-listing-date-sort="1673942400000" data-listing-file-modified-sort="1674590893283" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6.97">
+<div class="g-col-1" data-index="14" data-categories="Lecture,DataViz,Data" data-listing-date-sort="1673942400000" data-listing-file-modified-sort="1674590893283" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6.97">
 <a href="../BCB520/posts/L2-Data-Abstraction/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -959,7 +1012,7 @@ Jan 17, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="13" data-categories="Resources,Education" data-listing-date-sort="1673510400000" data-listing-file-modified-sort="1675032477049" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6.33">
+<div class="g-col-1" data-index="15" data-categories="Resources,Education" data-listing-date-sort="1673510400000" data-listing-file-modified-sort="1677782753248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5.05">
 <a href="../BCB520/posts/Certificate/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -992,7 +1045,7 @@ Jan 12, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="14" data-categories="Resources,DataViz" data-listing-date-sort="1670832000000" data-listing-file-modified-sort="1675716672532" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5.23">
+<div class="g-col-1" data-index="16" data-categories="Resources,DataViz" data-listing-date-sort="1670832000000" data-listing-file-modified-sort="1675716672532" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5.23">
 <a href="../BCB520/posts/Syllabus/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1025,7 +1078,7 @@ Dec 12, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="15" data-categories="Assignment,DataViz,Quarto" data-listing-date-sort="1669881600000" data-listing-file-modified-sort="1675198119219" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4.63">
+<div class="g-col-1" data-index="17" data-categories="Assignment,DataViz,Quarto" data-listing-date-sort="1669881600000" data-listing-file-modified-sort="1675198119219" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4.63">
 <a href="../BCB520/posts/A1-Lit-Prog/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1061,11 +1114,11 @@ Dec 1, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="16" data-categories="Lecture,DataViz,Intro" data-listing-date-sort="1665903600000" data-listing-file-modified-sort="1674163470416" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4.945">
+<div class="g-col-1" data-index="18" data-categories="Lecture,DataViz,Intro" data-listing-date-sort="1665903600000" data-listing-file-modified-sort="1674163470416" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4.945">
 <a href="../BCB520/posts/L1-Intro/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../BCB520/posts/L1-Intro/braindata.png" class="thumbnail-image card-img" style="height: 150px;">
+<img data-src="../BCB520/posts/L1-Intro/braindata.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1101,6 +1154,9 @@ Oct 16, 2022
 <div class="listing-no-matching d-none">
 No matching items
 </div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
