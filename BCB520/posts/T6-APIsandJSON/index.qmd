@@ -1,7 +1,9 @@
 ---
 title: "TUTORIAL 6 - APIs and JSON data"
+image: "Cthulhuhockeymask.png"
 execute: 
   eval: false
+
 ---
 
 ```{r}
@@ -30,6 +32,7 @@ players<- noway %>%
          data.height, data.weight, data.position)
 
 cleanplayers <- drop_na(players)
+cleanplayers$playerId<-cleanplayers$data.playerId
 ```
 
 
@@ -84,5 +87,80 @@ d2000on<-full_join(testloop,recentdrafts, by="playerId")
 
 dataIwant <- rbind(d2000on, d2018, d2019, d2020, d2020on)
 write.csv(dataIwant, file="NHLdraftgames.csv")
+
+```
+
+```{r}
+#| eval: true
+library(dplyr)
+
+dataIwant2<- dataIwant %>%
+  mutate(seasonshort = as.numeric(str_sub(season, start=1, end=4)))
+
+dataIwant2$postdraft<- dataIwant2$seasonshort-dataIwant2$data.draftYear
+
+dataIwant2$postdraft <- paste("dY", dataIwant2$postdraft)
+
+dataIwant3<-dataIwant2 %>%
+  group_by(playerId, data.draftYear, data.playerName, data.roundNumber,
+           data.pickInRound, data.overallPickNumber, data.position, data.height,
+           data.weight, postdraft) %>%
+  summarise(totgames=sum(games))
+
+datawide<-dataIwant3 %>%
+  pivot_wider(names_from = postdraft, values_from = totgames, values_fill = 0)
+
+allplayerswide<-full_join(cleanplayers,datawide, by="playerId")
+
+allplayerswide <- allplayerswide %>% 
+    mutate_at(20:41, ~replace_na(.,0))
+
+lookup <- c(name = "data.playerName.x", 
+            draftyear = "data.draftYear.x",
+            round = "data.roundNumber.x",
+            overall = "data.overallPickNumber.x",
+            pickinRound = "data.pickInRound.x",
+            height = "data.height.x",
+            weight = "data.weight.x",
+            position = "data.position.x")
+
+testthing<-rename(allplayerswide, all_of(lookup))
+
+keepthis<-testthing[c(1, 3:10, 19:41)]
+
+whoa <- keepthis %>%
+  pivot_longer(
+    cols = starts_with("dY"),
+    names_to = "postdraft",
+    names_prefix = "dY",
+    values_to = "NHLgames")
+
+whoa <- drop_na(whoa)
+
+whoa$postdraft<-as.numeric(whoa$postdraft)
+
+whoanew <- whoa %>%
+  mutate(position = replace(position, position == "G", "Goaltender"),
+         position = replace(position, position == "D", "Defense"),
+         position = replace(position, position == "C" | position =="LW", "Forward"),
+         position = replace(position, position == "RW" | position == "F", "Forward"),
+         position = replace(position, position == "C/LW" | position == "C/RW", "Forward"),
+         position = replace(position, position == "LW/RW", "Forward"))
+  
+
+actualdata<- whoanew %>%
+  filter(round<8, draftyear>2000, NHLgames<120)
+
+ggplot(actualdata, aes(x=postdraft, y = NHLgames))+
+  geom_smooth()+
+  facet_grid(position~round)
+ 
+write.csv(actualdata, file = "NHLdraft.csv")
+
+actualdata5<-actualdata%>%
+  filter(postdraft<6)
+ggplot(actualdata5, aes(x=NHLgames))+
+  geom_histogram()+
+  facet_grid(round~postdraft)
 
 ```
