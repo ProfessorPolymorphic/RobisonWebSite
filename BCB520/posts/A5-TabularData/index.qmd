@@ -47,16 +47,18 @@ Use the .qmd file as the backbone of your assignment, changing the code and the 
 
 How can we evaluate whether trading a first round pick for two second round picks and a third round pick is a good idea?  One approach is to look at the historical performance of players from these draft rounds.
 
-I've created a data set that will allow us to explore player performance as a function of draft position.  If you are curious as to how I obtained and re-arranged these data, you can check out that tutorial [here](../posts/T6-APIsandJSON/index.qmd).  For this assignment, though, I want to focus on the visualizations.
+I've created a data set that will allow us to explore player performance as a function of draft position.  If you are curious as to how I obtained and re-arranged these data, you can check out that tutorial [here](../T6-APIsandJSON/index.qmd).  For this assignment, though, I want to focus on the visualizations.
 
 ```{r}
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
+library(readxl)
 
 NHLDraft<-read.csv("NHLDraft.csv")
+NHLDictionary<-read_excel("NHLDictionary.xlsx")
 glimpse(NHLDraft)
-
+knitr::kable(NHLDictionary)
 ```
 
 In this case, we have a dataframe with all the drafted players since 2000, their position, their draft year and position, and then rows for each season since being drafted (`postdraft`).  The key variable here is `NHLgames`, which tells us how many games they played in the NHL each season since being drafted.
@@ -135,7 +137,7 @@ For this figure, address the following:
 
 ## SCATTERPLOT SUMMARY
 
-We seem to be running into an issue in terms of overplotting.  Scatterplots are great, but they work best for two quantitative attributes, and we have a situation with one or two keys and one quantitative attribute.  The thing is, though, sometimes scatterplots would be very useful if we were modeling the data in some way.  We'll cover this kind of thing in future assigments, but just a bit of foreshadowing here:
+We seem to be running into an issue in terms of overplotting.  Scatterplots are great, but they work best for two quantitative attributes, and we have a situation with one or two keys and one quantitative attribute.  The thing is, scatterplots can be very useful when part of our workflow involves modeling the data in some way.  We'll cover this kind of thing in future assignments, but just a bit of foreshadowing here:
 
 ```{r}
 
@@ -158,7 +160,7 @@ ggplot(drafttot2018, aes(x = name, y=totgames))+
 
 ```
 
-Epic.  We now have a bar (column, really) chart with the key being player `name`, and the attribute being the total number of games played.  We've SEPARATED the data using the spatial x position channel, and aligned to that axis as well.  But this visualization clearly sucks.  You need to make it better by:
+Epic.  We now have a bar (column, really) chart with the key being player `name`, and the attribute being the total number of games played.  We've SEPARATED the data using the spatial x-axis position channel, and aligned to that axis as well.  But this visualization clearly sucks.  You need to make it better by:
 
 1. Adding a visual channel indicating draft round.
 2. Fixing the order of the x axis.
@@ -169,7 +171,7 @@ Epic.  We now have a bar (column, really) chart with the key being player `name`
 
 Stacked bar charts use two keys and one value.  Can we leverage this idiom?  Perhaps if we used both `round` and `postdraft` as our keys and NHLgames as our value...  
 
-The idea here is that we might be able to get an idea of the temporal pattern of NHL games after a player is drafted.  Do first round picks join the NHL earlier?  Do they stay in the NHL longer?  That kind of thing.
+The idea here is that we might be able to get a sense of the temporal pattern of NHL games after a player is drafted.  Do first round picks join the NHL earlier?  Do they stay in the NHL longer?  That kind of thing.
 
 ```{r}
 ggplot(draft2018, aes(x = postdraft, y=NHLgames, fill=as.factor(round)))+
@@ -246,4 +248,8 @@ ggplot(round1, aes(y = reorder(name, overall), x = postdraft, fill = NHLgames)) 
 ## OTHER STUFF TO CONSIDER
 
 1. Do these visualizations change as a function of player position?
-2. Is NHL games played really the best metric to use?
+2. Is the number of NHL games played really the best metric to use?
+
+## CONCLUSION
+
+Based on your visualizations, what would you advise regarding this trade proposal?  Why?

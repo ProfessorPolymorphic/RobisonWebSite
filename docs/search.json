@@ -1428,6 +1428,13 @@
     "text": "SCENARIO\nImagine you are a high priced data science consultant. One of your good friends, Cassandra Canuck, is an Assistant General Manager for the Vancouver Canucks, a team in the National Hockey League with a long, long…. long history of futility.\nCassandra tells you her boss, General Manager Hans Doofenschmirtz, is considering trading this year’s first round draft pick for two second round picks and one third round pick from another team. For the purposes of this exercise, let’s set the 2023 NHL draft order using the Tankathon Simulator. The NHL uses a lottery system in which the teams lowest in the standings have the highest odds of getting the first overall pick. I’ll simulate the lottery now…\nHOLY CRAP! The Vancouver Canucks jump up 6 spots, and will pick FIRST overall. Here is a screenshot:\n\nOur official scenario is this:\nVancouver receives: The 7th pick in the second round (39th overall), the 10th pick in the second round (42nd overall), and the 10th pick in the third round (74th overall).\nDetroit receives: The 1st pick in the first round (1st overall).\nDoofenschmirtz reasons that more draft picks are better, and is inclined to make the trade. Cassandra isn’t so sure…\nShe asks you to create some data visualizations she can show to her boss that might help him make the best decision."
   },
   {
+    "objectID": "BCB520/posts/A5-TabularData/index.html#directions",
+    "href": "BCB520/posts/A5-TabularData/index.html#directions",
+    "title": "ASSIGNMENT 5",
+    "section": "DIRECTIONS",
+    "text": "DIRECTIONS\nCreate a new post in your portfolio for this assignment. Call it something cool, like NHL draft analysis, or Hockey Analytics, or John Wick….\nCopy the data files from the repository, and maybe also the .qmd file.\nUse the .qmd file as the backbone of your assignment, changing the code and the markdown text as you go."
+  },
+  {
     "objectID": "BCB520/posts/A5-TabularData/index.html#the-data",
     "href": "BCB520/posts/A5-TabularData/index.html#the-data",
     "title": "ASSIGNMENT 5",
@@ -1881,12 +1888,5 @@
     "title": "About",
     "section": "",
     "text": "Evolution. Data Science. Video Games. Horror Fiction.\nI am a Professor of Biological Sciences at the University of Idaho, and the cofounder of Polymorphic Games, an experimental video game studio that applies game development technology to scientific research and education. We have released two evolutionary video games on Steam:\nDarwin’s Demons is an rcade style space shooter in which you battle a population of evolving aliens. The alien’s morphology, fire type, and behaviors are all encoded by a digital genome. The aliens that are best able to shoot or evade you reproduce to make the next generation.\nProject Hastur is an evolutionary tower defense game. Defend humanity against the ever changing threat of the alien Proteans. Project Hastur combines elements of 3D tower defense and real-time strategy with models of biological evolution to create a uniquely challenging experience.\nI am also a huge Horror and Science Fiction nerd, and am fascinated by the intersection of these genres with science.\nVideo"
-  },
-  {
-    "objectID": "BCB520/posts/A5-TabularData/index.html#directions",
-    "href": "BCB520/posts/A5-TabularData/index.html#directions",
-    "title": "ASSIGNMENT 5",
-    "section": "DIRECTIONS",
-    "text": "DIRECTIONS\nCreate a new post in your portfolio for this assignment. Call it something cool, like NHL draft analysis, or Hockey Analytics, or John Wick….\nCopy the data files from the repository, and maybe also the .qmd file.\nUse the .qmd file as the backbone of your assignment, changing the code and the markdown text as you go."
   }
 ]
