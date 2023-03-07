@@ -12,21 +12,42 @@ description: "Should I trade these draft picks for this bag of magic beans...?"
 
 ## OVERVIEW
 
-In this assignment, we are going to practice creating visualizations for tabular data.  Unlike previous assignments, however, this time we will all be using the same data sets.  I'm doing this because I want everyone to engage in the same logic process.
+In this assignment, we are going to practice creating visualizations for tabular data.  Unlike previous assignments, however, this time we will all be using the same data sets.  I'm doing this because I want everyone to engage in the same logic process and have the same design objectives in mind. 
 
 ## SCENARIO
 
-Imagine you are a high priced data science consultant.  One of your good friends, Cassandra Canuck, is an General Manager for the Vancouver Canucks, a team in the National Hockey League with a long, long.... long history of futility.
+Imagine you are a high priced data science consultant.  One of your good friends, Cassandra Canuck, is an Assistant General Manager for the Vancouver Canucks, a team in the National Hockey League with a long, long.... long history of futility.
 
-Cassandra tells you her boss, General Manager Hans Doofenschmirtz, is considering trading this year's first round draft pick for two second round picks and one third round pics from another team.  Doofenschmirtz reasons that more draft picks are better.  Cassandra isn't so sure...  
+Cassandra tells you her boss, General Manager Hans Doofenschmirtz, is considering trading this year's first round draft pick for two second round picks and one third round pick from another team.  For the purposes of this exercise, let's set the 2023 NHL draft order using the [Tankathon Simulator](https://www.tankathon.com/nhl).  The NHL uses a lottery system in which the teams lowest in the standings have the highest odds of getting the first overall pick.  I'll simulate the lottery now...
+
+HOLY CRAP!  The Vancouver Canucks jump up 6 spots, and will pick FIRST overall.  Here is a screenshot:
+
+![](NHLlottery.png)
+
+Our official scenario is this:  
+
+**Vancouver receives:**  The 7th pick in the second round (39th overall), the 10th pick in the second round (42nd overall), and the 10th pick in the third round (74th overall).
+
+**Detroit receives:**  The 1st pick in the first round (1st overall).
+
+
+Doofenschmirtz reasons that more draft picks are better, and is inclined to make the trade.  Cassandra isn't so sure...  
 
 She asks you to create some data visualizations she can show to her boss that might help him make the best decision.
 
+## DIRECTIONS
+
+Create a new post in your portfolio for this assignment.  Call it something cool, like NHL draft analysis, or Hockey Analytics, or John Wick....
+
+Copy the data files from the repository, and maybe also the .qmd file.  
+
+Use the .qmd file as the backbone of your assignment, changing the code and the markdown text as you go.
+
 ## THE DATA
 
-So how can we evaluate whether trading a first round pick for two second round picks and a third round pick is a good idea?  One approach is to look at the historical performance of players from these draft rounds.
+How can we evaluate whether trading a first round pick for two second round picks and a third round pick is a good idea?  One approach is to look at the historical performance of players from these draft rounds.
 
-I've created a data set that will allow us to explore player performance as a function of draft position.  If you are curious as to how I obtained and re-arranged these data, you can check out that tutorial here.  For this assignment, though, I want to focus on the visualizations.
+I've created a data set that will allow us to explore player performance as a function of draft position.  If you are curious as to how I obtained and re-arranged these data, you can check out that tutorial [here](../posts/T6-APIsandJSON/index.qmd).  For this assignment, though, I want to focus on the visualizations.
 
 ```{r}
 library(tidyverse)
@@ -38,11 +59,11 @@ glimpse(NHLDraft)
 
 ```
 
-In this case, we have a dataframe with all the drafted players since 2000, their position, their draft year and position, and then rows for each season since being drafted.  The key variable here is `NHLgames`, which tells us how many games they played in the NHL each season since being drafted.
+In this case, we have a dataframe with all the drafted players since 2000, their position, their draft year and position, and then rows for each season since being drafted (`postdraft`).  The key variable here is `NHLgames`, which tells us how many games they played in the NHL each season since being drafted.
 
 ## SIMPLE SCATTERPLOT
 
-One thing to realize about the NHL is that it is pretty rare for a player to play in the NHL right after being drafted.  Players get drafted when they are 18 years old, and they usually play in the juniors, minor leagues, or the NCAA for a bit to further develop.  Let's use a scatterplot to visualize this phenomenon with the most recent draft classes.
+One thing to realize about professional hockey is that it is pretty rare for a player to play in the NHL right after being drafted.  Players get drafted when they are 18 years old, and they usually play in the juniors, minor leagues, or the NCAA for a bit to further develop.  Let's use a scatterplot to visualize this phenomenon with the most recent draft classes.
 
 ```{r}
 draft2022<-NHLDraft%>%
