@@ -57,7 +57,7 @@ library(readxl)
 
 NHLDraft<-read.csv("NHLDraft.csv")
 NHLDictionary<-read_excel("NHLDictionary.xlsx")
-glimpse(NHLDraft)
+
 knitr::kable(NHLDictionary)
 ```
 
