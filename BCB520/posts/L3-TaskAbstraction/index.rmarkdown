@@ -17,6 +17,7 @@ code-fold: true
 description: "Action - Target pairs ... of **eldritch horror**?"
 ---
 
+
 ## LAST LECTURE
 
 Computer-based visualization systems provide visual representations of [datasets]{.red} designed to help people carry out tasks more effectively.
@@ -131,6 +132,7 @@ Computer-based visualization systems provide visual representations of datasets 
 
 ## EXAMPLES! {.scrollable .smaller}
 
+
 ```{r}
 #| code-fold: true
 #| echo: true
@@ -147,6 +149,7 @@ Target <- read_excel("Tasks.xlsx", sheet = "Target",
     col_names = TRUE)
 
 ```
+
 
 ::: columns
 ::: {.column width="30%"}
@@ -191,3 +194,4 @@ Target <- read_excel("Tasks.xlsx", sheet = "Target",
 [`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
 
 [`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
+
