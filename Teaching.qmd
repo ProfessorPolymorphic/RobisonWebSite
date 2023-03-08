@@ -22,7 +22,7 @@ This class will help students establish a foundational understanding of data vis
 
 [Canvas Page](https://canvas.uidaho.edu/courses/17806){target="_blank"}
 
-[Course WebPage](BCB520/BCB520.qmd){target="_blank"}
+[Course WebPage](BCB520/index.qmd){target="_blank"}
 
 ## **BCB 521 ::** Communicating with Data
 

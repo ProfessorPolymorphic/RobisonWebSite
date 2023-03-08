@@ -1,5 +1,5 @@
 ---
-title: "BCB 520 :: Foundations of Data Visualization"
+title: "BCB 520:: Foundations of Data Visualization"
 listing:
   contents: posts
   sort: "date desc"
