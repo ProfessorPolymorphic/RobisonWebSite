@@ -653,19 +653,19 @@ Barrie Robison
 <section id="mandatory-fun" class="slide level2 scrollable smaller">
 <h2>MANDATORY FUN</h2>
 <p><strong>We will do these until everyone has done at least one example.</strong></p>
-<p><span class="fragment">Cody Derive Extremes</span></p>
-<p><span class="fragment">Ronald Enjoy Distribution</span></p>
-<p><span class="fragment">Ronald Explore Distribution</span></p>
-<p><span class="fragment">Ronald Discover Paths</span></p>
-<p><span class="fragment">Ronald Explore Paths</span></p>
-<p><span class="fragment">Ronald Summarize Correlation</span></p>
-<p><span class="fragment">Jiyin Record Trends</span></p>
 <p><span class="fragment">Jiyin Browse Trends</span></p>
-<p><span class="fragment">Eric Annotate Topology</span></p>
-<p><span class="fragment">Eric Derive Extremes</span></p>
-<p><span class="fragment">Barrie Discover Features</span></p>
-<p><span class="fragment">Eric Lookup Outliers</span></p>
-<p><span class="fragment">Ronald Enjoy Outliers</span></p>
+<p><span class="fragment">Ronald Identify Similarity</span></p>
+<p><span class="fragment">Ronald Lookup Similarity</span></p>
+<p><span class="fragment">Ronald Annotate Dependency</span></p>
+<p><span class="fragment">Barrie Record Correlation</span></p>
+<p><span class="fragment">Cody Locate Distribution</span></p>
+<p><span class="fragment">Jiyin Enjoy Correlation</span></p>
+<p><span class="fragment">Cody Summarize Extremes</span></p>
+<p><span class="fragment">Eric Lookup Similarity</span></p>
+<p><span class="fragment">Jiyin Annotate Distribution</span></p>
+<p><span class="fragment">Cody Discover Topology</span></p>
+<p><span class="fragment">Eric Record Dependency</span></p>
+<p><span class="fragment">Eric Record Outliers</span></p>
 
 <div class="footer footer-default">
 <p><a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>…<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/index.html" target="_blank">HOME</a></p>
@@ -890,12 +890,15 @@ Barrie Robison
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -906,13 +909,6 @@ Barrie Robison
               window.jQuery(currentSlide).trigger("shown");
             }
           }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
         }
 
         // hookup for slidy
