@@ -83,11 +83,11 @@ Outbreak Simulator runs the compartment model on a spatially explicit grid of th
 
 This is a video of the simulation:
 
-![](zombievid.3gp)
+![](zombievid_1.mp4)
 
 ```{r}
 df<-read.csv("ZombieData.csv")
-glimpse(df)
+
 
 ```
 
@@ -201,13 +201,24 @@ ggplot(fewerstates, aes(x=Time, y = Count/10^6, color = Compartment))+
   )+
    scale_colour_brewer(type = "seq", palette = "Spectral")
 
-Zomstates <- stateslong %>%
+statecolor<-stateslong%>%
+  filter(Compartment == "S" & State != "Totals" & Time == 0)%>%
+  mutate(rank = rank(Count))
+
+stateslong2 <- left_join(stateslong, statecolor, by = c("State",
+                                                        "Compartment"))
+
+Zomstates <- stateslong2 %>%
   filter(Compartment == "S" & State != "Totals")%>%
-  mutate(date = as_date(Time),
+  mutate(date = as_date(Time.x),
          name = State,
-         category = Compartment,
-         value = Count)%>%
-  select(c(5:8))
+         category = rank,
+         value = Count.x)%>%
+  select(c(8:11))
+
+
+
+
 
 write.csv(Zomstates, "Zomstates.csv")
 
@@ -404,7 +415,7 @@ function ticker(svg) {
 formatDate = d3.utcFormat("%Y")
 
 color = {
-  const scale = d3.scaleOrdinal(d3.schemeTableau10);
+  const scale = d3.scaleSequential(d3.interpolate("red", "blue")).domain([1, 48]);
   if (data.some(d => d.category !== undefined)) {
     const categoryByName = new Map(data.map(d => [d.name, d.category]))
     scale.domain(Array.from(categoryByName.values()));
@@ -412,6 +423,20 @@ color = {
   }
   return d => scale(d.name);
 }
+
+
+<!-- color = { -->
+<!--   const scale = d3.scaleSequential(d3.interpolate("red", "blue")).domain([1, 48]); -->
+<!--   if (data.some(d => d.category !== undefined)) { -->
+<!--     const categoryByName = new Map(data.map(d => [d.name, d.category])); -->
+<!--     const categories = Array.from(categoryByName.values()).filter((d, i, arr) => arr.indexOf(d) === i); -->
+<!--     const scaleByCategory = typeof categories[0] === "number" ?  -->
+<!--       d3.scaleSequential(d3.interpolateSpectral).domain(d3.extent(categories)) : -->
+<!--       d3.scaleOrdinal().domain(categories).range(d3.quantize(d3.interpolateSpectral, categories.length)); -->
+<!--     return d => scale(scaleByCategory(categoryByName.get(d.name))); -->
+<!--   } -->
+<!--   return (d, i) => scale(i); -->
+<!-- } -->
 
 x = d3.scaleLinear([0, 1], [margin.left, width - margin.right])
 
