@@ -3,7 +3,6 @@ title: "TUTORIAL 6 - APIs and JSON data"
 image: "Cthulhuhockeymask.png"
 execute: 
   eval: false
-
 ---
 
 ```{r}
@@ -33,8 +32,13 @@ players<- noway %>%
 
 cleanplayers <- drop_na(players)
 cleanplayers$playerId<-cleanplayers$data.playerId
-```
 
+cleanplayers2 <- cleanplayers %>%
+  distinct(playerId, .keep_all= TRUE)
+
+skaters<-cleanplayers2%>%
+  filter(data.position!="G")
+```
 
 ```{r}
 #| eval: false
@@ -43,13 +47,13 @@ cleanplayers$playerId<-cleanplayers$data.playerId
 api_url <- "https://statsapi.web.nhl.com"
 
 
-recentdrafts<-cleanplayers%>%
-  filter(data.draftYear>1999, data.draftYear<2018)
+recentdrafts<-skaters%>%
+  filter(data.draftYear>1999)
 recentdrafts$playerId<-recentdrafts$data.playerId
 playerIds <- as.list(recentdrafts$data.playerId)
 
 testloop<-data.frame()
-
+i<-0
 for (player_id in playerIds){
   
   
@@ -69,29 +73,30 @@ playerstats<- unnest_wider(argh, col=c(stat,league))
 playerstats$playerId<-player_id
 playerstatsfinal<-playerstats %>%
   filter(name=="National Hockey League") %>%
-  select(season, games, 
+  select(season, games, points, goals, assists,  
          name, playerId) 
   
 testloop<-rbind(testloop,playerstatsfinal)
+i<-i+1
+print(i)
 }
 
-argh2 <- tibblify(glorp$stats$splits[[1]])
+
 
 d2000on<-full_join(testloop,recentdrafts, by="playerId")
 
 ```
 
-
 ```{r}
 
 
-dataIwant <- rbind(d2000on, d2018, d2019, d2020, d2020on)
-write.csv(dataIwant, file="NHLdraftgames.csv")
+dataIwant <- d2000on
+write.csv(dataIwant, file="NHLskaterstats.csv")
 
 ```
 
 ```{r}
-#| eval: true
+#| eval: false
 library(dplyr)
 
 dataIwant2<- dataIwant %>%
@@ -105,15 +110,16 @@ dataIwant3<-dataIwant2 %>%
   group_by(playerId, data.draftYear, data.playerName, data.roundNumber,
            data.pickInRound, data.overallPickNumber, data.position, data.height,
            data.weight, postdraft) %>%
-  summarise(totgames=sum(games))
+  summarise(totgames=sum(games), totgoals=sum(goals), totassist=sum(assists), totpoint=sum(points))
 
 datawide<-dataIwant3 %>%
-  pivot_wider(names_from = postdraft, values_from = totgames, values_fill = 0)
+  pivot_wider(names_from = postdraft, values_from = c(totgames, totgoals, totassist, totpoint),
+              values_fill = 0)
 
 allplayerswide<-full_join(cleanplayers,datawide, by="playerId")
 
 allplayerswide <- allplayerswide %>% 
-    mutate_at(20:41, ~replace_na(.,0))
+    mutate_at(19:106, ~replace_na(.,0))
 
 lookup <- c(name = "data.playerName.x", 
             draftyear = "data.draftYear.x",
@@ -126,20 +132,88 @@ lookup <- c(name = "data.playerName.x",
 
 testthing<-rename(allplayerswide, all_of(lookup))
 
-keepthis<-testthing[c(1, 3:10, 19:41)]
+keepthis<-testthing[c(1, 3:10, 19:106)]
 
-whoa <- keepthis %>%
+games<-keepthis%>%
+  select(c(1:9, starts_with("totgames")))
+
+gameslong <- games %>%
   pivot_longer(
-    cols = starts_with("dY"),
+    cols = starts_with("totgames"),
     names_to = "postdraft",
-    names_prefix = "dY",
+    names_prefix = "totgames_dY ",
     values_to = "NHLgames")
 
-whoa <- drop_na(whoa)
+gameslong <- gameslong%>%
+  filter(postdraft!="NA")
 
-whoa$postdraft<-as.numeric(whoa$postdraft)
+gameslong$postdraft<-as.numeric(gameslong$postdraft)
 
-whoanew <- whoa %>%
+
+points<-keepthis%>%
+  select(c(1:9, starts_with("totpoint")))
+
+pointslong <- points %>%
+  pivot_longer(
+    cols = starts_with("totpoint"),
+    names_to = "postdraft",
+    names_prefix = "totpoint_dY ",
+    values_to = "points")
+
+pointslong <- pointslong%>%
+  filter(postdraft!="NA")
+
+pointslong$postdraft<-as.numeric(pointslong$postdraft)
+
+assists<-keepthis%>%
+  select(c(1:9, starts_with("totassist")))
+
+assistslong <- assists %>%
+  pivot_longer(
+    cols = starts_with("totassist"),
+    names_to = "postdraft",
+    names_prefix = "totassist_dY ",
+    values_to = "assists")
+
+assistslong <- assistslong%>%
+  filter(postdraft!="NA")
+
+assistslong$postdraft<-as.numeric(assistslong$postdraft)
+
+goals<-keepthis%>%
+  select(c(1:9, starts_with("totgoal")))
+
+goalslong <- goals %>%
+  pivot_longer(
+    cols = starts_with("totgoal"),
+    names_to = "postdraft",
+    names_prefix = "totgoals_dY ",
+    values_to = "goals")
+
+goalslong <- goalslong%>%
+  filter(postdraft!="NA")
+
+goalslong$postdraft<-as.numeric(goalslong$postdraft)
+
+
+
+gamegoal<- left_join(gameslong,goalslong, by = c("playerId", "draftyear",
+                                                 "name", "round", "pickinRound",
+                                                 "height", "weight", "position",
+                                                 "overall", "postdraft"))
+gga<-left_join(gamegoal,assistslong, by = c("playerId", "draftyear",
+                                                 "name", "round", "pickinRound",
+                                                 "height", "weight", "position",
+                                                 "overall", "postdraft"))
+ggap<-left_join(gga,pointslong, by = c("playerId", "draftyear",
+                                                 "name", "round", "pickinRound",
+                                                 "height", "weight", "position",
+                                                 "overall", "postdraft"))
+
+
+
+
+statslong <- ggap %>%
   mutate(position = replace(position, position == "G", "Goaltender"),
          position = replace(position, position == "D", "Defense"),
          position = replace(position, position == "C" | position =="LW", "Forward"),
@@ -148,19 +222,18 @@ whoanew <- whoa %>%
          position = replace(position, position == "LW/RW", "Forward"))
   
 
-actualdata<- whoanew %>%
-  filter(round<8, draftyear>2000, NHLgames<120)
+actualdata<- statslong %>%
+  filter(round<8, draftyear>2000)
 
-ggplot(actualdata, aes(x=postdraft, y = NHLgames))+
-  geom_smooth()+
-  facet_grid(position~round)
+actualdata2<-actualdata%>%
+  distinct(playerId,postdraft, .keep_all = TRUE)
+
+
+
+
  
-write.csv(actualdata, file = "NHLdraft.csv")
+write.csv(actualdata2, file = "NHLdraftstats.csv")
 
-actualdata5<-actualdata%>%
-  filter(postdraft<6)
-ggplot(actualdata5, aes(x=NHLgames))+
-  geom_histogram()+
-  facet_grid(round~postdraft)
+
 
 ```
