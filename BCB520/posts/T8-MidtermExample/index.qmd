@@ -4,7 +4,7 @@ subtitle: "State Level Infection Dynamics of the Zombie Apocalypse"
 format:
   html:
     toc: false
-    echo: false
+    echo: true
 author: "Barrie Robison"
 date: "2023-04-04"
 categories: [Portfolio, DataViz, Infectious Disease, Observable, Animation]
@@ -14,47 +14,31 @@ code-fold: true
 code-tools: true
 ---
 
-## OVERVIEW
-
-This assignment provides you the opportunity to synthesize all of the concepts we've covered in the course to date. The basic framework is that you will create a COMPLETE data visualization BLOG post that is suitable as a showcase component of your Data Science Portfolio. The point is to [SHOW]{.red} people your skills.
-
-## STRUCTURE
-
-The basic formatting guidelines for this assignment are:
-
-1.  Include `code fold` or `code tools` options (or both) that allow users to view and copy your code while maintaining overall readability of your post.
-2.  Suppress all output and warnings that might distract from your visualizations and writing.
-3.  Properly title your assignment. The main title should be **"BCB 520 - Midterm Portfolio Post"**, and the subtitle should be a descriptive title related to your question or topic.
-4.  Include author, date, categories, and a description in your YAML header.
-5.  Write clear, complete sentences for a target audience with some scientific background but little training in your specific discipline.
-6.  Include references if appropriate and use hyperlinks to external sources of data, inspiration, or examples.
-7.  Use the header hierarchy and create a sensible document outline with white space. Format for readability! Use **bold** and *italic* fonts to emphasize things! Use [color]{.red} by customizing your `.css` file!
-
-**In addition to the above formatting guidelines, your portfolio post must contain the following sections:**
-
 ## PREAMBLE
 ```{r}
+#| output: false
+
+
 library(tidyverse)
 library(lubridate)
 library(readxl)
 ```
-ZOMBIES.
+[ZOMBIES.]{.red}
 
-Zombies have undergone a significant evolution as a horror trope in fiction. The concept of zombies dates back to Haitian folklore and Voodoo, where they were depicted as reanimated corpses that were controlled by a sorcerer or bokor. However, in modern fiction, zombies are typically portrayed as mindless, flesh-eating creatures that are reanimated by a virus or some other mysterious force.
+Zombies have long been a frequent trope of horror fiction. The concept of zombies first emerged from Haitian folklore and Voodoo, where they were depicted as reanimated corpses that were controlled by a sorcerer or bokor. However, in modern fiction, the magical or supernatural origin of zombies has been largely replaced by a scientific one. Zombies are now typically portrayed as mindless, flesh-eating creatures that are reanimated by a virus or some other infectious agent.
 
 The evolution of zombies as a horror trope can be divided into several distinct eras:
 
-1. Classic Zombies: The classic zombie was the original Haitian zombie, which was introduced to Western audiences in the early 20th century through literature and film. These zombies were depicted as slow-moving, mind-controlled creatures that were raised from the dead by Voodoo magic.
+1. **Classic Zombies:** The classic zombie was the original Haitian zombie, which was introduced to Western audiences in the early 20th century through literature and film. These zombies were depicted as slow-moving, mind-controlled creatures that were raised from the dead by Voodoo magic.
 
-2. Romero Zombies: George A. Romero's 1968 film "Night of the Living Dead" redefined the zombie genre by introducing the idea that zombies were reanimated by a mysterious virus that spread through bites and scratches. Romero's zombies were slow-moving, flesh-eating creatures that could only be killed by destroying the brain.
+2. **Romero Zombies:** George A. Romero's 1968 film ["Night of the Living Dead"](https://www.imdb.com/title/tt0063350/?ref_=nm_knf_t_3) redefined the zombie genre by introducing the idea that zombies were reanimated by a mysterious virus that spread through bites and scratches. Romero's zombies were slow-moving, flesh-eating creatures that could only be killed by destroying the brain.  Many modern zombie franchises (e.g. [Resident Evi](https://www.imdb.com/title/tt0120804/?ref_=fn_al_tt_1), [Walking Dead](https://www.imdb.com/title/tt1520211/?ref_=nv_sr_srsg_0)) still use the classic shambling undead Romeero Zombie concept.
 
-3. Fast Zombies: In the early 2000s, a new type of zombie emerged in fiction that could run and move at incredible speeds. These fast zombies were popularized by films like "28 Days Later" and "World War Z." Fast zombies are often depicted as being more aggressive and intelligent than their slow-moving counterparts.
+3. **Fast Zombies:** In the early 2000s, a new type of zombie emerged in fiction that could run and move at incredible speeds. These fast zombies were popularized by films like [28 Days Later](https://www.imdb.com/title/tt0289043/?ref_=nv_sr_srsg_0) and [World War Z](https://www.imdb.com/title/tt0816711/?ref_=nv_sr_srsg_0). Fast zombies are often depicted as being more aggressive and intelligent than their slow-moving counterparts.  Note that in many of these zombie franchises, the zombies were still created by an infectious agent such as a virus.
 
-4. Post-Apocalyptic Zombies: In recent years, zombies have been featured in a number of post-apocalyptic settings, where they are often portrayed as the cause of a global pandemic that has devastated humanity. These stories often focus on the struggle of survivors to rebuild civilization in a world overrun by the undead.
+4. **Post-Apocalyptic Zombies:** In recent years, zombies have been featured in a number of post-apocalyptic settings, where they are often portrayed as the cause of a global pandemic that has devastated humanity. These stories often focus on the struggle of survivors to rebuild civilization in a world overrun by the undead.  These can be any of the above types (Classic, Romero, Fast) of zombie.  This is the scenario that motivates this Blog post.
 
-Overall, the evolution of zombies as a horror trope has been marked by a shift from mind-controlled creatures to virus-infected monsters. 
 
-But would an outbreak of a "zombie virus" actually consume the world and bring forth an apocalyptic new age of shambling horror?
+**Would an outbreak of a "zombie virus" actually consume the world and bring forth an apocalyptic new age of shambling horror?**
 
 Let's use disease modeling to find out!
 
@@ -71,6 +55,7 @@ In order to model this outbreak, we'll need to set some of the classic parameter
 I've provided my own estimates of these parameters for various infectious zombie franchises in the table below.
 
 ```{r}
+
 params<-read_xlsx("params.xlsx")
 
 knitr::kable(params)
@@ -137,7 +122,8 @@ dflong <- dflong%>%
          V = "Vaccinated",
          R = "Recovered",
          D = "Deceased"))%>%
-  filter(Compartment != "Vaccinated")
+  filter(Compartment != "Vaccinated")%>%
+  filter(Compartment != "Recovered")
 
 ```
 This allows me to produce the classic Epidemilogical Curve:
@@ -163,6 +149,11 @@ ggplot(dflong, aes(x=Time, y = Count/10^6, color = Compartment))+
 
 ## STATE LEVEL DYNAMICS
 
+We can use the output from the simulation to show the Epidemilogical Curve for each state, but the problem is the number of states.  There are 48 in the continental US - too many to ask a user to meaningfully process.
+
+Here are the curves for four states - the ones that collaborate on the [Tickbase project](https://tickbase.net) that funds this work.
+
+
 ```{r}
 
 
@@ -184,7 +175,8 @@ fewerstates<-stateslong%>%
          V = "Vaccinated",
          R = "Recovered",
          D = "Deceased"))%>%
-  filter(Compartment != "Vaccinated")
+  filter(Compartment != "Vaccinated")%>%
+  filter(Compartment != "Recovered")
 
 
 ggplot(fewerstates, aes(x=Time, y = Count/10^6, color = Compartment))+
@@ -223,12 +215,10 @@ Zomstates <- stateslong2 %>%
 write.csv(Zomstates, "Zomstates.csv")
 
 ```
-### Visualizations
+## VISUALIZATIONS
 
-Create your visualizations and include text that explains any steps or design choices. Be sure to include clearly labeled axes and a concise but complete figure caption for each visualization. Make deliberate choices for color palettes, point marks, line types, etc. Demonstrate that you understand the concepts we have covered!
+I'm really interested in an animated visualization that captures the changing population dynamics in each state.  I'm going to use Observable for this, modifying an [existing workbook](https://observablehq.com/d/c28318bc4edfb4c1).
 
-
-https://observablehq.com/d/c28318bc4edfb4c1
 
 ```{ojs}
 
@@ -459,20 +449,7 @@ d3 = require("d3@6")
 
 
 
-### Conclusions or Summary
+## SUMMARY
 
-Answer your research question. Draw a conclusion or inference related to your topic. Summarize your results. What new questions have emerged as a result of your visualizations? What interesting next steps have emerged?
+It is pretty clear from the simulations that an outbreak of the T-Virus is really bad news for the continental United States.  We go from ~308 million people to ~10 million people in about 500 hours.  In addition, the most populated states at the beginning of the outbreak are hit disproportionately hard, presumably because their population density helps sustain the infection.
 
-## RUBRIC
-
-I will evaluate the following for your portfolio post:
-
-**1. Clarity of writing (15%):** Complete, clear sentences. Good Grammar. Understandable to target audience. Logical flow of ideas.
-
-**2. Adherence to format (10%):** Did you follow directions?
-
-**3. Topic suitability (15%):** Is the topic interesting? Are the visualizations challenging and interesting enough to showcase your skills?
-
-**4. Viz Execution (40%):** Are the visualizations effective? Do they adhere to the principles of effectiveness? Are choices for idiom, marks, channels, etc made deliberately and well justified?
-
-**5. Creativity (20%):** Did you push your boundaries and learn new techniques? Is the overall post compelling and interesting? Are the visualizations inspiring, creative, unique, and generally impressive? If I were recruiting a new data scientist (and I often am), would this portfolio post impress me, or would it damage your candidacy during review?
