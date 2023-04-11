@@ -1,6 +1,6 @@
 ---
 title: "Practice with Spatial Data"
-subtitle: "State Level Infection Dynamics of the Zombie Apocalypse"
+subtitle: "Malaria, Ocean Currents, Baseball..."
 format:
   html:
     toc: false
@@ -25,6 +25,9 @@ In class I bet Ronald that he would end up creating some kind of map based visua
 The data I obtained were from the [Malaria Atlas](https://data.malariaatlas.org/trends?year=2020&metricGroup=Malaria&geographicLevel=admin0&metricSubcategory=Pf&metricType=rate&metricName=incidence). I downloaded a csv for 10 years of data for all the countries the had on file.
 
 ```{r}
+#| output: false
+
+
 library(tidyverse)
 library(readxl)
 library(rnaturalearth)
@@ -101,7 +104,7 @@ Spatial field data refers to data that has a continuous spatial distribution and
 library(remotes)
 
 
-install_github("bayesball/CalledStrike")
+# install_github("bayesball/CalledStrike")
 
 
 ```
@@ -111,6 +114,7 @@ library(CalledStrike)
 #ShinyDemo()
 ```
 
+This example is the Pitch_Locations example from [byaesball's CalledStrike Github Repository](https://github.com/bayesball/CalledStrike/tree/master/vignettes)
 
 #### Introduction
 
