@@ -37,9 +37,11 @@ library(dplyr)
 Malaria <- read.csv("National_Unit_data.csv")
 
 Incidence<- Malaria%>%
-  filter(Metric == "Infection Prevalence" & Year == "2019")%>%
-  mutate(Prevalence = Value)%>%
-  select(c(ISO3, Prevalence))
+  filter(Metric == "Infection Prevalence")%>%
+  mutate(Prevalence = Value, Year = as.factor(Year))
+
+#%>%
+  #select(c(ISO3, Prevalence, Year))
 
 ```
 
@@ -56,12 +58,60 @@ map_data <- world_map %>%
 Now I will make a plot!
 
 ```{r}
+#| eval: false
+
+
+library(gganimate)
+library(transformr)
+library(magick)
+library(gifski)
+
 ggplot() +
-  geom_sf(data = map_data, aes(fill = Prevalence)) +
+  geom_sf(data = map_data%>%
+            filter(continent=="Africa"),
+          aes(fill = Prevalence)) +
   scale_fill_gradient(low = "white", high = "red", na.value = "gray", name = "Malaria Prevalence") +
   theme_minimal() +
   theme(axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank()) +
   labs(title = "Malaria Prevalence by Country")
+
+p <- ggplot() +
+  geom_sf(data = map_data%>%
+            filter(continent=="Africa"),
+          aes(fill = Prevalence)) +
+  scale_fill_gradient(low = "white", high = "red", na.value = "gray", name = "Malaria Prevalence") +
+  theme_minimal() +
+  theme(axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank()) +
+  labs(title = "Malaria Prevalence by Country") +
+  transition_states(Year, transition_length = 2, state_length = 2)
+
+animate(p, fps = 25, width = 800, height = 500)
+
+```
+
+
+```{r}
+#| eval: false
+
+Incidence <- Malaria %>%
+  filter(Metric == "Infection Prevalence" & Year >= 2010 & Year <= 2020) %>%
+  mutate(Year = as.factor(Year),
+         Prevalence = Value)
+
+world_map <- ne_countries(scale = "medium", returnclass = "sf")
+
+map_data <- world_map %>%
+  left_join(Incidence, by = c("iso_a3" = "ISO3"))
+
+p <- ggplot() +
+  geom_sf(data = map_data, aes(fill = Prevalence)) +
+  scale_fill_gradient(low = "white", high = "red", na.value = "gray", name = "Malaria Prevalence") +
+  theme_minimal() +
+  theme(axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank()) +
+  labs(title = "Malaria Prevalence by Country") +
+  transition_states(Year, transition_length = 2, state_length = 2)
+
+animate(p, fps = 25, width = 800, height = 500)
 
 ```
 

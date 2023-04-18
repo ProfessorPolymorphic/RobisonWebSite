@@ -15,6 +15,7 @@ code-tools: true
 ---
 
 ## PREAMBLE
+
 ```{r}
 #| output: false
 
@@ -23,20 +24,20 @@ library(tidyverse)
 library(lubridate)
 library(readxl)
 ```
+
 [ZOMBIES.]{.red}
 
 Zombies have long been a frequent trope of horror fiction. The concept of zombies first emerged from Haitian folklore and Voodoo, where they were depicted as reanimated corpses that were controlled by a sorcerer or bokor. However, in modern fiction, the magical or supernatural origin of zombies has been largely replaced by a scientific one. Zombies are now typically portrayed as mindless, flesh-eating creatures that are reanimated by a virus or some other infectious agent.
 
 The evolution of zombies as a horror trope can be divided into several distinct eras:
 
-1. **Classic Zombies:** The classic zombie was the original Haitian zombie, which was introduced to Western audiences in the early 20th century through literature and film. These zombies were depicted as slow-moving, mind-controlled creatures that were raised from the dead by Voodoo magic.
+1.  **Classic Zombies:** The classic zombie was the original Haitian zombie, which was introduced to Western audiences in the early 20th century through literature and film. These zombies were depicted as slow-moving, mind-controlled creatures that were raised from the dead by Voodoo magic.
 
-2. **Romero Zombies:** George A. Romero's 1968 film ["Night of the Living Dead"](https://www.imdb.com/title/tt0063350/?ref_=nm_knf_t_3) redefined the zombie genre by introducing the idea that zombies were reanimated by a mysterious virus that spread through bites and scratches. Romero's zombies were slow-moving, flesh-eating creatures that could only be killed by destroying the brain.  Many modern zombie franchises (e.g. [Resident Evi](https://www.imdb.com/title/tt0120804/?ref_=fn_al_tt_1), [Walking Dead](https://www.imdb.com/title/tt1520211/?ref_=nv_sr_srsg_0)) still use the classic shambling undead Romeero Zombie concept.
+2.  **Romero Zombies:** George A. Romero's 1968 film ["Night of the Living Dead"](https://www.imdb.com/title/tt0063350/?ref_=nm_knf_t_3) redefined the zombie genre by introducing the idea that zombies were reanimated by a mysterious virus that spread through bites and scratches. Romero's zombies were slow-moving, flesh-eating creatures that could only be killed by destroying the brain. Many modern zombie franchises (e.g. [Resident Evi](https://www.imdb.com/title/tt0120804/?ref_=fn_al_tt_1), [Walking Dead](https://www.imdb.com/title/tt1520211/?ref_=nv_sr_srsg_0)) still use the classic shambling undead Romeero Zombie concept.
 
-3. **Fast Zombies:** In the early 2000s, a new type of zombie emerged in fiction that could run and move at incredible speeds. These fast zombies were popularized by films like [28 Days Later](https://www.imdb.com/title/tt0289043/?ref_=nv_sr_srsg_0) and [World War Z](https://www.imdb.com/title/tt0816711/?ref_=nv_sr_srsg_0). Fast zombies are often depicted as being more aggressive and intelligent than their slow-moving counterparts.  Note that in many of these zombie franchises, the zombies were still created by an infectious agent such as a virus.
+3.  **Fast Zombies:** In the early 2000s, a new type of zombie emerged in fiction that could run and move at incredible speeds. These fast zombies were popularized by films like [28 Days Later](https://www.imdb.com/title/tt0289043/?ref_=nv_sr_srsg_0) and [World War Z](https://www.imdb.com/title/tt0816711/?ref_=nv_sr_srsg_0). Fast zombies are often depicted as being more aggressive and intelligent than their slow-moving counterparts. Note that in many of these zombie franchises, the zombies were still created by an infectious agent such as a virus.
 
-4. **Post-Apocalyptic Zombies:** In recent years, zombies have been featured in a number of post-apocalyptic settings, where they are often portrayed as the cause of a global pandemic that has devastated humanity. These stories often focus on the struggle of survivors to rebuild civilization in a world overrun by the undead.  These can be any of the above types (Classic, Romero, Fast) of zombie.  This is the scenario that motivates this Blog post.
-
+4.  **Post-Apocalyptic Zombies:** In recent years, zombies have been featured in a number of post-apocalyptic settings, where they are often portrayed as the cause of a global pandemic that has devastated humanity. These stories often focus on the struggle of survivors to rebuild civilization in a world overrun by the undead. These can be any of the above types (Classic, Romero, Fast) of zombie. This is the scenario that motivates this Blog post.
 
 **Would an outbreak of a "zombie virus" actually consume the world and bring forth an apocalyptic new age of shambling horror?**
 
@@ -48,7 +49,7 @@ I'm going to use our new interactive simulation, [OUTBREAK SIMULATOR](https://pr
 
 ### Parameters
 
-In order to model this outbreak, we'll need to set some of the classic parameters of an SIR compartment model. Outbreak Simulator uses a compartment model of disease (Weissman et al., 2020) in which the population is divided into categories (Figure 1): Susceptible (S), Exposed (E), Infected (I), Vaccinated (V), Recovered (R), or Deceased (D). The model estimates the rates of exchange between categories over a given time interval (t) using differential equations. When the model parameters are known and key assumptions are met, the differential equations can estimate the epidemic curve of an outbreak. The two most critical assumptions are that the population is homogeneous and well mixed and is fixed in size. 
+In order to model this outbreak, we'll need to set some of the classic parameters of an SIR compartment model. Outbreak Simulator uses a compartment model of disease (Weissman et al., 2020) in which the population is divided into categories (Figure 1): Susceptible (S), Exposed (E), Infected (I), Vaccinated (V), Recovered (R), or Deceased (D). The model estimates the rates of exchange between categories over a given time interval (t) using differential equations. When the model parameters are known and key assumptions are met, the differential equations can estimate the epidemic curve of an outbreak. The two most critical assumptions are that the population is homogeneous and well mixed and is fixed in size.
 
 ![](OSFig1.jpg)
 
@@ -64,7 +65,7 @@ knitr::kable(params)
 
 ### Data Dictionary
 
-Outbreak Simulator runs the compartment model on a spatially explicit grid of the continental US.  It writes the number of individuals in each compartment (SIERD) at each time step (an hour) for each of the 48 states and the total population. 
+Outbreak Simulator runs the compartment model on a spatially explicit grid of the continental US. It writes the number of individuals in each compartment (SIERD) at each time step (an hour) for each of the 48 states and the total population.
 
 This is a video of the simulation:
 
@@ -76,7 +77,7 @@ df<-read.csv("ZombieData.csv")
 
 ```
 
-I'll manipulate the raw data a bit to get to the visualizations I need.  First, I want a tidy data set with only the total US population.
+I'll manipulate the raw data a bit to get to the visualizations I need. First, I want a tidy data set with only the total US population.
 
 ```{r}
 
@@ -126,6 +127,7 @@ dflong <- dflong%>%
   filter(Compartment != "Recovered")
 
 ```
+
 This allows me to produce the classic Epidemilogical Curve:
 
 ```{r}
@@ -146,13 +148,11 @@ ggplot(dflong, aes(x=Time, y = Count/10^6, color = Compartment))+
 
 ```
 
-
 ## STATE LEVEL DYNAMICS
 
-We can use the output from the simulation to show the Epidemilogical Curve for each state, but the problem is the number of states.  There are 48 in the continental US - too many to ask a user to meaningfully process.
+We can use the output from the simulation to show the Epidemilogical Curve for each state, but the problem is the number of states. There are 48 in the continental US - too many to ask a user to meaningfully process.
 
 Here are the curves for four states - the ones that collaborate on the [Tickbase project](https://tickbase.net) that funds this work.
-
 
 ```{r}
 
@@ -215,10 +215,10 @@ Zomstates <- stateslong2 %>%
 write.csv(Zomstates, "Zomstates.csv")
 
 ```
+
 ## VISUALIZATIONS
 
-I'm really interested in an animated visualization that captures the changing population dynamics in each state.  I'm going to use Observable for this, modifying an [existing workbook](https://observablehq.com/d/c28318bc4edfb4c1).
-
+I'm really interested in an animated visualization that captures the changing population dynamics in each state. I'm going to use Observable for this, modifying an [existing workbook](https://observablehq.com/d/c28318bc4edfb4c1).
 
 ```{ojs}
 
@@ -447,9 +447,6 @@ d3 = require("d3@6")
 
 ```
 
-
-
 ## SUMMARY
 
-It is pretty clear from the simulations that an outbreak of the T-Virus is really bad news for the continental United States.  We go from ~308 million people to ~10 million people in about 500 hours.  In addition, the most populated states at the beginning of the outbreak are hit disproportionately hard, presumably because their population density helps sustain the infection.
-
+It is pretty clear from the simulations that an outbreak of the T-Virus is really bad news for the continental United States. We go from \~308 million people to \~10 million people in about 500 hours. In addition, the most populated states at the beginning of the outbreak are hit disproportionately hard, presumably because their population density helps sustain the infection.

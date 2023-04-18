@@ -1,0 +1,420 @@
+---
+title: "LECTURE 8 - Network Data"
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    css: styles.css
+    footer: <a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/BCB520.html" target="_blank">HOME</a>
+    theme: [default, custom.scss]
+author: "Barrie Robison"
+date: "2023-04-17"
+categories: [Lecture, DataViz, Data, Network, Observable]
+image: "Azathothnetwork.png"
+code-fold: true
+---
+
+
+## DATASET TYPES: NETWORKS
+
+::: columns
+::: {.r-fit-text .column width="40%"}
+-   networks (also called graphs)
+    -   model relationships between things
+    -   two kinds of items, both can have attributes
+        -   nodes
+        -   links
+-   trees are a special case
+    -   no cycles
+    -   one parent per node
+
+:::
+
+::: {.column width="60%"}
+![](Networks.png)
+:::
+:::
+## ARRANGE NETWORKS/TREES
+
+![](Arrangenet.png)
+
+
+## NETWORK TASKS
+
+::: columns
+::: {.r-fit-text .column width="60%"}
+-   topology based tasks
+    -   find paths
+    -   find (topological) neighbors
+    -   compare centrality/importance measures
+    -   identify clusters / communities
+-   attribute based tasks (similar to tabular data)
+    -   find distributions, etc...
+-   combination tasks, incorporating both
+    -   example: find friends-of-friends who like cats 
+        -   topology: find all adjacent nodes of given node
+        -   attributes: check if has-pet (node attribute) == cat
+
+
+:::
+
+::: {.column width="40%"}
+![](Nettasks.png)
+:::
+:::
+
+## NODE-LINK DIAGRAMS
+
+::: columns
+::: {.r-fit-text .column width="40%"}
+-   nodes: point marks
+-   links: line marks
+    -   straight lines or arcs
+    -   connections between nodes
+-   intuitive & familiar
+    -   most common
+    -   many, many variants
+
+
+:::
+
+::: {.column width="60%"}
+![](nodelink.png)
+:::
+:::
+
+## NODE-LINK LAYOUT {.smaller}
+
+::: columns
+::: {.column width="60%"}
+-   minimize 
+    -   edge crossings, node overlaps
+    -   distances between topological neighbor nodes
+    -   total drawing area
+    -   edge bends
+-   maximize 
+    -   angular distance between different edges
+    -   aspect ratio disparities
+-   emphasize symmetry
+    -   similar graph structures should look similar in layout
+
+:::
+
+::: {.column width="40%"}
+![](nodelinklayout.png)
+:::
+:::
+
+## NODE-LINK CHALLENGES
+
+**Many criteria directly conflict with each other.**
+
+
+![](nodeconflict.png)
+
+## OPTIMIZATION BASED LAYOUTS {.smaller}
+
+-   formulate layout problem as optimization problem
+-   convert criteria into weighted cost function 
+    -   F(layout) = a*[crossing counts] + b*[drawing space used]+...
+-   use known optimization techniques to find layout at minimal cost
+    -   energy-based physics models
+    -   force-directed placement
+    -   spring embedders
+
+## FORCE DIRECTED PLACEMENT {.smaller}
+::: columns 
+::: {.column width="60%"}
+-   physics model
+    -   links = springs pull together
+    -   nodes = magnets repulse apart
+
+-   algorithm
+    -   place vertices in random locations
+    -   while not equilibrium
+    -   calculate force on vertex as sum of
+        -   pairwise repulsion of all nodes
+        -   attraction between connected nodes
+    -   move vertex by c * vertex_force
+
+
+:::
+
+::: {.column width="40%"}
+
+![](force.png)
+:::
+:::
+
+## FORCE DIRECTED PROS/CONS {.smaller}
+::: columns
+::: {.column width="60%"}
+-   strengths
+    -   reasonable layout for small, sparse graphs
+    -   clusters typically visible
+    -   edge length uniformity
+-   weaknesses
+    -   nondeterministic
+    -   computationally expensive: O(n^3) for n nodes
+        -   each step is n^2, takes ~n cycles to reach equilibrium
+    -   naive FD doesn't scale well beyond 1K nodes 
+    -   iterative progress: engaging but distracting
+
+
+
+:::
+
+::: {.column width="40%"}
+
+![](fdimage.png)
+
+:::
+:::
+
+## FORCE DIRECTED IDIOM {.smaller}
+::: columns
+::: {.column width="75%"}
+-   visual encoding
+    -   link connection marks, node point marks
+-   considerations
+    -   spatial position: no meaning directly encoded, eft free to minimize crossings
+    -   proximity semantics?
+        -   sometimes meaningful, sometimes an artifact of layout algorithm
+        -   tension with length (long edges more visually salient than short)
+-   tasks
+    -   explore topology; locate paths, clusters
+-   scalability
+    -   node/edge density E < 4N
+:::
+
+::: {.column width="25%"}
+
+![](fdimage.png)
+
+:::
+:::
+
+## FORCE DIRECTED EXAMPLES
+
+[Force Directed Graph](https://observablehq.com/@d3/force-directed-graph)
+
+[Disjoint Force Directed](https://observablehq.com/@d3/disjoint-force-directed-graph)
+
+[OBSERVABLE D3 LIBRARY](https://observablehq.com/@d3/gallery?collection=@observablehq/observable-libraries-for-visualization)
+
+## CIRCULAR LAYOUTS / ARC DIAGRAMS {.smaller}
+
+-   restricted node-link layouts: lay out nodes around circle or along line
+-   data
+    -   original: network
+    -   derived: node ordering attribute (global computation)
+-   considerations: node ordering crucial to avoid excessive clutter from edge crossings
+    -   examples: before & after barycentric ordering
+
+[Arc Diagram](https://observablehq.com/@d3/arc-diagram)
+
+
+## ADJACENCY MATRIX
+
+Matrix derived from network
+
+::: columns
+::: {.column width="40%"}
+![](adjacency.png)
+
+![](adjex1.png)
+
+
+:::
+
+::: {.column width="60%"}
+
+![](adjex2.png)
+
+:::
+:::
+
+
+## NODE ORDER
+
+[ANIMATED VERSION](https://bost.ocks.org/mike/miserables/) built with D3 by Mike Bostock.
+
+![](miserables.png)
+
+## MATRIX PROS/CONS
+
+Good for topology tasks related to neighborhoods.  Bad for topology tasks related to paths.
+
+![](adjgoodbad.png)
+
+## NODE-LINK vs MATRIX {.smaller}
+
+-   node-link diagram strengths
+    -   topology understanding, path tracing
+    -   intuitive, flexible, no training needed
+-   adjacency matrix strengths
+    -   focus on edges rather than nodes
+    -   layout straightforward (reordering needed)
+    -   predictability, scalability
+    -   some topology tasks trainable
+-   empirical studies:
+    -   node-link best for small networks
+    -   matrix best for large networks if tasks don’t involve path tracing
+
+## TREES
+
+## NODE-LINK TREES {.smaller}
+
+:::: {.columns}
+::: {.column}
+-   Reingold-Tilford
+    -   tidy drawings of trees
+    -   exploit parent/child structure
+    -   allocate space: compact but without overlap
+    -   rectilinear and radial variants
+    
+[These are COOOOOL!](https://observablehq.com/@d3/gallery?collection=@observablehq/observable-libraries-for-visualization)
+:::
+
+::: {.column}
+![](trees1.png)
+
+
+
+:::
+::::
+
+
+## RADIAL NODE-LINK TREE {.smaller}
+
+::: columns
+::: {.column width="60%"}
+-   data
+    -   tree
+-   encoding
+    -   link connection marks
+    -   point node marks
+    -   radial axis orientation
+        -   angular proximity: siblings
+        -   distance from center: depth in tree 
+-   tasks
+    -   understanding topology,  following paths
+-   scalability
+    -   1K - 10K nodes (with/without labels)
+
+
+:::
+
+::: {.column width="40%"}
+
+![](radial.png)
+[EXAMPLE](https://observablehq.com/@esperanc/d3-radial-tidy-tree)
+
+:::
+:::
+
+## CONNECTION AND CONTAINMENT {.smaller}
+
+::: columns
+::: {.column width="60%"}
+-   marks as links (vs. nodes)
+    -   common case in network drawing
+    -   1D case: connection
+        -   ex: all node-link diagrams
+        -   emphasizes topology, path tracing
+        -   networks and trees
+    -   2D case: containment
+        -   ex: all treemap variants
+        -   emphasizes attribute values at leaves (size coding)
+        -   only trees
+
+:::
+
+::: {.column width="40%"}
+
+![](connect.png)
+
+:::
+:::
+
+## TREEMAP {.smaller}
+
+
+::: columns
+::: {.column width="60%"}
+-   data
+    -   tree
+    -   1 quant attrib at leaf nodes
+-   encoding
+    -   area containment marks for hierarchical structure
+    -   rectilinear orientation
+    -   size encodes quant attrib
+-   tasks
+    -   query attribute at leaf nodes
+    -   ex: disk space usage within filesystem
+-   scalability
+    -   1M leaf nodes
+
+
+:::
+
+::: {.column width="40%"}
+
+![](enclose.png)
+
+
+[TREEMAP](https://observablehq.com/@d3/treemap)
+
+[VORONOI TREEMAP](https://observablehq.com/@will-r-chase/voronoi-treemap)
+
+
+:::
+:::
+
+## IMPLICIT TREE LAYOUTS {.smaller}
+
+An alternative to connection and containment is position.  These show parent-child relationships only through relative positions.
+
+![](implicit.png)
+
+![](implicit2.png){height=100}
+
+
+## TREE IDIOMS {.smaller}
+
+
+
+::: columns
+::: {.column width="60%"}
+-   data shown
+    -   link relationships 
+    -   tree depth
+    -   sibling order
+-   design choices
+    -   connection vs containment link marks
+    -   rectilinear vs radial layout
+    -   spatial position channels
+-   considerations
+    -   redundant? arbitrary?
+    -   information density?
+        -   avoid wasting space
+        -   consider where to fit labels!
+
+
+:::
+
+::: {.column width="40%"}
+
+![](trees.png)
+
+
+
+
+:::
+:::
+
+## ARRANGE NETWORKS/TREES
+
+![](Arrangenet.png)
