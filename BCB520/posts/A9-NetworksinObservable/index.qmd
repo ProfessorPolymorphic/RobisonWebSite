@@ -1,0 +1,391 @@
+---
+title: "NETWORKS IN OBSERVABLE"
+subtitle: "Interactivity and Animation"
+format:
+  html:
+    toc: false
+    echo: true
+author: "Barrie Robison"
+date: "2023-04-25"
+categories: [Portfolio, DataViz, Network, Observable, Assignment]
+image: "wendigonetwork.png"
+description: "Cool!"
+code-fold: true
+code-tools: true
+---
+
+# OBSERVABLE IN QUARTO
+
+The QUARTO documentation on Observable can be found [here](https://quarto.org/docs/computations/ojs.html).
+
+The preamble of that document summarizes things nicely:
+
+> Quarto includes native support for Observable JS, a set of enhancements to vanilla JavaScript created by Mike Bostock (also the author of D3). Observable JS is distinguished by its reactive runtime, which is especially well suited for interactive data exploration and analysis.
+>
+> The creators of Observable JS (Observable, Inc.) run a hosted service at https://observablehq.com/ where you can create and publish notebooks. Additionally, you can use Observable JS ("OJS") in standalone documents and websites via its core libraries. Quarto uses these libraries along with a compiler that is run at render time to enable the use of OJS within Quarto documents.
+>
+> OJS works in any Quarto document (plain markdown as well as Jupyter and Knitr documents). Just include your code in an {ojs} executable code block.
+
+## EXAMPLE 1: BASIC FORCE DIRECTED GRAPH
+
+I'm going to start by trying to replicate [this observable notebook](https://observablehq.com/@d3/modifying-a-force-directed-graph):
+
+
+
+```{ojs}
+viewof graph = {
+  const form = html`<form style="font: 12px var(--sans-serif); display: flex; height: 33px; align-items: center;">
+  <label style="margin-right: 1em; display: inline-flex; align-items: center;">
+    <input type="radio" name="radio" value="1" style="margin-right: 0.5em;" checked> Graph 1
+  </label>
+  <label style="margin-right: 1em; display: inline-flex; align-items: center;">
+    <input type="radio" name="radio" value="2" style="margin-right: 0.5em;"> Graph 2
+  </label>
+  <label style="margin-right: 1em; display: inline-flex; align-items: center;">
+    <input type="radio" name="radio" value="3" style="margin-right: 0.5em;"> Graph 3
+  </label>
+</form>`;
+  const graphs = {1: graph1, 2: graph2, 3: graph3};
+  const timeout = setInterval(() => {
+    form.value = graphs[form.radio.value = (+form.radio.value) % 3 + 1];
+    form.dispatchEvent(new CustomEvent("input"));
+  }, 2000);
+  form.onchange = () => form.dispatchEvent(new CustomEvent("input")); // Safari
+  form.oninput = event => { 
+    if (event.isTrusted) clearInterval(timeout), form.onchange = null;
+    form.value = graphs[form.radio.value];
+  };
+  form.value = graphs[form.radio.value];
+  invalidation.then(() => clearInterval(timeout));
+  return form;
+}
+
+
+
+
+chart2 = {
+  const svg = d3.create("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .attr("viewBox", [-width / 2, -height / 2, width, height]);
+
+  const simulation = d3.forceSimulation()
+      .force("charge", d3.forceManyBody().strength(-1000))
+      .force("link", d3.forceLink().id(d => d.id).distance(200))
+      .force("x", d3.forceX())
+      .force("y", d3.forceY())
+      .on("tick", ticked);
+
+  let link = svg.append("g")
+      .attr("stroke", "#000")
+      .attr("stroke-width", 1.5)
+    .selectAll("line");
+
+  let node = svg.append("g")
+      .attr("stroke", "#fff")
+      .attr("stroke-width", 1.5)
+    .selectAll("circle");
+
+  function ticked() {
+    node.attr("cx", d => d.x)
+        .attr("cy", d => d.y)
+
+    link.attr("x1", d => d.source.x)
+        .attr("y1", d => d.source.y)
+        .attr("x2", d => d.target.x)
+        .attr("y2", d => d.target.y);
+  }
+
+  // Terminate the force layout when this cell re-runs.
+  invalidation.then(() => simulation.stop());
+
+  return Object.assign(svg.node(), {
+    update({nodes, links}) {
+
+      // Make a shallow copy to protect against mutation, while
+      // recycling old nodes to preserve position and velocity.
+      const old = new Map(node.data().map(d => [d.id, d]));
+      nodes = nodes.map(d => Object.assign(old.get(d.id) || {}, d));
+      links = links.map(d => Object.assign({}, d));
+
+      simulation.nodes(nodes);
+      simulation.force("link").links(links);
+      simulation.alpha(1).restart();
+
+      node = node
+        .data(nodes, d => d.id)
+        .join(enter => enter.append("circle")
+          .attr("r", 8)
+          .attr("fill", d => color(d.id)));
+
+      link = link
+        .data(links, d => `${d.source.id}\t${d.target.id}`)
+        .join("line");
+    }
+  });
+}
+
+
+update = chart2.update(graph)
+
+```
+
+The code chunk below shows us how Dr. Bostock creates the basic architecture of an [EDGE LIST]{.red} called `links` along with NODE LABELS called `nodes`.  Have a close look at the structure.  He is setting this up in a heirarchy very similar to a JSON file, which we will examine in **EXAMPLE 2**.
+
+```{ojs}
+graph1 = ({
+  nodes: [
+    {id: "a"},
+    {id: "b"},
+    {id: "c"}
+  ],
+  links: []
+})
+
+
+graph2 = ({
+  nodes: [
+    {id: "a"},
+    {id: "b"},
+    {id: "c"}
+  ],
+  links: [
+    {source: "a", target: "b"},
+    {source: "b", target: "c"},
+    {source: "c", target: "a"}
+  ]
+})
+
+
+graph3 = ({
+  nodes: [
+    {id: "a"},
+    {id: "b"}
+  ],
+  links: [
+    {source: "a", target: "b"}
+  ]
+})
+
+
+color = d3.scaleOrdinal(d3.schemeTableau10)
+
+height = 400
+
+```
+
+## TASK 1
+
+Change the `graph3` object so that it contains six nodes called "Jiyin", "Ronald", "Erick", "Cody", "Mac", and "PC". Change the `links` object to reflect our shared understanding of those links.
+
+## EXAMPLE 2: INTERACTIVE FORCE DIRECTED GRAPH
+
+I honestly cannot believe this works!  I mean... Hey!  Look at this cool interactive network!
+
+```{ojs}
+chart = ForceGraph(miserables, {
+  nodeId: d => d.id,
+  nodeGroup: d => d.group,
+  nodeTitle: d => `${d.id}\n${d.group}`,
+  linkStrokeWidth: l => Math.sqrt(l.value),
+  width,
+  height: 600,
+  invalidation // a promise to stop the simulation when the cell is re-run
+})
+
+```
+
+### JSON - Abandon All Hope Ye Who Enter Here
+
+The first line of code in the chunk below defines the data object from a .json file called `miserables.json`.  Have a look at this file within RStudio.  Does the overall structure look familiar?
+
+Could we possibly replace the stupid data file about a stupid musical with something of our own design???  
+
+
+```{ojs}
+miserables = FileAttachment("Miserables.json").json()
+
+
+// Copyright 2021 Observable, Inc.
+// Released under the ISC license.
+// https://observablehq.com/@d3/force-directed-graph
+function ForceGraph({
+  nodes, // an iterable of node objects (typically [{id}, …])
+  links // an iterable of link objects (typically [{source, target}, …])
+}, {
+  nodeId = d => d.id, // given d in nodes, returns a unique identifier (string)
+  nodeGroup, // given d in nodes, returns an (ordinal) value for color
+  nodeGroups, // an array of ordinal values representing the node groups
+  nodeTitle, // given d in nodes, a title string
+  nodeFill = "currentColor", // node stroke fill (if not using a group color encoding)
+  nodeStroke = "#fff", // node stroke color
+  nodeStrokeWidth = 1.5, // node stroke width, in pixels
+  nodeStrokeOpacity = 1, // node stroke opacity
+  nodeRadius = 5, // node radius, in pixels
+  nodeStrength,
+  linkSource = ({source}) => source, // given d in links, returns a node identifier string
+  linkTarget = ({target}) => target, // given d in links, returns a node identifier string
+  linkStroke = "#999", // link stroke color
+  linkStrokeOpacity = 0.6, // link stroke opacity
+  linkStrokeWidth = 1.5, // given d in links, returns a stroke width in pixels
+  linkStrokeLinecap = "round", // link stroke linecap
+  linkStrength,
+  colors = d3.schemeTableau10, // an array of color strings, for the node groups
+  width = 640, // outer width, in pixels
+  height = 400, // outer height, in pixels
+  invalidation // when this promise resolves, stop the simulation
+} = {}) {
+  // Compute values.
+  const N = d3.map(nodes, nodeId).map(intern);
+  const LS = d3.map(links, linkSource).map(intern);
+  const LT = d3.map(links, linkTarget).map(intern);
+  if (nodeTitle === undefined) nodeTitle = (_, i) => N[i];
+  const T = nodeTitle == null ? null : d3.map(nodes, nodeTitle);
+  const G = nodeGroup == null ? null : d3.map(nodes, nodeGroup).map(intern);
+  const W = typeof linkStrokeWidth !== "function" ? null : d3.map(links, linkStrokeWidth);
+  const L = typeof linkStroke !== "function" ? null : d3.map(links, linkStroke);
+
+  // Replace the input nodes and links with mutable objects for the simulation.
+  nodes = d3.map(nodes, (_, i) => ({id: N[i]}));
+  links = d3.map(links, (_, i) => ({source: LS[i], target: LT[i]}));
+
+  // Compute default domains.
+  if (G && nodeGroups === undefined) nodeGroups = d3.sort(G);
+
+  // Construct the scales.
+  const color = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);
+
+  // Construct the forces.
+  const forceNode = d3.forceManyBody();
+  const forceLink = d3.forceLink(links).id(({index: i}) => N[i]);
+  if (nodeStrength !== undefined) forceNode.strength(nodeStrength);
+  if (linkStrength !== undefined) forceLink.strength(linkStrength);
+
+  const simulation = d3.forceSimulation(nodes)
+      .force("link", forceLink)
+      .force("charge", forceNode)
+      .force("center",  d3.forceCenter())
+      .on("tick", ticked);
+
+  const svg = d3.create("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .attr("viewBox", [-width / 2, -height / 2, width, height])
+      .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+
+  const link = svg.append("g")
+      .attr("stroke", typeof linkStroke !== "function" ? linkStroke : null)
+      .attr("stroke-opacity", linkStrokeOpacity)
+      .attr("stroke-width", typeof linkStrokeWidth !== "function" ? linkStrokeWidth : null)
+      .attr("stroke-linecap", linkStrokeLinecap)
+    .selectAll("line")
+    .data(links)
+    .join("line");
+
+  const node = svg.append("g")
+      .attr("fill", nodeFill)
+      .attr("stroke", nodeStroke)
+      .attr("stroke-opacity", nodeStrokeOpacity)
+      .attr("stroke-width", nodeStrokeWidth)
+    .selectAll("circle")
+    .data(nodes)
+    .join("circle")
+      .attr("r", nodeRadius)
+      .call(drag(simulation));
+
+  if (W) link.attr("stroke-width", ({index: i}) => W[i]);
+  if (L) link.attr("stroke", ({index: i}) => L[i]);
+  if (G) node.attr("fill", ({index: i}) => color(G[i]));
+  if (T) node.append("title").text(({index: i}) => T[i]);
+  if (invalidation != null) invalidation.then(() => simulation.stop());
+
+  function intern(value) {
+    return value !== null && typeof value === "object" ? value.valueOf() : value;
+  }
+
+  function ticked() {
+    link
+      .attr("x1", d => d.source.x)
+      .attr("y1", d => d.source.y)
+      .attr("x2", d => d.target.x)
+      .attr("y2", d => d.target.y);
+
+    node
+      .attr("cx", d => d.x)
+      .attr("cy", d => d.y);
+  }
+
+  function drag(simulation) {    
+    function dragstarted(event) {
+      if (!event.active) simulation.alphaTarget(0.3).restart();
+      event.subject.fx = event.subject.x;
+      event.subject.fy = event.subject.y;
+    }
+    
+    function dragged(event) {
+      event.subject.fx = event.x;
+      event.subject.fy = event.y;
+    }
+    
+    function dragended(event) {
+      if (!event.active) simulation.alphaTarget(0);
+      event.subject.fx = null;
+      event.subject.fy = null;
+    }
+    
+    return d3.drag()
+      .on("start", dragstarted)
+      .on("drag", dragged)
+      .on("end", dragended);
+  }
+
+  return Object.assign(svg.node(), {scales: {color}});
+}
+
+
+import {howto} from "@d3/example-components"
+
+import {Swatches} from "@d3/color-legend"
+
+
+
+```
+
+## TASK 2
+
+What if we replaced the datafile by making our own json file??
+
+```{r}
+library(jsonlite)
+
+# create data frames for nodes and links
+nodes <- data.frame(
+  id = c("Barrie", "Ronald", "Cody", "Erick", "Jiyin", "Cthulhu"),
+  group = c(1, 1, 1 , 2, 2, 3)
+)
+
+links <- data.frame(
+  source = c("Barrie", "Ronald", "Cody", "Barrie", "Erick", "Jiyin", "Ronald"),
+  target = c("Cthulhu", "Erick", "Jiyin", "Erick", "Cthulhu", "Ronald", "Cody"),
+  value = c(1, 8, 10, 6, 1, 1, 1)
+)
+
+# convert data frames to JSON objects
+nodes_json <- toJSON(list(nodes = nodes), pretty = TRUE)
+links_json <- toJSON(list(links = links), pretty = TRUE)
+
+# merge JSON objects into one
+json <- paste0( nodes_json, links_json)
+
+# write JSON object to file
+write(json, file = "network_graph.json")
+
+
+
+```
+
+Oh god....  now go back and point the stuff to the stuff...
+
+Anyway.... here is where I want to go:
+
+[AMAZING](https://observablehq.com/@john-guerra/force-in-a-box)

@@ -1,0 +1,66 @@
+{
+  "nodes": [
+    {
+      "id": "Barrie",
+      "group": 1
+    },
+    {
+      "id": "Ronald",
+      "group": 1
+    },
+    {
+      "id": "Cody",
+      "group": 1
+    },
+    {
+      "id": "Erick",
+      "group": 2
+    },
+    {
+      "id": "Jiyin",
+      "group": 2
+    },
+    {
+      "id": "Cthulhu",
+      "group": 3
+    }
+  ]
+}{
+  "links": [
+    {
+      "source": "Barrie",
+      "target": "Cthulhu",
+      "value": 1
+    },
+    {
+      "source": "Ronald",
+      "target": "Erick",
+      "value": 8
+    },
+    {
+      "source": "Cody",
+      "target": "Jiyin",
+      "value": 10
+    },
+    {
+      "source": "Barrie",
+      "target": "Erick",
+      "value": 6
+    },
+    {
+      "source": "Erick",
+      "target": "Cthulhu",
+      "value": 1
+    },
+    {
+      "source": "Jiyin",
+      "target": "Ronald",
+      "value": 1
+    },
+    {
+      "source": "Ronald",
+      "target": "Cody",
+      "value": 1
+    }
+  ]
+}
