@@ -8,7 +8,7 @@ format:
 author: "Barrie Robison"
 date: "2023-04-25"
 categories: [Portfolio, DataViz, Network, Observable, Assignment]
-image: "Wendigonjson.png"
+image: "Wendigojson.png"
 description: "Cool!"
 code-fold: true
 code-tools: true
