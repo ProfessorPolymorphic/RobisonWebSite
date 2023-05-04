@@ -7,9 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Barrie Robison">
-<meta name="dcterms.date" content="2023-01-18">
+<meta name="dcterms.date" content="2023-05-04">
+<meta name="description" content="Do, or do not. There is no try.">
 
-<title>Robison - TUTORIAL 2 - Literate Programming and Anscombe’s Quartet</title>
+<title>Robison - FINAL PROJECT</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -128,7 +129,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link rel="stylesheet" href="../../../styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar floating nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -180,7 +181,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../BCB520/index.html">BCB 520:: Foundations of Data Visualization</a></li><li class="breadcrumb-item"><a href="../../../BCB520/posts/T6-APIsandJSON/index.html">Posts</a></li><li class="breadcrumb-item"><a href="../../../BCB520/posts/T2-Anscombe/index.html">TUTORIAL 2 - Literate Programming and Anscombe's Quartet</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../BCB520/index.html">BCB 520:: Foundations of Data Visualization</a></li><li class="breadcrumb-item"><a href="../../../BCB520/posts/T6-APIsandJSON/index.html">Posts</a></li><li class="breadcrumb-item"><a href="../../../BCB520/posts/A10-FinalProject/index.html">FINAL PROJECT</a></li></ol></nav>
       <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -190,12 +191,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Tutorial 2 - Literate Programming and Anscombe’s Quartet</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">Tutorial</div>
+      <div class="quarto-title-block"><div><h1 class="title">FINAL PROJECT</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+            <p class="subtitle lead">End Of Line…</p>
+                  <div>
+        <div class="description">
+          Do, or do not. There is no try.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Portfolio</div>
                 <div class="quarto-category">DataViz</div>
-                <div class="quarto-category">Quarto</div>
-                <div class="quarto-category">Literate Programming</div>
+                <div class="quarto-category">Assignment</div>
               </div>
                   </div>
   </div>
@@ -213,7 +219,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 18, 2023</p>
+        <p class="date">May 4, 2023</p>
       </div>
     </div>
     
@@ -374,12 +380,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/T2-Anscombe/index.html" class="sidebar-item-text sidebar-link active">TUTORIAL 2 - Literate Programming and Anscombe’s Quartet</a>
+  <a href="../../../BCB520/posts/T2-Anscombe/index.html" class="sidebar-item-text sidebar-link">TUTORIAL 2 - Literate Programming and Anscombe’s Quartet</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/A10-FinalProject/index.html" class="sidebar-item-text sidebar-link">FINAL PROJECT</a>
+  <a href="../../../BCB520/posts/A10-FinalProject/index.html" class="sidebar-item-text sidebar-link active">FINAL PROJECT</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -486,169 +492,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#more-quarto" id="toc-more-quarto" class="nav-link active" data-scroll-target="#more-quarto">MORE QUARTO!</a></li>
-  <li><a href="#anscombes-quartet" id="toc-anscombes-quartet" class="nav-link" data-scroll-target="#anscombes-quartet">ANSCOMBE’S QUARTET</a>
-  <ul class="collapse">
-  <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">The Data</a></li>
-  <li><a href="#example-hypotheses" id="toc-example-hypotheses" class="nav-link" data-scroll-target="#example-hypotheses">Example Hypotheses</a></li>
-  <li><a href="#summary-statistics" id="toc-summary-statistics" class="nav-link" data-scroll-target="#summary-statistics">Summary Statistics</a></li>
-  <li><a href="#visualization-reveals-hidden-patterns" id="toc-visualization-reveals-hidden-patterns" class="nav-link" data-scroll-target="#visualization-reveals-hidden-patterns">Visualization reveals hidden patterns!</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
-<section id="more-quarto" class="level2">
-<h2 class="anchored" data-anchor-id="more-quarto">MORE QUARTO!</h2>
-<p>Do the summary statistics reveal the truth? Or are they <strong>FILLED WITH LIES</strong>? A simple demonstration with Anscombe’s Quartet.</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/rxVmYNkikNY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">OVERVIEW</h2>
+<p>This assignment provides you the opportunity to synthesize all of the concepts we’ve covered in the course to date. The basic framework is that you will create a COMPLETE data visualization BLOG post that is suitable as a showcase component of your Data Science Portfolio. The point is to <span class="red">SHOW</span> people your skills.</p>
 </section>
-<section id="anscombes-quartet" class="level1">
-<h1>ANSCOMBE’S QUARTET</h1>
-<p>The purpose of this assignment is to demonstrate how summary statistics can sometimes be misleading and how data visualization helps us understand our dataset.</p>
-<section id="the-data" class="level2">
-<h2 class="anchored" data-anchor-id="the-data">The Data</h2>
-<p>Anscombe’s Quartet is comprised of four pairs of x,y data:</p>
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(grid)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(datasets)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>datasets<span class="sc">::</span>anscombe</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>   x1 x2 x3 x4    y1   y2    y3    y4
-1  10 10 10  8  8.04 9.14  7.46  6.58
-2   8  8  8  8  6.95 8.14  6.77  5.76
-3  13 13 13  8  7.58 8.74 12.74  7.71
-4   9  9  9  8  8.81 8.77  7.11  8.84
-5  11 11 11  8  8.33 9.26  7.81  8.47
-6  14 14 14  8  9.96 8.10  8.84  7.04
-7   6  6  6  8  7.24 6.13  6.08  5.25
-8   4  4  4 19  4.26 3.10  5.39 12.50
-9  12 12 12  8 10.84 9.13  8.15  5.56
-10  7  7  7  8  4.82 7.26  6.42  7.91
-11  5  5  5  8  5.68 4.74  5.73  6.89</code></pre>
-</div>
-</div>
-</section>
-<section id="example-hypotheses" class="level2">
-<h2 class="anchored" data-anchor-id="example-hypotheses">Example Hypotheses</h2>
+<section id="structure" class="level2">
+<h2 class="anchored" data-anchor-id="structure">STRUCTURE</h2>
+<p>The basic formatting guidelines for this assignment are:</p>
 <ol type="1">
-<li>Eric has four replicates in which he is measuring the expression of two proteins (x, y) on 11 samples.</li>
-<li>Cody has four replicates in which he is measuring gene expression of two genes (x, y) in 11 cell images.</li>
-<li>Ronald has four replicates in which he is measuring a blood protein (x) and a malaria marker (y) in 11 patients.</li>
+<li>Include <code>code fold</code> or <code>code tools</code> options (or both) that allow users to view and copy your code while maintaining overall readability of your post.</li>
+<li>Suppress all output and warnings that might distract from your visualizations and writing.</li>
+<li>Properly title your assignment. The main title should be <strong>“BCB 520 - Final Project”</strong>, and the subtitle should be a descriptive title related to your question or topic.</li>
+<li>Include author, date, categories, and a description in your YAML header.</li>
+<li>Write clear, complete sentences for a target audience with some scientific background but little training in your specific discipline.</li>
+<li>Include references if appropriate and use hyperlinks to external sources of data, inspiration, or examples.</li>
+<li>Use the header hierarchy and create a sensible document outline with white space. Format for readability! Use <strong>bold</strong> and <em>italic</em> fonts to emphasize things! Use <span class="red">color</span> by customizing your <code>.css</code> file!</li>
 </ol>
-<p><strong>Your hypothesis is that the four replicates do not differ in the correlation between x and y.</strong></p>
+<p><strong>In addition to the above formatting guidelines, your portfolio post must contain the following sections:</strong></p>
+<section id="preamble" class="level3">
+<h3 class="anchored" data-anchor-id="preamble">Preamble</h3>
+<p>Write a brief paragraph describing the primary question or purpose of the post. Ideally, the concept should be challenging enough that it requires at least two visualizations that use different idioms (ie. don’t just make two scatterplots with different variables). The concept should also be challenging enough that it captures the interest of the reader (i.e.&nbsp;a plot of height and weight that shows they are correlated is trivial and not appropriate). The best approach is to explore a topic or question in which YOU are very interested.</p>
 </section>
-<section id="summary-statistics" class="level2">
-<h2 class="anchored" data-anchor-id="summary-statistics">Summary Statistics</h2>
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tidy_anscombe <span class="ot">&lt;-</span> anscombe <span class="sc">%&gt;%</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>(),</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">names_to =</span> <span class="fu">c</span>(<span class="st">".value"</span>, <span class="st">"set"</span>),</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">names_pattern =</span> <span class="st">"(.)(.)"</span>)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>tidy_anscombe_summary <span class="ot">&lt;-</span> tidy_anscombe <span class="sc">%&gt;%</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(set) <span class="sc">%&gt;%</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="at">.cols =</span> <span class="fu">everything</span>(),</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">.fns =</span> <span class="fu">lst</span>(min,max,median,mean,sd,var),</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>                   <span class="at">.names =</span> <span class="st">"{col}_{fn}"</span>))</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; `summarise()` ungrouping output (override with `.groups` argument)</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>vars<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"set"</span>, <span class="st">"x_mean"</span>, <span class="st">"x_var"</span>,  <span class="st">"y_mean"</span>, <span class="st">"y_var"</span>)</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>thing<span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(tidy_anscombe_summary[vars])</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(thing)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<table class="table table-sm table-striped">
-<thead>
-<tr class="header">
-<th style="text-align: left;">set</th>
-<th style="text-align: right;">x_mean</th>
-<th style="text-align: right;">x_var</th>
-<th style="text-align: right;">y_mean</th>
-<th style="text-align: right;">y_var</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">1</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">7.500909</td>
-<td style="text-align: right;">4.127269</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">7.500909</td>
-<td style="text-align: right;">4.127629</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">3</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">7.500000</td>
-<td style="text-align: right;">4.122620</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">4</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">7.500909</td>
-<td style="text-align: right;">4.123249</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>Write a summary of the data sources you will use. Include a <code>Data Dictionary</code> table that fully describes each individual data file used. You may use your own research data or publicly available data from any source you like (with attribution). There aren’t any minimum or maximum data set size requirements, other than you need something big enough to be interesting and not so big that we don’t have a supercomputer capable of creating your visualization.</p>
+<p><strong>NEW REQUIREMENT: Your assignment must feature one of the two new data types we have considered since the midterm: NETWORK DATA or SPATIAL DATA.</strong></p>
 </section>
-<section id="visualization-reveals-hidden-patterns" class="level2">
-<h2 class="anchored" data-anchor-id="visualization-reveals-hidden-patterns">Visualization reveals hidden patterns!</h2>
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(tidy_anscombe,</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> y)) <span class="sc">+</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> tidy_anscombe_summary, <span class="fu">aes</span>(<span class="at">x=</span>x_mean, <span class="at">y =</span> y_mean, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">5</span>),</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">show.legend =</span> <span class="cn">FALSE</span>)<span class="sc">+</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>set) <span class="sc">+</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-<div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
+<section id="visualizations" class="level3">
+<h3 class="anchored" data-anchor-id="visualizations">Visualizations</h3>
+<p>Create your visualizations and include text that explains any steps or design choices. Be sure to include clearly labeled axes and a concise but complete figure caption for each visualization. Make deliberate choices for color palettes, point marks, line types, etc. Demonstrate that you understand the concepts we have covered!</p>
+</section>
+<section id="conclusions-or-summary" class="level3">
+<h3 class="anchored" data-anchor-id="conclusions-or-summary">Conclusions or Summary</h3>
+<p>Answer your research question. Draw a conclusion or inference related to your topic. Summarize your results. What new questions have emerged as a result of your visualizations? What interesting next steps have emerged?</p>
+</section>
+</section>
+<section id="rubric" class="level2">
+<h2 class="anchored" data-anchor-id="rubric">RUBRIC</h2>
+<p>I will evaluate the following for your portfolio post:</p>
+<p><strong>1. Clarity of writing (15%):</strong> Complete, clear sentences. Good Grammar. Understandable to target audience. Logical flow of ideas.</p>
+<p><strong>2. Adherence to format (10%):</strong> Did you follow directions?</p>
+<p><strong>3. Topic suitability (15%):</strong> Is the topic interesting? Are the visualizations challenging and interesting enough to showcase your skills?</p>
+<p><strong>4. Viz Execution (40%):</strong> Are the visualizations effective? Do they adhere to the principles of effectiveness? Are choices for idiom, marks, channels, etc made deliberately and well justified?</p>
+<p><strong>5. Creativity (20%):</strong> Did you push your boundaries and learn new techniques? Is the overall post compelling and interesting? Are the visualizations inspiring, creative, unique, and generally impressive? If I were recruiting a new data scientist (and I often am), would this portfolio post impress me, or would it damage your candidacy during review?</p>
 
 
-</section>
+<!-- -->
+
 </section>
 
 </main> <!-- /main -->
@@ -717,6 +614,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
@@ -870,7 +818,73 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "FINAL PROJECT"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "End Of Line..."</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: false</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    echo: true</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Barrie Robison"</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2023-05-04"</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [Portfolio, DataViz, Assignment]</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "Cthulhufinal.png"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Do, or do not.  There is no try."</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="an">code-fold:</span><span class="co"> true</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## OVERVIEW</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>This assignment provides you the opportunity to synthesize all of the concepts we've covered in the course to date. The basic framework is that you will create a COMPLETE data visualization BLOG post that is suitable as a showcase component of your Data Science Portfolio. The point is to <span class="co">[</span><span class="ot">SHOW</span><span class="co">]</span>{.red} people your skills.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## STRUCTURE</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>The basic formatting guidelines for this assignment are:</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Include <span class="in">`code fold`</span> or <span class="in">`code tools`</span> options (or both) that allow users to view and copy your code while maintaining overall readability of your post.</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Suppress all output and warnings that might distract from your visualizations and writing.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Properly title your assignment. The main title should be **"BCB 520 - Final Project"**, and the subtitle should be a descriptive title related to your question or topic.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>Include author, date, categories, and a description in your YAML header.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>Write clear, complete sentences for a target audience with some scientific background but little training in your specific discipline.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">6.  </span>Include references if appropriate and use hyperlinks to external sources of data, inspiration, or examples.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">7.  </span>Use the header hierarchy and create a sensible document outline with white space. Format for readability! Use **bold** and *italic* fonts to emphasize things! Use <span class="co">[</span><span class="ot">color</span><span class="co">]</span>{.red} by customizing your <span class="in">`.css`</span> file!</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>**In addition to the above formatting guidelines, your portfolio post must contain the following sections:**</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">### Preamble</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>Write a brief paragraph describing the primary question or purpose of the post. Ideally, the concept should be challenging enough that it requires at least two visualizations that use different idioms (ie. don't just make two scatterplots with different variables). The concept should also be challenging enough that it captures the interest of the reader (i.e. a plot of height and weight that shows they are correlated is trivial and not appropriate). The best approach is to explore a topic or question in which YOU are very interested.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>Write a summary of the data sources you will use. Include a <span class="in">`Data Dictionary`</span> table that fully describes each individual data file used. You may use your own research data or publicly available data from any source you like (with attribution). There aren't any minimum or maximum data set size requirements, other than you need something big enough to be interesting and not so big that we don't have a supercomputer capable of creating your visualization.</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>**NEW REQUIREMENT:  Your assignment must feature one of the two new data types we have considered since the midterm:  NETWORK DATA or SPATIAL DATA.**</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">### Visualizations</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>Create your visualizations and include text that explains any steps or design choices. Be sure to include clearly labeled axes and a concise but complete figure caption for each visualization. Make deliberate choices for color palettes, point marks, line types, etc. Demonstrate that you understand the concepts we have covered!</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">### Conclusions or Summary</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>Answer your research question. Draw a conclusion or inference related to your topic. Summarize your results. What new questions have emerged as a result of your visualizations? What interesting next steps have emerged?</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## RUBRIC</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>I will evaluate the following for your portfolio post:</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>**1. Clarity of writing (15%):** Complete, clear sentences. Good Grammar. Understandable to target audience. Logical flow of ideas.</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>**2. Adherence to format (10%):** Did you follow directions?</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>**3. Topic suitability (15%):** Is the topic interesting? Are the visualizations challenging and interesting enough to showcase your skills?</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>**4. Viz Execution (40%):** Are the visualizations effective? Do they adhere to the principles of effectiveness? Are choices for idiom, marks, channels, etc made deliberately and well justified?</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>**5. Creativity (20%):** Did you push your boundaries and learn new techniques? Is the overall post compelling and interesting? Are the visualizations inspiring, creative, unique, and generally impressive? If I were recruiting a new data scientist (and I often am), would this portfolio post impress me, or would it damage your candidacy during review?</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 
 

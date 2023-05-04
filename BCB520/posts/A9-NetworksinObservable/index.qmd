@@ -203,7 +203,7 @@ Could we possibly replace the stupid data file about a stupid musical with somet
 
 
 ```{ojs}
-miserables = FileAttachment("Miserables.json").json()
+miserables = FileAttachment("network_graph.json").json()
 
 
 // Copyright 2021 Observable, Inc.
@@ -378,7 +378,7 @@ links_json <- toJSON(list(links = links), pretty = TRUE)
 json <- paste0( nodes_json, links_json)
 
 # write JSON object to file
-write(json, file = "network_graph.json")
+write(json, file = "network_graph2.json")
 
 
 
