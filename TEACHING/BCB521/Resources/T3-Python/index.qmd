@@ -1,0 +1,49 @@
+---
+title: "TUTORIAL 3 - Python"
+date: "2023-01-19"
+format:
+  html:
+    code-fold: true
+categories: [Tutorial, Quarto, Literate Programming, Python]
+jupyter: python3
+image: Pythonred.png
+---
+
+## IMPLEMENTING PYHTON IN QUARTO
+
+I relied heavily on the [Quarto documentation](https://quarto.org/docs/computations/python.html) for this tutorial.
+
+The basic things I learned were:
+
+1. Install Python (again).  I downloaded the newest version from the [Python website](https://www.python.org/downloads/).
+2. Install the `jupyter' package using the terminal:
+  - Windows:  `py -m pip install jupyter`
+  - Mac:  `python3 -m pip install jupyter`
+3. Install the modules you need using the terminal (Mac examples below):
+  - `python3 -m pip install numpy`
+  - `python3 -m pip install matplotlib`
+  
+After I did this, the code from the Quarto website example (below) seemed to work!
+
+## QUARTO EXAMPLE CODE
+
+For a demonstration of a line plot on a polar axis, see @fig-polar.
+
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+

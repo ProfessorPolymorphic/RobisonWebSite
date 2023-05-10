@@ -1,0 +1,16 @@
+---
+title: "BCB 521:: Class Resources"
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: true
+  filter-ui: true
+page-layout: full
+title-block-banner: true
+---
+
+Stuff about class resources
+
+## Posts

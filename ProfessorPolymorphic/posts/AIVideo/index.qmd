@@ -1,0 +1,24 @@
+---
+title: "My First AI Generated Video"
+---
+
+Cool?
+
+I made this video with Kaiber.  I uploaded this image as the starting point:
+
+
+![](ZomLab.png)
+
+I made the image using MidJourney v5.1
+
+I upoaded this song for the soundtrack:
+
+![](DarkCarpenter.mp3)
+
+which I made using the AI Music Generator Mubert.
+
+Then I used this prompt to make the video:
+
+A secret underground bioweapons laboratory, in the style of photo taken on film, film grain, vintage, 8k ultrafine detail, private press...
+
+![](ZomLab.mp4)

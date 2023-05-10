@@ -1,0 +1,20 @@
+---
+title: "BCB 521"
+subtitle: "Communicating with Data"
+---
+
+# You all suck at speaking and writing.
+
+
+## TOOLS FOR REPRODUCIBLE DATA SCIENCE
+
+### VERSION CONTROL
+
+
+### LITERATE PROGRAMMING
+
+## DATA DRIVEN COMMUNICATION
+
+### WRITING ABOUT DATA
+
+### SPEAKING ABOUT DATA

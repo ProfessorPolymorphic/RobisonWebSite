@@ -63,3 +63,51 @@ I will evaluate the following for your portfolio post:
 **4. Viz Execution (40%):** Are the visualizations effective? Do they adhere to the principles of effectiveness? Are choices for idiom, marks, channels, etc made deliberately and well justified?
 
 **5. Creativity (20%):** Did you push your boundaries and learn new techniques? Is the overall post compelling and interesting? Are the visualizations inspiring, creative, unique, and generally impressive? If I were recruiting a new data scientist (and I often am), would this portfolio post impress me, or would it damage your candidacy during review?
+
+
+```{r}
+library(ggplot2)
+library(sf)
+library(tigris)
+library(dplyr)
+```
+```{r}
+
+us_counties <- tigris::counties(cb = TRUE, resolution = "20m", year = 2020, class = "sf")
+
+set.seed(123)
+data <- data.frame(
+  GEOID = us_counties$GEOID,
+  value = runif(length(us_counties$GEOID), 0, 100)
+)
+
+
+us_counties_data <- left_join(us_counties, data, by = "GEOID")
+
+ggplot() +
+  geom_sf(data = us_counties_data, aes(fill = value), color = "white", size = 0.1) +
+  scale_fill_viridis_c() +  # You can choose other color palettes
+  theme_minimal() +
+  theme(axis.text = element_blank(),
+        axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid = element_blank())
+
+us_counties_contiguous <- us_counties %>% 
+  filter(
+    !(STATEFP %in% c("02", "15", "60", "66", "69", "72", "78"))
+  )
+
+us_counties_data_contiguous <- left_join(us_counties_contiguous, data, by = "GEOID")
+
+
+ggplot() +
+  geom_sf(data = us_counties_data_contiguous, aes(fill = value), color = "white", size = 0.1) +
+  scale_fill_viridis_c() +
+  theme_minimal() +
+  theme(axis.text = element_blank(),
+        axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid = element_blank())
+
+```

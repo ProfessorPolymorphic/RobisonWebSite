@@ -32,11 +32,29 @@
     ]
   },
   {
+    "listing": "/TEACHING/BCB521/Assignments/index.html",
+    "items": [
+      "/TEACHING/BCB521/Assignments/A3-PrototypeVizPortfolio/index.html",
+      "/TEACHING/BCB521/Assignments/A2-YourData/index.html",
+      "/TEACHING/BCB521/Assignments/A1-Lit-Prog/index.html"
+    ]
+  },
+  {
+    "listing": "/TEACHING/BCB521/Resources/index.html",
+    "items": [
+      "/TEACHING/BCB521/Resources/T2-PrototypeVizPortfolio/index.html",
+      "/TEACHING/BCB521/Resources/T3-Python/index.html",
+      "/TEACHING/BCB521/Resources/T1-Lit-Prog/index.html",
+      "/TEACHING/BCB521/Resources/Certificate/index.html"
+    ]
+  },
+  {
     "listing": "/ProfessorPolymorphic/index.html",
     "items": [
       "/ProfessorPolymorphic/posts/post-with-code/index.html",
       "/ProfessorPolymorphic/posts/Viz_2Gen_Pedigree/index.html",
       "/ProfessorPolymorphic/posts/Viz_2Gen_Pedigree/PedigreeViz.html",
+      "/ProfessorPolymorphic/posts/AIVideo/index.html",
       "/ProfessorPolymorphic/posts/TickBaseDEI/index.html",
       "/ProfessorPolymorphic/posts/DataScienceMythos/index.html",
       "/ProfessorPolymorphic/posts/LabMeetings/index.html",

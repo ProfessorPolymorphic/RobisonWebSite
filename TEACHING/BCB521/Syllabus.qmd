@@ -1,0 +1,88 @@
+---
+title: "SYLLABUS 2023"
+subtitle: "BCB 521"
+author: "Barrie Robison"
+date: "2023-05-08"
+---
+
+# BCB 521: Communicating with Data
+
+**Barrie D. Robison**
+
+**Fall 2023**
+
+## Course Description
+
+Many of the most common applications of modern data science are ultimately intended to influence, persuade, or inform other people.  No matter the format and complexity of the data driven insight or result, your goal cannot be achieved unless you can effectively communicate your intended message to your audience.
+
+This class is designed to teach students how to communicate data driven insights to a wide variety of audiences.  The course considers best practices for writing about data, including approaches for scientific manuscripts, technical reports, online media, and the growing discipline of "Data Journalism".  We will also cover approaches related to communicating data during verbal presentations in a variety of contexts, including scientific conferences, seminars, education, and online video formats.  Finally, the course will cover (and use) some of the tools that are central to reproducible research in data science, including version control using GitHub and literate programming.
+
+Assignments are designed so that students may use their own data or data from their discipline or industry.  At least two assignments are designed to be appropriate submissions to a student's online Data Science Portfolio and can be used to satisfy the requirements of BCB 522.
+
+
+
+## Course Objectives
+
+Students completing this course will be able to:
+
+1.  Align the objectives and content of written and verbal data science communications with the characteristics of their intended audience.
+2.  Write clearly and concisely about data driven visualizations and analyses.
+3.  Speak effectively about data driven visualizations and analyses.
+4.  Effectively incorporate version control and literate progamming into their research and data science workflows.
+5.   Demonstrate their skills with at least two products (written or recorded video) suitable for inclusion in an online Data Science Portfolio.
+
+## Required Readings
+
+Communicating with Data.
+
+## Course Policies
+
+### GRADING
+
+50% of your grade will be determined by homework exercises related to each course unit.
+
+20% of your grade will be determined by a mid term project (which would be a great item to include in your Data Science Portfolio).
+
+20% of your grade will be determined by a final project (which would be great item to include in your Data Science Portfolio).
+
+10% of your grade will be determined by participation in class discussions.
+
+GRADING SCALE: The grading scale is standard: A (90 -100 %), B (89 - 80 %), C (79 - 70 %), D (69-60 %), F( below 60 %).
+
+
+
+### ATTENDANCE POLICY
+
+Missing a scheduled lecture is at your discretion. I will be posting all the lecture notes online, and recording the lectures for future online versions of the course. I have no intention of offering a zoom option this semester. If a discussion or in-class exercise occurs and you miss it, you will lose those participation points. There is no way to make up those points.
+
+### LATE ARRIVAL OF PROFESSOR POLICY
+
+The R Markdown template I used for this syllabus was created by Dr. Steven V. Miller at Stockholm University. It contained this section, which I found amusing and have therefore retained. Professor Miller's current university asks professors to have policies written into their syllabus about what students should do if the professor is more than 15 minutes late to class. Here is my version of that policy:
+
+I will inform students via e-mail in advance of class if class is cancelled for the day. Events that might create such a scenario include travel obligations that emerged after the semester has begun, a family emergency that encompasses multiple days, or some other thing. I will also contact our department secretary in emergent situations, such as something happening on the way to work. Failing that, assume the worst. Alien abduction, the return of one or more Old Ones to our plane, or some kind of attack by wizards are all viable explanations for my inability to attend class. I ask that the students make sure that my story gets the proper treatment on the "Mr. Ballen" YouTube channel. I also ask that my story be narrated by Morgan Freeman and that the role of me in the made-for-TV-movie be played by Keanu Reeves or Danny DeVito.
+
+### MAKE UP EXAM POLICY
+
+The bad news is that there are NO make-ups for missed exams. The good news is that there aren't any exams.
+
+### ACADEMIC DISHONESTY POLICY
+
+All students are expected to uphold the highest standards of academic honesty. This includes but is not limited to: not cheating, not using the ideas of others without giving appropriate credit (including Wikipedia!), and not falsifying data. Any incident of academic dishonesty will be handled according to the guidelines of the University of Idaho.
+
+### A NOTE ABOUT LLMs (such as GPT-4)
+
+We are on the precipice of the Great AI Disruption.  Large Language Models and other forms of AI are beginning to disrupt almost every industry.  They will also dramatically alter our educational system and change how we learn and use new information.  I'm sure many of my colleagues in post-secondary education are lamenting the inevitable, and trying desperately to prevent the usage of AI tools in their courses.  In my opinion, this will be about as effective at yelling at the ocean to stop the tides.
+
+Are there significant ethical, economic, security, and social risks associated with AI?  Of course there are.  Nevertheless, these tools exist and they will become central to almost every job sector in the world.  Ignore them at your peril.
+
+That being said, there is a difference between using these tools as a means of achieving the best possible result, and using them because you are lazy or indifferent to the outcome of your task.
+
+## Class Schedule
+
+```{r}
+
+library(readxl)
+Schedule <- read_excel("Schedule.xlsx")
+
+knitr::kable(Schedule, caption = '')
+```

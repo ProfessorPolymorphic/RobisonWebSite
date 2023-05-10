@@ -29,7 +29,7 @@ I am maintaining the course here and on its [CANVAS PAGE](https://canvas.uidaho.
 
 [Erik's Portfolio](https://erickrios5.github.io/BCB-504-My-Data-Blog/)
 
-[GGSIDE!](https://www.business-science.io/code-tools/2021/05/18/marginal_distributions.html) A companion to `ggplot` for making side plots!  COOL!
+[GGSIDE!](https://www.business-science.io/code-tools/2021/05/18/marginal_distributions.html) A companion to `ggplot` for making side plots! COOL!
 
 [Awesome Quarto:](https://github.com/mcanouil/awesome-quarto){target="_blank"} A potentially interesting repository of Quarto documents, talks, tools, examples, etc.
 

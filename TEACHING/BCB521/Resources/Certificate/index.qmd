@@ -1,0 +1,152 @@
+---
+title: "CERTIFICATE"
+format:
+  html: 
+    code-fold: true
+    html-math-method: katex
+author: "Barrie Robison, Michael Overton"
+date: "2023-01-12"
+categories: [Resources, Education]
+image: "certdata.png"
+description: "Learn how to think about, organize, analyze, and visualize data. Communicate data-driven insights to technical and lay audiences."
+---
+
+Learn how to think about, organize, analyze, and visualize data. Communicate data-driven insights to technical and lay audiences.
+
+```{r}
+#| include: false
+
+library(readxl)
+library(tidyverse)
+
+```
+
+# **PROFESSIONAL APPLICATIONS OF DATA SCIENCE**
+
+## **OVERVIEW**
+
+We live in an increasingly data-driven world. Basic data literacy and data science skills are becoming central to virtually every industry. Yet, limited opportunities exist to gain these skills without an advanced background in math and computer science. To address this workforce development need, we propose a competitively valued on-line graduate certificate in the Professional Applications in Data Science. The certificate is designed to offer rigorous training in the foundations of data science to anyone with a bachelor's degree. Participants will learn how to think about, organize, analyze, and visualize data, and communicate data driven insights to diverse audiences. The curriculum emphasizes the use of data sets drawn from each student's individual discipline, aligning the certificate's workforce development impacts with the University of Idaho's land grant mission.
+
+### **Value Proposition:**
+
+The graduate certificate in Professional Applications in Data Science will provide unique value to UI constituencies by:
+
+1.  Aligning data science training with fields of nascent demand that are part of our land grant mission, including Agriculture, Natural Resources, and Education.
+
+2.  Requiring a digital data science portfolio with which students can demonstrate their proficiencies to potential employers.
+
+3.  Emphasizing training in data communication - including verbal presentation and data visualization - two components of data science that are underrepresented in competing certificates.
+
+4.  Filling a growing workforce development gap by offering a unique data science certificate that is appropriate for professionals with a bachelor's degree who do not have a rigorous background in mathematics, statistics, or computer science.
+
+### **Intended Audience:**
+
+This certificate leverages the University of Idaho's interdisciplinary culture to provide integrative training in the foundations of data science. It is intended for:
+
+1.  Working professionals with a bachelor's degree whose career increasingly involves the generation, management, analysis, and visualization of large data sets. The certificate is appropriate for professionals in STEM fields, Health Care, Business, Government, Education, Journalism, Athletics, Natural Resources, and Agriculture.
+
+2.  Graduate students in programs outside of the core technical disciplines of data science (statistics, math, engineering, or computer science). The certificate will complement disciplinary research methods courses with training in data management, visualization, and communication.
+
+3.  Undergraduates at the UI who wish to incorporate data science training into their degree and graduate with a Bachelor's degree and a graduate certificate.
+
+### **Student Learning Outcomes:**
+
+Upon completion of the certificate, students will be able to:
+
+  -   Use open-source software to reproducibly manage, analyze, and visualize large, complex, and noisy data sets.
+
+  -   Practice high quality and ethical data stewardship.
+
+  -   Understand and execute data exploration.
+
+  -   Effectively communicate data driven insights to experts and non-experts.
+
+  -   Demonstrate their skills with an online portfolio of analyses and visualizations relevant to their field of specialization.
+
+## **CURRICULUM**
+
+### **Prerequisites:**
+
+A Bachelor's degree OR the student has senior standing and is enrolled in a bachelor's degree program at the University of Idaho.
+
+### **Certificate Requirements** (12 Credits Total)
+
+```{r}
+#| echo: false
+
+
+
+DSCore <- read_excel("DSCoreCurr.xlsx")
+knitr::kable(DSCore, caption = '')
+```
+
+*note: Courses designated with "BCB 5XX" are new courses that will be offered in the 2023-24 academic year*
+
+### **Course Descriptions**
+
+#### INTR 509 Introduction to Applied Data Science (3 credits)
+
+*In person (spring) and asynchronous online.*
+
+Students are provided a foundation for "thinking with data" through the introduction of computational, statistical, and data literacy skills. This includes the selection, collection, cleaning, management, descriptive analysis, and exploratory analysis of a dataset unique to their professional interests using modern computing languages. This course is taught by Dr. Michael Overton.
+
+#### BCB 521 Communicating with Data (2 credits)
+
+*In person (fall) and asynchronous online.*
+
+Students are taught writing and presentation skills to improve their communication of data-driven insights to specialist and lay audiences. The course emphasizes reproducible research practices, including literate programming (R Markdown) and version control (GitHub). Course content includes the conceptual foundations of communicating with data along with written and verbal communication assignments using data sets individualized to each student's interest. 
+
+Text: Nolan and Stoudt. 2021. Communicating with data: The art of writing for data science. Oxford University Press.
+
+Prerequisites: INTR 509 OR A BS degree OR permission.
+
+#### BCB 520 Data Visualization (3 credits)
+
+*In person (spring) and asynchronous online*
+
+This course covers the conceptual foundations of data visualization and design. Students will learn how visualization design choices related to marks and channels, color, and spatial arrangement interact with the human perceptual system. The course considers tabular, network, and spatial data, and students will implement visualizations in R.
+
+Text: Munzner. 2014. Visualization Analysis & Design. CRC Press.
+
+Prerequisites: INTR 509 OR A BS degree OR Stat 251 OR Permission.
+
+
+#### BCB 522 Online Portfolio (1 credit)
+
+*Asynchronous online*
+
+This course provides feedback, review, and approval of the student's online data science portfolio. This portfolio is intended to represent the body of work accumulated by the student over the course of the certificate. It should contain examples of novel data products (such as FAIR data sets), analyses, and visualizations. All elements of the portfolio will be hosted online (likely in a GitHub repository or professional website), be open source, and demonstrate best practices of literate programming and reproducible research. 
+
+#### Electives:
+
+The certificate allows each student to customize their training by choosing a 3-credit graduate elective.
+
+For students seeking foundational training who have not already taken Stat 431 or its equivalent, ***we recommend Stat 431 or a 3-credit graduate level disciplinary research methods course***.
+
+For students seeking to add the certificate to an existing degree at UI, or students who already have some advanced technical training, additional electives are possible. Note that many of these optional electives have substantial disciplinary pre-requisites. Not all electives are available in an online format.
+
+#### Choose one of the following:
+
+```{r}
+#| echo: false
+
+
+library(readxl)
+library(tidyverse)
+
+Electives <- read_excel("Electives.xlsx")
+
+  EL<- Electives %>% 
+
+    unite("C", Prefix:Number, sep = " ",remove = TRUE)
+
+  EL$Course <- paste("[",EL$C,"](", EL$Link,")", sep = "")
+  Columns<-c("Course", "Name", "Credits", "Prerequisites")
+
+knitr::kable(EL[Columns], caption = '')
+```
+
+
+## **GENERAL UNIVERSITY REQUIREMENTS**
+
+In addition to the requirements specified in this document, the certificate would be subject to all UI Policies regarding [Graduate Certificates](https://www.uidaho.edu/registrar/faculty/curriculum).
