@@ -4,7 +4,7 @@ title: "RESEARCH"
 image: WelkerZfish.jpg
 ---
 
-My research group is an interdisicplinary blend of biologists, developers, modelers, programmers, and artists. I am always interested in recruiting new undergraduates, graduate students, and postdocs. Contact me via email if you are interested in learning more.
+My research group is an interdisciplinary blend of biologists, developers, modelers, programmers, and artists. I am always interested in recruiting new undergraduates, graduate students, and postdocs. Contact me via email if you are interested in learning more.
 
 # **// Active**
 

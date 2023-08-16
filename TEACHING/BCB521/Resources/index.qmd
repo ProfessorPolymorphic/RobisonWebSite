@@ -1,5 +1,5 @@
 ---
-title: "BCB 521:: Class Resources"
+title: "Resources"
 listing:
   contents: "*.qmd"
   sort: "date desc"
@@ -11,6 +11,6 @@ page-layout: full
 title-block-banner: true
 ---
 
-Stuff about class resources
+Lectures, Readings, Online Resources, etc.
 
 ## Posts
