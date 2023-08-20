@@ -97,7 +97,13 @@ FitAvg <- allfiles %>%
   summarize(across(ends_with("Fitness"), list(mean = mean, var = var), na.rm = TRUE, .names = "{.fn}.{.col}"))
 
 
-
+allfiles <- allfiles %>%
+  mutate(LResist.Trait = case_when(
+    Main.Type == "Lightning" & Secondary.Type == "Lightning" ~ 1.0,
+    Main.Type == "Lightning" & Secondary.Type != "Lightning" ~ 0.6,
+    Main.Type != "Lightning" & Secondary.Type == "Lightning" ~ 0.4,
+    TRUE ~ 0
+  ))
   
 
 
@@ -117,7 +123,7 @@ Variables that end in `.Gene` are the values of the genome for that particular l
 
 ## EXPERIMENTAL CONDITIONS
 
-In this situation, I'm interested in what types of Data Literacy exercises I can incorporate between generations of the game, especially in the first few generations.  We often show players time series graphs of trait values over time, but these don't tend to make much sense until 5 to 10 generations have occurred.
+In this situation, I'm interested in what types of Data Literacy exercises I can incorporate between generations of the game, especially in the first few generations. We often show players time series graphs of trait values over time, but these don't tend to make much sense until 5 to 10 generations have occurred.
 
 Here, I'm going to explore some visualizations that summarize what happened in the generation that the player most recently completed.
 
@@ -155,17 +161,195 @@ ggplot(SecondaryTypecounts, aes(x = Generation, y = Secondary.count, fill = as.f
 
 ```
 
-For this replicate, we obviously saw a proliferation of Lightning slimes because of our use of Lightning towers.  But what can we show the player after Generation 0?
+## GENERATION 0
 
-I think we need to explain to them how slimes acquire fitness and how that relates to number of offspring is good.
+You've defeated the first generation of slimes!  Our sensors indicate that the slimes have different types, that we've named `r unique(allfiles$Main.Type)`.
+
+Here is a graph showing the frequencies of the slime types in the wave you just defeated.
+
+```{r}
+#| layout-ncol: 1
+#| fig-cap: 
+#|   - "Frequency of slime type (Main.Type) in the previous wave."
+
+
+slime_palette <- c("green", "grey", "darkred", "red", "blue", "purple", "lightgreen","black")
+
+ggplot(MainTypecounts%>%
+         filter(Generation==0), aes(x=Main.Type, y = Main.count, fill = Main.Type))+
+  geom_col()+
+  scale_fill_manual(values = slime_palette) +
+  theme_minimal()
+
+
+```
+
+
+Let's test your data skills!  Based on this graph, what was the most common slime type in the most recent wave?
+
+Great job!  I wonder if these slime types have any special characteristics that would affect your strategy?
+
+
+## GENERATION 1
+
+Well done again!  You've survived another wave of slime attacks.  We are collecting more data on these mysterious creatures.
+
+It looks like each wave of slimes is actually the offspring of the previous wave!  Our sensors are able to detect the number of offspring that each slime you just defeated will have.  Check this out!  Here is graph that summarizes the distribution of the number of offspring.  
+
+```{r}
+
+ggplot(allfiles%>%
+         filter(Generation == 1),
+       aes(x = offspring_count)) +
+  geom_histogram(binwidth = 1, fill = "blue", color = "black", alpha = 0.7) +
+  labs(title = "Histogram of Offspring Count",
+       x = "Number of Offspring",
+       y = "Count") +
+  theme_minimal()+ 
+  scale_y_continuous(breaks = seq(0, 150, by = 10),   
+                     minor_breaks = seq(0, 150, by = 1))+
+  scale_x_continuous(breaks = seq(0, 100, by = 10),   
+                     minor_breaks = seq(0, 100, by = 1))
+  
+Best <- allfiles%>%
+  filter(Generation==1)
+
+
+```
+
+How many slimes do you think will contribute NO offspring to the next wave?
+
+Something to think about:  There are a couple slimes that had LOTS of offspring, and one that even had `r max(Best$offspring_count)` offspring!  What made them so special?  Why were they able to have so many offspring?
+
+## GENERATION 2
+
+That was close!  Let's analyze what is going on!  We think we've figured out what can explain the difference in the number of offspring!  It looks like the slime that get closest to the player tend to have the most babies!  Check this out!
+
+
+```{r}
+ggplot(allfiles%>%
+         filter(Generation ==2),
+       aes(x=Path.Distance.To.Player, y=offspring_count))+
+  geom_point(aes(color=Main.Type))+
+  labs(title = "Number of Offspring is related to Player Distance",
+       x = "Closest distance from player",
+       y = "Number of Offspring") +
+  theme_minimal()+ 
+  scale_y_continuous(breaks = seq(0, 100, by = 10),   
+                     minor_breaks = seq(0, 100, by = 1))+
+  scale_x_continuous(breaks = seq(0, 100, by = 10),   
+                     minor_breaks = seq(0, 100, by = 1))+
+  scale_color_manual(values = slime_palette)
+
+```
+
+Note that these graphs are interactive!  You can get all sorts of information from them by hovering or clicking on them!  Try to use that approach to figure out the Slime Type of the slime that had the MOST offspring!  Was it the same slime that got closest to the player?
+
+
+## GENERATION 3
+
+How are those pesky slimes getting close to you?  Let's look at some of the traits that might explain how they are getting through your defenses.
+
+```{r}
+
+MainTypecounts <- allfiles %>%
+  group_by(Main.Type, Generation, Wave.Number, file) %>%
+  summarise(Main.count = n(), .groups = "drop")
+
+SecondaryTypecounts <- allfiles %>%
+  group_by(Secondary.Type, Generation, Wave.Number, file) %>%
+  summarise(Secondary.count = n(), .groups = "drop")
+
+            
+
+ggplot(MainTypecounts%>%
+         filter(Wave.Number<4), aes(x = Generation, y = Main.count, fill = as.factor(Main.Type))) +
+  geom_col(position = "stack") +
+  labs(x = "Generation", y = "Count", fill = "Main Slime Type") +
+  theme_minimal()+
+  facet_wrap(~file, ncol=2)+
+  scale_fill_manual(values = slime_palette)
+
+ggplot(MainTypecounts%>%
+         filter(Wave.Number<4), aes(x = Generation, y = Main.count, color = as.factor(Main.Type))) +
+  geom_line(aes(group=Main.Type)) +
+  labs(x = "Generation", y = "Count", fill = "Main Slime Type") +
+  theme_minimal()+
+  facet_wrap(~file, ncol=2)+
+  scale_color_manual(values = slime_palette)
+
+ggplot(SecondaryTypecounts%>%
+         filter(Wave.Number<4), aes(x = Generation, y = Secondary.count, fill = as.factor(Secondary.Type))) +
+  geom_col(position = "stack") +
+  labs(x = "Generation", y = "Count", fill = "Secondary Slime Type") +
+  theme_minimal()+
+  facet_wrap(~file, ncol=2)
+
+
+```
+These graphs will help you understand how the population of slimes is changing over time in response to your defenses.
+
+What type of slime is the most common in the last generation?
+
+
+```{r}
+
+ggplot(allfiles%>%
+         filter(Generation == 4),
+       aes(x = Main.Type, y = offspring_count)) +
+  geom_jitter(aes(color = Main.Type), width = 0.3, height = 0) +
+  facet_wrap(~file) +
+  scale_color_manual(values = slime_palette) +
+  theme_minimal()
+
+FitAvgType <- allfiles%>%
+  group_by(file, Generation, Wave.Number, Main.Type) %>%
+  summarize(across(ends_with("Fitness"), list(mean = mean, var = var, sum = sum), na.rm = TRUE, .names = "{.fn}.{.col}"))
+
+ggplot(FitAvgType%>%
+         filter(Generation == 4),
+       aes(x= Main.Type, y = sum.offspring.count.Fitness))+
+  geom_col()
+
+```
+
+
+```{r}
+df_sorted <- allfiles %>%
+    filter(Generation == 4) %>%
+    arrange(offspring_count) %>%
+    mutate(Unique.Slime.ID = factor(Unique.Slime.ID, levels = Unique.Slime.ID),
+           cumulative_offspring = cumsum(offspring_count),
+           # Create discrete bins for cumulative_offspring with labels
+           cumulative_bins = cut(cumulative_offspring, 
+                                 breaks = quantile(cumulative_offspring, 
+                                                  probs = c(0.5,0.9, 0.95, 1)),
+                                 labels = c("Low", "Medium", "High")))
+
+
+ggplot(df_sorted, aes(x = Unique.Slime.ID, y = offspring_count)) +
+    geom_col(aes(fill = Main.Type)) +
+    labs(title = "Column Plot of Offspring Count",
+         x = "Slimes",
+         y = "Number of Offspring") +
+    theme_minimal() +
+    facet_wrap(~file) +
+    scale_fill_brewer(palette = "Set1")+
+  theme(axis.text.x = element_blank())+
+  scale_fill_manual(values = slime_palette)
+
+
+```
+
+
+
+
 
 ## Slime Fitness
 
 In most cases, it is useful to summarize the behavior of the fitness function for each experiment. In this case, the fitness function calculates a value of 50,000/(distance to player +1). I will also reverse calculate that for visualization, showing the actual distance to the player (`Path.Distance.To.Player`). We then use Roulette Wheel selection to determine the parents of the next generation.
 
 ```{r}
-
-
 
 
 ggplot(allfiles, aes(x=Wave.Number, y= Path.Distance.To.Player))+
@@ -176,17 +360,20 @@ ggplot(allfiles, aes(x=Wave.Number, y= Path.Distance.To.Player))+
   ylim(0, 80)
 
 df_sorted <- allfiles %>%
-    filter(Generation==2) %>%
+    filter(Generation == 2) %>%
     arrange(offspring_count) %>%
     mutate(Unique.Slime.ID = factor(Unique.Slime.ID, levels = Unique.Slime.ID),
            cumulative_offspring = cumsum(offspring_count),
-           # Create discrete bins for cumulative_offspring
+           # Create discrete bins for cumulative_offspring with labels
            cumulative_bins = cut(cumulative_offspring, 
                                  breaks = quantile(cumulative_offspring, 
-                                                  probs = c(0.5,0.9, 0.95, 1))))
+                                                  probs = c(0.5,0.9, 0.95, 1)),
+                                 labels = c("Low", "Medium", "High")))
+
 
 ggplot(df_sorted, aes(x = Unique.Slime.ID, y = offspring_count)) +
     geom_col(aes(fill = cumulative_bins)) +
+  geom_line(aes(x=Unique.Slime.ID, y = cumulative_offspring, group = 1))+
     labs(title = "Column Plot of Offspring Count",
          x = "Slime ID",
          y = "Number of Offspring") +
@@ -203,18 +390,13 @@ ggplot(df_sorted, aes(x = Unique.Slime.ID, y = cumulative_offspring)) +
     facet_wrap(~file) +
     scale_fill_brewer(palette = "Set1")
 
-ggplot(df_sorted, aes(x = offspring_count)) +
-  geom_histogram(binwidth = 1, fill = "blue", color = "black", alpha = 0.7) +
-  labs(title = "Histogram of Offspring Count",
-       x = "Number of Offspring",
-       y = "Count") +
-  theme_minimal()
+
 
 ```
 
-these plots might be useful as a starting point.  The ideas would be to show the player that not all slimes have the same number of babies.  Then we would challenge them as to why that is happening.
+these plots might be useful as a starting point. The ideas would be to show the player that not all slimes have the same number of babies. Then we would challenge them as to why that is happening.
 
-The next step would be to show them that the number of babies is related to the fitness function of the game.  In this case that is how close they get to the player.
+The next step would be to show them that the number of babies is related to the fitness function of the game. In this case that is how close they get to the player.
 
 ```{r}
 
@@ -250,8 +432,6 @@ So the closer they get to the player, the more babies they have.
 
 Next, we have to figure out what traits might explain how they are getting so close!
 
-
-
 ```{r}
 slime_palette <- c("green", "grey", "darkred", "red", "blue", "purple", "lightgreen","black")
 
@@ -270,9 +450,7 @@ ggplot(df_sorted, aes(x = Secondary.Type, y = offspring_count)) +
 
 ```
 
-This would be for slime type.  What about the traits?
-
-
+This would be for slime type. What about the traits?
 
 ## Evolutionary Responses
 
