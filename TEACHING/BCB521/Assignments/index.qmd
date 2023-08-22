@@ -11,6 +11,6 @@ page-layout: full
 title-block-banner: true
 ---
 
-Stuff about Assignments
+This section contains all of the assignments for BCB 521. Fun!
 
 ## Posts

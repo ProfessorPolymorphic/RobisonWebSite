@@ -53,15 +53,15 @@ This certificate leverages the University of Idaho's interdisciplinary culture t
 
 Upon completion of the certificate, students will be able to:
 
-  -   Use open-source software to reproducibly manage, analyze, and visualize large, complex, and noisy data sets.
+-   Use open-source software to reproducibly manage, analyze, and visualize large, complex, and noisy data sets.
 
-  -   Practice high quality and ethical data stewardship.
+-   Practice high quality and ethical data stewardship.
 
-  -   Understand and execute data exploration.
+-   Understand and execute data exploration.
 
-  -   Effectively communicate data driven insights to experts and non-experts.
+-   Effectively communicate data driven insights to experts and non-experts.
 
-  -   Demonstrate their skills with an online portfolio of analyses and visualizations relevant to their field of specialization.
+-   Demonstrate their skills with an online portfolio of analyses and visualizations relevant to their field of specialization.
 
 ## **CURRICULUM**
 
@@ -94,7 +94,7 @@ Students are provided a foundation for "thinking with data" through the introduc
 
 *In person (fall) and asynchronous online.*
 
-Students are taught writing and presentation skills to improve their communication of data-driven insights to specialist and lay audiences. The course emphasizes reproducible research practices, including literate programming (R Markdown) and version control (GitHub). Course content includes the conceptual foundations of communicating with data along with written and verbal communication assignments using data sets individualized to each student's interest. 
+Students are taught writing and presentation skills to improve their communication of data-driven insights to specialist and lay audiences. The course emphasizes reproducible research practices, including literate programming (R Markdown) and version control (GitHub). Course content includes the conceptual foundations of communicating with data along with written and verbal communication assignments using data sets individualized to each student's interest.
 
 Text: Nolan and Stoudt. 2021. Communicating with data: The art of writing for data science. Oxford University Press.
 
@@ -110,12 +110,11 @@ Text: Munzner. 2014. Visualization Analysis & Design. CRC Press.
 
 Prerequisites: INTR 509 OR A BS degree OR Stat 251 OR Permission.
 
-
 #### BCB 522 Online Portfolio (1 credit)
 
 *Asynchronous online*
 
-This course provides feedback, review, and approval of the student's online data science portfolio. This portfolio is intended to represent the body of work accumulated by the student over the course of the certificate. It should contain examples of novel data products (such as FAIR data sets), analyses, and visualizations. All elements of the portfolio will be hosted online (likely in a GitHub repository or professional website), be open source, and demonstrate best practices of literate programming and reproducible research. 
+This course provides feedback, review, and approval of the student's online data science portfolio. This portfolio is intended to represent the body of work accumulated by the student over the course of the certificate. It should contain examples of novel data products (such as FAIR data sets), analyses, and visualizations. All elements of the portfolio will be hosted online (likely in a GitHub repository or professional website), be open source, and demonstrate best practices of literate programming and reproducible research.
 
 #### Electives:
 
@@ -145,7 +144,6 @@ Electives <- read_excel("Electives.xlsx")
 
 knitr::kable(EL[Columns], caption = '')
 ```
-
 
 ## **GENERAL UNIVERSITY REQUIREMENTS**
 

@@ -548,7 +548,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">SUMMARY</a></li>
+  <li><a href="#tldr" id="toc-tldr" class="nav-link active" data-scroll-target="#tldr">TLDR</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">SUMMARY</a></li>
   <li><a href="#literate-programming-publishing-systems" id="toc-literate-programming-publishing-systems" class="nav-link" data-scroll-target="#literate-programming-publishing-systems">LITERATE PROGRAMMING PUBLISHING SYSTEMS</a>
   <ul class="collapse">
   <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
@@ -575,8 +576,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1 class="title">ASSIGNMENT 1 - Fun with literate programming.</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Assignment</div>
-    <div class="quarto-category">DataViz</div>
     <div class="quarto-category">Quarto</div>
+    <div class="quarto-category">Literate Programming</div>
   </div>
   </div>
 
@@ -609,6 +610,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
+<section id="tldr" class="level2">
+<h2 class="anchored" data-anchor-id="tldr">TLDR</h2>
+<p>Complete this assignment by:</p>
+<ol type="1">
+<li>Installing R and RStudio on your computer.</li>
+<li>Creating a quarto document.</li>
+<li>Executing some R code in that Quarto document.</li>
+<li>Rendering that document to .html.</li>
+</ol>
+</section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">SUMMARY</h2>
 <p>The idea of Literate Programming is that source code that is executed as part of the program’s purpose is interspersed with documentation that describes the program’s logic. The concept of literate programming was first articulated by David Knuth in 1984. You know… back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren’t very many good arguments as to why you WOULDN’T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills.</p>
@@ -669,7 +680,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="assignment" class="level2">
 <h2 class="anchored" data-anchor-id="assignment">ASSIGNMENT</h2>
 <p>After that long introduction, I suppose you are wondering what I want you to actually DO today.</p>
-<p><strong>Well, I want you to set up your publishing system and preferred language on your computer. Then I want you to recreate the classic figure from Anscombe’s Quartet.</strong></p>
+<p><strong>Well, I want you to set up your publishing system and preferred language on your computer.</strong></p>
 <p>Now, you might be asking…</p>
 <p>“How am I supposed to do that? You haven’t taught me how to do anything yet!”</p>
 <p>Here is the dirty little secret of modern education.</p>
@@ -678,21 +689,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><p>Download and install R, <a href="https://posit.co/downloads/" target="_blank">R-Studio</a>, and Quarto (included by default with R-Studio).</p></li>
 <li><p><a href="https://quarto.org/docs/output-formats/html-basics.html" target="_blank">Create a Quarto document that will publish in the .html format</a></p></li>
-<li><p><a href="https://www.dataquest.io/blog/install-package-r/" target="_blank">Install the R packages you will need</a></p></li>
-<li><p><a href="https://www.njtierney.com/post/2020/06/01/tidy-anscombe/" target="_blank">Tidy up the Anscombe’s Quartet data</a></p></li>
-<li><p>Calculate the summary statistics for each x y pair</p></li>
-<li><p>Make a nice little plot…</p></li>
 </ul>
+<p>Use that document to execute some R code.</p>
 <p>I’m not going to do that.</p>
 <p>Instead, I want you to use the resources I point towards, or other resources that make more sense to you, to figure out how to do those things.</p>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">RESOURCES</h2>
-<p><a href="https://www.njtierney.com/post/2020/06/01/tidy-anscombe/">Tidyverse and Anscombe’s Quartet</a></p>
+<p><a href="https://moverton.shinyapps.io/Tutorial_starting_R/">Michael Overton’s R Tutorial</a></p>
 <p><a href="https://posit.co/resources/cheatsheets/">Handy cheat-sheets for many different R packages</a></p>
-<p><a href="../T1-Lit-Prog/index.qmd">Tutorial 1 - Literate Programming</a></p>
-<p><a href="../T2-Anscombe/index.qmd">Tutorial 2 - Literate Programming and Anscombe’s Quartet</a></p>
-<p><a href="../T3-Python/index.qmd">Tutorial 3 - Python</a></p>
+<p><a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/posts/T1-Lit-Prog/">Tutorial 1 - Literate Programming</a> Note that this is from a similar assignment from BCB 520 - Foundations of Data Visualization. You don’t need to do the Anscombe’s Quartet part, but feel free to give it a try!</p>
 
 
 </section>

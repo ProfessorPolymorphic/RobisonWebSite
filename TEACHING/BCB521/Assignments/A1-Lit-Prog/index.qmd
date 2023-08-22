@@ -2,10 +2,19 @@
 title: "ASSIGNMENT 1 - Fun with literate programming."
 author: "Barrie Robison"
 date: "2022-12-01"
-categories: [Assignment, DataViz, Quarto]
+categories: [Assignment, Quarto, Literate Programming]
 image: "Cthulhuhacking1.png"
 description: "Source code hybridized with documentation adds to your data science spellbook."
 ---
+
+## TLDR
+
+Complete this assignment by:
+
+1. Installing R and RStudio on your computer.
+2. Creating a quarto document.
+3. Executing some R code in that Quarto document.
+4. Rendering that document to .html.
 
 ## SUMMARY
 
@@ -59,7 +68,7 @@ Observable is a set of extensions to Javascript that features something called r
 
 After that long introduction, I suppose you are wondering what I want you to actually DO today.
 
-**Well, I want you to set up your publishing system and preferred language on your computer. Then I want you to recreate the classic figure from Anscombe's Quartet.**
+**Well, I want you to set up your publishing system and preferred language on your computer.**
 
 Now, you might be asking...
 
@@ -75,13 +84,8 @@ While I could use up an entire 90 minute lecture telling you how to:
 
 -   [Create a Quarto document that will publish in the .html format](https://quarto.org/docs/output-formats/html-basics.html){target="_blank"}
 
--   [Install the R packages you will need](https://www.dataquest.io/blog/install-package-r/){target="_blank"}
+Use that document to execute some R code.  
 
--   [Tidy up the Anscombe's Quartet data](https://www.njtierney.com/post/2020/06/01/tidy-anscombe/){target="_blank"}
-
--   Calculate the summary statistics for each x y pair
-
--   Make a nice little plot...
 
 I'm not going to do that.
 
@@ -89,12 +93,10 @@ Instead, I want you to use the resources I point towards, or other resources tha
 
 ## RESOURCES
 
-[Tidyverse and Anscombe's Quartet](https://www.njtierney.com/post/2020/06/01/tidy-anscombe/)
+[Michael Overton's R Tutorial](https://moverton.shinyapps.io/Tutorial_starting_R/)
 
 [Handy cheat-sheets for many different R packages](https://posit.co/resources/cheatsheets/)
 
-[Tutorial 1 - Literate Programming](../T1-Lit-Prog/index.qmd)
+[Tutorial 1 - Literate Programming](https://professorpolymorphic.github.io/RobisonWebSite/BCB520/posts/T1-Lit-Prog/) Note that this is from a similar assignment from BCB 520 - Foundations of Data Visualization.  You don't need to do the Anscombe's Quartet part, but feel free to give it a try!
 
-[Tutorial 2 - Literate Programming and Anscombe's Quartet](../T2-Anscombe/index.qmd)
 
-[Tutorial 3 - Python](../T3-Python/index.qmd)

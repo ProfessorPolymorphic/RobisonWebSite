@@ -2111,7 +2111,14 @@
     "href": "TEACHING/BCB521/Assignments/A1-Lit-Prog/index.html",
     "title": "ASSIGNMENT 1 - Fun with literate programming.",
     "section": "",
-    "text": "The idea of Literate Programming is that source code that is executed as part of the program’s purpose is interspersed with documentation that describes the program’s logic. The concept of literate programming was first articulated by David Knuth in 1984. You know… back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren’t very many good arguments as to why you WOULDN’T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills."
+    "text": "Complete this assignment by:\n\nInstalling R and RStudio on your computer.\nCreating a quarto document.\nExecuting some R code in that Quarto document.\nRendering that document to .html."
+  },
+  {
+    "objectID": "TEACHING/BCB521/Assignments/A1-Lit-Prog/index.html#summary",
+    "href": "TEACHING/BCB521/Assignments/A1-Lit-Prog/index.html#summary",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "SUMMARY",
+    "text": "SUMMARY\nThe idea of Literate Programming is that source code that is executed as part of the program’s purpose is interspersed with documentation that describes the program’s logic. The concept of literate programming was first articulated by David Knuth in 1984. You know… back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren’t very many good arguments as to why you WOULDN’T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills."
   },
   {
     "objectID": "TEACHING/BCB521/Assignments/A1-Lit-Prog/index.html#literate-programming-publishing-systems",
@@ -2132,21 +2139,21 @@
     "href": "TEACHING/BCB521/Assignments/A1-Lit-Prog/index.html#assignment",
     "title": "ASSIGNMENT 1 - Fun with literate programming.",
     "section": "ASSIGNMENT",
-    "text": "ASSIGNMENT\nAfter that long introduction, I suppose you are wondering what I want you to actually DO today.\nWell, I want you to set up your publishing system and preferred language on your computer. Then I want you to recreate the classic figure from Anscombe’s Quartet.\nNow, you might be asking…\n“How am I supposed to do that? You haven’t taught me how to do anything yet!”\nHere is the dirty little secret of modern education.\nThe Internet Exists.\nWhile I could use up an entire 90 minute lecture telling you how to:\n\nDownload and install R, R-Studio, and Quarto (included by default with R-Studio).\nCreate a Quarto document that will publish in the .html format\nInstall the R packages you will need\nTidy up the Anscombe’s Quartet data\nCalculate the summary statistics for each x y pair\nMake a nice little plot…\n\nI’m not going to do that.\nInstead, I want you to use the resources I point towards, or other resources that make more sense to you, to figure out how to do those things."
+    "text": "ASSIGNMENT\nAfter that long introduction, I suppose you are wondering what I want you to actually DO today.\nWell, I want you to set up your publishing system and preferred language on your computer.\nNow, you might be asking…\n“How am I supposed to do that? You haven’t taught me how to do anything yet!”\nHere is the dirty little secret of modern education.\nThe Internet Exists.\nWhile I could use up an entire 90 minute lecture telling you how to:\n\nDownload and install R, R-Studio, and Quarto (included by default with R-Studio).\nCreate a Quarto document that will publish in the .html format\n\nUse that document to execute some R code.\nI’m not going to do that.\nInstead, I want you to use the resources I point towards, or other resources that make more sense to you, to figure out how to do those things."
   },
   {
     "objectID": "TEACHING/BCB521/Assignments/A1-Lit-Prog/index.html#resources",
     "href": "TEACHING/BCB521/Assignments/A1-Lit-Prog/index.html#resources",
     "title": "ASSIGNMENT 1 - Fun with literate programming.",
     "section": "RESOURCES",
-    "text": "RESOURCES\nTidyverse and Anscombe’s Quartet\nHandy cheat-sheets for many different R packages\nTutorial 1 - Literate Programming\nTutorial 2 - Literate Programming and Anscombe’s Quartet\nTutorial 3 - Python"
+    "text": "RESOURCES\nMichael Overton’s R Tutorial\nHandy cheat-sheets for many different R packages\nTutorial 1 - Literate Programming Note that this is from a similar assignment from BCB 520 - Foundations of Data Visualization. You don’t need to do the Anscombe’s Quartet part, but feel free to give it a try!"
   },
   {
     "objectID": "TEACHING/BCB521/Assignments/index.html",
     "href": "TEACHING/BCB521/Assignments/index.html",
     "title": "Assignments",
     "section": "",
-    "text": "Stuff about Assignments"
+    "text": "This section contains all of the assignments for BCB 521. Fun!"
   },
   {
     "objectID": "TEACHING/BCB521/Assignments/index.html#posts",
@@ -2314,7 +2321,7 @@
     "href": "TEACHING/BCB521/index.html",
     "title": "BCB 521",
     "section": "",
-    "text": "Many of the most common applications of modern data science are ultimately intended to influence, persuade, or inform other people. No matter the format and complexity of the data driven insight or result, your goal cannot be achieved unless you can effectively communicate your intended message to your audience.\nThis class is designed to teach students how to communicate data driven insights to a wide variety of audiences. The course considers best practices for writing about data, including approaches for scientific manuscripts, technical reports, online media, and the growing discipline of “Data Journalism”. We will also cover approaches related to communicating data during verbal presentations in a variety of contexts, including scientific conferences, seminars, education, and online video formats. Finally, the course will cover (and use) some of the tools that are central to reproducible research in data science, including version control using GitHub and literate programming.\nAssignments are designed so that students may use their own data or data from their discipline or industry. At least two assignments are designed to be appropriate submissions to a student’s online Data Science Portfolio and can be used to satisfy the requirements of BCB 522.\nThe grading scheme and schedule for the course can be found in the Syllabus"
+    "text": "BCB 521 is a core requirement of our graduate certificate: Professional Applications of Data Science. A detailed description of the certificate can be found here. The official description and course requirements of the certificate can be found here."
   },
   {
     "objectID": "TEACHING/BCB521/index.html#tools-for-reproducible-data-science",
