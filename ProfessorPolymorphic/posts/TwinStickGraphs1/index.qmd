@@ -4,6 +4,7 @@ subtitle: "1 - Single Generation Graphs"
 description: "How can we embed Data Literacy exercises for the early game?"
 author: "Barrie D. Robison"
 date: "August 17, 2023"
+categories: [TwinStick, Evolution, Data Science]
 code-fold: true  
 code-tools: true
 ---
@@ -163,7 +164,7 @@ ggplot(SecondaryTypecounts, aes(x = Generation, y = Secondary.count, fill = as.f
 
 ## GENERATION 0
 
-You've defeated the first generation of slimes!  Our sensors indicate that the slimes have different types, that we've named `r unique(allfiles$Main.Type)`.
+You've defeated the first generation of slimes! Our sensors indicate that the slimes have different types, that we've named `r unique(allfiles$Main.Type)`.
 
 Here is a graph showing the frequencies of the slime types in the wave you just defeated.
 
@@ -184,17 +185,15 @@ ggplot(MainTypecounts%>%
 
 ```
 
+Let's test your data skills! Based on this graph, what was the most common slime type in the most recent wave?
 
-Let's test your data skills!  Based on this graph, what was the most common slime type in the most recent wave?
-
-Great job!  I wonder if these slime types have any special characteristics that would affect your strategy?
-
+Great job! I wonder if these slime types have any special characteristics that would affect your strategy?
 
 ## GENERATION 1
 
-Well done again!  You've survived another wave of slime attacks.  We are collecting more data on these mysterious creatures.
+Well done again! You've survived another wave of slime attacks. We are collecting more data on these mysterious creatures.
 
-It looks like each wave of slimes is actually the offspring of the previous wave!  Our sensors are able to detect the number of offspring that each slime you just defeated will have.  Check this out!  Here is graph that summarizes the distribution of the number of offspring.  
+It looks like each wave of slimes is actually the offspring of the previous wave! Our sensors are able to detect the number of offspring that each slime you just defeated will have. Check this out! Here is graph that summarizes the distribution of the number of offspring.
 
 ```{r}
 
@@ -219,12 +218,11 @@ Best <- allfiles%>%
 
 How many slimes do you think will contribute NO offspring to the next wave?
 
-Something to think about:  There are a couple slimes that had LOTS of offspring, and one that even had `r max(Best$offspring_count)` offspring!  What made them so special?  Why were they able to have so many offspring?
+Something to think about: There are a couple slimes that had LOTS of offspring, and one that even had `r max(Best$offspring_count)` offspring! What made them so special? Why were they able to have so many offspring?
 
 ## GENERATION 2
 
-That was close!  Let's analyze what is going on!  We think we've figured out what can explain the difference in the number of offspring!  It looks like the slime that get closest to the player tend to have the most babies!  Check this out!
-
+That was close! Let's analyze what is going on! We think we've figured out what can explain the difference in the number of offspring! It looks like the slime that get closest to the player tend to have the most babies! Check this out!
 
 ```{r}
 ggplot(allfiles%>%
@@ -243,12 +241,11 @@ ggplot(allfiles%>%
 
 ```
 
-Note that these graphs are interactive!  You can get all sorts of information from them by hovering or clicking on them!  Try to use that approach to figure out the Slime Type of the slime that had the MOST offspring!  Was it the same slime that got closest to the player?
-
+Note that these graphs are interactive! You can get all sorts of information from them by hovering or clicking on them! Try to use that approach to figure out the Slime Type of the slime that had the MOST offspring! Was it the same slime that got closest to the player?
 
 ## GENERATION 3
 
-How are those pesky slimes getting close to you?  Let's look at some of the traits that might explain how they are getting through your defenses.
+How are those pesky slimes getting close to you? Let's look at some of the traits that might explain how they are getting through your defenses.
 
 ```{r}
 
@@ -287,10 +284,10 @@ ggplot(SecondaryTypecounts%>%
 
 
 ```
+
 These graphs will help you understand how the population of slimes is changing over time in response to your defenses.
 
 What type of slime is the most common in the last generation?
-
 
 ```{r}
 
@@ -312,7 +309,6 @@ ggplot(FitAvgType%>%
   geom_col()
 
 ```
-
 
 ```{r}
 df_sorted <- allfiles %>%
@@ -340,10 +336,6 @@ ggplot(df_sorted, aes(x = Unique.Slime.ID, y = offspring_count)) +
 
 
 ```
-
-
-
-
 
 ## Slime Fitness
 
