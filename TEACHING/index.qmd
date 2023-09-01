@@ -4,13 +4,7 @@ title: "TEACHING"
 
 # **// Active**
 
-## **BIO 315 ::** Genetics Laboratory
 
-1 credit, Fall semester only
-
-The companion laboratory to Biology 310. This is an open lab course in which students test genetic hypotheses using *Drosophila melanogaster* or game based simulations.
-
-[Canvas Page](https://canvas.uidaho.edu/courses/13668){target="_blank"}
 
 ## **BCB 520 ::** Foundations of Data Visualization
 
@@ -26,7 +20,16 @@ This class will help students establish a foundational understanding of data vis
 
 ## **BCB 521 ::** Communicating with Data
 
+[Course WebPage](BCB521/index.qmd){target="_blank"}
+
 ## **BCB 522 ::** Data Science Portfolio
 
 # **// Archive**
 
+## **BIO 315 ::** Genetics Laboratory
+
+1 credit, Fall semester only
+
+The companion laboratory to Biology 310. This is an open lab course in which students test genetic hypotheses using *Drosophila melanogaster* or game based simulations.
+
+[Canvas Page](https://canvas.uidaho.edu/courses/13668){target="_blank"}

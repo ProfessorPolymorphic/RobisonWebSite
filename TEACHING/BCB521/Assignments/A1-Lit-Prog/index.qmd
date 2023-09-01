@@ -1,7 +1,7 @@
 ---
 title: "ASSIGNMENT 1 - Fun with literate programming."
 author: "Barrie Robison"
-date: "2022-12-01"
+date: "2023-08-21"
 categories: [Assignment, Quarto, Literate Programming]
 image: "Cthulhuhacking1.png"
 description: "Source code hybridized with documentation adds to your data science spellbook."
@@ -11,10 +11,12 @@ description: "Source code hybridized with documentation adds to your data scienc
 
 Complete this assignment by:
 
-1. Installing R and RStudio on your computer.
-2. Creating a quarto document.
-3. Executing some R code in that Quarto document.
-4. Rendering that document to .html.
+1.  Installing R and RStudio on your computer.
+2.  Creating a quarto document.
+3.  Executing some R code in that Quarto document.
+4.  Rendering that document to .html.
+
+We'll be evaluating your progress on this assignment in the class session on August 31, 2023.
 
 ## SUMMARY
 
@@ -54,7 +56,7 @@ Python is an open source general purpose programming language. It wasn't develop
 
 ### [Tableau](https://www.tableau.com)
 
-Tableau is proprietary software that is very powerful for creating beautiful and functional data visualizations. It can integrate with all sorts of data sources and is used a lot for analytics, especially in the business world. The downsides (that occur to me at least) are that it costs money, it is not open source, and is more of a one-trick-pony than the programming languages on this list.
+Tableau is proprietary software that is very powerful for creating beautiful and functional data visualizations. It can integrate with all sorts of data sources and is used a lot for analytics, especially in the business world. The downsides (that occur to me at least) are that it costs money, it is not open source, and is more of a one-trick-pony than the programming languages on this list.  While Tableau is great for the Visualization part of Data Science, you'll need an actual programming language in your skill stack to really leverage what Tableau can do.
 
 ### [Javascript](https://www.javascript.com)
 
@@ -84,8 +86,7 @@ While I could use up an entire 90 minute lecture telling you how to:
 
 -   [Create a Quarto document that will publish in the .html format](https://quarto.org/docs/output-formats/html-basics.html){target="_blank"}
 
-Use that document to execute some R code.  
-
+Use that document to execute some R code.
 
 I'm not going to do that.
 
@@ -97,6 +98,4 @@ Instead, I want you to use the resources I point towards, or other resources tha
 
 [Handy cheat-sheets for many different R packages](https://posit.co/resources/cheatsheets/)
 
-[Tutorial 1 - Literate Programming](https://professorpolymorphic.github.io/RobisonWebSite/BCB520/posts/T1-Lit-Prog/) Note that this is from a similar assignment from BCB 520 - Foundations of Data Visualization.  You don't need to do the Anscombe's Quartet part, but feel free to give it a try!
-
-
+[Tutorial 1 - Literate Programming](https://professorpolymorphic.github.io/RobisonWebSite/BCB520/posts/T1-Lit-Prog/) Note that this is from a similar assignment from BCB 520 - Foundations of Data Visualization. You don't need to do the Anscombe's Quartet part, but feel free to give it a try!

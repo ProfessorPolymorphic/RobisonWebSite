@@ -2,7 +2,7 @@
 title: "SYLLABUS 2023"
 subtitle: "BCB 521"
 author: "Barrie Robison"
-date: "2023-05-08"
+date: "2023-08-21"
 ---
 
 # BCB 521: Communicating with Data
@@ -10,10 +10,6 @@ date: "2023-05-08"
 **Barrie D. Robison**
 
 **Fall 2023**
-
-
-
-
 
 ## Course Objectives
 
@@ -23,11 +19,11 @@ Students completing this course will be able to:
 2.  Write clearly and concisely about data driven visualizations and analyses.
 3.  Speak effectively about data driven visualizations and analyses.
 4.  Effectively incorporate version control and literate progamming into their research and data science workflows.
-5.   Demonstrate their skills with at least two products (written or recorded video) suitable for inclusion in an online Data Science Portfolio.
+5.  Demonstrate their skills with at least two products (written or recorded video) suitable for inclusion in an online Data Science Portfolio.
 
 ## Required Readings
 
-Communicating with Data.
+There is no required text.  Assigned readings for each unit will be linked in each [Assignment](Assignments/index.qmd) or [Resource](Resources/index.qmd) as well as in the Schedule of Topics below.  The course format for this semester makes formal lectures unlikely, but if they happen you can find them in the [Lectures](Lectures/index.qmd) section.
 
 ## Course Policies
 
@@ -42,8 +38,6 @@ Communicating with Data.
 10% of your grade will be determined by participation in class discussions.
 
 GRADING SCALE: The grading scale is standard: A (90 -100 %), B (89 - 80 %), C (79 - 70 %), D (69-60 %), F( below 60 %).
-
-
 
 ### ATTENDANCE POLICY
 
@@ -65,11 +59,13 @@ All students are expected to uphold the highest standards of academic honesty. T
 
 ### A NOTE ABOUT LLMs (such as GPT-4)
 
-We are on the precipice of the Great AI Disruption.  Large Language Models and other forms of AI are beginning to disrupt almost every industry.  They will also dramatically alter our educational system and change how we learn and use new information.  I'm sure many of my colleagues in post-secondary education are lamenting the inevitable, and trying desperately to prevent the usage of AI tools in their courses.  In my opinion, this will be about as effective at yelling at the ocean to stop the tides.
+We are on the precipice of the Great AI Disruption. Large Language Models and other forms of AI are beginning to disrupt almost every industry. They will also dramatically alter our educational system and change how we learn and use new information. I'm sure many of my colleagues in post-secondary education are lamenting the inevitable, and trying desperately to prevent the usage of AI tools in their courses. In my opinion, this will be about as effective at yelling at the ocean to stop the tides.
 
-Are there significant ethical, economic, security, and social risks associated with AI?  Of course there are.  Nevertheless, these tools exist and they will become central to almost every job sector in the world.  Ignore them at your peril.
+Are there significant ethical, economic, security, and social risks associated with AI? Of course there are. Nevertheless, these tools exist and they will become central to almost every job sector in the world. Ignore them at your peril.
 
 That being said, there is a difference between using these tools as a means of achieving the best possible result, and using them because you are lazy or indifferent to the outcome of your task.
+
+I encourage you to incorporate AI tools into your learning whenever it makes sense to do so.  My rule of thumb is this... If it is helping you learn, grow, and be productive you are probably safe.  It you are using AI to circumvent learning, or to trick an assessment tool into thinking you have a skill that you don't, you have crossed the line.
 
 ## Class Schedule
 

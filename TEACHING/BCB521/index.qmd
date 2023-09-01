@@ -3,7 +3,7 @@ title: "BCB 521"
 subtitle: "Communicating with Data"
 ---
 
-BCB 521 is a core requirement of our graduate certificate: Professional Applications of Data Science.  A detailed description of the certificate can be found [here](Resources/Certificate/index.qmd).  The official description and course requirements of the certificate can be found [here](https://www.uidaho.edu/sci/bcb/degrees/certificate).
+BCB 521 is a core requirement of our graduate certificate: Professional Applications of Data Science. A detailed description of the certificate can be found [here](Resources/Certificate/index.qmd). The official description and course requirements of the certificate can be found [here](https://www.uidaho.edu/sci/bcb/degrees/certificate).
 
 # Course Description
 
@@ -21,7 +21,7 @@ The resources for the course can be found in the [Resources](Resources/index.qmd
 
 # TOPICS
 
-The main topic areas of this course are listed here.  I'll add descriptions and links to course components as we proceed through the semester.
+The main topic areas of this course are listed here. I'll add descriptions and links to course components as we proceed through the semester.
 
 ## TOOLS FOR REPRODUCIBLE DATA SCIENCE
 
