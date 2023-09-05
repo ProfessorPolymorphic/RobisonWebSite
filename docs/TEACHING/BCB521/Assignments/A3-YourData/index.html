@@ -484,9 +484,14 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#identify-a-data-set" id="toc-identify-a-data-set" class="nav-link" data-scroll-target="#identify-a-data-set">Identify a Data Set</a></li>
   <li><a href="#import-the-data-set" id="toc-import-the-data-set" class="nav-link" data-scroll-target="#import-the-data-set">Import the Data Set</a></li>
-  <li><a href="#describe-the-data-set" id="toc-describe-the-data-set" class="nav-link" data-scroll-target="#describe-the-data-set">Describe the Data Set</a></li>
+  <li><a href="#describe-the-data-set" id="toc-describe-the-data-set" class="nav-link" data-scroll-target="#describe-the-data-set">Describe the Data Set</a>
+  <ul class="collapse">
+  <li><a href="#data-provenance" id="toc-data-provenance" class="nav-link" data-scroll-target="#data-provenance">Data Provenance</a></li>
+  <li><a href="#describe-the-variables" id="toc-describe-the-variables" class="nav-link" data-scroll-target="#describe-the-variables">Describe the Variables</a></li>
+  <li><a href="#summaries-if-useful" id="toc-summaries-if-useful" class="nav-link" data-scroll-target="#summaries-if-useful">Summaries (if useful)</a></li>
   </ul></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">RESOURCES</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -527,15 +532,15 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">SUMMARY</h2>
+<section id="summary" class="level1">
+<h1>SUMMARY</h1>
 <p>A key feature of this course is that students should be using their own data whenever possible. This is critical to forging a learning experience that is customized to each student’s aspirations and the eccentricities of their chosen research domain. This assignment begins the process of helping you identify the data sets with which you want to work.</p>
 </section>
-<section id="assignment" class="level2">
-<h2 class="anchored" data-anchor-id="assignment">ASSIGNMENT</h2>
+<section id="assignment" class="level1">
+<h1>ASSIGNMENT</h1>
 <p>The basic structure of this assignment is for you to identify, import, describe, and host a data set. I’ll break down the specifics for each of these actions below.</p>
-<section id="identify-a-data-set" class="level3">
-<h3 class="anchored" data-anchor-id="identify-a-data-set">Identify a Data Set</h3>
+<section id="identify-a-data-set" class="level2">
+<h2 class="anchored" data-anchor-id="identify-a-data-set">Identify a Data Set</h2>
 <p>The main criteria is that <span class="red">the data set has to matter to you</span> in some way. Often, this will mean that it is <strong>your</strong> data set. It was collected by you and has a central role in your current or past graduate research. Awesome! Another scenario is that the data you want to use comes from your current job. Maybe it isn’t part of a research project, but you are motivated to learn how to better visualize the data or you are very interested in learning more about it. Also Awesome!</p>
 <p>Some of you might not have your own data. Perhaps you have just started your graduate training. Maybe your job doesn’t yet have data that you need to work with. No Problem!</p>
 <p>It is perfectly fine to find publicly available data sets online. As long as the data set is interesting to you! You just need to make sure that the data:</p>
@@ -555,20 +560,47 @@ ul.task-list li input[type="checkbox"] {
 <li>Classic data sets from your field.</li>
 </ol>
 </section>
-<section id="import-the-data-set" class="level3">
-<h3 class="anchored" data-anchor-id="import-the-data-set">Import the Data Set</h3>
-<p>This one is probably straightforward if your data set comes from your own research and lives on your local hard drive already.</p>
+<section id="import-the-data-set" class="level2">
+<h2 class="anchored" data-anchor-id="import-the-data-set">Import the Data Set</h2>
+<p>This one is probably straightforward if your data set comes from your own research and lives on your local hard drive already. Your goal is to import the data into an R data frame or tibble.</p>
 </section>
-<section id="describe-the-data-set" class="level3">
-<h3 class="anchored" data-anchor-id="describe-the-data-set">Describe the Data Set</h3>
-<p>This is the bulk of the assignment. I want you to use the framework described in Dr.&nbsp;Munzner’s textbook on Data Visualizaiton. This figure from the textbook summarizes the kinds of data types, data set types, and attribute types you might have in your data:</p>
-<p><img src="whatexpanded.png" class="img-fluid"></p>
+<section id="describe-the-data-set" class="level2">
+<h2 class="anchored" data-anchor-id="describe-the-data-set">Describe the Data Set</h2>
+<p>Before you start “Communicating with Data”, you need to have a clear understanding of the data yourself. This begins with a thorough but concise description of your data set.</p>
+<section id="data-provenance" class="level3">
+<h3 class="anchored" data-anchor-id="data-provenance">Data Provenance</h3>
+<p>Trace the origins of your data set from collection to analysis. Consider the following steps:</p>
+<section id="data-collection" class="level4">
+<h4 class="anchored" data-anchor-id="data-collection">Data Collection</h4>
+<p>When and where were the data collected, and by whom?</p>
+<p>Who or what are the subjects or experimental units?</p>
+<p>How were the subjects selected (or rejected)?</p>
+<p>How were the measurements obtained?</p>
+</section>
+<section id="data-preparation" class="level4">
+<h4 class="anchored" data-anchor-id="data-preparation">Data Preparation</h4>
+<p>Document the data cleaning phase of your analysis pipeline. Consider the following steps:</p>
+<p>Were any cases or data points excluded? What was the justification for exclusion?</p>
+<p>How are missing values identified and treated?</p>
+<p>Document any transformations or creation of derived attributes or variables.</p>
+<p>Document any aggregations, summarizations, etc.</p>
+<p>Document any joins of multiple data sets.</p>
+</section>
+</section>
+<section id="describe-the-variables" class="level3">
+<h3 class="anchored" data-anchor-id="describe-the-variables">Describe the Variables</h3>
+<p>Create a Data Dictionary that lists the variable names and a description of each. Include in the description the units and any encodings.</p>
+</section>
+<section id="summaries-if-useful" class="level3">
+<h3 class="anchored" data-anchor-id="summaries-if-useful">Summaries (if useful)</h3>
+<p>Provide a simple table of summary statistics (or a graphical representation) for your data if you deem it useful.</p>
 </section>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">RESOURCES</h2>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
