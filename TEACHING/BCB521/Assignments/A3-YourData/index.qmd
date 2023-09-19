@@ -40,15 +40,15 @@ Some fun potential categories for data sources include:
 
 ## Import the Data Set
 
-This one is probably straightforward if your data set comes from your own research and lives on your local hard drive already.  Your goal is to import the data into an R data frame or tibble.
+This one is probably straightforward if your data set comes from your own research and lives on your local hard drive already. Your goal is to import the data into an R data frame or tibble.
 
 ## Describe the Data Set
 
-Before you start "Communicating with Data", you need to have a clear understanding of the data yourself.  This begins with a thorough but concise description of your data set.
+Before you start "Communicating with Data", you need to have a clear understanding of the data yourself. This begins with a thorough but concise description of your data set.
 
 ### Data Provenance
 
-Trace the origins of your data set from collection to analysis.  Consider the following steps:
+Trace the origins of your data set from collection to analysis. Consider the following steps:
 
 #### Data Collection
 
@@ -60,12 +60,11 @@ How were the subjects selected (or rejected)?
 
 How were the measurements obtained?
 
-
 #### Data Preparation
 
-Document the data cleaning phase of your analysis pipeline.  Consider the following steps:
+Document the data cleaning phase of your analysis pipeline. Consider the following steps:
 
-Were any cases or data points excluded?  What was the justification for exclusion?
+Were any cases or data points excluded? What was the justification for exclusion?
 
 How are missing values identified and treated?
 
@@ -73,18 +72,14 @@ Document any transformations or creation of derived attributes or variables.
 
 Document any aggregations, summarizations, etc.
 
-Document any joins of multiple data sets. 
-
+Document any joins of multiple data sets.
 
 ### Describe the Variables
 
-Create a Data Dictionary that lists the variable names and a description of each.  Include in the description the units and any encodings.
-
+Create a Data Dictionary that lists the variable names and a description of each. Include in the description the units and any encodings.
 
 ### Summaries (if useful)
 
 Provide a simple table of summary statistics (or a graphical representation) for your data if you deem it useful.
-
-
 
 ## RESOURCES
