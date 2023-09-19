@@ -40,7 +40,7 @@ DAMdata <- read_excel("DAMdata.xlsx")
 library(knitr)
 invisible(library(kableExtra))
 
-kable(DAMdata, caption = "Table 1: Mosquito circadian activity") %>%
+kable(head(DAMdata), caption = "Table 1: Mosquito circadian activity") %>%
   kable_styling()
 ```
 
