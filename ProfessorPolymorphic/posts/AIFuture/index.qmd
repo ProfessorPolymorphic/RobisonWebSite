@@ -1,0 +1,303 @@
+---
+title: "Automation or Augmentation? AI and the Future of Work."
+
+subtitle: "I for one welcome our new robot overlords..."
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: true
+    preview-links: auto
+    css: styles.css
+    theme: [default, custom.scss]
+    footer: brobison@uidaho.edu
+author: "Barrie Robison"
+date: "2023-10-05"
+categories: [Presentation, AI, IIDS]
+
+image: "AIFuture.png"
+code-fold: true
+---
+
+## Intro
+
+## Task Automation - replacing human physical labor
+
+The value of human labor = production/cost.
+
+Force Multiplier -\> Doing more work with less effort Outsourcing -\> cheaper human labor
+
+Inputs -\> Human -\> Output
+
+![](us-employment-share2.jpg) ![](us-employment-sharebottom.png) \## Remaining job sectors
+
+1.  Place bound
+2.  Rely on human cognition
+
+Cognition is the "mental action or process of acquiring knowledge and understanding through thought, experience, and the senses".\[2\] It encompasses all aspects of intellectual functions and processes such as: perception, attention, thought, imagination, intelligence, the formation of knowledge, memory and working memory, judgment and evaluation, reasoning and computation, problem-solving and decision-making, comprehension and production of language. Cognitive processes use existing knowledge and discover new knowledge.
+
+![](humancognition.png) \## Human Cognitive Labor
+
+Input -\> Human -\> Output
+
+examples?
+
+Here is a contract and our contract guidelines. Review and redline.
+
+Does this Animal Care protocol conform to the guidelines?
+
+I have a fever and a cough. What is wrong with me?
+
+Gather data from these documents and summarize/analyze it.
+
+These things are more resistant to automation because their inputs are complex, unstructured, and highly variable.
+
+## Until Now
+
+Argument.
+
+Sources Venn.
+
+Technical
+
+https://www.youtube.com/@samwitteveenai
+
+Philosophical
+
+https://www.youtube.com/@4IR.David.Shapiro
+
+Consumer
+
+https://www.youtube.com/@mreflow
+
+https://www.futuretools.io
+
+## Timeline of AI
+
+[AI has a long history](https://www.analyticsvidhya.com/blog/2023/07/the-fascinating-evolution-of-generative-ai/){target="_blank"}
+
+[I'd rather have a graph](https://chat.openai.com/share/908127b8-fe2a-41c3-8989-961489ccfd66){target="_blank"}
+
+![](fulltimelinegraph.png)
+
+## The 2022 Inflection point
+
+![](recenttimeline.jpeg)
+
+## Generative AI
+
+Generative Artificial Intelligence describes a group of algorithms or models that can be used to create new content. Content can include text, code, images, video, audio, and simulations.
+
+Examples:
+
+ChatGPT: Generative Pretrained Transformer with a chat interface
+
+MidJourney: Text to Image
+
+an abstract representation of an unemployment line caused by the emergence of artificial general intelligence, glowing blue computational network, photorealistic, dark technology, dark academia
+
+KaiberAI: text to video
+
+A Dystopian cyberpunk future where humans battle against cybernetic abominations from the works of the Lovecraftian Cthulhu Mythos. in the style of Photo real, hyper-realistic, high dynamic range, rich colors, lifelike textures, 8K UHD, high color depth, Nikon D 850, Kodak Portra 400, Fujifilm XT
+
+Mubert: text to music.
+
+Hardtechno Dark John Carpenter Synth
+
+## Large Language Models
+
+https://www.nvidia.com/en-us/glossary/data-science/large-language-models/
+
+Why are Large Language Models Important? Historically, AI models had been focused on perception and understanding. However, large language models, which are trained on internet-scale datasets with hundreds of billions of parameters, have now unlocked an AI model's ability to generate human-like content. Models can read, write, code, draw, and create in a credible fashion and augment human creativity and improve productivity across industries to solve the world's toughest problems. The applications for these LLMs span across a plethora of use cases. For example, an AI system can learn the language of protein sequences to provide viable compounds that will help scientists develop groundbreaking, life-saving vaccines. Or computers can help humans do what they do best---be creative, communicate, and create. A writer suffering from writer's block can use a large language model to help spark their creativity. Or a software programmer can be more productive, leveraging LLMs to generate code based on natural language descriptions.
+
+## Basic Structure
+
+Input -\> Human -\> Output
+
+Prompt -\> Model -\> Response
+
+## Operations
+
+### Reductive
+
+Large amount of text and produce a smaller output.
+
+Input is larger than the output.
+
+### Transformative
+
+Transmute the input into a new format.
+
+Input and output are roughly the same size and/or meaning.
+
+### Generative
+
+Generate a large amount of text from a small set of instructions or data.
+
+Input is smaller than the output.
+
+## Reductive Operations
+
+Take a large amount of text and produce a smaller output.
+
+-   **Summarization:** Say the same thing with fewer words. Can use list, notes, executive summary.
+-   **Distillation:** Purify the underlying principles or facts. Remove all the noise, extract axioms, foundations, etc.
+-   **Extraction:** Retrieve specific kinds of information. Question answering, listing names, extracting dates, etc.
+-   **Characterizing:** Describe the content of the text. Describe either the text as a whole, or within the subject.
+-   **Analyzing:** Find patterns or evaluate against a framework. Structural analysis, rhetorical analysis, etc
+-   **Evaluation:** Measuring, grading, or judging the content. Grading papers, evaluating against morals
+-   **Critiquing:** Provide feedback within the context of the text. Provide recommendations for improvement
+
+## Transformation Operations
+
+-   **Transmute**: Transmute the input into another format. Input and output are roughly the same size and/or meaning.
+-   **Reformatting**: Change the presentation only.
+    -   Prose to screenplay, XML to JSON
+-   **Refactoring**: Achieve same results with more efficiency.
+    -   Say the same exact thing, but differently
+-   **Language Change**: Translate between languages.
+    -   English to Russian, C++ to Python
+-   **Restructuring**: Optimize structure for logical flow, etc.
+    -   Change order, add or remove structure
+-   **Modification**: Rewrite copy to achieve different intention.
+    -   Change tone, formality, diplomacy, style, etc
+-   **Clarification**: Make something more comprehensible.
+    -   Embellish or more clearly articulate
+
+## Generative Operations
+
+-   **Drafting**: Generate a draft of some kind of document.
+    -   Code, fiction, legal copy, KB, science, storytelling
+-   **Planning**: Given parameters, come up with plans.
+    -   Actions, projects, objectives, missions, constraints, context.
+-   **Brainstorming**: Use imagine to list out possibilities.
+    -   Ideation, exploration of possibilities, problem solving, hypothesizing
+-   **Amplification**: Articulate and explicate something further.
+    -   Expanding and expounding, riffing on stuff
+
+## Basic Structure
+
+Input -\> Model -\> Output
+
+Prompt -\> Model -\> Response
+
+### Prompt Details
+
+Size: Tokens Format: Text only? File uploads? .pdf, .csv, .json, .docx, .xlsx, .pptx, .jpg, .png, etc Quality: Prompt Engineering
+
+### Model Details
+
+Size Cost Security Context Window Input Types Training Data Interface Specificity/Flexibility License
+
+### Response Details
+
+Accuracy Consistency Creativity Size Format Specificity
+
+## Latent Content and Emergent Properties
+
+## Blooms Taxonomy
+
+A hierarchical model to classify educational learning objectives into varying complexity and specificity. Remembering: Recalling facts and concepts. Retrieval and regurgitation Understanding: Explaining ideas and concepts. Connecting words to meanings. Applying: Using information in new situations. Functional utility Analyzing: Drawing connections among ideas. Connecting the dots between concepts. Evaluating: Justifying a decision or action. Explication and articulation Creating: Producing new or original work. Generating something that did not previously exist.
+
+## Latent Content
+
+Knowledge, facts, concepts, and information that is "embedded" in the model and must be "activated" by correct prompting. Training Data: Latent content only originates from training data. World Knowledge: General facts and understanding of the world. Scientific Information: Embedded data on scientific principles. Cultural Knowledge: Information on cultures and social norms. Historical Knowledge: Data on past events and figures. Languages: Language structures, vocabulary, and syntax.
+
+## Emergent Capabilities
+
+Increasingly large models have "emergent" capabilities that are not explicitly in the training data. Theory of Mind: Understanding the content of minds. It's read enough Reddit to understand how humans think. Implied Cognition: Thinking with the right prompting. Ability to "think" required to accurately predict next token. Logical Reasoning: Inductive and deductive reasoning. Triangulating principles based on observations, etc In-Context Learning: Use information not in training. Quickly adopt and apply truly novel information
+
+## Hallucination
+
+Hallucination is the same cognitive behavior as creativity, differing only in recognition of its fictitious nature. Recognition: The key difference lies in acknowledging the fictitious element. Cognitive Behavior: Both involve similar mental processes for generating ideas. Fictitious vs Real: How the output is perceived or utilized. Creative Applications: Hallucinations can be channeled into artistic or innovative endeavors. Context-Dependent: The value or risk depends on the context in which it occurs.
+
+## Applying this in the workplace
+
+## Data-Centric Model
+
+1.  Treat all business processes and tasks as information problems
+
+```{=html}
+<!-- -->
+```
+a.  You have various information needs for each process or task
+b.  Information comes from various sources
+c.  You perform different transformations on the information
+
+```{=html}
+<!-- -->
+```
+2.  Information, Thy God
+
+```{=html}
+<!-- -->
+```
+a.  Data is the new oil
+b.  AI is just a tool to work on data and information
+c.  Keep it all
+
+```{=html}
+<!-- -->
+```
+3.  Types of Transformations
+
+```{=html}
+<!-- -->
+```
+a.  Shrinking: Summarization, extraction, classification
+b.  Translation: Changing from one format to another
+c.  Expanding: Brainstorming, synthesizing, drafting
+
+## Human Cognitive Labor
+
+Inputs -\> Human -\> Outputs
+
+Inputs: Email, phonecall, document, spreadsheet, graph, etc...
+
+Human -\> word, excel, email, powerpoint, etc
+
+Outputs: an invoice? structured data? an email? a spreadsheet? a graph?
+
+Interface: Where does this go? How do you know it is accurate?
+
+## Assembly Lines
+
+Think of all business tasks and work products as moving along an assembly line 1. Inputs a. Where do work items come from? b. Email, calls, bills, API calls? 2. Stations a. Who does what to the work item? b. What tools, data, information, and transformations are needed at each station? 3. Interfaces a. When is a work item handed off to the next station? b. Is it inside or outside the business? c. How do you know its ready? 4. Outputs a. Where does the work item go? What does it look like? b. A bill gets paid, a customer gets served, etc
+
+## Examples (Reductive only)
+
+## Award Letter (Extraction)
+
+## PDF Grey Literature (Extraction)
+
+## Contract Review (Evaluation)
+
+## Concerns
+
+## AGI
+
+## Resources
+
+https://snorkel.ai/large-language-models-llms/
+
+https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america
+
+https://thehill.com/opinion/congress-blog/3913530-artificial-intelligence-is-not-going-to-take-all-our-jobs/
+
+https://arxiv.org/abs/2303.10130
+
+https://www.analyticsvidhya.com/blog/2023/07/the-fascinating-evolution-of-generative-ai/
+
+https://kyleake.medium.com/data-behind-the-large-language-models-llm-gpt-and-beyond-8b34f508b5de
+
+https://arxiv.org/pdf/2303.08774.pdf
+
+https://www.fiddler.ai/blog/the-missing-link-in-generative-aimonit
+
+https://www.fiddler.ai/blog/the-missing-link-in-generative-ai
+
+https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-generative-ai
+
+https://www.nvidia.com/en-us/glossary/data-science/large-language-models/
+
+https://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for/

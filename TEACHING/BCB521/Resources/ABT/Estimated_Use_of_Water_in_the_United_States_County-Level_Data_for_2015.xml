@@ -1,0 +1,2025 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Dieter, C.A.</origin>
+        <origin>Linsey, K.S.</origin>
+        <origin>Caldwell, R.R.</origin>
+        <origin>Harris, M.A.</origin>
+        <origin>Ivahnenko, T.I.</origin>
+        <origin>Lovelace, J.K.</origin>
+        <origin>Maupin, M.A.</origin>
+        <origin>Barber, N.L.</origin>
+        <pubdate>2018</pubdate>
+        <title>Estimated Use of Water in the United States County-Level Data for 2015</title>
+        <geoform>comma-separated values (.csv) file and Microsoft Excel 2013 (.xlsx) file</geoform>
+        <pubinfo>
+          <pubplace>Reston, VA</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+        <onlink>https://doi.org/10.5066/F7TB15V5</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>Cheryl A. Dieter</origin>
+            <origin>Molly A. Maupin</origin>
+            <origin>Rodney R. Caldwell</origin>
+            <origin>Melissa A. Harris</origin>
+            <origin>Tamara I. Ivahnenko</origin>
+            <origin>John K. Lovelace</origin>
+            <origin>Nancy L. Barber</origin>
+            <origin>Kristin S. Linsey</origin>
+            <pubdate>2018</pubdate>
+            <title>Estimated Use of Water in the United States in 2015</title>
+            <geoform>USGS Circular 1441</geoform>
+            <pubinfo>
+              <pubplace>Reston, VA</pubplace>
+              <publish>USGS</publish>
+            </pubinfo>
+            <onlink>https://doi.org/10.3133/cir1441</onlink>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This dataset contains water-use estimates for 2015 that are aggregated to the county level in the United States.  The U.S. Geological Survey's (USGS's) National Water Use Science Project is responsible for compiling and disseminating the Nation's water-use data.  Working in cooperation with local, State, and Federal agencies, the USGS has published an estimate of water use in the United States every 5 years, beginning in 1950.  Water-use estimates aggregated to the State level are presented in USGS Circular 1441, "Estimated Use of Water in the United States in 2015" (Dieter and others, 2018). This dataset contains the county-level water-use data that support the state-level estimates in Dieter and others 2018.  This dataset contains data for public supply, domestic, irrigation, thermoelectric power, industrial, mining, livestock, and aquaculture water-use categories.
+
+First posted September 28, 2017, ver. 1.0
+Revised June 19, 2018, ver. 2.0
+
+Version 2.0:  This version of the dataset contains total population data and water-use estimates for 2015 for the following categories:  Public supply, domestic, irrigation, thermoelectric power, industrial, mining, livestock, and aquaculture.  Data are aggregated to the county level.  A value of "--" denotes that values were not estimated for an optional attribute.  Some values in the public supply and domestic categories have been updated from those found in version 1.0 of this dataset.
+
+Version 1.0:  This version of the dataset contains total population data and water-use estimates for the public supply and domestic categories for 2015 that are aggregated to the county level in the United States.  A "--" in the attributes "PS-GWPop" or "PS-SWPop" denotes that values were not estimated for an optional attribute.  All other occurrences of "--" denote data for an attribute in a water-use category that has not yet been released.  Version 1.0 data are available upon request.</abstract>
+      <purpose>The data were compiled as part of the "Estimated Use of Water in the United States" series of U.S. Geological Survey (USGS) Circular reports that have been published every 5 years since 1950.  Estimates of withdrawals enable the depiction of trends in total water use for the Nation among different geographic areas, categories of use, and sources over time.</purpose>
+      <supplinf>Version 2.0:  This version of the dataset contains total population data and water-use estimates for 2015 for the following categories:  Public supply, domestic, irrigation, thermoelectric power, industrial, mining, livestock, and aquaculture.  Data are aggregated to the county level.  A value of "--" denotes that values were not estimated for an optional attribute.  Some values in the public supply and domestic categories have been updated from those found in version 1.0 of this dataset. 
+
+Version 1.0:  This version of the dataset contains Total Population data and water-use estimates for the Public Supply and Domestic categories for 2015 that are aggregated to the county level in the United States.  A "--" in the attributes "PS-GWPop" or "PS-SWPop" denotes that values were not estimated for an optional attribute.  All other occurrences of "--" denote data for an attribute in a water-use category that has not yet been released.</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>2015</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-178.21655273438</westbc>
+        <eastbc>-64.270019532291</eastbc>
+        <northbc>72.0974322465</northbc>
+        <southbc>16.709443878174</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>USGS Thesaurus</themekt>
+        <themekey>water use</themekey>
+        <themekey>self-supplied water use</themekey>
+        <themekey>reclaimed wastewater</themekey>
+        <themekey>consumptive use</themekey>
+        <themekey>public supply</themekey>
+        <themekey>public supply water use</themekey>
+        <themekey>domestic</themekey>
+        <themekey>domestic water use</themekey>
+        <themekey>irrigation</themekey>
+        <themekey>irrigation water use</themekey>
+        <themekey>livestock</themekey>
+        <themekey>livestock water use</themekey>
+        <themekey>aquaculture</themekey>
+        <themekey>aquaculture water use</themekey>
+        <themekey>industrial</themekey>
+        <themekey>industrial water use</themekey>
+        <themekey>mining</themekey>
+        <themekey>mining water use</themekey>
+        <themekey>thermoelectric power generation</themekey>
+        <themekey>thermoelectric power generation water use</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:5af3311be4b0da30c1b245d8</themekey>
+      </theme>
+      <place>
+        <placekt>Geographic Names Information System</placekt>
+        <placekey>United States</placekey>
+      </place>
+    </keywords>
+    <accconst>none</accconst>
+    <useconst>none</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Cheryl A Dieter</cntper>
+          <cntorg>Northeast Region</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>5522 Research Park Drive</address>
+          <city>Baltimore</city>
+          <state>MD</state>
+          <postal>21228</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>443-498-5537</cntvoice>
+        <cntemail>cadieter@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <browse>
+      <browsen>https://www.sciencebase.gov/catalog/file/get/5af3311be4b0da30c1b245d8?f=__disk__e0%2Fe9%2F8d%2Fe0e98d098a85bf117356d9c7f7471dae1dc765cd</browsen>
+      <browsed>Thumbnail image of state and county boundaries in the United States for 2015.</browsed>
+      <browset>PNG</browset>
+    </browse>
+    <crossref>
+      <citeinfo>
+        <origin>Bradley, M.W., comp.</origin>
+        <pubdate>2017</pubdate>
+        <title>Guidelines for preparation of State water-use estimates for 2015</title>
+        <pubinfo>
+          <pubplace>Reston, VA</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+        <onlink>https://doi.org/10.3133/ofr20171029</onlink>
+      </citeinfo>
+    </crossref>
+    <crossref>
+      <citeinfo>
+        <origin>Dieter and others</origin>
+        <pubdate>2018</pubdate>
+        <title>Estimated use of water in the United States in 2015</title>
+        <pubinfo>
+          <pubplace>Reston, Virginia</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+        <onlink>https://doi.org/10.3133/cir1441</onlink>
+      </citeinfo>
+    </crossref>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>No formal attribute accuracy tests were conducted</attraccr>
+    </attracc>
+    <logic>No formal logical accuracy tests were conducted</logic>
+    <complete>Version 2.0:  Dataset is considered complete for the information presented, as described in the abstract.  Users are advised to read the rest of the metadata record carefully for additional details. 
+
+Version 1.0:  The data provided in version 1.0 of this dataset include Total Population and water-use information for the Public Supply and Domestic categories only.  A "--" in the attributes "PS-GWPop" or "PS-SWPop" denotes that values were not estimated for an optional attribute.  All other occurrences of "--" denote data for an attribute in a water-use category which has not yet been released.  This dataset is preliminary in that subsequent versions of this data release will include data values for water-use categories that are not currently available for release (Industrial, Mining, Livestock, Aquaculture, Irrigation and Thermoelectric).  Each version of this data release will contain metadata about attributes for all water-use categories.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>No formal positional accuracy tests were conducted</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>No formal positional accuracy tests were conducted</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <procstep>
+        <procdesc>USGS personnel compiled county-level water-use data for each State according to the guidelines established in Bradley, 2017 (USGS Open-File Report 2017-1029, "Guidelines for Preparation of State Water-Use Estimates for 2015").  The data were reviewed, revised as needed, and approved by USGS Regional Water-Use Specialists.  The county-level data are stored in the USGS National Water Information System (NWIS) Aggregate Water-Use Data System (AWUDS) database.  Please refer to Bradley, 2017, for additional information about water-use terminology.</procdesc>
+        <procdate>20180326</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <indspref>County and county-equivalent names from the Geographic Names Index System (GNIS).</indspref>
+  </spdoinfo>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>usco2015v2.0.csv and usco2015v2.0.xlsx</enttypl>
+        <enttypd>2015 water use information compiled for the United States at the county or county-equivalent level</enttypd>
+        <enttypds>U.S. Geological Survey water-use project personnel in the United States</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>STATE</attrlabl>
+        <attrdef>United States postal abbreviation for one of the 50 States, the District of Columbia, Puerto Rico, or the U.S. Virgin Islands.</attrdef>
+        <attrdefs>United States Postal Service</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>United States Postal Service two-letter state and possession abbreviations</codesetn>
+            <codesets>https://pe.usps.com/text/pub28/28apb.htm</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>STATEFIPS</attrlabl>
+        <attrdef>Federal Information Processing Standard (FIPS) code for one of the 50 States, the District of Columbia, Puerto Rico, or the U.S. Virgin Islands.</attrdef>
+        <attrdefs>Federal Information Processing Standards</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>Federal Information Processing Standard State and State Equivalent Codes</codesetn>
+            <codesets>https://www.census.gov/geo/reference/ansi_statetables.html</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY</attrlabl>
+        <attrdef>Name of county or county equivalent</attrdef>
+        <attrdefs>Federal Information Processing Standards</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>Federal Information Processing Standard County and County Equivalent Codes</codesetn>
+            <codesets>https://www.census.gov/geo/reference/codes/cou.html and https://www.census.gov/geo/reference/county-changes.html</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>COUNTYFIPS</attrlabl>
+        <attrdef>Federal Information Processing Standard (FIPS) county or county equivalent code</attrdef>
+        <attrdefs>Federal Information Processing Standards</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>Federal Information Processing Standard County and County Equivalent Codes</codesetn>
+            <codesets>https://www.census.gov/geo/reference/codes/cou.html and https://www.census.gov/geo/reference/county-changes.html</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FIPS</attrlabl>
+        <attrdef>Concatenation of STATEFIPS and COUNTYFIPS attributes</attrdef>
+        <attrdefs>Federal Information Processing Standards</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>Federal Information Processing Standard County and County Equivalent Codes</codesetn>
+            <codesets>https://www.census.gov/geo/reference/ansi_statetables.html, https://www.census.gov/geo/reference/codes/cou.html, and https://www.census.gov/geo/reference/county-changes.html</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>YEAR</attrlabl>
+        <attrdef>The year which the data represent.</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>2015</edomv>
+            <edomvd>The data represent values for the year 2015.</edomvd>
+            <edomvds>U.S. Geological Survey</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TP-TotPop</attrlabl>
+        <attrdef>Total population of area, in thousands</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.089</rdommin>
+            <rdommax>10170.292</rdommax>
+            <attrunit>count of people, in thousands</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PS-GWPop</attrlabl>
+        <attrdef>Public Supply, population served by groundwater, in thousands</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2628.745</rdommax>
+            <attrunit>count of people, in thousands</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PS-SWPop</attrlabl>
+        <attrdef>Public Supply, population served by surface water, in thousands</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>5128.317</rdommax>
+            <attrunit>count of people, in thousands</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PS-TOPop</attrlabl>
+        <attrdef>Public Supply, total population served, in thousands</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>10139.981</rdommax>
+            <attrunit>count of people, in thousands</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PS-WGWFr</attrlabl>
+        <attrdef>Public Supply,  groundwater withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>494.79</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PS-WGWSa</attrlabl>
+        <attrdef>Public Supply, groundwater withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>27.62</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PS-WGWTo</attrlabl>
+        <attrdef>Public Supply, groundwater withdrawals, total, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>495.49</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PS-WSWFr</attrlabl>
+        <attrdef>Public Supply, surface-water withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>824.87</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PS-WSWSa</attrlabl>
+        <attrdef>Public Supply, surface-water withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1.94</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PS-WSWTo</attrlabl>
+        <attrdef>Public Supply, surface-water withdrawals, total, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>824.87</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PS-WFrTo</attrlabl>
+        <attrdef>Public Supply, total withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1255.74</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PS-WSaTo</attrlabl>
+        <attrdef>Public Supply, total withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>27.62</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PS-Wtotl</attrlabl>
+        <attrdef>Public Supply, total withdrawals, total (fresh+saline), in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1256.44</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DO-SSPop</attrlabl>
+        <attrdef>Domestic, self-supplied population, in thousands</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>277.375</rdommax>
+            <attrunit>count of people, in thousands</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DO-WGWFr</attrlabl>
+        <attrdef>Domestic, self-supplied groundwater withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>22.19</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DO-WSWFr</attrlabl>
+        <attrdef>Domestic, self-supplied surface-water withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>7.44</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DO-WFrTo</attrlabl>
+        <attrdef>Domestic, total self-supplied withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>22.19</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DO-SSPCp</attrlabl>
+        <attrdef>Domestic, self-supplied per capita use, in gal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>911</rdommax>
+            <attrunit>gallons per day (gal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"N/A" denotes Not Applicable.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DO-PSDel</attrlabl>
+        <attrdef>Domestic, deliveries from Public Supply, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>817.88</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DO-PSPCp</attrlabl>
+        <attrdef>Domestic, publicly supplied per capita use, in gal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>2</rdommin>
+            <rdommax>1429</rdommax>
+            <attrunit>gallons per day (gal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"N/A" denotes Not Applicable.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DO-WDelv</attrlabl>
+        <attrdef>Domestic, total use (withdrawals + deliveries), in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.01</rdommin>
+            <rdommax>820.29</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IN-WGWFr</attrlabl>
+        <attrdef>Industrial, self-supplied groundwater withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>103.27</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IN-WGWSa</attrlabl>
+        <attrdef>Industrial, self-supplied groundwater withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>18.35</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IN-WGWTo</attrlabl>
+        <attrdef>Industrial, self-supplied groundwater withdrawals, total, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>103.27</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IN-WSWFr</attrlabl>
+        <attrdef>Industrial, self-supplied surface-water withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>1176.44</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IN-WSWSa</attrlabl>
+        <attrdef>Industrial, self-supplied surface-water withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>575.85</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IN-WSWTo</attrlabl>
+        <attrdef>Industrial, self-supplied surface-water withdrawals, total, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>1176.44</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IN-WFrTo</attrlabl>
+        <attrdef>Industrial, self-supplied total withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>1178.74</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IN-WSaTo</attrlabl>
+        <attrdef>Industrial, self-supplied total withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>576.02</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IN-Wtotl</attrlabl>
+        <attrdef>Industrial, self-supplied total withdrawals, total (fresh+saline), in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>1178.74</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IR-WGWFr</attrlabl>
+        <attrdef>Irrigation, groundwater withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>1485.87</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IR-WSWFr</attrlabl>
+        <attrdef>Irrigation, surface-water withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>988.75</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IR-WFrTo</attrlabl>
+        <attrdef>Irrigation, total withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>1850.34</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IR-RecWW</attrlabl>
+        <attrdef>Irrigation, reclaimed wastewater, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>83.78</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IR-CUsFr</attrlabl>
+        <attrdef>Irrigation, consumptive use, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>1349.93</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IR-IrSpr</attrlabl>
+        <attrdef>Irrigation, acres irrigated, sprinkler, in thousand acres</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>348.05</rdommax>
+            <attrunit>thousand acres</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IR-IrMic</attrlabl>
+        <attrdef>Irrigation, acres irrigated, microirrigation, in thousand acres</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>526.08</rdommax>
+            <attrunit>thousand acres</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IR-IrSur</attrlabl>
+        <attrdef>Irrigation, acres irrigated, surface (flood), in thousand acres</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>528.34</rdommax>
+            <attrunit>thousand acres</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IR-IrTot</attrlabl>
+        <attrdef>Irrigation, acres irrigated, total, in thousand acres</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>1116.48</rdommax>
+            <attrunit>thousand acres</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IC-WGWFr</attrlabl>
+        <attrdef>Irrigation-Crop, groundwater withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>1483.97</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IC-WSWFr</attrlabl>
+        <attrdef>Irrigation-Crop, surface-water withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>988.75</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IC-WFrTo</attrlabl>
+        <attrdef>Irrigation-Crop, total withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>1849.88</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IC-RecWW</attrlabl>
+        <attrdef>Irrigation, reclaimed wastewater, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>58.77</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IC-CUsFr</attrlabl>
+        <attrdef>Irrigation-Crop, consumptive use, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>1349.58</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IC-IrSpr</attrlabl>
+        <attrdef>Irrigation-Crop, acres irrigated, sprinkler, in thousand acres</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>309.30</rdommax>
+            <attrunit>thousand acres</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IC-IrMic</attrlabl>
+        <attrdef>Irrigation-Crop, acres irrigated, microirrigation, in thousand acres</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>526.08</rdommax>
+            <attrunit>thousand acres</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IC-IrSur</attrlabl>
+        <attrdef>Irrigation-Crop, acres irrigated, surface (flood), in thousand acres</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>528.34</rdommax>
+            <attrunit>thousand acres</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IC-IrTot</attrlabl>
+        <attrdef>Irrigation-Crop, acres irrigated, total, in thousand acres</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>1115.32</rdommax>
+            <attrunit>thousand acres</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IG-WGWFr</attrlabl>
+        <attrdef>Irrigation-Golf, groundwater withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>48.93</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IG-WSWFr</attrlabl>
+        <attrdef>Irrigation-Golf, surface-water withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>34.80</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IG-WFrTo</attrlabl>
+        <attrdef>Irrigation-Golf, total withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>83.78</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IG-RecWW</attrlabl>
+        <attrdef>Irrigation-Golf, reclaimed wastewater, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>25.01</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IG-CUsFr</attrlabl>
+        <attrdef>Irrigation-Golf, consumptive use, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>86.99</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IG-IrSpr</attrlabl>
+        <attrdef>Irrigation-Golf, acres irrigated, sprinkler, in thousand acres</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>18.23</rdommax>
+            <attrunit>thousand acres</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IG-IrMic</attrlabl>
+        <attrdef>Irrigation-Golf, acres irrigated, microirrigation, in thousand acres</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>0.21</rdommax>
+            <attrunit>thousand acres</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IG-IrSur</attrlabl>
+        <attrdef>Irrigation-Golf, acres irrigated, surface (flood), in thousand acres</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>0.30</rdommax>
+            <attrunit>thousand acres</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IG-IrTot</attrlabl>
+        <attrdef>Irrigation-Golf, acres irrigated, total, in thousand acres</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>18.23</rdommax>
+            <attrunit>thousand acres</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LI-WGWFr</attrlabl>
+        <attrdef>Livestock, groundwater withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>18.24</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LI-WSWFr</attrlabl>
+        <attrdef>Livestock, surface-water withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>23.23</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LI-WFrTo</attrlabl>
+        <attrdef>Livestock, total withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>41.47</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AQ-WGWFr</attrlabl>
+        <attrdef>Aquaculture, groundwater withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>137.09</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AQ-WGWSa</attrlabl>
+        <attrdef>Aquaculture, groundwater withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>0.00</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AQ-WGWTo</attrlabl>
+        <attrdef>Aquaculture, groundwater withdrawals, total, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>137.09</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AQ-WSWFr</attrlabl>
+        <attrdef>Aquaculture, surface-water withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>675.13</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AQ-WSWSa</attrlabl>
+        <attrdef>Aquaculture, surface-water withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>3.02</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AQ-WSWTo</attrlabl>
+        <attrdef>Aquaculture, surface-water withdrawals, total, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>675.13</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AQ-WFrTo</attrlabl>
+        <attrdef>Aquaculture, total withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>675.13</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AQ-WSaTo</attrlabl>
+        <attrdef>Aquaculture, total withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>3.02</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AQ-Wtotl</attrlabl>
+        <attrdef>Aquaculture, total withdrawals, total (fresh+saline), in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>675.13</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MI-WGWFr</attrlabl>
+        <attrdef>Mining, groundwater withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>77.37</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MI-WGWSa</attrlabl>
+        <attrdef>Mining, groundwater withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>107.30</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MI-WGWTo</attrlabl>
+        <attrdef>Mining, groundwater withdrawals, total, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>108.51</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MI-WSWFr</attrlabl>
+        <attrdef>Mining, surface-water withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>36.08</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MI-WSWSa</attrlabl>
+        <attrdef>Mining, surface-water withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>107.35</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MI-WSWTo</attrlabl>
+        <attrdef>Mining, surface-water withdrawals, total, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>107.35</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MI-WFrTo</attrlabl>
+        <attrdef>Mining, total withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>77.40</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MI-WSaTo</attrlabl>
+        <attrdef>Mining, total withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>131.37</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MI-Wtotl</attrlabl>
+        <attrdef>Mining, total withdrawals, total (fresh+saline), in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>131.37</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PT-WGWFr</attrlabl>
+        <attrdef>Thermoelectric, groundwater withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>24.49</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PT-WGWSa</attrlabl>
+        <attrdef>Thermoelectric, groundwater withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>46.84</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PT-WGWTo</attrlabl>
+        <attrdef>Thermoelectric, groundwater withdrawals, total, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>46.84</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PT-WSWFr</attrlabl>
+        <attrdef>Thermoelectric, surface-water withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>2850.13</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PT-WSWSa</attrlabl>
+        <attrdef>Thermoelectric, surface-water withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>3323.75</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PT-WSWTo</attrlabl>
+        <attrdef>Thermoelectric, surface-water withdrawals, total, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>3323.75</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PT-WFrTo</attrlabl>
+        <attrdef>Thermoelectric, total withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>2850.13</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PT-WSaTo</attrlabl>
+        <attrdef>Thermoelectric, total withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>3323.75</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PT-Wtotl</attrlabl>
+        <attrdef>Thermoelectric, total withdrawals, total (fresh+saline), in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>3324.17</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PT-RecWW</attrlabl>
+        <attrdef>Thermoelectric, reclaimed wastewater, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>67.30</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PT-PSDel</attrlabl>
+        <attrdef>Thermoelectric, deliveries from Public Supply, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>46.65</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PT-CUsFr</attrlabl>
+        <attrdef>Thermoelectric, total consumptive use, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>275.35</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PT-CUsSa</attrlabl>
+        <attrdef>Thermoelectric, total consumptive use, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>70.14</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PT-CUTot</attrlabl>
+        <attrdef>Thermoelectric, total consumptive use, total (fresh+saline), in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>275.35</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PT-Power</attrlabl>
+        <attrdef>Thermoelectric, power generated, in gigawatt-hours</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>58946.71</rdommax>
+            <attrunit>gigawatt-hours</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PO-WGWFr</attrlabl>
+        <attrdef>Thermoelectric once-through, groundwater withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>11.12</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PO-WGWSa</attrlabl>
+        <attrdef>Thermoelectric once-through, groundwater withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>27.46</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PO-WGWTo</attrlabl>
+        <attrdef>Thermoelectric once-through, groundwater withdrawals, total, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>27.46</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PO-WSWFr</attrlabl>
+        <attrdef>Thermoelectric once-through, surface-water withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>2850.13</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PO-WSWSa</attrlabl>
+        <attrdef>Thermoelectric once-through, surface-water withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>3323.75</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PO-WSWTo</attrlabl>
+        <attrdef>Thermoelectric once-through, surface-water withdrawals, total, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>3323.75</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PO-WFrTo</attrlabl>
+        <attrdef>Thermoelectric once-through, total withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>2850.13</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PO-WSaTo</attrlabl>
+        <attrdef>Thermoelectric once-through, total withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>3323.75</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PO-Wtotl</attrlabl>
+        <attrdef>Thermoelectric once-through, total withdrawals, total (fresh+saline), in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>3324.17</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PO-RecWW</attrlabl>
+        <attrdef>Thermoelectric once-through, reclaimed wastewater, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>4.11</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PO-PSDel</attrlabl>
+        <attrdef>Thermoelectric once-through, deliveries from Public Supply, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>45.68</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PO-CUsFr</attrlabl>
+        <attrdef>Thermoelectric once-through, total consumptive use, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>74.90</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PO-CUsSa</attrlabl>
+        <attrdef>Thermoelectric once-through, total consumptive use, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>33.24</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PO-CUTot</attrlabl>
+        <attrdef>Thermoelectric once-through, total consumptive use, total (fresh+saline), in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>74.90</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PO-Power</attrlabl>
+        <attrdef>Thermoelectric once-through, power generated, in gigawatt-hours</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>27669.69</rdommax>
+            <attrunit>gigawatt-hours</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PC-WGWFr</attrlabl>
+        <attrdef>Thermoelectric recirculating, groundwater withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>24.49</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PC-WGWSa</attrlabl>
+        <attrdef>Thermoelectric recirculating, groundwater withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>46.84</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PC-WGWTo</attrlabl>
+        <attrdef>Thermoelectric recirculating, groundwater withdrawals, total, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>46.84</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PC-WSWFr</attrlabl>
+        <attrdef>Thermoelectric recirculating, surface-water withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>609.61</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PC-WSWSa</attrlabl>
+        <attrdef>Thermoelectric recirculating, surface-water withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>375.23</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PC-WSWTo</attrlabl>
+        <attrdef>Thermoelectric recirculating, surface-water withdrawals, total, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>609.61</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PC-WFrTo</attrlabl>
+        <attrdef>Thermoelectric recirculating, total withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>609.61</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PC-WSaTo</attrlabl>
+        <attrdef>Thermoelectric recirculating, total withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>375.23</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PC-Wtotl</attrlabl>
+        <attrdef>Thermoelectric recirculating, total withdrawals, total (fresh+saline), in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>609.61</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PC-RecWW</attrlabl>
+        <attrdef>Thermoelectric recirculating, reclaimed wastewater, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>67.30</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PC-PSDel</attrlabl>
+        <attrdef>Thermoelectric recirculating, deliveries from Public Supply, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>26.57</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <udom>"--" denotes that values were not estimated for this optional attribute.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PC-CUsFr</attrlabl>
+        <attrdef>Thermoelectric recirculating, total consumptive use, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>275.35</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PC-CUsSa</attrlabl>
+        <attrdef>Thermoelectric recirculating, total consumptive use, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>41.79</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PC-CUTot</attrlabl>
+        <attrdef>Thermoelectric recirculating, total consumptive use, total (fresh+saline), in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>275.35</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PC-Power</attrlabl>
+        <attrdef>Thermoelectric recirculating, power generated, in gigawatt-hours</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>58946.71</rdommax>
+            <attrunit>gigawatt-hours</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TO-WGWFr</attrlabl>
+        <attrdef>Total groundwater withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>1620.33</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TO-WGWSa</attrlabl>
+        <attrdef>Total groundwater withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>108.00</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TO-WGWTo</attrlabl>
+        <attrdef>Total groundwater withdrawals, total (fresh+saline), in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>1722.57</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TO-WSWFr</attrlabl>
+        <attrdef>Total surface-water withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>2865.51</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TO-WSWSa</attrlabl>
+        <attrdef>Total surface-water withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>3323.75</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TO-WSWTo</attrlabl>
+        <attrdef>Total surface-water withdrawals, total (fresh+saline), in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>3323.79</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TO-WFrTo</attrlabl>
+        <attrdef>Total withdrawals, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>2873.04</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TO-WSaTo</attrlabl>
+        <attrdef>Total withdrawals, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>3323.75</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TO-Wtotl</attrlabl>
+        <attrdef>Total withdrawals, total (fresh+saline), in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>3331.36</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TO-CUsFrPartial</attrlabl>
+        <attrdef>Irrigation and Thermoelectric, total consumptive use, fresh, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>1362.70</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TO-CUsSaPartial</attrlabl>
+        <attrdef>Irrigation and Thermoelectric, total consumptive use, saline, in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>70.14</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TO-CUTotPartial</attrlabl>
+        <attrdef>Irrigation and Thermoelectric, total consumptive use, total (fresh+saline), in Mgal/d</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>1362.70</rdommax>
+            <attrunit>million gallons per day (Mgal/d)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntperp>
+          <cntper>ScienceBase</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Denver Federal Center, Building 810, MS 302</address>
+          <city>Lakewood</city>
+          <state>CO</state>
+          <postal>80228</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty.</distliab>
+    <techpreq>These data are available in both a comma-separated values (.csv) text file format and as a Microsoft Excel 2013 (.xlsx) file.  The user must have software capable of reading the Microsoft Excel 2013 file format to use the .xlsx file.</techpreq>
+  </distinfo>
+  <metainfo>
+    <metd>20200821</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Kristin S. Linsey</cntper>
+          <cntorg>USGS New York Water Science Center</cntorg>
+        </cntperp>
+        <cntpos>Hydrologist</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>425 Jordan Road</address>
+          <city>Troy</city>
+          <state>NY</state>
+          <postal>12180</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>1-518-285-5636</cntvoice>
+        <cntemail>kslinsey@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

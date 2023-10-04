@@ -1,0 +1,97 @@
+---
+title: "TUTORIAL 3 - Python"
+date: "2023-01-19"
+format:
+  html:
+    code-fold: true
+categories: [Tutorial, Quarto, Literate Programming, Python]
+jupyter: python3
+image: Pythonred.png
+---
+
+## IMPLEMENTING PYHTON IN QUARTO
+
+I relied heavily on the [Quarto documentation](https://quarto.org/docs/computations/python.html) for this tutorial.
+
+The basic things I learned were:
+
+1.  Install Python (again). I downloaded the newest version from the [Python website](https://www.python.org/downloads/).
+2.  Install the \`jupyter' package using the terminal:
+
+-   Windows: `py -m pip install jupyter`
+-   Mac: `python3 -m pip install jupyter`
+
+3.  Install the modules you need using the terminal (Mac examples below):
+
+-   `python3 -m pip install numpy`
+-   `python3 -m pip install matplotlib`
+
+After I did this, the code from the Quarto website example (below) seemed to work!
+
+## QUARTO EXAMPLE CODE
+
+For a demonstration of a line plot on a polar axis, see @fig-polar.
+
+```{python}
+from selenium import webdriver
+
+import pandas as pd
+
+
+```
+
+```{python}
+
+from selenium.webdriver.common.by import By
+from selenium.webdriver import Safari
+
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+wait = WebDriverWait(driver, 10)
+
+
+driver = Safari()
+driver.get("https://www.baseball-reference.com/teams/ATL/2023-playoff-odds.shtml")
+
+rows = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "tr[data-row]")))
+for row in rows:
+    date = row.find_element(By.CSS_SELECTOR, "th[data-stat='date_sim']").text
+    postseason = row.find_element(By.CSS_SELECTOR, "td[data-stat='ppr_postseason']").text
+    print(date, postseason)
+
+driver.quit()
+```
+```{python}
+
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+
+options = Options() 
+options.headless = True
+driver = webdriver.Chrome(options=options)
+
+driver.get("https://www.baseball-reference.com/teams/ATL/2023-playoff-odds.shtml")
+
+# Using the By class for finding elements
+table = driver.find_element(By.ID, 'expanded_standings_playoff_probs')
+rows = table.find_elements(By.TAG_NAME, 'tr')
+
+data = []
+for row in rows:
+    cells = row.find_elements(By.TAG_NAME, 'td')
+    row_data = {}
+    for cell in cells:
+        stat = cell.get_attribute('data-stat')
+        value = cell.text
+        row_data[stat] = value
+    data.append(row_data) 
+
+driver.quit()
+
+print(data)
+
+
+
+```

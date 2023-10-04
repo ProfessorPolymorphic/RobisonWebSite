@@ -1,0 +1,11 @@
+{
+  "hash": "b92fb2996b96fae69e7fa8f5957217ea",
+  "result": {
+    "markdown": "---\ntitle: TUTORIAL 3 - Python\ndate: '2023-01-19'\nformat:\n  html:\n    code-fold: true\ncategories:\n  - Tutorial\n  - Quarto\n  - Literate Programming\n  - Python\nimage: Pythonred.png\n---\n\n## IMPLEMENTING PYHTON IN QUARTO\n\nI relied heavily on the [Quarto documentation](https://quarto.org/docs/computations/python.html) for this tutorial.\n\nThe basic things I learned were:\n\n1.  Install Python (again). I downloaded the newest version from the [Python website](https://www.python.org/downloads/).\n2.  Install the `jupyter' package using the terminal:\n\n-   Windows: `py -m pip install jupyter`\n-   Mac: `python3 -m pip install jupyter`\n\n3.  Install the modules you need using the terminal (Mac examples below):\n\n-   `python3 -m pip install numpy`\n-   `python3 -m pip install matplotlib`\n\nAfter I did this, the code from the Quarto website example (below) seemed to work!\n\n## QUARTO EXAMPLE CODE\n\nFor a demonstration of a line plot on a polar axis, see @fig-polar.\n\n::: {.cell execution_count=1}\n``` {.python .cell-code}\nfrom selenium import webdriver\nfrom selenium.webdriver.common.keys import Keys\nimport pandas as pd\n\n```\n:::\n\n\n::: {.cell execution_count=2}\n``` {.python .cell-code}\noptions = webdriver.SafariOptions()\ndriver = webdriver.Safari(options=options)\n\ndef test_eight_components():\n    driver = webdriver.Chrome()\n\n    driver.get(\"https://www.selenium.dev/selenium/web/web-form.html\")\n\n    title = driver.title\n    assert title == \"Web form\"\n\n    driver.implicitly_wait(0.5)\n\n    text_box = driver.find_element(by=By.NAME, value=\"my-text\")\n    submit_button = driver.find_element(by=By.CSS_SELECTOR, value=\"button\")\n\n    text_box.send_keys(\"Selenium\")\n    submit_button.click()\n\n    message = driver.find_element(by=By.ID, value=\"message\")\n    value = message.text\n    assert value == \"Received!\"\n\n    driver.quit()\n```\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

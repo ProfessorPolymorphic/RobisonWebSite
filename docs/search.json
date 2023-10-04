@@ -2693,5 +2693,257 @@
     "title": "Professor Polymorphic",
     "section": "",
     "text": "“The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown”.\n– H.P. Lovecraft, Supernatural Horror in Literature\n\n\n\n\n\nHello! This BLOG is where I share my thoughts on how science informs horror fiction, and whether horror fiction can be used to at least help teach science, if not directly inform scientific research. The posts that appear here will vary in their focus. Some will directly address the intersection of horror and science, while some might focus primarily on either horror fiction or science concepts.\nMy basic premise is driven by the Lovecraft quote you see at the top of the screen. I find this compelling because I am a scientist, and science is one of two tools humanity has invented that pushes back against the unknown."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#abstract",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#abstract",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Abstract",
+    "text": "Abstract\nWill the emerging capabilities of Artificial Intelligence augment your productivity? Or is AI about to automate you out of a job? Intended for a non-technical audience, this seminar will explain the basic concepts of Generative Artificial Intelligence and how recent developments with Large Language Models such as Chat-GPT are poised to disrupt many sectors of the global economy. I’ll provide examples of how generative AI is being deployed in business, education, and other domains as a better, faster, and cheaper alternative to human cognitive labor. The seminar will close with the concept of Alignment and the the potential implications of Artificial General Intelligence, leaving time for discussion and questions."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#intro",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#intro",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Intro",
+    "text": "Intro"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#task-automation---replacing-human-physical-labor",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#task-automation---replacing-human-physical-labor",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Task Automation - replacing human physical labor",
+    "text": "Task Automation - replacing human physical labor\nThe value of human labor = production/cost.\nForce Multiplier -&gt; Doing more work with less effort Outsourcing -&gt; cheaper human labor\nInputs -&gt; Human -&gt; Output\n  ## Remaining job sectors\n\nPlace bound\nRely on human cognition\n\nCognition is the “mental action or process of acquiring knowledge and understanding through thought, experience, and the senses”.[2] It encompasses all aspects of intellectual functions and processes such as: perception, attention, thought, imagination, intelligence, the formation of knowledge, memory and working memory, judgment and evaluation, reasoning and computation, problem-solving and decision-making, comprehension and production of language. Cognitive processes use existing knowledge and discover new knowledge.\n ## Human Cognitive Labor\nInput -&gt; Human -&gt; Output\nexamples?\nHere is a contract and our contract guidelines. Review and redline.\nDoes this Animal Care protocol conform to the guidelines?\nI have a fever and a cough. What is wrong with me?\nGather data from these documents and summarize/analyze it.\nThese things are more resistant to automation because their inputs are complex, unstructured, and highly variable."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#the-value-of-human-cognition",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#the-value-of-human-cognition",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "The value of human Cognition",
+    "text": "The value of human Cognition\nCognition is the “mental action or process of acquiring knowledge and understanding through thought, experience, and the senses”.[2] It encompasses all aspects of intellectual functions and processes such as: perception, attention, thought, imagination, intelligence, the formation of knowledge, memory and working memory, judgment and evaluation, reasoning and computation, problem-solving and decision-making, comprehension and production of language. Cognitive processes use existing knowledge and discover new knowledge.\n ## Human Cognitive Labor\nInput -&gt; Human -&gt; Output\nexamples?\nHere is a contract and our contract guidelines. Review and redline.\nDoes this Animal Care protocol conform to the guidelines?\nI have a fever and a cough. What is wrong with me?\nGather data from these documents and summarize/analyze it."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#timeline-of-ai",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#timeline-of-ai",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Timeline of AI",
+    "text": "Timeline of AI\nAI has a long history\nI’d rather have a graph"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#the-2022-inflection-point",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#the-2022-inflection-point",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "The 2022 Inflection point",
+    "text": "The 2022 Inflection point"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#llms-gpt-definition",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#llms-gpt-definition",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "LLMs GPT definition",
+    "text": "LLMs GPT definition"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#basic-structure",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#basic-structure",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Basic Structure",
+    "text": "Basic Structure\nInput -&gt; Human -&gt; Output\nPrompt -&gt; Model -&gt; Response"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#operations",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#operations",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Operations",
+    "text": "Operations\nReductive\nLarge amount of text and produce a smaller output.\nInput is larger than the output.\nTransformative\nTransmute the input into a new format.\nInput and output are roughly the same size and/or meaning.\nGenerative\nGenerate a large amount of text from a small set of instructions or data.\nInput is smaller than the output."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#reductive-operations",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#reductive-operations",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Reductive Operations",
+    "text": "Reductive Operations\nTake a large amount of text and produce a smaller output.\n\nSummarization: Say the same thing with fewer words. Can use list, notes, executive summary.\nDistillation: Purify the underlying principles or facts. Remove all the noise, extract axioms, foundations, etc.\nExtraction: Retrieve specific kinds of information. Question answering, listing names, extracting dates, etc.\nCharacterizing: Describe the content of the text. Describe either the text as a whole, or within the subject.\nAnalyzing: Find patterns or evaluate against a framework. Structural analysis, rhetorical analysis, etc\nEvaluation: Measuring, grading, or judging the content. Grading papers, evaluating against morals\nCritiquing: Provide feedback within the context of the text. Provide recommendations for improvement"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#transformation-operations",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#transformation-operations",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Transformation Operations",
+    "text": "Transformation Operations\n\nTransmute: Transmute the input into another format. Input and output are roughly the same size and/or meaning.\nReformatting: Change the presentation only.\n\nProse to screenplay, XML to JSON\n\nRefactoring: Achieve same results with more efficiency.\n\nSay the same exact thing, but differently\n\nLanguage Change: Translate between languages.\n\nEnglish to Russian, C++ to Python\n\nRestructuring: Optimize structure for logical flow, etc.\n\nChange order, add or remove structure\n\nModification: Rewrite copy to achieve different intention.\n\nChange tone, formality, diplomacy, style, etc\n\nClarification: Make something more comprehensible.\n\nEmbellish or more clearly articulate"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#generative-operations",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#generative-operations",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Generative Operations",
+    "text": "Generative Operations\n\nDrafting: Generate a draft of some kind of document.\n\nCode, fiction, legal copy, KB, science, storytelling\n\nPlanning: Given parameters, come up with plans.\n\nActions, projects, objectives, missions, constraints, context.\n\nBrainstorming: Use imagine to list out possibilities.\n\nIdeation, exploration of possibilities, problem solving, hypothesizing\n\nAmplification: Articulate and explicate something further.\n\nExpanding and expounding, riffing on stuff"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#basic-structure-1",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#basic-structure-1",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Basic Structure",
+    "text": "Basic Structure\nInput -&gt; Model -&gt; Output\nPrompt -&gt; Model -&gt; Response\nPrompt Details\nSize: Tokens Format: Text only? File uploads? .pdf, .csv, .json, .docx, .xlsx, .pptx, .jpg, .png, etc Quality: Prompt Engineering\nModel Details\nSize Cost Security Context Window Input Types Training Data Interface Specificity/Flexibility License\nResponse Details\nAccuracy Consistency Creativity Size Format Specificity"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#latent-content-and-emergent-properties",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#latent-content-and-emergent-properties",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Latent Content and Emergent Properties",
+    "text": "Latent Content and Emergent Properties"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#blooms-taxonomy",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#blooms-taxonomy",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Blooms Taxonomy",
+    "text": "Blooms Taxonomy\nA hierarchical model to classify educational learning objectives into varying complexity and specificity. Remembering: Recalling facts and concepts. Retrieval and regurgitation Understanding: Explaining ideas and concepts. Connecting words to meanings. Applying: Using information in new situations. Functional utility Analyzing: Drawing connections among ideas. Connecting the dots between concepts. Evaluating: Justifying a decision or action. Explication and articulation Creating: Producing new or original work. Generating something that did not previously exist."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#latent-content",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#latent-content",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Latent Content",
+    "text": "Latent Content\nKnowledge, facts, concepts, and information that is “embedded” in the model and must be “activated” by correct prompting. Training Data: Latent content only originates from training data. World Knowledge: General facts and understanding of the world. Scientific Information: Embedded data on scientific principles. Cultural Knowledge: Information on cultures and social norms. Historical Knowledge: Data on past events and figures. Languages: Language structures, vocabulary, and syntax."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#emergent-capabilities",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#emergent-capabilities",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Emergent Capabilities",
+    "text": "Emergent Capabilities\nIncreasingly large models have “emergent” capabilities that are not explicitly in the training data. Theory of Mind: Understanding the content of minds. It’s read enough Reddit to understand how humans think. Implied Cognition: Thinking with the right prompting. Ability to “think” required to accurately predict next token. Logical Reasoning: Inductive and deductive reasoning. Triangulating principles based on observations, etc In-Context Learning: Use information not in training. Quickly adopt and apply truly novel information"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#hallucination",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#hallucination",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Hallucination",
+    "text": "Hallucination\nHallucination is the same cognitive behavior as creativity, differing only in recognition of its fictitious nature. Recognition: The key difference lies in acknowledging the fictitious element. Cognitive Behavior: Both involve similar mental processes for generating ideas. Fictitious vs Real: How the output is perceived or utilized. Creative Applications: Hallucinations can be channeled into artistic or innovative endeavors. Context-Dependent: The value or risk depends on the context in which it occurs."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#applying-this-in-the-workplace",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#applying-this-in-the-workplace",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Applying this in the workplace",
+    "text": "Applying this in the workplace"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#data-centric-model",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#data-centric-model",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Data-Centric Model",
+    "text": "Data-Centric Model\n\nTreat all business processes and tasks as information problems\n\n\nYou have various information needs for each process or task\nInformation comes from various sources\nYou perform different transformations on the information\n\n\nInformation, Thy God\n\n\nData is the new oil\nAI is just a tool to work on data and information\nKeep it all\n\n\nTypes of Transformations\n\n\nShrinking: Summarization, extraction, classification\nTranslation: Changing from one format to another\nExpanding: Brainstorming, synthesizing, drafting"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#human-cognitive-labor",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#human-cognitive-labor",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Human Cognitive Labor",
+    "text": "Human Cognitive Labor\nInputs -&gt; Human -&gt; Outputs\nInputs: Email, phonecall, document, spreadsheet, graph, etc…\nHuman -&gt; word, excel, email, powerpoint, etc\nOutputs: an invoice? structured data? an email? a spreadsheet? a graph?\nInterface: Where does this go? How do you know it is accurate?"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#assembly-lines",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#assembly-lines",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Assembly Lines",
+    "text": "Assembly Lines\nThink of all business tasks and work products as moving along an assembly line 1. Inputs a. Where do work items come from? b. Email, calls, bills, API calls? 2. Stations a. Who does what to the work item? b. What tools, data, information, and transformations are needed at each station? 3. Interfaces a. When is a work item handed off to the next station? b. Is it inside or outside the business? c. How do you know its ready? 4. Outputs a. Where does the work item go? What does it look like? b. A bill gets paid, a customer gets served, etc"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#examples-reductive-only",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#examples-reductive-only",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Examples (Reductive only)",
+    "text": "Examples (Reductive only)"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#award-letter-extraction",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#award-letter-extraction",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Award Letter (Extraction)",
+    "text": "Award Letter (Extraction)"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#pdf-grey-literature-extraction",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#pdf-grey-literature-extraction",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "PDF Grey Literature (Extraction)",
+    "text": "PDF Grey Literature (Extraction)"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#contract-review-evaluation",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#contract-review-evaluation",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Contract Review (Evaluation)",
+    "text": "Contract Review (Evaluation)"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#concerns",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#concerns",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Concerns",
+    "text": "Concerns"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#agi",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#agi",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "AGI",
+    "text": "AGI"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#resources",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#resources",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Resources",
+    "text": "Resources\nhttps://snorkel.ai/large-language-models-llms/\nhttps://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america\nhttps://thehill.com/opinion/congress-blog/3913530-artificial-intelligence-is-not-going-to-take-all-our-jobs/\nhttps://arxiv.org/abs/2303.10130\nhttps://www.analyticsvidhya.com/blog/2023/07/the-fascinating-evolution-of-generative-ai/\nhttps://kyleake.medium.com/data-behind-the-large-language-models-llm-gpt-and-beyond-8b34f508b5de\nhttps://arxiv.org/pdf/2303.08774.pdf\nhttps://www.fiddler.ai/blog/the-missing-link-in-generative-aimonit\nhttps://www.fiddler.ai/blog/the-missing-link-in-generative-ai\nhttps://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-generative-ai\nhttps://www.nvidia.com/en-us/glossary/data-science/large-language-models/\nhttps://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for/\n\n\nbrobison@uidaho.edu"
+  },
+  {
+    "objectID": "TEACHING/BCB521/Resources/ABT/index.html",
+    "href": "TEACHING/BCB521/Resources/ABT/index.html",
+    "title": "A simple framework for communication",
+    "section": "",
+    "text": "Let’s find a simpler data set about water!\nI went here\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(readxl)\n\n\nusage2015 &lt;- read.csv(\"usco2015v2.0.csv\", skip = 1)\ndatadictionary &lt;- read_excel(\"usco2015v2.0.xlsx\", sheet = \"DataDictionary\")"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "",
+    "text": "Will the emerging capabilities of Artificial Intelligence augment your productivity? Or is AI about to automate you out of a job? Intended for a non-technical audience, this seminar will explain the basic concepts of Generative Artificial Intelligence and how recent developments with Large Language Models such as Chat-GPT are poised to disrupt many sectors of the global economy. I’ll provide examples of how generative AI is being deployed in business, education, and other domains as a better, faster, and cheaper alternative to human cognitive labor. The seminar will close with the concept of Alignment and the the potential implications of Artificial General Intelligence, leaving time for discussion and questions."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#generative-ai",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#generative-ai",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Generative AI",
+    "text": "Generative AI\nGenerative Artificial Intelligence describes a group of algorithms or models that can be used to create new content. Content can include text, code, images, video, audio, and simulations.\nExamples:\nChatGPT: Generative Pretrained Transformer with a chat interface\nMidJourney: Text to Image\nan abstract representation of an unemployment line caused by the emergence of artificial general intelligence, glowing blue computational network, photorealistic, dark technology, dark academia\nKaiberAI: text to video\nA Dystopian cyberpunk future where humans battle against cybernetic abominations from the works of the Lovecraftian Cthulhu Mythos. in the style of Photo real, hyper-realistic, high dynamic range, rich colors, lifelike textures, 8K UHD, high color depth, Nikon D 850, Kodak Portra 400, Fujifilm XT\nMubert: text to music.\nHardtechno Dark John Carpenter Synth"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#large-language-models",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#large-language-models",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Large Language Models",
+    "text": "Large Language Models\nhttps://www.nvidia.com/en-us/glossary/data-science/large-language-models/\nWhy are Large Language Models Important? Historically, AI models had been focused on perception and understanding. However, large language models, which are trained on internet-scale datasets with hundreds of billions of parameters, have now unlocked an AI model’s ability to generate human-like content. Models can read, write, code, draw, and create in a credible fashion and augment human creativity and improve productivity across industries to solve the world’s toughest problems. The applications for these LLMs span across a plethora of use cases. For example, an AI system can learn the language of protein sequences to provide viable compounds that will help scientists develop groundbreaking, life-saving vaccines. Or computers can help humans do what they do best—be creative, communicate, and create. A writer suffering from writer’s block can use a large language model to help spark their creativity. Or a software programmer can be more productive, leveraging LLMs to generate code based on natural language descriptions."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/WebScrape/index.html",
+    "href": "ProfessorPolymorphic/posts/WebScrape/index.html",
+    "title": "TUTORIAL 3 - Python",
+    "section": "",
+    "text": "I relied heavily on the Quarto documentation for this tutorial.\nThe basic things I learned were:\n\nInstall Python (again). I downloaded the newest version from the Python website.\nInstall the `jupyter’ package using the terminal:\n\n\nWindows: py -m pip install jupyter\nMac: python3 -m pip install jupyter\n\n\nInstall the modules you need using the terminal (Mac examples below):\n\n\npython3 -m pip install numpy\npython3 -m pip install matplotlib\n\nAfter I did this, the code from the Quarto website example (below) seemed to work!"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/WebScrape/index.html#quarto-example-code",
+    "href": "ProfessorPolymorphic/posts/WebScrape/index.html#quarto-example-code",
+    "title": "TUTORIAL 3 - Python",
+    "section": "QUARTO EXAMPLE CODE",
+    "text": "QUARTO EXAMPLE CODE\nFor a demonstration of a line plot on a polar axis, see ?@fig-polar.\n\n\nCode\nfrom selenium import webdriver\nfrom selenium.webdriver.common.keys import Keys\nimport pandas as pd\n\n\n\n\nCode\noptions = webdriver.SafariOptions()\ndriver = webdriver.Safari(options=options)\n\ndef test_eight_components():\n    driver = webdriver.Chrome()\n\n    driver.get(\"https://www.selenium.dev/selenium/web/web-form.html\")\n\n    title = driver.title\n    assert title == \"Web form\"\n\n    driver.implicitly_wait(0.5)\n\n    text_box = driver.find_element(by=By.NAME, value=\"my-text\")\n    submit_button = driver.find_element(by=By.CSS_SELECTOR, value=\"button\")\n\n    text_box.send_keys(\"Selenium\")\n    submit_button.click()\n\n    message = driver.find_element(by=By.ID, value=\"message\")\n    value = message.text\n    assert value == \"Received!\"\n\n    driver.quit()"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#until-now",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#until-now",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Until Now",
+    "text": "Until Now\nArgument.\nSources Venn.\nTechnical\nhttps://www.youtube.com/@samwitteveenai\nPhilosophical\nhttps://www.youtube.com/@4IR.David.Shapiro\nConsumer\nhttps://www.youtube.com/@mreflow\nhttps://www.futuretools.io"
   }
 ]
