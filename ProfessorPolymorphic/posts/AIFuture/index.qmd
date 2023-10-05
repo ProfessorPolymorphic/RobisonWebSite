@@ -11,6 +11,7 @@ format:
     css: styles.css
     theme: [default, custom.scss]
     footer: brobison@uidaho.edu
+    smaller: true
 author: "Barrie Robison"
 date: "2023-10-05"
 categories: [Presentation, AI, IIDS]
@@ -19,58 +20,114 @@ image: "AIFuture.png"
 code-fold: true
 ---
 
-## Intro
+## HISTORICAL PATTERNS
 
-## Task Automation - replacing human physical labor
+![](us-employment-share2.jpg)
 
-The value of human labor = production/cost.
+## AUTOMATION OF HUMAN PHYSICAL LABOR
 
-Force Multiplier -\> Doing more work with less effort Outsourcing -\> cheaper human labor
+### The value of human labor = production/cost.
 
-Inputs -\> Human -\> Output
+[Force Multiplier:]{.red} An external tool or resource that allows you to do more work with less effort.^[The term originally comes from the military context, but it has been widely adopted in business, technology, and other fields to describe a factor that dramatically amplifies the effectiveness of a group or system.]
 
-![](us-employment-share2.jpg) ![](us-employment-sharebottom.png) \## Remaining job sectors
+[Outsourcing:]{.red}  Outsourcing refers to the business practice of contracting out certain tasks or functions to third-party service providers instead of performing them in-house. One of the primary reasons companies outsource is to achieve cost reductions. Labor, infrastructure, or operational costs might be lower in another location or with a specialized provider.
 
-1.  Place bound
-2.  Rely on human cognition
 
-Cognition is the "mental action or process of acquiring knowledge and understanding through thought, experience, and the senses".\[2\] It encompasses all aspects of intellectual functions and processes such as: perception, attention, thought, imagination, intelligence, the formation of knowledge, memory and working memory, judgment and evaluation, reasoning and computation, problem-solving and decision-making, comprehension and production of language. Cognitive processes use existing knowledge and discover new knowledge.
+## A CLOSER LOOK {.scrollable}
 
-![](humancognition.png) \## Human Cognitive Labor
+![](us-employment-sharebottom.png) 
 
-Input -\> Human -\> Output
+### What are common features of the sectors that displaced Agriculuture and Manufacturing?
 
-examples?
+1.  The tasks are [Place Bound]{.red}.
+2.  The sectors feature a lot of [Knowledge Work]{.red}.
 
-Here is a contract and our contract guidelines. Review and redline.
+## KNOWLEDGE WORK? 
 
-Does this Animal Care protocol conform to the guidelines?
+Knowledge work ^["Knowledge Work" is a term coined by Peter Drucker in his 1959 book "Landmarks of Tomorrow."] involves jobs and tasks that are primarily information-based and [Cognitive]{.red} in nature :
 
-I have a fever and a cough. What is wrong with me?
+::: {.panel-tabset}
 
-Gather data from these documents and summarize/analyze it.
+### Characteristics
 
-These things are more resistant to automation because their inputs are complex, unstructured, and highly variable.
+1. **Intellectual Activity**: It involves thinking, analyzing, and processing information more than manual labor.
+2. **Non-routine**: Unlike many traditional jobs, knowledge work doesn't necessarily follow a set script or routine. It often involves problem-solving, decision-making, and creative thinking.
+3. **Information-based**: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.
+4. **Driven by Expertise**: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.
+5. **Autonomy**: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems. This autonomy is due to the non-routine nature of their tasks.
+6. **Continuous Learning**: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.
+7. **Outcome-focused**: The value of knowledge work is often measured by outcomes or results rather than the hours worked.
 
-## Until Now
+### Examples
 
-Argument.
+- Software developers
+- Managers
+- Analysts
+- Consultants
+- Designers
+- Scientists
+- Lawyers
+- Doctors
+- Educators
+:::
 
-Sources Venn.
 
-Technical
+## HUMAN COGNITION
 
-https://www.youtube.com/@samwitteveenai
+::: {.panel-tabset}
 
-Philosophical
+### Human Cognition
 
-https://www.youtube.com/@4IR.David.Shapiro
+![](humancognition.png) 
 
-Consumer
+### Knowledge Work
 
-https://www.youtube.com/@mreflow
+1. **Intellectual Activity**: It involves thinking, analyzing, and processing information more than manual labor.
+2. **Non-routine**: Unlike many traditional jobs, knowledge work doesn't necessarily follow a set script or routine. It often involves problem-solving, decision-making, and creative thinking.
+3. **Information-based**: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.
+4. **Driven by Expertise**: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.
+5. **Autonomy**: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems. This autonomy is due to the non-routine nature of their tasks.
+6. **Continuous Learning**: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.
+7. **Outcome-focused**: The value of knowledge work is often measured by outcomes or results rather than the hours worked.
 
-https://www.futuretools.io
+:::
+
+
+## HUMAN COGNITIVE LABOR^[Human cognitive labor refers to tasks and functions that require human intellectual processes, such as thinking, understanding, learning, and problem-solving. While physical labor is centered on manual and bodily tasks, cognitive labor emphasizes mental processes and the application of knowledge. ]
+
+
+**Aspects of human cognitive labor:**
+
+1. **Problem Solving**: Identifying complex issues and reviewing related information to develop and evaluate options and implement solutions.
+2. **Decision Making**: Considering the relative costs and benefits of potential actions to choose the most appropriate one.
+3. **Analysis**: Examining data or information and breaking it down to understand its structure, trends, or implications.
+4. **Learning and Adaptation**: Acquiring new knowledge and skills and adjusting to new information or circumstances.
+5. **Creativity**: Generating new ideas, concepts, or solutions.
+6. **Planning**: Determining how a system or operation should work and how changes in conditions, operations, and environments will affect outcomes.
+7. **Communication**: Conveying information effectively, both verbally and in writing. This also includes the ability to listen and understand information from others.
+8. **Emotional Intelligence**: Recognizing, understanding, and managing our own emotions while also recognizing, understanding, and influencing the emotions of others.
+
+## SOME EXAMPLES
+
+- Here is a contract and our contract guidelines. Review and red-line the contract.
+
+- Does this Animal Care protocol conform to the federal guidelines?
+
+- I have a fever and a cough. What is wrong with me?
+
+- Gather data from these documents and summarize/analyze it.
+
+- How does this job applicant align with the needs described in our job description?
+
+**These [tasks]{.blue} are difficult to automate because their inputs are complex, unstructured, and highly variable.  They require human Cognitive Labor.**
+
+## AUTOMATION OF COGNITIVE LABOR
+
+"The future is already here — it's just not very evenly distributed."
+
+- William Gibson ^[He made this observation to highlight how technological advancements and innovations might be present in certain places or among specific groups, but they haven't yet permeated all levels of society or all geographic areas. The quote encapsulates the idea that the future, in many ways, exists in pockets in the present, but its widespread adoption and distribution are yet to occur.]
+
+
 
 ## Timeline of AI
 
@@ -87,6 +144,8 @@ https://www.futuretools.io
 ## Generative AI
 
 Generative Artificial Intelligence describes a group of algorithms or models that can be used to create new content. Content can include text, code, images, video, audio, and simulations.
+
+![](AIFuture.mp4)
 
 Examples:
 
@@ -217,33 +276,28 @@ Hallucination is the same cognitive behavior as creativity, differing only in re
 
 1.  Treat all business processes and tasks as information problems
 
-```{=html}
 <!-- -->
-```
+
 a.  You have various information needs for each process or task
 b.  Information comes from various sources
 c.  You perform different transformations on the information
 
-```{=html}
 <!-- -->
-```
+
 2.  Information, Thy God
 
-```{=html}
 <!-- -->
-```
+
 a.  Data is the new oil
 b.  AI is just a tool to work on data and information
 c.  Keep it all
 
-```{=html}
 <!-- -->
-```
+
 3.  Types of Transformations
 
-```{=html}
 <!-- -->
-```
+
 a.  Shrinking: Summarization, extraction, classification
 b.  Translation: Changing from one format to another
 c.  Expanding: Brainstorming, synthesizing, drafting
@@ -277,6 +331,25 @@ Think of all business tasks and work products as moving along an assembly line 1
 ## AGI
 
 ## Resources
+
+
+
+Sources Venn.
+
+Technical
+
+https://www.youtube.com/@samwitteveenai
+
+Philosophical
+
+https://www.youtube.com/@4IR.David.Shapiro
+
+Consumer
+
+https://www.youtube.com/@mreflow
+
+https://www.futuretools.io
+
 
 https://snorkel.ai/large-language-models-llms/
 
