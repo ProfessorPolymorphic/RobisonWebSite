@@ -39,28 +39,32 @@ code-fold: true
 
 :::: {.columns}
 
-::: {.column width=70%}
+::: {.column width="70%"}
 
 ![](us-employment-sharebottom.png) 
 
 :::
 
-::: {.column width=30%}
+::: {.column width="30%"}
 
-
+::: {.incremental}
 1.  The tasks are [Place Bound]{.red}.
 2.  The sectors feature a lot of [Knowledge Work]{.red}.
+:::
 
 :::
 
+::::
+
 ## KNOWLEDGE WORK? 
 
-Knowledge work ^["Knowledge Work" is a term coined by Peter Drucker in his 1959 book "Landmarks of Tomorrow."] involves jobs and tasks that are primarily information-based and [Cognitive]{.red} in nature :
+Knowledge work ^["Knowledge Work" is a term coined by Peter Drucker in his 1959 book "Landmarks of Tomorrow."] involves tasks that are information-based and [Cognitive]{.red} in nature :
 
-::: {.panel-tabset}
+:::: {.panel-tabset}
 
 ### Characteristics
 
+::: {.small}
 1. **Intellectual Activity**: It involves thinking, analyzing, and processing information more than manual labor.
 2. **Non-routine**: It doesn't necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.
 3. **Information-based**: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.
@@ -68,6 +72,8 @@ Knowledge work ^["Knowledge Work" is a term coined by Peter Drucker in his 1959 
 5. **Autonomy**: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems. 
 6. **Continuous Learning**: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.
 7. **Outcome-focused**: The value of knowledge work is often measured by outcomes or results rather than the hours worked.
+:::
+
 
 ### Examples
 
@@ -80,19 +86,21 @@ Knowledge work ^["Knowledge Work" is a term coined by Peter Drucker in his 1959 
 - Lawyers
 - Doctors
 - Educators
-:::
+
+::::
 
 
-## HUMAN COGNITION
+## HUMAN COGNITION 
 
-::: {.panel-tabset}
+:::: {.panel-tabset}
 
 ### Human Cognition
 
-![](humancognition.png) 
+![](humancognition.png){.absolute height="70%"}
 
 ### Knowledge Work
 
+::: {.small}
 1. **Intellectual Activity**: It involves thinking, analyzing, and processing information more than manual labor.
 2. **Non-routine**: It doesn't necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.
 3. **Information-based**: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.
@@ -100,14 +108,17 @@ Knowledge work ^["Knowledge Work" is a term coined by Peter Drucker in his 1959 
 5. **Autonomy**: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems. 
 6. **Continuous Learning**: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.
 7. **Outcome-focused**: The value of knowledge work is often measured by outcomes or results rather than the hours worked.
-
 :::
+
+::::
 
 
 ## HUMAN COGNITIVE LABOR^[Human cognitive labor refers to tasks and functions that require human intellectual processes, such as thinking, understanding, learning, and problem-solving. While physical labor is centered on manual and bodily tasks, cognitive labor emphasizes mental processes and the application of knowledge. ]
 
 
 **Aspects of human cognitive labor:**
+
+:::{.small}
 
 1. **Problem Solving**: Identifying complex issues and reviewing related information to develop and evaluate options and implement solutions.
 2. **Decision Making**: Considering the relative costs and benefits of potential actions to choose the most appropriate one.
@@ -117,6 +128,8 @@ Knowledge work ^["Knowledge Work" is a term coined by Peter Drucker in his 1959 
 6. **Planning**: Determining how a system or operation should work and how changes in conditions, operations, and environments will affect outcomes.
 7. **Communication**: Conveying information effectively, both verbally and in writing. This also includes the ability to listen and understand information from others.
 8. **Emotional Intelligence**: Recognizing, understanding, and managing our own emotions while also recognizing, understanding, and influencing the emotions of others.
+
+:::
 
 ## SOME EXAMPLES
 
@@ -140,21 +153,28 @@ Knowledge work ^["Knowledge Work" is a term coined by Peter Drucker in his 1959 
 
 ## ARTIFICIAL INTELLIGENCE
 
+Summarizing the history of AI and creating a visual timeline is an example of [Knowledge Work]{.red}.  It requires [Cognitive Labor]{.red} on my part.  Cognitive labor is hard.
 
-
-::: {.panel-tabset}
+:::: {.panel-tabset}
 
 ### History of AI
 
-[AI has a long history](https://www.analyticsvidhya.com/blog/2023/07/the-fascinating-evolution-of-generative-ai/){target="_blank"}
+[AI has a long and interesting history that I need to summarize...](https://www.analyticsvidhya.com/blog/2023/07/the-fascinating-evolution-of-generative-ai/){target="_blank"}
 
 ### Visual Timeline
 
 [I'd rather have a graph](https://chat.openai.com/share/908127b8-fe2a-41c3-8989-961489ccfd66){target="_blank"}
 
-![](fulltimelinegraph.png)
+::: {.incremental}
+
+1. Making a graph is hard.
+
+2. Except it isn't.. ![](fulltimelinegraph.png){.absolute right=0 bottom=50 height="70%"}
 
 :::
+
+
+::::
 
 
 ## 2022: A TIPPING POINT
@@ -167,7 +187,7 @@ Knowledge work ^["Knowledge Work" is a term coined by Peter Drucker in his 1959 
 
 :::: {.columns}
 
-::: {.column width="40%"}
+::: {.column width="40%" .small}
 
 **Examples:**
 
@@ -187,9 +207,11 @@ Hardtechno Dark John Carpenter Synth
 
 :::
 
-::: {column width="60%"}
+::: {.column width="60%"}
 
-![](AIFuture.mp4)
+
+
+![](AIFuture.mp4){.absolute .width="60%"}
 
 :::
 
@@ -203,7 +225,7 @@ A type of AI model designed to understand and generate human-like text.
 Nvidia (the company that makes GPUs) has great learning resources on AI.  [This one](https://www.nvidia.com/en-us/glossary/data-science/large-language-models/) is a great summary of the significance of LLMs
 :::
 
-::: {.panel-tabset}
+:::: {.panel-tabset}
 
 ### Key Characteristics
 
@@ -225,20 +247,26 @@ Nvidia (the company that makes GPUs) has great learning resources on AI.  [This 
 3. Can produce incorrect or nonsensical answers.
 4. Influenced by biases in training data.
 
+::::
+
 ## CAPABILITIES
+
+![](images/gptexamresults.jpg){.absolute height="80%"}
+
+
 ::: aside
 arXiv:2303.10130v5 [econ.GN] 21 Aug 2023
 :::
 
-![](/images/gptexamresults.jpg)
+
 
 ## TASKS ARE OPERATIONS
 
-Human Cognitive Tasks
+**Human Cognitive Tasks**
 
 Input  Human  Output
 
-LLM Operations
+**LLM Operations**
 
 Prompt  Model  Response
 
@@ -270,24 +298,30 @@ Input is smaller than the output.
 
 **Take a large amount of text and produce a smaller output.**
 
+:::{.small}
+
 -   **Summarization:** Say the same thing with fewer words. 
-    -Can use list, notes, executive summary.
+    - Can use list, notes, executive summary.
 -   **Distillation:** Purify the underlying principles or facts. 
-    -Remove all the noise, extract axioms, foundations, etc.
+    - Remove all the noise, extract axioms, foundations, etc.
 -   **Extraction:** Retrieve specific kinds of information. 
-    -Question answering, listing names, extracting dates, etc.
+    - Question answering, listing names, extracting dates, etc.
 -   **Characterizing:** Describe the content of the text. 
-    -Describe either the text as a whole, or within the subject.
+    - Describe either the text as a whole, or within the subject.
 -   **Analyzing:** Find patterns or evaluate against a framework. 
-    -Structural analysis, rhetorical analysis, etc
+    - Structural analysis, rhetorical analysis, etc
 -   **Evaluation:** Measuring, grading, or judging the content. 
-    -Grading papers, evaluating against morals
+    - Grading papers, evaluating against morals
 -   **Critiquing:** Provide feedback within the context of the text. 
-    -Provide recommendations for improvement
+    - Provide recommendations for improvement
+    
+:::
 
 ## Transformation Operations
 
  **Transmute the input into another format. Input and output are roughly the same size and/or meaning.**
+ 
+:::{.small}
  
 -   **Reformatting**: Change the presentation only.
     -   Prose to screenplay, XML to JSON
@@ -301,10 +335,15 @@ Input is smaller than the output.
     -   Change tone, formality, diplomacy, style, etc
 -   **Clarification**: Make something more comprehensible.
     -   Embellish or more clearly articulate
+    
+:::
+
 
 ## Generative Operations
 
 **Generate a large amount of text from a small set of instructions or data.**
+
+:::{.small}
 
 -   **Drafting**: Generate a draft of some kind of document.
     -   Code, fiction, legal copy, KB, science, storytelling
@@ -314,45 +353,47 @@ Input is smaller than the output.
     -   Ideation, exploration of possibilities, problem solving, hypothesizing
 -   **Amplification**: Articulate and explicate something further.
     -   Expanding and expounding, riffing on stuff
+    
+:::
 
 ## CRITICAL DETAILS
 
-::: {panel-tabset}
+::: {.panel-tabset}
 
 ### Prompt
 
 **What are the characteristics of your task?**
 
-Operation Type: Reductive, Transformative, or Generative?
-Size: [Tokens]{.red} How much information do you need to send to the model?
-Context: What other relevant information/data is required?  Where is it?
-Format: Text only? File uploads? .pdf, .csv, .json, .docx, .xlsx, .pptx, .jpg, .png, etc 
-Quality: [Prompt Engineering]{.red}
+- Operation Type: Reductive, Transformative, or Generative?
+- Size: [Tokens]{.red} How much information do you need to send to the model?
+- Context: What other relevant information/data is required?  Where is it?
+- Format: Text only? File uploads? .pdf, .csv, .json, .docx, .xlsx, .pptx, .jpg, .png, etc 
+- Quality: [Prompt Engineering]{.red}
 
 ### Model
 
 **There are a TON of different Models and they vary substantially.**
 
-Size
-Cost
-Security
-Context Window
-Input Types
-Training Data
-Type: Conversational Agent vs Task Oriented Agent
-Specificity/Flexibility
-License
+- Size
+- Cost
+- Security
+- Context Window
+- Input Types
+- Training Data
+- Type: Conversational Agent vs Task Oriented Agent
+- Specificity/Flexibility
+- License
 
 ### Response
 
 **How do evaluate the quality of the response?**
 
-Accuracy
-Consistency
-Creativity
-Size
-Format
-Specificity
+- Accuracy
+- Consistency
+- Creativity
+- Size
+- Format
+- Specificity
 
 :::
 
@@ -363,7 +404,7 @@ Specificity
 
 Latent content only originates from [Training Data]{.red}.
 
-Examples:
+**Examples:**
 
 - World Knowledge: General facts and understanding of the world. 
 - Scientific Information: Embedded data on scientific principles. 
@@ -373,7 +414,9 @@ Examples:
 
 ## EMERGENT CAPABILITIES
 
-The abilities of Large Language Models (LLMs) that arise as a result of their extensive training on vast datasets, even if those capabilities were not explicitly "taught" or "programmed" into the model. These capabilities emerge as a byproduct of the model's architecture and the sheer volume of data it's been exposed to.
+The abilities of Large Language Models (LLMs) that arise as a result of their extensive training on vast datasets, even if those capabilities were not explicitly "taught" or "programmed" into the model.
+
+:::{.small}
 
 1. **Unintended Abilities**: Emergent capabilities might lead the model to perform tasks it wasn't explicitly trained for. For example, an [LLM might be trained on general text but can still translate between languages]{.red}, write in different styles, or even generate code.
 
@@ -389,10 +432,13 @@ The abilities of Large Language Models (LLMs) that arise as a result of their ex
 
 7. **Limitations**: Despite their emergent capabilities, LLMs have limitations. They don't truly "understand" concepts in the way humans do, and their outputs are entirely based on patterns in the data they've seen.
 
+:::
 
 ## HALLUCINATION
 
 Instances where the model generates information that is not accurate, not based on its training data, or simply fabricated. Essentially, the model "hallucinates" details that aren't grounded in reality or the facts it has been trained on.
+
+:::{.small}
 
 1. **Origin of the Term**: The term "hallucination" is borrowed from human psychology, where it refers to perceiving things that aren't present in reality. When applied to LLMs, it captures the idea that the model sometimes produces outputs that aren't reflective of real facts or the content it was trained on.
   
@@ -404,11 +450,15 @@ Instances where the model generates information that is not accurate, not based 
   
 5. **Mitigation**: Efforts to mitigate hallucinations in LLMs include refining model architectures, improving training data, and employing post-training fine-tuning or validation processes. Additionally, user feedback and iterative development are crucial for identifying and reducing such issues.
 
+:::
+
 ## AUTOMATION OF COGNITIVE LABOR
 
 ### Tasks are Operations
 
 Complex job functions are often a series of tasks.  
+
+:::{.small}
 
 1.  Treat each task as an information problem.
     - You have various information needs for each process or task
@@ -426,47 +476,46 @@ Complex job functions are often a series of tasks.
 
 5. Evaluate the response(s) against data you trust.
 
+:::
+
 ## EXAMPLES
 
-## Award Letter (Extraction)
+### Award Letter (Extraction)
 
-## PDF Grey Literature (Extraction)
+I need to extract the information from this award letter and put it in our database.
 
-## Contract Review (Evaluation)
+### PDF Grey Literature (Extraction)
 
-## others
+I found this cool data report with a bunch of data that I need for my analysis.
 
-## Concerns
+### Contract Review (Evaluation)
+
+Does this contract adhere to our review criteria?
+
+### others
+
 
 ## AGI
 
+::: aside
+https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/
+:::
 
-## Latent Content and Emergent Properties
+![](images/Blooms-Taxonomy.jpg)
 
-## Blooms Taxonomy
 
-A hierarchical model to classify educational learning objectives into varying complexity and specificity. Remembering: Recalling facts and concepts. Retrieval and regurgitation Understanding: Explaining ideas and concepts. Connecting words to meanings. Applying: Using information in new situations. Functional utility Analyzing: Drawing connections among ideas. Connecting the dots between concepts. Evaluating: Justifying a decision or action. Explication and articulation Creating: Producing new or original work. Generating something that did not previously exist.
 
 ## Resources
 
-
-
-Sources Venn.
-
-Technical
+:::{.small}
 
 https://www.youtube.com/@samwitteveenai
 
-Philosophical
-
 https://www.youtube.com/@4IR.David.Shapiro
-
-Consumer
 
 https://www.youtube.com/@mreflow
 
 https://www.futuretools.io
-
 
 https://snorkel.ai/large-language-models-llms/
 
@@ -493,3 +542,5 @@ https://www.nvidia.com/en-us/glossary/data-science/large-language-models/
 https://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for/
 
 https://www.promptengineering.org/what-are-large-language-model-llm-agents/
+
+:::

@@ -2317,6 +2317,13 @@
     "text": "Learning new tools is hard. Plowing though the tomes of the Data Science Mythos is hard. Perhaps this tutorial will guide you through the mind shattering truths of… LITERATE PROGRAMMING. Keep in mind I recorded this for BCB 521 - Foundations of Data Visualization, so it contains references to a simple visualization exercise. Nevertheless, there are still some components in this video that are generally useful outside a stricly Viz oriented context."
   },
   {
+    "objectID": "TEACHING/BCB521/Resources/ABT/index.html",
+    "href": "TEACHING/BCB521/Resources/ABT/index.html",
+    "title": "A simple framework for communication",
+    "section": "",
+    "text": "Let’s find a simpler data set about water!\nI went here\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(readxl)\n\n\nusage2015 &lt;- read.csv(\"usco2015v2.0.csv\", skip = 1)\ndatadictionary &lt;- read_excel(\"usco2015v2.0.xlsx\", sheet = \"DataDictionary\")"
+  },
+  {
     "objectID": "TEACHING/BCB521/index.html",
     "href": "TEACHING/BCB521/index.html",
     "title": "BCB 521",
@@ -2625,11 +2632,186 @@
     "text": "SINGLE GENERATION PLOTS\n\n\nCode\nsinglegen &lt;- allfiles %&gt;%\n  filter(Generation == 5)\n\nsinglegrad &lt;- Gradientslong %&gt;%\n  filter(Generation == 3)\n\n\nggplot(singlegen, aes(x=Speed.Trait) )+\n  geom_histogram()+\n  facet_grid(reproduce~file)\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\nCode\nggplot(singlegen, aes(x=Turn.Rate.Trait) )+\n  geom_histogram()+\n  facet_grid(reproduce~file)\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\nCode\nggplot(singlegen, aes(x=Turn.Rate.Trait, y = Speed.Trait, color = reproduce))+\n  geom_point()+\n  facet_wrap(~file)"
   },
   {
-    "objectID": "ProfessorPolymorphic/posts/Viz_2Gen_Pedigree/index.html",
-    "href": "ProfessorPolymorphic/posts/Viz_2Gen_Pedigree/index.html",
-    "title": "VIZ EXPERIMENT 1",
-    "section": "",
-    "text": "OVERVIEW\nWe’ve been working on a new framework for respresenting some evolutionary and genetics concepts in our twin stick shooter prototype. The idea is to create a 2 generation bipartite network that shows parents and offspring. Ultimately, we want it to be interactive (sorting, filtering, highlighting). I’m going to use some data from Project Hastur to try out some visualizations.\n\n\nDATA DICTIONARY\nI’m importing a single replicate from a larger experiment. The experimental conditions don’t particularly matter for this exercise but just in case you can find a more comprehensive description here.\nOnly 10000 observations of rncol(fulldata)` variables! I don’t need most of this information for this exercise. I’m going subset the data down to two generations (I’ll use 20 and 21, which is right in the middle of the run of 50 generations) and only keep the variables related to the pedigree plus Health for testing sort functions.\n\n\nCode\nGen2021&lt;-fulldata %&gt;%\n  filter(Generation&gt; 19 & Generation&lt;22) %&gt;%\n  select(Generation, ID, P1ID, P2ID, Health)\n\nDictionary &lt;- sumtable(Gen2021, out = \"return\", labels = TRUE, summ = c(\"min(x)\", \"max(x)\", \"notNA(x)\"))\nDictionary$Description &lt;- c(\"Each wave of enemies is a generation\",\n                           \"Unique key for each individual in the replicate\",\n                           \"Value of `ID` for Parent 1\",\n                           \"Value of `ID` for Parent 2\",\n                           \"Essentially Hit Points\")\nknitr::kable(Dictionary)\n\n\n\n\n\nVariable\nMin\nMax\nNotNA\nDescription\n\n\n\n\nGeneration\n20\n21\n400\nEach wave of enemies is a generation\n\n\nID\n4000\n4399\n400\nUnique key for each individual in the replicate\n\n\nP1ID\n3802\n4196\n400\nValue of `ID` for Parent 1\n\n\nP2ID\n3802\n4196\n400\nValue of `ID` for Parent 2\n\n\nHealth\n5120\n56372\n400\nEssentially Hit Points\n\n\n\n\n\n\n\n\n\nVISUALIZATION\nWe need an adjacency matrix.\n\n\nCode\nlibrary(igraph)\nedgep1&lt;-Gen2021 %&gt;%\n  filter(Generation == 21) %&gt;%\n  select(ID, P1ID)\n\nmymat&lt;- get.adjacency(graph.edgelist(as.matrix(edgep1), directed=FALSE))\n\n# Random bipartite graph\ninc &lt;- as.matrix(edgep1)\n\n\n\ng &lt;- graph.data.frame(inc, directed = F)\nV(g)$type &lt;- V(g)$name %in% inc[,2] #the second column of edges is TRUE typ\nplot(g, layout=layout_as_bipartite)"
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#historical-patterns",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#historical-patterns",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "HISTORICAL PATTERNS",
+    "text": "HISTORICAL PATTERNS"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-physical-labor",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-physical-labor",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "AUTOMATION OF PHYSICAL LABOR",
+    "text": "AUTOMATION OF PHYSICAL LABOR\nMany of the changes in the distribution of labor across sectors have been driven by changes in the efficiency of human labor, which can be considered as the ratio of production to cost.\nForce Multiplier: An external tool or resource that allows you to do more work with less effort.1 This might increase production of a single worker, reducing the overall number of workers needed to perform a job.\nOutsourcing: Outsourcing refers to the business practice of contracting out certain tasks or functions to third-party service providers instead of performing them in-house. One of the primary reasons companies outsource is to achieve cost reductions. Labor, infrastructure, or operational costs might be lower in another location or with a specialized provider.\nThe term originally comes from the military context, but it has been widely adopted in business, technology, and other fields to describe a factor that dramatically amplifies the effectiveness of a group or system."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#a-closer-look",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#a-closer-look",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "A CLOSER LOOK",
+    "text": "A CLOSER LOOK\nWhat are common features of the sectors that displaced Agriculuture and Manufacturing?\n\n\n\n\n\n\nThe tasks are Place Bound.\nThe sectors feature a lot of Knowledge Work."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#knowledge-work",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#knowledge-work",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "KNOWLEDGE WORK?",
+    "text": "KNOWLEDGE WORK?\nKnowledge work 1 involves tasks that are information-based and Cognitive in nature :\n\nCharacteristicsExamples\n\n\n\n\nIntellectual Activity: It involves thinking, analyzing, and processing information more than manual labor.\nNon-routine: It doesn’t necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.\nInformation-based: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.\nDriven by Expertise: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.\nAutonomy: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems.\nContinuous Learning: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.\nOutcome-focused: The value of knowledge work is often measured by outcomes or results rather than the hours worked.\n\n\n\n\n\nSoftware developers\nManagers\nAnalysts\nConsultants\nDesigners\nScientists\nLawyers\nDoctors\nEducators\n\n\n\n\n“Knowledge Work” is a term coined by Peter Drucker in his 1959 book “Landmarks of Tomorrow.”"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#human-cognition",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#human-cognition",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "HUMAN COGNITION",
+    "text": "HUMAN COGNITION\n\nHuman CognitionKnowledge Work\n\n\n\n\n\n\n\nIntellectual Activity: It involves thinking, analyzing, and processing information more than manual labor.\nNon-routine: It doesn’t necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.\nInformation-based: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.\nDriven by Expertise: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.\nAutonomy: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems.\nContinuous Learning: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.\nOutcome-focused: The value of knowledge work is often measured by outcomes or results rather than the hours worked."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#human-cognitive-labor",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#human-cognitive-labor",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "HUMAN COGNITIVE LABOR1",
+    "text": "HUMAN COGNITIVE LABOR1\nAspects of human cognitive labor:\n\n\nProblem Solving: Identifying complex issues and reviewing related information to develop and evaluate options and implement solutions.\nDecision Making: Considering the relative costs and benefits of potential actions to choose the most appropriate one.\nAnalysis: Examining data or information and breaking it down to understand its structure, trends, or implications.\nLearning and Adaptation: Acquiring new knowledge and skills and adjusting to new information or circumstances.\nCreativity: Generating new ideas, concepts, or solutions.\nPlanning: Determining how a system or operation should work and how changes in conditions, operations, and environments will affect outcomes.\nCommunication: Conveying information effectively, both verbally and in writing. This also includes the ability to listen and understand information from others.\nEmotional Intelligence: Recognizing, understanding, and managing our own emotions while also recognizing, understanding, and influencing the emotions of others.\n\n\nHuman cognitive labor refers to tasks and functions that require human intellectual processes, such as thinking, understanding, learning, and problem-solving. While physical labor is centered on manual and bodily tasks, cognitive labor emphasizes mental processes and the application of knowledge."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#some-examples",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#some-examples",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "SOME EXAMPLES",
+    "text": "SOME EXAMPLES\n\nHere is a contract and our contract guidelines. Review and red-line the contract.\nDoes this Animal Care protocol conform to the federal guidelines?\nI have a fever and a cough. What is wrong with me?\nGather data from these documents and summarize/analyze it.\nHow does this job applicant align with the needs described in our job description?\n\nThese tasks are difficult to automate because their inputs are complex, unstructured, and highly variable. They require human Cognitive Labor."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-cognitive-labor",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-cognitive-labor",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "AUTOMATION OF COGNITIVE LABOR",
+    "text": "AUTOMATION OF COGNITIVE LABOR\n“The future is already here — it’s just not very evenly distributed.” 1\nWilliam Gibson (a science fiction author) made this observation to highlight how technological advancements and innovations might be present in certain places or among specific groups, but they haven’t yet permeated all levels of society or all geographic areas. The quote encapsulates the idea that the future, in many ways, exists in pockets in the present, but its widespread adoption and distribution are yet to occur."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#artificial-intelligence",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#artificial-intelligence",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "ARTIFICIAL INTELLIGENCE",
+    "text": "ARTIFICIAL INTELLIGENCE\nSummarizing the history of AI and creating a visual timeline is an example of Knowledge Work. It requires Cognitive Labor on my part. Cognitive labor is hard.\n\nHistory of AIVisual Timeline\n\n\nAI has a long and interesting history that I need to summarize…\n\n\nI’d rather have a graph\n\n\nMaking a graph is hard.\nExcept it isn’t.."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#a-tipping-point",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#a-tipping-point",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "2022: A TIPPING POINT",
+    "text": "2022: A TIPPING POINT"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#generative-ai",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#generative-ai",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "GENERATIVE AI",
+    "text": "GENERATIVE AI\nGenerative Artificial Intelligence describes a group of algorithms or models that can be used to create new content, including text, code, images, video, audio, and simulations.\n\n\nExamples:\nChatGPT: Text to Text Generative Pretrained Transformer with a chat interface\nMidJourney: Text to Image\nan abstract representation of an unemployment line caused by the emergence of artificial general intelligence, glowing blue computational network, photorealistic, dark technology, dark academia\nKaiberAI: text to video\nA Dystopian cyberpunk future where humans battle against cybernetic abominations from the works of the Lovecraftian Cthulhu Mythos. in the style of Photo real, hyper-realistic, high dynamic range, rich colors, lifelike textures, 8K UHD, high color depth, Nikon D 850, Kodak Portra 400, Fujifilm XT\nMubert: text to music.\nHardtechno Dark John Carpenter Synth\n\nVideo{.absolute .width=“60%”}"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#large-language-models-llm",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#large-language-models-llm",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "LARGE LANGUAGE MODELS (LLM)",
+    "text": "LARGE LANGUAGE MODELS (LLM)\nA type of AI model designed to understand and generate human-like text.\n\n\nKey CharacteristicsTraining and CapabilitiesLimitations\n\n\n\nModel Type: Subset of deep learning within machine learning.\nArchitecture: Commonly based on the Transformer architecture.\nSize: Contains billions to trillions of parameters.\n\n\n\n\nTraining Data: Trained on vast datasets, including books, articles, and web content.\nFunctionality: Generates coherent text, answers questions, translates, summarizes, and more.\nTransfer Learning: Fine-tuned on specific datasets for specialized tasks.\n\n\n\n\nGenerates based on training data patterns.\nDoesn’t “understand” like humans.\nCan produce incorrect or nonsensical answers.\nInfluenced by biases in training data.\n\n\n\n\n\nNvidia (the company that makes GPUs) has great learning resources on AI. This one is a great summary of the significance of LLMs"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#capabilities",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#capabilities",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "CAPABILITIES",
+    "text": "CAPABILITIES\n\n\n\narXiv:2303.10130v5 [econ.GN] 21 Aug 2023"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#tasks-are-operations",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#tasks-are-operations",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "TASKS ARE OPERATIONS",
+    "text": "TASKS ARE OPERATIONS\nHuman Cognitive Tasks\nInput Human Output\nLLM Operations\nPrompt Model Response"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#llm-operations",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#llm-operations",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "LLM OPERATIONS",
+    "text": "LLM OPERATIONS\n\nReductive\nTake a large amount of text and produce a smaller output.\nInput is larger than the output.\nTransformative\nTransmute the input into a new format.\nInput and output are roughly the same size and/or meaning.\nGenerative\nGenerate a large amount of text from a small set of instructions or data.\nInput is smaller than the output.\n\nThese categories and their descriptions on the next three slides are from material by David Shapiro, particularly his video on Prompt Engineering"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#reductive-operations",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#reductive-operations",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "REDUCTIVE OPERATIONS",
+    "text": "REDUCTIVE OPERATIONS\nTake a large amount of text and produce a smaller output.\n\n\nSummarization: Say the same thing with fewer words.\n\nCan use list, notes, executive summary.\n\nDistillation: Purify the underlying principles or facts.\n\nRemove all the noise, extract axioms, foundations, etc.\n\nExtraction: Retrieve specific kinds of information.\n\nQuestion answering, listing names, extracting dates, etc.\n\nCharacterizing: Describe the content of the text.\n\nDescribe either the text as a whole, or within the subject.\n\nAnalyzing: Find patterns or evaluate against a framework.\n\nStructural analysis, rhetorical analysis, etc\n\nEvaluation: Measuring, grading, or judging the content.\n\nGrading papers, evaluating against morals\n\nCritiquing: Provide feedback within the context of the text.\n\nProvide recommendations for improvement"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#transformation-operations",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#transformation-operations",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Transformation Operations",
+    "text": "Transformation Operations\nTransmute the input into another format. Input and output are roughly the same size and/or meaning.\n\n\nReformatting: Change the presentation only.\n\nProse to screenplay, XML to JSON\n\nRefactoring: Achieve same results with more efficiency.\n\nSay the same exact thing, but differently\n\nLanguage Change: Translate between languages.\n\nEnglish to Russian, C++ to Python\n\nRestructuring: Optimize structure for logical flow, etc.\n\nChange order, add or remove structure\n\nModification: Rewrite copy to achieve different intention.\n\nChange tone, formality, diplomacy, style, etc\n\nClarification: Make something more comprehensible.\n\nEmbellish or more clearly articulate"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#generative-operations",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#generative-operations",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Generative Operations",
+    "text": "Generative Operations\nGenerate a large amount of text from a small set of instructions or data.\n\n\nDrafting: Generate a draft of some kind of document.\n\nCode, fiction, legal copy, KB, science, storytelling\n\nPlanning: Given parameters, come up with plans.\n\nActions, projects, objectives, missions, constraints, context.\n\nBrainstorming: Use imagine to list out possibilities.\n\nIdeation, exploration of possibilities, problem solving, hypothesizing\n\nAmplification: Articulate and explicate something further.\n\nExpanding and expounding, riffing on stuff"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#critical-details",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#critical-details",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "CRITICAL DETAILS",
+    "text": "CRITICAL DETAILS\n\nPromptModelResponse\n\n\nWhat are the characteristics of your task?\n\nOperation Type: Reductive, Transformative, or Generative?\nSize: Tokens How much information do you need to send to the model?\nContext: What other relevant information/data is required? Where is it?\nFormat: Text only? File uploads? .pdf, .csv, .json, .docx, .xlsx, .pptx, .jpg, .png, etc\nQuality: Prompt Engineering\n\n\n\nThere are a TON of different Models and they vary substantially.\n\nSize\nCost\nSecurity\nContext Window\nInput Types\nTraining Data\nType: Conversational Agent vs Task Oriented Agent\nSpecificity/Flexibility\nLicense\n\n\n\nHow do evaluate the quality of the response?\n\nAccuracy\nConsistency\nCreativity\nSize\nFormat\nSpecificity"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#latent-content",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#latent-content",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "LATENT CONTENT",
+    "text": "LATENT CONTENT\nKnowledge, facts, concepts, and information that is “embedded” in the model and must be “activated” by correct prompting.\nLatent content only originates from Training Data.\nExamples:\n\nWorld Knowledge: General facts and understanding of the world.\nScientific Information: Embedded data on scientific principles.\nCultural Knowledge: Information on cultures and social norms.\nHistorical Knowledge: Data on past events and figures.\nLanguages: Language structures, vocabulary, and syntax."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#emergent-capabilities",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#emergent-capabilities",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "EMERGENT CAPABILITIES",
+    "text": "EMERGENT CAPABILITIES\nThe abilities of Large Language Models (LLMs) that arise as a result of their extensive training on vast datasets, even if those capabilities were not explicitly “taught” or “programmed” into the model.\n\n\nUnintended Abilities: Emergent capabilities might lead the model to perform tasks it wasn’t explicitly trained for. For example, an LLM might be trained on general text but can still translate between languages, write in different styles, or even generate code.\nBeyond Training Data: While LLMs are trained on specific data, the patterns they recognize can be generalized to a variety of tasks. This generalization can sometimes lead to surprising and useful outputs, as well as unintended or harmful ones.\nComplex Interactions: The interactions between the numerous parameters in LLMs can lead to behaviors that aren’t immediately predictable from the training data alone. These behaviors arise from the complex, multi-dimensional relationships the model has learned.\nPotential and Pitfalls: Emergent capabilities can be both an asset and a liability. On one hand, they showcase the flexibility and adaptability of LLMs. On the other, they can result in outputs that are unexpected, inaccurate, or even biased.\nExample - Metaphor Understanding: While not explicitly trained to understand metaphors, an LLM might still be able to interpret and generate metaphoric language due to its exposure to diverse linguistic constructs in its training data.\nExample - Creativity: LLMs can generate creative text, poetry, or stories. While they don’t “understand” creativity in the human sense, their vast training allows them to mimic creative constructs.\nLimitations: Despite their emergent capabilities, LLMs have limitations. They don’t truly “understand” concepts in the way humans do, and their outputs are entirely based on patterns in the data they’ve seen."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#hallucination",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#hallucination",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "HALLUCINATION",
+    "text": "HALLUCINATION\nInstances where the model generates information that is not accurate, not based on its training data, or simply fabricated. Essentially, the model “hallucinates” details that aren’t grounded in reality or the facts it has been trained on.\n\n\nOrigin of the Term: The term “hallucination” is borrowed from human psychology, where it refers to perceiving things that aren’t present in reality. When applied to LLMs, it captures the idea that the model sometimes produces outputs that aren’t reflective of real facts or the content it was trained on.\nCauses: Hallucinations can be caused by various factors, including the model misinterpreting the input, over-generalizing from its training data, or trying to complete ambiguous queries with details it “invents” on the spot.\nCommon in Open-ended Queries: LLMs are more prone to hallucinate when given open-ended prompts or when there’s a lack of specific context. In these situations, the model might fill in gaps with fabricated details.\nConcerns: Hallucinations are a concern, especially when users rely on LLMs for accurate information. They highlight the importance of treating outputs from LLMs as suggestions or starting points rather than definitive answers.\nMitigation: Efforts to mitigate hallucinations in LLMs include refining model architectures, improving training data, and employing post-training fine-tuning or validation processes. Additionally, user feedback and iterative development are crucial for identifying and reducing such issues."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-cognitive-labor-1",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-cognitive-labor-1",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "AUTOMATION OF COGNITIVE LABOR",
+    "text": "AUTOMATION OF COGNITIVE LABOR\nTasks are Operations\nComplex job functions are often a series of tasks.\n\n\nTreat each task as an information problem.\n\nYou have various information needs for each process or task\nInformation comes from various sources\nYou perform different transformations on the information\n\nDefine each task in terms of Operations.\n\nShrinking: Summarization, extraction, classification\nTranslation: Changing from one format to another\nExpanding: Brainstorming, synthesizing, drafting\n\nPrompt Engineering: The creation of the prompt is carefully engineered to provide optimal instructions and context to the LLM. Factors like tone, point of view, and conversational style help steer the LLM’s response.\nModel Selection: Huggingface.co currently features 350,247 models and they have a leaderboard for performance!\nEvaluate the response(s) against data you trust."
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#examples-1",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#examples-1",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "EXAMPLES",
+    "text": "EXAMPLES\nAward Letter (Extraction)\nI need to extract the information from this award letter and put it in our database.\nPDF Grey Literature (Extraction)\nI found this cool data report with a bunch of data that I need for my analysis.\nContract Review (Evaluation)\nDoes this contract adhere to our review criteria?\nothers"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#agi",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#agi",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "AGI",
+    "text": "AGI\n\n\n\nhttps://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#resources",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#resources",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Resources",
+    "text": "Resources\n\nhttps://www.youtube.com/@samwitteveenai\nhttps://www.youtube.com/@4IR.David.Shapiro\nhttps://www.youtube.com/@mreflow\nhttps://www.futuretools.io\nhttps://snorkel.ai/large-language-models-llms/\nhttps://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america\nhttps://thehill.com/opinion/congress-blog/3913530-artificial-intelligence-is-not-going-to-take-all-our-jobs/\nhttps://arxiv.org/abs/2303.10130\nhttps://www.analyticsvidhya.com/blog/2023/07/the-fascinating-evolution-of-generative-ai/\nhttps://kyleake.medium.com/data-behind-the-large-language-models-llm-gpt-and-beyond-8b34f508b5de\nhttps://arxiv.org/pdf/2303.08774.pdf\nhttps://www.fiddler.ai/blog/the-missing-link-in-generative-aimonit\nhttps://www.fiddler.ai/blog/the-missing-link-in-generative-ai\nhttps://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-generative-ai\nhttps://www.nvidia.com/en-us/glossary/data-science/large-language-models/\nhttps://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for/\nhttps://www.promptengineering.org/what-are-large-language-model-llm-agents/\n\n\n\nbrobison@uidaho.edu"
   },
   {
     "objectID": "ProfessorPolymorphic/posts/TickBaseDEI/index.html#purpose",
@@ -2681,251 +2863,6 @@
     "text": "Mac wants the flamethrower…\n\nIt’s such a ridiculous notion that anyone on the planet would ever want to read a BLOG, let alone a BLOG authored by some rando nerd like me. Nevertheless, if I force myself to push past the imposter syndrome, disruptive thoughts, anxiety, and the sheer PRETENTIOUSNESS of one’s own BLOG, I can kind of rationalize doing this.\nAllow me to elaborate (he wrote to himself). The varied reasons for setting up a BLOG as part of my research lab website include:\n\nIt forces me to further practice using the tools I need for both research and teaching Data Science, including literate programming (I’m using Quarto), version control (I’m using GitHub), and communicating with data.\nIt gives me a place to put a lot of the intermediate outcomes and products from the game studio. All the grey material that isn’t a journal publication, grant proposal, meeting abstract, etc. usually ends up getting lost. Examples include outreach and eduation materials for our games, videos and images that we don’t put on our largely silent social media channels, etc.\nIt serves as an archive for experimental/exploratory analyses in which I am trying to learn a new technique or explore a new data set, allowing me to return to that idea when its time has finally arrived.\nIn the off chance that one of my posts actually helps someone learn something because they found it by googling their particular error message, I will have begun paying back my massive karmic debt to the internet. I can’t count the number of times someone’s blog post helped me figure out how to accomplish something using R.\nI honestly do enjoy thinking about the intersection of science and horror fiction, and some of our newer game projects are going to serve as the platform for that type of content.\nSpeaking of our newer game projects, I’ll be using this as a venue to post development updates for studio projects.\nI have ADHD. I mean actual psychiatrist diagnosed, full blown, life altering ADHD. Systems and structures are critical components of the coping strategies I have developed over the years. Maybe… just maybe… this BLOG will help me keep a bunch of stuff organized so I can…. HEY LOOK A SHINY THING!\nSpeaking of shiny things… I’m really enjoing the new AI tools for procedural art generation. I’m particularly enamored with midJourney. I’m hoping to use this BLOG for some exploration of those tools.\n\nSo why the thumbnail from The Thing as the image for this post? Well the title of the post is the famous quote from Palmer when he sees Norris’ head crawling away on newly grown insect legs. Anyone who knows me who sees I have a BLOG is going to say what Palmer said…\n\nThe Thing Kidding GIFfrom The Thing Kidding GIFs"
   },
   {
-    "objectID": "ProfessorPolymorphic/posts/AIVideo/index.html",
-    "href": "ProfessorPolymorphic/posts/AIVideo/index.html",
-    "title": "My First AI Generated Video",
-    "section": "",
-    "text": "Cool?\nI made this video with Kaiber. I uploaded this image as the starting point:\n\nI made the image using MidJourney v5.1\nI upoaded this song for the soundtrack:\nAudio\nwhich I made using the AI Music Generator Mubert.\nThen I used this prompt to make the video:\nA secret underground bioweapons laboratory, in the style of photo taken on film, film grain, vintage, 8k ultrafine detail, private press…\nVideo"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/index.html",
-    "href": "ProfessorPolymorphic/index.html",
-    "title": "Professor Polymorphic",
-    "section": "",
-    "text": "“The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown”.\n– H.P. Lovecraft, Supernatural Horror in Literature\n\n\n\n\n\nHello! This BLOG is where I share my thoughts on how science informs horror fiction, and whether horror fiction can be used to at least help teach science, if not directly inform scientific research. The posts that appear here will vary in their focus. Some will directly address the intersection of horror and science, while some might focus primarily on either horror fiction or science concepts.\nMy basic premise is driven by the Lovecraft quote you see at the top of the screen. I find this compelling because I am a scientist, and science is one of two tools humanity has invented that pushes back against the unknown."
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#abstract",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#abstract",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Abstract",
-    "text": "Abstract\nWill the emerging capabilities of Artificial Intelligence augment your productivity? Or is AI about to automate you out of a job? Intended for a non-technical audience, this seminar will explain the basic concepts of Generative Artificial Intelligence and how recent developments with Large Language Models such as Chat-GPT are poised to disrupt many sectors of the global economy. I’ll provide examples of how generative AI is being deployed in business, education, and other domains as a better, faster, and cheaper alternative to human cognitive labor. The seminar will close with the concept of Alignment and the the potential implications of Artificial General Intelligence, leaving time for discussion and questions."
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#intro",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#intro",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Intro",
-    "text": "Intro"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#task-automation---replacing-human-physical-labor",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#task-automation---replacing-human-physical-labor",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Task Automation - replacing human physical labor",
-    "text": "Task Automation - replacing human physical labor\nThe value of human labor = production/cost.\nForce Multiplier = Doing more work with less effort\nOutsourcing = cheaper human labor"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#the-value-of-human-cognition",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#the-value-of-human-cognition",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "The value of human Cognition",
-    "text": "The value of human Cognition\nCognition is the “mental action or process of acquiring knowledge and understanding through thought, experience, and the senses”.[2] It encompasses all aspects of intellectual functions and processes such as: perception, attention, thought, imagination, intelligence, the formation of knowledge, memory and working memory, judgment and evaluation, reasoning and computation, problem-solving and decision-making, comprehension and production of language. Cognitive processes use existing knowledge and discover new knowledge.\n ## Human Cognitive Labor\nInput -&gt; Human -&gt; Output\nexamples?\nHere is a contract and our contract guidelines. Review and redline.\nDoes this Animal Care protocol conform to the guidelines?\nI have a fever and a cough. What is wrong with me?\nGather data from these documents and summarize/analyze it."
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#timeline-of-ai",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#timeline-of-ai",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Timeline of AI",
-    "text": "Timeline of AI\nAI has a long history\nI’d rather have a graph"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#the-2022-inflection-point",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#the-2022-inflection-point",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "The 2022 Inflection point",
-    "text": "The 2022 Inflection point"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#llms-gpt-definition",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#llms-gpt-definition",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "LLMs GPT definition",
-    "text": "LLMs GPT definition"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#basic-structure",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#basic-structure",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Basic Structure",
-    "text": "Basic Structure\nInput -&gt; Human -&gt; Output\nPrompt -&gt; Model -&gt; Response"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#operations",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#operations",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Operations",
-    "text": "Operations\nReductive\nLarge amount of text and produce a smaller output.\nInput is larger than the output.\nTransformative\nTransmute the input into a new format.\nInput and output are roughly the same size and/or meaning.\nGenerative\nGenerate a large amount of text from a small set of instructions or data.\nInput is smaller than the output."
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#reductive-operations",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#reductive-operations",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "REDUCTIVE OPERATIONS",
-    "text": "REDUCTIVE OPERATIONS\nTake a large amount of text and produce a smaller output.\n\nSummarization: Say the same thing with fewer words. -Can use list, notes, executive summary.\nDistillation: Purify the underlying principles or facts. -Remove all the noise, extract axioms, foundations, etc.\nExtraction: Retrieve specific kinds of information. -Question answering, listing names, extracting dates, etc.\nCharacterizing: Describe the content of the text. -Describe either the text as a whole, or within the subject.\nAnalyzing: Find patterns or evaluate against a framework. -Structural analysis, rhetorical analysis, etc\nEvaluation: Measuring, grading, or judging the content. -Grading papers, evaluating against morals\nCritiquing: Provide feedback within the context of the text. -Provide recommendations for improvement"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#transformation-operations",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#transformation-operations",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Transformation Operations",
-    "text": "Transformation Operations\nTransmute the input into another format. Input and output are roughly the same size and/or meaning.\n\nReformatting: Change the presentation only.\n\nProse to screenplay, XML to JSON\n\nRefactoring: Achieve same results with more efficiency.\n\nSay the same exact thing, but differently\n\nLanguage Change: Translate between languages.\n\nEnglish to Russian, C++ to Python\n\nRestructuring: Optimize structure for logical flow, etc.\n\nChange order, add or remove structure\n\nModification: Rewrite copy to achieve different intention.\n\nChange tone, formality, diplomacy, style, etc\n\nClarification: Make something more comprehensible.\n\nEmbellish or more clearly articulate"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#generative-operations",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#generative-operations",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Generative Operations",
-    "text": "Generative Operations\nGenerate a large amount of text from a small set of instructions or data.\n\nDrafting: Generate a draft of some kind of document.\n\nCode, fiction, legal copy, KB, science, storytelling\n\nPlanning: Given parameters, come up with plans.\n\nActions, projects, objectives, missions, constraints, context.\n\nBrainstorming: Use imagine to list out possibilities.\n\nIdeation, exploration of possibilities, problem solving, hypothesizing\n\nAmplification: Articulate and explicate something further.\n\nExpanding and expounding, riffing on stuff"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#basic-structure-1",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#basic-structure-1",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Basic Structure",
-    "text": "Basic Structure\nInput -&gt; Model -&gt; Output\nPrompt -&gt; Model -&gt; Response\nPrompt Details\nSize: Tokens Format: Text only? File uploads? .pdf, .csv, .json, .docx, .xlsx, .pptx, .jpg, .png, etc Quality: Prompt Engineering\nModel Details\nSize Cost Security Context Window Input Types Training Data Interface Specificity/Flexibility License\nResponse Details\nAccuracy Consistency Creativity Size Format Specificity"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#latent-content-and-emergent-properties",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#latent-content-and-emergent-properties",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Latent Content and Emergent Properties",
-    "text": "Latent Content and Emergent Properties"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#blooms-taxonomy",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#blooms-taxonomy",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Blooms Taxonomy",
-    "text": "Blooms Taxonomy\nA hierarchical model to classify educational learning objectives into varying complexity and specificity. Remembering: Recalling facts and concepts. Retrieval and regurgitation Understanding: Explaining ideas and concepts. Connecting words to meanings. Applying: Using information in new situations. Functional utility Analyzing: Drawing connections among ideas. Connecting the dots between concepts. Evaluating: Justifying a decision or action. Explication and articulation Creating: Producing new or original work. Generating something that did not previously exist."
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#latent-content",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#latent-content",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "LATENT CONTENT",
-    "text": "LATENT CONTENT\nKnowledge, facts, concepts, and information that is “embedded” in the model and must be “activated” by correct prompting.\nLatent content only originates from Training Data.\nExamples:\n\nWorld Knowledge: General facts and understanding of the world.\nScientific Information: Embedded data on scientific principles.\nCultural Knowledge: Information on cultures and social norms.\nHistorical Knowledge: Data on past events and figures.\nLanguages: Language structures, vocabulary, and syntax."
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#emergent-capabilities",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#emergent-capabilities",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "EMERGENT CAPABILITIES",
-    "text": "EMERGENT CAPABILITIES\nThe abilities of Large Language Models (LLMs) that arise as a result of their extensive training on vast datasets, even if those capabilities were not explicitly “taught” or “programmed” into the model. These capabilities emerge as a byproduct of the model’s architecture and the sheer volume of data it’s been exposed to.\n\nUnintended Abilities: Emergent capabilities might lead the model to perform tasks it wasn’t explicitly trained for. For example, an LLM might be trained on general text but can still translate between languages, write in different styles, or even generate code.\nBeyond Training Data: While LLMs are trained on specific data, the patterns they recognize can be generalized to a variety of tasks. This generalization can sometimes lead to surprising and useful outputs, as well as unintended or harmful ones.\nComplex Interactions: The interactions between the numerous parameters in LLMs can lead to behaviors that aren’t immediately predictable from the training data alone. These behaviors arise from the complex, multi-dimensional relationships the model has learned.\nPotential and Pitfalls: Emergent capabilities can be both an asset and a liability. On one hand, they showcase the flexibility and adaptability of LLMs. On the other, they can result in outputs that are unexpected, inaccurate, or even biased.\nExample - Metaphor Understanding: While not explicitly trained to understand metaphors, an LLM might still be able to interpret and generate metaphoric language due to its exposure to diverse linguistic constructs in its training data.\nExample - Creativity: LLMs can generate creative text, poetry, or stories. While they don’t “understand” creativity in the human sense, their vast training allows them to mimic creative constructs.\nLimitations: Despite their emergent capabilities, LLMs have limitations. They don’t truly “understand” concepts in the way humans do, and their outputs are entirely based on patterns in the data they’ve seen."
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#hallucination",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#hallucination",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "HALLUCINATION",
-    "text": "HALLUCINATION\nInstances where the model generates information that is not accurate, not based on its training data, or simply fabricated. Essentially, the model “hallucinates” details that aren’t grounded in reality or the facts it has been trained on.\n\nOrigin of the Term: The term “hallucination” is borrowed from human psychology, where it refers to perceiving things that aren’t present in reality. When applied to LLMs, it captures the idea that the model sometimes produces outputs that aren’t reflective of real facts or the content it was trained on.\nCauses: Hallucinations can be caused by various factors, including the model misinterpreting the input, over-generalizing from its training data, or trying to complete ambiguous queries with details it “invents” on the spot.\nCommon in Open-ended Queries: LLMs are more prone to hallucinate when given open-ended prompts or when there’s a lack of specific context. In these situations, the model might fill in gaps with fabricated details.\nConcerns: Hallucinations are a concern, especially when users rely on LLMs for accurate information. They highlight the importance of treating outputs from LLMs as suggestions or starting points rather than definitive answers.\nMitigation: Efforts to mitigate hallucinations in LLMs include refining model architectures, improving training data, and employing post-training fine-tuning or validation processes. Additionally, user feedback and iterative development are crucial for identifying and reducing such issues."
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#applying-this-in-the-workplace",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#applying-this-in-the-workplace",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Applying this in the workplace",
-    "text": "Applying this in the workplace"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#data-centric-model",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#data-centric-model",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Data-Centric Model",
-    "text": "Data-Centric Model\n\nTreat all business processes and tasks as information problems\n\n\n\nYou have various information needs for each process or task\nInformation comes from various sources\nYou perform different transformations on the information\n\n\n\nInformation, Thy God\n\n\n\nData is the new oil\nAI is just a tool to work on data and information\nKeep it all\n\n\n\nTypes of Transformations\n\n\n\nShrinking: Summarization, extraction, classification\nTranslation: Changing from one format to another\nExpanding: Brainstorming, synthesizing, drafting"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#human-cognitive-labor",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#human-cognitive-labor",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "HUMAN COGNITIVE LABOR2",
-    "text": "HUMAN COGNITIVE LABOR2\nAspects of human cognitive labor:\n\nProblem Solving: Identifying complex issues and reviewing related information to develop and evaluate options and implement solutions.\nDecision Making: Considering the relative costs and benefits of potential actions to choose the most appropriate one.\nAnalysis: Examining data or information and breaking it down to understand its structure, trends, or implications.\nLearning and Adaptation: Acquiring new knowledge and skills and adjusting to new information or circumstances.\nCreativity: Generating new ideas, concepts, or solutions.\nPlanning: Determining how a system or operation should work and how changes in conditions, operations, and environments will affect outcomes.\nCommunication: Conveying information effectively, both verbally and in writing. This also includes the ability to listen and understand information from others.\nEmotional Intelligence: Recognizing, understanding, and managing our own emotions while also recognizing, understanding, and influencing the emotions of others."
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#assembly-lines",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#assembly-lines",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Assembly Lines",
-    "text": "Assembly Lines\nThink of all business tasks and work products as moving along an assembly line 1. Inputs a. Where do work items come from? b. Email, calls, bills, API calls? 2. Stations a. Who does what to the work item? b. What tools, data, information, and transformations are needed at each station? 3. Interfaces a. When is a work item handed off to the next station? b. Is it inside or outside the business? c. How do you know its ready? 4. Outputs a. Where does the work item go? What does it look like? b. A bill gets paid, a customer gets served, etc"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#examples-reductive-only",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#examples-reductive-only",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Examples (Reductive only)",
-    "text": "Examples (Reductive only)"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#award-letter-extraction",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#award-letter-extraction",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Award Letter (Extraction)",
-    "text": "Award Letter (Extraction)"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#pdf-grey-literature-extraction",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#pdf-grey-literature-extraction",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "PDF Grey Literature (Extraction)",
-    "text": "PDF Grey Literature (Extraction)"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#contract-review-evaluation",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#contract-review-evaluation",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Contract Review (Evaluation)",
-    "text": "Contract Review (Evaluation)"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#concerns",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#concerns",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Concerns",
-    "text": "Concerns"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#agi",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#agi",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "AGI",
-    "text": "AGI"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#resources",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#resources",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Resources",
-    "text": "Resources\nSources Venn.\nTechnical\nhttps://www.youtube.com/@samwitteveenai\nPhilosophical\nhttps://www.youtube.com/@4IR.David.Shapiro\nConsumer\nhttps://www.youtube.com/@mreflow\nhttps://www.futuretools.io\nhttps://snorkel.ai/large-language-models-llms/\nhttps://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america\nhttps://thehill.com/opinion/congress-blog/3913530-artificial-intelligence-is-not-going-to-take-all-our-jobs/\nhttps://arxiv.org/abs/2303.10130\nhttps://www.analyticsvidhya.com/blog/2023/07/the-fascinating-evolution-of-generative-ai/\nhttps://kyleake.medium.com/data-behind-the-large-language-models-llm-gpt-and-beyond-8b34f508b5de\nhttps://arxiv.org/pdf/2303.08774.pdf\nhttps://www.fiddler.ai/blog/the-missing-link-in-generative-aimonit\nhttps://www.fiddler.ai/blog/the-missing-link-in-generative-ai\nhttps://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-generative-ai\nhttps://www.nvidia.com/en-us/glossary/data-science/large-language-models/\nhttps://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for/\nhttps://www.promptengineering.org/what-are-large-language-model-llm-agents/\n\n\nbrobison@uidaho.edu"
-  },
-  {
-    "objectID": "TEACHING/BCB521/Resources/ABT/index.html",
-    "href": "TEACHING/BCB521/Resources/ABT/index.html",
-    "title": "A simple framework for communication",
-    "section": "",
-    "text": "Let’s find a simpler data set about water!\nI went here\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(readxl)\n\n\nusage2015 &lt;- read.csv(\"usco2015v2.0.csv\", skip = 1)\ndatadictionary &lt;- read_excel(\"usco2015v2.0.xlsx\", sheet = \"DataDictionary\")"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "",
-    "text": "Will the emerging capabilities of Artificial Intelligence augment your productivity? Or is AI about to automate you out of a job? Intended for a non-technical audience, this seminar will explain the basic concepts of Generative Artificial Intelligence and how recent developments with Large Language Models such as Chat-GPT are poised to disrupt many sectors of the global economy. I’ll provide examples of how generative AI is being deployed in business, education, and other domains as a better, faster, and cheaper alternative to human cognitive labor. The seminar will close with the concept of Alignment and the the potential implications of Artificial General Intelligence, leaving time for discussion and questions."
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#generative-ai",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#generative-ai",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "GENERATIVE AI",
-    "text": "GENERATIVE AI\nGenerative Artificial Intelligence describes a group of algorithms or models that can be used to create new content, including text, code, images, video, audio, and simulations.\n\n\nExamples:\nChatGPT: Text to Text Generative Pretrained Transformer with a chat interface\nMidJourney: Text to Image\nan abstract representation of an unemployment line caused by the emergence of artificial general intelligence, glowing blue computational network, photorealistic, dark technology, dark academia\nKaiberAI: text to video\nA Dystopian cyberpunk future where humans battle against cybernetic abominations from the works of the Lovecraftian Cthulhu Mythos. in the style of Photo real, hyper-realistic, high dynamic range, rich colors, lifelike textures, 8K UHD, high color depth, Nikon D 850, Kodak Portra 400, Fujifilm XT\nMubert: text to music.\nHardtechno Dark John Carpenter Synth\n::: {column width=“60%”}Video"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#large-language-models",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#large-language-models",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Large Language Models",
-    "text": "Large Language Models\nhttps://www.nvidia.com/en-us/glossary/data-science/large-language-models/\nWhy are Large Language Models Important? Historically, AI models had been focused on perception and understanding. However, large language models, which are trained on internet-scale datasets with hundreds of billions of parameters, have now unlocked an AI model’s ability to generate human-like content. Models can read, write, code, draw, and create in a credible fashion and augment human creativity and improve productivity across industries to solve the world’s toughest problems. The applications for these LLMs span across a plethora of use cases. For example, an AI system can learn the language of protein sequences to provide viable compounds that will help scientists develop groundbreaking, life-saving vaccines. Or computers can help humans do what they do best—be creative, communicate, and create. A writer suffering from writer’s block can use a large language model to help spark their creativity. Or a software programmer can be more productive, leveraging LLMs to generate code based on natural language descriptions."
-  },
-  {
     "objectID": "ProfessorPolymorphic/posts/WebScrape/index.html",
     "href": "ProfessorPolymorphic/posts/WebScrape/index.html",
     "title": "TUTORIAL 3 - Python",
@@ -2940,178 +2877,17 @@
     "text": "QUARTO EXAMPLE CODE\nFor a demonstration of a line plot on a polar axis, see ?@fig-polar.\n\n\nCode\nfrom selenium import webdriver\nfrom selenium.webdriver.common.keys import Keys\nimport pandas as pd\n\n\n\n\nCode\noptions = webdriver.SafariOptions()\ndriver = webdriver.Safari(options=options)\n\ndef test_eight_components():\n    driver = webdriver.Chrome()\n\n    driver.get(\"https://www.selenium.dev/selenium/web/web-form.html\")\n\n    title = driver.title\n    assert title == \"Web form\"\n\n    driver.implicitly_wait(0.5)\n\n    text_box = driver.find_element(by=By.NAME, value=\"my-text\")\n    submit_button = driver.find_element(by=By.CSS_SELECTOR, value=\"button\")\n\n    text_box.send_keys(\"Selenium\")\n    submit_button.click()\n\n    message = driver.find_element(by=By.ID, value=\"message\")\n    value = message.text\n    assert value == \"Received!\"\n\n    driver.quit()"
   },
   {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#until-now",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#until-now",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Until Now",
-    "text": "Until Now\nArgument.\nSources Venn.\nTechnical\nhttps://www.youtube.com/@samwitteveenai\nPhilosophical\nhttps://www.youtube.com/@4IR.David.Shapiro\nConsumer\nhttps://www.youtube.com/@mreflow\nhttps://www.futuretools.io"
+    "objectID": "ProfessorPolymorphic/posts/AIVideo/index.html",
+    "href": "ProfessorPolymorphic/posts/AIVideo/index.html",
+    "title": "My First AI Generated Video",
+    "section": "",
+    "text": "Cool?\nI made this video with Kaiber. I uploaded this image as the starting point:\n\nI made the image using MidJourney v5.1\nI upoaded this song for the soundtrack:\nAudio\nwhich I made using the AI Music Generator Mubert.\nThen I used this prompt to make the video:\nA secret underground bioweapons laboratory, in the style of photo taken on film, film grain, vintage, 8k ultrafine detail, private press…\nVideo"
   },
   {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#remaining-job-sectors",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#remaining-job-sectors",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Remaining job sectors",
-    "text": "Remaining job sectors\n\nPlace bound\nRely on human cognition\n\nCognition is the “mental action or process of acquiring knowledge and understanding through thought, experience, and the senses”.2 It encompasses all aspects of intellectual functions and processes such as: perception, attention, thought, imagination, intelligence, the formation of knowledge, memory and working memory, judgment and evaluation, reasoning and computation, problem-solving and decision-making, comprehension and production of language. Cognitive processes use existing knowledge and discover new knowledge."
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#human-cognitive-labor-1",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#human-cognitive-labor-1",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "Human Cognitive Labor",
-    "text": "Human Cognitive Labor\nInputs -&gt; Human -&gt; Outputs\nInputs: Email, phonecall, document, spreadsheet, graph, etc…\nHuman -&gt; word, excel, email, powerpoint, etc\nOutputs: an invoice? structured data? an email? a spreadsheet? a graph?\nInterface: Where does this go? How do you know it is accurate?"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#us-workforce-distribution-1850---2015",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#us-workforce-distribution-1850---2015",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "US WORKFORCE DISTRIBUTION 1850 - 2015",
-    "text": "US WORKFORCE DISTRIBUTION 1850 - 2015"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-human-physical-labor",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-human-physical-labor",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "AUTOMATION OF HUMAN PHYSICAL LABOR",
-    "text": "AUTOMATION OF HUMAN PHYSICAL LABOR\nThe value of human labor = production/cost.\nForce Multiplier: An external tool or resource that allows you to do more work with less effort.1\nOutsourcing: Outsourcing refers to the business practice of contracting out certain tasks or functions to third-party service providers instead of performing them in-house. One of the primary reasons companies outsource is to achieve cost reductions. Labor, infrastructure, or operational costs might be lower in another location or with a specialized provider.\nThe term originally comes from the military context, but it has been widely adopted in business, technology, and other fields to describe a factor that dramatically amplifies the effectiveness of a group or system."
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#workforce-distribution-1850-2015",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#workforce-distribution-1850-2015",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "WORKFORCE DISTRIBUTION 1850-2015",
-    "text": "WORKFORCE DISTRIBUTION 1850-2015"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#historical-patterns",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#historical-patterns",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "HISTORICAL PATTERNS",
-    "text": "HISTORICAL PATTERNS"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#a-closer-look",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#a-closer-look",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "A CLOSER LOOK",
-    "text": "A CLOSER LOOK\nWhat are common features of the sectors that displaced Agriculuture and Manufacturing?\n\n\n\n\n\nThe tasks are Place Bound.\nThe sectors feature a lot of Knowledge Work.\n\n\nKNOWLEDGE WORK?\nKnowledge work 1 involves jobs and tasks that are primarily information-based and Cognitive in nature :\n\nCharacteristicsExamples\n\n\n\nIntellectual Activity: It involves thinking, analyzing, and processing information more than manual labor.\nNon-routine: It doesn’t necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.\nInformation-based: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.\nDriven by Expertise: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.\nAutonomy: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems.\nContinuous Learning: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.\nOutcome-focused: The value of knowledge work is often measured by outcomes or results rather than the hours worked.\n\n\n\n\nSoftware developers\nManagers\nAnalysts\nConsultants\nDesigners\nScientists\nLawyers\nDoctors\nEducators\n\n\n\n\n\nHUMAN COGNITION\n\nHuman CognitionKnowledge Work\n\n\n\n\n\n\nIntellectual Activity: It involves thinking, analyzing, and processing information more than manual labor.\nNon-routine: It doesn’t necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.\nInformation-based: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.\nDriven by Expertise: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.\nAutonomy: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems.\nContinuous Learning: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.\nOutcome-focused: The value of knowledge work is often measured by outcomes or results rather than the hours worked.\n\n\n\n\n\nHUMAN COGNITIVE LABOR2\nAspects of human cognitive labor:\n\nProblem Solving: Identifying complex issues and reviewing related information to develop and evaluate options and implement solutions.\nDecision Making: Considering the relative costs and benefits of potential actions to choose the most appropriate one.\nAnalysis: Examining data or information and breaking it down to understand its structure, trends, or implications.\nLearning and Adaptation: Acquiring new knowledge and skills and adjusting to new information or circumstances.\nCreativity: Generating new ideas, concepts, or solutions.\nPlanning: Determining how a system or operation should work and how changes in conditions, operations, and environments will affect outcomes.\nCommunication: Conveying information effectively, both verbally and in writing. This also includes the ability to listen and understand information from others.\nEmotional Intelligence: Recognizing, understanding, and managing our own emotions while also recognizing, understanding, and influencing the emotions of others.\n\n\nSOME EXAMPLES\n\nHere is a contract and our contract guidelines. Review and red-line the contract.\nDoes this Animal Care protocol conform to the federal guidelines?\nI have a fever and a cough. What is wrong with me?\nGather data from these documents and summarize/analyze it.\nHow does this job applicant align with the needs described in our job description?\n\nThese tasks are difficult to automate because their inputs are complex, unstructured, and highly variable. They require human Cognitive Labor.\n\nAUTOMATION OF COGNITIVE LABOR\n“The future is already here — it’s just not very evenly distributed.” 3\n\nARTIFICIAL INTELLIGENCE\n\nHistory of AIVisual Timeline\n\n\nAI has a long history\n\n\nI’d rather have a graph\n\n\n\n\n\n2022: A TIPPING POINT\n\n\nGENERATIVE AI\nGenerative Artificial Intelligence describes a group of algorithms or models that can be used to create new content, including text, code, images, video, audio, and simulations.\n\n\nExamples:\nChatGPT: Text to Text Generative Pretrained Transformer with a chat interface\nMidJourney: Text to Image\nan abstract representation of an unemployment line caused by the emergence of artificial general intelligence, glowing blue computational network, photorealistic, dark technology, dark academia\nKaiberAI: text to video\nA Dystopian cyberpunk future where humans battle against cybernetic abominations from the works of the Lovecraftian Cthulhu Mythos. in the style of Photo real, hyper-realistic, high dynamic range, rich colors, lifelike textures, 8K UHD, high color depth, Nikon D 850, Kodak Portra 400, Fujifilm XT\nMubert: text to music.\nHardtechno Dark John Carpenter Synth\n::: {column width=“60%”}Video\n\n\n\n“Knowledge Work” is a term coined by Peter Drucker in his 1959 book “Landmarks of Tomorrow.”Human cognitive labor refers to tasks and functions that require human intellectual processes, such as thinking, understanding, learning, and problem-solving. While physical labor is centered on manual and bodily tasks, cognitive labor emphasizes mental processes and the application of knowledge. William Gibson (a science fiction author) made this observation to highlight how technological advancements and innovations might be present in certain places or among specific groups, but they haven’t yet permeated all levels of society or all geographic areas. The quote encapsulates the idea that the future, in many ways, exists in pockets in the present, but its widespread adoption and distribution are yet to occur."
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#human-cognition",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#human-cognition",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "HUMAN COGNITION",
-    "text": "HUMAN COGNITION\n\nHuman CognitionKnowledge Work\n\n\n\n\n\n\nIntellectual Activity: It involves thinking, analyzing, and processing information more than manual labor.\nNon-routine: It doesn’t necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.\nInformation-based: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.\nDriven by Expertise: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.\nAutonomy: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems.\nContinuous Learning: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.\nOutcome-focused: The value of knowledge work is often measured by outcomes or results rather than the hours worked."
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#knowledge-work-1-knowledge-work-is-a-term-coined-by-peter-drucker-in-his-1959-book-landmarks-of-tomorrow.",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#knowledge-work-1-knowledge-work-is-a-term-coined-by-peter-drucker-in-his-1959-book-landmarks-of-tomorrow.",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "KNOWLEDGE WORK? [^1 “Knowledge Work” is a term coined by Peter Drucker in his 1959 book “Landmarks of Tomorrow.”]",
-    "text": "KNOWLEDGE WORK? [^1 “Knowledge Work” is a term coined by Peter Drucker in his 1959 book “Landmarks of Tomorrow.”]\nKnowledge work involves jobs and tasks that are primarily information-based and Cognitive in nature :\n\nIntellectual Activity: It involves thinking, analyzing, and processing information more than manual labor.\nNon-routine: Unlike many traditional jobs, knowledge work doesn’t necessarily follow a set script or routine. It often involves problem-solving, decision-making, and creative thinking.\nInformation-based: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.\nDriven by Expertise: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.\nAutonomy: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems. This autonomy is due to the non-routine nature of their tasks.\nContinuous Learning: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.\nOutcome-focused: The value of knowledge work is often measured by outcomes or results rather than the hours worked.\n\nExamples of knowledge workers include: - Software developers - Managers - Analysts - Consultants - Designers - Scientists - Lawyers - Doctors - Educators"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#knowledge-work",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#knowledge-work",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "KNOWLEDGE WORK?",
-    "text": "KNOWLEDGE WORK?\nKnowledge work 1 involves jobs and tasks that are primarily information-based and Cognitive in nature :\n\nCharacteristicsExamples\n\n\n\nIntellectual Activity: It involves thinking, analyzing, and processing information more than manual labor.\nNon-routine: It doesn’t necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.\nInformation-based: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.\nDriven by Expertise: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.\nAutonomy: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems.\nContinuous Learning: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.\nOutcome-focused: The value of knowledge work is often measured by outcomes or results rather than the hours worked.\n\n\n\n\nSoftware developers\nManagers\nAnalysts\nConsultants\nDesigners\nScientists\nLawyers\nDoctors\nEducators"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#knowledge-work-.scrollable",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#knowledge-work-.scrollable",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "KNOWLEDGE WORK? {.scrollable} 1",
-    "text": "KNOWLEDGE WORK? {.scrollable} 1\nKnowledge work involves jobs and tasks that are primarily information-based and Cognitive in nature :\n\nCharacteristicsExamples\n\n\n\nIntellectual Activity: It involves thinking, analyzing, and processing information more than manual labor.\nNon-routine: Unlike many traditional jobs, knowledge work doesn’t necessarily follow a set script or routine. It often involves problem-solving, decision-making, and creative thinking.\nInformation-based: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.\nDriven by Expertise: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.\nAutonomy: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems. This autonomy is due to the non-routine nature of their tasks.\nContinuous Learning: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.\nOutcome-focused: The value of knowledge work is often measured by outcomes or results rather than the hours worked.\n\n\n\n\nSoftware developers\nManagers\nAnalysts\nConsultants\nDesigners\nScientists\nLawyers\nDoctors\nEducators\n\n\n\n\n“Knowledge Work” is a term coined by Peter Drucker in his 1959 book “Landmarks of Tomorrow.”"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#some-examples",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#some-examples",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "SOME EXAMPLES",
-    "text": "SOME EXAMPLES\n\nHere is a contract and our contract guidelines. Review and red-line the contract.\nDoes this Animal Care protocol conform to the federal guidelines?\nI have a fever and a cough. What is wrong with me?\nGather data from these documents and summarize/analyze it.\nHow does this job applicant align with the needs described in our job description?\n\nThese tasks are difficult to automate because their inputs are complex, unstructured, and highly variable. They require human Cognitive Labor."
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-cognitive-labor",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-cognitive-labor",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "AUTOMATION OF COGNITIVE LABOR",
-    "text": "AUTOMATION OF COGNITIVE LABOR\n“The future is already here — it’s just not very evenly distributed.” 3"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-physical-labor",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-physical-labor",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "AUTOMATION OF PHYSICAL LABOR",
-    "text": "AUTOMATION OF PHYSICAL LABOR\nMany of the changes in the distribution of labor across sectors have been driven by changes in the efficiency of human labor, which can be considered as the ratio of production to cost.\nForce Multiplier: An external tool or resource that allows you to do more work with less effort.1 This might increase production of a single worker, reducing the overall number of workers needed to perform a job.\nOutsourcing: Outsourcing refers to the business practice of contracting out certain tasks or functions to third-party service providers instead of performing them in-house. One of the primary reasons companies outsource is to achieve cost reductions. Labor, infrastructure, or operational costs might be lower in another location or with a specialized provider.\nThe term originally comes from the military context, but it has been widely adopted in business, technology, and other fields to describe a factor that dramatically amplifies the effectiveness of a group or system."
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#artificial-intelligence",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#artificial-intelligence",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "ARTIFICIAL INTELLIGENCE",
-    "text": "ARTIFICIAL INTELLIGENCE\n\nHistory of AIVisual Timeline\n\n\nAI has a long history\n\n\nI’d rather have a graph"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#a-tipping-point",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#a-tipping-point",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "2022: A TIPPING POINT",
-    "text": "2022: A TIPPING POINT"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#large-language-models-llm",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#large-language-models-llm",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "LARGE LANGUAGE MODELS (LLM)",
-    "text": "LARGE LANGUAGE MODELS (LLM)\nA type of AI model designed to understand and generate human-like text.\n\n::: {.panel-tabset}\nKey Characteristics\n\nModel Type: Subset of deep learning within machine learning.\nArchitecture: Commonly based on the Transformer architecture.\nSize: Contains billions to trillions of parameters.\n\nTraining and Capabilities\n\nTraining Data: Trained on vast datasets, including books, articles, and web content.\nFunctionality: Generates coherent text, answers questions, translates, summarizes, and more.\nTransfer Learning: Fine-tuned on specific datasets for specialized tasks.\n\nLimitations\n\nGenerates based on training data patterns.\nDoesn’t “understand” like humans.\nCan produce incorrect or nonsensical answers.\nInfluenced by biases in training data.\n\n\nNvidia (the company that makes GPUs) has great learning resources on AI. This one is a great summary of the significance of LLMs"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#capabilities",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#capabilities",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "CAPABILITIES",
-    "text": "CAPABILITIES\n\n\n\narXiv:2303.10130v5 [econ.GN] 21 Aug 2023"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#tasks-are-operations",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#tasks-are-operations",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "TASKS ARE OPERATIONS",
-    "text": "TASKS ARE OPERATIONS\nHuman Cognitive Tasks\nInput Human Output\nLLM Operations\nPrompt Model Response"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#llm-operations",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#llm-operations",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "LLM OPERATIONS",
-    "text": "LLM OPERATIONS\n\nReductive\nTake a large amount of text and produce a smaller output.\nInput is larger than the output.\nTransformative\nTransmute the input into a new format.\nInput and output are roughly the same size and/or meaning.\nGenerative\nGenerate a large amount of text from a small set of instructions or data.\nInput is smaller than the output.\n\nThese categories and their descriptions on the next three slides are from material by David Shapiro, particularly his video on Prompt Engineering"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#critical-details",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#critical-details",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "CRITICAL DETAILS",
-    "text": "CRITICAL DETAILS\n\nPrompt\nWhat are the characteristics of your task?\nOperation Type: Reductive, Transformative, or Generative? Size: Tokens How much information do you need to send to the model? Context: What other relevant information/data is required? Where is it? Format: Text only? File uploads? .pdf, .csv, .json, .docx, .xlsx, .pptx, .jpg, .png, etc Quality: Prompt Engineering\nModel\nThere are a TON of different Models and they vary substantially.\nSize Cost Security Context Window Input Types Training Data Type: Conversational Agent vs Task Oriented Agent Specificity/Flexibility License\nResponse\nHow do evaluate the quality of the response?\nAccuracy Consistency Creativity Size Format Specificity"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-cognitive-labor-1",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-cognitive-labor-1",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "AUTOMATION OF COGNITIVE LABOR",
-    "text": "AUTOMATION OF COGNITIVE LABOR\nTasks are Operations\nComplex job functions are often a series of tasks.\n\nTreat each task as an information problem.\n\nYou have various information needs for each process or task\nInformation comes from various sources\nYou perform different transformations on the information\n\nDefine each task in terms of Operations.\n\nShrinking: Summarization, extraction, classification\nTranslation: Changing from one format to another\nExpanding: Brainstorming, synthesizing, drafting\n\nPrompt Engineering: The creation of the prompt is carefully engineered to provide optimal instructions and context to the LLM. Factors like tone, point of view, and conversational style help steer the LLM’s response.\nModel Selection: Huggingface.co currently features 350,247 models and they have a leaderboard for performance!\nEvaluate the response(s) against data you trust."
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#examples-1",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#examples-1",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "EXAMPLES",
-    "text": "EXAMPLES"
-  },
-  {
-    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#others",
-    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#others",
-    "title": "Automation or Augmentation? AI and the Future of Work.",
-    "section": "others",
-    "text": "others"
+    "objectID": "ProfessorPolymorphic/index.html",
+    "href": "ProfessorPolymorphic/index.html",
+    "title": "Professor Polymorphic",
+    "section": "",
+    "text": "“The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown”.\n– H.P. Lovecraft, Supernatural Horror in Literature\n\n\n\n\n\nHello! This BLOG is where I share my thoughts on how science informs horror fiction, and whether horror fiction can be used to at least help teach science, if not directly inform scientific research. The posts that appear here will vary in their focus. Some will directly address the intersection of horror and science, while some might focus primarily on either horror fiction or science concepts.\nMy basic premise is driven by the Lovecraft quote you see at the top of the screen. I find this compelling because I am a scientist, and science is one of two tools humanity has invented that pushes back against the unknown."
   }
 ]
