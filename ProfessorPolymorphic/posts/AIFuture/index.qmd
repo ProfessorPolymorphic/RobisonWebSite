@@ -24,23 +24,34 @@ code-fold: true
 
 ![](us-employment-share2.jpg)
 
-## AUTOMATION OF HUMAN PHYSICAL LABOR
+## AUTOMATION OF PHYSICAL LABOR
 
-### The value of human labor = production/cost.
+**Many of the changes in the distribution of labor across sectors have been driven by changes in the efficiency of human labor, which can be considered as the ratio of production to cost.**
 
-[Force Multiplier:]{.red} An external tool or resource that allows you to do more work with less effort.^[The term originally comes from the military context, but it has been widely adopted in business, technology, and other fields to describe a factor that dramatically amplifies the effectiveness of a group or system.]
+[Force Multiplier:]{.red} An external tool or resource that allows you to do more work with less effort.^[The term originally comes from the military context, but it has been widely adopted in business, technology, and other fields to describe a factor that dramatically amplifies the effectiveness of a group or system.] This might increase production of a single worker, reducing the overall number of workers needed to perform a job.  
 
-[Outsourcing:]{.red}  Outsourcing refers to the business practice of contracting out certain tasks or functions to third-party service providers instead of performing them in-house. One of the primary reasons companies outsource is to achieve cost reductions. Labor, infrastructure, or operational costs might be lower in another location or with a specialized provider.
+[Outsourcing:]{.red}  Outsourcing refers to the business practice of contracting out certain tasks or functions to third-party service providers instead of performing them in-house. One of the primary reasons companies outsource is to achieve cost reductions. Labor, infrastructure, or operational costs might be lower in another location or with a specialized provider.  
 
 
-## A CLOSER LOOK {.scrollable}
+## A CLOSER LOOK
+
+**What are common features of the sectors that displaced Agriculuture and Manufacturing?**
+
+:::: {.columns}
+
+::: {.column width=70%}
 
 ![](us-employment-sharebottom.png) 
 
-### What are common features of the sectors that displaced Agriculuture and Manufacturing?
+:::
+
+::: {.column width=30%}
+
 
 1.  The tasks are [Place Bound]{.red}.
 2.  The sectors feature a lot of [Knowledge Work]{.red}.
+
+:::
 
 ## KNOWLEDGE WORK? 
 
@@ -51,10 +62,10 @@ Knowledge work ^["Knowledge Work" is a term coined by Peter Drucker in his 1959 
 ### Characteristics
 
 1. **Intellectual Activity**: It involves thinking, analyzing, and processing information more than manual labor.
-2. **Non-routine**: Unlike many traditional jobs, knowledge work doesn't necessarily follow a set script or routine. It often involves problem-solving, decision-making, and creative thinking.
+2. **Non-routine**: It doesn't necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.
 3. **Information-based**: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.
 4. **Driven by Expertise**: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.
-5. **Autonomy**: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems. This autonomy is due to the non-routine nature of their tasks.
+5. **Autonomy**: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems. 
 6. **Continuous Learning**: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.
 7. **Outcome-focused**: The value of knowledge work is often measured by outcomes or results rather than the hours worked.
 
@@ -83,10 +94,10 @@ Knowledge work ^["Knowledge Work" is a term coined by Peter Drucker in his 1959 
 ### Knowledge Work
 
 1. **Intellectual Activity**: It involves thinking, analyzing, and processing information more than manual labor.
-2. **Non-routine**: Unlike many traditional jobs, knowledge work doesn't necessarily follow a set script or routine. It often involves problem-solving, decision-making, and creative thinking.
+2. **Non-routine**: It doesn't necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.
 3. **Information-based**: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.
 4. **Driven by Expertise**: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.
-5. **Autonomy**: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems. This autonomy is due to the non-routine nature of their tasks.
+5. **Autonomy**: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems. 
 6. **Continuous Learning**: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.
 7. **Outcome-focused**: The value of knowledge work is often measured by outcomes or results rather than the hours worked.
 
@@ -119,37 +130,48 @@ Knowledge work ^["Knowledge Work" is a term coined by Peter Drucker in his 1959 
 
 - How does this job applicant align with the needs described in our job description?
 
-**These [tasks]{.blue} are difficult to automate because their inputs are complex, unstructured, and highly variable.  They require human Cognitive Labor.**
+**These [tasks]{.red} are difficult to automate because their inputs are complex, unstructured, and highly variable.  They require human Cognitive Labor.**
 
 ## AUTOMATION OF COGNITIVE LABOR
 
-"The future is already here — it's just not very evenly distributed."
-
-- William Gibson ^[He made this observation to highlight how technological advancements and innovations might be present in certain places or among specific groups, but they haven't yet permeated all levels of society or all geographic areas. The quote encapsulates the idea that the future, in many ways, exists in pockets in the present, but its widespread adoption and distribution are yet to occur.]
+**"The future is already here — it's just not very evenly distributed."** ^[William Gibson (a science fiction author) made this observation to highlight how technological advancements and innovations might be present in certain places or among specific groups, but they haven't yet permeated all levels of society or all geographic areas. The quote encapsulates the idea that the future, in many ways, exists in pockets in the present, but its widespread adoption and distribution are yet to occur.]
 
 
 
-## Timeline of AI
+## ARTIFICIAL INTELLIGENCE
+
+
+
+::: {.panel-tabset}
+
+### History of AI
 
 [AI has a long history](https://www.analyticsvidhya.com/blog/2023/07/the-fascinating-evolution-of-generative-ai/){target="_blank"}
+
+### Visual Timeline
 
 [I'd rather have a graph](https://chat.openai.com/share/908127b8-fe2a-41c3-8989-961489ccfd66){target="_blank"}
 
 ![](fulltimelinegraph.png)
 
-## The 2022 Inflection point
+:::
+
+
+## 2022: A TIPPING POINT
 
 ![](recenttimeline.jpeg)
 
-## Generative AI
+## GENERATIVE AI
 
-Generative Artificial Intelligence describes a group of algorithms or models that can be used to create new content. Content can include text, code, images, video, audio, and simulations.
+[Generative Artificial Intelligence]{.red} describes a group of algorithms or models that can be used to create new content, including text, code, images, video, audio, and simulations. 
 
-![](AIFuture.mp4)
+:::: {.columns}
 
-Examples:
+::: {.column width="40%"}
 
-ChatGPT: Generative Pretrained Transformer with a chat interface
+**Examples:**
+
+ChatGPT: Text to Text [Generative Pretrained Transformer]{.red} with a chat interface
 
 MidJourney: Text to Image
 
@@ -163,53 +185,110 @@ Mubert: text to music.
 
 Hardtechno Dark John Carpenter Synth
 
-## Large Language Models
+:::
 
-https://www.nvidia.com/en-us/glossary/data-science/large-language-models/
+::: {column width="60%"}
 
-Why are Large Language Models Important? Historically, AI models had been focused on perception and understanding. However, large language models, which are trained on internet-scale datasets with hundreds of billions of parameters, have now unlocked an AI model's ability to generate human-like content. Models can read, write, code, draw, and create in a credible fashion and augment human creativity and improve productivity across industries to solve the world's toughest problems. The applications for these LLMs span across a plethora of use cases. For example, an AI system can learn the language of protein sequences to provide viable compounds that will help scientists develop groundbreaking, life-saving vaccines. Or computers can help humans do what they do best---be creative, communicate, and create. A writer suffering from writer's block can use a large language model to help spark their creativity. Or a software programmer can be more productive, leveraging LLMs to generate code based on natural language descriptions.
+![](AIFuture.mp4)
 
-## Basic Structure
+:::
 
-Input -\> Human -\> Output
+::::
 
-Prompt -\> Model -\> Response
+## LARGE LANGUAGE MODELS (LLM)
 
-## Operations
+A type of AI model designed to understand and generate human-like text.
 
-### Reductive
+::: aside
+Nvidia (the company that makes GPUs) has great learning resources on AI.  [This one](https://www.nvidia.com/en-us/glossary/data-science/large-language-models/) is a great summary of the significance of LLMs
+:::
 
-Large amount of text and produce a smaller output.
+::: {.panel-tabset}
+
+### Key Characteristics
+
+1. **Model Type**: Subset of deep learning within machine learning.
+2. **Architecture**: Commonly based on the Transformer architecture.
+3. **Size**: Contains billions to trillions of parameters.
+
+### Training and Capabilities
+
+1. **Training Data**: Trained on vast datasets, including books, articles, and web content.
+2. **Functionality**: Generates coherent text, answers questions, translates, summarizes, and more.
+3. **Transfer Learning**: Fine-tuned on specific datasets for specialized tasks.
+
+
+### Limitations
+
+1. Generates based on training data patterns.
+2. Doesn't "understand" like humans.
+3. Can produce incorrect or nonsensical answers.
+4. Influenced by biases in training data.
+
+## CAPABILITIES
+::: aside
+arXiv:2303.10130v5 [econ.GN] 21 Aug 2023
+:::
+
+![](/images/gptexamresults.jpg)
+
+## TASKS ARE OPERATIONS
+
+Human Cognitive Tasks
+
+Input  Human  Output
+
+LLM Operations
+
+Prompt  Model  Response
+
+## LLM OPERATIONS 
+
+::: aside
+These categories and their descriptions on the next three slides are from material by [David Shapiro](https://www.youtube.com/@4IR.David.Shapiro), particularly his [video on Prompt Engineering](https://www.youtube.com/watch?v=aq7fnqzeaPc&list=PLV3Fr1UUO9bGRNgCadLldVVZu8OHzJpbY&index=3&t=732s)
+:::
+
+### [Reductive]{.red}
+
+Take a large amount of text and produce a smaller output.
 
 Input is larger than the output.
 
-### Transformative
+### [Transformative]{.red}
 
 Transmute the input into a new format.
 
 Input and output are roughly the same size and/or meaning.
 
-### Generative
+### [Generative]{.red}
 
 Generate a large amount of text from a small set of instructions or data.
 
 Input is smaller than the output.
 
-## Reductive Operations
+## REDUCTIVE OPERATIONS
 
-Take a large amount of text and produce a smaller output.
+**Take a large amount of text and produce a smaller output.**
 
--   **Summarization:** Say the same thing with fewer words. Can use list, notes, executive summary.
--   **Distillation:** Purify the underlying principles or facts. Remove all the noise, extract axioms, foundations, etc.
--   **Extraction:** Retrieve specific kinds of information. Question answering, listing names, extracting dates, etc.
--   **Characterizing:** Describe the content of the text. Describe either the text as a whole, or within the subject.
--   **Analyzing:** Find patterns or evaluate against a framework. Structural analysis, rhetorical analysis, etc
--   **Evaluation:** Measuring, grading, or judging the content. Grading papers, evaluating against morals
--   **Critiquing:** Provide feedback within the context of the text. Provide recommendations for improvement
+-   **Summarization:** Say the same thing with fewer words. 
+    -Can use list, notes, executive summary.
+-   **Distillation:** Purify the underlying principles or facts. 
+    -Remove all the noise, extract axioms, foundations, etc.
+-   **Extraction:** Retrieve specific kinds of information. 
+    -Question answering, listing names, extracting dates, etc.
+-   **Characterizing:** Describe the content of the text. 
+    -Describe either the text as a whole, or within the subject.
+-   **Analyzing:** Find patterns or evaluate against a framework. 
+    -Structural analysis, rhetorical analysis, etc
+-   **Evaluation:** Measuring, grading, or judging the content. 
+    -Grading papers, evaluating against morals
+-   **Critiquing:** Provide feedback within the context of the text. 
+    -Provide recommendations for improvement
 
 ## Transformation Operations
 
--   **Transmute**: Transmute the input into another format. Input and output are roughly the same size and/or meaning.
+ **Transmute the input into another format. Input and output are roughly the same size and/or meaning.**
+ 
 -   **Reformatting**: Change the presentation only.
     -   Prose to screenplay, XML to JSON
 -   **Refactoring**: Achieve same results with more efficiency.
@@ -225,6 +304,8 @@ Take a large amount of text and produce a smaller output.
 
 ## Generative Operations
 
+**Generate a large amount of text from a small set of instructions or data.**
+
 -   **Drafting**: Generate a draft of some kind of document.
     -   Code, fiction, legal copy, KB, science, storytelling
 -   **Planning**: Given parameters, come up with plans.
@@ -234,91 +315,118 @@ Take a large amount of text and produce a smaller output.
 -   **Amplification**: Articulate and explicate something further.
     -   Expanding and expounding, riffing on stuff
 
-## Basic Structure
+## CRITICAL DETAILS
 
-Input -\> Model -\> Output
+::: {panel-tabset}
 
-Prompt -\> Model -\> Response
+### Prompt
 
-### Prompt Details
+**What are the characteristics of your task?**
 
-Size: Tokens Format: Text only? File uploads? .pdf, .csv, .json, .docx, .xlsx, .pptx, .jpg, .png, etc Quality: Prompt Engineering
+Operation Type: Reductive, Transformative, or Generative?
+Size: [Tokens]{.red} How much information do you need to send to the model?
+Context: What other relevant information/data is required?  Where is it?
+Format: Text only? File uploads? .pdf, .csv, .json, .docx, .xlsx, .pptx, .jpg, .png, etc 
+Quality: [Prompt Engineering]{.red}
 
-### Model Details
+### Model
 
-Size Cost Security Context Window Input Types Training Data Interface Specificity/Flexibility License
+**There are a TON of different Models and they vary substantially.**
 
-### Response Details
+Size
+Cost
+Security
+Context Window
+Input Types
+Training Data
+Type: Conversational Agent vs Task Oriented Agent
+Specificity/Flexibility
+License
 
-Accuracy Consistency Creativity Size Format Specificity
+### Response
 
-## Latent Content and Emergent Properties
+**How do evaluate the quality of the response?**
 
-## Blooms Taxonomy
+Accuracy
+Consistency
+Creativity
+Size
+Format
+Specificity
 
-A hierarchical model to classify educational learning objectives into varying complexity and specificity. Remembering: Recalling facts and concepts. Retrieval and regurgitation Understanding: Explaining ideas and concepts. Connecting words to meanings. Applying: Using information in new situations. Functional utility Analyzing: Drawing connections among ideas. Connecting the dots between concepts. Evaluating: Justifying a decision or action. Explication and articulation Creating: Producing new or original work. Generating something that did not previously exist.
+:::
 
-## Latent Content
 
-Knowledge, facts, concepts, and information that is "embedded" in the model and must be "activated" by correct prompting. Training Data: Latent content only originates from training data. World Knowledge: General facts and understanding of the world. Scientific Information: Embedded data on scientific principles. Cultural Knowledge: Information on cultures and social norms. Historical Knowledge: Data on past events and figures. Languages: Language structures, vocabulary, and syntax.
+## LATENT CONTENT
 
-## Emergent Capabilities
+**Knowledge, facts, concepts, and information that is "embedded" in the model and must be "activated" by correct prompting.**
 
-Increasingly large models have "emergent" capabilities that are not explicitly in the training data. Theory of Mind: Understanding the content of minds. It's read enough Reddit to understand how humans think. Implied Cognition: Thinking with the right prompting. Ability to "think" required to accurately predict next token. Logical Reasoning: Inductive and deductive reasoning. Triangulating principles based on observations, etc In-Context Learning: Use information not in training. Quickly adopt and apply truly novel information
+Latent content only originates from [Training Data]{.red}.
 
-## Hallucination
+Examples:
 
-Hallucination is the same cognitive behavior as creativity, differing only in recognition of its fictitious nature. Recognition: The key difference lies in acknowledging the fictitious element. Cognitive Behavior: Both involve similar mental processes for generating ideas. Fictitious vs Real: How the output is perceived or utilized. Creative Applications: Hallucinations can be channeled into artistic or innovative endeavors. Context-Dependent: The value or risk depends on the context in which it occurs.
+- World Knowledge: General facts and understanding of the world. 
+- Scientific Information: Embedded data on scientific principles. 
+- Cultural Knowledge: Information on cultures and social norms. 
+- Historical Knowledge: Data on past events and figures. 
+- Languages: Language structures, vocabulary, and syntax.
 
-## Applying this in the workplace
+## EMERGENT CAPABILITIES
 
-## Data-Centric Model
+The abilities of Large Language Models (LLMs) that arise as a result of their extensive training on vast datasets, even if those capabilities were not explicitly "taught" or "programmed" into the model. These capabilities emerge as a byproduct of the model's architecture and the sheer volume of data it's been exposed to.
 
-1.  Treat all business processes and tasks as information problems
+1. **Unintended Abilities**: Emergent capabilities might lead the model to perform tasks it wasn't explicitly trained for. For example, an [LLM might be trained on general text but can still translate between languages]{.red}, write in different styles, or even generate code.
 
-<!-- -->
+2. **Beyond Training Data**: While LLMs are trained on specific data, the patterns they recognize can be generalized to a variety of tasks. This generalization can sometimes lead to surprising and useful outputs, as well as unintended or harmful ones.
 
-a.  You have various information needs for each process or task
-b.  Information comes from various sources
-c.  You perform different transformations on the information
+3. **Complex Interactions**: The interactions between the numerous parameters in LLMs can lead to behaviors that aren't immediately predictable from the training data alone. These behaviors arise from the complex, multi-dimensional relationships the model has learned.
 
-<!-- -->
+4. **Potential and Pitfalls**: Emergent capabilities can be both an asset and a liability. On one hand, they showcase the flexibility and adaptability of LLMs. On the other, they can result in outputs that are unexpected, inaccurate, or even biased.
 
-2.  Information, Thy God
+5. **Example - Metaphor Understanding**: While not explicitly trained to understand metaphors, an LLM might still be able to interpret and generate metaphoric language due to its exposure to diverse linguistic constructs in its training data.
 
-<!-- -->
+6. **Example - Creativity**: LLMs can generate creative text, poetry, or stories. While they don't "understand" creativity in the human sense, their vast training allows them to mimic creative constructs.
 
-a.  Data is the new oil
-b.  AI is just a tool to work on data and information
-c.  Keep it all
+7. **Limitations**: Despite their emergent capabilities, LLMs have limitations. They don't truly "understand" concepts in the way humans do, and their outputs are entirely based on patterns in the data they've seen.
 
-<!-- -->
 
-3.  Types of Transformations
+## HALLUCINATION
 
-<!-- -->
+Instances where the model generates information that is not accurate, not based on its training data, or simply fabricated. Essentially, the model "hallucinates" details that aren't grounded in reality or the facts it has been trained on.
 
-a.  Shrinking: Summarization, extraction, classification
-b.  Translation: Changing from one format to another
-c.  Expanding: Brainstorming, synthesizing, drafting
+1. **Origin of the Term**: The term "hallucination" is borrowed from human psychology, where it refers to perceiving things that aren't present in reality. When applied to LLMs, it captures the idea that the model sometimes produces outputs that aren't reflective of real facts or the content it was trained on.
+  
+2. **Causes**: Hallucinations can be caused by various factors, including the model misinterpreting the input, over-generalizing from its training data, or trying to complete ambiguous queries with details it "invents" on the spot.
+  
+3. **Common in Open-ended Queries**: LLMs are more prone to hallucinate when given open-ended prompts or when there's a lack of specific context. In these situations, the model might fill in gaps with fabricated details.
+  
+4. **Concerns**: Hallucinations are a concern, especially when users rely on LLMs for accurate information. They highlight the importance of treating outputs from LLMs as suggestions or starting points rather than definitive answers.
+  
+5. **Mitigation**: Efforts to mitigate hallucinations in LLMs include refining model architectures, improving training data, and employing post-training fine-tuning or validation processes. Additionally, user feedback and iterative development are crucial for identifying and reducing such issues.
 
-## Human Cognitive Labor
+## AUTOMATION OF COGNITIVE LABOR
 
-Inputs -\> Human -\> Outputs
+### Tasks are Operations
 
-Inputs: Email, phonecall, document, spreadsheet, graph, etc...
+Complex job functions are often a series of tasks.  
 
-Human -\> word, excel, email, powerpoint, etc
+1.  Treat each task as an information problem.
+    - You have various information needs for each process or task
+    - Information comes from various sources
+    - You perform different transformations on the information
 
-Outputs: an invoice? structured data? an email? a spreadsheet? a graph?
+2.  Define each task in terms of Operations.
+    - Shrinking: Summarization, extraction, classification
+    - Translation: Changing from one format to another
+    - Expanding: Brainstorming, synthesizing, drafting
+    
+3.  [Prompt Engineering](https://www.promptengineering.org/what-are-large-language-model-llm-agents/):  The creation of the prompt is carefully engineered to provide optimal instructions and context to the LLM. Factors like tone, point of view, and conversational style help steer the LLM's response.
 
-Interface: Where does this go? How do you know it is accurate?
+4. [Model Selection](https://huggingface.co/models):  Huggingface.co currently features 350,247 models and they have a [leaderboard](https://huggingface.co/models) for performance!
 
-## Assembly Lines
+5. Evaluate the response(s) against data you trust.
 
-Think of all business tasks and work products as moving along an assembly line 1. Inputs a. Where do work items come from? b. Email, calls, bills, API calls? 2. Stations a. Who does what to the work item? b. What tools, data, information, and transformations are needed at each station? 3. Interfaces a. When is a work item handed off to the next station? b. Is it inside or outside the business? c. How do you know its ready? 4. Outputs a. Where does the work item go? What does it look like? b. A bill gets paid, a customer gets served, etc
-
-## Examples (Reductive only)
+## EXAMPLES
 
 ## Award Letter (Extraction)
 
@@ -326,9 +434,18 @@ Think of all business tasks and work products as moving along an assembly line 1
 
 ## Contract Review (Evaluation)
 
+## others
+
 ## Concerns
 
 ## AGI
+
+
+## Latent Content and Emergent Properties
+
+## Blooms Taxonomy
+
+A hierarchical model to classify educational learning objectives into varying complexity and specificity. Remembering: Recalling facts and concepts. Retrieval and regurgitation Understanding: Explaining ideas and concepts. Connecting words to meanings. Applying: Using information in new situations. Functional utility Analyzing: Drawing connections among ideas. Connecting the dots between concepts. Evaluating: Justifying a decision or action. Explication and articulation Creating: Producing new or original work. Generating something that did not previously exist.
 
 ## Resources
 
@@ -374,3 +491,5 @@ https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-generativ
 https://www.nvidia.com/en-us/glossary/data-science/large-language-models/
 
 https://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for/
+
+https://www.promptengineering.org/what-are-large-language-model-llm-agents/
