@@ -1,0 +1,91 @@
+"","source","target","value"
+"1","Aldumite","Aldumite Drilling Rig",4
+"2","Alkanes","Monopropellant",2
+"3","Aluminum","Adaptive Frame",1
+"4","Aluminum","Mag Pressure Tank",2
+"5","Aluminum","Reactive Gauge",2
+"6","Antimony","Positron Battery",2
+"7","Antimony","Semimetal Wafer",2
+"8","Austentic Manifold","Control Rod",1
+"9","Austentic Manifold","Veryl-Treated manifold",1
+"10","Beryllium","Tau Grade Rheostat",1
+"11","Biosuppressant","Substrate Molecule Sieve",2
+"12","Caesium","Aldumite Drilling Rig",2
+"13","Caesium","Indicite Wafer",2
+"14","Cobalt","Isocentered Magnet",1
+"15","Copper","Reactive Gauge",1
+"16","Copper","Tau Grade Rheostat",1
+"17","Copper","Zero Wire",1
+"18","Cosmetic","Polytextile",1
+"19","Drilling Rig","Aldumite Drilling Rig",1
+"20","Dysprosium","Control Rod",3
+"21","Europium","Microsecond Regulator",4
+"22","Fiber","Polytextile",2
+"23","Gold","Paramagnon Conductor",1
+"24","Gold","Semimetal Wafer",2
+"25","Indicite","Indicite Wafer",4
+"26","Indicite Wafer","Vytinium Fuel Rod",1
+"27","Ionic Liquids","Isotopic Coolant",1
+"28","Ionic Liquids","Molecular Sieve",2
+"29","Iron","Adaptive Frame",1
+"30","Iron","Austentic Manifold",2
+"31","Isocentered Magnet","Comm Relay",1
+"32","Isocentered Magnet","Supercooled Magnet",1
+"33","Isocentered Magnet","Zero-G Gimbal",1
+"34","Isotopic Coolant","Control Rod",1
+"35","Isotopic Coolant","Supercooled Magnet",1
+"36","Lithium","Microsecond Regulator",2
+"37","Lithium","Rothicite Magnet",2
+"38","Lubricant","Drilling Rig",2
+"39","Lubricant","Veryl-Treated manifold",2
+"40","Lubricant","Zero-G Gimbal",2
+"41","Mag Pressure Tank","Molecular Sieve",1
+"42","Mag Pressure Tank","Monopropellant",1
+"43","Membrane","Molecular Sieve",2
+"44","Memory Substrate","Substrate Molecule Sieve",3
+"45","Microsecond Regulator","Aldumite Drilling Rig",1
+"46","Molecular Sieve","Sterile Nanotubes",1
+"47","Molecular Sieve","Substrate Molecule Sieve",1
+"48","Neodymium","Paramagnon Conductor",1
+"49","Neodymium","Supercooled Magnet",3
+"50","Nickel","Austentic Manifold",2
+"51","Nickel","Isocentered Magnet",1
+"52","Nickel","Mag Pressure Tank",1
+"53","Nuclear Fuel Rod","Vytinium Fuel Rod",1
+"54","Palladium","Power Circuit",4
+"55","Palladium","Tasine Superconductor",2
+"56","Paramagnon Conductor","Power Circuit",1
+"57","Paramagnon Conductor","Tasine Superconductor",1
+"58","Plutonium","Vytinium Fuel Rod",2
+"59","Polymer","Power Circuit",2
+"60","Polymer","Tasine Superconductor",2
+"61","Positron Battery","Power Circuit",1
+"62","Reactive Gauge","Austentic Manifold",1
+"63","Reactive Gauge","Drilling Rig",1
+"64","Reactive Gauge","Monopropellant",1
+"65","Rothicite","Rothicite Magnet",4
+"66","Semimetal Wafer","Indicite Wafer",1
+"67","Semimetal Wafer","Nuclear Fuel Rod",1
+"68","Semimetal Wafer","Rothicite Magnet",1
+"69","Silver","Zero Wire",1
+"70","Solvent","Indicite Wafer",2
+"71","Solvent","Nuclear Fuel Rod",2
+"72","Solvent","Sterile Nanotubes",2
+"73","Sterile Nanotubes","Substrate Molecule Sieve",2
+"74","Supercooled Magnet","Microsecond Regulator",1
+"75","Supercooled Magnet","Rothicite Magnet",1
+"76","Tantalum","Zero-G Gimbal",2
+"77","Tasine","Tasine Superconductor",4
+"78","Tau Grade Rheostat","Comm Relay",1
+"79","Tau Grade Rheostat","Microsecond Regulator",1
+"80","Tau Grade Rheostat","Positron Battery",1
+"81","Tetrafluoride","Isotopic Coolant",1
+"82","Tungsten","Drilling Rig",3
+"83","Uranium","Nuclear Fuel Rod",3
+"84","Vanadium","Positron Battery",2
+"85","Vanadium","Sterile Nanotubes",2
+"86","Veryl","Veryl-Treated manifold",4
+"87","Vytinium","Vytinium Fuel Rod",4
+"88","Ytterbium","Veryl-Treated manifold",2
+"89","Zero Wire","Paramagnon Conductor",3
+"90","Zero Wire","Semimetal Wafer",1

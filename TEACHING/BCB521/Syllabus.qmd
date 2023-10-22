@@ -23,7 +23,7 @@ Students completing this course will be able to:
 
 ## Required Readings
 
-There is no required text.  Assigned readings for each unit will be linked in each [Assignment](Assignments/index.qmd) or [Resource](Resources/index.qmd) as well as in the Schedule of Topics below.  The course format for this semester makes formal lectures unlikely, but if they happen you can find them in the [Lectures](Lectures/index.qmd) section.
+There is no required text. Assigned readings for each unit will be linked in each [Assignment](Assignments/index.qmd) or [Resource](Resources/index.qmd) as well as in the Schedule of Topics below. The course format for this semester makes formal lectures unlikely, but if they happen you can find them in the [Lectures](Lectures/index.qmd) section.
 
 ## Course Policies
 
@@ -65,7 +65,7 @@ Are there significant ethical, economic, security, and social risks associated w
 
 That being said, there is a difference between using these tools as a means of achieving the best possible result, and using them because you are lazy or indifferent to the outcome of your task.
 
-I encourage you to incorporate AI tools into your learning whenever it makes sense to do so.  My rule of thumb is this... If it is helping you learn, grow, and be productive you are probably safe.  It you are using AI to circumvent learning, or to trick an assessment tool into thinking you have a skill that you don't, you have crossed the line.
+I encourage you to incorporate AI tools into your learning whenever it makes sense to do so. My rule of thumb is this... If it is helping you learn, grow, and be productive you are probably safe. It you are using AI to circumvent learning, or to trick an assessment tool into thinking you have a skill that you don't, you have crossed the line.
 
 ## Class Schedule
 

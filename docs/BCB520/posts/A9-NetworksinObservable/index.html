@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.220">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,9 +20,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -49,43 +50,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -121,7 +92,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script type="module" src="../../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
@@ -184,7 +156,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
       <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../BCB520/index.html">BCB 520:: Foundations of Data Visualization</a></li><li class="breadcrumb-item"><a href="../../../BCB520/posts/T6-APIsandJSON/index.html">Posts</a></li><li class="breadcrumb-item"><a href="../../../BCB520/posts/A9-NetworksinObservable/index.html">NETWORKS IN OBSERVABLE</a></li></ol></nav>
-      <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
   </nav>
@@ -238,173 +210,206 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../PolymorphicGames.html" class="sidebar-item-text sidebar-link">Polymorphic Games</a>
+  <a href="../../../PolymorphicGames.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Polymorphic Games</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Publications.html" class="sidebar-item-text sidebar-link">PUBLICATIONS</a>
+  <a href="../../../Publications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PUBLICATIONS</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Research.html" class="sidebar-item-text sidebar-link">RESEARCH</a>
+  <a href="../../../Research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">RESEARCH</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Teaching.html" class="sidebar-item-text sidebar-link">TEACHING</a>
+  <a href="../../../Teaching.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TEACHING</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../BCB520/index.html" class="sidebar-item-text sidebar-link">BCB 520:: Foundations of Data Visualization</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a href="../../../BCB520/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BCB 520:: Foundations of Data Visualization</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Posts</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Posts</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/T6-APIsandJSON/index.html" class="sidebar-item-text sidebar-link">TUTORIAL 6 - APIs and JSON data</a>
+  <a href="../../../BCB520/posts/T6-APIsandJSON/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TUTORIAL 6 - APIs and JSON data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/T8-MidtermExample/index.html" class="sidebar-item-text sidebar-link">BCB 520 - Midterm Portfolio Post</a>
+  <a href="../../../BCB520/posts/T8-MidtermExample/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BCB 520 - Midterm Portfolio Post</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/L2-Data-Abstraction/index.html" class="sidebar-item-text sidebar-link">LECTURE 2 - DATA ABSTRACTION</a>
+  <a href="../../../BCB520/posts/L2-Data-Abstraction/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LECTURE 2 - DATA ABSTRACTION</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/T4-BarriesData/index.html" class="sidebar-item-text sidebar-link">TUTORIAL 4</a>
+  <a href="../../../BCB520/posts/T4-BarriesData/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TUTORIAL 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/L4-Marks-Channels/index.html" class="sidebar-item-text sidebar-link">LECTURE 4</a>
+  <a href="../../../BCB520/posts/L4-Marks-Channels/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LECTURE 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/Certificate/index.html" class="sidebar-item-text sidebar-link">CERTIFICATE</a>
+  <a href="../../../BCB520/posts/Certificate/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CERTIFICATE</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/L1-Intro/index.html" class="sidebar-item-text sidebar-link">LECTURE 1 - INTRO</a>
+  <a href="../../../BCB520/posts/L1-Intro/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LECTURE 1 - INTRO</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/T3-Python/index.html" class="sidebar-item-text sidebar-link">TUTORIAL 3 - Python</a>
+  <a href="../../../BCB520/posts/T3-Python/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TUTORIAL 3 - Python</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/A1-Lit-Prog/index.html" class="sidebar-item-text sidebar-link">ASSIGNMENT 1 - Fun with literate programming.</a>
+  <a href="../../../BCB520/posts/A1-Lit-Prog/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ASSIGNMENT 1 - Fun with literate programming.</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/L3-TaskAbstraction/index.html" class="sidebar-item-text sidebar-link">LECTURE 3 - TASK ABSTRACTION</a>
+  <a href="../../../BCB520/posts/L3-TaskAbstraction/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LECTURE 3 - TASK ABSTRACTION</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/A9-NetworksinObservable/index.html" class="sidebar-item-text sidebar-link active">NETWORKS IN OBSERVABLE</a>
+  <a href="../../../BCB520/posts/A9-NetworksinObservable/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">NETWORKS IN OBSERVABLE</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/T1-Lit-Prog/index.html" class="sidebar-item-text sidebar-link">TUTORIAL 1 - Literate Programming</a>
+  <a href="../../../BCB520/posts/T1-Lit-Prog/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TUTORIAL 1 - Literate Programming</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/Syllabus/index.html" class="sidebar-item-text sidebar-link">SYLLABUS 2023</a>
+  <a href="../../../BCB520/posts/Syllabus/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SYLLABUS 2023</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/A8-NetworkData/index.html" class="sidebar-item-text sidebar-link">Practice with Network Data</a>
+  <a href="../../../BCB520/posts/A8-NetworkData/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practice with Network Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/A3-PrototypeVizPortfolio/index.html" class="sidebar-item-text sidebar-link">ASSIGNMENT 3</a>
+  <a href="../../../BCB520/posts/A3-PrototypeVizPortfolio/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ASSIGNMENT 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/A6-Midterm/index.html" class="sidebar-item-text sidebar-link">Midterm Assignment</a>
+  <a href="../../../BCB520/posts/A6-Midterm/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Midterm Assignment</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/L6-TabularData1/index.html" class="sidebar-item-text sidebar-link">LECTURE 6 - Tabular Data</a>
+  <a href="../../../BCB520/posts/L6-TabularData1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LECTURE 6 - Tabular Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/T7-NHLDraft/index.html" class="sidebar-item-text sidebar-link">TUTORIAL 7</a>
+  <a href="../../../BCB520/posts/T7-NHLDraft/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TUTORIAL 7</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/L5-ThumbRules/index.html" class="sidebar-item-text sidebar-link">LECTURE 5 - Rules of Thumb</a>
+  <a href="../../../BCB520/posts/L5-ThumbRules/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LECTURE 5 - Rules of Thumb</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/A5-TabularData/index.html" class="sidebar-item-text sidebar-link">ASSIGNMENT 5</a>
+  <a href="../../../BCB520/posts/A5-TabularData/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ASSIGNMENT 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/A4-MarksChannels/index.html" class="sidebar-item-text sidebar-link">ASSIGNMENT 4</a>
+  <a href="../../../BCB520/posts/A4-MarksChannels/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ASSIGNMENT 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/A2-YourData/index.html" class="sidebar-item-text sidebar-link">ASSIGNMENT 2 - Your Data.</a>
+  <a href="../../../BCB520/posts/A2-YourData/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ASSIGNMENT 2 - Your Data.</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/T2-Anscombe/index.html" class="sidebar-item-text sidebar-link">TUTORIAL 2 - Literate Programming and Anscombe’s Quartet</a>
+  <a href="../../../BCB520/posts/T2-Anscombe/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TUTORIAL 2 - Literate Programming and Anscombe’s Quartet</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/A10-FinalProject/index.html" class="sidebar-item-text sidebar-link">FINAL PROJECT</a>
+  <a href="../../../BCB520/posts/A10-FinalProject/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FINAL PROJECT</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/T5-MarksChannels/index.html" class="sidebar-item-text sidebar-link">TUTORIAL 5 - Marks and Channels</a>
+  <a href="../../../BCB520/posts/T5-MarksChannels/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TUTORIAL 5 - Marks and Channels</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/L8-NetworkData/index.html" class="sidebar-item-text sidebar-link">LECTURE 8 - Network Data</a>
+  <a href="../../../BCB520/posts/L8-NetworkData/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LECTURE 8 - Network Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../BCB520/posts/A7-SpatialData/index.html" class="sidebar-item-text sidebar-link">Practice with Spatial Data</a>
+  <a href="../../../BCB520/posts/A7-SpatialData/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practice with Spatial Data</span></a>
   </div>
 </li>
       </ul>
@@ -413,83 +418,113 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../TEACHING/index.html" class="sidebar-item-text sidebar-link">TEACHING</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a href="../../../TEACHING/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TEACHING</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../TEACHING/BCB521/index.html" class="sidebar-item-text sidebar-link">BCB 521</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a href="../../../TEACHING/BCB521/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BCB 521</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../TEACHING/BCB521/Syllabus.html" class="sidebar-item-text sidebar-link">SYLLABUS 2023</a>
+  <a href="../../../TEACHING/BCB521/Syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SYLLABUS 2023</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../TEACHING/BCB521/Assignments/index.html" class="sidebar-item-text sidebar-link">Assignments</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <a href="../../../TEACHING/BCB521/Assignments/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignments</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../TEACHING/BCB521/Assignments/A1-Lit-Prog/index.html" class="sidebar-item-text sidebar-link">ASSIGNMENT 1 - Fun with literate programming.</a>
+  <a href="../../../TEACHING/BCB521/Assignments/A1-Lit-Prog/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ASSIGNMENT 1 - Fun with literate programming.</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../TEACHING/BCB521/Assignments/A2-PortfolioSetUp/index.html" class="sidebar-item-text sidebar-link">ASSIGNMENT 2</a>
+  <a href="../../../TEACHING/BCB521/Assignments/A2-PortfolioSetUp/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ASSIGNMENT 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../TEACHING/BCB521/Assignments/A3-YourData/index.html" class="sidebar-item-text sidebar-link">ASSIGNMENT 3 - Your Data.</a>
+  <a href="../../../TEACHING/BCB521/Assignments/A3-YourData/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ASSIGNMENT 3 - Your Data.</span></a>
   </div>
 </li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../TEACHING/BCB521/Resources/index.html" class="sidebar-item-text sidebar-link">Resources</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <a href="../../../TEACHING/BCB521/Resources/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../TEACHING/BCB521/Resources/T2-RStudioGit/index.html" class="sidebar-item-text sidebar-link">CONNECTING GIT WITH RSTUDIO</a>
+  <a href="../../../TEACHING/BCB521/Resources/T2-RStudioGit/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CONNECTING GIT WITH RSTUDIO</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../TEACHING/BCB521/Resources/Certificate/index.html" class="sidebar-item-text sidebar-link">CERTIFICATE</a>
+  <a href="../../../TEACHING/BCB521/Resources/Certificate/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CERTIFICATE</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../TEACHING/BCB521/Resources/T3-BasicDataWrangling/index.html" class="sidebar-item-text sidebar-link">Tutorial - Basic Data Wrangling</a>
+  <a href="../../../TEACHING/BCB521/Resources/T3-BasicDataWrangling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tutorial - Basic Data Wrangling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../TEACHING/BCB521/Resources/T1-Lit-Prog/index.html" class="sidebar-item-text sidebar-link">TUTORIAL 1 - Literate Programming</a>
+  <a href="../../../TEACHING/BCB521/Resources/T1-Lit-Prog/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TUTORIAL 1 - Literate Programming</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../TEACHING/BCB521/Resources/ABT/index.html" class="sidebar-item-text sidebar-link">A simple framework for communication</a>
+  <a href="../../../TEACHING/BCB521/Resources/ABT/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A simple framework for communication</span></a>
   </div>
 </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../TEACHING/BCB521/Resources/T4-Storyboarding/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Starfield Data Science</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth4 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../TEACHING/BCB521/Resources/T4-Storyboarding/AnimatedManufacture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Starfield Animated Manufacturing</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
       </ul>
   </li>
       </ul>
@@ -498,81 +533,95 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../ProfessorPolymorphic/index.html" class="sidebar-item-text sidebar-link">Professor Polymorphic</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
+            <a href="../../../ProfessorPolymorphic/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Professor Polymorphic</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">Posts</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
+ <span class="menu-text">Posts</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../ProfessorPolymorphic/posts/post-with-code/index.html" class="sidebar-item-text sidebar-link">Observable Experiment</a>
+  <a href="../../../ProfessorPolymorphic/posts/post-with-code/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Observable Experiment</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../ProfessorPolymorphic/posts/UndergradResearch/index.html" class="sidebar-item-text sidebar-link">UNDERGRADUATE RESEARCH</a>
+  <a href="../../../ProfessorPolymorphic/posts/UndergradResearch/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">UNDERGRADUATE RESEARCH</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../ProfessorPolymorphic/posts/DataScienceMythos/index.html" class="sidebar-item-text sidebar-link">The Data Science Mythos</a>
+  <a href="../../../ProfessorPolymorphic/posts/DataScienceMythos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Data Science Mythos</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../ProfessorPolymorphic/posts/TwinStickGraphs1/index.html" class="sidebar-item-text sidebar-link">Embedding Data Literacy Content in Project TwinStick</a>
+  <a href="../../../ProfessorPolymorphic/posts/TwinStickGraphs1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Embedding Data Literacy Content in Project TwinStick</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../ProfessorPolymorphic/posts/AIFuture/index.html" class="sidebar-item-text sidebar-link">Automation or Augmentation? AI and the Future of Work.</a>
+  <a href="../../../ProfessorPolymorphic/posts/AIFuture/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Automation or Augmentation? AI and the Future of Work.</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../ProfessorPolymorphic/posts/TickBaseDEI/index.html" class="sidebar-item-text sidebar-link">Reflections on Mentoring and Diversity</a>
+  <a href="../../../ProfessorPolymorphic/posts/TickBaseDEI/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reflections on Mentoring and Diversity</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../ProfessorPolymorphic/posts/welcome/index.html" class="sidebar-item-text sidebar-link">You’ve gotta be f***ing kidding…</a>
+  <a href="../../../ProfessorPolymorphic/posts/welcome/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">You’ve gotta be f***ing kidding…</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../ProfessorPolymorphic/posts/WebScrape/index.html" class="sidebar-item-text sidebar-link">TUTORIAL 3 - Python</a>
+  <a href="../../../ProfessorPolymorphic/posts/WebScrape/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TUTORIAL 3 - Python</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../ProfessorPolymorphic/posts/AIVideo/index.html" class="sidebar-item-text sidebar-link">My First AI Generated Video</a>
+  <a href="../../../ProfessorPolymorphic/posts/AIVideo/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">My First AI Generated Video</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../ProfessorPolymorphic/posts/LabMeetings/index.html" class="sidebar-item-text sidebar-link">Polymorphic Games Lab Meeting</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
+            <a href="../../../ProfessorPolymorphic/posts/LabMeetings/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Polymorphic Games Lab Meeting</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../ProfessorPolymorphic/posts/LabMeetings/OSTime.html" class="sidebar-item-text sidebar-link">OSDevTimeline</a>
+  <a href="../../../ProfessorPolymorphic/posts/LabMeetings/OSTime.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OSDevTimeline</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../ProfessorPolymorphic/posts/LabMeetings/SanteFeWorkshop.html" class="sidebar-item-text sidebar-link">SanteFe Workshop</a>
+  <a href="../../../ProfessorPolymorphic/posts/LabMeetings/SanteFeWorkshop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SanteFe Workshop</span></a>
   </div>
 </li>
       </ul>
@@ -1094,9 +1143,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1467,9 +1530,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a>update <span class="op">=</span> chart2<span class="op">.</span><span class="fu">update</span>(graph)</span>
 <span id="cb6-132"><a href="#cb6-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a><span class="vs">```</span></span>
+<span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a><span class="vs">The code chunk below shows us how Dr. Bostock creates the basic architecture of an [EDGE LIST]{.red} called `</span><span class="fu">links</span><span class="vs">` along with NODE LABELS called `</span><span class="fu">nodes</span><span class="vs">`.  Have a close look at the structure.  He is setting this up in a heirarchy very similar to a JSON file, which we will examine in **EXAMPLE 2**.</span></span>
+<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a>The code chunk below shows us how Dr. Bostock creates the basic architecture of an <span class="co">[</span><span class="ot">EDGE LIST</span><span class="co">]</span>{.red} called <span class="in">`links`</span> along with NODE LABELS called <span class="in">`nodes`</span>.  Have a close look at the structure.  He is setting this up in a heirarchy very similar to a JSON file, which we will examine in **EXAMPLE 2**.</span>
 <span id="cb6-136"><a href="#cb6-136" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-139"><a href="#cb6-139" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
 <span id="cb6-140"><a href="#cb6-140" aria-hidden="true" tabindex="-1"></a>graph1 <span class="op">=</span> ({</span>
@@ -1511,15 +1574,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb6-176"><a href="#cb6-176" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-177"><a href="#cb6-177" aria-hidden="true" tabindex="-1"></a>height <span class="op">=</span> <span class="dv">400</span></span>
 <span id="cb6-178"><a href="#cb6-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-179"><a href="#cb6-179" aria-hidden="true" tabindex="-1"></a><span class="vs">```</span></span>
+<span id="cb6-179"><a href="#cb6-179" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb6-180"><a href="#cb6-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-181"><a href="#cb6-181" aria-hidden="true" tabindex="-1"></a><span class="vs">## TASK 1</span></span>
+<span id="cb6-181"><a href="#cb6-181" aria-hidden="true" tabindex="-1"></a><span class="fu">## TASK 1</span></span>
 <span id="cb6-182"><a href="#cb6-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-183"><a href="#cb6-183" aria-hidden="true" tabindex="-1"></a><span class="vs">Change the `</span><span class="fu">graph3</span><span class="vs">` object so that it contains six nodes called "Jiyin", "Ronald", "Erick", "Cody", "Mac", and "PC". Change the `</span><span class="fu">links</span><span class="vs">` object to reflect our shared understanding of those links.</span></span>
+<span id="cb6-183"><a href="#cb6-183" aria-hidden="true" tabindex="-1"></a>Change the <span class="in">`graph3`</span> object so that it contains six nodes called "Jiyin", "Ronald", "Erick", "Cody", "Mac", and "PC". Change the <span class="in">`links`</span> object to reflect our shared understanding of those links.</span>
 <span id="cb6-184"><a href="#cb6-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-185"><a href="#cb6-185" aria-hidden="true" tabindex="-1"></a><span class="vs">## EXAMPLE 2: INTERACTIVE FORCE DIRECTED GRAPH</span></span>
+<span id="cb6-185"><a href="#cb6-185" aria-hidden="true" tabindex="-1"></a><span class="fu">## EXAMPLE 2: INTERACTIVE FORCE DIRECTED GRAPH</span></span>
 <span id="cb6-186"><a href="#cb6-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-187"><a href="#cb6-187" aria-hidden="true" tabindex="-1"></a><span class="vs">I honestly cannot believe this works!  I mean... Hey!  Look at this cool interactive network!</span></span>
+<span id="cb6-187"><a href="#cb6-187" aria-hidden="true" tabindex="-1"></a>I honestly cannot believe this works!  I mean... Hey!  Look at this cool interactive network!</span>
 <span id="cb6-188"><a href="#cb6-188" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-191"><a href="#cb6-191" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
 <span id="cb6-192"><a href="#cb6-192" aria-hidden="true" tabindex="-1"></a>chart <span class="op">=</span> <span class="fu">ForceGraph</span>(miserables<span class="op">,</span> {</span>
@@ -1532,13 +1595,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb6-199"><a href="#cb6-199" aria-hidden="true" tabindex="-1"></a>  invalidation <span class="co">// a promise to stop the simulation when the cell is re-run</span></span>
 <span id="cb6-200"><a href="#cb6-200" aria-hidden="true" tabindex="-1"></a>})</span>
 <span id="cb6-201"><a href="#cb6-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-202"><a href="#cb6-202" aria-hidden="true" tabindex="-1"></a><span class="vs">```</span></span>
+<span id="cb6-202"><a href="#cb6-202" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb6-203"><a href="#cb6-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-204"><a href="#cb6-204" aria-hidden="true" tabindex="-1"></a><span class="vs">### JSON - Abandon All Hope Ye Who Enter Here</span></span>
+<span id="cb6-204"><a href="#cb6-204" aria-hidden="true" tabindex="-1"></a><span class="fu">### JSON - Abandon All Hope Ye Who Enter Here</span></span>
 <span id="cb6-205"><a href="#cb6-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-206"><a href="#cb6-206" aria-hidden="true" tabindex="-1"></a><span class="vs">The first line of code in the chunk below defines the data object from a .json file called `</span>miserables<span class="op">.</span><span class="fu">json</span><span class="vs">`.  Have a look at this file within RStudio.  Does the overall structure look familiar?</span></span>
+<span id="cb6-206"><a href="#cb6-206" aria-hidden="true" tabindex="-1"></a>The first line of code in the chunk below defines the data object from a .json file called <span class="in">`miserables.json`</span>.  Have a look at this file within RStudio.  Does the overall structure look familiar?</span>
 <span id="cb6-207"><a href="#cb6-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-208"><a href="#cb6-208" aria-hidden="true" tabindex="-1"></a><span class="vs">Could we possibly replace the stupid data file about a stupid musical with something of our own design???  </span></span>
+<span id="cb6-208"><a href="#cb6-208" aria-hidden="true" tabindex="-1"></a>Could we possibly replace the stupid data file about a stupid musical with something of our own design???  </span>
 <span id="cb6-209"><a href="#cb6-209" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-210"><a href="#cb6-210" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-213"><a href="#cb6-213" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
@@ -1688,46 +1751,46 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb6-357"><a href="#cb6-357" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-358"><a href="#cb6-358" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-359"><a href="#cb6-359" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-360"><a href="#cb6-360" aria-hidden="true" tabindex="-1"></a><span class="vs">```</span></span>
+<span id="cb6-360"><a href="#cb6-360" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb6-361"><a href="#cb6-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-362"><a href="#cb6-362" aria-hidden="true" tabindex="-1"></a><span class="vs">## TASK 2</span></span>
+<span id="cb6-362"><a href="#cb6-362" aria-hidden="true" tabindex="-1"></a><span class="fu">## TASK 2</span></span>
 <span id="cb6-363"><a href="#cb6-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-364"><a href="#cb6-364" aria-hidden="true" tabindex="-1"></a><span class="vs">What if we replaced the datafile by making our own json file??</span></span>
+<span id="cb6-364"><a href="#cb6-364" aria-hidden="true" tabindex="-1"></a>What if we replaced the datafile by making our own json file??</span>
 <span id="cb6-365"><a href="#cb6-365" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-368"><a href="#cb6-368" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb6-369"><a href="#cb6-369" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jsonlite)</span>
 <span id="cb6-370"><a href="#cb6-370" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-371"><a href="#cb6-371" aria-hidden="true" tabindex="-1"></a># create data frames <span class="cf">for</span> nodes and links</span>
-<span id="cb6-372"><a href="#cb6-372" aria-hidden="true" tabindex="-1"></a>nodes <span class="op">&lt;-</span> data<span class="op">.</span><span class="fu">frame</span>(</span>
-<span id="cb6-373"><a href="#cb6-373" aria-hidden="true" tabindex="-1"></a>  id <span class="op">=</span> <span class="fu">c</span>(<span class="st">"Barrie"</span><span class="op">,</span> <span class="st">"Ronald"</span><span class="op">,</span> <span class="st">"Cody"</span><span class="op">,</span> <span class="st">"Erick"</span><span class="op">,</span> <span class="st">"Jiyin"</span><span class="op">,</span> <span class="st">"Cthulhu"</span>)<span class="op">,</span></span>
-<span id="cb6-374"><a href="#cb6-374" aria-hidden="true" tabindex="-1"></a>  group <span class="op">=</span> <span class="fu">c</span>(<span class="dv">1</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">1</span> <span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span>)</span>
+<span id="cb6-371"><a href="#cb6-371" aria-hidden="true" tabindex="-1"></a><span class="co"># create data frames for nodes and links</span></span>
+<span id="cb6-372"><a href="#cb6-372" aria-hidden="true" tabindex="-1"></a>nodes <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb6-373"><a href="#cb6-373" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="fu">c</span>(<span class="st">"Barrie"</span>, <span class="st">"Ronald"</span>, <span class="st">"Cody"</span>, <span class="st">"Erick"</span>, <span class="st">"Jiyin"</span>, <span class="st">"Cthulhu"</span>),</span>
+<span id="cb6-374"><a href="#cb6-374" aria-hidden="true" tabindex="-1"></a>  <span class="at">group =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span> , <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
 <span id="cb6-375"><a href="#cb6-375" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb6-376"><a href="#cb6-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-377"><a href="#cb6-377" aria-hidden="true" tabindex="-1"></a>links <span class="op">&lt;-</span> data<span class="op">.</span><span class="fu">frame</span>(</span>
-<span id="cb6-378"><a href="#cb6-378" aria-hidden="true" tabindex="-1"></a>  source <span class="op">=</span> <span class="fu">c</span>(<span class="st">"Barrie"</span><span class="op">,</span> <span class="st">"Ronald"</span><span class="op">,</span> <span class="st">"Cody"</span><span class="op">,</span> <span class="st">"Barrie"</span><span class="op">,</span> <span class="st">"Erick"</span><span class="op">,</span> <span class="st">"Jiyin"</span><span class="op">,</span> <span class="st">"Ronald"</span>)<span class="op">,</span></span>
-<span id="cb6-379"><a href="#cb6-379" aria-hidden="true" tabindex="-1"></a>  target <span class="op">=</span> <span class="fu">c</span>(<span class="st">"Cthulhu"</span><span class="op">,</span> <span class="st">"Erick"</span><span class="op">,</span> <span class="st">"Jiyin"</span><span class="op">,</span> <span class="st">"Erick"</span><span class="op">,</span> <span class="st">"Cthulhu"</span><span class="op">,</span> <span class="st">"Ronald"</span><span class="op">,</span> <span class="st">"Cody"</span>)<span class="op">,</span></span>
-<span id="cb6-380"><a href="#cb6-380" aria-hidden="true" tabindex="-1"></a>  value <span class="op">=</span> <span class="fu">c</span>(<span class="dv">1</span><span class="op">,</span> <span class="dv">8</span><span class="op">,</span> <span class="dv">10</span><span class="op">,</span> <span class="dv">6</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">1</span>)</span>
+<span id="cb6-377"><a href="#cb6-377" aria-hidden="true" tabindex="-1"></a>links <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb6-378"><a href="#cb6-378" aria-hidden="true" tabindex="-1"></a>  <span class="at">source =</span> <span class="fu">c</span>(<span class="st">"Barrie"</span>, <span class="st">"Ronald"</span>, <span class="st">"Cody"</span>, <span class="st">"Barrie"</span>, <span class="st">"Erick"</span>, <span class="st">"Jiyin"</span>, <span class="st">"Ronald"</span>),</span>
+<span id="cb6-379"><a href="#cb6-379" aria-hidden="true" tabindex="-1"></a>  <span class="at">target =</span> <span class="fu">c</span>(<span class="st">"Cthulhu"</span>, <span class="st">"Erick"</span>, <span class="st">"Jiyin"</span>, <span class="st">"Erick"</span>, <span class="st">"Cthulhu"</span>, <span class="st">"Ronald"</span>, <span class="st">"Cody"</span>),</span>
+<span id="cb6-380"><a href="#cb6-380" aria-hidden="true" tabindex="-1"></a>  <span class="at">value =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">10</span>, <span class="dv">6</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
 <span id="cb6-381"><a href="#cb6-381" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb6-382"><a href="#cb6-382" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-383"><a href="#cb6-383" aria-hidden="true" tabindex="-1"></a># convert data frames to <span class="bu">JSON</span> objects</span>
-<span id="cb6-384"><a href="#cb6-384" aria-hidden="true" tabindex="-1"></a>nodes_json <span class="op">&lt;-</span> <span class="fu">toJSON</span>(<span class="fu">list</span>(nodes <span class="op">=</span> nodes)<span class="op">,</span> pretty <span class="op">=</span> TRUE)</span>
-<span id="cb6-385"><a href="#cb6-385" aria-hidden="true" tabindex="-1"></a>links_json <span class="op">&lt;-</span> <span class="fu">toJSON</span>(<span class="fu">list</span>(links <span class="op">=</span> links)<span class="op">,</span> pretty <span class="op">=</span> TRUE)</span>
+<span id="cb6-383"><a href="#cb6-383" aria-hidden="true" tabindex="-1"></a><span class="co"># convert data frames to JSON objects</span></span>
+<span id="cb6-384"><a href="#cb6-384" aria-hidden="true" tabindex="-1"></a>nodes_json <span class="ot">&lt;-</span> <span class="fu">toJSON</span>(<span class="fu">list</span>(<span class="at">nodes =</span> nodes), <span class="at">pretty =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb6-385"><a href="#cb6-385" aria-hidden="true" tabindex="-1"></a>links_json <span class="ot">&lt;-</span> <span class="fu">toJSON</span>(<span class="fu">list</span>(<span class="at">links =</span> links), <span class="at">pretty =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb6-386"><a href="#cb6-386" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-387"><a href="#cb6-387" aria-hidden="true" tabindex="-1"></a># merge <span class="bu">JSON</span> objects into one</span>
-<span id="cb6-388"><a href="#cb6-388" aria-hidden="true" tabindex="-1"></a>json <span class="op">&lt;-</span> <span class="fu">paste0</span>( nodes_json<span class="op">,</span> links_json)</span>
+<span id="cb6-387"><a href="#cb6-387" aria-hidden="true" tabindex="-1"></a><span class="co"># merge JSON objects into one</span></span>
+<span id="cb6-388"><a href="#cb6-388" aria-hidden="true" tabindex="-1"></a>json <span class="ot">&lt;-</span> <span class="fu">paste0</span>( nodes_json, links_json)</span>
 <span id="cb6-389"><a href="#cb6-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-390"><a href="#cb6-390" aria-hidden="true" tabindex="-1"></a># write <span class="bu">JSON</span> object to file</span>
-<span id="cb6-391"><a href="#cb6-391" aria-hidden="true" tabindex="-1"></a><span class="fu">write</span>(json<span class="op">,</span> file <span class="op">=</span> <span class="st">"network_graph2.json"</span>)</span>
+<span id="cb6-390"><a href="#cb6-390" aria-hidden="true" tabindex="-1"></a><span class="co"># write JSON object to file</span></span>
+<span id="cb6-391"><a href="#cb6-391" aria-hidden="true" tabindex="-1"></a><span class="fu">write</span>(json, <span class="at">file =</span> <span class="st">"network_graph2.json"</span>)</span>
 <span id="cb6-392"><a href="#cb6-392" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-393"><a href="#cb6-393" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-394"><a href="#cb6-394" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-395"><a href="#cb6-395" aria-hidden="true" tabindex="-1"></a><span class="vs">```</span></span>
+<span id="cb6-395"><a href="#cb6-395" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb6-396"><a href="#cb6-396" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-397"><a href="#cb6-397" aria-hidden="true" tabindex="-1"></a><span class="vs">Oh god....  now go back and point the stuff to the stuff...</span></span>
+<span id="cb6-397"><a href="#cb6-397" aria-hidden="true" tabindex="-1"></a>Oh god....  now go back and point the stuff to the stuff...</span>
 <span id="cb6-398"><a href="#cb6-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-399"><a href="#cb6-399" aria-hidden="true" tabindex="-1"></a><span class="vs">Anyway.... here is where I want to go:</span></span>
+<span id="cb6-399"><a href="#cb6-399" aria-hidden="true" tabindex="-1"></a>Anyway.... here is where I want to go:</span>
 <span id="cb6-400"><a href="#cb6-400" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-401"><a href="#cb6-401" aria-hidden="true" tabindex="-1"></a><span class="vs">[AMAZING](https://observablehq.com/@john-guerra/force-in-a-box)</span></span>
+<span id="cb6-401"><a href="#cb6-401" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">AMAZING</span><span class="co">](https://observablehq.com/@john-guerra/force-in-a-box)</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

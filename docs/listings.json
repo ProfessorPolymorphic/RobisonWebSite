@@ -1,5 +1,40 @@
 [
   {
+    "listing": "/ProfessorPolymorphic/index.html",
+    "items": [
+      "/ProfessorPolymorphic/posts/post-with-code/index.html",
+      "/ProfessorPolymorphic/posts/AIVideo/index.html",
+      "/ProfessorPolymorphic/posts/AIFuture/index.html",
+      "/ProfessorPolymorphic/posts/TwinStickGraphs1/index.html",
+      "/ProfessorPolymorphic/posts/TickBaseDEI/index.html",
+      "/ProfessorPolymorphic/posts/DataScienceMythos/index.html",
+      "/ProfessorPolymorphic/posts/LabMeetings/index.html",
+      "/ProfessorPolymorphic/posts/WebScrape/index.html",
+      "/ProfessorPolymorphic/posts/UndergradResearch/index.html",
+      "/ProfessorPolymorphic/posts/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/TEACHING/BCB521/Resources/index.html",
+    "items": [
+      "/TEACHING/BCB521/Resources/ABT/index.html",
+      "/TEACHING/BCB521/Resources/T4-Storyboarding/AnimatedManufacture.html",
+      "/TEACHING/BCB521/Resources/T4-Storyboarding/index.html",
+      "/TEACHING/BCB521/Resources/T3-BasicDataWrangling/index.html",
+      "/TEACHING/BCB521/Resources/T2-RStudioGit/index.html",
+      "/TEACHING/BCB521/Resources/T1-Lit-Prog/index.html",
+      "/TEACHING/BCB521/Resources/Certificate/index.html"
+    ]
+  },
+  {
+    "listing": "/TEACHING/BCB521/Assignments/index.html",
+    "items": [
+      "/TEACHING/BCB521/Assignments/A3-YourData/index.html",
+      "/TEACHING/BCB521/Assignments/A2-PortfolioSetUp/index.html",
+      "/TEACHING/BCB521/Assignments/A1-Lit-Prog/index.html"
+    ]
+  },
+  {
     "listing": "/BCB520/index.html",
     "items": [
       "/BCB520/posts/T6-APIsandJSON/index.html",
@@ -29,39 +64,6 @@
       "/BCB520/posts/Syllabus/index.html",
       "/BCB520/posts/A1-Lit-Prog/index.html",
       "/BCB520/posts/L1-Intro/index.html"
-    ]
-  },
-  {
-    "listing": "/TEACHING/BCB521/Assignments/index.html",
-    "items": [
-      "/TEACHING/BCB521/Assignments/A3-YourData/index.html",
-      "/TEACHING/BCB521/Assignments/A2-PortfolioSetUp/index.html",
-      "/TEACHING/BCB521/Assignments/A1-Lit-Prog/index.html"
-    ]
-  },
-  {
-    "listing": "/TEACHING/BCB521/Resources/index.html",
-    "items": [
-      "/TEACHING/BCB521/Resources/ABT/index.html",
-      "/TEACHING/BCB521/Resources/T3-BasicDataWrangling/index.html",
-      "/TEACHING/BCB521/Resources/T2-RStudioGit/index.html",
-      "/TEACHING/BCB521/Resources/T1-Lit-Prog/index.html",
-      "/TEACHING/BCB521/Resources/Certificate/index.html"
-    ]
-  },
-  {
-    "listing": "/ProfessorPolymorphic/index.html",
-    "items": [
-      "/ProfessorPolymorphic/posts/post-with-code/index.html",
-      "/ProfessorPolymorphic/posts/AIVideo/index.html",
-      "/ProfessorPolymorphic/posts/AIFuture/index.html",
-      "/ProfessorPolymorphic/posts/TwinStickGraphs1/index.html",
-      "/ProfessorPolymorphic/posts/TickBaseDEI/index.html",
-      "/ProfessorPolymorphic/posts/DataScienceMythos/index.html",
-      "/ProfessorPolymorphic/posts/LabMeetings/index.html",
-      "/ProfessorPolymorphic/posts/WebScrape/index.html",
-      "/ProfessorPolymorphic/posts/UndergradResearch/index.html",
-      "/ProfessorPolymorphic/posts/welcome/index.html"
     ]
   }
 ]

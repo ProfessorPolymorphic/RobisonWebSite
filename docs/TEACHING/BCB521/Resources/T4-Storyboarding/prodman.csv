@@ -1,0 +1,174 @@
+"","source","target","value"
+"1","Aldumite","Aldumite Drilling Rig",4
+"2","Alkanes","Monopropellant",2
+"3","Aluminum","Adaptive Frame",1
+"4","Aluminum","Mag Pressure Tank",2
+"5","Aluminum","Reactive Gauge",2
+"6","Antimony","Positron Battery",2
+"7","Antimony","Semimetal Wafer",2
+"8","Austentic Manifold","Control Rod",1
+"9","Austentic Manifold","Veryl-Treated manifold",1
+"10","Beryllium","Tau Grade Rheostat",1
+"11","Biosuppressant","Substrate Molecule Sieve",2
+"12","Caesium","Aldumite Drilling Rig",2
+"13","Caesium","Indicite Wafer",2
+"14","Cobalt","Isocentered Magnet",1
+"15","Copper","Reactive Gauge",1
+"16","Copper","Tau Grade Rheostat",1
+"17","Copper","Zero Wire",1
+"18","Cosmetic","Polytextile",1
+"19","Drilling Rig","Aldumite Drilling Rig",1
+"20","Dysprosium","Control Rod",3
+"21","Europium","Microsecond Regulator",4
+"22","Fiber","Polytextile",2
+"23","Gold","Paramagnon Conductor",1
+"24","Gold","Semimetal Wafer",2
+"25","Indicite","Indicite Wafer",4
+"26","Indicite Wafer","Vytinium Fuel Rod",1
+"27","Ionic Liquids","Isotopic Coolant",1
+"28","Ionic Liquids","Molecular Sieve",2
+"29","Iron","Adaptive Frame",1
+"30","Iron","Austentic Manifold",2
+"31","Isocentered Magnet","Comm Relay",1
+"32","Isocentered Magnet","Supercooled Magnet",1
+"33","Isocentered Magnet","Zero-G Gimbal",1
+"34","Isotopic Coolant","Control Rod",1
+"35","Isotopic Coolant","Supercooled Magnet",1
+"36","Lithium","Microsecond Regulator",2
+"37","Lithium","Rothicite Magnet",2
+"38","Lubricant","Drilling Rig",2
+"39","Lubricant","Veryl-Treated manifold",2
+"40","Lubricant","Zero-G Gimbal",2
+"41","Mag Pressure Tank","Molecular Sieve",1
+"42","Mag Pressure Tank","Monopropellant",1
+"43","Membrane","Molecular Sieve",2
+"44","Memory Substrate","Substrate Molecule Sieve",3
+"45","Microsecond Regulator","Aldumite Drilling Rig",1
+"46","Molecular Sieve","Sterile Nanotubes",1
+"47","Molecular Sieve","Substrate Molecule Sieve",1
+"48","Neodymium","Paramagnon Conductor",1
+"49","Neodymium","Supercooled Magnet",3
+"50","Nickel","Austentic Manifold",2
+"51","Nickel","Isocentered Magnet",1
+"52","Nickel","Mag Pressure Tank",1
+"53","Nuclear Fuel Rod","Vytinium Fuel Rod",1
+"54","Palladium","Power Circuit",4
+"55","Palladium","Tasine Superconductor",2
+"56","Paramagnon Conductor","Power Circuit",1
+"57","Paramagnon Conductor","Tasine Superconductor",1
+"58","Plutonium","Vytinium Fuel Rod",2
+"59","Polymer","Power Circuit",2
+"60","Polymer","Tasine Superconductor",2
+"61","Positron Battery","Power Circuit",1
+"62","Reactive Gauge","Austentic Manifold",1
+"63","Reactive Gauge","Drilling Rig",1
+"64","Reactive Gauge","Monopropellant",1
+"65","Rothicite","Rothicite Magnet",4
+"66","Semimetal Wafer","Indicite Wafer",1
+"67","Semimetal Wafer","Nuclear Fuel Rod",1
+"68","Semimetal Wafer","Rothicite Magnet",1
+"69","Silver","Zero Wire",1
+"70","Solvent","Indicite Wafer",2
+"71","Solvent","Nuclear Fuel Rod",2
+"72","Solvent","Sterile Nanotubes",2
+"73","Sterile Nanotubes","Substrate Molecule Sieve",2
+"74","Supercooled Magnet","Microsecond Regulator",1
+"75","Supercooled Magnet","Rothicite Magnet",1
+"76","Tantalum","Zero-G Gimbal",2
+"77","Tasine","Tasine Superconductor",4
+"78","Tau Grade Rheostat","Comm Relay",1
+"79","Tau Grade Rheostat","Microsecond Regulator",1
+"80","Tau Grade Rheostat","Positron Battery",1
+"81","Tetrafluoride","Isotopic Coolant",1
+"82","Tungsten","Drilling Rig",3
+"83","Uranium","Nuclear Fuel Rod",3
+"84","Vanadium","Positron Battery",2
+"85","Vanadium","Sterile Nanotubes",2
+"86","Veryl","Veryl-Treated manifold",4
+"87","Vytinium","Vytinium Fuel Rod",4
+"88","Ytterbium","Veryl-Treated manifold",2
+"89","Zero Wire","Paramagnon Conductor",3
+"90","Zero Wire","Semimetal Wafer",1
+"91","Antharum 1","Helium",1
+"92","Codos 1","Water",1
+"93","Codos 1","Analgesic",1
+"94","Codos 1","Solvent",1
+"95","Codos 2","Iron",1
+"96","Codos 2","Alkanes",1
+"97","Decaran VI-B 1","Vytinium",1
+"98","Decaran VI-B 1","Uranium",1
+"99","Decaran VI-B 1","Iridium",1
+"100","Decaran VI-B 1","Helium",1
+"101","Fermi III 1","Alkanes",1
+"102","Fermi III 1","Fiber",1
+"103","Fermi III 1","Water",1
+"104","Fermi III 1","Iron",1
+"105","Fermi VII-A 1","Memory Substrate",1
+"106","Fermi VII-A 1","Palladium",1
+"107","Fermi VII-A 1","Platinum",1
+"108","Fermi VII-A 1","Nickel",1
+"109","Fermi VII-A 1","Cobalt",1
+"110","Fermi VII-A 1","Flourine",1
+"111","Jaffa VI-C 2","Helium",1
+"112","Jaffa VI-C 2","Aluminum",1
+"113","Jaffa VI-C 2","Europium",1
+"114","Jaffa VI-C 2","Neodymium",1
+"115","Jaffa VII-B 1","Dysprosium",1
+"116","Jaffa VII-B 1","Lead",1
+"117","Jaffa VII-B 1","Titanium",1
+"118","Jaffa VII-B 1","Tungsten",1
+"119","Jemmison 1","Chlorine",1
+"120","Jemmison 1","Chlorosilanes",1
+"121","Jemmison 1","Water",1
+"122","Katydid I-A 1","Helium",1
+"123","Katydid I-A 1","Water",1
+"124","Katydid I-A 1","Chlorine",1
+"125","Katydid I-A 1","Chlorosilanes",1
+"126","Katydid III 1","Water",1
+"127","Katydid III 1","Aluminum",1
+"128","Katydid III 1","Beryllium",1
+"129","Katydid III 1","Indicite",1
+"130","Katydid III 2","Lead",1
+"131","Katydid III 2","Silver",1
+"132","Kurtz 1","Helium",1
+"133","Oberon I 1","Membrane",1
+"134","Oberon I 1","Copper",1
+"135","Oberon I 1","Gold",1
+"136","Porrima II 1","Caesium",1
+"137","Porrima II 1","Chlorine",1
+"138","Porrima II 1","Water",1
+"139","Porrima II 2","Caesium",1
+"140","Porrima II 2","Chlorine",1
+"141","Porrima II 2","Lithium",1
+"142","Porrima II 2","Water",1
+"143","Porrima IV-D 1","Water",1
+"144","Porrima IV-D 1","Uranium",1
+"145","Porrima IV-D 1","Plutonium",1
+"146","Porrima V-C 1","Water",1
+"147","Porrima V-C 1","Antimony",1
+"148","Porrima V-C 1","Copper",1
+"149","Porrima V-C 1","Gold",1
+"150","Procyon III 2","Argon",1
+"151","Procyon III 2","Neon",1
+"152","Procyon III 2","Fiber",1
+"153","Procyon III 2","Metabolic Agent",1
+"154","Procyon III 2","Sealant",1
+"155","Procyon III 2","Sedative",1
+"156","Procyon III 2","Antimicrobial",1
+"157","Procyon III-A 1","Helium",1
+"158","Rivera I 1","Water",1
+"159","Rivera I 1","Benzene",1
+"160","Rivera I 1","Cobalt",1
+"161","Rivera I 1","Nickel",1
+"162","Rivera I 1","Lubricant",1
+"163","Zeta Ophi I 1","Ytterbium",1
+"164","Zeta Ophi I 1","Tanatalum",1
+"165","Zeta Ophi I 1","Polymer",1
+"166","Zeta Ophi I 1","Iron",1
+"167","Zeta Ophi I 1","Chlorine",1
+"168","Zeta Ophi I 1","Water",1
+"169","a Andraste III 1","Water",1
+"170","a Andraste III 1","Chlorine",1
+"171","a Andraste III 1","Xenon",1
+"172","a Andraste III 1","Chlorosilanes",1
+"173","a Andraste III 1","Biosuppressant",1
