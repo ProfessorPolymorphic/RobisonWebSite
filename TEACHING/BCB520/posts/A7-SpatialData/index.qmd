@@ -1,0 +1,232 @@
+---
+title: "Practice with Spatial Data"
+subtitle: "Malaria, Ocean Currents, Baseball..."
+format:
+  html:
+    toc: false
+    echo: true
+author: "Barrie Robison"
+date: "2023-04-10"
+categories: [Portfolio, DataViz, Spatial, GGPlot, Assignment]
+image: "Rlyeh.png"
+description: "Maps and Spatial Fields are fun!"
+code-fold: true
+code-tools: true
+execute: 
+  eval: false
+---
+
+## OVERVIEW
+
+In this assignment, we'll consider some of the tools and techniques for visualizing spatial data. Spatial data comes in two broad categories, geographic and spatial fields. Let's practice a few visualizations to get a feel for how these things work!
+
+## GEOGRAPHIC MAPS!
+
+In class I bet Ronald that he would end up creating some kind of map based visualization before he graduated with his PHD. This is because he works on Malaria - a terrible disease with a strong spatial component to its risk levels. Let's get some Malaria data and map it!
+
+The data I obtained were from the [Malaria Atlas](https://data.malariaatlas.org/trends?year=2020&metricGroup=Malaria&geographicLevel=admin0&metricSubcategory=Pf&metricType=rate&metricName=incidence). I downloaded a csv for 10 years of data for all the countries the had on file.
+
+```{r}
+#| output: false
+
+
+library(tidyverse)
+library(readxl)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(dplyr)
+
+Malaria <- read.csv("National_Unit_data.csv")
+
+Incidence<- Malaria%>%
+  filter(Metric == "Infection Prevalence")%>%
+  mutate(Prevalence = Value, Year = as.factor(Year))
+
+#%>%
+  #select(c(ISO3, Prevalence, Year))
+
+```
+
+Now I'm going to use the `rnaturalearth` package to create contry polygons. Then I'll add the Malaria data to that data frame.
+
+```{r}
+
+world_map <- ne_countries(scale = "medium", returnclass = "sf")
+
+map_data <- world_map %>%
+  left_join(Incidence, by = c("iso_a3" = "ISO3"))
+```
+
+Now I will make a plot!
+
+```{r}
+#| eval: false
+
+
+library(gganimate)
+library(transformr)
+library(magick)
+library(gifski)
+
+ggplot() +
+  geom_sf(data = map_data%>%
+            filter(continent=="Africa"),
+          aes(fill = Prevalence)) +
+  scale_fill_gradient(low = "white", high = "red", na.value = "gray", name = "Malaria Prevalence") +
+  theme_minimal() +
+  theme(axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank()) +
+  labs(title = "Malaria Prevalence by Country")
+
+p <- ggplot() +
+  geom_sf(data = map_data%>%
+            filter(continent=="Africa"),
+          aes(fill = Prevalence)) +
+  scale_fill_gradient(low = "white", high = "red", na.value = "gray", name = "Malaria Prevalence") +
+  theme_minimal() +
+  theme(axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank()) +
+  labs(title = "Malaria Prevalence by Country") +
+  transition_states(Year, transition_length = 2, state_length = 2)
+
+animate(p, fps = 25, width = 800, height = 500)
+
+```
+
+```{r}
+#| eval: false
+
+Incidence <- Malaria %>%
+  filter(Metric == "Infection Prevalence" & Year >= 2010 & Year <= 2020) %>%
+  mutate(Year = as.factor(Year),
+         Prevalence = Value)
+
+world_map <- ne_countries(scale = "medium", returnclass = "sf")
+
+map_data <- world_map %>%
+  left_join(Incidence, by = c("iso_a3" = "ISO3"))
+
+p <- ggplot() +
+  geom_sf(data = map_data, aes(fill = Prevalence)) +
+  scale_fill_gradient(low = "white", high = "red", na.value = "gray", name = "Malaria Prevalence") +
+  theme_minimal() +
+  theme(axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank()) +
+  labs(title = "Malaria Prevalence by Country") +
+  transition_states(Year, transition_length = 2, state_length = 2)
+
+animate(p, fps = 25, width = 800, height = 500)
+
+```
+
+Oh SNAP! We made a MAP!
+
+Hey! That rhymes!
+
+What is missing? Units? Is that actually prevalence? We sure left a lot of data on the table? Can we add some kind of time thing? Change the variable?
+
+## SPATIAL FIELDS
+
+Spatial field data refers to data that has a continuous spatial distribution and can be measured at any location within the defined area. Here are some interesting examples of spatial field data:
+
+1.  Air temperature: Air temperature data collected from weather stations or remote sensing technologies can be used to create temperature maps or to study climate change, urban heat islands, and other environmental phenomena. [TROPICAL CYCLONE!](https://svs.gsfc.nasa.gov/14312)
+
+2.  Precipitation: Rainfall, snowfall, or other forms of precipitation data collected from weather stations or satellites can be used to study the hydrological cycle, flood risk, droughts, or water resource management.
+
+3.  Soil moisture: Soil moisture data collected from in situ sensors or remote sensing technologies can be used to study agricultural productivity, irrigation management, droughts, and land degradation. Elevation data (Digital Elevation Models, DEMs):
+
+4.  Elevation data collected from satellite-based radar, LiDAR, or photogrammetry can be used to study topography, watershed delineation, flood risk, landslides, or geomorphology.
+
+5.  Vegetation indices: Indices like the Normalized Difference Vegetation Index (NDVI) or Enhanced Vegetation Index (EVI) derived from satellite imagery can be used to study vegetation health, land cover change, deforestation, agricultural productivity, and carbon sequestration.
+
+6.  Air quality: Data on air pollutants like PM2.5, PM10, NO2, SO2, O3, and CO collected from ground-based monitors or satellites can be used to study the impact of pollution on human health, urban planning, or environmental policy.
+
+7.  Oceanographic data: Sea surface temperature, salinity, and chlorophyll-a concentration data collected from buoys, ships, or satellites can be used to study ocean currents, climate change, or marine ecosystems. [OCEAN CURRENTS!](https://earth.nullschool.net/#current/ocean/surface/currents/orthographic=-177.96,0.40,1571)
+
+8.  Population density: Spatially explicit population density data can be used to study urbanization, migration patterns, infrastructure planning, or public health.
+
+9.  Land use and land cover: Land use and land cover data collected from satellite imagery can be used to study urban growth, deforestation, habitat fragmentation, or landscape ecology.
+
+10. Seismic activity: Spatial distribution of earthquakes and their magnitudes can be used to study tectonics, fault zones, seismic hazards, or infrastructure resilience. [DARK NIGHTS IN ANTAKYA](https://svs.gsfc.nasa.gov/31224)
+
+11. SPORTS! Let's check out a baseball example!
+
+```{r}
+
+
+#install.packages("baseballr")
+library(remotes)
+
+library(devtools)
+
+#install_github("bayesball/CalledStrike")
+
+
+```
+
+```{r}
+library(CalledStrike)
+#ShinyDemo()
+```
+
+This example is the Pitch_Locations example from [byaesball's CalledStrike Github Repository](https://github.com/bayesball/CalledStrike/tree/master/vignettes)
+
+#### Introduction
+
+There are three functions for visualizing pitch locations.
+
+-   The function `location_compare()` will graph the pitch location for a data frame or list of data frames.
+
+-   The function `location_count()` will show the locations of pitches for a specific pitcher on a particular count.
+
+-   The function `location_count_compare()` will graph the pitch locations for a specific pitcher for several values of the count.
+
+#### Data
+
+The package includes the dataset sc_pitchers_2019 that contains Statcast data for 20 pitchers for the 2019 season.
+
+#### Pitch Locations for a List
+
+Suppose we want to compare the locations of the fastballs thrown by Aaron Nola and Trevor Bauer.
+
+I find the subset of data I need and then create a list dividing the data by pitcher.
+
+```{r}
+d <- filter(sc_pitchers_2019, 
+            pitcher %in% c(605400, 545333),
+            pitch_type == "FF")
+ds <- split(d, d$pitcher)
+names(ds) <- c("Bauer", "Nola")
+```
+
+Now we can construct the graph.
+
+```{r}
+location_compare(ds)
+```
+
+#### Pitch Locations for a Specific Count
+
+Suppose we want to look at the locations of Aaron Nola’s pitches on a 0-0 count. I can find Nola’s MLBAM id number by use of the chadwick dataset (also included in the package) that contains the id numbers for all players.
+
+```{r}
+chadwick %>% 
+  filter(name_last == "Nola", name_first == "Aaron")
+```
+
+To produce the graph, type
+
+```{r}
+location_count(sc_pitchers_2019, 
+               605400, "Aaron Nola", "0-0")
+```
+
+#### Pitch Locations Across a Group of Counts
+
+Suppose we want to compare Nola's pitch locations across the counts "0-0", "1-0", "0-1", "0-2"
+
+```{r}
+location_count_compare(sc_pitchers_2019, 
+               605400, "Aaron Nola", 
+               "R", "Offspeed", 
+               c("0-0", "1-0", "0-1", "0-2"))
+```
+
+END
