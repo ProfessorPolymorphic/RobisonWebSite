@@ -8,6 +8,7 @@ code-fold: true
 categories: [Tutorial, Resources, Quarto, Data Sets]
 description: "Barrie attempts ASSIGMENT 2!  Will his glimpse of the Data Science Mythos drive him **MAD**?"
 image: Hasturcodes.png
+draft: true
 ---
 
 # ASSIGNMENT 2: Your Data
@@ -34,7 +35,7 @@ In EXPERIMENT MODE, choose any map, tweak the parameters, and play infinitely to
 
 The data were collected by running Project Hastur in Experiment mode using four predefined conditions:
 
-**I:** The CHIP SHREDDER towers when Fitness Functions were turned ON and Civilians were PRESENT. 
+**I:** The CHIP SHREDDER towers when Fitness Functions were turned ON and Civilians were PRESENT.
 
 **H:** The CHIP SHREDDER towers when Fitness Functions were turned OFF and Civilians were PRESENT.
 
@@ -89,7 +90,8 @@ The `glimpse` we did in the preceding section gives us a hint as to what each at
 Attributes <- read_excel("Attributes.xlsx")
 knitr::kable(Attributes)
 ```
-The problem here is my inscrutable filename codes for that Fit variable.  Those letter codes actually contain information on a couple hidden variables.  I'm going to create a new variable called `Gun` and another called `Civilians`.  I'll add those to the main data file and also the Data Dicttionary.
+
+The problem here is my inscrutable filename codes for that Fit variable. Those letter codes actually contain information on a couple hidden variables. I'm going to create a new variable called `Gun` and another called `Civilians`. I'll add those to the main data file and also the Data Dicttionary.
 
 ```{r}
 #| output: false
@@ -110,8 +112,6 @@ Hastur$Civilians <- "Present"
   knitr::kable(Attributes)
 
 ```
-
-
 
 ## HOST THE DATA
 
@@ -140,7 +140,7 @@ ggplot(Hastur, aes(x=Generation, y = Health))+
   facet_grid(replicate~Gun)
 ```
 
-Interesting... it looks like a clear trend for `Health` to increase under the withering fire of the AUTO CANNONS, but not when the player uses the CHIP SHREDDER.  It is a bit hard to see what is going on with `Acceleration`, so let's reverse the graphs so that we plot `Acceleration` on the y axis but color by `Health`.
+Interesting... it looks like a clear trend for `Health` to increase under the withering fire of the AUTO CANNONS, but not when the player uses the CHIP SHREDDER. It is a bit hard to see what is going on with `Acceleration`, so let's reverse the graphs so that we plot `Acceleration` on the y axis but color by `Health`.
 
 ```{r}
 ggplot(Hastur, aes(x=Generation, y = Acceleration))+
@@ -149,7 +149,7 @@ ggplot(Hastur, aes(x=Generation, y = Acceleration))+
   facet_grid(replicate~Gun)
 ```
 
-I'm now confident that the replicates within each `Gun` type are pretty similar, and I can SUMMARIZE the individual data points.  This will help with the COMPARE TRENDS task, I think.
+I'm now confident that the replicates within each `Gun` type are pretty similar, and I can SUMMARIZE the individual data points. This will help with the COMPARE TRENDS task, I think.
 
 ```{r}
 

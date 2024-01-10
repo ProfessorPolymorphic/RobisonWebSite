@@ -13,21 +13,17 @@ title-block-banner: true
 
 # **// About**
 
-This class will help students establish a foundational understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R programming language. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using R. The course is designed to be "discipline agnostic" - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.
+This class will help students establish a core understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R and Python programming languages. Upon completion of the course, students will understand **WHY** particular visualization approaches are effective for a given data set and **HOW** to implement those visualizations using the language of their choice. The course is designed to be "discipline agnostic" - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.
 
 ## Quick Links
 
-I am maintaining the course here and on its [CANVAS PAGE](https://canvas.uidaho.edu/courses/17806){target="_blank"} (for enrolled students).
+I am maintaining the course here and on its [CANVAS PAGE](https://canvas.uidaho.edu/courses/25613){target="_blank"} (for enrolled students).
+
+[SYLLABUS](posts/Syllabus/index.qmd)
 
 [Barrie's GitHub](https://github.com/ProfessorPolymorphic){target="_blank"}
 
-[Rondald's Portfolio](https://ronbentil.github.io/BCB504Portfolio/)
-
-[Jiyin's Portfolio](https://chubl.github.io/bcb504-blog/)
-
-[Cody's Portfolio](https://cody-appa.github.io/Data_Science_Portfolio/)
-
-[Erik's Portfolio](https://erickrios5.github.io/BCB-504-My-Data-Blog/)
+## Learning Resources
 
 [GGSIDE!](https://www.business-science.io/code-tools/2021/05/18/marginal_distributions.html) A companion to `ggplot` for making side plots! COOL!
 

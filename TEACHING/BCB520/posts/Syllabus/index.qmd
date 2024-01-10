@@ -1,21 +1,21 @@
 ---
-title: "SYLLABUS 2023"
+title: "SYLLABUS 2024"
 author: "Barrie Robison"
-date: "2022-12-12"
-categories: [Resources, DataViz]
+date: "2024-01-12"
+categories: [Resources, DataViz, Syllabus]
 image: "Cthulhusyllabus2.png"
 description: "This forbidden tome contains information students were not meant to know…"
 ---
 
-# BCB 504: Foundations of Data Visualization
+# BCB 520: Foundations of Data Visualization
 
 **Barrie D. Robison**
 
-**Spring 2023**
+**Spring 2024**
 
 ## Course Description
 
-This class will help students establish a foundational understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R programming language. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using R.  The course is designed to be "discipline agnostic" -  each student is encouraged to use data sets that they deem important / interesting.  The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.
+This class will help students establish a core understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R programming language. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using R. The course is designed to be "discipline agnostic" - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.
 
 ## Course Objectives
 
@@ -30,7 +30,7 @@ Students completing this course will be able to:
 
 ## Required Readings
 
-Tamara Munzner. Visualization Analysis and Design. A K Peters Visualization Series, CRC Press, 2014. For the 2023 version of the class, I am trying out the Inclusive Access option. Erolled students should have access to the text on the course [canvas page](https://canvas.uidaho.edu/courses/17806).
+Tamara Munzner. Visualization Analysis and Design. A K Peters Visualization Series, CRC Press, 2014. While the book is not required, I do emphasize the structure and approach to visualization that Dr. Munzner has developed.
 
 [Hard Copy on Amazon](https://www.amazon.com/Visualization-Analysis-Design-AK-Peters/dp/1466508914/ref=sr_1_1?crid=5AX2UJ4ZP5Y&keywords=munzner&qid=1670957518&sprefix=munzner%2Caps%2C237&sr=8-1)
 
@@ -50,19 +50,9 @@ Tamara Munzner. Visualization Analysis and Design. A K Peters Visualization Seri
 
 GRADING SCALE: The grading scale is standard: A (90 -100 %), B (89 - 80 %), C (79 - 70 %), D (69-60 %), F( below 60 %).
 
-### HEALTHY VANDALS POLICY
-
-It is a longstanding tradition that Vandals take care of Vandals, and we all do our best to look out for the Vandal Family. These simple precautions go a long way in reducing the impact of coronavirus on our campuses and in our communities. With everyone engaging in these small actions, we can continue to participate in our vibrant campus culture where we are able to learn, live, and grow. Please bookmark the University of Idaho Covid-19 webpage and visit it often for the most up-to-date information about the U of I's response to Covid-19.
-
--   All classes are offered in the modality listed in the catalog.
--   All Vandals are highly encouraged to be vaccinated.
--   COVID-19 tests are not required to attend class in person.
-
-Additionally, faculty and students must follow the Healthy Vandal Pledge: Daily Symptom Monitoring and In-Person Class Attendance. Evaluate your own health status before attending in-person classes and refrain from attending class in-person if you are ill, if you are experiencing any of the known symptoms of Coronavirus, or if you have tested positive for COVID-19 or have been potentially exposed to someone with COVID-19. Stay home if you experience any symptoms related to COVID 19 and that are not attributed to a non-infectious health condition regardless of how mild. Contact your medical provider or local Idaho Public Health District for assessment of symptoms and possible COVID19 testing. Positive COVID 19 tests should be submitted via a VandalCare Report in order to make arrangements that involve classroom absences due to illness, and/or quarantine or isolation requirements directed by a medical provider.
-
 ### ATTENDANCE POLICY
 
-Missing a scheduled lecture is at your discretion. I will be posting all the lecture notes online, and recording the lectures for future online versions of the course. I have no intention of offering a zoom option this semester. If a discussion or in-class exercise occurs and you miss it, you will lose those participation points. There is no way to make up those points.
+Missing a scheduled class session is at your discretion. I will be posting all the course materials online. If a discussion or in-class exercise occurs and you miss it, you will lose those participation points. There is no way to make up those points.
 
 ### LATE ARRIVAL OF PROFESSOR POLICY
 
@@ -76,7 +66,7 @@ The bad news is that there are NO make-ups for missed exams. Don't bother asking
 
 ### ACADEMIC DISHONESTY POLICY
 
-All students are expected to uphold the highest standards of academic honesty. This includes but is not limited to: not cheating, not using the ideas of others without giving appropriate credit (including Wikipedia!), and not falsifying data. Any incident of academic dishonesty will be handled according to the guidelines of the University of Idaho. 
+All students are expected to uphold the highest standards of academic honesty. This includes but is not limited to: not cheating, not using the ideas of others without giving appropriate credit (including AI tools), and not falsifying data. Any incident of academic dishonesty will be handled according to the guidelines of the University of Idaho.
 
 ## Class Schedule
 

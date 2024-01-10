@@ -8,6 +8,7 @@ image: "Cthulhuhockeycard.png"
 code-fold: true
 code-tools: true
 description: "Should I trade these draft picks for this bag of magic beans...?"
+draft: true
 ---
 
 ## OVERVIEW

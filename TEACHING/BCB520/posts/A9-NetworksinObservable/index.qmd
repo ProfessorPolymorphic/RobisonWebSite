@@ -12,6 +12,7 @@ image: "Wendigojson.png"
 description: "Cool!"
 code-fold: true
 code-tools: true
+draft: true
 ---
 
 # OBSERVABLE IN QUARTO
