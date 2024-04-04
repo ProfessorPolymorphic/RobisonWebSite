@@ -332,7 +332,7 @@ Are you using AI to misrepresent your abilities?
 
 ## BIO314 CUSTOMIZED WEBSITE
 
-This took me ~ 2 hours.
+[This](https://professorpolymorphic.github.io/AI101Bio314/){target="blank"} took me ~ 2 hours.
 
 Will Barrie crash and burn?
 
