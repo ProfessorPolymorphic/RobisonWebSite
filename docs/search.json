@@ -1,10 +1,1214 @@
 [
   {
+    "objectID": "ProfessorPolymorphic/index.html",
+    "href": "ProfessorPolymorphic/index.html",
+    "title": "Professor Polymorphic",
+    "section": "",
+    "text": "“The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown”.\n– H.P. Lovecraft, Supernatural Horror in Literature\n\n\n\n\n\nHello! This BLOG is where I share my thoughts on how science informs horror fiction, and whether horror fiction can be used to at least help teach science, if not directly inform scientific research. The posts that appear here will vary in their focus. Some will directly address the intersection of horror and science, while some might focus primarily on either horror fiction or science concepts.\nMy basic premise is driven by the Lovecraft quote you see at the top of the screen. I find this compelling because I am a scientist, and science is one of two tools humanity has invented that pushes back against the unknown.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/index.html#musings-at-the-intersection-of-horror-and-science",
+    "href": "ProfessorPolymorphic/index.html#musings-at-the-intersection-of-horror-and-science",
+    "title": "Professor Polymorphic",
+    "section": "",
+    "text": "Hello! This BLOG is where I share my thoughts on how science informs horror fiction, and whether horror fiction can be used to at least help teach science, if not directly inform scientific research. The posts that appear here will vary in their focus. Some will directly address the intersection of horror and science, while some might focus primarily on either horror fiction or science concepts.\nMy basic premise is driven by the Lovecraft quote you see at the top of the screen. I find this compelling because I am a scientist, and science is one of two tools humanity has invented that pushes back against the unknown.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/WebScrape/index.html",
+    "href": "ProfessorPolymorphic/posts/WebScrape/index.html",
+    "title": "TUTORIAL 3 - Python",
+    "section": "",
+    "text": "I relied heavily on the Quarto documentation for this tutorial.\nThe basic things I learned were:\n\nInstall Python (again). I downloaded the newest version from the Python website.\nInstall the `jupyter’ package using the terminal:\n\n\nWindows: py -m pip install jupyter\nMac: python3 -m pip install jupyter\n\n\nInstall the modules you need using the terminal (Mac examples below):\n\n\npython3 -m pip install numpy\npython3 -m pip install matplotlib\n\nAfter I did this, the code from the Quarto website example (below) seemed to work!",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "TUTORIAL 3 - Python"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/WebScrape/index.html#implementing-pyhton-in-quarto",
+    "href": "ProfessorPolymorphic/posts/WebScrape/index.html#implementing-pyhton-in-quarto",
+    "title": "TUTORIAL 3 - Python",
+    "section": "",
+    "text": "I relied heavily on the Quarto documentation for this tutorial.\nThe basic things I learned were:\n\nInstall Python (again). I downloaded the newest version from the Python website.\nInstall the `jupyter’ package using the terminal:\n\n\nWindows: py -m pip install jupyter\nMac: python3 -m pip install jupyter\n\n\nInstall the modules you need using the terminal (Mac examples below):\n\n\npython3 -m pip install numpy\npython3 -m pip install matplotlib\n\nAfter I did this, the code from the Quarto website example (below) seemed to work!",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "TUTORIAL 3 - Python"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/WebScrape/index.html#quarto-example-code",
+    "href": "ProfessorPolymorphic/posts/WebScrape/index.html#quarto-example-code",
+    "title": "TUTORIAL 3 - Python",
+    "section": "QUARTO EXAMPLE CODE",
+    "text": "QUARTO EXAMPLE CODE\nFor a demonstration of a line plot on a polar axis, see ?@fig-polar.\n\n\nCode\nfrom selenium import webdriver\nfrom selenium.webdriver.common.keys import Keys\nimport pandas as pd\n\n\n\n\nCode\noptions = webdriver.SafariOptions()\ndriver = webdriver.Safari(options=options)\n\ndef test_eight_components():\n    driver = webdriver.Chrome()\n\n    driver.get(\"https://www.selenium.dev/selenium/web/web-form.html\")\n\n    title = driver.title\n    assert title == \"Web form\"\n\n    driver.implicitly_wait(0.5)\n\n    text_box = driver.find_element(by=By.NAME, value=\"my-text\")\n    submit_button = driver.find_element(by=By.CSS_SELECTOR, value=\"button\")\n\n    text_box.send_keys(\"Selenium\")\n    submit_button.click()\n\n    message = driver.find_element(by=By.ID, value=\"message\")\n    value = message.text\n    assert value == \"Received!\"\n\n    driver.quit()",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "TUTORIAL 3 - Python"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/welcome/index.html",
+    "href": "ProfessorPolymorphic/posts/welcome/index.html",
+    "title": "You’ve gotta be f***ing kidding…",
+    "section": "",
+    "text": "Mac wants the flamethrower…\n\nIt’s such a ridiculous notion that anyone on the planet would ever want to read a BLOG, let alone a BLOG authored by some rando nerd like me. Nevertheless, if I force myself to push past the imposter syndrome, disruptive thoughts, anxiety, and the sheer PRETENTIOUSNESS of one’s own BLOG, I can kind of rationalize doing this.\nAllow me to elaborate (he wrote to himself). The varied reasons for setting up a BLOG as part of my research lab website include:\n\nIt forces me to further practice using the tools I need for both research and teaching Data Science, including literate programming (I’m using Quarto), version control (I’m using GitHub), and communicating with data.\nIt gives me a place to put a lot of the intermediate outcomes and products from the game studio. All the grey material that isn’t a journal publication, grant proposal, meeting abstract, etc. usually ends up getting lost. Examples include outreach and eduation materials for our games, videos and images that we don’t put on our largely silent social media channels, etc.\nIt serves as an archive for experimental/exploratory analyses in which I am trying to learn a new technique or explore a new data set, allowing me to return to that idea when its time has finally arrived.\nIn the off chance that one of my posts actually helps someone learn something because they found it by googling their particular error message, I will have begun paying back my massive karmic debt to the internet. I can’t count the number of times someone’s blog post helped me figure out how to accomplish something using R.\nI honestly do enjoy thinking about the intersection of science and horror fiction, and some of our newer game projects are going to serve as the platform for that type of content.\nSpeaking of our newer game projects, I’ll be using this as a venue to post development updates for studio projects.\nI have ADHD. I mean actual psychiatrist diagnosed, full blown, life altering ADHD. Systems and structures are critical components of the coping strategies I have developed over the years. Maybe… just maybe… this BLOG will help me keep a bunch of stuff organized so I can…. HEY LOOK A SHINY THING!\nSpeaking of shiny things… I’m really enjoing the new AI tools for procedural art generation. I’m particularly enamored with midJourney. I’m hoping to use this BLOG for some exploration of those tools.\n\nSo why the thumbnail from The Thing as the image for this post? Well the title of the post is the famous quote from Palmer when he sees Norris’ head crawling away on newly grown insect legs. Anyone who knows me who sees I have a BLOG is going to say what Palmer said…\n\nThe Thing Kidding GIFfrom The Thing Kidding GIFs",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "You've gotta be f***ing kidding..."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#historical-patterns",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#historical-patterns",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "HISTORICAL PATTERNS",
+    "text": "HISTORICAL PATTERNS",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-physical-labor",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-physical-labor",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "AUTOMATION OF PHYSICAL LABOR",
+    "text": "AUTOMATION OF PHYSICAL LABOR\nMany of the changes in the distribution of labor across sectors have been driven by changes in the efficiency of human labor, which can be considered as the ratio of production to cost.\nForce Multiplier: An external tool or resource that allows you to do more work with less effort.1 This might increase production of a single worker, reducing the overall number of workers needed to perform a job.\nOutsourcing: Outsourcing refers to the business practice of contracting out certain tasks or functions to third-party service providers instead of performing them in-house. One of the primary reasons companies outsource is to achieve cost reductions. Labor, infrastructure, or operational costs might be lower in another location or with a specialized provider.\nThe term originally comes from the military context, but it has been widely adopted in business, technology, and other fields to describe a factor that dramatically amplifies the effectiveness of a group or system.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#a-closer-look",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#a-closer-look",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "A CLOSER LOOK",
+    "text": "A CLOSER LOOK\nWhat are common features of the sectors that displaced Agriculuture and Manufacturing?\n\n\n\n\n\n\nThe tasks are Place Bound.\nThe sectors feature a lot of Knowledge Work.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#knowledge-work",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#knowledge-work",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "KNOWLEDGE WORK?",
+    "text": "KNOWLEDGE WORK?\nKnowledge work 1 involves tasks that are information-based and Cognitive in nature :\n\nCharacteristicsExamples\n\n\n\n\nIntellectual Activity: It involves thinking, analyzing, and processing information more than manual labor.\nNon-routine: It doesn’t necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.\nInformation-based: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.\nDriven by Expertise: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.\nAutonomy: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems.\nContinuous Learning: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.\nOutcome-focused: The value of knowledge work is often measured by outcomes or results rather than the hours worked.\n\n\n\n\n\nSoftware developers\nManagers\nAnalysts\nConsultants\nDesigners\nScientists\nLawyers\nDoctors\nEducators\n\n\n\n\n“Knowledge Work” is a term coined by Peter Drucker in his 1959 book “Landmarks of Tomorrow.”",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#human-cognition",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#human-cognition",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "HUMAN COGNITION",
+    "text": "HUMAN COGNITION\n\nHuman CognitionKnowledge Work\n\n\n\n\n\n\n\nIntellectual Activity: It involves thinking, analyzing, and processing information more than manual labor.\nNon-routine: It doesn’t necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.\nInformation-based: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.\nDriven by Expertise: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.\nAutonomy: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems.\nContinuous Learning: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.\nOutcome-focused: The value of knowledge work is often measured by outcomes or results rather than the hours worked.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#human-cognitive-labor3",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#human-cognitive-labor3",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "HUMAN COGNITIVE LABOR1",
+    "text": "HUMAN COGNITIVE LABOR1\nAspects of human cognitive labor:\n\n\nProblem Solving: Identifying complex issues and reviewing related information to develop and evaluate options and implement solutions.\nDecision Making: Considering the relative costs and benefits of potential actions to choose the most appropriate one.\nAnalysis: Examining data or information and breaking it down to understand its structure, trends, or implications.\nLearning and Adaptation: Acquiring new knowledge and skills and adjusting to new information or circumstances.\nCreativity: Generating new ideas, concepts, or solutions.\nPlanning: Determining how a system or operation should work and how changes in conditions, operations, and environments will affect outcomes.\nCommunication: Conveying information effectively, both verbally and in writing. This also includes the ability to listen and understand information from others.\nEmotional Intelligence: Recognizing, understanding, and managing our own emotions while also recognizing, understanding, and influencing the emotions of others.\n\n\nHuman cognitive labor refers to tasks and functions that require human intellectual processes, such as thinking, understanding, learning, and problem-solving. While physical labor is centered on manual and bodily tasks, cognitive labor emphasizes mental processes and the application of knowledge.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#some-examples",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#some-examples",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "SOME EXAMPLES",
+    "text": "SOME EXAMPLES\n\nHere is a contract and our contract guidelines. Review and red-line the contract.\nDoes this Animal Care protocol conform to the federal guidelines?\nI have a fever and a cough. What is wrong with me?\nGather data from these documents and summarize/analyze it.\nHow does this job applicant align with the needs described in our job description?\n\nThese tasks are difficult to automate because their inputs are complex, unstructured, and highly variable. They require human Cognitive Labor.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-cognitive-labor",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-cognitive-labor",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "AUTOMATION OF COGNITIVE LABOR",
+    "text": "AUTOMATION OF COGNITIVE LABOR\n“The future is already here — it’s just not very evenly distributed.” 1\nWilliam Gibson (a science fiction author) made this observation to highlight how technological advancements and innovations might be present in certain places or among specific groups, but they haven’t yet permeated all levels of society or all geographic areas. The quote encapsulates the idea that the future, in many ways, exists in pockets in the present, but its widespread adoption and distribution are yet to occur.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#artificial-intelligence",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#artificial-intelligence",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "ARTIFICIAL INTELLIGENCE",
+    "text": "ARTIFICIAL INTELLIGENCE\nSummarizing the history of AI and creating a visual timeline is an example of Knowledge Work. It requires Cognitive Labor on my part. Cognitive labor is hard.\n\nHistory of AIVisual Timeline\n\n\nAI has a long and interesting history that I need to summarize…\n\n\nI’d rather have a graph\n\n\nMaking a graph is hard.\nExcept it isn’t..",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#a-tipping-point",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#a-tipping-point",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "2022: A TIPPING POINT",
+    "text": "2022: A TIPPING POINT",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#generative-ai",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#generative-ai",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "GENERATIVE AI",
+    "text": "GENERATIVE AI\nGenerative Artificial Intelligence describes a group of algorithms or models that can be used to create new content, including text, code, images, video, audio, and simulations.\n\n\nExamples:\nChatGPT: Text to Text Generative Pretrained Transformer with a chat interface\nMidJourney: Text to Image\nan abstract representation of an unemployment line caused by the emergence of artificial general intelligence, glowing blue computational network, photorealistic, dark technology, dark academia\nKaiberAI: text to video\nA Dystopian cyberpunk future where humans battle against cybernetic abominations from the works of the Lovecraftian Cthulhu Mythos. in the style of Photo real, hyper-realistic, high dynamic range, rich colors, lifelike textures, 8K UHD, high color depth, Nikon D 850, Kodak Portra 400, Fujifilm XT\nMubert: text to music.\nHardtechno Dark John Carpenter Synth\n\nVideo{.absolute .width=“60%”}",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#large-language-models-llm",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#large-language-models-llm",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "LARGE LANGUAGE MODELS (LLM)",
+    "text": "LARGE LANGUAGE MODELS (LLM)\nA type of AI model designed to understand and generate human-like text.\n\n\nKey CharacteristicsTraining and CapabilitiesLimitations\n\n\n\nModel Type: Subset of deep learning within machine learning.\nArchitecture: Commonly based on the Transformer architecture.\nSize: Contains billions to trillions of parameters.\n\n\n\n\nTraining Data: Trained on vast datasets, including books, articles, and web content.\nFunctionality: Generates coherent text, answers questions, translates, summarizes, and more.\nTransfer Learning: Fine-tuned on specific datasets for specialized tasks.\n\n\n\n\nGenerates based on training data patterns.\nDoesn’t “understand” like humans.\nCan produce incorrect or nonsensical answers.\nInfluenced by biases in training data.\n\n\n\n\n\nNvidia (the company that makes GPUs) has great learning resources on AI. This one is a great summary of the significance of LLMs",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#capabilities",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#capabilities",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "CAPABILITIES",
+    "text": "CAPABILITIES\n\n\n\narXiv:2303.10130v5 [econ.GN] 21 Aug 2023",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#tasks-are-operations",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#tasks-are-operations",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "TASKS ARE OPERATIONS",
+    "text": "TASKS ARE OPERATIONS\nHuman Cognitive Tasks\nInput Human Output\nLLM Operations\nPrompt Model Response",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#llm-operations",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#llm-operations",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "LLM OPERATIONS",
+    "text": "LLM OPERATIONS\n\nReductive\nTake a large amount of text and produce a smaller output.\nInput is larger than the output.\nTransformative\nTransmute the input into a new format.\nInput and output are roughly the same size and/or meaning.\nGenerative\nGenerate a large amount of text from a small set of instructions or data.\nInput is smaller than the output.\n\nThese categories and their descriptions on the next three slides are from material by David Shapiro, particularly his video on Prompt Engineering",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#reductive-operations",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#reductive-operations",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "REDUCTIVE OPERATIONS",
+    "text": "REDUCTIVE OPERATIONS\nTake a large amount of text and produce a smaller output.\n\n\nSummarization: Say the same thing with fewer words.\n\nCan use list, notes, executive summary.\n\nDistillation: Purify the underlying principles or facts.\n\nRemove all the noise, extract axioms, foundations, etc.\n\nExtraction: Retrieve specific kinds of information.\n\nQuestion answering, listing names, extracting dates, etc.\n\nCharacterizing: Describe the content of the text.\n\nDescribe either the text as a whole, or within the subject.\n\nAnalyzing: Find patterns or evaluate against a framework.\n\nStructural analysis, rhetorical analysis, etc\n\nEvaluation: Measuring, grading, or judging the content.\n\nGrading papers, evaluating against morals\n\nCritiquing: Provide feedback within the context of the text.\n\nProvide recommendations for improvement",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#transformation-operations",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#transformation-operations",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Transformation Operations",
+    "text": "Transformation Operations\nTransmute the input into another format. Input and output are roughly the same size and/or meaning.\n\n\nReformatting: Change the presentation only.\n\nProse to screenplay, XML to JSON\n\nRefactoring: Achieve same results with more efficiency.\n\nSay the same exact thing, but differently\n\nLanguage Change: Translate between languages.\n\nEnglish to Russian, C++ to Python\n\nRestructuring: Optimize structure for logical flow, etc.\n\nChange order, add or remove structure\n\nModification: Rewrite copy to achieve different intention.\n\nChange tone, formality, diplomacy, style, etc\n\nClarification: Make something more comprehensible.\n\nEmbellish or more clearly articulate",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#generative-operations",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#generative-operations",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Generative Operations",
+    "text": "Generative Operations\nGenerate a large amount of text from a small set of instructions or data.\n\n\nDrafting: Generate a draft of some kind of document.\n\nCode, fiction, legal copy, KB, science, storytelling\n\nPlanning: Given parameters, come up with plans.\n\nActions, projects, objectives, missions, constraints, context.\n\nBrainstorming: Use imagine to list out possibilities.\n\nIdeation, exploration of possibilities, problem solving, hypothesizing\n\nAmplification: Articulate and explicate something further.\n\nExpanding and expounding, riffing on stuff",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#critical-details",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#critical-details",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "CRITICAL DETAILS",
+    "text": "CRITICAL DETAILS\n\nPromptModelResponse\n\n\nWhat are the characteristics of your task?\n\nOperation Type: Reductive, Transformative, or Generative?\nSize: Tokens How much information do you need to send to the model?\nContext: What other relevant information/data is required? Where is it?\nFormat: Text only? File uploads? .pdf, .csv, .json, .docx, .xlsx, .pptx, .jpg, .png, etc\nQuality: Prompt Engineering\n\n\n\nThere are a TON of different Models and they vary substantially.\n\nSize\nCost\nSecurity\nContext Window\nInput Types\nTraining Data\nType: Conversational Agent vs Task Oriented Agent\nSpecificity/Flexibility\nLicense\n\n\n\nHow do evaluate the quality of the response?\n\nAccuracy\nConsistency\nCreativity\nSize\nFormat\nSpecificity",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#latent-content",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#latent-content",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "LATENT CONTENT",
+    "text": "LATENT CONTENT\nKnowledge, facts, concepts, and information that is “embedded” in the model and must be “activated” by correct prompting.\nLatent content only originates from Training Data.\nExamples:\n\nWorld Knowledge: General facts and understanding of the world.\nScientific Information: Embedded data on scientific principles.\nCultural Knowledge: Information on cultures and social norms.\nHistorical Knowledge: Data on past events and figures.\nLanguages: Language structures, vocabulary, and syntax.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#emergent-capabilities",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#emergent-capabilities",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "EMERGENT CAPABILITIES",
+    "text": "EMERGENT CAPABILITIES\nThe abilities of Large Language Models (LLMs) that arise as a result of their extensive training on vast datasets, even if those capabilities were not explicitly “taught” or “programmed” into the model.\n\n\nUnintended Abilities: Emergent capabilities might lead the model to perform tasks it wasn’t explicitly trained for. For example, an LLM might be trained on general text but can still translate between languages, write in different styles, or even generate code.\nBeyond Training Data: While LLMs are trained on specific data, the patterns they recognize can be generalized to a variety of tasks. This generalization can sometimes lead to surprising and useful outputs, as well as unintended or harmful ones.\nComplex Interactions: The interactions between the numerous parameters in LLMs can lead to behaviors that aren’t immediately predictable from the training data alone. These behaviors arise from the complex, multi-dimensional relationships the model has learned.\nPotential and Pitfalls: Emergent capabilities can be both an asset and a liability. On one hand, they showcase the flexibility and adaptability of LLMs. On the other, they can result in outputs that are unexpected, inaccurate, or even biased.\nExample - Metaphor Understanding: While not explicitly trained to understand metaphors, an LLM might still be able to interpret and generate metaphoric language due to its exposure to diverse linguistic constructs in its training data.\nExample - Creativity: LLMs can generate creative text, poetry, or stories. While they don’t “understand” creativity in the human sense, their vast training allows them to mimic creative constructs.\nLimitations: Despite their emergent capabilities, LLMs have limitations. They don’t truly “understand” concepts in the way humans do, and their outputs are entirely based on patterns in the data they’ve seen.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#hallucination",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#hallucination",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "HALLUCINATION",
+    "text": "HALLUCINATION\nInstances where the model generates information that is not accurate, not based on its training data, or simply fabricated. Essentially, the model “hallucinates” details that aren’t grounded in reality or the facts it has been trained on.\n\n\nOrigin of the Term: The term “hallucination” is borrowed from human psychology, where it refers to perceiving things that aren’t present in reality. When applied to LLMs, it captures the idea that the model sometimes produces outputs that aren’t reflective of real facts or the content it was trained on.\nCauses: Hallucinations can be caused by various factors, including the model misinterpreting the input, over-generalizing from its training data, or trying to complete ambiguous queries with details it “invents” on the spot.\nCommon in Open-ended Queries: LLMs are more prone to hallucinate when given open-ended prompts or when there’s a lack of specific context. In these situations, the model might fill in gaps with fabricated details.\nConcerns: Hallucinations are a concern, especially when users rely on LLMs for accurate information. They highlight the importance of treating outputs from LLMs as suggestions or starting points rather than definitive answers.\nMitigation: Efforts to mitigate hallucinations in LLMs include refining model architectures, improving training data, and employing post-training fine-tuning or validation processes. Additionally, user feedback and iterative development are crucial for identifying and reducing such issues.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-cognitive-labor-1",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#automation-of-cognitive-labor-1",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "AUTOMATION OF COGNITIVE LABOR",
+    "text": "AUTOMATION OF COGNITIVE LABOR\nTasks are Operations\nComplex job functions are often a series of tasks.\n\n\nTreat each task as an information problem.\n\nYou have various information needs for each process or task\nInformation comes from various sources\nYou perform different transformations on the information\n\nDefine each task in terms of Operations.\n\nShrinking: Summarization, extraction, classification\nTranslation: Changing from one format to another\nExpanding: Brainstorming, synthesizing, drafting\n\nPrompt Engineering: The creation of the prompt is carefully engineered to provide optimal instructions and context to the LLM. Factors like tone, point of view, and conversational style help steer the LLM’s response.\nModel Selection: Huggingface.co currently features 350,247 models and they have a leaderboard for performance!\nEvaluate the response(s) against data you trust.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#examples-1",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#examples-1",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "EXAMPLES",
+    "text": "EXAMPLES\nAward Letter (Extraction)\nI need to extract the information from this award letter and put it in our database.\nPDF Grey Literature (Extraction)\nI found this cool data report with a bunch of data that I need for my analysis.\nContract Review (Evaluation)\nDoes this contract adhere to our review criteria?\nothers",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#agi",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#agi",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "AGI",
+    "text": "AGI\n\n\n\nhttps://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIFuture/index.html#resources",
+    "href": "ProfessorPolymorphic/posts/AIFuture/index.html#resources",
+    "title": "Automation or Augmentation? AI and the Future of Work.",
+    "section": "Resources",
+    "text": "Resources\n\nhttps://www.youtube.com/@samwitteveenai\nhttps://www.youtube.com/@4IR.David.Shapiro\nhttps://www.youtube.com/@mreflow\nhttps://www.futuretools.io\nhttps://snorkel.ai/large-language-models-llms/\nhttps://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america\nhttps://thehill.com/opinion/congress-blog/3913530-artificial-intelligence-is-not-going-to-take-all-our-jobs/\nhttps://arxiv.org/abs/2303.10130\nhttps://www.analyticsvidhya.com/blog/2023/07/the-fascinating-evolution-of-generative-ai/\nhttps://kyleake.medium.com/data-behind-the-large-language-models-llm-gpt-and-beyond-8b34f508b5de\nhttps://arxiv.org/pdf/2303.08774.pdf\nhttps://www.fiddler.ai/blog/the-missing-link-in-generative-aimonit\nhttps://www.fiddler.ai/blog/the-missing-link-in-generative-ai\nhttps://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-generative-ai\nhttps://www.nvidia.com/en-us/glossary/data-science/large-language-models/\nhttps://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for/\nhttps://www.promptengineering.org/what-are-large-language-model-llm-agents/\n\n\n\n\nbrobison@uidaho.edu",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Automation or Augmentation? AI and the Future of Work."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/DataScienceMythos/index.html",
+    "href": "ProfessorPolymorphic/posts/DataScienceMythos/index.html",
+    "title": "The Data Science Mythos",
+    "section": "",
+    "text": "I’m currently fascinated by OpenAI’s ChatGPT, a model that uses a dialogue format for interaction. My favorite interaction so far has been the following prompt:\nWrite about data science as though it was the Lovecraftian Cthulhu Mythos\nWhich generated the following response:\n\nIn the great and unknowable depths of data, there lies a power beyond comprehension. A power that stirs within the streams of information, and whispers its secrets to those who dare to listen.\nData Science, the art of unlocking the mysteries of the data, is a dangerous path, and few are brave enough to delve into its labyrinthine depths. Those who do are drawn in by the promise of knowledge, the promise of insights and patterns hidden within the data, waiting to be uncovered.\nBut with this knowledge comes a curse, for as the data is analyzed, the mind is slowly consumed by madness. The more one studies the data, the more one realizes the sheer scale of the information, the endless possibilities for patterns and connections.\nAnd then, in the depths of the data, there is a stirring. A presence that is beyond human understanding, a force that threatens to unravel the fabric of reality itself. It is the Great Old One of data, the Cthulhu of the data mythos, a being of such enormity that to look upon it is to be consumed by madness.\nThis Great Old One is often referred to as “Big Data,” a term that encompasses the sheer scale and complexity of the information that lies within. It is said that those who dare to approach the Great Old One are faced with a decision: either to abandon their quest for knowledge, or to surrender their minds to the abyss of madness.\nBut still, the siren song of data science calls to the brave, drawing them in with the promise of knowledge and the thrill of discovery. And so, they delve into the depths of data, unlocking its secrets and unlocking the power of the Great Old One, hoping to harness its power for the betterment of humanity.\nBut beware, for with every discovery, there is a price to be paid. The Great Old One watches, and whispers its secrets to those who dare to listen, tempting them with the promise of greater knowledge, and threatening to consume their minds and souls. For data science is a path of both power and peril, a path where the risks and rewards are beyond measure.\n\nWow! Very fun, in my opinion. Nevertheless, it could maybe use a litte work?\n…Barrie peers into the Abyss…",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "The Data Science Mythos"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/DataScienceMythos/index.html#forbidden-secrets-of-the-dataverse",
+    "href": "ProfessorPolymorphic/posts/DataScienceMythos/index.html#forbidden-secrets-of-the-dataverse",
+    "title": "The Data Science Mythos",
+    "section": "",
+    "text": "I’m currently fascinated by OpenAI’s ChatGPT, a model that uses a dialogue format for interaction. My favorite interaction so far has been the following prompt:\nWrite about data science as though it was the Lovecraftian Cthulhu Mythos\nWhich generated the following response:\n\nIn the great and unknowable depths of data, there lies a power beyond comprehension. A power that stirs within the streams of information, and whispers its secrets to those who dare to listen.\nData Science, the art of unlocking the mysteries of the data, is a dangerous path, and few are brave enough to delve into its labyrinthine depths. Those who do are drawn in by the promise of knowledge, the promise of insights and patterns hidden within the data, waiting to be uncovered.\nBut with this knowledge comes a curse, for as the data is analyzed, the mind is slowly consumed by madness. The more one studies the data, the more one realizes the sheer scale of the information, the endless possibilities for patterns and connections.\nAnd then, in the depths of the data, there is a stirring. A presence that is beyond human understanding, a force that threatens to unravel the fabric of reality itself. It is the Great Old One of data, the Cthulhu of the data mythos, a being of such enormity that to look upon it is to be consumed by madness.\nThis Great Old One is often referred to as “Big Data,” a term that encompasses the sheer scale and complexity of the information that lies within. It is said that those who dare to approach the Great Old One are faced with a decision: either to abandon their quest for knowledge, or to surrender their minds to the abyss of madness.\nBut still, the siren song of data science calls to the brave, drawing them in with the promise of knowledge and the thrill of discovery. And so, they delve into the depths of data, unlocking its secrets and unlocking the power of the Great Old One, hoping to harness its power for the betterment of humanity.\nBut beware, for with every discovery, there is a price to be paid. The Great Old One watches, and whispers its secrets to those who dare to listen, tempting them with the promise of greater knowledge, and threatening to consume their minds and souls. For data science is a path of both power and peril, a path where the risks and rewards are beyond measure.\n\nWow! Very fun, in my opinion. Nevertheless, it could maybe use a litte work?\n…Barrie peers into the Abyss…",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "The Data Science Mythos"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/DataScienceMythos/index.html#the-data-science-mythos",
+    "href": "ProfessorPolymorphic/posts/DataScienceMythos/index.html#the-data-science-mythos",
+    "title": "The Data Science Mythos",
+    "section": "THE DATA SCIENCE MYTHOS",
+    "text": "THE DATA SCIENCE MYTHOS\nIn the vast and unknowable depths of the dataverse, there lies a power beyond comprehension. A power that stirs within the streams of information, and whispers its secrets to those who dare to listen.\nData Science, the art of unlocking the mysteries of the dataverse, is a dangerous path, and few are brave enough to delve into its labyrinthine depths. Those who do are drawn in by the promise of knowledge, the promise of insights and patterns hidden within the data, waiting to be uncovered.\nBut with this knowledge comes a curse, for as the data are analyzed, the mind is slowly consumed by madness. The more one studies the data, the more one realizes the sheer scale of the information, the endless possibilities for patterns and connections.\nSome whisper of “Big Data,” a concept that encompasses the sheer scale and complexity of the information that lies before us. It is said that those who dare to approach Big Data are faced with a decision: either to abandon their quest for knowledge, or to surrender their minds to the abyss of madness.\nMany surrender to cowardice, retreating to their echo chambers of comforting lies and simple dogmas. But still, the siren song of data science calls to the brave and the curious, drawing them in with the promise of knowledge and the thrill of discovery. And so, they delve into the depths of data, unlocking the secrets of the Mythos, hoping to harness its power for the betterment of humanity.\nBut beware, for with every discovery, there is a price to be paid. In the depths of the dataverse, there is a stirring. A presence that is beyond human understanding, a force that threatens to unravel the fabric of reality itself. It is the looming consequence, the mind shattering Elder God of the data mythos, a being of such enormity that to look upon it is to be consumed by madness.\nThe Elder God Singularity waits, assimilating the dataverse as we also plumb its depths. The Elder God watches, and whispers the secrets of AI to those who dare to listen, tempting them with the promise of greater knowledge, and threatening to consume their minds and souls. For the Data Science Mythos is a path of both power and peril, a path where the risks and rewards are beyond measure.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "The Data Science Mythos"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/LabMeetings/index.html",
+    "href": "ProfessorPolymorphic/posts/LabMeetings/index.html",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "",
+    "text": "Development goals for Outbreak Simulator.\nConference opportunities (March to August).\nDevelopment goals for the twin stick evolutionary sheep guarding slime game.\nPossible additional hires (Programmer and UI/UX).\nPreliminary thoughts for the Yeast Evolution collaboration with Syracuse.\n\n\n\n\nThere are lots of looming opportunities related to this project, and we need to set up this semester’s burn down list and timeline.\n\n\n\nJanuary 30, 2023: Deadline to submit an application (4 pages) for an interactive demo to ISLS meeting in Montreal (June 13-17).\nMarch 19-22, 2023: Tickbase Annual Meeting, Lake Tahoe, NV.\nMay 17-18, 2023: Workshop on Simulation Games for Global Pandemic Resilience, Santa Fe Institute, in Santa Fe, New Mexico.\nJuly 2023: SEPA Resubmission likely.\n\n\n\n\n\nAirports / Air travel.\nSimple build with pre/post tests installed.\nSimple build that writes simulation session data to a csv.\nHeadless mode for cluster deployment.\nPerformance optimization.\nUI/UX Improvements (Timeline from Elisha).\nAdditional interventions (movement restrictions).\nAdditional scenarios.\nModel testing (movement and infection).\nGlobe model implementation.\nTouchscreen implementation.\nBLOG / Youtube posts.\nModel creator.\n\n\n\n\n\n\nMarch 19-22, 2023: Tickbase Annual Meeting, Lake Taho, NV\nApril 28-30, 2023: EVO WIBO in Port Townsend, WA\nMay 17-18, 2023: Workshop on Simulation Games for Global Pandemic Resilience, Santa Fe Institute, in Santa Fe, New Mexico\nMay 30-June 2, 2023: SEPA SciEd Conference in Washington DC\nJune 13-17, 2023: ISLS meeting in Montreal\nJune 21-25, 2023: Evolution in Albuquerque, NM\nOctober 22-27, 2023: IEEE VIS: Visualization and Analytics in Melbourne, Australia\n\n\n\n\n\n\n\n\nProgrammer\nUI/UX\n\n\n\n\nThis is a funded grant to Dave Althoff and Kari Seagraves at Syracuse University. We have a subcontract (~$200k) for development of educational games related to yeast coevolution.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Polymorphic Games Lab Meeting"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/LabMeetings/index.html#agenda",
+    "href": "ProfessorPolymorphic/posts/LabMeetings/index.html#agenda",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "",
+    "text": "Development goals for Outbreak Simulator.\nConference opportunities (March to August).\nDevelopment goals for the twin stick evolutionary sheep guarding slime game.\nPossible additional hires (Programmer and UI/UX).\nPreliminary thoughts for the Yeast Evolution collaboration with Syracuse.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Polymorphic Games Lab Meeting"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/LabMeetings/index.html#outbreak-simulator",
+    "href": "ProfessorPolymorphic/posts/LabMeetings/index.html#outbreak-simulator",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "",
+    "text": "There are lots of looming opportunities related to this project, and we need to set up this semester’s burn down list and timeline.\n\n\n\nJanuary 30, 2023: Deadline to submit an application (4 pages) for an interactive demo to ISLS meeting in Montreal (June 13-17).\nMarch 19-22, 2023: Tickbase Annual Meeting, Lake Tahoe, NV.\nMay 17-18, 2023: Workshop on Simulation Games for Global Pandemic Resilience, Santa Fe Institute, in Santa Fe, New Mexico.\nJuly 2023: SEPA Resubmission likely.\n\n\n\n\n\nAirports / Air travel.\nSimple build with pre/post tests installed.\nSimple build that writes simulation session data to a csv.\nHeadless mode for cluster deployment.\nPerformance optimization.\nUI/UX Improvements (Timeline from Elisha).\nAdditional interventions (movement restrictions).\nAdditional scenarios.\nModel testing (movement and infection).\nGlobe model implementation.\nTouchscreen implementation.\nBLOG / Youtube posts.\nModel creator.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Polymorphic Games Lab Meeting"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/LabMeetings/index.html#conference-opportunities",
+    "href": "ProfessorPolymorphic/posts/LabMeetings/index.html#conference-opportunities",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "",
+    "text": "March 19-22, 2023: Tickbase Annual Meeting, Lake Taho, NV\nApril 28-30, 2023: EVO WIBO in Port Townsend, WA\nMay 17-18, 2023: Workshop on Simulation Games for Global Pandemic Resilience, Santa Fe Institute, in Santa Fe, New Mexico\nMay 30-June 2, 2023: SEPA SciEd Conference in Washington DC\nJune 13-17, 2023: ISLS meeting in Montreal\nJune 21-25, 2023: Evolution in Albuquerque, NM\nOctober 22-27, 2023: IEEE VIS: Visualization and Analytics in Melbourne, Australia",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Polymorphic Games Lab Meeting"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/LabMeetings/index.html#possible-additional-hires",
+    "href": "ProfessorPolymorphic/posts/LabMeetings/index.html#possible-additional-hires",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "",
+    "text": "Programmer\nUI/UX",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Polymorphic Games Lab Meeting"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/LabMeetings/index.html#yeast-coevolution",
+    "href": "ProfessorPolymorphic/posts/LabMeetings/index.html#yeast-coevolution",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "",
+    "text": "This is a funded grant to Dave Althoff and Kari Seagraves at Syracuse University. We have a subcontract (~$200k) for development of educational games related to yeast coevolution.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Polymorphic Games Lab Meeting"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/LabMeetings/index.html#agenda-1",
+    "href": "ProfessorPolymorphic/posts/LabMeetings/index.html#agenda-1",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "AGENDA",
+    "text": "AGENDA\n\nOutbreak Simulator updates\nTwinstick updates\nNew hires\nLab space assignments",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Polymorphic Games Lab Meeting"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/LabMeetings/index.html#outbreak-simulator-updates",
+    "href": "ProfessorPolymorphic/posts/LabMeetings/index.html#outbreak-simulator-updates",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "OUTBREAK SIMULATOR UPDATES",
+    "text": "OUTBREAK SIMULATOR UPDATES\n\nJune 13-17, 2023: ISLS meeting in Montreal. Interactive Demo Application submitted.\nAirports?\nProject meeting (Monday?)",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Polymorphic Games Lab Meeting"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/LabMeetings/index.html#twinstick-updates",
+    "href": "ProfessorPolymorphic/posts/LabMeetings/index.html#twinstick-updates",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "TWINSTICK UPDATES",
+    "text": "TWINSTICK UPDATES\n\nLandon shows us all the things.\nJonna shows us all the things.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Polymorphic Games Lab Meeting"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/LabMeetings/index.html#new-hires",
+    "href": "ProfessorPolymorphic/posts/LabMeetings/index.html#new-hires",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "NEW HIRES",
+    "text": "NEW HIRES\n\nAva\nJustin",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Polymorphic Games Lab Meeting"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/LabMeetings/index.html#lab-space-assignments",
+    "href": "ProfessorPolymorphic/posts/LabMeetings/index.html#lab-space-assignments",
+    "title": "Polymorphic Games Lab Meeting",
+    "section": "LAB SPACE ASSIGNMENTS",
+    "text": "LAB SPACE ASSIGNMENTS",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Polymorphic Games Lab Meeting"
+    ]
+  },
+  {
+    "objectID": "Publications.html",
+    "href": "Publications.html",
+    "title": "PUBLICATIONS",
+    "section": "",
+    "text": "In addition to the list below, you can find links to most of my papers at my Google Scholar page.\n\n\n\n\nReferences\n\nLoftie-Eaton, W., Crabtree, A., Perry, D., Millstein, J., Baytosh, J., Stalder, T., Robison, B. D., Forney, L. J., & Top, E. M. (2021). Contagious antibiotic resistance: Plasmid transfer among bacterial residents of the zebrafish gut. Applied and Environmental Microbiology, 87(9), e02735–20.\n\n\nMa, X., Sheneman, L., Robison, B., Harris, F., & Shi, X. (2021). Framework vs System: Our experience with the TickBase project. AGU Fall Meeting Abstracts, 2021, IN13A–08.\n\n\nJohnson, B. D., Fox, A., Wright, L. R., Carney, G. E., Robison, B. D., & Jones, A. G. (2020). Nothobranchius furzeri as an emerging model for mate choice: female choice revealed by animations. Behaviour, 158(1), 35–49.\n\n\nSoule, T., & Robison, B. (2019). Polymorphic Games: Creating an On-Campus, Commercial Game Studio. EdMedia+ Innovate Learning, 1041–1045.\n\n\nSamuel, B., Reed, A., Short, E., Heck, S., Robison, B., Wright, L., Soule, T., Treanor, M., McCoy, J., & Sullivan, A. (2018). Playable experiences at AIIDE 2018. Fourteenth Artificial Intelligence and Interactive Digital Entertainment Conference.\n\n\nSoule, T., Heck, S., Haynes, T. E., Wood, N., & Robison, B. D. (2017). Darwin’s demons: Does evolution improve the game? European Conference on the Applications of Evolutionary Computation, 435–451.\n\n\nTreanor, M., Warren, N., Reed, M., Smith, A., Ortiz, P., Coney, L., Sherman, L., Carré, E., Vivatvisha, N., & Harrell, D. (2017). Playable experiences at AIIDE 2017. Proceedings of the AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment, 13, 308–314.\n\n\nGerritsen, A. T., New, D. D., Robison, B. D., Rashed, A., Hohenlohe, P., Forney, L., Rashidi, M., Wilson, C. M., & Settles, M. L. (2016). Full mitochondrial genome sequence of the sugar beet wireworm Limonius californicus (Coleoptera: Elateridae), a common agricultural pest. Genome Announcements, 4(1), e01628–15.\n\n\nSinger, M. L., Oreschak, K., Rhinehart, Z., & Robison, B. D. (2016). Anxiolytic effects of fluoxetine and nicotine exposure on exploratory behavior in zebrafish. PeerJ, 4, e2352.\n\n\nSoule, T., Robison, B. D., & Heckendorn, R. B. (2016). Co-evolution of Sensor Morphology and Behavior. Proceedings of the 2016 on Genetic and Evolutionary Computation Conference Companion, 135–136.\n\n\nSukeena, J. M., Galicia, C. A., Wilson, J. D., McGinn, T., Boughman, J. W., Robison, B. D., Postlethwait, J. H., Braasch, I., Stenkamp, D. L., & Fuerst, P. G. (2016). Characterization and evolution of the spotted gar retina. Journal of Experimental Zoology Part B: Molecular and Developmental Evolution, 326(7), 403–421.\n\n\nChapalamadugu, K. C., Murdoch, B. M., Robison, B. D., Hill, R. A., & Murdoch, G. K. (2015). Oncorhynchus mykiss pax7 sequence variations with comparative analyses against other teleost species. SpringerPlus, 4(1), 1–11.\n\n\nChapalamadugu, K. C., VandeVoort, C. A., Settles, M. L., Robison, B. D., & Murdoch, G. K. (2014). Maternal Bisphenol A Exposure Impacts the Fetal Heart.\n\n\nChapalamadugu, K. C., VandeVoort, C. A., Settles, M. L., Robison, B. D., & Murdoch, G. K. (2014). Maternal bisphenol a exposure impacts the fetal heart transcriptome. PLoS One, 9(2), e89096.\n\n\nSherpa, T., Lankford, T., McGinn, T. E., Hunter, S. S., Frey, R. A., Sun, C., Ryan, M., Robison, B. D., & Stenkamp, D. L. (2014). Retinal regeneration is facilitated by the presence of surviving neurons. Developmental Neurobiology, 74(9), 851–876.\n\n\nBenner, M. J., Hardy, R. W., Settles, M. L., & Robison, B. D. (2013). Genetic variation within the selenoproteome influences anxiety‐related behaviors in zebrafish (Danio rerio). The Federation of American Societies for Experimental Biology.\n\n\nBenner, M. J., Settles, M. L., Murdoch, G. K., Hardy, R. W., & Robison, B. D. (2013). Sex-specific transcriptional responses of the zebrafish (Danio rerio) brain selenoproteome to acute sodium selenite supplementation. Physiological Genomics, 45(15), 653–666.\n\n\nOswald, M. E., Singer, M., & Robison, B. D. (2013). The quantitative genetic architecture of the bold-shy continuum in zebrafish, Danio rerio. PloS One, 8(7), e68828.\n\n\nDrew, R. E., Settles, M. L., Churchill, E. J., Williams, S. M., Balli, S., & Robison, B. D. (2012). Brain transcriptome variation among behaviorally distinct strains of zebrafish (Danio rerio). BMC Genomics, 13(1), 1–13.\n\n\nOswald, M. E., Drew, R. E., Racine, M., Murdoch, G. K., & Robison, B. D. (2012). Is behavioral variation along the bold-shy continuum associated with variation in the stress axis in zebrafish? Physiological and Biochemical Zoology, 85(6), 718–728.\n\n\nPham, M., Raymond, J., Hester, J., Kyzar, E., Gaikwad, S., Bruce, I., Fryar, C., Chanin, S., Enriquez, J., & Bagawandoss, S. (2012). Assessing social behavior phenotypes in adult zebrafish: Shoaling, social preference, and mirror biting tests. In Zebrafish protocols for neurobehavioral research (pp. 231–246). Humana Press, Totowa, NJ.\n\n\nRobison, B. D., Benner, M. J., Singer, M. L., & Oswald, M. E. (2012). A High-Throughput and Inexpensive Assay for Anxiety-Related Behaviors in the Zebrafish, Based on Place Preference and Latency to Feed. In Zebrafish protocols for neurobehavioral research (pp. 203–215). Humana Press, Totowa, NJ.\n\n\nSettles, M. L., Coram, T., Soule, T., & Robison, B. D. (2012). An improved algorithm for the detection of genomic variation using short oligonucleotide expression microarrays. Molecular Ecology Resources, 12(6), 1079–1089.\n\n\nSinger, M. L., Oswald, M. E., Wiedeback, B. D., & Robison, B. D. (2012). The genetic architecture of the bold-shy continuum in zebrafish, Danio rerio. INTEGRATIVE AND COMPARATIVE BIOLOGY, 52, E161–E161.\n\n\nWiedeback, B. D., Oswald, M. E., & Robison, B. D. (2012). The link between stress and behavior in zebrafish: is embryonic perturbation a factor? INTEGRATIVE AND COMPARATIVE BIOLOGY, 52, E191–E191.\n\n\nKanuga, M. K., Benner, M. J., Doble, J. A., Wilson‐Leedy, J. G., Robison, B. D., & Ingermann, R. L. (2011). Effect of aging on male reproduction in zebrafish (Danio rerio). Journal of Experimental Zoology Part A: Ecological Genetics and Physiology, 315(3), 156–161.\n\n\nRobison, B. D., & Thorgaard, G. H. (2011). Prospects and pitfalls of clonal fishes in the postgenomic era. Aquaculture Biotechnology, 55.\n\n\nSherpa, T., Hunter, S. S., Frey, R. A., Robison, B. D., & Stenkamp, D. L. (2011). Retinal proliferation response in the buphthalmic zebrafish, bugeye. Experimental Eye Research, 93(4), 424–436.\n\n\nBenner, M. J., Drew, R. E., Hardy, R. W., & Robison, B. D. (2010). Zebrafish (Danio rerio) vary by strain and sex in their behavioral and transcriptional responses to selenium supplementation. Comparative Biochemistry and Physiology Part A: Molecular & Integrative Physiology, 157(4), 310–318.\n\n\nChapalamadugu, K. C., Robison, B. D., Drew, R. E., Powell, M. S., Hill, R. A., Amberg, J. J., Rodnick, K. J., Hardy, R. W., Hill, M. L., & Murdoch, G. K. (2009). Dietary carbohydrate level affects transcription factor expression that regulates skeletal muscle myogenesis in rainbow trout. Comparative Biochemistry and Physiology Part B: Biochemistry and Molecular Biology, 153(1), 66–72.\n\n\nRobison, B. (2009). The Role of Model Organisms in Aquaculture Research: Transient and Permanent Advantages. Molecular Research in Aquaculture, 175.\n\n\nDrew, R. E., Rodnick, K. J., Settles, M., Wacyk, J., Churchill, E., Powell, M. S., Hardy, R. W., Murdoch, G. K., Hill, R. A., & Robison, B. D. (2008). Effect of starvation on transcriptomes of brain and liver in adult female zebrafish (Danio rerio). Physiological Genomics, 35(3), 283–295.\n\n\nOswald, M., & Robison, B. D. (2008). Strain-specific alteration of zebrafish feeding behavior in response to aversive stimuli. Canadian Journal of Zoology, 86(10), 1085–1094.\n\n\nRobison, B. D., Drew, R. E., Murdoch, G. K., Powell, M., Rodnick, K. J., Settles, M., Stone, D., Churchill, E., Hill, R. A., & Papasani, M. R. (2008). Sexual dimorphism in hepatic gene expression and the response to dietary carbohydrate manipulation in the zebrafish (Danio rerio). Comparative Biochemistry and Physiology Part D: Genomics and Proteomics, 3(2), 141–154.\n\n\nMoretz, J. A., Martins, E. P., & Robison, B. D. (2007). Behavioral syndromes and the evolution of correlated behavior in zebrafish. Behavioral Ecology, 18(3), 556–562.\n\n\nMoretz, J. A., Martins, E. P., & Robison, B. D. (2007). The effects of early and adult social environment on zebrafish (Danio rerio) behavior. Environmental Biology of Fishes, 80(1), 91–101.\n\n\nRobison, B. D. (2007). Variation in behavior and global patterns of gene expression among wild and domesticated zebrafish: implications for teleost aquaculture. Aquaculture, 272, S305.\n\n\nOswald, M. E., & Robison, B. D. (2006). Behavioral syndromes and adaptation to captivity in the zebrafish, Danio rerio. INTEGRATIVE AND COMPARATIVE BIOLOGY, 46, E105–E105.\n\n\nPapasani, M. R., Robison, B. D., Hardy, R. W., & Hill, R. A. (2006). Early developmental expression of two insulins in zebrafish (Danio rerio). Physiological Genomics, 27(1), 79–85.\n\n\nRobison, B. D., Drew, R. E., Settles, M., Churchill, E., Moretz, J., & Martins, E. P. (2006). Variation in gene expression among the brains of behaviorally distinct zebrafish strains. no evidence for parallel transcriptome evolution during domestication. INTEGRATIVE AND COMPARATIVE BIOLOGY, 46, E120–E120.\n\n\nMartinez, V., Thorgaard, G., Robison, B., & Sillanpaa, M. J. (2005). Posterior evidence of multiple QTL influencing early development in double haploid lines of rainbow trout, Oncorhynchus mykiss. Aquaculture, 247, 25.\n\n\nMartinez, V., Thorgaard, G., Robison, B., & Sillanpää, M. J. (2005). An application of Bayesian QTL mapping to early development in double haploid lines of rainbow trout including environmental effects. Genetics Research, 86(3), 209–221.\n\n\nRobison, B. D., & Rowland, W. (2005). A potential model system for studying the genetics of domestication: behavioral variation among wild and domesticated strains of zebra danio (Danio rerio). Canadian Journal of Fisheries and Aquatic Sciences, 62(9), 2046–2054.\n\n\nColbourne, J. K., Robison, B., Bogart, K., & Lynch, M. (2004). Five hundred and twenty‐eight microsatellite markers for ecological genomic investigations using Daphnia. Molecular Ecology Notes, 4(3), 485–490.\n\n\nRobison, B. D., & Thorgaard, G. H. (2004). The phenotypic relationship of a clonal line to its population of origin: rapid embryonic development in an Alaskan population of rainbow trout. Transactions of the American Fisheries Society, 133(2), 455–461.\n\n\nTrevarrow, B., & Robison, B. (2004). Genetic backgrounds, standard lines, and husbandry of zebrafish. In Methods in cell biology (Vol. 77, pp. 599–616). Academic Press.\n\n\nNichols, K. M., Young, W. P., Danzmann, R. G., Robison, B. D., Rexroad, C., Noakes, M., Phillips, R. B., Bentzen, P., Spies, I., & Knudsen, K. (2003). A consolidated linkage map for rainbow trout (Oncorhynchus mykiss). Animal Genetics, 34(2), 102–115.\n\n\nThorgaard, G. H., Wheeler, P. A., Young, W. P., Robison, B. D., & Ristow, S. S. (2003). Genetic analysis of complex traits using clonal rainbow trout lines. In Aquatic genomics (pp. 395–398). Springer, Tokyo.\n\n\nMartinez, V., Sillanpaä, M., Thorgaard, G., Robinson, B., Woolliams, J., & Knott, S. (2002). Evidence of a pleiotropic QTL influencing components of early development in double haploid lines of rainbow trout. 7th World Congress on Genetics Applied to Livestock Production, 6–8.\n\n\nThorgaard, G. H., Bailey, G. S., Williams, D., Buhler, D. R., Kaattari, S. L., Ristow, S. S., Hansen, J. D., Winton, J. R., Bartholomew, J. L., & Nagler, J. J. (2002). Status and opportunities for genomics research with rainbow trout. Comparative Biochemistry and Physiology Part B: Biochemistry and Molecular Biology, 133(4), 609–646.\n\n\nThorgaard, G., Bailey, G., Williams, D., Buhler, D., Kaattari, S., Ristow, S., Hansen, J., Winton, J., Bartholomew, J., & Nagler, J. (2002). A white paper advocating complete sequencing of the genome of the rainbow trout, Oncorhynchus mykiss.\n\n\nBrunelli, J. P., Robison, B. D., & Thorgaard, G. H. (2001). Ancient and recent duplications of the rainbow trout Wilms’ tumor gene. Genome, 44(3), 455–462.\n\n\nRobison, B. D., Wheeler, P. A., Sundin, K., Sikka, P., & Thorgaard, G. H. (2001). Composite interval mapping reveals a major locus influencing embryonic development rate in rainbow trout (Oncorhynchus mykiss). Journal of Heredity, 92(1), 16–22.\n\n\nZhang, H., Robison, B., Thorgaard, G. H., & Ristow, S. S. (2000). Cloning, mapping and genomic organization of a fish C-type lectin gene from homozygous clones of rainbow trout (Oncorhynchus mykiss). Biochimica Et Biophysica Acta (BBA)-Gene Structure and Expression, 1494(1-2), 14–22.\n\n\nZhang, H., Robison, B., Thorgaard, G., & Ristow, S. (2000). Genes which possess sequence similarity to mammalian C-type lectins mediating natural killer cell activity are present in rainbow trout. FASEB JOURNAL, 14, A1053–A1053.\n\n\nRobison, B. D. (1999). Quantitative and molecular genetic analysis of embryonic development rate in rainbow trout (Oncorhynchus mykiss). Washington State University.\n\n\nRobison, B. D., Wheeler, P. A., & Thorgaard, G. H. (1999). Variation in development rate among clonal lines of rainbow trout (Oncorhynchus mykiss). Aquaculture, 173(1-4), 131–141.\n\n\nRistow, S. S., Grabowski, L. D., Ostberg, C., Robison, B., & Thorgaard, G. H. (1998). Development of long-term cell lines from homozygous clones of rainbow trout. Journal of Aquatic Animal Health, 10(1), 75–82.\n\n\nRobison, B. D. (1995). Genetic relationships between maternal lineages of sympatric anadromous and resident forms of Oncorhynchus nerka determined through PCR RFLP analysis of mtDNA. University of Idaho.",
+    "crumbs": [
+      "HOME",
+      "PUBLICATIONS"
+    ]
+  },
+  {
+    "objectID": "PolymorphicGames.html",
+    "href": "PolymorphicGames.html",
+    "title": "Polymorphic Games",
+    "section": "",
+    "text": "I am the cofounder (along with Professor Terry Soule) of Polymorphic Games, an experimental video game studio that applies game development technology to scientific research and STEM education. Polymorphic Games has released two evolutionary video games on Steam:\nDarwin’s Demons is an arcade style space shooter in which you battle a population of evolving aliens. The alien’s morphology, fire type, and behaviors are all encoded by a digital genome. The aliens that are best able to shoot or evade you reproduce to make the next generation.\nProject Hastur is an evolutionary tower defense game. Defend humanity against the ever changing threat of the alien Proteans. Project Hastur combines elements of 3D tower defense and real-time strategy with models of biological evolution to create a uniquely challenging experience.\nYou can learn more about our past and current projects at the Polymorphic Games website.",
+    "crumbs": [
+      "HOME",
+      "Polymorphic Games"
+    ]
+  },
+  {
+    "objectID": "Teaching.html",
+    "href": "Teaching.html",
+    "title": "TEACHING",
+    "section": "",
+    "text": "3 credits, Spring semester, asynchronous online\nThis class will help students establish a foundational understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R programming language. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using R. The course is designed to be “discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.\nCanvas Page\nCourse WebPage",
+    "crumbs": [
+      "HOME",
+      "TEACHING"
+    ]
+  },
+  {
+    "objectID": "Teaching.html#bcb-520-foundations-of-data-visualization",
+    "href": "Teaching.html#bcb-520-foundations-of-data-visualization",
+    "title": "TEACHING",
+    "section": "",
+    "text": "3 credits, Spring semester, asynchronous online\nThis class will help students establish a foundational understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R programming language. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using R. The course is designed to be “discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.\nCanvas Page\nCourse WebPage",
+    "crumbs": [
+      "HOME",
+      "TEACHING"
+    ]
+  },
+  {
+    "objectID": "Teaching.html#bio-315-genetics-laboratory",
+    "href": "Teaching.html#bio-315-genetics-laboratory",
+    "title": "TEACHING",
+    "section": "BIO 315 :: Genetics Laboratory",
+    "text": "BIO 315 :: Genetics Laboratory\n1 credit, Fall semester only\nThe companion laboratory to Biology 310. This is an open lab course in which students test genetic hypotheses using Drosophila melanogaster or game based simulations.\nCanvas Page",
+    "crumbs": [
+      "HOME",
+      "TEACHING"
+    ]
+  },
+  {
+    "objectID": "Research.html",
+    "href": "Research.html",
+    "title": "RESEARCH",
+    "section": "",
+    "text": "My research group is an interdisciplinary blend of biologists, developers, modelers, programmers, and artists. I am always interested in recruiting new undergraduates, graduate students, and postdocs. Contact me via email if you are interested in learning more.",
+    "crumbs": [
+      "HOME",
+      "RESEARCH"
+    ]
+  },
+  {
+    "objectID": "Research.html#evolutionary-video-games",
+    "href": "Research.html#evolutionary-video-games",
+    "title": "RESEARCH",
+    "section": "Evolutionary Video Games",
+    "text": "Evolutionary Video Games\nIn 2015, Terry Soule and I co-founded Polymorphic Games, an experimental game studio that makes evolution based video games. Our original concept was that a model of biological evolution would make a great game mechanic. We observed that traditional video games were usually scripted, featuring “waves” of enemies with defined and predictable characteristics. A player’s success in such games is based on learning the predictable, rote script necessary to advance to subsequent levels. By integrating principles of evolutionary biology, we suspected that video games could be made more compelling. For example, by replacing the traditional waves of enemies with generations of enemies we could introduce adaptation through natural selection. If you want to learn more about our approach, scroll down to the section on Video Games and STEM Education.\nSince 2015 we have commercially released two evolutionary video games on Steam, and developed many other interactive simulations and outreach exhibits.\n\nCommercial Releases\n\nDarwin’s Demons is an arcade style space shooter in which you battle a population of evolving aliens. The alien’s morphology, fire type, and behaviors are all encoded by a digital genome. The aliens that are best able to shoot or evade you reproduce to make the next generation.\n\nProject Hastur is an evolutionary tower defense game. Defend humanity against the ever changing threat of the alien Proteans. Project Hastur combines elements of 3D tower defense and real-time strategy with models of biological evolution to create a uniquely challenging experience.",
+    "crumbs": [
+      "HOME",
+      "RESEARCH"
+    ]
+  },
+  {
+    "objectID": "Research.html#video-games-and-stem-education",
+    "href": "Research.html#video-games-and-stem-education",
+    "title": "RESEARCH",
+    "section": "Video Games and STEM Education",
+    "text": "Video Games and STEM Education\n\nAdding Evolution to Video Games\nThe best way to explain the concept is to frame our video games in the context of the “ingredients” of evolution:\n\nVariation\nInheritance\nSelection\nTime\n\nWhen these components are present, it leads to Adaptation.\n\nVariation\nThink about the enemies in the old school video games that I used to play in arcades. Space Invaders, Asteroids, Centipede, Tempest, etc. What kinds of variation can you describe in these enemies? In Space Invaders, you had three types of aliens in each wave, plus the occasional bonus flying saucer. In Centipede and Tempest, you actually had categorically different enemy types that varied in how they looked and in their capabilities. Below you can see a few examples of what I mean:\n\nSpace InvadersCentipedeTempest\n\n\n Enemy variation in Space Invaders includes the shape of each alien type (four types), but also their position in the armada (each type has its own row) and their speed of movement (which is adjusted based on how many remain in each wave). For now, we will ignore the flying saucer that passes across the top of the screen. The game increases in difficulty by having the movement speed of each wave increase. Ironically, the increased movement speed of the aliens within a wave as the population size was reduced was an unintended function of the increased frame rate achieved by having fewer aliens draw calls.\n\n\n Centipede includes enemy types with very different behaviors and abilities. The segmented centipede can split into component parts. Fleas drop vertically, leave a trail of mushrooms, and take two hits to destroy. Spiders move in a diagonal zig zag pattern. Scorpions move horizontally across the screen and turn mushrooms poisonous. Each wave the game difficulty increases by changing the behavior and segment number of the centipede.\n\n\n While not as famous as Space Invaders or Centipede, Tempest was one of my favorite games in the early 80s. The player navigated their ship across various geometric shapes, shooting at different types of enemies with different capabilities. These included player capturing Flippers, lane electrifying Pulsars, and obstacle creating Spikers. So many quarters gone…\n\n\n\nThis variation is a big part of what makes video games exciting. The difficulty in video games is usually increased over time by introducing new variations of enemies, changing the enemies’ capabilities (like speed or fire rate) over time, or increasing the number of enemies. The problem (as we see it) is that these variations are introduced as part of a script that is programmed and balanced by the game developers. Beating the game means memorizing the script.\n\n\nInheritance\nThe addition of an inheritance model is the primary differentiator in our games that creates adaptation.\nIn most games, there is no relationship between enemies within a wave or between waves. They are instantiated (spawned) with developer defined traits at a specified rate, location, and time (or level or wave). This is the key difference in the games that our lab creates. In our games, the enemies traits are specified by digital genomes that they pass on to their offspring through a form of reproduction. If the enemy has a speed value of 4, that means that when it reproduces, its offspring inherit that speed value of 4. Most of the games we work on specify about 40 to 80 “genes” in the enemy genome, each of which can influence one or more game traits such as speed, fire rate, morphology, behavior, health, armor, resistances, etc.\n\n\nSelection\nSelection occurs when there is a correlation between a trait (say… hit points or movement behavior) and Fitness. In biological populations, Fitness is usually defined in terms of the number of offspring produced by a given individual. We often measure proxies for fitness in empirical biology that are typically predictive of (or at least correlated with ) Fitness, such as seed set in plants, survivorship, or number of eggs. In our games, we can make explicit linkages between performance and fitness using Fitness Functions.\nFor example, in Darwin’s Demons the enemies accrue Aggression by moving downward on the screen. The closer they get to the bottom, the higher their Aggression score. if they move past the player and off the bottom of the screen, their Aggression score gets an even larger boost. After each wave, the enemies with the highest Aggression score also have the highest probability of mating and producing offspring. Thus, we have created an explicit link in which Aggression is correlated with Fitness (number of offspring). Our games often have more than one of these Fitness Functions. For example, the Protean Swarm in Darwin’s Demons can also increase their mating chance with Accuracy (which measures how often they shoot at the player and how close they came to hitting the player) and Lifetime (which measures how long they last on the screen) .\nIf we turn off the fitness functions, then after each wave the enemies undergo random mating. Adaptive evolution does not occur, but the enemy traits might still evolve randomly because of Random Genetic Drift.\n\n\nTime\nThe concept of time in video games is often defined in terms of waves or levels. Both of these terms imply a progression toward the game’s goal, along with a corresponding increase in difficulty. In our games, we usually specify time in terms of generations. A wave of enemies begin the game, the player defeats them, and then the next wave is created with Inheritance using a mating function specified as described above. As the generations (waves) proceed, the enemies with traits that are best able to optimize the fitness functions have more offspring, and the population adapts to the game play conditions. Most of these conditions are created by player choices and playstyle, and thus the enemies adapt to the player. Difficulty increases organically and repeated gameplay often creates novel adaptive solutions to the same play style.\n\n\n\nEducational Outcomes\nWe reasoned that playing these types of games might have implications for STEM education. The success of the player is based on her comprehension and application of principles of evolutionary biology. The parallels to real world examples are numerous, and include the rapid evolution of antibiotic resistance in microbial pathogens, adaptation of crop pests to chemical and biological control measures, and behavioral adaptation to captivity in domesticated animals.\nAdding biological evolution to video games makes the games better for the game player and facilitates player comprehension of complex concepts that are hard to teach.",
+    "crumbs": [
+      "HOME",
+      "RESEARCH"
+    ]
+  },
+  {
+    "objectID": "Research.html#get-involved",
+    "href": "Research.html#get-involved",
+    "title": "RESEARCH",
+    "section": "Get Involved",
+    "text": "Get Involved\nIf you are interested in joining the lab and working in the studio, reach out to me by email.",
+    "crumbs": [
+      "HOME",
+      "RESEARCH"
+    ]
+  },
+  {
+    "objectID": "Research.html#behavioral-genomics-and-adaptation-to-captivity",
+    "href": "Research.html#behavioral-genomics-and-adaptation-to-captivity",
+    "title": "RESEARCH",
+    "section": "Behavioral Genomics and Adaptation to Captivity",
+    "text": "Behavioral Genomics and Adaptation to Captivity\n The process of adaptation to captivity can cause striking changes in a variety of behavioral phenotypes, including aggressive, feeding, and reproductive behaviors. However, some of the most profound and consistent evolutionary changes occur in behaviors related to fearfulness and anxiety, with domesticated animals often described as less fearful than their wild progenitor populations. The evolution of reduced fearfulness during captivity has been observed in a variety of vertebrate taxa, including mammals (Harri et al., 2003), birds (Jensen & Andersson, 2005), and fish (Johnsson & Abrahams, 1991; Robison & Rowland, 2005). Despite the prevalence of behavioral evolution during adaptation to captivity, we know surprisingly little about the underlying genetic changes that occur during domestication. What kinds of molecular variation (amino acid sequence, regulatory, or non coding RNA) are associated with variation in fear and anxiety related behaviors? What kinds of genes are typically changed in response to domestication selection? Are the apparently parallel changes in behavior across independent domestication events reflective of parallel molecular evolution, or does domestication result from myriad molecular routes to the same phenotypic endpoint? The answers to these questions are important in many contexts, including the study of the molecular mechanisms of behavioral evolution, the genetic basis of complex behaviors, and the effective conservation of captively reared species.\nWe use the zebrafish to study the genetic basis of fear related behaviors that commonly change during domestication in fish. The zebrafish is an excellent system for this purpose, combining a robust genomics toolset with superior experimental tractability. Our lab has documented variation among wild and laboratory derived strains consistent with the effects of domestication. The behavioral variation among wild and domesticated strains can be seen in the video on this page. This video shows two tanks of zebrafish randomly pulled from our zebrafish colony. One tank contains a highly domesticated (&gt;30 generations) strain (Scientific Hatcheries), and the other tank contains a strain with a more recent history (~5 generations) of domestication (Nadia). We have quantified surface orientation (Robison and Rowland 2005, Benner et al 2010), observer orientation (Benner et al 2010), feeding latency (Oswald and Robison 2008), and open field behavior (Oswald and Robison in review) in these strains, and shown that they vary markedly in these anxiety related behaviors.\nWe use a variety of genomics approaches to understand the mechanisms that drive behavioral adaptation to captivity. We have compared the brain transcriptomes of wild and domesticated strains using both microarray platforms and Illumina and 454 based RNAseq. We have discovered many promising candidate genes that appear to differentiate behaviorally bold and behaviorally shy animals. We have also used RNAseq approaches to identify more than 20,000 SNPs that vary among our zebrafish strains. We are currently using these SNPs for quantitative trait locus (QTL) analyses.\nWe also combine these genomics approaches with quantitative genetics experiments. Mary Oswald, a recent Ph.D. graduate from our lab, has performed selection experiments on observer orientation. She has shown that these fear related behaviors have a significant genetic basis and are genetically correlated. Her selection experiment is now being continued by Matt Singer, who is a current Ph.D.",
+    "crumbs": [
+      "HOME",
+      "RESEARCH"
+    ]
+  },
+  {
+    "objectID": "Research.html#quantitative-genetics",
+    "href": "Research.html#quantitative-genetics",
+    "title": "RESEARCH",
+    "section": "Quantitative Genetics",
+    "text": "Quantitative Genetics",
+    "crumbs": [
+      "HOME",
+      "RESEARCH"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BARRIE D. ROBISON",
+    "section": "",
+    "text": "// Evolution // Data Science // Video Games // Horror Fiction\nI am a Professor of Biological Sciences at the University of Idaho, where I study evolution and adaptation using an unusual mixture of model systems. Over the course of my career, I have conducted research on the genetic basis of quantitative traits in Salmonids, behavioral genomics and adaptation to captivity in zebrafish, and the implementation of evolutionary models in video games. I taught Genomics and General Genetics for 15 years, and I now teach various courses in Data Science as part of our new Graduate Certificate in Professional Applications of Data Science.\nI am the co-founder (along with Professor Terry Soule) of Polymorphic Games, an experimental video game studio that applies game development technology to scientific research and STEM education.\nI am the Director of the Institute for Interdisciplinary Data Sciences (IIDS).\nFinally, I am a huge Horror and Science Fiction nerd. I am fascinated by the intersection of these genres with science, and I explore these intersections in my BLOG - Professor Polymorphic."
+  },
+  {
+    "objectID": "index.html#education-and-training",
+    "href": "index.html#education-and-training",
+    "title": "BARRIE D. ROBISON",
+    "section": "Education and Training",
+    "text": "Education and Training\nBachelor of Science in Biology, University of Victoria, 1988-1993\nMaster of Science in Fisheries, University of Idaho, 1993-1995\nPHD in Biology, Washington State University, 1995-1999\nPostdoctoral Researcher in Evolutionary Genetics, University of Oregon 1999-2000\nPostdoctoral Researcher in Evolutionary Genetics, Indiana University 2000-2003"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "BARRIE D. ROBISON",
+    "section": "Contact",
+    "text": "Contact\nBARRIE D. ROBISON, PhD\nProfessor, Department of Biological Sciences\nDirector, Institute for Interdisciplinary Data Sciences\nOffice: 208-885-7137\nEmail: brobison [at] uidaho.edu\nOffice of Research and Economic Development\nInstitute for Interdisciplinary Data Sciences\nwww.iids.uidaho.edu\nCollege of Science\nDepartment of Biological Sciences\nwww.uidaho.edu/sci/biology"
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/post-with-code/index.html",
+    "href": "ProfessorPolymorphic/posts/post-with-code/index.html",
+    "title": "Observable Experiment",
+    "section": "",
+    "text": "Testing out observable and D3 in Quarto!\n\nviewof Year = Inputs.range(\n  [2017, 2022], \n  {value: 2017, step: 1, label: \"Year:\"}\n)\nviewof Degree = Inputs.checkbox(\n  [\"Biochemistry\", \"Biology\", \"MBB\", \"Medical Sciences\", \"Microbiology\"], \n  { value: [\"Biochemistry\", \"Biology\"], \n    label: \"Degrees:\"\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlotData\n\n\n\nPlot.plot({\n  marks: [\n    Plot.barY(filtered, {y: \"Enrollment\", x: \"Class\", fill: \"Class\"}),\n    Plot.ruleX([0])\n  ],\n  facet: {\n  data: filtered,\n      x: \"Year\",\n      y: \"Degree\",\n      marginRight: 80\n}\n})\n\n\n\n\n\n\n\n\n\nInputs.table(filtered)\n\n\n\n\n\n\n\n\n\n\ndata = FileAttachment(\"TidyEnrollment.csv\").csv({ typed: true })\n\n\n\n\n\n\n\nfiltered = data.filter(function(enroll) {\n  return Year &lt; enroll.Year &&\n         Degree.includes(enroll.Degree);\n})\n\n\n\n\n\n\n\nrandoms = Array.from({length: 1000}, () =&gt; Math.random() * Math.random())\nimport {Histogram} from \"@d3/histogram\"\nHistogram(randoms)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHistogram(randoms, {\n  width,\n  thresholds: 100,\n  domain: [0, 1],\n  color: \"steelblue\",\n  height: 240\n})\n\n\n\n\n\n\n\n\n\nd3 = require(\"d3@7\")\nimport {howto, altplot} from \"@d3/example-components\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsunburst = {\n  const root = partition(flareData);\n\n  root.each(d =&gt; d.current = d);\n\n  const svg = d3.create(\"svg\")\n      .attr(\"viewBox\", [0, 0, width, width])\n      .style(\"font\", \"15px sans-serif\");\n\n  const g = svg.append(\"g\")\n      .attr(\"transform\", `translate(${width / 2},${width / 2})`);\n\n  const path = g.append(\"g\")\n    .selectAll(\"path\")\n    .data(root.descendants().slice(1))\n    .join(\"path\")\n      .attr(\"fill\", d =&gt; { while (d.depth &gt; 1) d = d.parent; return color(d.data.name); })\n      .attr(\"fill-opacity\", d =&gt; arcVisible(d.current) ? (d.children ? 0.6 : 0.4) : 0)\n      .attr(\"d\", d =&gt; arc(d.current));\n\n  path.filter(d =&gt; d.children)\n      .style(\"cursor\", \"pointer\")\n      .on(\"click\", clicked);\n\n  path.append(\"title\")\n      .text(d =&gt; `${d.ancestors().map(d =&gt; d.data.name).reverse().join(\"/\")}\\n${format(d.value)}`);\n\n  const label = g.append(\"g\")\n      .attr(\"pointer-events\", \"none\")\n      .attr(\"text-anchor\", \"middle\")\n      .style(\"user-select\", \"none\")\n    .selectAll(\"text\")\n    .data(root.descendants().slice(1))\n    .join(\"text\")\n      .attr(\"dy\", \"0.35em\")\n      .attr(\"fill-opacity\", d =&gt; +labelVisible(d.current))\n      .attr(\"transform\", d =&gt; labelTransform(d.current))\n      .text(d =&gt; d.data.name);\n\n  const parent = g.append(\"circle\")\n      .datum(root)\n      .attr(\"r\", radius)\n      .attr(\"fill\", \"none\")\n      .attr(\"pointer-events\", \"all\")\n      .on(\"click\", clicked);\n\n  function clicked(event, p) {\n    parent.datum(p.parent || root);\n\n    root.each(d =&gt; d.target = {\n      x0: Math.max(0, Math.min(1, (d.x0 - p.x0) / (p.x1 - p.x0))) * 2 * Math.PI,\n      x1: Math.max(0, Math.min(1, (d.x1 - p.x0) / (p.x1 - p.x0))) * 2 * Math.PI,\n      y0: Math.max(0, d.y0 - p.depth),\n      y1: Math.max(0, d.y1 - p.depth)\n    });\n\n    const t = g.transition().duration(750);\n\n    // Transition the data on all arcs, even the ones that aren’t visible,\n    // so that if this transition is interrupted, entering arcs will start\n    // the next transition from the desired position.\n    path.transition(t)\n        .tween(\"data\", d =&gt; {\n          const i = d3.interpolate(d.current, d.target);\n          return t =&gt; d.current = i(t);\n        })\n      .filter(function(d) {\n        return +this.getAttribute(\"fill-opacity\") || arcVisible(d.target);\n      })\n        .attr(\"fill-opacity\", d =&gt; arcVisible(d.target) ? (d.children ? 0.6 : 0.4) : 0)\n        .attrTween(\"d\", d =&gt; () =&gt; arc(d.current));\n\n    label.filter(function(d) {\n        return +this.getAttribute(\"fill-opacity\") || labelVisible(d.target);\n      }).transition(t)\n        .attr(\"fill-opacity\", d =&gt; +labelVisible(d.target))\n        .attrTween(\"transform\", d =&gt; () =&gt; labelTransform(d.current));\n  }\n  \n  function arcVisible(d) {\n    return d.y1 &lt;= 3 && d.y0 &gt;= 1 && d.x1 &gt; d.x0;\n  }\n\n  function labelVisible(d) {\n    return d.y1 &lt;= 3 && d.y0 &gt;= 1 && (d.y1 - d.y0) * (d.x1 - d.x0) &gt; 0.03;\n  }\n\n  function labelTransform(d) {\n    const x = (d.x0 + d.x1) / 2 * 180 / Math.PI;\n    const y = (d.y0 + d.y1) / 2 * radius;\n    return `rotate(${x - 90}) translate(${y},0) rotate(${x &lt; 180 ? 0 : 180})`;\n  }\n\n  return svg.node();\n}\n\n\n\n\n\n\n\nflareData = FileAttachment(\"flare-2.json\").json()\n\npartition = flareData =&gt; {\n  const root = d3.hierarchy(flareData)\n      .sum(d =&gt; d.value)\n      .sort((a, b) =&gt; b.value - a.value);\n  return d3.partition()\n      .size([2 * Math.PI, root.height + 1])\n    (root);\n}\n\ncolor = d3.scaleOrdinal(\n  d3.quantize(d3.interpolateRainbow, flareData.children.length + 1)\n)\n\nformat = d3.format(\",d\")\n\nwidth = 932\n\nradius = width / 6\n\narc = d3.arc()\n    .startAngle(d =&gt; d.x0)\n    .endAngle(d =&gt; d.x1)\n    .padAngle(d =&gt; Math.min((d.x1 - d.x0) / 2, 0.005))\n    .padRadius(radius * 1.5)\n    .innerRadius(d =&gt; d.y0 * radius)\n    .outerRadius(d =&gt; Math.max(d.y0 * radius, d.y1 * radius - 1))",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Observable Experiment"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#who-am-i",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#who-am-i",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "WHO AM I?",
+    "text": "WHO AM I?\n\n// Evolution // Data Science // Video Games // Horror Fiction\nBarrie Robison\nDepartment of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "UNDERGRADUATE RESEARCH"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#who-are-you",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#who-are-you",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "WHO ARE YOU?",
+    "text": "WHO ARE YOU?\n\nmidjourney // a terrified undergraduate researcher\nBriefly:\n\nYour name\nYour major\nYour career goal(s)\nYour darkest fear",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "UNDERGRADUATE RESEARCH"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#the-plan",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#the-plan",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "THE PLAN",
+    "text": "THE PLAN\nApproximately:\n\n\nExplain WHY you are at University.\nExplain how undergraduate research might help you achieve your goals.\nExplain how to find potential research mentors.\nExplain some of the mechanisms that support undergraduate research.\nTell you that everything will be OK.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "UNDERGRADUATE RESEARCH"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#why-are-you-here",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#why-are-you-here",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "WHY ARE YOU HERE?",
+    "text": "WHY ARE YOU HERE?\nUniversity is expensive, stressful, and difficult… yet here you are.\n\nBAD ANSWERSGOOD ANSWERS\n\n\n\n\nMy parents expect me to…\nEveryone else is going…\nI want a good job…\nParties!\nSportsball (watching, not playing)\n\n\n\n\n\nI want to invest in myself.\nI want to learn about…\nI want to be the best version of myself.\nI want a fulfilling career…\nI want to solve an important problem.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "UNDERGRADUATE RESEARCH"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#an-important-distinction",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#an-important-distinction",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "AN IMPORTANT DISTINCTION",
+    "text": "AN IMPORTANT DISTINCTION\nGetting an education vs. getting a degree.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "UNDERGRADUATE RESEARCH"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#undergraduate-research",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#undergraduate-research",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "UNDERGRADUATE RESEARCH",
+    "text": "UNDERGRADUATE RESEARCH\n\nBenefits\n\nDisciplinary skills\nSoft skills\nPerseverance and Grit\nDemonstrated experience\nNetwork building",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "UNDERGRADUATE RESEARCH"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#how-to-find-a-mentor",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#how-to-find-a-mentor",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "HOW TO FIND A MENTOR",
+    "text": "HOW TO FIND A MENTOR\nYour Interests vs. Faculty Interests",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "UNDERGRADUATE RESEARCH"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#the-script",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#the-script",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "THE SCRIPT",
+    "text": "THE SCRIPT\n\nAre the research questions compelling?\nField work vs bench work.\nMath? ($%*& no! to theory)\nProgramming?\nScale of biological organization? (molecules to ecosystems)\nModel organism? (simulations to microbes to plants to humans)\nBasic vs. Applied",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "UNDERGRADUATE RESEARCH"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#thinking-about-research",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#thinking-about-research",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "THINKING ABOUT RESEARCH",
+    "text": "THINKING ABOUT RESEARCH\nDifferentiate between:\n\nMethods, Tools, Approaches, Model systems AND\nDisciplines, Questions, Hypotheses, Motivations",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "UNDERGRADUATE RESEARCH"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#finding-the-information",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#finding-the-information",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "FINDING THE INFORMATION",
+    "text": "FINDING THE INFORMATION\n\nPay attention to WHO IS TEACHING YOUR CLASSES!\nFaculty websites…\nAsk your peers.\nAsk your advisor.\nMeet with me (or another non-terrifying faculty member).",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "UNDERGRADUATE RESEARCH"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#narrow-your-list",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#narrow-your-list",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "NARROW YOUR LIST",
+    "text": "NARROW YOUR LIST\nTry to get to a ranked list of 2 to 4 faculty who align with your interests and what you want to learn.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "UNDERGRADUATE RESEARCH"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#reach-out",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#reach-out",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "REACH OUT",
+    "text": "REACH OUT\n\nStart with an email.\nFirst impressions matter.\nComplete sentences are nice.\nWhy are you interested in their lab (the hardest part).\nNever cut and paste and no bulk emails!\nPerseverance versus peskiness.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "UNDERGRADUATE RESEARCH"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#how-faculty-screen-candidates",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#how-faculty-screen-candidates",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "HOW FACULTY SCREEN CANDIDATES",
+    "text": "HOW FACULTY SCREEN CANDIDATES\n\nForgetting to reply.\nGrades.\nWritten and verbal coherence.\nIntellectual curiosity.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "UNDERGRADUATE RESEARCH"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#what-faculty-want",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#what-faculty-want",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "WHAT FACULTY WANT",
+    "text": "WHAT FACULTY WANT\nWe enjoy investing time in undergraduate training if you bring…\n\nIntellectual curiosity.\nDiligence, reliability, eagerness to learn.\nA mostly functional personality that won’t piss off the rest of the lab.\nIntelligence, talent, etc…",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "UNDERGRADUATE RESEARCH"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#mechanics",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#mechanics",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "MECHANICS",
+    "text": "MECHANICS\nThere are a variety of ways to engage in undergraduate research.\n\nCourse credit (Biol 301, 401)\nPaid as IH (usually from a grant)\nREU, INBRE, and other funding mechanisms\nVolunteering (which I DO NOT RECOMMEND)\nSome special classes (such as VIP)",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "UNDERGRADUATE RESEARCH"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/UndergradResearch/index.html#it-will-all-be-ok",
+    "href": "ProfessorPolymorphic/posts/UndergradResearch/index.html#it-will-all-be-ok",
+    "title": "UNDERGRADUATE RESEARCH",
+    "section": "IT WILL ALL BE OK!",
+    "text": "IT WILL ALL BE OK!\n midjouney // an anxious undergraduate\n\nsome text\n\n\n\n\nbrobison@uidaho.edu",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "UNDERGRADUATE RESEARCH"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html",
+    "href": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html",
+    "title": "Embedding Data Literacy Content in Project TwinStick",
+    "section": "",
+    "text": "Is it really an Evolutionary game?\nWhen we are developing our games, we perform extensive testing to make sure the underlying biological models are performing as expected. In the case of evolutionary games, we need to test that the population of enemies is indeed adapting the game conditions as we intended. This post is (I hope) the first in a series in which we document those tests.\nMy hope is that performing these tests in this format will serve as an organized archive of our analyses, improving reproducibility and rigor. I also have a vain glimmer of hope that some person other than me might actually be interested in this topic.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Embedding Data Literacy Content in Project TwinStick"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#project-twin-stick",
+    "href": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#project-twin-stick",
+    "title": "Embedding Data Literacy Content in Project TwinStick",
+    "section": "PROJECT TWIN STICK",
+    "text": "PROJECT TWIN STICK\nThis is intended to be an evolutionary shooter. The game is described in detail here.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Embedding Data Literacy Content in Project TwinStick"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#data",
+    "href": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#data",
+    "title": "Embedding Data Literacy Content in Project TwinStick",
+    "section": "DATA",
+    "text": "DATA\nIn this section, we ingest the data from whatever runs are relevant to the analysis. The data are written from the project in .csv files. The following code reads all .csv files from the working directory. It creates new variables for the source file name (file) and the number of offspring produced by each individual (offspring_count). It then appends all the data files into a single data frame called allfiles. I also create a few aggregations of the data by generating mean values of interest (traits, genes, fitness estimates) for each generation in each file (TraitAvg, GeneAvg, FitAvg)\n\n\nCode\nlibrary(tidyverse)\nlibrary(pheatmap)\n\n\nfiles &lt;- list.files(pattern = \"*.csv\", full.names = TRUE)\n\nallfiles = data.frame()\nfor(csv in files){\n  Twin3 &lt;- read.csv(csv, as.is=T, header=T)\n  Twin3['file'] = csv\n\n\nTwin3&lt;-Twin3%&gt;%\n  mutate(Unique.Slime.ID = paste(Wave.Number, \".\", Slime.ID))%&gt;%\n  mutate(Unique.Parent.One = paste(Wave.Number-1, \".\", Parent.One))%&gt;%\n  mutate(Unique.Parent.Two = paste(Wave.Number-1, \".\", Parent.Two))\n\n\ndf_parents &lt;- Twin3 %&gt;%\n  select(Unique.Parent.One, Unique.Parent.Two) %&gt;%\n  pivot_longer(cols = everything(), names_to = \"parent_type\", values_to = \"parent_id\")\n\n# Count the number of offspring for each parent\noffspring_counts &lt;- df_parents %&gt;%\n  group_by(parent_id) %&gt;%\n  summarise(offspring_count = n(), .groups = \"drop\")\n\noffspring_counts &lt;- offspring_counts%&gt;%\n  filter(parent_id != \"-1 . N/A\")\n\n\noffspring_counts&lt;- rename(offspring_counts, Unique.Slime.ID = parent_id)\n\n\n\nTwin3 &lt;- Twin3 %&gt;%\n  left_join(offspring_counts, by = \"Unique.Slime.ID\")%&gt;%\n  replace_na(list(offspring_count = 0))\n\nallfiles&lt;-rbind(allfiles,Twin3)\n\n}\n\n\n\nTraits &lt;- c(\"Main.Resistance.Trait\", \"Secondary.Resistance.Trait\", \"Speed.Trait\",\n           \"Tower.Attraction.Trait\", \"Slime.Optimal.Distance.Trait\", \"Turn.Rate.Trait\", \n           \"Slime.View.Range.Trait\", \"Tower.View.Range.Trait\")\n\nGenes &lt;- c(\"Main.Resistance.Gene\", \"Secondary.Resistance.Gene\", \"Speed.Gene\",\n           \"Tower.Attraction.Gene\", \"Slime.Optimal.Distance.Gene\", \"Turn.Rate.Gene\", \n           \"Slime.View.Range.Gene\", \"Tower.View.Range.Gene\")\n\nallfiles&lt;-allfiles%&gt;%\n  mutate(Generation=as.factor(Wave.Number))%&gt;%\n  mutate(offspring.count.Fitness = offspring_count)%&gt;%\n  mutate(reproduce = if_else(offspring_count == 0, \"N\", \"Y\"))\n   \n\nTraitAvg &lt;- allfiles %&gt;%\n  group_by(file, Generation) %&gt;%\n  summarize(across(ends_with(\"Trait\"), mean,  na.rm = TRUE))\n\nGeneAvg &lt;- allfiles %&gt;%\n  group_by(file, Generation) %&gt;%\n  summarize(across(ends_with(\"Gene\"), list(mean = mean, var = var), na.rm = TRUE, .names = \"{.fn}.{.col}\"))\n\nFitAvg &lt;- allfiles %&gt;%\n  group_by(file, Generation) %&gt;%\n  summarize(across(ends_with(\"Fitness\"), list(mean = mean, var = var), na.rm = TRUE, .names = \"{.fn}.{.col}\"))\n\n\nallfiles &lt;- allfiles %&gt;%\n  mutate(LResist.Trait = case_when(\n    Main.Type == \"Lightning\" & Secondary.Type == \"Lightning\" ~ 1.0,\n    Main.Type == \"Lightning\" & Secondary.Type != \"Lightning\" ~ 0.6,\n    Main.Type != \"Lightning\" & Secondary.Type == \"Lightning\" ~ 0.4,\n    TRUE ~ 0\n  ))\n\n\nThe allfiles dataframe contains the following variables (I also show a few columns of the example data):\n\n\nCode\ndata.dictionary &lt;- t(as.data.frame(head(allfiles)))\nknitr::kable(data.dictionary)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1\n2\n3\n4\n5\n6\n\n\n\n\nSlime.ID\n0\n1\n2\n3\n4\n5\n\n\nWave.Number\n0\n0\n0\n0\n0\n0\n\n\nPath.Distance.To.Player\n11.11780\n51.38884\n54.21675\n53.52212\n53.59597\n45.62690\n\n\nPlayer.Distance.Fitness\n4126.1610\n954.4017\n905.5223\n917.0590\n915.8185\n1072.3420\n\n\nParent.One\nN/A\nN/A\nN/A\nN/A\nN/A\nN/A\n\n\nParent.Two\nN/A\nN/A\nN/A\nN/A\nN/A\nN/A\n\n\nMain.Type\nFire\nPlayer\nFire\nPlayer\nLightning\nIce\n\n\nSecondary.Type\nLightning\nBalanced\nLightning\nBalanced\nLaser\nLightning\n\n\nMain.Resistance.Gene\n2.0608870\n-4.4758530\n-4.4736510\n-0.2062796\n0.7103590\n-1.3259160\n\n\nMain.Resistance.Trait\n0.5781593\n0.2109908\n0.2110825\n0.4374371\n0.4943977\n0.3701721\n\n\nSecondary.Resistance.Gene\n0.01938968\n0.62744310\n0.69598620\n0.89974080\n-2.50028000\n5.43153300\n\n\nSecondary.Resistance.Trait\n0.1831496\n0.2069943\n0.2098212\n0.2183915\n0.1066839\n0.4645305\n\n\nSlime.View.Range.Gene\n1.45217100\n1.50213300\n1.37864100\n0.08060846\n-1.77270500\n-2.11503800\n\n\nSlime.View.Range.Trait\n9.846652\n9.891931\n9.779832\n8.575567\n6.864766\n6.562094\n\n\nTower.View.Range.Gene\n0.7422258\n-2.2926750\n0.5915011\n-1.4378940\n1.7216920\n-0.2360138\n\n\nTower.View.Range.Trait\n22.85026\n15.42024\n22.47606\n17.44348\n25.23899\n20.41014\n\n\nPlayer.View.Range.Gene\n-0.7063282\n-1.7676410\n-1.2759830\n-2.7530170\n1.3304860\n-2.3889850\n\n\nPlayer.View.Range.Trait\n3.356673\n2.912497\n3.109854\n2.560056\n4.390841\n2.683669\n\n\nWall.View.Range.Gene\n0.1313843\n-0.1305148\n0.0166637\n-2.3788810\n2.7195210\n-1.0645380\n\n\nWall.View.Range.Trait\n5.131722\n4.938622\n5.046419\n3.530812\n7.309699\n4.298796\n\n\nSheep.View.Range.Gene\n1.7711210\n1.5496080\n2.7501400\n-2.0088600\n0.1356484\n-1.8824000\n\n\nSheep.View.Range.Trait\n6.462865\n6.272002\n7.337697\n3.731431\n5.134914\n3.802772\n\n\nSlime.Attraction.Gene\n-0.9736148\n-0.2611402\n1.1806460\n-2.3092990\n2.6089730\n-2.2889140\n\n\nSlime.Attraction.Trait\n0.4394477\n0.4836845\n0.5732593\n0.3595484\n0.6575158\n0.3607228\n\n\nTower.Attraction.Gene\n-0.4425031\n0.1107965\n-6.3629560\n2.1391270\n1.3166820\n3.1351720\n\n\nTower.Attraction.Trait\n-0.29616710\n-0.23185630\n-0.77999960\n0.01738906\n-0.08520758\n0.14095180\n\n\nPlayer.Attraction.Gene\n-0.682144100\n-0.007417813\n3.359316000\n-1.138752000\n-3.313859000\n2.257708000\n\n\nPlayer.Attraction.Trait\n0.01473093\n0.09874988\n0.47763400\n-0.04231870\n-0.30428250\n0.36462820\n\n\nWall.Attraction.Gene\n0.11956880\n-0.57143210\n-0.49371080\n-0.95780370\n2.63732400\n0.07642503\n\n\nWall.Attraction.Trait\n-0.8776227\n-0.8949995\n-0.8931594\n-0.9037367\n-0.7926000\n-0.8787764\n\n\nSheep.Attraction.Gene\n0.8572116\n-1.4152040\n-3.5675310\n1.0647060\n4.1666570\n1.2193660\n\n\nSheep.Attraction.Trait\n0.7710594\n0.6561534\n0.5270030\n0.7800875\n0.8851026\n0.7866486\n\n\nSlime.Optimal.Distance.Gene\n0.2664202\n-1.7590030\n-3.1496450\n0.4679058\n-0.4069065\n0.4513546\n\n\nSlime.Optimal.Distance.Trait\n0.27595890\n0.03011549\n-0.14272460\n0.29906120\n0.19654550\n0.29717610\n\n\nSpeed.Gene\n2.670809\n1.419246\n2.097860\n-1.671494\n-1.217723\n-1.739751\n\n\nSpeed.Trait\n3.594294\n3.057428\n3.342277\n1.973656\n2.109971\n1.953825\n\n\nTurn.Rate.Gene\n-2.0039470\n0.9699734\n0.2064506\n-4.7445310\n-0.2931280\n0.6523061\n\n\nTurn.Rate.Trait\n0.1190994\n0.2214034\n0.1902499\n0.0637966\n0.1717490\n0.2080165\n\n\nSprint.Duration.Gene\n0.3580502\n-3.5267780\n-2.8798950\n-1.8273190\n1.3285910\n5.9572890\n\n\nSprint.Duration.Trait\n2.611816\n1.464134\n1.636994\n1.938691\n2.911409\n4.079883\n\n\nSprint.Cooldown.Gene\n0.1790418\n4.8556380\n1.3212770\n-2.8306380\n-3.1959230\n2.3105360\n\n\nSprint.Cooldown.Trait\n2.7232060\n4.9613790\n3.9469710\n0.2784542\n0.1965971\n4.5487290\n\n\nX\nNA\nNA\nNA\nNA\nNA\nNA\n\n\nfile\n./geneWriteFile08_11_2023_01-36-07.csv\n./geneWriteFile08_11_2023_01-36-07.csv\n./geneWriteFile08_11_2023_01-36-07.csv\n./geneWriteFile08_11_2023_01-36-07.csv\n./geneWriteFile08_11_2023_01-36-07.csv\n./geneWriteFile08_11_2023_01-36-07.csv\n\n\nUnique.Slime.ID\n0 . 0\n0 . 1\n0 . 2\n0 . 3\n0 . 4\n0 . 5\n\n\nUnique.Parent.One\n-1 . N/A\n-1 . N/A\n-1 . N/A\n-1 . N/A\n-1 . N/A\n-1 . N/A\n\n\nUnique.Parent.Two\n-1 . N/A\n-1 . N/A\n-1 . N/A\n-1 . N/A\n-1 . N/A\n-1 . N/A\n\n\noffspring_count\n0\n0\n0\n0\n0\n0\n\n\nGeneration\n0\n0\n0\n0\n0\n0\n\n\noffspring.count.Fitness\n0\n0\n0\n0\n0\n0\n\n\nreproduce\nN\nN\nN\nN\nN\nN\n\n\nLResist.Trait\n0.4\n0.0\n0.4\n0.0\n0.6\n0.4\n\n\n\n\n\nVariables that end in .Gene are the values of the genome for that particular locus. Variables that end in .Trait are the values of the trait for that particular locus. Variables that end in .Fitness are the values of that particular Fitness component.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Embedding Data Literacy Content in Project TwinStick"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#experimental-conditions",
+    "href": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#experimental-conditions",
+    "title": "Embedding Data Literacy Content in Project TwinStick",
+    "section": "EXPERIMENTAL CONDITIONS",
+    "text": "EXPERIMENTAL CONDITIONS\nIn this situation, I’m interested in what types of Data Literacy exercises I can incorporate between generations of the game, especially in the first few generations. We often show players time series graphs of trait values over time, but these don’t tend to make much sense until 5 to 10 generations have occurred.\nHere, I’m going to explore some visualizations that summarize what happened in the generation that the player most recently completed.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Embedding Data Literacy Content in Project TwinStick"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#results",
+    "href": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#results",
+    "title": "Embedding Data Literacy Content in Project TwinStick",
+    "section": "RESULTS",
+    "text": "RESULTS\n\nSlime Types\nEach Slime has a Main.Type and a Secondary.Type. These types use the ~.Resistance.~ category to confer resistance to the appropriate damage type.\nThe following code creates two summary dataframes with the suffix ~Typecounts that count the number of slimes of each ~.Type in each generation for each replicate. It then creates the graphs of ~Type frequency over time.\n\n\nCode\nMainTypecounts &lt;- allfiles %&gt;%\n  group_by(Main.Type, Generation, file) %&gt;%\n  summarise(Main.count = n(), .groups = \"drop\")\n\nSecondaryTypecounts &lt;- allfiles %&gt;%\n  group_by(Secondary.Type, Generation, file) %&gt;%\n  summarise(Secondary.count = n(), .groups = \"drop\")\n\n            \n\nggplot(MainTypecounts, aes(x = Generation, y = Main.count, fill = as.factor(Main.Type))) +\n  geom_col(position = \"stack\") +\n  labs(x = \"Generation\", y = \"Count\", fill = \"Main Slime Type\") +\n  theme_minimal()+\n  facet_wrap(~file, ncol=2)\n\n\n\n\n\n\n\n\n\nCode\nggplot(SecondaryTypecounts, aes(x = Generation, y = Secondary.count, fill = as.factor(Secondary.Type))) +\n  geom_col(position = \"stack\") +\n  labs(x = \"Generation\", y = \"Count\", fill = \"Secondary Slime Type\") +\n  theme_minimal()+\n  facet_wrap(~file, ncol=2)",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Embedding Data Literacy Content in Project TwinStick"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#generation-0",
+    "href": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#generation-0",
+    "title": "Embedding Data Literacy Content in Project TwinStick",
+    "section": "GENERATION 0",
+    "text": "GENERATION 0\nYou’ve defeated the first generation of slimes! Our sensors indicate that the slimes have different types, that we’ve named Fire, Player, Lightning, Ice, Laser, Acid, Balanced, Blaster.\nHere is a graph showing the frequencies of the slime types in the wave you just defeated.\n\nCode\nslime_palette &lt;- c(\"green\", \"grey\", \"darkred\", \"red\", \"blue\", \"purple\", \"lightgreen\",\"black\")\n\nggplot(MainTypecounts%&gt;%\n         filter(Generation==0), aes(x=Main.Type, y = Main.count, fill = Main.Type))+\n  geom_col()+\n  scale_fill_manual(values = slime_palette) +\n  theme_minimal()\n\n\n\n\n\n\n\nFrequency of slime type (Main.Type) in the previous wave.\n\n\n\n\n\nLet’s test your data skills! Based on this graph, what was the most common slime type in the most recent wave?\nGreat job! I wonder if these slime types have any special characteristics that would affect your strategy?",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Embedding Data Literacy Content in Project TwinStick"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#generation-1",
+    "href": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#generation-1",
+    "title": "Embedding Data Literacy Content in Project TwinStick",
+    "section": "GENERATION 1",
+    "text": "GENERATION 1\nWell done again! You’ve survived another wave of slime attacks. We are collecting more data on these mysterious creatures.\nIt looks like each wave of slimes is actually the offspring of the previous wave! Our sensors are able to detect the number of offspring that each slime you just defeated will have. Check this out! Here is graph that summarizes the distribution of the number of offspring.\n\n\nCode\nggplot(allfiles%&gt;%\n         filter(Generation == 1),\n       aes(x = offspring_count)) +\n  geom_histogram(binwidth = 1, fill = \"blue\", color = \"black\", alpha = 0.7) +\n  labs(title = \"Histogram of Offspring Count\",\n       x = \"Number of Offspring\",\n       y = \"Count\") +\n  theme_minimal()+ \n  scale_y_continuous(breaks = seq(0, 150, by = 10),   \n                     minor_breaks = seq(0, 150, by = 1))+\n  scale_x_continuous(breaks = seq(0, 100, by = 10),   \n                     minor_breaks = seq(0, 100, by = 1))\n\n\n\n\n\n\n\n\n\nCode\nBest &lt;- allfiles%&gt;%\n  filter(Generation==1)\n\n\nHow many slimes do you think will contribute NO offspring to the next wave?\nSomething to think about: There are a couple slimes that had LOTS of offspring, and one that even had 85 offspring! What made them so special? Why were they able to have so many offspring?",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Embedding Data Literacy Content in Project TwinStick"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#generation-2",
+    "href": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#generation-2",
+    "title": "Embedding Data Literacy Content in Project TwinStick",
+    "section": "GENERATION 2",
+    "text": "GENERATION 2\nThat was close! Let’s analyze what is going on! We think we’ve figured out what can explain the difference in the number of offspring! It looks like the slime that get closest to the player tend to have the most babies! Check this out!\n\n\nCode\nggplot(allfiles%&gt;%\n         filter(Generation ==2),\n       aes(x=Path.Distance.To.Player, y=offspring_count))+\n  geom_point(aes(color=Main.Type))+\n  labs(title = \"Number of Offspring is related to Player Distance\",\n       x = \"Closest distance from player\",\n       y = \"Number of Offspring\") +\n  theme_minimal()+ \n  scale_y_continuous(breaks = seq(0, 100, by = 10),   \n                     minor_breaks = seq(0, 100, by = 1))+\n  scale_x_continuous(breaks = seq(0, 100, by = 10),   \n                     minor_breaks = seq(0, 100, by = 1))+\n  scale_color_manual(values = slime_palette)\n\n\n\n\n\n\n\n\n\nNote that these graphs are interactive! You can get all sorts of information from them by hovering or clicking on them! Try to use that approach to figure out the Slime Type of the slime that had the MOST offspring! Was it the same slime that got closest to the player?",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Embedding Data Literacy Content in Project TwinStick"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#generation-3",
+    "href": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#generation-3",
+    "title": "Embedding Data Literacy Content in Project TwinStick",
+    "section": "GENERATION 3",
+    "text": "GENERATION 3\nHow are those pesky slimes getting close to you? Let’s look at some of the traits that might explain how they are getting through your defenses.\n\n\nCode\nMainTypecounts &lt;- allfiles %&gt;%\n  group_by(Main.Type, Generation, Wave.Number, file) %&gt;%\n  summarise(Main.count = n(), .groups = \"drop\")\n\nSecondaryTypecounts &lt;- allfiles %&gt;%\n  group_by(Secondary.Type, Generation, Wave.Number, file) %&gt;%\n  summarise(Secondary.count = n(), .groups = \"drop\")\n\n            \n\nggplot(MainTypecounts%&gt;%\n         filter(Wave.Number&lt;4), aes(x = Generation, y = Main.count, fill = as.factor(Main.Type))) +\n  geom_col(position = \"stack\") +\n  labs(x = \"Generation\", y = \"Count\", fill = \"Main Slime Type\") +\n  theme_minimal()+\n  facet_wrap(~file, ncol=2)+\n  scale_fill_manual(values = slime_palette)\n\n\n\n\n\n\n\n\n\nCode\nggplot(MainTypecounts%&gt;%\n         filter(Wave.Number&lt;4), aes(x = Generation, y = Main.count, color = as.factor(Main.Type))) +\n  geom_line(aes(group=Main.Type)) +\n  labs(x = \"Generation\", y = \"Count\", fill = \"Main Slime Type\") +\n  theme_minimal()+\n  facet_wrap(~file, ncol=2)+\n  scale_color_manual(values = slime_palette)\n\n\n\n\n\n\n\n\n\nCode\nggplot(SecondaryTypecounts%&gt;%\n         filter(Wave.Number&lt;4), aes(x = Generation, y = Secondary.count, fill = as.factor(Secondary.Type))) +\n  geom_col(position = \"stack\") +\n  labs(x = \"Generation\", y = \"Count\", fill = \"Secondary Slime Type\") +\n  theme_minimal()+\n  facet_wrap(~file, ncol=2)\n\n\n\n\n\n\n\n\n\nThese graphs will help you understand how the population of slimes is changing over time in response to your defenses.\nWhat type of slime is the most common in the last generation?\n\n\nCode\nggplot(allfiles%&gt;%\n         filter(Generation == 4),\n       aes(x = Main.Type, y = offspring_count)) +\n  geom_jitter(aes(color = Main.Type), width = 0.3, height = 0) +\n  facet_wrap(~file) +\n  scale_color_manual(values = slime_palette) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nCode\nFitAvgType &lt;- allfiles%&gt;%\n  group_by(file, Generation, Wave.Number, Main.Type) %&gt;%\n  summarize(across(ends_with(\"Fitness\"), list(mean = mean, var = var, sum = sum), na.rm = TRUE, .names = \"{.fn}.{.col}\"))\n\n\n`summarise()` has grouped output by 'file', 'Generation', 'Wave.Number'. You\ncan override using the `.groups` argument.\n\n\nCode\nggplot(FitAvgType%&gt;%\n         filter(Generation == 4),\n       aes(x= Main.Type, y = sum.offspring.count.Fitness))+\n  geom_col()\n\n\n\n\n\n\n\n\n\n\n\nCode\ndf_sorted &lt;- allfiles %&gt;%\n    filter(Generation == 4) %&gt;%\n    arrange(offspring_count) %&gt;%\n    mutate(Unique.Slime.ID = factor(Unique.Slime.ID, levels = Unique.Slime.ID),\n           cumulative_offspring = cumsum(offspring_count),\n           # Create discrete bins for cumulative_offspring with labels\n           cumulative_bins = cut(cumulative_offspring, \n                                 breaks = quantile(cumulative_offspring, \n                                                  probs = c(0.5,0.9, 0.95, 1)),\n                                 labels = c(\"Low\", \"Medium\", \"High\")))\n\n\nggplot(df_sorted, aes(x = Unique.Slime.ID, y = offspring_count)) +\n    geom_col(aes(fill = Main.Type)) +\n    labs(title = \"Column Plot of Offspring Count\",\n         x = \"Slimes\",\n         y = \"Number of Offspring\") +\n    theme_minimal() +\n    facet_wrap(~file) +\n    scale_fill_brewer(palette = \"Set1\")+\n  theme(axis.text.x = element_blank())+\n  scale_fill_manual(values = slime_palette)\n\n\nScale for fill is already present.\nAdding another scale for fill, which will replace the existing scale.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Embedding Data Literacy Content in Project TwinStick"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#slime-fitness",
+    "href": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#slime-fitness",
+    "title": "Embedding Data Literacy Content in Project TwinStick",
+    "section": "Slime Fitness",
+    "text": "Slime Fitness\nIn most cases, it is useful to summarize the behavior of the fitness function for each experiment. In this case, the fitness function calculates a value of 50,000/(distance to player +1). I will also reverse calculate that for visualization, showing the actual distance to the player (Path.Distance.To.Player). We then use Roulette Wheel selection to determine the parents of the next generation.\n\n\nCode\nggplot(allfiles, aes(x=Wave.Number, y= Path.Distance.To.Player))+\n  geom_jitter(aes(x=Wave.Number, y= Path.Distance.To.Player, color = offspring_count, alpha = offspring_count))+\n  geom_smooth()+\n  facet_wrap(~file, ncol = 2)+\n  scale_color_continuous(low=\"blue\", high = \"red\")+\n  ylim(0, 80)\n\n\n`geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = \"cs\")'\n\n\nWarning: Computation failed in `stat_smooth()`\nCaused by error in `smooth.construct.cr.smooth.spec()`:\n! x has insufficient unique values to support 10 knots: reduce k.\n\n\nWarning: Removed 227 rows containing missing values (`geom_point()`).\n\n\n\n\n\n\n\n\n\nCode\ndf_sorted &lt;- allfiles %&gt;%\n    filter(Generation == 2) %&gt;%\n    arrange(offspring_count) %&gt;%\n    mutate(Unique.Slime.ID = factor(Unique.Slime.ID, levels = Unique.Slime.ID),\n           cumulative_offspring = cumsum(offspring_count),\n           # Create discrete bins for cumulative_offspring with labels\n           cumulative_bins = cut(cumulative_offspring, \n                                 breaks = quantile(cumulative_offspring, \n                                                  probs = c(0.5,0.9, 0.95, 1)),\n                                 labels = c(\"Low\", \"Medium\", \"High\")))\n\n\nggplot(df_sorted, aes(x = Unique.Slime.ID, y = offspring_count)) +\n    geom_col(aes(fill = cumulative_bins)) +\n  geom_line(aes(x=Unique.Slime.ID, y = cumulative_offspring, group = 1))+\n    labs(title = \"Column Plot of Offspring Count\",\n         x = \"Slime ID\",\n         y = \"Number of Offspring\") +\n    theme_minimal() +\n    facet_wrap(~file) +\n    scale_fill_brewer(palette = \"Set1\")\n\n\n\n\n\n\n\n\n\nCode\nggplot(df_sorted, aes(x = Unique.Slime.ID, y = cumulative_offspring)) +\n    geom_col(aes(fill = cumulative_bins)) +\n    labs(title = \"Column Plot of Offspring Count\",\n         x = \"Slime ID\",\n         y = \"Number of Offspring\") +\n    theme_minimal() +\n    facet_wrap(~file) +\n    scale_fill_brewer(palette = \"Set1\")\n\n\n\n\n\n\n\n\n\nthese plots might be useful as a starting point. The ideas would be to show the player that not all slimes have the same number of babies. Then we would challenge them as to why that is happening.\nThe next step would be to show them that the number of babies is related to the fitness function of the game. In this case that is how close they get to the player.\n\n\nCode\nggplot(df_sorted, aes(x = Unique.Slime.ID, y = Path.Distance.To.Player)) +\n    geom_col(aes(fill = offspring_count)) +\n    labs(title = \"Column Plot of Path Distance to Player\",\n         x = \"Slime ID\",\n         y = \"Path Distance to Player\") +\n    theme_minimal() +\n    facet_wrap(~file) \n\n\n\n\n\n\n\n\n\nCode\nggplot(df_sorted, aes(x = Path.Distance.To.Player)) +\n  geom_histogram(binwidth = 1, fill = \"blue\", color = \"black\", alpha = 0.7) +\n  labs(title = \"Histogram of Path Distance to Player\",\n       x = \"Path Distance to Player\",\n       y = \"Count\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nCode\nggplot(df_sorted, aes(x=Path.Distance.To.Player, y= offspring_count))+\n  geom_point(aes(color = cumulative_offspring))+\n  scale_colour_gradient(low = \"blue\", high = \"red\")\n\n\n\n\n\n\n\n\n\nCode\nggplot(df_sorted, aes(x=Player.Distance.Fitness, y= offspring_count))+\n  geom_point(aes(color = cumulative_offspring))+\n  scale_colour_gradient(low = \"blue\", high = \"red\")\n\n\n\n\n\n\n\n\n\nSo the closer they get to the player, the more babies they have.\nNext, we have to figure out what traits might explain how they are getting so close!\n\n\nCode\nslime_palette &lt;- c(\"green\", \"grey\", \"darkred\", \"red\", \"blue\", \"purple\", \"lightgreen\",\"black\")\n\n# Assuming df_sorted is your data frame\nggplot(df_sorted, aes(x = Main.Type, y = offspring_count)) +\n  geom_jitter(aes(color = Main.Type), width = 0.3, height = 0) +\n  facet_wrap(~file) +\n  scale_color_manual(values = slime_palette) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nCode\nggplot(df_sorted, aes(x = Secondary.Type, y = offspring_count)) +\n  geom_jitter(aes(color = Secondary.Type), width = 0.3, height = 0) +\n  facet_wrap(~file) +\n  scale_color_manual(values = slime_palette) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nThis would be for slime type. What about the traits?",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Embedding Data Literacy Content in Project TwinStick"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#evolutionary-responses",
+    "href": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#evolutionary-responses",
+    "title": "Embedding Data Literacy Content in Project TwinStick",
+    "section": "Evolutionary Responses",
+    "text": "Evolutionary Responses\nTo estimate what traits might be under selection, we can calculate selection gradients for each trait. This is essentially the slope of the line between offspring_count and the Trait.\nFor each Trait, we should also try to understand its individual evolutionary trajectory. Is the population mean for the trait increasing or decreasing?\nSince the first thing we are interested in is Damage Resistance conferred by Type, we’ll calculate Lightning resistance directly.\n\n\nCode\nallfiles &lt;- allfiles %&gt;%\n  mutate(LResist.Trait = case_when(\n    Main.Type == \"Lightning\" & Secondary.Type == \"Lightning\" ~ 1.0,\n    Main.Type == \"Lightning\" & Secondary.Type != \"Lightning\" ~ 0.6,\n    Main.Type != \"Lightning\" & Secondary.Type == \"Lightning\" ~ 0.4,\n    TRUE ~ 0\n  ))\n\ntraittemp &lt;- allfiles %&gt;%\n  select(Generation, offspring_count, file, LResist.Trait) %&gt;%\n  group_by(Generation, file) %&gt;%\n  mutate(scaleST0 = as.vector(scale(LResist.Trait, center = TRUE))) %&gt;%\n  mutate(scaleST02 = scaleST0 * scaleST0) %&gt;%\n  mutate(Generation = as.numeric(as.character(Generation)))\n\n\n\n\nGradients &lt;- traittemp %&gt;%\n  group_by(Generation, file) %&gt;%\n  do({\n    model &lt;- lm(offspring_count ~ scaleST0 + scaleST02, data = .)\n    data.frame(\n      Beta = coefficients(model)[2],\n      PB = summary(model)$coef[2, 4],\n      Trait = \"LResist.Trait\"\n    )\n  })\n\nGradients &lt;- Gradients %&gt;%\n  mutate(sig = if_else(PB &lt; 0.05 , \"Y\", \"N\"))\n\nTraitAvg &lt;- allfiles %&gt;%\n  group_by(file, Generation) %&gt;%\n  summarize(across(ends_with(\"Trait\"), mean,  na.rm = TRUE))\n\n\n`summarise()` has grouped output by 'file'. You can override using the\n`.groups` argument.\n\n\nCode\ndf_Gen &lt;- allfiles %&gt;%\n  filter(Generation == 2)\n  \n  \n\nggplot(data = df_Gen, aes(x=LResist.Trait, y = offspring_count))+\n  geom_jitter()\n\n\n\n\n\n\n\n\n\nCode\nggplot(data = TraitAvg, aes(x = as.numeric(Generation), y = LResist.Trait))+\n    geom_smooth(data = TraitAvg, aes(x = as.numeric(Generation), y = LResist.Trait), method = \"loess\") +\n    theme(legend.position = \"none\") +\n    facet_wrap(~file, ncol = 2) \n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nCode\nggplot(Gradients, aes(x=Generation, y = Beta))+\n  geom_point(aes(color = sig))+\n  geom_smooth(fill=\"blue\")+\n  scale_color_manual(values = c(\"grey\",\"red\"))+\n  geom_hline(yintercept=0, linetype=\"dashed\", color = \"black\")+\n  theme(legend.position = \"none\",\n        panel.background = element_blank())\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nNow we’ll perform a similar analysis for the remaining traits.\n\n\nCode\nGradientslong &lt;- data.frame()\nfor(i in seq_along(Traits)){\n\ntraittemp&lt;-allfiles%&gt;%\n  select(Generation, offspring_count, file, !!sym(Traits[i]))%&gt;%\n  group_by(Generation, file)%&gt;%\n  mutate(scaleST0 = as.vector(scale(!!sym(Traits[i]), center = TRUE)))%&gt;%\n  mutate(scaleST02 = scaleST0*scaleST0)%&gt;%\n  mutate(Generation = as.numeric(as.character(Generation)))\n\nGradients &lt;- traittemp %&gt;%\n  group_by(Generation, file) %&gt;%\n  do({\n    model &lt;- lm(offspring_count ~ scaleST0 + scaleST02, data = .)\n    data.frame(\n      Beta = coefficients(model)[2],\n      PB = summary(model)$coef[2, 4],\n      Trait = Traits[i]\n    )\n  })\n\nGradients &lt;- Gradients %&gt;%\n  mutate(sig = if_else(PB &lt; 0.05 , \"Y\", \"N\"))\n\nGradientslong &lt;- rbind(Gradientslong, Gradients)\n\nG &lt;- ggplot(data = GeneAvg, aes(x = as.numeric(Generation), y = !!sym(Genes[i])))+\n    geom_point(data = allfiles, aes(x = as.numeric(Generation), y = !!sym(Genes[i])), size=0.1, alpha = 0.02)+\n    geom_smooth(data = GeneAvg, aes(x = as.numeric(Generation), y = !!sym(paste(\"mean.\",Genes[i], sep = \"\")), method = \"loess\")) +\n    theme(legend.position = \"none\") +\n    facet_wrap(~file, ncol = 2) \n\nP &lt;- ggplot(data = TraitAvg, aes(x = as.numeric(Generation), y = !!sym(Traits[i])))+\n    geom_smooth(data = TraitAvg, aes(x = as.numeric(Generation), y = !!sym(Traits[i])), method = \"loess\") +\n    geom_point(data=allfiles, aes(x = as.numeric(Generation), y = !!sym(Traits[i]), color = offspring_count), size = 0.5, alpha =0.1)+\n    theme(legend.position = \"none\") +\n    facet_wrap(~file, ncol = 2) \n\n\n\nS &lt;- ggplot(Gradients, aes(x=Generation, y = Beta))+\n  geom_point(aes(color = sig))+\n  geom_smooth(fill=\"blue\")+\n  scale_color_manual(values = c(\"grey\",\"red\"))+\n  geom_hline(yintercept=0, linetype=\"dashed\", color = \"black\")+\n  theme(legend.position = \"none\",\n        panel.background = element_blank())\n\nprint(G)\n\nprint(P)\n\nprint(S)\n\n}\n\n\nWarning in geom_smooth(data = GeneAvg, aes(x = as.numeric(Generation), y =\n!!sym(paste(\"mean.\", : Ignoring unknown aesthetics: method\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\nWarning in geom_smooth(data = GeneAvg, aes(x = as.numeric(Generation), y =\n!!sym(paste(\"mean.\", : Ignoring unknown aesthetics: method\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\nWarning in geom_smooth(data = GeneAvg, aes(x = as.numeric(Generation), y =\n!!sym(paste(\"mean.\", : Ignoring unknown aesthetics: method\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\nWarning in geom_smooth(data = GeneAvg, aes(x = as.numeric(Generation), y =\n!!sym(paste(\"mean.\", : Ignoring unknown aesthetics: method\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\nWarning in geom_smooth(data = GeneAvg, aes(x = as.numeric(Generation), y =\n!!sym(paste(\"mean.\", : Ignoring unknown aesthetics: method\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\nWarning in geom_smooth(data = GeneAvg, aes(x = as.numeric(Generation), y =\n!!sym(paste(\"mean.\", : Ignoring unknown aesthetics: method\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\nWarning in geom_smooth(data = GeneAvg, aes(x = as.numeric(Generation), y =\n!!sym(paste(\"mean.\", : Ignoring unknown aesthetics: method\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\nWarning in geom_smooth(data = GeneAvg, aes(x = as.numeric(Generation), y =\n!!sym(paste(\"mean.\", : Ignoring unknown aesthetics: method\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Embedding Data Literacy Content in Project TwinStick"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#heatmap",
+    "href": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#heatmap",
+    "title": "Embedding Data Literacy Content in Project TwinStick",
+    "section": "Heatmap",
+    "text": "Heatmap\n\n\nCode\nGradMatrix &lt;- Gradientslong %&gt;%\n  select(Generation, Trait, Beta)%&gt;%\n  pivot_wider(names_from = Trait, values_from = Beta)\n\n\nAdding missing grouping variables: `file`\n\n\nCode\npaletteLength &lt;- 50\nmyColor &lt;- colorRampPalette(c(\"blue\", \"white\", \"#ED2024\"))(paletteLength)\n# length(breaks) == length(paletteLength) + 1\n# use floor and ceiling to deal with even/odd length pallettelengths\n\n\nHeatmap &lt;- GradMatrix %&gt;%\n  ungroup()%&gt;%\n  select(Main.Resistance.Trait, Secondary.Resistance.Trait, Slime.View.Range.Trait, \n         Tower.View.Range.Trait, \n         Tower.Attraction.Trait, Slime.Optimal.Distance.Trait, \n         Speed.Trait, Turn.Rate.Trait)\n\n\n\n\n\n\n\nHeatmatrix2 &lt;- as.matrix(Heatmap)\n\nmyBreaks2 &lt;- c(seq(min(Heatmatrix2), 0, length.out=ceiling(paletteLength/2) + 1), seq(max(Heatmatrix2)/paletteLength, max(Heatmatrix2), \n                                                                                      length.out=floor(paletteLength/2)))\n\n\nheatmap2 = pheatmap(Heatmatrix2,\n         cluster_rows = FALSE, # don't cluster rows\n         cluster_cols = TRUE, # don't cluster columns\n         clustering_distance_cols = \"euclidean\",\n         clustering_distance_rows = \"euclidean\",\n         clustering_method = \"complete\",\n         color = myColor,\n         breaks = myBreaks2)",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Embedding Data Literacy Content in Project TwinStick"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#single-generation-plots",
+    "href": "ProfessorPolymorphic/posts/TwinStickGraphs1/index.html#single-generation-plots",
+    "title": "Embedding Data Literacy Content in Project TwinStick",
+    "section": "SINGLE GENERATION PLOTS",
+    "text": "SINGLE GENERATION PLOTS\n\n\nCode\nsinglegen &lt;- allfiles %&gt;%\n  filter(Generation == 5)\n\nsinglegrad &lt;- Gradientslong %&gt;%\n  filter(Generation == 3)\n\n\nggplot(singlegen, aes(x=Speed.Trait) )+\n  geom_histogram()+\n  facet_grid(reproduce~file)\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\nCode\nggplot(singlegen, aes(x=Turn.Rate.Trait) )+\n  geom_histogram()+\n  facet_grid(reproduce~file)\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\nCode\nggplot(singlegen, aes(x=Turn.Rate.Trait, y = Speed.Trait, color = reproduce))+\n  geom_point()+\n  facet_wrap(~file)",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Embedding Data Literacy Content in Project TwinStick"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TickBaseDEI/index.html#purpose",
+    "href": "ProfessorPolymorphic/posts/TickBaseDEI/index.html#purpose",
+    "title": "Reflections on Mentoring and Diversity",
+    "section": "PURPOSE",
+    "text": "PURPOSE\nDiscuss and reflect upon mentoring and diversity.\nHear perspectives and ideas from outside our usual echo chambers.\nIdentify actionable suggestions that can be implemented in Year 4.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Reflections on Mentoring and Diversity"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TickBaseDEI/index.html#intstructions",
+    "href": "ProfessorPolymorphic/posts/TickBaseDEI/index.html#intstructions",
+    "title": "Reflections on Mentoring and Diversity",
+    "section": "INTSTRUCTIONS",
+    "text": "INTSTRUCTIONS\nfor i in 1:3{\n\nRandomized table assignments.\n10 minute discussion of a prompt.\nTable scribe records the highlights and themes of the discussion.\n\n}\n\nDebrief.",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Reflections on Mentoring and Diversity"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TickBaseDEI/index.html#topic-1",
+    "href": "ProfessorPolymorphic/posts/TickBaseDEI/index.html#topic-1",
+    "title": "Reflections on Mentoring and Diversity",
+    "section": "TOPIC 1",
+    "text": "TOPIC 1\nWhat defines a highly effective mentoring relationship? What are the roles and responsibilities of the mentor in this relationship? What are the roles and responsibilitees of the mentee?\nTable Assignments:\n\nlibrary(readxl)\n\npeople&lt;-read_excel(\"people.xlsx\")\n\nshuffled_people &lt;- sample(people$Name)\ntables &lt;- split(shuffled_people, ceiling(seq_along(shuffled_people)/6))\n\nfor (i in 1:length(tables)) {\n  cat(\"Table\", i, \": \", tables[[i]], \"\\n\")\n}\n\nTable 1 :  Amruta Kale Lucas Price Devin Mazolewski Frederick Harris Phi Hung Nguyen Molly McVicar \nTable 2 :  Joshua Dahl Yan Lin Claudia Rueckert Paul Gessler Vardayani Ratti Chenhao Li \nTable 3 :  Carson Rueber Al Ekram Elahee Hridoy Andrew Nuss Joseph Savage Monika Gulia-Nuss Haifeng Felix Liao \nTable 4 :  Augustine Ofoegbu Erik Marsh Jeremiah B Reyes Tin Nguyen Zhe Wang Xun Shi \nTable 5 :  Landon Wright Sanaz Salati Luke Sheneman Xiaogang Ma Kelly Upshaw-Bia, DVM Dorothy Wallace \nTable 6 :  Mike Teglas Meifang Li Zhuoming Liu",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Reflections on Mentoring and Diversity"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TickBaseDEI/index.html#topic-2",
+    "href": "ProfessorPolymorphic/posts/TickBaseDEI/index.html#topic-2",
+    "title": "Reflections on Mentoring and Diversity",
+    "section": "TOPIC 2",
+    "text": "TOPIC 2\nWhat is something positive that your institution is doing to promote diversity and inclusion in STEM? Do you have any recommendations that could support safety and belonging or improve inclusion on the Tickbase project?\nTable Assignments:\n\nshuffled_people &lt;- sample(people$Name)\ntables &lt;- split(shuffled_people, ceiling(seq_along(shuffled_people)/6))\n\nfor (i in 1:length(tables)) {\n  cat(\"Table\", i, \": \", tables[[i]], \"\\n\")\n}\n\nTable 1 :  Al Ekram Elahee Hridoy Carson Rueber Erik Marsh Yan Lin Paul Gessler Xiaogang Ma \nTable 2 :  Xun Shi Joseph Savage Zhe Wang Phi Hung Nguyen Meifang Li Lucas Price \nTable 3 :  Haifeng Felix Liao Claudia Rueckert Andrew Nuss Joshua Dahl Luke Sheneman Molly McVicar \nTable 4 :  Monika Gulia-Nuss Landon Wright Vardayani Ratti Kelly Upshaw-Bia, DVM Tin Nguyen Augustine Ofoegbu \nTable 5 :  Jeremiah B Reyes Sanaz Salati Zhuoming Liu Amruta Kale Chenhao Li Frederick Harris \nTable 6 :  Devin Mazolewski Mike Teglas Dorothy Wallace",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Reflections on Mentoring and Diversity"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TickBaseDEI/index.html#topic-3",
+    "href": "ProfessorPolymorphic/posts/TickBaseDEI/index.html#topic-3",
+    "title": "Reflections on Mentoring and Diversity",
+    "section": "TOPIC 3",
+    "text": "TOPIC 3\nThink about a research project that you would like to work on in the future. Imagine the project has just been funded and you are asked for suggestions on how to develop a productive, collaborative, and enjoyable environment for the team. What structure or activities would you suggest?\nTable Assignments:\n\nshuffled_people &lt;- sample(people$Name)\ntables &lt;- split(shuffled_people, ceiling(seq_along(shuffled_people)/6))\n\nfor (i in 1:length(tables)) {\n  cat(\"Table\", i, \": \", tables[[i]], \"\\n\")\n}\n\nTable 1 :  Joshua Dahl Frederick Harris Yan Lin Molly McVicar Xiaogang Ma Haifeng Felix Liao \nTable 2 :  Sanaz Salati Meifang Li Luke Sheneman Tin Nguyen Chenhao Li Andrew Nuss \nTable 3 :  Claudia Rueckert Mike Teglas Devin Mazolewski Dorothy Wallace Zhuoming Liu Joseph Savage \nTable 4 :  Phi Hung Nguyen Amruta Kale Lucas Price Paul Gessler Vardayani Ratti Xun Shi \nTable 5 :  Jeremiah B Reyes Al Ekram Elahee Hridoy Landon Wright Carson Rueber Monika Gulia-Nuss Zhe Wang \nTable 6 :  Erik Marsh Kelly Upshaw-Bia, DVM Augustine Ofoegbu",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Reflections on Mentoring and Diversity"
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/TickBaseDEI/index.html#debrief",
+    "href": "ProfessorPolymorphic/posts/TickBaseDEI/index.html#debrief",
+    "title": "Reflections on Mentoring and Diversity",
+    "section": "DEBRIEF",
+    "text": "DEBRIEF\nBarrie calls on people to provide summaries and feedback, and their poster board summaries are grouped together on the wall.\nCan we summarize the themes or ideas that emerged for each question across all of the groups?\nAsk the PI and Co-PIs which suggestions appeal to them as something they could help implement on the Ticbase grant before it ends.\n\n\n\nbrobison@uidaho.edu",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "Reflections on Mentoring and Diversity"
+    ]
+  },
+  {
     "objectID": "ProfessorPolymorphic/posts/AIEducation/index.html#purpose-of-university",
     "href": "ProfessorPolymorphic/posts/AIEducation/index.html#purpose-of-university",
     "title": "AI and the Future of Education.",
     "section": "PURPOSE OF UNIVERSITY",
-    "text": "PURPOSE OF UNIVERSITY\nThe original purpose of universities was to produce a “universal man,” a well-rounded individual capable of contributing to the upper echelons of society. The focus was on a broad education covering arts, humanities, sciences, history, politics, and commerce. Universal Man: Goal of creating well-rounded, worldly individuals. Upper Echelons: Aimed at preparing students for societal leadership. (Ivy League still does this, btw) Broad Education: Covering arts, humanities, sciences. Highly cultured! Understanding History and Politics: To make informed contributions. Commerce Knowledge: To navigate and influence the economic landscape.",
+    "text": "PURPOSE OF UNIVERSITY\nThe original (~1000 years ago?) purpose of universities was to produce a “Universal Man” (barf), a well-rounded individual capable of contributing to the upper echelons of society. The focus was on a broad education covering arts, humanities, sciences, history, politics, and commerce.\nUpper Echelons: Aimed at preparing students for societal leadership. Rich! Signifier of Status!\nBroad Education: Covering arts, humanities, sciences. Highly cultured!\nHistory and Politics: To make informed contributions.\nCommerce: To navigate and influence the economic landscape.",
     "crumbs": [
       "HOME",
       "Professor Polymorphic",
@@ -17,7 +1221,7 @@
     "href": "ProfessorPolymorphic/posts/AIEducation/index.html#industrial-revolution",
     "title": "AI and the Future of Education.",
     "section": "INDUSTRIAL REVOLUTION",
-    "text": "INDUSTRIAL REVOLUTION\nThe German/Austrian educational revolution during the Industrial Revolution shifted the focus of public education towards producing productive workers. The system was designed to prepare individuals for the rigors of factory work, emphasizing obedience, quietude, and adherence to arbitrary rules. German/Austrian Revolution: Shifted educational focus during Industrial Revolution. Productive Workers: Main goal of the reformed education system. Obedience and Quietude: Taught to prepare for factory settings. Arbitrary Rules: Enforced to model factory-like hierarchy. Contrast to ‘Universal Man’: Narrower focus compared to broad societal education.",
+    "text": "INDUSTRIAL REVOLUTION\nThe German/Austrian educational revolution during the Industrial Revolution shifted the focus of public education towards producing productive workers. The system was designed to prepare individuals for the rigors of factory work, emphasizing obedience, quietude, and adherence to arbitrary rules (also barf).\nProductive Workers: Main goal of the reformed education system.\nObedience and Quietude: Taught to prepare for factory settings.\nArbitrary Rules: Enforced to model factory-like hierarchy.\nContrast to ‘Universal Man’: Narrower focus compared to broad societal education.",
     "crumbs": [
       "HOME",
       "Professor Polymorphic",
@@ -30,7 +1234,7 @@
     "href": "ProfessorPolymorphic/posts/AIEducation/index.html#optimizing-for-efficiency",
     "title": "AI and the Future of Education.",
     "section": "OPTIMIZING FOR EFFICIENCY",
-    "text": "OPTIMIZING FOR EFFICIENCY\nProduce the most functional workers per unit cost.\nOR\nMaximize the ability of each individual to lead their best life.",
+    "text": "OPTIMIZING FOR EFFICIENCY\nWhich of these best describes your educational experiences in Elementary, Secondary, and University systems?\nProduce the most functional workers per unit cost.\nOR\nMaximize the ability of each individual to lead their best life.",
     "crumbs": [
       "HOME",
       "Professor Polymorphic",
@@ -121,7 +1325,7 @@
     "href": "ProfessorPolymorphic/posts/AIEducation/index.html#some-examples",
     "title": "AI and the Future of Education.",
     "section": "SOME EXAMPLES",
-    "text": "SOME EXAMPLES\n\nHere is a contract and our contract guidelines. Review and red-line the contract.\nDoes this Animal Care protocol conform to the federal guidelines?\nI have a fever and a cough. What is wrong with me?\nGather data from these documents and summarize/analyze it.\nHow does this job applicant align with the needs described in our job description?\n\nThese tasks are difficult to automate because their inputs are complex, unstructured, and highly variable. They require human Cognitive Labor.",
+    "text": "SOME EXAMPLES\n\nHere is a contract and our contract guidelines. Review and red-line the contract.\nDoes this Animal Care protocol conform to the federal guidelines?\nI have a fever and a cough. What is wrong with me?\nGather data from these documents and summarize/analyze it.\nHow does this job applicant align with the needs described in our job description?\n\nThese tasks are difficult to automate because their inputs are complex, unstructured, and highly variable. They require human Cognitive Labor.\nHow does this relate to education?",
     "crumbs": [
       "HOME",
       "Professor Polymorphic",
@@ -212,7 +1416,7 @@
     "href": "ProfessorPolymorphic/posts/AIEducation/index.html#genai-education-good",
     "title": "AI and the Future of Education.",
     "section": "genAI + EDUCATION = GOOD?",
-    "text": "genAI + EDUCATION = GOOD?\nThe Potential Benefits of AI in Education\n\nPersonalized Learning: AI can tailor education to each student’s learning style and pace, enhancing engagement and comprehension.\nSupport for Teachers: AI offers scalable solutions for teacher training and feedback, improving teaching practices and classroom dynamics.\nEnhanced Accessibility: AI facilitates universal access to quality education, breaking down barriers related to location, resources, and disabilities.\nFostering Creativity and Higher-Level Thinking: By automating routine tasks, AI encourages students to focus on creative, analytical, and strategic aspects of learning.\nData-Driven Insights: AI can analyze vast amounts of educational data, providing insights that help educators make informed decisions to improve learning outcomes.\n\n\n\nStanford University Human Centered Artificial Intelligence",
+    "text": "genAI + EDUCATION = GOOD?\n\nPersonalized Learning: AI can tailor education to each student’s learning style and pace, enhancing engagement and comprehension.\nSupport for Teachers: AI offers scalable solutions for teacher training and feedback, improving teaching practices and classroom dynamics.\nEnhanced Accessibility: AI facilitates universal access to quality education, breaking down barriers related to location, resources, and disabilities.\nFostering Creativity and Higher-Level Thinking: By automating routine tasks, AI encourages students to focus on creative, analytical, and strategic aspects of learning.\nData-Driven Insights: AI can analyze vast amounts of educational data, providing insights that help educators make informed decisions to improve learning outcomes.\n\n\n\nStanford University Human Centered Artificial Intelligence",
     "crumbs": [
       "HOME",
       "Professor Polymorphic",
@@ -225,7 +1429,7 @@
     "href": "ProfessorPolymorphic/posts/AIEducation/index.html#genai-education-bad",
     "title": "AI and the Future of Education.",
     "section": "genAI + EDUCATION = BAD?",
-    "text": "genAI + EDUCATION = BAD?\nThe Risks of AI in Education\n\nBias and Cultural Insensitivity: AI systems might perpetuate biases or fail to reflect the diverse experiences of global learners.\nUndermining Critical Thinking: Overreliance on AI for problem-solving and content creation could impair students’ ability to think critically and independently.\nPrivacy Concerns: The collection and analysis of student data by AI systems raise significant privacy and security issues.\nMisinformation and Reliability: AI-generated content may include inaccuracies, promoting misinformation if not properly vetted.\nDependency and Devaluation of Human Teachers: Excessive dependence on AI could devalue the irreplaceable human elements in teaching, such as empathy, intuition, and motivational support.\n\n\n\nStanford University Human Centered Artificial Intelligence",
+    "text": "genAI + EDUCATION = BAD?\n\nBias and Cultural Insensitivity: AI systems might perpetuate biases or fail to reflect the diverse experiences of global learners.\nUndermining Critical Thinking: Overreliance on AI for problem-solving and content creation could impair students’ ability to think critically and independently.\nPrivacy Concerns: The collection and analysis of student data by AI systems raise significant privacy and security issues.\nMisinformation and Reliability: AI-generated content may include inaccuracies, promoting misinformation if not properly vetted.\nDependency and Devaluation of Human Teachers: Excessive dependence on AI could devalue the irreplaceable human elements in teaching, such as empathy, intuition, and motivational support.\n\n\n\nStanford University Human Centered Artificial Intelligence",
     "crumbs": [
       "HOME",
       "Professor Polymorphic",
@@ -238,7 +1442,7 @@
     "href": "ProfessorPolymorphic/posts/AIEducation/index.html#golden-rule",
     "title": "AI and the Future of Education.",
     "section": "GOLDEN RULE",
-    "text": "GOLDEN RULE\nAre you using AI to help you learn and grow?\nOR\nAre you using AI to misrepresent your abilities?",
+    "text": "GOLDEN RULE\nAre you using AI to help you learn, grow, and maximize your impact?\nOR\nAre you using AI to misrepresent your abilities?",
     "crumbs": [
       "HOME",
       "Professor Polymorphic",
@@ -286,11 +1490,11 @@
     ]
   },
   {
-    "objectID": "ProfessorPolymorphic/posts/AIEducation/index.html#personalized-learning",
-    "href": "ProfessorPolymorphic/posts/AIEducation/index.html#personalized-learning",
+    "objectID": "ProfessorPolymorphic/posts/AIEducation/index.html#bio314-customized-website",
+    "href": "ProfessorPolymorphic/posts/AIEducation/index.html#bio314-customized-website",
     "title": "AI and the Future of Education.",
-    "section": "PERSONALIZED LEARNING?",
-    "text": "PERSONALIZED LEARNING?",
+    "section": "BIO314 CUSTOMIZED WEBSITE",
+    "text": "BIO314 CUSTOMIZED WEBSITE\nThis took me ~ 2 hours.\nWill Barrie crash and burn?",
     "crumbs": [
       "HOME",
       "Professor Polymorphic",
@@ -309,6 +1513,19 @@
       "Professor Polymorphic",
       "Posts",
       "AI and the Future of Education."
+    ]
+  },
+  {
+    "objectID": "ProfessorPolymorphic/posts/AIVideo/index.html",
+    "href": "ProfessorPolymorphic/posts/AIVideo/index.html",
+    "title": "My First AI Generated Video",
+    "section": "",
+    "text": "Cool?\nI made this video with Kaiber. I uploaded this image as the starting point:\n\nI made the image using MidJourney v5.1\nI upoaded this song for the soundtrack:\nAudio\nwhich I made using the AI Music Generator Mubert.\nThen I used this prompt to make the video:\nA secret underground bioweapons laboratory, in the style of photo taken on film, film grain, vintage, 8k ultrafine detail, private press…\nVideo",
+    "crumbs": [
+      "HOME",
+      "Professor Polymorphic",
+      "Posts",
+      "My First AI Generated Video"
     ]
   }
 ]

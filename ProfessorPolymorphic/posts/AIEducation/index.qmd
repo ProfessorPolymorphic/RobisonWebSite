@@ -22,23 +22,32 @@ code-fold: true
 
 ## PURPOSE OF UNIVERSITY
 
-The original purpose of universities was to produce a "universal man," a well-rounded individual capable of contributing to the upper echelons of society. The focus was on a broad education covering arts, humanities, sciences, history, politics, and commerce.
-Universal Man: Goal of creating well-rounded, worldly individuals.
-Upper Echelons: Aimed at preparing students for societal leadership. (Ivy League still does this, btw)
-Broad Education: Covering arts, humanities, sciences. Highly cultured!
-Understanding History and Politics: To make informed contributions.
-Commerce Knowledge: To navigate and influence the economic landscape.
+The original (~1000 years ago?) purpose of universities was to produce a "[Universal Man]{.red}" ([barf]{.blue}), a well-rounded individual capable of contributing to the upper echelons of society. The focus was on a broad education covering arts, humanities, sciences, history, politics, and commerce. 
+
+**Upper Echelons:** Aimed at preparing students for societal leadership. Rich! Signifier of Status!
+
+**Broad Education:** Covering arts, humanities, sciences. Highly cultured! 
+
+**History and Politics:** To make informed contributions. 
+
+**Commerce:** To navigate and influence the economic landscape.
 
 ## INDUSTRIAL REVOLUTION
 
-The German/Austrian educational revolution during the Industrial Revolution shifted the focus of public education towards producing productive workers. The system was designed to prepare individuals for the rigors of factory work, emphasizing obedience, quietude, and adherence to arbitrary rules.
-German/Austrian Revolution: Shifted educational focus during Industrial Revolution.
-Productive Workers: Main goal of the reformed education system.
-Obedience and Quietude: Taught to prepare for factory settings.
-Arbitrary Rules: Enforced to model factory-like hierarchy.
-Contrast to 'Universal Man': Narrower focus compared to broad societal education.
+The German/Austrian educational revolution during the Industrial Revolution shifted the focus of **public education** towards producing [productive workers]{.red}. The system was designed to prepare individuals for the rigors of factory work, emphasizing obedience, quietude, and adherence to arbitrary rules ([also barf]{.blue}).
+
+**Productive Workers:** Main goal of the reformed education system. 
+
+**Obedience and Quietude:** Taught to prepare for factory settings. 
+
+**Arbitrary Rules:** Enforced to model factory-like hierarchy. 
+
+**Contrast to 'Universal Man':** Narrower focus compared to broad societal education.
 
 ## OPTIMIZING FOR EFFICIENCY
+
+### Which of these best describes your educational experiences in Elementary, Secondary, and University systems?
+
 
 Produce the most functional workers per unit cost.
 
@@ -160,6 +169,8 @@ Knowledge work [^2] involves tasks that are information-based and [Cognitive]{.r
 
 **These [tasks]{.red} are difficult to automate because their inputs are complex, unstructured, and highly variable. They require human Cognitive Labor.**
 
+**How does this relate to education?**
+
 ## BLOOM'S TAXONOMY (2001 update)
 
 Educators often use Bloom's taxonomy to structure learning objectives, assessments, and activities to ensure that they are addressing various levels of cognitive complexity and promoting critical thinking skills.
@@ -197,7 +208,6 @@ Definition: Apply principles of ethical leadership, collaborative engagement, so
 ::: aside
 https://www.uidaho.edu/provost/learning-outcomes
 :::
-
 
 ## 2022: A TIPPING POINT
 
@@ -268,13 +278,12 @@ arXiv:2303.10130v5 \econ.GN 21 Aug 2023
 
 ## genAI + EDUCATION = GOOD?
 
-### The Potential Benefits of AI in Education
 
-- **Personalized Learning**: AI can tailor education to each student's learning style and pace, enhancing engagement and comprehension.
-- **Support for Teachers**: AI offers scalable solutions for teacher training and feedback, improving teaching practices and classroom dynamics.
-- **Enhanced Accessibility**: AI facilitates universal access to quality education, breaking down barriers related to location, resources, and disabilities.
-- **Fostering Creativity and Higher-Level Thinking**: By automating routine tasks, AI encourages students to focus on creative, analytical, and strategic aspects of learning.
-- **Data-Driven Insights**: AI can analyze vast amounts of educational data, providing insights that help educators make informed decisions to improve learning outcomes.
+-   **Personalized Learning**: AI can tailor education to each student's learning style and pace, enhancing engagement and comprehension.
+-   **Support for Teachers**: AI offers scalable solutions for teacher training and feedback, improving teaching practices and classroom dynamics.
+-   **Enhanced Accessibility**: AI facilitates universal access to quality education, breaking down barriers related to location, resources, and disabilities.
+-   **Fostering Creativity and Higher-Level Thinking**: By automating routine tasks, AI encourages students to focus on creative, analytical, and strategic aspects of learning.
+-   **Data-Driven Insights**: AI can analyze vast amounts of educational data, providing insights that help educators make informed decisions to improve learning outcomes.
 
 ::: aside
 [Stanford University Human Centered Artificial Intelligence](https://hai.stanford.edu/news/ai-will-transform-teaching-and-learning-lets-get-it-right)
@@ -282,13 +291,12 @@ arXiv:2303.10130v5 \econ.GN 21 Aug 2023
 
 ## genAI + EDUCATION = BAD?
 
-### The Risks of AI in Education
 
-- **Bias and Cultural Insensitivity**: AI systems might perpetuate biases or fail to reflect the diverse experiences of global learners.
-- **Undermining Critical Thinking**: Overreliance on AI for problem-solving and content creation could impair students' ability to think critically and independently.
-- **Privacy Concerns**: The collection and analysis of student data by AI systems raise significant privacy and security issues.
-- **Misinformation and Reliability**: AI-generated content may include inaccuracies, promoting misinformation if not properly vetted.
-- **Dependency and Devaluation of Human Teachers**: Excessive dependence on AI could devalue the irreplaceable human elements in teaching, such as empathy, intuition, and motivational support.
+-   **Bias and Cultural Insensitivity**: AI systems might perpetuate biases or fail to reflect the diverse experiences of global learners.
+-   **Undermining Critical Thinking**: Overreliance on AI for problem-solving and content creation could impair students' ability to think critically and independently.
+-   **Privacy Concerns**: The collection and analysis of student data by AI systems raise significant privacy and security issues.
+-   **Misinformation and Reliability**: AI-generated content may include inaccuracies, promoting misinformation if not properly vetted.
+-   **Dependency and Devaluation of Human Teachers**: Excessive dependence on AI could devalue the irreplaceable human elements in teaching, such as empathy, intuition, and motivational support.
 
 ::: aside
 [Stanford University Human Centered Artificial Intelligence](https://hai.stanford.edu/news/ai-will-transform-teaching-and-learning-lets-get-it-right)
@@ -296,11 +304,13 @@ arXiv:2303.10130v5 \econ.GN 21 Aug 2023
 
 ## GOLDEN RULE
 
-Are you using AI to help you learn and grow?
+Are you using AI to help you learn, grow, and maximize your impact?
 
-OR
+[OR]{.red}
 
-Are you using AI to misrepresent your abilities? 
+Are you using AI to misrepresent your abilities?
+
+![](golden.png)
 
 ## AI and EDUCATION
 
@@ -316,11 +326,17 @@ Are you using AI to misrepresent your abilities?
 
 ## BIO 314
 
-![](syllabus.png){.absolute left=30}
+![](syllabus.png){.absolute left="30"}
 
-![](Lectures.png){.absolute right=30}
+![](Lectures.png){.absolute right="30"}
 
-## PERSONALIZED LEARNING?
+## BIO314 CUSTOMIZED WEBSITE
+
+This took me ~ 2 hours.
+
+Will Barrie crash and burn?
+
+![](barrie.png)
 
 
 

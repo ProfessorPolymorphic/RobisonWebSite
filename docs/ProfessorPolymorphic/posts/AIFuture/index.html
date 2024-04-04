@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.4.550">
+
+  <meta name="author" content="Barrie Robison">
+  <meta name="dcterms.date" content="2023-10-05">
+  <title>Robison - Automation or Augmentation? AI and the Future of Work.</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Automation or Augmentation? AI and the Future of Work.</h1>
+  <p class="subtitle">I for one welcome our new robot overlords…</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Barrie Robison 
+</div>
+</div>
+</div>
+
+  <p class="date">2023-10-05</p>
+</section>
+<section id="historical-patterns" class="slide level2">
+<h2>HISTORICAL PATTERNS</h2>
+
+<img data-src="us-employment-share2.jpg" class="r-stretch"></section>
+<section id="automation-of-physical-labor" class="slide level2">
+<h2>AUTOMATION OF PHYSICAL LABOR</h2>
+<p><strong>Many of the changes in the distribution of labor across sectors have been driven by changes in the efficiency of human labor, which can be considered as the ratio of production to cost.</strong></p>
+<p><span class="red">Force Multiplier:</span> An external tool or resource that allows you to do more work with less effort.<sup>1</sup> This might increase production of a single worker, reducing the overall number of workers needed to perform a job.</p>
+<p><span class="red">Outsourcing:</span> Outsourcing refers to the business practice of contracting out certain tasks or functions to third-party service providers instead of performing them in-house. One of the primary reasons companies outsource is to achieve cost reductions. Labor, infrastructure, or operational costs might be lower in another location or with a specialized provider.</p>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>The term originally comes from the military context, but it has been widely adopted in business, technology, and other fields to describe a factor that dramatically amplifies the effectiveness of a group or system.</p></li></ol></aside></section>
+<section id="a-closer-look" class="slide level2">
+<h2>A CLOSER LOOK</h2>
+<p><strong>What are common features of the sectors that displaced Agriculuture and Manufacturing?</strong></p>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p><img data-src="us-employment-sharebottom.png"></p>
+</div><div class="column" style="width:30%;">
+<div>
+<ol type="1">
+<li class="fragment">The tasks are <span class="red">Place Bound</span>.</li>
+<li class="fragment">The sectors feature a lot of <span class="red">Knowledge Work</span>.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="knowledge-work" class="slide level2">
+<h2>KNOWLEDGE WORK?</h2>
+<p>Knowledge work <sup>1</sup> involves tasks that are information-based and <span class="red">Cognitive</span> in nature :</p>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Characteristics</a></li><li><a href="#tabset-1-2">Examples</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="small">
+<ol type="1">
+<li><strong>Intellectual Activity</strong>: It involves thinking, analyzing, and processing information more than manual labor.</li>
+<li><strong>Non-routine</strong>: It doesn’t necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.</li>
+<li><strong>Information-based</strong>: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.</li>
+<li><strong>Driven by Expertise</strong>: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.</li>
+<li><strong>Autonomy</strong>: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems.</li>
+<li><strong>Continuous Learning</strong>: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.</li>
+<li><strong>Outcome-focused</strong>: The value of knowledge work is often measured by outcomes or results rather than the hours worked.</li>
+</ol>
+</div>
+</div>
+<div id="tabset-1-2">
+<ul>
+<li>Software developers</li>
+<li>Managers</li>
+<li>Analysts</li>
+<li>Consultants</li>
+<li>Designers</li>
+<li>Scientists</li>
+<li>Lawyers</li>
+<li>Doctors</li>
+<li>Educators</li>
+</ul>
+</div>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>“Knowledge Work” is a term coined by Peter Drucker in his 1959 book “Landmarks of Tomorrow.”</p></li></ol></aside></section>
+<section id="human-cognition" class="slide level2">
+<h2>HUMAN COGNITION</h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Human Cognition</a></li><li><a href="#tabset-2-2">Knowledge Work</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<p><img data-src="humancognition.png" class="absolute" style="height: 70%; "></p>
+</div>
+<div id="tabset-2-2">
+<div class="small">
+<ol type="1">
+<li><strong>Intellectual Activity</strong>: It involves thinking, analyzing, and processing information more than manual labor.</li>
+<li><strong>Non-routine</strong>: It doesn’t necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.</li>
+<li><strong>Information-based</strong>: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.</li>
+<li><strong>Driven by Expertise</strong>: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.</li>
+<li><strong>Autonomy</strong>: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems.</li>
+<li><strong>Continuous Learning</strong>: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.</li>
+<li><strong>Outcome-focused</strong>: The value of knowledge work is often measured by outcomes or results rather than the hours worked.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="human-cognitive-labor3" class="slide level2">
+<h2>HUMAN COGNITIVE LABOR<sup>1</sup></h2>
+<p><strong>Aspects of human cognitive labor:</strong></p>
+<div class="small">
+<ol type="1">
+<li><strong>Problem Solving</strong>: Identifying complex issues and reviewing related information to develop and evaluate options and implement solutions.</li>
+<li><strong>Decision Making</strong>: Considering the relative costs and benefits of potential actions to choose the most appropriate one.</li>
+<li><strong>Analysis</strong>: Examining data or information and breaking it down to understand its structure, trends, or implications.</li>
+<li><strong>Learning and Adaptation</strong>: Acquiring new knowledge and skills and adjusting to new information or circumstances.</li>
+<li><strong>Creativity</strong>: Generating new ideas, concepts, or solutions.</li>
+<li><strong>Planning</strong>: Determining how a system or operation should work and how changes in conditions, operations, and environments will affect outcomes.</li>
+<li><strong>Communication</strong>: Conveying information effectively, both verbally and in writing. This also includes the ability to listen and understand information from others.</li>
+<li><strong>Emotional Intelligence</strong>: Recognizing, understanding, and managing our own emotions while also recognizing, understanding, and influencing the emotions of others.</li>
+</ol>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>Human cognitive labor refers to tasks and functions that require human intellectual processes, such as thinking, understanding, learning, and problem-solving. While physical labor is centered on manual and bodily tasks, cognitive labor emphasizes mental processes and the application of knowledge.</p></li></ol></aside></section>
+<section id="some-examples" class="slide level2">
+<h2>SOME EXAMPLES</h2>
+<ul>
+<li><p>Here is a contract and our contract guidelines. Review and red-line the contract.</p></li>
+<li><p>Does this Animal Care protocol conform to the federal guidelines?</p></li>
+<li><p>I have a fever and a cough. What is wrong with me?</p></li>
+<li><p>Gather data from these documents and summarize/analyze it.</p></li>
+<li><p>How does this job applicant align with the needs described in our job description?</p></li>
+</ul>
+<p><strong>These <span class="red">tasks</span> are difficult to automate because their inputs are complex, unstructured, and highly variable. They require human Cognitive Labor.</strong></p>
+</section>
+<section id="automation-of-cognitive-labor" class="slide level2">
+<h2>AUTOMATION OF COGNITIVE LABOR</h2>
+<p><strong>“The future is already here — it’s just not very evenly distributed.”</strong> <sup>1</sup></p>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>William Gibson (a science fiction author) made this observation to highlight how technological advancements and innovations might be present in certain places or among specific groups, but they haven’t yet permeated all levels of society or all geographic areas. The quote encapsulates the idea that the future, in many ways, exists in pockets in the present, but its widespread adoption and distribution are yet to occur.</p></li></ol></aside></section>
+<section id="artificial-intelligence" class="slide level2">
+<h2>ARTIFICIAL INTELLIGENCE</h2>
+<p>Summarizing the history of AI and creating a visual timeline is an example of <span class="red">Knowledge Work</span>. It requires <span class="red">Cognitive Labor</span> on my part. Cognitive labor is hard.</p>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">History of AI</a></li><li><a href="#tabset-3-2">Visual Timeline</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<p><a href="https://www.analyticsvidhya.com/blog/2023/07/the-fascinating-evolution-of-generative-ai/" target="_blank">AI has a long and interesting history that I need to summarize…</a></p>
+</div>
+<div id="tabset-3-2">
+<p><a href="https://chat.openai.com/share/908127b8-fe2a-41c3-8989-961489ccfd66" target="_blank">I’d rather have a graph</a></p>
+<div>
+<ol type="1">
+<li class="fragment"><p>Making a graph is hard.</p></li>
+<li class="fragment"><p>Except it isn’t.. <img data-src="fulltimelinegraph.png" class="absolute" style="bottom: 50px; right: 0px; height: 70%; "></p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="a-tipping-point" class="slide level2">
+<h2>2022: A TIPPING POINT</h2>
+
+<img data-src="recenttimeline.jpeg" class="r-stretch"></section>
+<section id="generative-ai" class="slide level2">
+<h2>GENERATIVE AI</h2>
+<p><span class="red">Generative Artificial Intelligence</span> describes a group of algorithms or models that can be used to create new content, including text, code, images, video, audio, and simulations.</p>
+<div class="columns">
+<div class="column small" style="width:40%;">
+<p><strong>Examples:</strong></p>
+<p>ChatGPT: Text to Text <span class="red">Generative Pretrained Transformer</span> with a chat interface</p>
+<p>MidJourney: Text to Image</p>
+<p>an abstract representation of an unemployment line caused by the emergence of artificial general intelligence, glowing blue computational network, photorealistic, dark technology, dark academia</p>
+<p>KaiberAI: text to video</p>
+<p>A Dystopian cyberpunk future where humans battle against cybernetic abominations from the works of the Lovecraftian Cthulhu Mythos. in the style of Photo real, hyper-realistic, high dynamic range, rich colors, lifelike textures, 8K UHD, high color depth, Nikon D 850, Kodak Portra 400, Fujifilm XT</p>
+<p>Mubert: text to music.</p>
+<p>Hardtechno Dark John Carpenter Synth</p>
+</div><div class="column" style="width:60%;">
+<p><video data-src="AIFuture.mp4" controls=""><a href="AIFuture.mp4">Video</a></video>{.absolute .width=“60%”}</p>
+</div>
+</div>
+</section>
+<section id="large-language-models-llm" class="slide level2">
+<h2>LARGE LANGUAGE MODELS (LLM)</h2>
+<p>A type of AI model designed to understand and generate human-like text.</p>
+
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Key Characteristics</a></li><li><a href="#tabset-4-2">Training and Capabilities</a></li><li><a href="#tabset-4-3">Limitations</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<ol type="1">
+<li><strong>Model Type</strong>: Subset of deep learning within machine learning.</li>
+<li><strong>Architecture</strong>: Commonly based on the Transformer architecture.</li>
+<li><strong>Size</strong>: Contains billions to trillions of parameters.</li>
+</ol>
+</div>
+<div id="tabset-4-2">
+<ol type="1">
+<li><strong>Training Data</strong>: Trained on vast datasets, including books, articles, and web content.</li>
+<li><strong>Functionality</strong>: Generates coherent text, answers questions, translates, summarizes, and more.</li>
+<li><strong>Transfer Learning</strong>: Fine-tuned on specific datasets for specialized tasks.</li>
+</ol>
+</div>
+<div id="tabset-4-3">
+<ol type="1">
+<li>Generates based on training data patterns.</li>
+<li>Doesn’t “understand” like humans.</li>
+<li>Can produce incorrect or nonsensical answers.</li>
+<li>Influenced by biases in training data.</li>
+</ol>
+</div>
+</div>
+</div>
+<aside><div>
+<p>Nvidia (the company that makes GPUs) has great learning resources on AI. <a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/">This one</a> is a great summary of the significance of LLMs</p>
+</div></aside></section>
+<section id="capabilities" class="slide level2">
+<h2>CAPABILITIES</h2>
+<p><img data-src="images/gptexamresults.jpg" class="absolute" style="height: 80%; "></p>
+
+<aside><div>
+<p>arXiv:2303.10130v5 [econ.GN] 21 Aug 2023</p>
+</div></aside></section>
+<section id="tasks-are-operations" class="slide level2">
+<h2>TASKS ARE OPERATIONS</h2>
+<p><strong>Human Cognitive Tasks</strong></p>
+<p>Input Human Output</p>
+<p><strong>LLM Operations</strong></p>
+<p>Prompt Model Response</p>
+</section>
+<section id="llm-operations" class="slide level2">
+<h2>LLM OPERATIONS</h2>
+
+<h3 id="reductive"><span class="red">Reductive</span></h3>
+<p>Take a large amount of text and produce a smaller output.</p>
+<p>Input is larger than the output.</p>
+<h3 id="transformative"><span class="red">Transformative</span></h3>
+<p>Transmute the input into a new format.</p>
+<p>Input and output are roughly the same size and/or meaning.</p>
+<h3 id="generative"><span class="red">Generative</span></h3>
+<p>Generate a large amount of text from a small set of instructions or data.</p>
+<p>Input is smaller than the output.</p>
+<aside><div>
+<p>These categories and their descriptions on the next three slides are from material by <a href="https://www.youtube.com/@4IR.David.Shapiro">David Shapiro</a>, particularly his <a href="https://www.youtube.com/watch?v=aq7fnqzeaPc&amp;list=PLV3Fr1UUO9bGRNgCadLldVVZu8OHzJpbY&amp;index=3&amp;t=732s">video on Prompt Engineering</a></p>
+</div></aside></section>
+<section id="reductive-operations" class="slide level2">
+<h2>REDUCTIVE OPERATIONS</h2>
+<p><strong>Take a large amount of text and produce a smaller output.</strong></p>
+<div class="small">
+<ul>
+<li><strong>Summarization:</strong> Say the same thing with fewer words.
+<ul>
+<li>Can use list, notes, executive summary.</li>
+</ul></li>
+<li><strong>Distillation:</strong> Purify the underlying principles or facts.
+<ul>
+<li>Remove all the noise, extract axioms, foundations, etc.</li>
+</ul></li>
+<li><strong>Extraction:</strong> Retrieve specific kinds of information.
+<ul>
+<li>Question answering, listing names, extracting dates, etc.</li>
+</ul></li>
+<li><strong>Characterizing:</strong> Describe the content of the text.
+<ul>
+<li>Describe either the text as a whole, or within the subject.</li>
+</ul></li>
+<li><strong>Analyzing:</strong> Find patterns or evaluate against a framework.
+<ul>
+<li>Structural analysis, rhetorical analysis, etc</li>
+</ul></li>
+<li><strong>Evaluation:</strong> Measuring, grading, or judging the content.
+<ul>
+<li>Grading papers, evaluating against morals</li>
+</ul></li>
+<li><strong>Critiquing:</strong> Provide feedback within the context of the text.
+<ul>
+<li>Provide recommendations for improvement</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="transformation-operations" class="slide level2">
+<h2>Transformation Operations</h2>
+<p><strong>Transmute the input into another format. Input and output are roughly the same size and/or meaning.</strong></p>
+<div class="small">
+<ul>
+<li><strong>Reformatting</strong>: Change the presentation only.
+<ul>
+<li>Prose to screenplay, XML to JSON</li>
+</ul></li>
+<li><strong>Refactoring</strong>: Achieve same results with more efficiency.
+<ul>
+<li>Say the same exact thing, but differently</li>
+</ul></li>
+<li><strong>Language Change</strong>: Translate between languages.
+<ul>
+<li>English to Russian, C++ to Python</li>
+</ul></li>
+<li><strong>Restructuring</strong>: Optimize structure for logical flow, etc.
+<ul>
+<li>Change order, add or remove structure</li>
+</ul></li>
+<li><strong>Modification</strong>: Rewrite copy to achieve different intention.
+<ul>
+<li>Change tone, formality, diplomacy, style, etc</li>
+</ul></li>
+<li><strong>Clarification</strong>: Make something more comprehensible.
+<ul>
+<li>Embellish or more clearly articulate</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="generative-operations" class="slide level2">
+<h2>Generative Operations</h2>
+<p><strong>Generate a large amount of text from a small set of instructions or data.</strong></p>
+<div class="small">
+<ul>
+<li><strong>Drafting</strong>: Generate a draft of some kind of document.
+<ul>
+<li>Code, fiction, legal copy, KB, science, storytelling</li>
+</ul></li>
+<li><strong>Planning</strong>: Given parameters, come up with plans.
+<ul>
+<li>Actions, projects, objectives, missions, constraints, context.</li>
+</ul></li>
+<li><strong>Brainstorming</strong>: Use imagine to list out possibilities.
+<ul>
+<li>Ideation, exploration of possibilities, problem solving, hypothesizing</li>
+</ul></li>
+<li><strong>Amplification</strong>: Articulate and explicate something further.
+<ul>
+<li>Expanding and expounding, riffing on stuff</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="critical-details" class="slide level2">
+<h2>CRITICAL DETAILS</h2>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">Prompt</a></li><li><a href="#tabset-5-2">Model</a></li><li><a href="#tabset-5-3">Response</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<p><strong>What are the characteristics of your task?</strong></p>
+<ul>
+<li>Operation Type: Reductive, Transformative, or Generative?</li>
+<li>Size: <span class="red">Tokens</span> How much information do you need to send to the model?</li>
+<li>Context: What other relevant information/data is required? Where is it?</li>
+<li>Format: Text only? File uploads? .pdf, .csv, .json, .docx, .xlsx, .pptx, .jpg, .png, etc</li>
+<li>Quality: <span class="red">Prompt Engineering</span></li>
+</ul>
+</div>
+<div id="tabset-5-2">
+<p><strong>There are a TON of different Models and they vary substantially.</strong></p>
+<ul>
+<li>Size</li>
+<li>Cost</li>
+<li>Security</li>
+<li>Context Window</li>
+<li>Input Types</li>
+<li>Training Data</li>
+<li>Type: Conversational Agent vs Task Oriented Agent</li>
+<li>Specificity/Flexibility</li>
+<li>License</li>
+</ul>
+</div>
+<div id="tabset-5-3">
+<p><strong>How do evaluate the quality of the response?</strong></p>
+<ul>
+<li>Accuracy</li>
+<li>Consistency</li>
+<li>Creativity</li>
+<li>Size</li>
+<li>Format</li>
+<li>Specificity</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="latent-content" class="slide level2">
+<h2>LATENT CONTENT</h2>
+<p><strong>Knowledge, facts, concepts, and information that is “embedded” in the model and must be “activated” by correct prompting.</strong></p>
+<p>Latent content only originates from <span class="red">Training Data</span>.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>World Knowledge: General facts and understanding of the world.</li>
+<li>Scientific Information: Embedded data on scientific principles.</li>
+<li>Cultural Knowledge: Information on cultures and social norms.</li>
+<li>Historical Knowledge: Data on past events and figures.</li>
+<li>Languages: Language structures, vocabulary, and syntax.</li>
+</ul>
+</section>
+<section id="emergent-capabilities" class="slide level2">
+<h2>EMERGENT CAPABILITIES</h2>
+<p>The abilities of Large Language Models (LLMs) that arise as a result of their extensive training on vast datasets, even if those capabilities were not explicitly “taught” or “programmed” into the model.</p>
+<div class="small">
+<ol type="1">
+<li><p><strong>Unintended Abilities</strong>: Emergent capabilities might lead the model to perform tasks it wasn’t explicitly trained for. For example, an <span class="red">LLM might be trained on general text but can still translate between languages</span>, write in different styles, or even generate code.</p></li>
+<li><p><strong>Beyond Training Data</strong>: While LLMs are trained on specific data, the patterns they recognize can be generalized to a variety of tasks. This generalization can sometimes lead to surprising and useful outputs, as well as unintended or harmful ones.</p></li>
+<li><p><strong>Complex Interactions</strong>: The interactions between the numerous parameters in LLMs can lead to behaviors that aren’t immediately predictable from the training data alone. These behaviors arise from the complex, multi-dimensional relationships the model has learned.</p></li>
+<li><p><strong>Potential and Pitfalls</strong>: Emergent capabilities can be both an asset and a liability. On one hand, they showcase the flexibility and adaptability of LLMs. On the other, they can result in outputs that are unexpected, inaccurate, or even biased.</p></li>
+<li><p><strong>Example - Metaphor Understanding</strong>: While not explicitly trained to understand metaphors, an LLM might still be able to interpret and generate metaphoric language due to its exposure to diverse linguistic constructs in its training data.</p></li>
+<li><p><strong>Example - Creativity</strong>: LLMs can generate creative text, poetry, or stories. While they don’t “understand” creativity in the human sense, their vast training allows them to mimic creative constructs.</p></li>
+<li><p><strong>Limitations</strong>: Despite their emergent capabilities, LLMs have limitations. They don’t truly “understand” concepts in the way humans do, and their outputs are entirely based on patterns in the data they’ve seen.</p></li>
+</ol>
+</div>
+</section>
+<section id="hallucination" class="slide level2">
+<h2>HALLUCINATION</h2>
+<p>Instances where the model generates information that is not accurate, not based on its training data, or simply fabricated. Essentially, the model “hallucinates” details that aren’t grounded in reality or the facts it has been trained on.</p>
+<div class="small">
+<ol type="1">
+<li><p><strong>Origin of the Term</strong>: The term “hallucination” is borrowed from human psychology, where it refers to perceiving things that aren’t present in reality. When applied to LLMs, it captures the idea that the model sometimes produces outputs that aren’t reflective of real facts or the content it was trained on.</p></li>
+<li><p><strong>Causes</strong>: Hallucinations can be caused by various factors, including the model misinterpreting the input, over-generalizing from its training data, or trying to complete ambiguous queries with details it “invents” on the spot.</p></li>
+<li><p><strong>Common in Open-ended Queries</strong>: LLMs are more prone to hallucinate when given open-ended prompts or when there’s a lack of specific context. In these situations, the model might fill in gaps with fabricated details.</p></li>
+<li><p><strong>Concerns</strong>: Hallucinations are a concern, especially when users rely on LLMs for accurate information. They highlight the importance of treating outputs from LLMs as suggestions or starting points rather than definitive answers.</p></li>
+<li><p><strong>Mitigation</strong>: Efforts to mitigate hallucinations in LLMs include refining model architectures, improving training data, and employing post-training fine-tuning or validation processes. Additionally, user feedback and iterative development are crucial for identifying and reducing such issues.</p></li>
+</ol>
+</div>
+</section>
+<section id="automation-of-cognitive-labor-1" class="slide level2">
+<h2>AUTOMATION OF COGNITIVE LABOR</h2>
+<h3 id="tasks-are-operations-1">Tasks are Operations</h3>
+<p>Complex job functions are often a series of tasks.</p>
+<div class="small">
+<ol type="1">
+<li><p>Treat each task as an information problem.</p>
+<ul>
+<li>You have various information needs for each process or task</li>
+<li>Information comes from various sources</li>
+<li>You perform different transformations on the information</li>
+</ul></li>
+<li><p>Define each task in terms of Operations.</p>
+<ul>
+<li>Shrinking: Summarization, extraction, classification</li>
+<li>Translation: Changing from one format to another</li>
+<li>Expanding: Brainstorming, synthesizing, drafting</li>
+</ul></li>
+<li><p><a href="https://www.promptengineering.org/what-are-large-language-model-llm-agents/">Prompt Engineering</a>: The creation of the prompt is carefully engineered to provide optimal instructions and context to the LLM. Factors like tone, point of view, and conversational style help steer the LLM’s response.</p></li>
+<li><p><a href="https://huggingface.co/models">Model Selection</a>: Huggingface.co currently features 350,247 models and they have a <a href="https://huggingface.co/models">leaderboard</a> for performance!</p></li>
+<li><p>Evaluate the response(s) against data you trust.</p></li>
+</ol>
+</div>
+</section>
+<section id="examples-1" class="slide level2">
+<h2>EXAMPLES</h2>
+<h3 id="award-letter-extraction">Award Letter (Extraction)</h3>
+<p>I need to extract the information from this award letter and put it in our database.</p>
+<h3 id="pdf-grey-literature-extraction">PDF Grey Literature (Extraction)</h3>
+<p>I found this cool data report with a bunch of data that I need for my analysis.</p>
+<h3 id="contract-review-evaluation">Contract Review (Evaluation)</h3>
+<p>Does this contract adhere to our review criteria?</p>
+<h3 id="others">others</h3>
+</section>
+<section id="agi" class="slide level2">
+<h2>AGI</h2>
+
+<p><img data-src="images/Blooms-Taxonomy.jpg"></p>
+<aside><div>
+<p>https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/</p>
+</div></aside></section>
+<section id="resources" class="slide level2">
+<h2>Resources</h2>
+<div class="small">
+<p>https://www.youtube.com/<span class="citation" data-cites="samwitteveenai">@samwitteveenai</span></p>
+<p>https://www.youtube.com/<span class="citation" data-cites="4IR.David.Shapiro">@4IR.David.Shapiro</span></p>
+<p>https://www.youtube.com/<span class="citation" data-cites="mreflow">@mreflow</span></p>
+<p>https://www.futuretools.io</p>
+<p>https://snorkel.ai/large-language-models-llms/</p>
+<p>https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america</p>
+<p>https://thehill.com/opinion/congress-blog/3913530-artificial-intelligence-is-not-going-to-take-all-our-jobs/</p>
+<p>https://arxiv.org/abs/2303.10130</p>
+<p>https://www.analyticsvidhya.com/blog/2023/07/the-fascinating-evolution-of-generative-ai/</p>
+<p>https://kyleake.medium.com/data-behind-the-large-language-models-llm-gpt-and-beyond-8b34f508b5de</p>
+<p>https://arxiv.org/pdf/2303.08774.pdf</p>
+<p>https://www.fiddler.ai/blog/the-missing-link-in-generative-aimonit</p>
+<p>https://www.fiddler.ai/blog/the-missing-link-in-generative-ai</p>
+<p>https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-generative-ai</p>
+<p>https://www.nvidia.com/en-us/glossary/data-science/large-language-models/</p>
+<p>https://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for/</p>
+<p>https://www.promptengineering.org/what-are-large-language-model-llm-agents/</p>
+</div>
+
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+<p>brobison@uidaho.edu</p>
+</div>
+</div>
+</section>
+
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': true,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
