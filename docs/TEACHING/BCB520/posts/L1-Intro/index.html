@@ -8,7 +8,7 @@
 <link href="../../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.550">
 
   <meta name="author" content="Barrie Robison">
   <meta name="dcterms.date" content="2022-10-16">
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -225,7 +225,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -511,15 +512,15 @@ Barrie Robison
 <div class="columns">
 <div class="column" style="font-size: 25px">
 <div class="cell" data-fontsize="2">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(grid)</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(gridExtra)</span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(datasets)</span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-7"><a href="#cb1-7"></a>datasets<span class="sc">::</span>anscombe</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a></a><span class="fu">library</span>(grid)</span>
+<span id="cb1-3"><a></a><span class="fu">library</span>(gridExtra)</span>
+<span id="cb1-4"><a></a><span class="fu">library</span>(datasets)</span>
+<span id="cb1-5"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-6"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-7"><a></a>datasets<span class="sc">::</span>anscombe</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>   x1 x2 x3 x4    y1   y2    y3    y4
@@ -540,22 +541,22 @@ Barrie Robison
 <h4 id="anscombes-quartet-1">Anscombe’s Quartet</h4>
 <p>The four x-y pairs have identical summary statistics.</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>tidy_anscombe <span class="ot">&lt;-</span> anscombe <span class="sc">%&gt;%</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a> <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>(),</span>
-<span id="cb3-3"><a href="#cb3-3"></a>              <span class="at">names_to =</span> <span class="fu">c</span>(<span class="st">".value"</span>, <span class="st">"set"</span>),</span>
-<span id="cb3-4"><a href="#cb3-4"></a>              <span class="at">names_pattern =</span> <span class="st">"(.)(.)"</span>)</span>
-<span id="cb3-5"><a href="#cb3-5"></a>tidy_anscombe_summary <span class="ot">&lt;-</span> tidy_anscombe <span class="sc">%&gt;%</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a>  <span class="fu">group_by</span>(set) <span class="sc">%&gt;%</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="at">.cols =</span> <span class="fu">everything</span>(),</span>
-<span id="cb3-8"><a href="#cb3-8"></a>                   <span class="at">.fns =</span> <span class="fu">lst</span>(min,max,median,mean,sd,var),</span>
-<span id="cb3-9"><a href="#cb3-9"></a>                   <span class="at">.names =</span> <span class="st">"{col}_{fn}"</span>))</span>
-<span id="cb3-10"><a href="#cb3-10"></a><span class="co">#&gt; `summarise()` ungrouping output (override with `.groups` argument)</span></span>
-<span id="cb3-11"><a href="#cb3-11"></a></span>
-<span id="cb3-12"><a href="#cb3-12"></a>vars<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"set"</span>, <span class="st">"x_mean"</span>, <span class="st">"x_var"</span>,  <span class="st">"y_mean"</span>, <span class="st">"y_var"</span>)</span>
-<span id="cb3-13"><a href="#cb3-13"></a>thing<span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(tidy_anscombe_summary[vars])</span>
-<span id="cb3-14"><a href="#cb3-14"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(thing)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>tidy_anscombe <span class="ot">&lt;-</span> anscombe <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a></a> <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>(),</span>
+<span id="cb3-3"><a></a>              <span class="at">names_to =</span> <span class="fu">c</span>(<span class="st">".value"</span>, <span class="st">"set"</span>),</span>
+<span id="cb3-4"><a></a>              <span class="at">names_pattern =</span> <span class="st">"(.)(.)"</span>)</span>
+<span id="cb3-5"><a></a>tidy_anscombe_summary <span class="ot">&lt;-</span> tidy_anscombe <span class="sc">%&gt;%</span></span>
+<span id="cb3-6"><a></a>  <span class="fu">group_by</span>(set) <span class="sc">%&gt;%</span></span>
+<span id="cb3-7"><a></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="at">.cols =</span> <span class="fu">everything</span>(),</span>
+<span id="cb3-8"><a></a>                   <span class="at">.fns =</span> <span class="fu">lst</span>(min,max,median,mean,sd,var),</span>
+<span id="cb3-9"><a></a>                   <span class="at">.names =</span> <span class="st">"{col}_{fn}"</span>))</span>
+<span id="cb3-10"><a></a><span class="co">#&gt; `summarise()` ungrouping output (override with `.groups` argument)</span></span>
+<span id="cb3-11"><a></a></span>
+<span id="cb3-12"><a></a>vars<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"set"</span>, <span class="st">"x_mean"</span>, <span class="st">"x_var"</span>,  <span class="st">"y_mean"</span>, <span class="st">"y_var"</span>)</span>
+<span id="cb3-13"><a></a>thing<span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(tidy_anscombe_summary[vars])</span>
+<span id="cb3-14"><a></a>knitr<span class="sc">::</span><span class="fu">kable</span>(thing)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <table>
@@ -607,16 +608,16 @@ Barrie Robison
 <section id="viz-matters" class="slide level2">
 <h2>VIZ MATTERS</h2>
 <div class="cell" data-fontsize="2">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(tidy_anscombe,</span>
-<span id="cb4-2"><a href="#cb4-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x,</span>
-<span id="cb4-3"><a href="#cb4-3"></a>           <span class="at">y =</span> y)) <span class="sc">+</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> tidy_anscombe_summary, <span class="fu">aes</span>(<span class="at">x=</span>x_mean, <span class="at">y =</span> y_mean, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">5</span>),</span>
-<span id="cb4-6"><a href="#cb4-6"></a>             <span class="at">show.legend =</span> <span class="cn">FALSE</span>)<span class="sc">+</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>set) <span class="sc">+</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">ggplot</span>(tidy_anscombe,</span>
+<span id="cb4-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> x,</span>
+<span id="cb4-3"><a></a>           <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb4-4"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb4-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> tidy_anscombe_summary, <span class="fu">aes</span>(<span class="at">x=</span>x_mean, <span class="at">y =</span> y_mean, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">5</span>),</span>
+<span id="cb4-6"><a></a>             <span class="at">show.legend =</span> <span class="cn">FALSE</span>)<span class="sc">+</span></span>
+<span id="cb4-7"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>set) <span class="sc">+</span></span>
+<span id="cb4-8"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
@@ -676,8 +677,10 @@ Barrie Robison
 <p><img data-src="Fremework.png" class="absolute" style="bottom: 0px; "></p>
 <p><img data-src="spacetree.png" class="absolute" style="top: 100px; right: 10px; width: 400px; "></p>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>…<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/BCB520.html" target="_blank">HOME</a></p>
+</div>
 </div>
 </section>
     </div>
@@ -707,7 +710,6 @@ Barrie Robison
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': true,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1007,10 +1009,9 @@ Barrie Robison
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1020,8 +1021,17 @@ Barrie Robison
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

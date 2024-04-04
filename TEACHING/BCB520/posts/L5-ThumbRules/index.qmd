@@ -16,6 +16,7 @@ categories: [Lecture, DataViz]
 image: "Cthulhuthumb.png"
 code-fold: true
 description: "...Because GUIDLINES OF THUMB is too clumsy to say..."
+draft: true
 ---
 
 ## TLDR VERSION
@@ -243,7 +244,6 @@ Use reasonable numerical format and avoid scientific notation in most cases.
 https://xkcd.com/833/
 
 ## SUMMARY - RULES OF THUMB {.smaller}
-
 
 1.  No unjustified 3D
     -   Power of the plane

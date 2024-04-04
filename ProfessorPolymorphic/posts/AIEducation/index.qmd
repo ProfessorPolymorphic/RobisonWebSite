@@ -1,0 +1,363 @@
+---
+title: "AI and the Future of Education."
+
+subtitle: "Probably the most pretentious seminar title I've ever typed..."
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: true
+    preview-links: auto
+    css: styles.css
+    theme: [default, custom.scss]
+    footer: brobison@uidaho.edu
+    smaller: true
+author: "Barrie Robison"
+date: "2024-04-04"
+categories: [Presentation, AI, IIDS, Education]
+
+image: "AIFuture.png"
+code-fold: true
+---
+
+## PURPOSE OF UNIVERSITY
+
+The original purpose of universities was to produce a "universal man," a well-rounded individual capable of contributing to the upper echelons of society. The focus was on a broad education covering arts, humanities, sciences, history, politics, and commerce.
+Universal Man: Goal of creating well-rounded, worldly individuals.
+Upper Echelons: Aimed at preparing students for societal leadership. (Ivy League still does this, btw)
+Broad Education: Covering arts, humanities, sciences. Highly cultured!
+Understanding History and Politics: To make informed contributions.
+Commerce Knowledge: To navigate and influence the economic landscape.
+
+## INDUSTRIAL REVOLUTION
+
+The German/Austrian educational revolution during the Industrial Revolution shifted the focus of public education towards producing productive workers. The system was designed to prepare individuals for the rigors of factory work, emphasizing obedience, quietude, and adherence to arbitrary rules.
+German/Austrian Revolution: Shifted educational focus during Industrial Revolution.
+Productive Workers: Main goal of the reformed education system.
+Obedience and Quietude: Taught to prepare for factory settings.
+Arbitrary Rules: Enforced to model factory-like hierarchy.
+Contrast to 'Universal Man': Narrower focus compared to broad societal education.
+
+## OPTIMIZING FOR EFFICIENCY
+
+Produce the most functional workers per unit cost.
+
+OR
+
+Maximize the ability of each individual to lead their best life.
+
+## HISTORICAL PATTERNS
+
+![](us-employment-share2.jpg)
+
+## AUTOMATION OF PHYSICAL LABOR
+
+**Many of the changes in the distribution of labor across sectors have been driven by changes in the efficiency of human labor, which can be considered as the ratio of production to cost.**
+
+[Force Multiplier:]{.red} An external tool or resource that allows you to do more work with less effort.[^1] This might increase production of a single worker, reducing the overall number of workers needed to perform a job.
+
+[^1]: The term originally comes from the military context, but it has been widely adopted in business, technology, and other fields to describe a factor that dramatically amplifies the effectiveness of a group or system.
+
+[Outsourcing:]{.red} Outsourcing refers to the business practice of contracting out certain tasks or functions to third-party service providers instead of performing them in-house. One of the primary reasons companies outsource is to achieve cost reductions. Labor, infrastructure, or operational costs might be lower in another location or with a specialized provider.
+
+## A CLOSER LOOK
+
+**What are common features of the sectors that displaced Agriculuture and Manufacturing?**
+
+::: columns
+::: {.column width="70%"}
+![](us-employment-sharebottom.png)
+:::
+
+::: {.column width="30%"}
+::: incremental
+1.  The tasks are [Place Bound]{.red}.
+2.  The sectors feature a lot of [Knowledge Work]{.red}.
+:::
+:::
+:::
+
+## KNOWLEDGE WORK?
+
+Knowledge work [^2] involves tasks that are information-based and [Cognitive]{.red} in nature :
+
+[^2]: "Knowledge Work" is a term coined by Peter Drucker in his 1959 book "Landmarks of Tomorrow."
+
+::: panel-tabset
+### Characteristics
+
+::: small
+1.  **Intellectual Activity**: It involves thinking, analyzing, and processing information more than manual labor.
+2.  **Non-routine**: It doesn't necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.
+3.  **Information-based**: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.
+4.  **Driven by Expertise**: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.
+5.  **Autonomy**: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems.
+6.  **Continuous Learning**: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.
+7.  **Outcome-focused**: The value of knowledge work is often measured by outcomes or results rather than the hours worked.
+:::
+
+### Examples
+
+-   Software developers
+-   Managers
+-   Analysts
+-   Consultants
+-   Designers
+-   Scientists
+-   Lawyers
+-   Doctors
+-   [Educators]{.red}
+:::
+
+## HUMAN COGNITION
+
+::: panel-tabset
+### Human Cognition
+
+![](humancognition.png){.absolute height="70%"}
+
+### Knowledge Work
+
+::: small
+1.  **Intellectual Activity**: It involves thinking, analyzing, and processing information more than manual labor.
+2.  **Non-routine**: It doesn't necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.
+3.  **Information-based**: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.
+4.  **Driven by Expertise**: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.
+5.  **Autonomy**: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems.
+6.  **Continuous Learning**: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.
+7.  **Outcome-focused**: The value of knowledge work is often measured by outcomes or results rather than the hours worked.
+:::
+:::
+
+## HUMAN COGNITIVE LABOR[^3]
+
+[^3]: Human cognitive labor refers to tasks and functions that require human intellectual processes, such as thinking, understanding, learning, and problem-solving. While physical labor is centered on manual and bodily tasks, cognitive labor emphasizes mental processes and the application of knowledge.
+
+**Aspects of human cognitive labor:**
+
+::: small
+1.  **Problem Solving**: Identifying complex issues and reviewing related information to develop and evaluate options and implement solutions.
+2.  **Decision Making**: Considering the relative costs and benefits of potential actions to choose the most appropriate one.
+3.  **Analysis**: Examining data or information and breaking it down to understand its structure, trends, or implications.
+4.  **Learning and Adaptation**: Acquiring new knowledge and skills and adjusting to new information or circumstances.
+5.  **Creativity**: Generating new ideas, concepts, or solutions.
+6.  **Planning**: Determining how a system or operation should work and how changes in conditions, operations, and environments will affect outcomes.
+7.  **Communication**: Conveying information effectively, both verbally and in writing. This also includes the ability to listen and understand information from others.
+8.  **Emotional Intelligence**: Recognizing, understanding, and managing our own emotions while also recognizing, understanding, and influencing the emotions of others.
+:::
+
+## SOME EXAMPLES
+
+-   Here is a contract and our contract guidelines. Review and red-line the contract.
+
+-   Does this Animal Care protocol conform to the federal guidelines?
+
+-   I have a fever and a cough. What is wrong with me?
+
+-   Gather data from these documents and summarize/analyze it.
+
+-   How does this job applicant align with the needs described in our job description?
+
+**These [tasks]{.red} are difficult to automate because their inputs are complex, unstructured, and highly variable. They require human Cognitive Labor.**
+
+## BLOOM'S TAXONOMY (2001 update)
+
+Educators often use Bloom's taxonomy to structure learning objectives, assessments, and activities to ensure that they are addressing various levels of cognitive complexity and promoting critical thinking skills.
+
+::: aside
+https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/
+:::
+
+![](images/Blooms-Taxonomy.jpg){.absolute height="400" bottom="75"}
+
+## LEARNING OUTCOMES
+
+::: small
+#### LEARN AND INTEGRATE
+
+Definition: Through independent learning and collaborative study, attain, use, and develop knowledge in the arts, humanities, sciences and social sciences, with disciplinary specialization and the ability to integrate information across disciplines.
+
+#### THINK AND CREATE
+
+Definition: Use multiple thinking strategies to examine real-world issues, explore creative avenues of expression, solve problems and make consequential decisions.
+
+#### COMMUNICATE
+
+Description: Acquire, articulate, create and convey intended meaning using verbal and non-verbal method of communication that demonstrates respect and understanding in a complex society.
+
+#### CLARIFY PURPOSE AND PERSPECTIVE
+
+Definition: Explore one’s life purpose and meaning through transformational experiences that foster an understanding of self, relationships and diverse global perspectives.
+
+#### PRACTICE CITIZENSHIP
+
+Definition: Apply principles of ethical leadership, collaborative engagement, socially responsible behavior, respect for diversity in an interdependent world and a service-oriented commitment to advance and sustain local and global communities. NOTE: likely best expressed in advanced students.
+:::
+
+::: aside
+https://www.uidaho.edu/provost/learning-outcomes
+:::
+
+
+## 2022: A TIPPING POINT
+
+![](recenttimeline.jpeg)
+
+## GENERATIVE AI
+
+[Generative Artificial Intelligence]{.red} describes a group of algorithms or models that can be used to create new content, including text, code, images, video, audio, and simulations.
+
+::: columns
+::: {.column .small width="40%"}
+**Examples:**
+
+ChatGPT: Text to Text [Generative Pretrained Transformer]{.red} with a chat interface
+
+MidJourney: Text to Image
+
+an abstract representation of an unemployment line caused by the emergence of artificial general intelligence, glowing blue computational network, photorealistic, dark technology, dark academia
+
+[Sora](https://openai.com/sora){target="blank"}: text to video
+
+[Suno](https://www.suno.ai){target="blank"}: text to music.
+
+Hardtechno Dark John Carpenter Synth
+:::
+
+::: {.column width="60%"}
+![](AIFuture.mp4){.absolute .width="60%"}
+:::
+:::
+
+## LARGE LANGUAGE MODELS (LLM)
+
+A type of AI model designed to understand and generate human-like text.
+
+::: aside
+Nvidia (the company that makes GPUs) has great learning resources on AI. [This one](https://www.nvidia.com/en-us/glossary/data-science/large-language-models/) is a great summary of the significance of LLMs
+:::
+
+::: panel-tabset
+### Key Characteristics
+
+1.  **Model Type**: Subset of deep learning within machine learning.
+2.  **Architecture**: Commonly based on the Transformer architecture.
+3.  **Size**: Contains billions to trillions of parameters.
+
+### Training and Capabilities
+
+1.  **Training Data**: Trained on vast datasets, including books, articles, and web content.
+2.  **Functionality**: Generates coherent text, answers questions, translates, summarizes, and more.
+3.  **Transfer Learning**: Fine-tuned on specific datasets for specialized tasks.
+
+### Limitations
+
+1.  Generates based on training data patterns.
+2.  Doesn't "understand" like humans.
+3.  Can produce incorrect or nonsensical answers.
+4.  Influenced by biases in training data.
+:::
+
+## CAPABILITIES
+
+![](images/gptexamresults.jpg){.absolute height="80%"}
+
+::: aside
+arXiv:2303.10130v5 \econ.GN 21 Aug 2023
+:::
+
+## genAI + EDUCATION = GOOD?
+
+### The Potential Benefits of AI in Education
+
+- **Personalized Learning**: AI can tailor education to each student's learning style and pace, enhancing engagement and comprehension.
+- **Support for Teachers**: AI offers scalable solutions for teacher training and feedback, improving teaching practices and classroom dynamics.
+- **Enhanced Accessibility**: AI facilitates universal access to quality education, breaking down barriers related to location, resources, and disabilities.
+- **Fostering Creativity and Higher-Level Thinking**: By automating routine tasks, AI encourages students to focus on creative, analytical, and strategic aspects of learning.
+- **Data-Driven Insights**: AI can analyze vast amounts of educational data, providing insights that help educators make informed decisions to improve learning outcomes.
+
+::: aside
+[Stanford University Human Centered Artificial Intelligence](https://hai.stanford.edu/news/ai-will-transform-teaching-and-learning-lets-get-it-right)
+:::
+
+## genAI + EDUCATION = BAD?
+
+### The Risks of AI in Education
+
+- **Bias and Cultural Insensitivity**: AI systems might perpetuate biases or fail to reflect the diverse experiences of global learners.
+- **Undermining Critical Thinking**: Overreliance on AI for problem-solving and content creation could impair students' ability to think critically and independently.
+- **Privacy Concerns**: The collection and analysis of student data by AI systems raise significant privacy and security issues.
+- **Misinformation and Reliability**: AI-generated content may include inaccuracies, promoting misinformation if not properly vetted.
+- **Dependency and Devaluation of Human Teachers**: Excessive dependence on AI could devalue the irreplaceable human elements in teaching, such as empathy, intuition, and motivational support.
+
+::: aside
+[Stanford University Human Centered Artificial Intelligence](https://hai.stanford.edu/news/ai-will-transform-teaching-and-learning-lets-get-it-right)
+:::
+
+## GOLDEN RULE
+
+Are you using AI to help you learn and grow?
+
+OR
+
+Are you using AI to misrepresent your abilities? 
+
+## AI and EDUCATION
+
+![](claudeAIED1.png){.absolute left="10"}
+
+![](GPT4AIED1.png){.absolute right="10"}
+
+## SHOW don't TELL
+
+**Challenge:** Produce a working example of how genAI can contribute positively to both student learning and faculty efficiency.
+
+![](nuismer.png)
+
+## BIO 314
+
+![](syllabus.png){.absolute left=30}
+
+![](Lectures.png){.absolute right=30}
+
+## PERSONALIZED LEARNING?
+
+
+
+## Resources
+
+::: small
+https://www.youtube.com/@samwitteveenai
+
+https://www.youtube.com/@4IR.David.Shapiro
+
+https://www.youtube.com/@mreflow
+
+https://www.futuretools.io
+
+https://snorkel.ai/large-language-models-llms/
+
+https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america
+
+https://thehill.com/opinion/congress-blog/3913530-artificial-intelligence-is-not-going-to-take-all-our-jobs/
+
+https://arxiv.org/abs/2303.10130
+
+https://www.analyticsvidhya.com/blog/2023/07/the-fascinating-evolution-of-generative-ai/
+
+https://kyleake.medium.com/data-behind-the-large-language-models-llm-gpt-and-beyond-8b34f508b5de
+
+https://arxiv.org/pdf/2303.08774.pdf
+
+https://www.fiddler.ai/blog/the-missing-link-in-generative-aimonit
+
+https://www.fiddler.ai/blog/the-missing-link-in-generative-ai
+
+https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-generative-ai
+
+https://www.nvidia.com/en-us/glossary/data-science/large-language-models/
+
+https://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for/
+
+https://www.promptengineering.org/what-are-large-language-model-llm-agents/
+:::

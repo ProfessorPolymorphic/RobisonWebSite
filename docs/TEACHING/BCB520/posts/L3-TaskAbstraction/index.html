@@ -8,7 +8,7 @@
 <link href="../../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.550">
 
   <meta name="author" content="Barrie Robison">
   <meta name="dcterms.date" content="2023-01-31">
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -225,7 +225,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -518,17 +519,17 @@ Barrie Robison
 <section id="examples" class="slide level2 scrollable smaller">
 <h2>EXAMPLES!</h2>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(vroom)</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-4"><a href="#cb1-4"></a>Person <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"Tasks.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"Person"</span>,</span>
-<span id="cb1-5"><a href="#cb1-5"></a>    <span class="at">col_names =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-6"><a href="#cb1-6"></a>Action <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"Tasks.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"Action"</span>,</span>
-<span id="cb1-7"><a href="#cb1-7"></a>    <span class="at">col_names =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-8"><a href="#cb1-8"></a>Target <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"Tasks.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"Target"</span>,</span>
-<span id="cb1-9"><a href="#cb1-9"></a>    <span class="at">col_names =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-2"><a></a><span class="fu">library</span>(vroom)</span>
+<span id="cb1-3"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a></a>Person <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"Tasks.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"Person"</span>,</span>
+<span id="cb1-5"><a></a>    <span class="at">col_names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-6"><a></a>Action <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"Tasks.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"Action"</span>,</span>
+<span id="cb1-7"><a></a>    <span class="at">col_names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-8"><a></a>Target <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"Tasks.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"Target"</span>,</span>
+<span id="cb1-9"><a></a>    <span class="at">col_names =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="columns">
@@ -669,8 +670,10 @@ Barrie Robison
 <p><span class="fragment">Cody Lookup Trends</span></p>
 <p><span class="fragment">Eric Enjoy Paths</span></p>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>…<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/index.html" target="_blank">HOME</a></p>
+</div>
 </div>
 </section>
     </div>
@@ -700,7 +703,6 @@ Barrie Robison
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': true,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1000,10 +1002,9 @@ Barrie Robison
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1013,8 +1014,17 @@ Barrie Robison
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

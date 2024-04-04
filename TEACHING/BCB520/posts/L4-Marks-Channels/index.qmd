@@ -16,6 +16,7 @@ categories: [Lecture, DataViz, Idiom, Observable, Tidyverse]
 image: "idiom.png"
 code-fold: true
 description: "Just what is an **IDIOM**, anyway?"
+draft: true
 ---
 
 ## PLAN
@@ -420,67 +421,61 @@ ggplot(df,aes(I))+
 ::: {.column width="20%"}
 [**LENGTH (N=1)**]{.fragment}
 
-[[ELECTRIC SHOCK (N=3.5)]{.red}]{.fragment}
+[ELECTRIC SHOCK (N=3.5)]{.red}
 
-[[SATURATION (N=1.7)]{.blue}]{.fragment}
+[SATURATION (N=1.7)]{.blue}
 
-[[AREA (N=0.7)]{.purple}]{.fragment}
+[AREA (N=0.7)]{.purple}
 
-[[BRIGHTNESS (N=0.5)]{.yellow}]{.fragment}
+[BRIGHTNESS (N=0.5)]{.yellow}
 :::
 :::
 
 ## ACCURACY (EXPERIMENTAL) {.smaller}
 
-:::: {.columns}
-::: {.column width=60%}
+::: columns
+::: {.column width="60%"}
 ![](ClevelandandMcGill.png)
 :::
 
-::: {.column width=40%}
-[[Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods](https://www.jstor.org/stable/2288400)]
+::: {.column width="40%"}
+\[[Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods](https://www.jstor.org/stable/2288400)\]
 :::
-::::
-
+:::
 
 ## DISCRIMINABILITY
 
-How many usable steps are in the channel?  Are the differences between items perceptible to the human as intended?
+How many usable steps are in the channel? Are the differences between items perceptible to the human as intended?
 
 ![](linewidths.png)
 
 ## SEPARABILITY VS INTEGRALITY {.smaller}
 
-Separable channels are orthogonal and independent.  Integral channels are inextricably combined.  Attempts to encode different information with integral channels creates [Interference]{.red}.
+Separable channels are orthogonal and independent. Integral channels are inextricably combined. Attempts to encode different information with integral channels creates [Interference]{.red}.
 
 ![](sepandint.png)
 
-::: {.caption}
+::: caption
 **Figure 5.10.** Pairs of visual channels fall along a continuum from fully separable to intrinsically integral. Color and location are separable channels well suited to encode different data attributes for two different groupings that can be selectively attended to. However, size interacts with hue, which is harder to perceive for small objects. The horizontal size and and vertical size channels are automatically fused into an integrated perception of area, yielding three groups. Attempts to code separate information along the red and green axes of the RGB color space fail, because we simply perceive four different hues.
-
-
 :::
 
-
 ## POPOUT {.smaller}
+
 **VISUAL POPOUT is often called preattentive processing or tunable detection.**
 
 ::: columns
 ::: {.column width="60%"}
-**find the [red]{.red} dot! How long does it take?** 
+**find the [red]{.red} dot! How long does it take?**
 
 Popout results from our low-level visual system performing massively parallel processing on certain visual channels, eliminating the need for the viewer to consciously direct attention to items one by one (serial search).
 
-:::{.caption}
+::: caption
 **Figure 5.11. Visual popout.** (a) The red circle pops out from a small set of blue circles. (b) The red circle pops out from a large set of blue circles just as quickly. (c) The red circle also pops out from a small set of square shapes, although a bit slower than with color. (d) The red circle also pops out of a large set of red squares. (e) The red circle does not take long to find from a small set of mixed shapes and colors. (f) The red circle does not pop out from a large set of red squares and blue circles, and it can only be found by searching one by one through all the objects.
 :::
-
 :::
 
 ::: {.column width="40%"}
 ![](popout.png)
-
-
 :::
 :::
 
@@ -496,10 +491,9 @@ Many channels are compatible with preattentive processing and facilitate popout:
 -   proximity
 -   shadow direction
 
-But not all! 
+But not all!
 
 -   Example: parallel line pairs do not pop out from tilted pairs.
-
 :::
 
 ::: {.column width="40%"}
@@ -507,38 +501,34 @@ But not all!
 :::
 :::
 
-
-
 ## RELATIVE VS ABSOLUTE JUDGEMENTS {.smaller}
 
 The human perceptual system is fundamentally based on relative judgements, not absolute ones. This is why accuracy increases with common frame/scale and alignment.
 
-[Weber's Law:]{.red} The detectable difference in stimulus intensity $I$ as a fixed percentage $K$ of the object magnitude:  $dI/I=K$ .  
-
+[Weber's Law:]{.red} The detectable difference in stimulus intensity $I$ as a fixed percentage $K$ of the object magnitude: $dI/I=K$ .
 
 ![](reljudge.png)
 
-The filled rectangles differ in length by 1:9, and it is therefore difficult to detect the difference without aligment.  The white rectangles differ in length by 1:2, it is easier to see this difference even when the objects are unaligned.
+The filled rectangles differ in length by 1:9, and it is therefore difficult to detect the difference without aligment. The white rectangles differ in length by 1:2, it is easier to see this difference even when the objects are unaligned.
 
 ## RELATIVE LUMINANCE JUDGEMENTS
 
 Human perception of luminance is completely contextual, and is based on contrast with surrounding colors.
 
-[![](luminance1.jpg){.absolute width="450" bottom="100" left="0"}]{.fragment}
+![](luminance1.jpg){.absolute width="450" bottom="100" left="0"}
 
-[![](luminance2.jpg){.absolute width="450" bottom="100" right="0"}]{.fragment}
+![](luminance2.jpg){.absolute width="450" bottom="100" right="0"}
 
 ## RELATIVE COLOR JUDGEMENTS {.smaller}
 
 Our visual system evolved to provide color constancy so that the same surface is identifiable across a broad set of illumination conditions, even though a physical light meter would yield very different readings. While the visual system works very well in natural environments, many of its mechanisms work against simple approaches to visually encoding information with color.
 
-::: {layout-ncol=2}
+::: {layout-ncol="2"}
 ![](colorjudge.png)
 
 ![](colorjudge2.png)
 :::
 
-::: {.caption}
-**Figure 5.15 shows two colorful cubes.** In Figure 5.15(a) corresponding squares both appear to be red. In Figure 5.15(b), masks show that the tile color in the image apparently illuminated by a yellowish light source is actually orange, and for the bluish light the tiles are actually purple. 
+::: caption
+**Figure 5.15 shows two colorful cubes.** In Figure 5.15(a) corresponding squares both appear to be red. In Figure 5.15(b), masks show that the tile color in the image apparently illuminated by a yellowish light source is actually orange, and for the bluish light the tiles are actually purple.
 :::
-

@@ -12,9 +12,6 @@ image: "Rlyeh.png"
 description: "Maps and Spatial Fields are fun!"
 code-fold: true
 code-tools: true
-execute: 
-  eval: false
-draft: true
 ---
 
 ## OVERVIEW
@@ -152,12 +149,11 @@ Spatial field data refers to data that has a continuous spatial distribution and
 ```{r}
 
 
-#install.packages("baseballr")
+# install.packages("baseballr")
 library(remotes)
 
-library(devtools)
 
-#install_github("bayesball/CalledStrike")
+# install_github("bayesball/CalledStrike")
 
 
 ```

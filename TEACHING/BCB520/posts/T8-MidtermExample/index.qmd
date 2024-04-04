@@ -12,6 +12,7 @@ image: "Zomsimmesh.png"
 description: "Animating the dynamics of zombie spatial disease ecology."
 code-fold: true
 code-tools: true
+draft: true
 ---
 
 ## PREAMBLE

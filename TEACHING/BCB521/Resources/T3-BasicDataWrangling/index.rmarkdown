@@ -1,0 +1,142 @@
+---
+title: "Tutorial - Basic Data Wrangling"
+author: "Barrie Robison"
+date: "2023-09-18"
+categories: [Tutorial, code, analysis]
+code-fold: true
+code-tools: true
+---
+
+
+## SUMMARY
+
+This tutorial is intended to supplement Assignment 3 by guiding you through some basic data wrangling techniques from the tidyverse.  Instead of a generic example, I'm going to use Ronald's data from Assignment 3!
+
+## RONALD'S DATA
+
+Below is the beginnging stage of Ronald's data set assigment.
+
+## Description of dataset
+
+The data was collected in the Luckhart lab using a locomotor activity monitor. The data represents individual counts of mosquito movements upon treatment with different concentrations of Serotonin which is a neuromodulator in the brain of insects and affects their behaviour.
+
+### Data collection
+
+Male mosquitoes were primed (treated) with 3 different concentrations (0.15uM, 1.5uM and 15uM) of Serotonin (5-HT) for three consecutive days.One group of males were allowed to mate with female mosquitoes (mated males) and another group non allowed to mate. Following this, their activity were measured.
+
+### Data prepration
+
+The monitor records activity (up and down movement) from start of experiment till experiment is ended. However, because we the data of interest is circadian activity, the data was trimmed to a a 24-hour window starting from 7pm (12-hour dark period and 12-hour light period)
+
+
+### Describing variables in the data
+
+Variables in the dataset have are described in the data dictionary below:
+
+
+
+```{r}
+library(readxl)
+DAMdata <- read_excel("DAMdata.xlsx")
+
+library(knitr)
+invisible(library(kableExtra))
+
+kable(head(DAMdata), caption = "Table 1: Mosquito circadian activity") %>%
+  kable_styling()
+```
+
+```{r}
+library(readxl)
+DAMdatadictionary <- read_excel("DAMdatadictionary.xlsx")
+
+suppressPackageStartupMessages(library(tidyverse))
+library(readxl)
+invisible(library(dplyr))
+invisible(library(kableExtra))
+
+suppressMessages({
+  DAMdatadictionary <- read_excel("DAMdatadictionary.xlsx")
+  knitr::kable(DAMdatadictionary, caption = "Table 2: Mosquito circadian activity data dictionary") %>%
+    kable_styling()
+})
+```
+
+
+## THE GOAL
+
+Based on our previous meetings, I know that Ronald wants to recreate a key figure from a previous experiment.  The figure is basically a summary of locomotor activity over the course of 24 hours for each of the four treatments.
+
+The problem is that his data are organized to facilitate collection and management within excel.  This is useful in the lab, but not entirely compatible with repeatable data science using R.
+
+Let's explore what it will take to recreate that figure!
+
+### Proper Data Ingestion
+
+The data files have a row at the top that serves as a treatment label.  This is messing up our data frame.  We can fix that by telling the readxl function to skip the top row:
+
+
+```{r}
+
+newDAM <- read_excel("DAMdata.xlsx", skip = 1)
+
+```
+
+
+Now we have a nice tidy data frame!  Unfortunately, we lost the treatment information.  We'll have to fix that.  First, we need to reorganize the data frame into a `longer` format.  Tools like ggplot prefer the variables to each have their own column.  In this data frame we have a column for time and then one for each individual mosquito (M1-M32).  What we want is a column for time, a column for mosquito ID, and a column for activity.  We do that with the tidyverse [`pivot_longer`](https://tidyr.tidyverse.org/reference/pivot_longer.html) functions.  I'll also use `mutate` to add the Treatment variable back in, extracting the numeric part of the ID variable and passing it to the `case_when` function.
+
+
+```{r}
+
+longDAM <-newDAM %>%
+  pivot_longer(!Time, names_to = "ID", values_to = "Activity")%>%
+   mutate(
+    Treatment = case_when(
+      as.numeric(str_extract(ID, "\\d+")) <= 8  ~ "Control",
+      as.numeric(str_extract(ID, "\\d+")) <= 16 ~ "0.15uM Serotonin",
+      as.numeric(str_extract(ID, "\\d+")) <= 24 ~ "1.5uM Serotonin",
+      as.numeric(str_extract(ID, "\\d+")) <= 32 ~ "15uM Serotonin",
+      TRUE                                          ~ "Other"
+    )
+  )
+
+kable(head(longDAM), caption = "Table 3: Mosquito circadian activity") %>%
+  kable_styling()
+
+```
+
+
+This is looking good!
+
+Now we need to summarize the data before we graph it.  This is a great opportunity to use [`group_by`](https://dplyr.tidyverse.org/reference/group_by.html) in the tidyverse!  First, we need to sumarize into one hour chunks, then we'll summarize into treatment groups.
+
+
+
+```{r}
+library(lubridate)
+
+sumDAM <- longDAM%>%
+  mutate(hour_bin = floor_date(Time, unit="hour")) %>%
+  group_by(hour_bin, Treatment) %>%
+  summarise(Total_Activity = sum(Activity))
+
+kable(head(sumDAM), caption = "Table 3: Mosquito circadian activity") %>%
+  kable_styling()
+
+```
+
+
+Nice!  Now we are ready to make the magical graph!
+
+
+```{r}
+library(scales)
+
+ggplot(sumDAM, aes(x=hour_bin, y=Total_Activity))+
+  geom_col()+
+  facet_wrap(~Treatment, ncol = 1)+
+  scale_x_datetime(labels = date_format("%H:%M")) 
+
+
+```
+
