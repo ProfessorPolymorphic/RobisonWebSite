@@ -1,0 +1,542 @@
+---
+title: "AI and the Future of Education / Research / Academia..."
+
+subtitle: "Probably the most pretentious seminar title I've ever typed..."
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: true
+    preview-links: auto
+    css: styles.css
+    theme: [default, custom.scss]
+    footer: brobison@uidaho.edu
+    smaller: true
+author: "Barrie Robison"
+date: "2024-04-04"
+categories: [Presentation, AI, IIDS, Education]
+
+image: "AIFuture.png"
+code-fold: true
+---
+
+## HISTORY OF WORK
+
+![](us-employment-share2.jpg)
+
+## AUTOMATION OF PHYSICAL LABOR
+
+**Many of the changes in the distribution of labor across sectors have been driven by changes in the efficiency of human labor, which can be considered as the ratio of production to cost.**
+
+[Force Multiplier:]{.red} An external tool or resource that allows you to do more work with less effort.[^1] This might increase production of a single worker, reducing the overall number of workers needed to perform a job.
+
+[^1]: The term originally comes from the military context, but it has been widely adopted in business, technology, and other fields to describe a factor that dramatically amplifies the effectiveness of a group or system.
+
+[Outsourcing:]{.red} Outsourcing refers to the business practice of contracting out certain tasks or functions to third-party service providers instead of performing them in-house. One of the primary reasons companies outsource is to achieve cost reductions. Labor, infrastructure, or operational costs might be lower in another location or with a specialized provider.
+
+## A CLOSER LOOK
+
+**What are common features of the sectors that displaced Agriculuture and Manufacturing?**
+
+::: columns
+::: {.column width="70%"}
+![](us-employment-sharebottom.png)
+:::
+
+::: {.column width="30%"}
+::: incremental
+1.  The tasks are [Place Bound]{.red}.
+2.  The sectors feature a lot of [Knowledge Work]{.red}.
+:::
+:::
+:::
+
+## KNOWLEDGE WORK?
+
+Knowledge work [^2] involves tasks that are information-based and [Cognitive]{.red} in nature :
+
+[^2]: "Knowledge Work" is a term coined by Peter Drucker in his 1959 book "Landmarks of Tomorrow."
+
+::: panel-tabset
+### Characteristics
+
+::: small
+1.  **Intellectual Activity**: It involves thinking, analyzing, and processing information more than manual labor.
+2.  **Non-routine**: It doesn't necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.
+3.  **Information-based**: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.
+4.  **Driven by Expertise**: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.
+5.  **Autonomy**: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems.
+6.  **Continuous Learning**: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.
+7.  **Outcome-focused**: The value of knowledge work is often measured by outcomes or results rather than the hours worked.
+:::
+
+### Examples
+
+-   Software developers
+-   Managers
+-   [Analysts]{.red}
+-   Consultants
+-   Designers
+-   [Scientists]{.red}
+-   Lawyers
+-   Doctors
+-   [Educators]{.red}
+:::
+
+## HUMAN COGNITION
+
+::: panel-tabset
+### Human Cognition
+
+![](humancognition.png){.absolute height="70%"}
+
+### Knowledge Work
+
+::: small
+1.  **Intellectual Activity**: It involves thinking, analyzing, and processing information more than manual labor.
+2.  **Non-routine**: It doesn't necessarily follow a set script or routine, and often involves problem-solving, decision-making, and creative thinking.
+3.  **Information-based**: The main tools of a knowledge worker are information and knowledge, as opposed to physical tools or machinery.
+4.  **Driven by Expertise**: Knowledge workers often have specific areas of expertise, education, or training that they draw upon to do their jobs.
+5.  **Autonomy**: Knowledge workers often have a degree of autonomy in terms of how they approach and solve problems.
+6.  **Continuous Learning**: The dynamic nature of information and the fields in which knowledge workers operate necessitates continuous learning and adaptation.
+7.  **Outcome-focused**: The value of knowledge work is often measured by outcomes or results rather than the hours worked.
+:::
+:::
+
+## HUMAN COGNITIVE LABOR[^3]
+
+[^3]: Human cognitive labor refers to tasks and functions that require human intellectual processes, such as thinking, understanding, learning, and problem-solving. While physical labor is centered on manual and bodily tasks, cognitive labor emphasizes mental processes and the application of knowledge.
+
+**Aspects of human cognitive labor:**
+
+::: small
+1.  **Problem Solving**: Identifying complex issues and reviewing related information to develop and evaluate options and implement solutions.
+2.  **Decision Making**: Considering the relative costs and benefits of potential actions to choose the most appropriate one.
+3.  **Analysis**: Examining data or information and breaking it down to understand its structure, trends, or implications.
+4.  **Learning and Adaptation**: Acquiring new knowledge and skills and adjusting to new information or circumstances.
+5.  **Creativity**: Generating new ideas, concepts, or solutions.
+6.  **Planning**: Determining how a system or operation should work and how changes in conditions, operations, and environments will affect outcomes.
+7.  **Communication**: Conveying information effectively, both verbally and in writing. This also includes the ability to listen and understand information from others.
+8.  **Emotional Intelligence**: Recognizing, understanding, and managing our own emotions while also recognizing, understanding, and influencing the emotions of others.
+:::
+
+## SOME EXAMPLES
+
+-   Here is a contract and our contract guidelines. Review and red-line the contract.
+
+-   Does this Animal Care protocol conform to the federal guidelines?
+
+-   I have a fever and a cough. What is wrong with me?
+
+-   Gather data from these documents and summarize/analyze it.
+
+-   How does this job applicant align with the needs described in our job description?
+
+**These [tasks]{.red} are difficult to automate because their inputs are complex, unstructured, and highly variable. They require human Cognitive Labor.**
+
+**How does this relate to research methods?**
+
+## AUTOMATION OF COGNITIVE LABOR
+
+**"The future is already here — it's just not very evenly distributed."** [^4]
+
+[^4]: William Gibson (a science fiction author) made this observation to highlight how technological advancements and innovations might be present in certain places or among specific groups, but they haven't yet permeated all levels of society or all geographic areas. The quote encapsulates the idea that the future, in many ways, exists in pockets in the present, but its widespread adoption and distribution are yet to occur.
+
+## ARTIFICIAL INTELLIGENCE
+
+Summarizing the history of AI and creating a visual timeline is an example of [Knowledge Work]{.red}. It requires [Cognitive Labor]{.red} on my part. Cognitive labor is hard.
+
+::: panel-tabset
+### History of AI
+
+[AI has a long and interesting history that I need to summarize...](https://www.analyticsvidhya.com/blog/2023/07/the-fascinating-evolution-of-generative-ai/){target="_blank"}
+
+### Visual Timeline
+
+[I'd rather have a graph](https://chat.openai.com/share/908127b8-fe2a-41c3-8989-961489ccfd66){target="_blank"}
+
+::: incremental
+1.  Making a graph is hard.
+
+2.  Except it isn't.. ![](fulltimelinegraph.png){.absolute right="0" bottom="50" height="70%"}
+:::
+:::
+
+
+## 2022: A TIPPING POINT
+
+![](recenttimeline.jpeg)
+
+## GENERATIVE AI
+
+[Generative Artificial Intelligence]{.red} describes a group of algorithms or models that can be used to create new content, including text, code, images, video, audio, and simulations.
+
+::: columns
+::: {.column .small width="40%"}
+**Examples:**
+
+ChatGPT: Text to Text [Generative Pretrained Transformer]{.red} with a chat interface
+
+MidJourney: Text to Image
+
+an abstract representation of an unemployment line caused by the emergence of artificial general intelligence, glowing blue computational network, photorealistic, dark technology, dark academia
+
+[Sora](https://openai.com/sora){target="blank"}: text to video
+
+[Suno](https://www.suno.ai){target="blank"}: text to music.
+
+Hardtechno Dark John Carpenter Synth
+:::
+
+::: {.column width="60%"}
+![](AIFuture.mp4){.absolute .width="30%"}
+:::
+:::
+
+## LARGE LANGUAGE MODELS (LLM)
+
+A type of AI model designed to understand and generate human-like text.
+
+::: aside
+Nvidia (the company that makes GPUs) has great learning resources on AI. [This one](https://www.nvidia.com/en-us/glossary/data-science/large-language-models/) is a great summary of the significance of LLMs
+:::
+
+::: panel-tabset
+### Key Characteristics
+
+1.  **Model Type**: Subset of deep learning within machine learning.
+2.  **Architecture**: Commonly based on the Transformer architecture.
+3.  **Size**: Contains billions to trillions of parameters.
+
+### Training and Capabilities
+
+1.  **Training Data**: Trained on vast datasets, including books, articles, and web content.
+2.  **Functionality**: Generates coherent text, answers questions, translates, summarizes, and more.
+3.  **Transfer Learning**: Fine-tuned on specific datasets for specialized tasks.
+
+### Limitations
+
+1.  Generates based on training data patterns.
+2.  Doesn't "understand" like humans.
+3.  Can produce incorrect or nonsensical answers.
+4.  Influenced by biases in training data.
+:::
+
+## CAPABILITIES
+
+![](images/gptexamresults.jpg){.absolute height="80%"}
+
+::: aside
+arXiv:2303.10130v5 \econ.GN 21 Aug 2023
+:::
+
+## TASKS ARE OPERATIONS
+
+**Human Cognitive Tasks**
+
+Input Human Output
+
+**LLM Operations**
+
+Prompt Model Response
+
+## LLM OPERATIONS
+
+::: aside
+These categories and their descriptions on the next three slides are from material by [David Shapiro](https://www.youtube.com/@4IR.David.Shapiro), particularly his [video on Prompt Engineering](https://www.youtube.com/watch?v=aq7fnqzeaPc&list=PLV3Fr1UUO9bGRNgCadLldVVZu8OHzJpbY&index=3&t=732s)
+:::
+
+### [Reductive]{.red}
+
+Take a large amount of text and produce a smaller output.
+
+Input is larger than the output.
+
+### [Transformative]{.red}
+
+Transmute the input into a new format.
+
+Input and output are roughly the same size and/or meaning.
+
+### [Generative]{.red}
+
+Generate a large amount of text from a small set of instructions or data.
+
+Input is smaller than the output.
+
+## REDUCTIVE OPERATIONS
+
+**Take a large amount of text and produce a smaller output.**
+
+::: small
+-   **Summarization:** Say the same thing with fewer words.
+    -   Can use list, notes, executive summary.
+-   **Distillation:** Purify the underlying principles or facts.
+    -   Remove all the noise, extract axioms, foundations, etc.
+-   **Extraction:** Retrieve specific kinds of information.
+    -   Question answering, listing names, extracting dates, etc.
+-   **Characterizing:** Describe the content of the text.
+    -   Describe either the text as a whole, or within the subject.
+-   **Analyzing:** Find patterns or evaluate against a framework.
+    -   Structural analysis, rhetorical analysis, etc
+-   **Evaluation:** Measuring, grading, or judging the content.
+    -   Grading papers, evaluating against morals
+-   **Critiquing:** Provide feedback within the context of the text.
+    -   Provide recommendations for improvement
+:::
+
+## Transformation Operations
+
+**Transmute the input into another format. Input and output are roughly the same size and/or meaning.**
+
+::: small
+-   **Reformatting**: Change the presentation only.
+    -   Prose to screenplay, XML to JSON
+-   **Refactoring**: Achieve same results with more efficiency.
+    -   Say the same exact thing, but differently
+-   **Language Change**: Translate between languages.
+    -   English to Russian, C++ to Python
+-   **Restructuring**: Optimize structure for logical flow, etc.
+    -   Change order, add or remove structure
+-   **Modification**: Rewrite copy to achieve different intention.
+    -   Change tone, formality, diplomacy, style, etc
+-   **Clarification**: Make something more comprehensible.
+    -   Embellish or more clearly articulate
+:::
+
+## Generative Operations
+
+**Generate a large amount of text from a small set of instructions or data.**
+
+::: small
+-   **Drafting**: Generate a draft of some kind of document.
+    -   Code, fiction, legal copy, KB, science, storytelling
+-   **Planning**: Given parameters, come up with plans.
+    -   Actions, projects, objectives, missions, constraints, context.
+-   **Brainstorming**: Use imagine to list out possibilities.
+    -   Ideation, exploration of possibilities, problem solving, hypothesizing
+-   **Amplification**: Articulate and explicate something further.
+    -   Expanding and expounding, riffing on stuff
+:::
+
+## CRITICAL DETAILS
+
+::: panel-tabset
+### Prompt
+
+**What are the characteristics of your task?**
+
+-   Operation Type: Reductive, Transformative, or Generative?
+-   Size: [Tokens]{.red} How much information do you need to send to the model?
+-   Context: What other relevant information/data is required? Where is it?
+-   Format: Text only? File uploads? .pdf, .csv, .json, .docx, .xlsx, .pptx, .jpg, .png, etc
+-   Quality: [Prompt Engineering]{.red}
+
+### Model
+
+**There are a TON of different Models and they vary substantially.**
+
+-   Size
+-   Cost
+-   Security
+-   Context Window
+-   Input Types
+-   Training Data
+-   Type: Conversational Agent vs Task Oriented Agent
+-   Specificity/Flexibility
+-   License
+
+### Response
+
+**How do evaluate the quality of the response?**
+
+-   Accuracy
+-   Consistency
+-   Creativity
+-   Size
+-   Format
+-   Specificity
+:::
+
+## LATENT CONTENT
+
+**Knowledge, facts, concepts, and information that is "embedded" in the model and must be "activated" by correct prompting.**
+
+Latent content only originates from [Training Data]{.red}.
+
+**Examples:**
+
+-   World Knowledge: General facts and understanding of the world.
+-   Scientific Information: Embedded data on scientific principles.
+-   Cultural Knowledge: Information on cultures and social norms.
+-   Historical Knowledge: Data on past events and figures.
+-   Languages: Language structures, vocabulary, and syntax.
+
+## EMERGENT CAPABILITIES
+
+The abilities of Large Language Models (LLMs) that arise as a result of their extensive training on vast datasets, even if those capabilities were not explicitly "taught" or "programmed" into the model.
+
+::: small
+1.  **Unintended Abilities**: Emergent capabilities might lead the model to perform tasks it wasn't explicitly trained for. For example, an [LLM might be trained on general text but can still translate between languages]{.red}, write in different styles, or even generate code.
+
+2.  **Beyond Training Data**: While LLMs are trained on specific data, the patterns they recognize can be generalized to a variety of tasks. This generalization can sometimes lead to surprising and useful outputs, as well as unintended or harmful ones.
+
+3.  **Complex Interactions**: The interactions between the numerous parameters in LLMs can lead to behaviors that aren't immediately predictable from the training data alone. These behaviors arise from the complex, multi-dimensional relationships the model has learned.
+
+4.  **Potential and Pitfalls**: Emergent capabilities can be both an asset and a liability. On one hand, they showcase the flexibility and adaptability of LLMs. On the other, they can result in outputs that are unexpected, inaccurate, or even biased.
+
+5.  **Example - Metaphor Understanding**: While not explicitly trained to understand metaphors, an LLM might still be able to interpret and generate metaphoric language due to its exposure to diverse linguistic constructs in its training data.
+
+6.  **Example - Creativity**: LLMs can generate creative text, poetry, or stories. While they don't "understand" creativity in the human sense, their vast training allows them to mimic creative constructs.
+
+7.  **Limitations**: Despite their emergent capabilities, LLMs have limitations. They don't truly "understand" concepts in the way humans do, and their outputs are entirely based on patterns in the data they've seen.
+:::
+
+## HALLUCINATION
+
+Instances where the model generates information that is not accurate, not based on its training data, or simply fabricated. Essentially, the model "hallucinates" details that aren't grounded in reality or the facts it has been trained on.
+
+::: small
+1.  **Origin of the Term**: The term "hallucination" is borrowed from human psychology, where it refers to perceiving things that aren't present in reality. When applied to LLMs, it captures the idea that the model sometimes produces outputs that aren't reflective of real facts or the content it was trained on.
+
+2.  **Causes**: Hallucinations can be caused by various factors, including the model misinterpreting the input, over-generalizing from its training data, or trying to complete ambiguous queries with details it "invents" on the spot.
+
+3.  **Common in Open-ended Queries**: LLMs are more prone to hallucinate when given open-ended prompts or when there's a lack of specific context. In these situations, the model might fill in gaps with fabricated details.
+
+4.  **Concerns**: Hallucinations are a concern, especially when users rely on LLMs for accurate information. They highlight the importance of treating outputs from LLMs as suggestions or starting points rather than definitive answers.
+
+5.  **Mitigation**: Efforts to mitigate hallucinations in LLMs include refining model architectures, improving training data, and employing post-training fine-tuning or validation processes. Additionally, user feedback and iterative development are crucial for identifying and reducing such issues.
+:::
+
+## AUTOMATION OF COGNITIVE LABOR
+
+### Tasks are Operations
+
+Complex job functions are often a series of tasks.
+
+::: small
+1.  Treat each task as an information problem.
+
+    -   You have various information needs for each process or task
+    -   Information comes from various sources
+    -   You perform different transformations on the information
+
+2.  Define each task in terms of Operations.
+
+    -   Shrinking: Summarization, extraction, classification
+    -   Translation: Changing from one format to another
+    -   Expanding: Brainstorming, synthesizing, drafting
+
+3.  [Prompt Engineering](https://www.promptengineering.org/what-are-large-language-model-llm-agents/): The creation of the prompt is carefully engineered to provide optimal instructions and context to the LLM. Factors like tone, point of view, and conversational style help steer the LLM's response.
+
+4.  [Model Selection](https://huggingface.co/models): Huggingface.co currently features 350,247 models and they have a [leaderboard](https://huggingface.co/models) for performance!
+
+5.  Evaluate the response(s) against data you trust.
+:::
+
+## COVID19 Survey Data
+
+![](Plospaper.png){.absolute height=500}
+
+![](email.png){.absolute height=500 right=10}
+
+## Claude v GPT
+
+![](Opus.png){.absolute left=100 height="90%"}
+
+![](GPT.png){.absolute right=100 height="90%"}
+
+
+## University of Phoenix
+
+![](Terryemail.png)
+
+## Semantic Literature Analysis
+
+[Tickbase.net](https://data.tickbase.net){target="blank"}
+
+
+
+## AGI
+
+::: aside
+https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/
+:::
+
+![](images/Blooms-Taxonomy.jpg)
+
+## GOLDEN RULE
+
+Are you using AI to help you learn, grow, and maximize your impact?
+
+[OR]{.red}
+
+Are you using AI to misrepresent your abilities?
+
+![](golden.png)
+
+## AI and EDUCATION
+
+![](claudeAIED1.png){.absolute left="10"}
+
+![](GPT4AIED1.png){.absolute right="10"}
+
+## SHOW don't TELL
+
+**Challenge:** Produce a working example of how genAI can contribute positively to both student learning and faculty efficiency.
+
+![](nuismer.png)
+
+## BIO 314
+
+![](syllabus.png){.absolute left="30"}
+
+![](Lectures.png){.absolute right="30"}
+
+## BIO314 CUSTOMIZED WEBSITE
+
+[This](https://professorpolymorphic.github.io/AI101Bio314/){target="blank"} took me ~ 2 hours.
+
+Will Barrie crash and burn?
+
+![](barrie.png)
+
+
+
+## Resources
+
+::: small
+https://www.youtube.com/@samwitteveenai
+
+https://www.youtube.com/@4IR.David.Shapiro
+
+https://www.youtube.com/@mreflow
+
+https://www.futuretools.io
+
+https://snorkel.ai/large-language-models-llms/
+
+https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america
+
+https://thehill.com/opinion/congress-blog/3913530-artificial-intelligence-is-not-going-to-take-all-our-jobs/
+
+https://arxiv.org/abs/2303.10130
+
+https://www.analyticsvidhya.com/blog/2023/07/the-fascinating-evolution-of-generative-ai/
+
+https://kyleake.medium.com/data-behind-the-large-language-models-llm-gpt-and-beyond-8b34f508b5de
+
+https://arxiv.org/pdf/2303.08774.pdf
+
+https://www.fiddler.ai/blog/the-missing-link-in-generative-aimonit
+
+https://www.fiddler.ai/blog/the-missing-link-in-generative-ai
+
+https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-generative-ai
+
+https://www.nvidia.com/en-us/glossary/data-science/large-language-models/
+
+https://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for/
+
+https://www.promptengineering.org/what-are-large-language-model-llm-agents/
+:::
